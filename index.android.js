@@ -1,28 +1,32 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
-'use strict';
 import React, {
   AppRegistry,
   Component,
   StyleSheet,
   Text,
   View
-} from 'react-native';
+} from 'react-native'
 
-import { loginSaga } from './src/actions/user'
+import configureStore from './src/stores/configureStore.js'
+const store = configureStore()
+
+// provider
+import { Provider } from 'react-redux';
+
+
+
 
 
 
 class app extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-      </View>
+      <Provider store={store}>
+        <View style={styles.container}>
+          <Text style={styles.welcome}>
+            Welcome to React Native!
+          </Text>
+        </View>
+      </Provider>
     );
   }
 }
