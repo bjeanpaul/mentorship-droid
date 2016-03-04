@@ -3,13 +3,19 @@ import { combineReducers } from 'redux'
 import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE } from '../actions/user'
 
 
-// TODO: extract the status out of here.
+// 0 - Must Complete Signup
+// 1 - Must Complete Training
+// 2 - Completed
 
-function user(state = {}, action) {
+function user(state = {
+  workflowPhase: 1,
+  username: 'admin',
+  password: '1234'
+}, action) {
   switch(action.type) {
     case LOGIN_REQUEST:
     case LOGIN_FAILURE:
-      return {}
+      return state
     case LOGIN_SUCCESS:
       return action.user
     default:
@@ -18,13 +24,21 @@ function user(state = {}, action) {
 }
 
 
-function auth(state = {}, action) {
+function auth(state = {
+  loggingIn: false
+}, action) {
   switch(action.type) {
     case LOGIN_REQUEST:
+      return {
+        loggingIn: true
+      }
     case LOGIN_FAILURE:
-      return {}
+      return {
+        loggingIn: false
+      }
     case LOGIN_SUCCESS:
       return {
+        loggingIn: false,
         hash: action.hash
       }
     default:

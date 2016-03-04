@@ -1,4 +1,5 @@
 import { callAPI } from '../services/api'
+import base64 from 'base64-js'
 
 
 export const LOGIN_REQUEST = 'LOGIN_REQUEST'
@@ -31,8 +32,7 @@ export function login(username, password) {
 
     dispatch(loginRequest())
 
-    let hash = new Buffer(`${username}:${password}`).toString('base64')
-
+    let hash = base64.fromByteArray(`${username}:${password}`)
     return callAPI('/mentor/', hash)
       .then(
         data => {
