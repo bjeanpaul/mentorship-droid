@@ -20,10 +20,10 @@ function loginSuccess(user, hash) {
   }
 }
 
-function loginFailure(error) {
+function loginFailure(errorMessage) {
   return {
     type: LOGIN_FAILURE,
-    error
+    errorMessage
   }
 }
 
@@ -35,11 +35,13 @@ export function login(username, password) {
     let hash = base64.fromByteArray(`${username}:${password}`)
     return callAPI('/mentor/', hash)
       .then(
-        data => {
+        (response, data) => {
           let user = data.results[0]
           dispatch(loginSuccess(user, hash))
         },
-        error => dispatch(loginFailure(error))
+        (data) => {
+          dispatch(loginFailure(data.detail))
+        }
     )
   }
 }

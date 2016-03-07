@@ -25,20 +25,21 @@ function user(state = {
 
 
 function auth(state = {
-  loggingIn: false
+  isLogginIn: false
 }, action) {
   switch(action.type) {
     case LOGIN_REQUEST:
       return {
-        loggingIn: true
+        isLogginIn: true
       }
     case LOGIN_FAILURE:
       return {
-        loggingIn: false
+        isLogginIn: false,
+        errorMessage: action.errorMessage
       }
     case LOGIN_SUCCESS:
       return {
-        loggingIn: false,
+        isLogginIn: false,
         hash: action.hash
       }
     default:

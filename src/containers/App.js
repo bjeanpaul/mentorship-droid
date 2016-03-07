@@ -7,6 +7,8 @@ const store = configureStore()
 
 import RootNavigator from './RootNavigator'
 
+// we can pass the initial stack down as a property to the root navigator; and we
+// can use the store here to determine what that stack should look like?
 
 const App = () => {
   return (

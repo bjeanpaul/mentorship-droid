@@ -17,13 +17,23 @@ import { login } from '../actions/user'
 const LoginView = ({
   defaultUsername,
   defaultPassword,
-  onLogInPress,
-  isLoggingIn
+  onSubmitPress,
+  isLoggingIn,
+  isAuthenticated,
+  onAuthenticated,
+  errorMessage = ''
 }) => {
 
   let username = defaultUsername
   let password = defaultPassword
   let progressBarPartial = isLoggingIn ? <ProgressBar styleAttr="Horizontal" /> : null
+  let errorMessagePartial = errorMessage ? <Text>{errorMessage}</Text> : null
+
+  if (isAuthenticated) {
+    onAuthenticated()
+  }
+
+
 
   return (
       <View>
@@ -41,12 +51,13 @@ const LoginView = ({
           onChangeText={(text) => { password = text}}
         />
 
+        {errorMessagePartial}
+
         <TouchableHighlight onPress={() => {
-          onLogInPress(username, password)
+          onSubmitPress(username, password)
         }}>
           <View>
             <Text>Log In</Text>
-
           </View>
         </TouchableHighlight>
       </View>
@@ -56,21 +67,31 @@ const LoginView = ({
 LoginView.propTypes = {
   defaultUsername: PropTypes.string,
   defaultPassword: PropTypes.string,
-  onLogInPress: PropTypes.func.isRequired,
-  isLoggingIn: PropTypes.bool.isRequired
+  errorMessage: PropTypes.string,
+  onSubmitPress: PropTypes.func.isRequired,
+
+
+  isAuthenticated: PropTypes.bool.isRequired,
+  onAuthenticated: PropTypes.func.isRequired,
+
+
+
 }
 
 const mapStateToProps = (state, ownProps) => {
   return {
     defaultUsername: state.user.username,
     defaultPassword: state.user.password,
-    isLoggingIn: state.auth.loggingIn
+    isLoggingIn: state.auth.isLoggingIn,
+    isAuthenticated: state.auth.hash ? true : false,
+    onAuthenticated: ownProps.onAuthenticated,
+    errorMessage: state.auth.errorMessage
   }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onLogInPress: (username, password) => {
+    onSubmitPress: (username, password) => {
       dispatch(login(username, password))
     }
   }

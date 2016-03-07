@@ -2,25 +2,20 @@ import React, { Component, Navigator, View, Text } from 'react-native'
 
 import NavigationDrawer from '../components/NavigationDrawer'
 
-
-import { Training, Login, ResetPassword, Profile } from '../components/Examples'
+import Onboarding from '../containers/Onboarding'
+//import { Training, Login, ResetPassword, Profile } from '../components/Examples'
 
 
 // TODO: Figure out if we can store this state in a store.
 // TODO: Map state to props.
 class RootNavigator extends Component {
 
-
   _initalRouteStack() {
     return [
       {
-        modal: false,
-        component: Training
-      },
-      {
         modal: true,
-        component: Login
-      },
+        component: Onboarding
+      }
     ]
   }
 
@@ -43,9 +38,7 @@ class RootNavigator extends Component {
     }
 
     return (
-      <NavigationDrawer
-        rootNavigator={navigator}
-      >
+      <NavigationDrawer rootNavigator={navigator}>
         {Component}
       </NavigationDrawer>
     )
@@ -61,5 +54,6 @@ class RootNavigator extends Component {
     )
   }
 }
+
 
 export default RootNavigator

@@ -1,4 +1,4 @@
-const HOSTNAME = 'http://localhost:8000/mentor'
+const HOSTNAME = 'http://192.168.178.20:8000/mentor'
 
 export function callAPI(endpoint, hash) {
 
@@ -12,7 +12,7 @@ export function callAPI(endpoint, hash) {
     if (response.ok === false) {
       return Promise.reject(json)
     }
-    return json
+    return (response, json)
   })
 
 }
