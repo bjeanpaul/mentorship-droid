@@ -1,4 +1,6 @@
-import React, { AppRegistry } from 'react-native'
+import React, { AppRegistry } from 'react-native';
 
-import MentorshipApp from './src/containers/App'
+import MentorshipApp from './src/components/App';
+
+
 AppRegistry.registerComponent('app', () => () => <MentorshipApp />);

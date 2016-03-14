@@ -1,47 +1,45 @@
-import { callAPI } from '../services/api'
-import base64 from 'base64-js'
+import base64 from 'base-64';
+
+import { requestForAPI } from '../services/api';
+import actionTypes from '../constants/user';
 
 
-export const LOGIN_REQUEST = 'LOGIN_REQUEST'
-export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
-export const LOGIN_FAILURE = 'LOGIN_FAILURE'
-
-function loginRequest() {
+export function resetPassword(newPassword, onFulfilled) {
   return {
-    type: LOGIN_REQUEST
-  }
+    types: actionTypes.PASSWORD_RESET,
+    request: requestForAPI('/mentor/reset-password/', {
+      method: 'post',
+      body: JSON.stringify({ newPassword }),
+    }),
+    onFulfilled,
+  };
 }
 
-function loginSuccess(user, hash) {
+export function fetchProfile(onFulfilled) {
   return {
-    type: LOGIN_SUCCESS,
-    user,
-    hash
-  }
+    types: actionTypes.PROFILE_FETCH,
+    request: requestForAPI('/mentor/'),
+    onFulfilled,
+  };
 }
 
-function loginFailure(errorMessage) {
+export function updateProfile(profile, onFulfilled) {
   return {
-    type: LOGIN_FAILURE,
-    errorMessage
-  }
+    types: actionTypes.PROFILE_UPDATE,
+    request: requestForAPI(`/mentor/${profile.id}`, {
+      method: 'put',
+      body: JSON.stringify(profile),
+    }),
+    onFulfilled,
+  };
 }
 
-export function login(username, password) {
-  return (dispatch) => {
-
-    dispatch(loginRequest())
-
-    let hash = base64.fromByteArray(`${username}:${password}`)
-    return callAPI('/mentor/', hash)
-      .then(
-        (response, data) => {
-          let user = data.results[0]
-          dispatch(loginSuccess(user, hash))
-        },
-        (data) => {
-          dispatch(loginFailure(data.detail))
-        }
-    )
-  }
+export function login(username, password, onFulfilled) {
+  const authToken = base64.encode(`${username}:${password}`);
+  return {
+    types: actionTypes.LOGIN,
+    request: requestForAPI('/mentor/'),
+    payload: { authToken },
+    onFulfilled,
+  };
 }
