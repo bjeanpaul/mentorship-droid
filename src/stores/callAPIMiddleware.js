@@ -33,11 +33,9 @@ const callAPIMiddleware = function callAPIMiddleware({ dispatch, getState }) {
     request.headers.append('Authorization', `Basic ${authToken}`);
     request.headers.append('Accept', 'application/json');
     request.headers.append('Content-Type', 'application/json');
-
     return fetch(request)
     .then(response => response.json().then(json => ({ json, response })))
     .then(({ json, response }) => {
-      console.log('------', response.url, '------');
       if (response.ok !== true) {
         return Promise.reject({ json, response });
       }
@@ -51,8 +49,6 @@ const callAPIMiddleware = function callAPIMiddleware({ dispatch, getState }) {
     })
     .then(onFulfilled, onRejected)
     .catch((error) => {
-      // what if it's a type error?
-      console.log('------', error, 'FAILED', '------');
       dispatch(Object.assign({}, payload, {
         errorMessage: error.json.detail,
         type: failureType,
