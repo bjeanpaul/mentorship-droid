@@ -1,3 +1,6 @@
+
+// TODO monitor responses and invalidate the authToken if the user is
+// no longer authenticated.
 const callAPIMiddleware = function callAPIMiddleware({ dispatch, getState }) {
   return next => action => {
     const {

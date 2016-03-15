@@ -53,10 +53,6 @@ describe('User action creators', () => {
   const authToken = 'YWRtaW46MTIz';
   const initialState = { auth: { authToken } };
 
-  afterEach(() => {
-    nock.cleanAll();
-  });
-
   describe('profile', () => {
     testGeneratorForActionsThatInvokeCallAPIMiddleware(
       actions.fetchProfile(),
