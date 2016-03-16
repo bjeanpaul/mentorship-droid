@@ -9,23 +9,16 @@ import NavigationDrawer from './NavigationDrawer';
 import Onboarding from './onboarding';
 
 
-const Training = function Training() {
-  return (
-    <View><Text>I am the training view.</Text></View>
-  );
-};
-
 class RootNavigator extends Component {
-
   initalRouteStack() {
     return [
       {
-        component: Training,
+        component: NavigationDrawer,
       },
-      {
-        modal: true,
-        component: Onboarding,
-      },
+      // {
+      //   modal: true,
+      //   component: Onboarding,
+      // },
     ];
   }
 
@@ -41,16 +34,7 @@ class RootNavigator extends Component {
   }
 
   renderScene(route, navigator) {
-    const routeComponent = <route.component rootNavigator={navigator} />;
-    if (route.modal) {
-      return routeComponent;
-    }
-
-    return (
-      <NavigationDrawer rootNavigator={navigator}>
-        {routeComponent}
-      </NavigationDrawer>
-    );
+    return <route.component rootNavigator={navigator} />;
   }
 
   render() {

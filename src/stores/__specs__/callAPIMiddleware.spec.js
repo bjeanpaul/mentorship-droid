@@ -11,7 +11,7 @@ const mockStore = configureMockStore(middlewares);
 
 // TODO: test the `catch` statement; with a network error
 describe('call api middleware', () => {
-  const store = mockStore({ auth: { authToken: 'XXXsecretXXX' } });
+  const store = mockStore({ user: { auth: { authToken: 'XXXsecretXXX' } } });
   const successAction = {
     types: ['request', 'success', 'failure'],
     request: new Request('http://example.org/test/'),

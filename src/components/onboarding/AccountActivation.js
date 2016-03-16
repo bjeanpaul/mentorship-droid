@@ -6,11 +6,11 @@ import { login } from '../../actions/user';
 
 const mapStateToProps = function mapStateToProps(state) {
   return {
-    isLoading: state.auth.isLoading,
-    isAuthenticated: state.auth.isAuthenticated,
-    defaultUsername: state.user.username,
-    defaultPassword: state.user.password,
-    errorMessage: state.auth.errorMessage,
+    isLoading: state.user.auth.isLoading,
+    isAuthenticated: state.user.auth.isAuthenticated,
+    defaultUsername: state.user.profile.username,
+    defaultPassword: state.user.profile.password,
+    errorMessage: state.user.auth.errorMessage,
   };
 };
 

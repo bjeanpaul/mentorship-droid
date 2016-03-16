@@ -11,8 +11,9 @@ import Welcome from './Welcome';
 import AccountActivation from './AccountActivation';
 import ResetPassword from '../user/ResetPassword';
 
-
 class Onboarding extends Component {
+
+
 
   configureScene() {
     return Navigator.SceneConfigs.FloatFromRight;
@@ -22,7 +23,10 @@ class Onboarding extends Component {
     switch (route.id) {
       case 1:
         return (
-          <Welcome onContinuePress={() => navigator.push({ id: 2 })} />
+          <Welcome
+            rootNavigator={this.props.rootNavigator}
+            onContinuePress={() => navigator.push({ id: 2 })}
+          />
         );
       case 2:
         return (
@@ -41,9 +45,9 @@ class Onboarding extends Component {
   render() {
     return (
       <Navigator
-        initialRoute={{ id: 2 }}
+        initialRoute={{ id: 1 }}
         configureScene={this.configureScene}
-        renderScene={this.renderScene}
+        renderScene={this.renderScene.bind(this)}
       />
     );
   }

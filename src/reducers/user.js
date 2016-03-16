@@ -15,7 +15,7 @@ const [
 ] = actionTypes.PROFILE_FETCH;
 
 // TODO: we'll need to introduce the workflow "phase" here.
-function user(state = {}, action) {
+function profile(state = {}, action) {
   switch (action.type) {
     case PROFILE_UPDATE_REQUEST:
     case PROFILE_FETCH_REQUEST:
@@ -70,14 +70,14 @@ function auth(state = {
         authToken: action.authToken,
       };
     case LOGIN_SUCCESS:
-        return Object.assign(
-          {},
-          state,
-          {
-            isLoading: false,
-            isAuthenticated: true,
-          },
-        );
+      return Object.assign(
+        {},
+        state,
+        {
+          isLoading: false,
+          isAuthenticated: true,
+        }
+      );
     case LOGIN_FAILURE:
       return {
         isLoading: false,
@@ -93,7 +93,7 @@ function auth(state = {
 
 const rootReducer = combineReducers({
   auth,
-  user,
+  profile,
 });
 
 export default rootReducer;

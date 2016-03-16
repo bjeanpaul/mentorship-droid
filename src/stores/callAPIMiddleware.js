@@ -32,10 +32,11 @@ const callAPIMiddleware = function callAPIMiddleware({ dispatch, getState }) {
       type: requestType,
     }));
 
-    const authToken = getState().auth.authToken;
+    const authToken = getState().user.auth.authToken;
     request.headers.append('Authorization', `Basic ${authToken}`);
     request.headers.append('Accept', 'application/json');
     request.headers.append('Content-Type', 'application/json');
+
     return fetch(request)
     .then(response => response.json().then(json => ({ json, response })))
     .then(({ json, response }) => {
@@ -50,11 +51,18 @@ const callAPIMiddleware = function callAPIMiddleware({ dispatch, getState }) {
 
       return { json, response };
     })
+    // TODO: This can catch errors that have nothing to do with the middleware.
     .then(onFulfilled, onRejected)
     .catch((error) => {
+      let errorMessage;
+      if (error instanceof TypeError) {
+        errorMessage = error.message;
+      } else {
+        errorMessage = error.json.detail || 'Something bad happened';
+      }
       dispatch(Object.assign({}, payload, {
-        errorMessage: error.json.detail,
         type: failureType,
+        errorMessage,
       }));
     });
     // end of fetch.
