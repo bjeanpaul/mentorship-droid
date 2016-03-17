@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "base-64": "^0.1.0",
+    "moment": "^2.12.0",
     "react-native": "^0.21.0-rc",
     "react-redux": "^4.4.0",
     "redux": "^3.3.1",

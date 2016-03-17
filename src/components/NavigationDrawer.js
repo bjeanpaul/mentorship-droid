@@ -13,6 +13,7 @@ import Menu from './Menu';
 
 import { TrainingListContainer } from '../containers/training';
 import { TrainingDetail } from './training';
+import { ScheduleListContainer } from '../schedule/ScheduleListContainer';
 
 class NavigationDrawer extends Component {
 
@@ -27,6 +28,10 @@ class NavigationDrawer extends Component {
   // needs to know about all of this.
   renderScene(route, navigator) {
     switch (route.key) {
+      case 'scheduleList':
+        return (
+          <ScheduleListContainer />
+        );
       case 'trainingList':
         return (
           <TrainingListContainer
@@ -62,7 +67,7 @@ class NavigationDrawer extends Component {
         />
         <Navigator
           ref="navigator"
-          initialRoute={{ key: 'trainingList' }}
+          initialRoute={{ key: 'scheduleList' }}
           renderScene={this.renderScene}
         />
       </View>
