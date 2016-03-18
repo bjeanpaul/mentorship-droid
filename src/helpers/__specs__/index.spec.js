@@ -6,7 +6,7 @@ import {
 } from '../';
 
 describe('Helper', () => {
-  it('should generate action constants for fetch, create, update and delete by default', (done) => {
+  it('should generate action constants for fetch, create, update and delete by default', () => {
     const actionTypes = generateActionTypes('test');
     expect(actionTypes).toEqual({
       TEST_FETCH_REQUEST: 'TEST_FETCH_REQUEST',
@@ -37,10 +37,9 @@ describe('Helper', () => {
       deleteSuccess: 'TEST_DELETE_SUCCESS',
       deleteFailure: 'TEST_DELETE_FAILURE',
     });
-    done();
   });
 
-  it('should filter action types by operation', (done) => {
+  it('should filter action types by operation', () => {
     const actionTypes = {
       fetchRequest: 'TEST_FETCH_REQUEST',
       fetchSuccess: 'TEST_FETCH_SUCCESS',

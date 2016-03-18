@@ -45,6 +45,7 @@ export const filterActionTypes = function filterActionTypes(
   return [];
 };
 
+// TODO: Create, Update, Delete
 export const generateActionCreators = function generateActionCreators(
   endpoint,
   actionTypes
@@ -60,7 +61,6 @@ export const generateActionCreators = function generateActionCreators(
       },
     });
   }
-
 
   return actionCreators;
 };
