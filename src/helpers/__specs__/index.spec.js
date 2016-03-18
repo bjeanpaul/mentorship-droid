@@ -61,5 +61,22 @@ describe('Helper', () => {
     done();
   });
 
-  
+  describe('action creators', () => {
+    describe('should generate action creators based on `actionTypes`', () => {
+      it('fetch', () => {
+        const actionTypes = generateActionTypes('test', ['fetch']);
+        const actionCreators = generateActionCreators('test-endpoint', actionTypes);
+        expect(actionCreators.fetch()).toEqual({
+          types: [
+            'TEST_FETCH_REQUEST',
+            'TEST_FETCH_SUCCESS',
+            'TEST_FETCH_FAILURE',
+          ],
+          request: {
+            endpoint: 'test-endpoint',
+          },
+        });
+      });
+    });
+  });
 });

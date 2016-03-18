@@ -8,9 +8,10 @@ export const generateActionTypes = function generateActionNames(
   const resourceUC = resource.toUpperCase();
 
   operations.forEach((operation) => {
-    const request = `${resourceUC}_${operation}_REQUEST`;
-    const success = `${resourceUC}_${operation}_SUCCESS`;
-    const failure = `${resourceUC}_${operation}_FAILURE`;
+    const operationUC = operation.toUpperCase();
+    const request = `${resourceUC}_${operationUC}_REQUEST`;
+    const success = `${resourceUC}_${operationUC}_SUCCESS`;
+    const failure = `${resourceUC}_${operationUC}_FAILURE`;
     actionTypes[request] = request;
     actionTypes[success] = success;
     actionTypes[failure] = failure;
@@ -28,11 +29,20 @@ export const filterActionTypes = function filterActionTypes(
   actionTypes,
   operation
 ) {
-  return [
-    actionTypes[`${operation}Request`],
-    actionTypes[`${operation}Success`],
-    actionTypes[`${operation}Failure`],
+  const [request, success, failure] = [
+    `${operation}Request`,
+    `${operation}Success`,
+    `${operation}Failure`,
   ];
+
+  if (actionTypes[request] || actionTypes[success] || actionTypes[failure]) {
+    return [
+      actionTypes[request],
+      actionTypes[success],
+      actionTypes[failure],
+    ];
+  }
+  return [];
 };
 
 export const generateActionCreators = function generateActionCreators(
@@ -42,10 +52,15 @@ export const generateActionCreators = function generateActionCreators(
   const actionCreators = {};
 
   const fetchActionTypes = filterActionTypes(actionTypes, 'fetch');
-  if (fetchActionTypes.length) {
-    actionCreators.fetch = () => { actionTypes: fetchActionTypes };
+  if (fetchActionTypes.length === 3) {
+    actionCreators.fetch = () => ({
+      types: fetchActionTypes,
+      request: {
+        endpoint,
+      },
+    });
   }
 
 
   return actionCreators;
-}
+};
