@@ -51,7 +51,7 @@ function testGeneratorForActionsThatInvokeCallAPIMiddleware(action, initialState
 
 describe('User action creators', () => {
   const authToken = 'YWRtaW46MTIz';
-  const initialState = { auth: { authToken } };
+  const initialState = { user: { auth: { authToken } } };
 
   describe('profile', () => {
     testGeneratorForActionsThatInvokeCallAPIMiddleware(
