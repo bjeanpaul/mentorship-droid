@@ -1,12 +1,9 @@
 import moment from 'moment';
-
 import { connect } from 'react-redux';
+
 import { ScheduleList } from './ScheduleList';
 
-const [
-  UPCOMING_CALLS,
-  PAST_CALLS,
-] = ['upcoming', 'past'];
+const [UPCOMING_CALLS, PAST_CALLS] = ['upcoming', 'past'];
 
 const filterCalls = (calls, filter) => {
   const today = new Date();

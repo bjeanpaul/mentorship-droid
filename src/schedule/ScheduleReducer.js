@@ -1,18 +1,7 @@
 import actionTypes from './ScheduleConstants';
 
-const [
-  SCHEDULE_FETCH_REQUEST,
-  SCHEDULE_FETCH_SUCCESS,
-  SCHEDULE_FETCH_FAILURE,
-] = actionTypes.SCHEDULE_FETCH;
 
-const [
-  SCHEDULE_ADD_REQUEST,
-  SCHEDULE_ADD_SUCCESS,
-  SCHEDULE_ADD_FAILURE,
-] = actionTypes.SCHEDULE_ADD;
-// add, delete, update
-
+// TODO: Determine how much of this can we generate?
 const schedule = function training(state = {
   isLoading: false,
   calls: [
@@ -35,12 +24,14 @@ const schedule = function training(state = {
   ],
 }, action) {
   switch (action) {
-    case SCHEDULE_FETCH_REQUEST:
-    case SCHEDULE_ADD_REQUEST:
+    case actionTypes.fetchRequest:
       return Object.assign({}, state, { isLoading: true });
 
-    case SCHEDULE_FETCH_SUCCESS:
+    case actionTypes.fetchSuccess:
       return Object.assign({}, state, { calls: action.results });
+
+    case actionTypes.fetchFailure:
+      return {};
 
     default:
       return state;
