@@ -11,7 +11,7 @@ import React, {
 
 import { connect } from 'react-redux';
 
-import { callAPI } from '../../services/api';
+//import { callAPI } from '../../services/api';
 
 
 // TODO: Really don't appreciate writing validation stuff; let's find a library
@@ -38,17 +38,17 @@ class ResetPassword extends Component {
       return;
     }
 
-    callAPI('/mentor/reset-password/', this.props.authorizationToken, {
-      method: 'POST',
-      body: JSON.stringify({
-        password: this.state.newPassword,
-      }),
-    })
-    .then(data => {
-      console.log('success', data);
-    }).catch((error) => {
-      console.log(error);
-    });
+    // callAPI('/mentor/reset-password/', this.props.authorizationToken, {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     password: this.state.newPassword,
+    //   }),
+    // })
+    // .then(data => {
+    //   console.log('success', data);
+    // }).catch((error) => {
+    //   console.log(error);
+    // });
   }
 
   validateInput() {

@@ -1,10 +1,11 @@
 import React, {
+  Component,
   PropTypes,
   View,
   ScrollView,
   Text,
 } from 'react-native';
-
+import moment from 'moment';
 
 const SectionHeader = function SectionHeader({ title }) {
   return <Text>{ title }</Text>;
@@ -13,25 +14,47 @@ SectionHeader.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-
-export const ScheduleList = function ScheduleList({ upcomingCalls, pastCalls }) {
-
+const ScheduleListRow = function ScheduleListRow({ timestamp }) {
   return (
-    <View>
-      <ScrollView>
-        <SectionHeader title="Upcoming calls" />
-          {upcomingCalls.map((call, i) => {
-            return <Text key={call.id}>{ call.timestamp }</Text>;
-          })}
-        <SectionHeader title="Past calls" />
-          {pastCalls.map((call, i) => {
-            return <Text key={call.id}>{ call.timestamp }</Text>;
-          })}
-      </ScrollView>
-    </View>
+    <Text>{ moment(timestamp).format("Do MMMM YYYY, h:mm:ss a") }</Text>
   );
 };
+
+// TODO: Use ListView instead.
+export class ScheduleList extends Component {
+
+  constructor(props) {
+    super(props);
+    this.props = props;
+  }
+
+  componentDidMount() {
+    this.props.fetchSchedules();
+  }
+
+  render() {
+    const {
+      upcomingCalls,
+      pastCalls,
+    } = this.props;
+    return (
+      <View>
+        <ScrollView>
+          <SectionHeader title="Upcoming calls" />
+            {upcomingCalls.map((call) => {
+              return <ScheduleListRow key={ call.id } timestamp={ call.timestamp } />;
+            })}
+          <SectionHeader title="Past calls" />
+            {pastCalls.map((call) => {
+              return <ScheduleListRow key={ call.id } timestamp={ call.timestamp } />;
+            })}
+        </ScrollView>
+      </View>
+    );
+  }
+}
 ScheduleList.propTypes = {
-  upcomingCalls: PropTypes.array,
-  pastCalls: PropTypes.array,
+  upcomingCalls: PropTypes.array.isRequired,
+  pastCalls: PropTypes.array.isRequired,
+  fetchSchedules: PropTypes.func.isRequired,
 };

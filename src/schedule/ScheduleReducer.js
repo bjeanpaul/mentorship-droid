@@ -4,7 +4,7 @@ import actionTypes from './ScheduleConstants';
 // TODO: Determine how much of this can we generate?
 const schedule = function training(state = {
   isLoading: false,
-  calls: [
+  results: [
     {
       id: 0,
       timestamp: '2016-03-20T15:03:10+00:00',
@@ -23,15 +23,20 @@ const schedule = function training(state = {
     },
   ],
 }, action) {
-  switch (action) {
+  switch (action.type) {
     case actionTypes.fetchRequest:
-      return Object.assign({}, state, { isLoading: true });
-
+      return Object.assign({}, state, {
+        isLoading: true,
+      });
     case actionTypes.fetchSuccess:
-      return Object.assign({}, state, { calls: action.results });
-
+      return Object.assign({}, state, {
+        isLoading: false,
+        results: action.results,
+      });
     case actionTypes.fetchFailure:
-      return {};
+      return Object.assign({}, state, {
+        isLoading: false,
+      });
 
     default:
       return state;

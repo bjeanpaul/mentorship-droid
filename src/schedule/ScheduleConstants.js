@@ -1,5 +1,5 @@
-import { generateActionNames } from '../helpers';
+import { generateActionTypes } from '../helpers';
 
-const actionTypes = generateActionNames('schedule', ['fetch']);
+const actionTypes = generateActionTypes('schedule', ['fetch']);
 
 export default actionTypes;
