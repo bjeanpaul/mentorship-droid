@@ -11,8 +11,6 @@ import React, {
 
 import Menu from './Menu';
 
-import { TrainingListContainer } from '../containers/training';
-import { TrainingDetail } from './training';
 import { ScheduleListContainer } from '../schedule/ScheduleListContainer';
 
 class NavigationDrawer extends Component {
@@ -32,17 +30,6 @@ class NavigationDrawer extends Component {
         return (
           <ScheduleListContainer />
         );
-      case 'trainingList':
-        return (
-          <TrainingListContainer
-            onRowPress={(module) => {
-              navigator.push({ key: 'trainingDetail', module });
-            }}
-          />
-        );
-      case 'trainingDetail':
-        return <TrainingDetail module={route.module} />;
-
       default:
         return <View><Text>No route matched.</Text></View>;
     }

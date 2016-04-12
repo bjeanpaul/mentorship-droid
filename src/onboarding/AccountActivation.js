@@ -1,16 +1,15 @@
 import { connect } from 'react-redux';
 
-import Login from '../user/Login';
+import Login from '../mentor/MentorLogin';
+import { login } from '../mentor/MentorActions';
 
-import { login } from '../../actions/user';
 
 const mapStateToProps = function mapStateToProps(state) {
   return {
-    isLoading: state.user.auth.isLoading,
-    isAuthenticated: state.user.auth.isAuthenticated,
-    defaultUsername: state.user.profile.username,
-    defaultPassword: state.user.profile.password,
-    errorMessage: state.user.auth.errorMessage,
+    isLoading: state.mentor.isLoading,
+    isAuthenticated: state.mentor.isAuthenticated === true,
+    defaultUsername: state.mentor.username,
+    errorMessage: state.mentor.errorMessage,
   };
 };
 

@@ -11,9 +11,6 @@ import React, {
 
 import { connect } from 'react-redux';
 
-//import { callAPI } from '../../services/api';
-
-
 // TODO: Really don't appreciate writing validation stuff; let's find a library
 // to abstract that out.
 class ResetPassword extends Component {
@@ -107,7 +104,7 @@ ResetPassword.propTypes = {
 
 const mapStateToProps = function mapStateToProps(state) {
   return {
-    authToken: state.user.auth.authToken,
+    authToken: state.mentor.authToken,
   };
 };
 

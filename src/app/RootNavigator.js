@@ -1,13 +1,10 @@
 import React, {
   Component,
   Navigator,
-  View,
-  Text,
 } from 'react-native';
 
 import NavigationDrawer from './NavigationDrawer';
-import Onboarding from './onboarding';
-
+import Onboarding from '../onboarding';
 
 class RootNavigator extends Component {
   initalRouteStack() {
@@ -15,10 +12,10 @@ class RootNavigator extends Component {
       {
         component: NavigationDrawer,
       },
-      // {
-      //   modal: true,
-      //   component: Onboarding,
-      // },
+      {
+        modal: true,
+        component: Onboarding,
+      },
     ];
   }
 

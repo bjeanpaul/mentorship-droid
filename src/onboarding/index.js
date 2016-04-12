@@ -9,11 +9,9 @@ import React, {
 
 import Welcome from './Welcome';
 import AccountActivation from './AccountActivation';
-import ResetPassword from '../user/ResetPassword';
+import ResetPassword from '../mentor/MentorResetPassword';
 
 class Onboarding extends Component {
-
-
 
   configureScene() {
     return Navigator.SceneConfigs.FloatFromRight;

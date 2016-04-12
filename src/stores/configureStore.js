@@ -17,9 +17,7 @@ const rootReducer = combineReducers({
   training,
 });
 
-export default function configureStore(initialState = {
-  mentor: { authToken: 'YWRtaW46MTIz' },
-}) {
+export default function configureStore(initialState = {}) {
   return createStore(
     rootReducer,
     initialState,

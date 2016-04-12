@@ -1,4 +1,6 @@
 
+// TODO: Look at Normalizr schema; see if we can pass that in as an argument.
+
 export default class RemoteOperationMiddleware {
   constructor({ getAuthToken }) {
     if (!typeof getAuthToken === 'string') {
@@ -14,8 +16,8 @@ export default class RemoteOperationMiddleware {
         types,
         request,
         payload = {},
-        onFulfilled,
-        onRejected,
+        onSuccess,
+        onFailure,
       } = action;
 
       if (!types) {
@@ -41,6 +43,8 @@ export default class RemoteOperationMiddleware {
       req.headers.append('Content-Type', 'application/json');
       req.headers.append('Authorization', `Basic ${this.getAuthToken(getState)}`);
 
+      console.log('///////////////////', `Basic ${this.getAuthToken(getState)}`);
+
       return fetch(req)
       .then(response => response.json().then(json => ({ json, response })))
       .then(({ json, response }) => {
@@ -53,9 +57,9 @@ export default class RemoteOperationMiddleware {
         }));
         return { json, response };
       })
-      // TODO: This can catch errors that have nothing to do with the middleware.
-      //.then(onFulfilled, onRejected)
+      .then(onSuccess, onFailure)
       .catch((error) => {
+        console.log(error)
         let errorMessage;
         if (error instanceof TypeError) {
           errorMessage = error.message;

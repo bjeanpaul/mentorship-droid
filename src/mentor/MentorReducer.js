@@ -2,6 +2,7 @@ import actionTypes from './MentorConstants';
 
 const mentor = function training(state = {
   isLoading: false,
+  isAuthenticated: false,
   authToken: '',
   results: [],
 }, action) {
@@ -12,19 +13,32 @@ const mentor = function training(state = {
     case actionTypes.fetchRequest:
       return Object.assign({}, state, {
         isLoading: true,
+        isAuthenticated: false,
+        errorMessage: '',
       });
 
     case actionTypes.fetchSuccess:
+      const {
+        username,
+        first_name,
+        last_name,
+        contact_number,
+      } = action.json.results;
+
       return Object.assign({}, state, {
         isLoading: false,
-        results: action.results,
+        isAuthenticated: true,
+        username,
+        name: `${first_name} ${last_name}`,
+        contactNumber: contact_number,
       });
 
     case actionTypes.fetchFailure:
-      return Object.assign({}, state, {
+      return {
         isLoading: false,
-      });
-
+        isAuthenticated: false,
+        errorMessage: action.errorMessage,
+      };
     default:
       return state;
   }

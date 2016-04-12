@@ -54,11 +54,13 @@ export const generateActionCreators = function generateActionCreators(
 
   const fetchActionTypes = filterActionTypes(actionTypes, 'fetch');
   if (fetchActionTypes.length === 3) {
-    actionCreators.fetch = () => ({
+    actionCreators.fetch = (onSuccess, onFailure) => ({
       types: fetchActionTypes,
       request: {
         endpoint,
       },
+      onSuccess,
+      onFailure,
     });
   }
 
