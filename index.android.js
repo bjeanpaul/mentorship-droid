@@ -4,9 +4,7 @@ import {
   UIManager,
 } from 'react-native';
 
-
 import MentorshipApp from './src/App';
-
 
 UIManager.setLayoutAnimationEnabledExperimental &&
   UIManager.setLayoutAnimationEnabledExperimental(true);
