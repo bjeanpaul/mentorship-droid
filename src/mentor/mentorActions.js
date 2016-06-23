@@ -4,7 +4,6 @@ import { generateActionCreators } from '../helpers';
 
 import actionTypes from './MentorConstants';
 
-console.log(actionTypes);
 
 const actionCreators = generateActionCreators('mentor', actionTypes);
 export const fetchMentor = actionCreators.fetch;

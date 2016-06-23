@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "start:emulator": "",
-    "debug:logs": "",
+    "emulator": "emulator @reactnative",
+    "emulator:logs": "adb logcat *:S ReactNative:V ReactNativeJS:V",
     "test": "mocha --opts test/mocha.opts src/**/__specs__/*.spec.js",
     "test:watch": "mocha --opts test/mocha.opts src/**/__specs__/*.spec.js --watch",
     "coverage": "istanbul cover _mocha -- -R -spec --opts test/mocha.opts src/**/__specs__/*.spec.js"
@@ -14,7 +14,7 @@
     "base-64": "^0.1.0",
     "moment": "^2.12.0",
     "react": "^0.14.8",
-    "react-native": "^0.23.1",
+    "react-native": "^0.28.0",
     "react-redux": "^4.4.2",
     "redux": "^3.4.0",
     "redux-thunk": "^2.0.1"
