@@ -8,7 +8,7 @@ import React, {
 import moment from 'moment';
 
 const SectionHeader = function SectionHeader({ title }) {
-  return <Text>{ title }</Text>;
+  return <Text style={{color: 'red', margin: 10}}>{ title }</Text>;
 };
 SectionHeader.propTypes = {
   title: PropTypes.string.isRequired,

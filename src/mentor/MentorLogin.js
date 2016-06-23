@@ -65,7 +65,7 @@ class Login extends Component {
       </View>
     );
   }
-};
+}
 
 Login.propTypes = {
   defaultUsername: PropTypes.string,

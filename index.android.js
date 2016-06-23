@@ -1,7 +1,10 @@
-import React, { AppRegistry, UIManager } from 'react-native';
+import React from 'react';
+import {
+  AppRegistry,
+  UIManager,
+} from 'react-native';
 
-import MentorshipApp from './src/app';
-
+import MentorshipApp from './src/App';
 
 UIManager.setLayoutAnimationEnabledExperimental &&
   UIManager.setLayoutAnimationEnabledExperimental(true);

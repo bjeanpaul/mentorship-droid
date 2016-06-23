@@ -7,7 +7,7 @@ const schedule = function training(state = {
   results: [
     {
       id: 0,
-      timestamp: '2016-03-20T15:03:10+00:00',
+      timestamp: '2016-05-20T15:03:10+00:00',
     },
     {
       id: 1,
@@ -19,7 +19,7 @@ const schedule = function training(state = {
     },
     {
       id: 3,
-      timestamp: '2016-03-19T15:03:10+00:00',
+      timestamp: '2016-05-19T15:03:10+00:00',
     },
   ],
 }, action) {

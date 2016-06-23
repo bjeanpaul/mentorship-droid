@@ -38,10 +38,12 @@ class Menu extends Component {
     ];
 
     return (
-      <View style={{ height: this.state.height, backgroundColor: 'darkgrey' }}>
+      <View style={{ height: this.state.height, backgroundColor: 'white' }}>
         {items.map((item, i) => {
           return (
-            <TouchableHighlight key={i} onPress={(item) => this.props.onItemPress({ key: 'trainingList' }) }>
+            <TouchableHighlight key={i} onPress={
+              (item) => this.props.onItemPress({ key: 'scheduleList' }) }
+            >
               <Text>{ item } </Text>
             </TouchableHighlight>
           );

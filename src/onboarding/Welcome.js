@@ -6,19 +6,23 @@ import React, {
   Navigator,
 } from 'react-native'
 
+import Button from '../components/Button';
+
 
 const Welcome = ({ onContinuePress, rootNavigator }) => {
   return (
     <View>
       <Text>Welcome to our application, this is how you use it.</Text>
-      <TouchableHighlight onPress={onContinuePress}>
-        <Text>Continue</Text>
-      </TouchableHighlight>
-      <TouchableHighlight onPress={() => {
-          rootNavigator.pop();
-        }}>
-        <Text>Dismiss</Text>
-      </TouchableHighlight>
+
+      <Button
+        onPress={onContinuePress}
+        text="Continue"
+      />
+
+      <Button
+        onPress={() => rootNavigator.pop()}
+        text="Cancel"
+      />
     </View>
   )
 }
