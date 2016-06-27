@@ -46,6 +46,7 @@ export class TransparentButton extends Button {
     super(props);
     this.buttonExtraStyle = {
       backgroundColor: 'transparent',
+      elevation: 0,
     };
     this.buttonTextExtraStyle = {
       color: '#f77040',
