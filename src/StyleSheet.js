@@ -29,8 +29,10 @@ export const styles = StyleSheet.create({
     marginRight: 24,
   },
   textInput: {
+    //backgroundColor: '#fff',
     padding: 0,
-    marginBottom: 8,
+    paddingBottom: 8,
     height: 28,
-  }
+    color: '#003035',
+  },
 });
