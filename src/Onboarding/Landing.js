@@ -15,7 +15,7 @@ const Landing = () => (
   <View style={{ backgroundColor: '#dfe5e6', flex: 1 }}>
     <View style={{ flex: 1 }}>
     </View>
-    <View style={{ flex: 0.5, paddingLeft: 24, paddingRight: 24 }}>
+    <View style={{ padding: 24 }}>
       <Text style={{  color: '#003035', fontSize: 20, textAlign: 'center' }}>
         This is a short, but sweet, description of the application.
       </Text>
