@@ -3,7 +3,6 @@ import {
 } from 'react-native';
 
 
-
 export const styles = StyleSheet.create({
   button: {
     flex: 1,
@@ -29,7 +28,6 @@ export const styles = StyleSheet.create({
     marginRight: 24,
   },
   textInput: {
-    //backgroundColor: '#fff',
     padding: 0,
     paddingBottom: 8,
     height: 28,
