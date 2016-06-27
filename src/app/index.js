@@ -22,6 +22,11 @@ import {
 // TODO: Use React-Native-Router
 
 
+
+
+import { TransparentButton } from '../Components/Button';
+
+
 const NoMatch = () => (
   <View>
     <Text>404 - not found</Text>
@@ -38,7 +43,9 @@ const Onboarding = (props) => (
 const Welcome = (props) => (
   <View>
     <Text>Welcome</Text>
-    <Link to="/unlock"><Text>Unlock</Text></Link>
+    <Link to="/unlock">
+      <TransparentButton labelText="Unlock" />
+    </Link>
   </View>
 );
 
@@ -50,6 +57,19 @@ const Unlock = (Unlock) => (
 
 // TODO: Onboarding will include a wonderful header, or?
 
+// Landing
+// ActivateAccount (Variation of Log In)
+// ResetPassword (Variation of Reset Password)
+// Setup Profile
+  // Picture
+  // Job
+  // Why
+  // Own mentor
+  // Three Words
+  // Skills
+// Creating Account
+// Saved
+
 const App = function App() {
   return (
     <Provider store={store}>
@@ -59,8 +79,12 @@ const App = function App() {
           component={Onboarding}
         >
           <IndexRoute component={Welcome} />
+
+          <Route path="unlock" component={Unlock} />
           <Route path="unlock" component={Unlock} />
         </StackRoute>
+
+
         <Route path="*" component={NoMatch} />
       </Router>
     </Provider>
