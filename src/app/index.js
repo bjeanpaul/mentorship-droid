@@ -24,7 +24,8 @@ import {
 
 
 
-import { TransparentButton } from '../Components/Button';
+import { Button, TransparentButton } from '../Components/Button';
+import  { TextInput } from '../Components/TextInput';
 
 
 const NoMatch = () => (
@@ -43,8 +44,9 @@ const Onboarding = (props) => (
 const Welcome = (props) => (
   <View>
     <Text>Welcome</Text>
+    <TextInput />
     <Link to="/unlock">
-      <TransparentButton labelText="Unlock" />
+      <Button labelText="Unlock" />
     </Link>
   </View>
 );
