@@ -22,9 +22,8 @@ import {
 // TODO: Use React-Native-Router
 
 
-
-
-import { TransparentButton } from '../Components/Button';
+import { Button, TransparentButton } from '../Components/Button';
+import { TextInput, MultiLineTextInput } from '../Components/TextInput';
 
 
 const NoMatch = () => (
@@ -43,8 +42,11 @@ const Onboarding = (props) => (
 const Welcome = (props) => (
   <View>
     <Text>Welcome</Text>
+    <MultiLineTextInput />
+
+    <TextInput />
     <Link to="/unlock">
-      <TransparentButton labelText="Unlock" />
+      <Button labelText="Unlock" />
     </Link>
   </View>
 );
