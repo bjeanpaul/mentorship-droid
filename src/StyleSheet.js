@@ -4,16 +4,19 @@ import {
 
 
 export const styles = StyleSheet.create({
-  button: {
+
+  defaultContainer: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  button: {
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#f77040',
     borderWidth: 1,
     borderColor: '#f77040',
     borderRadius: 5,
-    margin: 24,
-    elevation: 1,
   },
   buttonText: {
     margin: 16,

@@ -26,7 +26,7 @@ export class Button extends Component {
     return (
       <View
         ref={component => { this._root = component; }}
-        style={[styles.button, this.buttonExtraStyle]}
+        style={[styles.button, this.buttonExtraStyle, this.props.style ]}
       >
         <Text style={[styles.buttonText, this.buttonTextExtraStyle]}>
           {this.labelText.toUpperCase()}
@@ -36,7 +36,7 @@ export class Button extends Component {
   }
 }
 Button.propTypes = {
-  labelText: PropTypes.string,
+  labelText: PropTypes.string.isRequired,
 };
 
 
