@@ -19,12 +19,7 @@ import {
 } from 'react-router-native';
 
 
-// TODO: Use React-Native-Router
-
-
-import { Button, TransparentButton } from '../Components/Button';
-import { TextInput, MultiLineTextInput } from '../Components/TextInput';
-
+import Landing from '../Onboarding/Landing';
 
 const NoMatch = () => (
   <View>
@@ -32,24 +27,13 @@ const NoMatch = () => (
   </View>
 );
 
-const Onboarding = (props) => (
-  <View style={{flex: 1, backgroundColor: 'red', height: 44}}>
-    <Text>Onboarding</Text>
+
+const StackContainer = (props) => (
+  <View style={{ flex: 1, backgroundColor: 'black' }}>
     {props.children}
   </View>
 );
 
-const Welcome = (props) => (
-  <View>
-    <Text>Welcome</Text>
-    <MultiLineTextInput />
-
-    <TextInput />
-    <Link to="/unlock">
-      <Button labelText="Unlock" />
-    </Link>
-  </View>
-);
 
 const Unlock = (Unlock) => (
   <View>
@@ -78,12 +62,9 @@ const App = function App() {
       <Router addressBar>
         <StackRoute
           path="/"
-          component={Onboarding}
+          component={Landing}
         >
-          <IndexRoute component={Welcome} />
-
-          <Route path="unlock" component={Unlock} />
-          <Route path="unlock" component={Unlock} />
+          <IndexRoute component={Landing} />
         </StackRoute>
 
 
