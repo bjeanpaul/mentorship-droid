@@ -1,19 +1,25 @@
 /* eslint-disable react/jsx-no-bind */
 
 import React, {
-  Component,
   PropTypes,
-  Text,
-  TextInput,
+  Component,
+} from 'react';
+
+import {
   TouchableHighlight,
   View,
 } from 'react-native';
 
+import {
+  Heading,
+  Text,
+  TextInput,
+  Button,
+} from '../Components';
+
 import { connect } from 'react-redux';
 
-// TODO: Really don't appreciate writing validation stuff; let's find a library
-// to abstract that out.
-class ResetPassword extends Component {
+class ChangePassword extends Component {
 
   constructor(props) {
     super(props);
@@ -61,10 +67,10 @@ class ResetPassword extends Component {
   }
 
   render() {
-    const isLoadingPartial = this.state.isLoading ? <Text>Loading</Text> : null;
     return (
       <View>
-        {isLoadingPartial}
+        <Heading>Change password</Heading>
+
         <TextInput
           placeholder="New password"
           value={this.state.newPassword}
@@ -84,19 +90,16 @@ class ResetPassword extends Component {
           }}
         />
 
-      <Text>{ this.state.errors.network }</Text>
+        <Text>{ this.state.errors.newPasswordRepeat }</Text>
 
-      <Text>{ this.state.errors.newPasswordRepeat }</Text>
 
-        <TouchableHighlight onPress={this.onSubmitPress}>
-          <Text>Submit</Text>
-        </TouchableHighlight>
+        <Button>Change my password</Button>
       </View>
     );
   }
 }
 
-ResetPassword.propTypes = {
+ChangePassword.propTypes = {
   authToken: PropTypes.string.isRequired,
   onResetPassword: PropTypes.func.isRequired,
 };
@@ -108,10 +111,10 @@ const mapStateToProps = function mapStateToProps(state) {
   };
 };
 
-ResetPassword = connect(
+ChangePassword = connect(
   mapStateToProps,
   {}
-)(ResetPassword);
+)(ChangePassword);
 
 
-export default ResetPassword;
+export default ChangePassword;
