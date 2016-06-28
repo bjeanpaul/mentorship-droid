@@ -15,12 +15,12 @@ import {
   Route,
   StackRoute,
   IndexRoute,
+  Link,
 } from 'react-router-native';
 
 
 import Landing from '../Onboarding/Landing';
 import LogIn from '../Mentor/LogIn';
-import ForgotPassword from '../Mentor/ForgotPassword';
 
 const NoMatch = () => (
   <View>
@@ -59,10 +59,9 @@ const App = function App() {
           path="/"
           component={StackContainer}
         >
-          <IndexRoute component={ForgotPassword} />
+          <IndexRoute component={LogIn} />
           <Route path="landing" component={Landing} />
           <Route path="log-in" component={LogIn} />
-          <Route path="forgot-password" component={ForgotPassword} />
 
         </StackRoute>
 
