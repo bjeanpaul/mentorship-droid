@@ -1,28 +1,36 @@
-import React, {
-  Component,
-} from 'react';
+import React, { Component } from 'react';
 
 import {
   View,
-  TextInput as RNTextInput,
+  TextInput,
 } from 'react-native';
 
-import { styles } from '../StyleSheet';
 
-export class TextInput extends Component {
+import globalStyles from '../StyleSheet';
+
+// TODO: Not a pure function because we want to add
+// some material design animations.
+class MyTextInput extends Component {
+
   render() {
     return (
-      <View style={styles.textInputContainer}>
-        <RNTextInput
+      <View style={{
+        borderColor: '#dfe5e6',
+        borderBottomWidth: 1,
+      }}
+      >
+        <TextInput
           {...this.props}
-          style={styles.textInput}
+          style={[globalStyles.textInput, this.props.style]}
           underlineColorAndroid="transparent"
           placeholderTextColor="#c0cbcc"
         />
       </View>
     );
   }
-}
+};
+
+export default MyTextInput;
 
 // TODO: Figure out how to animate the state changes
 // TODO: Try and remove the magic numbers.

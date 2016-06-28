@@ -3,19 +3,39 @@ import {
 } from 'react-native';
 
 
+export const fontSize = {
+  xSmall: 12,
+  small: 14,
+  medium: 16,
+  large: 18,
+  xLarge: 20,
+};
+
+export const fontWeight = {
+  medium: '300',
+  bold: '500',
+};
+
 const styles = StyleSheet.create({
 
   text: {
     fontFamily: 'Brandon Text',
-    fontSize: 16,
+    fontSize: fontSize.medium,
     textAlign: 'center',
   },
+  textLink: {
+    fontFamily: 'Brandon Text',
+    fontSize: fontSize.small,
+    textAlign: 'center',
+    color: 'rgba(246, 111, 63, 0.97)',
+  },
+
   heading: {
     fontFamily: 'Brandon Text',
-    fontSize: 20,
-    fontWeight: '500',
-    color: '#003035',
+    fontSize: fontSize.xLarge,
+    fontWeight: fontWeight.medium,
     textAlign: 'center',
+    color: '#003035',
   },
 
   defaultContainer: {
@@ -23,30 +43,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  textInputContainer: {
-    borderColor: '#dfe5e6',
-    borderBottomWidth: 1,
-    marginLeft: 24,
-    marginRight: 24,
-    marginBottom: 27,
-  },
+
   textInput: {
-    fontFamily: 'brandon',
+    fontFamily: 'BrandonText',
+    fontSize: fontSize.large,
+    color: '#003035',
     padding: 0,
     paddingBottom: 8,
     height: 28,
-    color: '#003035',
   },
 
 
   fontSmall: {
     fontFamily: 'brandon',
-    fontSize: 14,
+    fontSize: fontSize.small,
     color: '#9fb1b3',
-  },
-  textLink: {
-    color: 'rgba(246, 111, 63, 0.97)',
-    textAlign: 'center',
   },
 });
 

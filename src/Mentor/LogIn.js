@@ -12,6 +12,8 @@ import {
 import {
   Heading,
   Text,
+  TextLink,
+  TextInput,
   Button,
 } from '../Components';
 
@@ -29,7 +31,12 @@ class LogIn extends Component {
       <View>
         <Heading>Log In</Heading>
 
+        <TextInput placeholder="Email" />
+        <TextInput placeholder="Password" />
+
         <Button>Sign In</Button>
+
+        <TextLink>Forgot your password?</TextLink>
       </View>
     );
   }
