@@ -3,7 +3,7 @@ import thunkMiddleware from 'redux-thunk';
 
 import training from '../reducers/training';
 import schedule from '../schedule/ScheduleReducer';
-import mentor from '../mentor/MentorReducer';
+import mentor from '../Mentor/MentorReducer';
 
 import RemoteOperationMiddleware from './RemoteOperationMiddleware';
 

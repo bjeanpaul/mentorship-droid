@@ -17,7 +17,6 @@ export class TextInput extends Component {
           {...this.props}
           style={styles.textInput}
           underlineColorAndroid="transparent"
-          placeholder="text"
           placeholderTextColor="#c0cbcc"
         />
       </View>

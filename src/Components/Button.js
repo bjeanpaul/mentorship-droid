@@ -5,18 +5,32 @@ import React, {
 
 import {
   View,
-  Text,
+  StyleSheet,
 } from 'react-native';
 
-import { styles } from '../StyleSheet';
+import Text from 'Text';
 
+const styles = StyleSheet.create({
+  button: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+    borderWidth: 1,
+    borderColor: '#f77040',
+    borderRadius: 5,
+    marginLeft: 24,
+    marginRight: 24,
+  },
+  buttonText: {
+    fontFamily: 'Brandon Text',
+    color: '#f77040',
+    fontSize: 13,
+    fontWeight: '600',
+    margin: 16,
+  },
+});
 
-export class Button extends Component {
-
-  constructor(props) {
-    super(props);
-    this.labelText = props.labelText;
-  }
+export default class Button extends Component {
 
   setNativeProps(nativeProps) {
     this._root.setNativeProps(nativeProps);
@@ -26,31 +40,15 @@ export class Button extends Component {
     return (
       <View
         ref={component => { this._root = component; }}
-        style={[styles.button, this.buttonExtraStyle, this.props.style ]}
+        style={[styles.button, this.props.style]}
       >
-        <Text style={[styles.buttonText, this.buttonTextExtraStyle]}>
-          {this.labelText.toUpperCase()}
+        <Text style={[styles.buttonText]}>
+          {this.props.children}
         </Text>
       </View>
     );
   }
 }
 Button.propTypes = {
-  labelText: PropTypes.string.isRequired,
+  style: PropTypes.object,
 };
-
-
-export class TransparentButton extends Button {
-
-  constructor(props) {
-    super(props);
-    this.buttonExtraStyle = {
-      backgroundColor: 'transparent',
-      elevation: 0,
-    };
-    this.buttonTextExtraStyle = {
-      color: '#f77040',
-    };
-  }
-
-}
