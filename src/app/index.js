@@ -15,6 +15,7 @@ import {
   Route,
   StackRoute,
   IndexRoute,
+  Link,
 } from 'react-router-native';
 
 
@@ -65,7 +66,6 @@ const App = function App() {
           <Route path="log-in" component={LogIn} />
           <Route path="forgot-password" component={ForgotPassword} />
           <Route path="change-password" component={ChangePassword} />
-
         </StackRoute>
 
 
