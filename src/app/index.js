@@ -20,6 +20,7 @@ import {
 
 
 import Landing from '../Onboarding/Landing';
+import LogIn from '../Mentor/LogIn';
 
 const NoMatch = () => (
   <View>
@@ -34,12 +35,6 @@ const StackContainer = (props) => (
   </View>
 );
 
-
-const Unlock = (Unlock) => (
-  <View>
-    <Text>Unlock</Text>
-  </View>
-);
 
 // TODO: Onboarding will include a wonderful header, or?
 
@@ -62,9 +57,12 @@ const App = function App() {
       <Router addressBar>
         <StackRoute
           path="/"
-          component={Landing}
+          component={StackContainer}
         >
-          <IndexRoute component={Landing} />
+          <IndexRoute component={LogIn} />
+          <Route path="landing" component={Landing} />
+          <Route path="log-in" component={LogIn} />
+
         </StackRoute>
 
 
