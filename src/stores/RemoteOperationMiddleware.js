@@ -1,8 +1,7 @@
-
-// TODO: Look at Normalizr schema; see if we can pass that in as an argument.
-
 export default class RemoteOperationMiddleware {
   constructor({ getAuthToken }) {
+
+    // this is really strange test?
     if (!typeof getAuthToken === 'string') {
       throw new Error('`getAuthToken` is required, and should be a function.');
     }
@@ -43,7 +42,6 @@ export default class RemoteOperationMiddleware {
       req.headers.append('Content-Type', 'application/json');
       req.headers.append('Authorization', `Basic ${this.getAuthToken(getState)}`);
 
-      console.log('///////////////////', `Basic ${this.getAuthToken(getState)}`);
 
       return fetch(req)
       .then(response => response.json().then(json => ({ json, response })))
@@ -59,14 +57,12 @@ export default class RemoteOperationMiddleware {
       })
       .then(onSuccess, onFailure)
       .catch((error) => {
-        console.log(error)
         let errorMessage;
         if (error instanceof TypeError) {
           errorMessage = error.message;
         } else {
           errorMessage = error.json.detail || 'Something bad happened';
         }
-        console.log('///////////////////', errorMessage)
         dispatch(Object.assign({}, payload, {
           type: failureType,
           errorMessage,

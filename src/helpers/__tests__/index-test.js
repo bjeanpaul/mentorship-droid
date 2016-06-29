@@ -1,11 +1,14 @@
 /* eslint-disable no-undef */
+jest.unmock('../index.js');
+
 import {
   generateActionTypes,
   filterActionTypes,
   generateActionCreators,
-} from '../';
+} from '../index';
 
-describe('Helper', () => {
+describe('Helpers', () => {
+
   it('should generate action constants for fetch, create, update and delete by default', () => {
     const actionTypes = generateActionTypes('test');
     expect(actionTypes).toEqual({
@@ -56,8 +59,6 @@ describe('Helper', () => {
         'TEST_DELETE_FAILURE',
       ]
     );
-
-    done();
   });
 
   describe('action creators', () => {
