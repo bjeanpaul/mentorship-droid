@@ -7,8 +7,8 @@ import mentor from '../Mentor/MentorReducer';
 
 import RemoteOperationMiddleware from './RemoteOperationMiddleware';
 
-const remoteOperationMiddleware = new RemoteOperationMiddleware({
-  getAuthToken: (getState) => getState().mentor.authToken,
+const requestMiddleware = new RemoteOperationMiddleware({
+  getAuthorizationHeaderValue: (state) => state.mentor.authToken,
 });
 
 const rootReducer = combineReducers({
@@ -23,7 +23,7 @@ export default function configureStore(initialState = {}) {
     initialState,
     applyMiddleware(
       thunkMiddleware,
-      remoteOperationMiddleware.apply
+      requestMiddleware.apply
     )
   );
 }

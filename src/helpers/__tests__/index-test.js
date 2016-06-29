@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
-jest.unmock('../index.js');
-
+jest.unmock('../index');
 import {
   generateActionTypes,
   filterActionTypes,
