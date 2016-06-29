@@ -6,9 +6,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "emulator": "emulator @reactnative",
     "emulator:logs": "adb logcat *:S ReactNative:V ReactNativeJS:V",
-    "test": "mocha --opts test/mocha.opts src/**/__specs__/*.spec.js",
-    "test:watch": "mocha --opts test/mocha.opts src/**/__specs__/*.spec.js --watch",
-    "coverage": "istanbul cover _mocha -- -R -spec --opts test/mocha.opts src/**/__specs__/*.spec.js"
+    "test": "jest",
   },
   "dependencies": {
     "base-64": "^0.1.0",
@@ -23,6 +21,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
+    "babel-jest": "^13.0.0",
     "babel-polyfill": "^6.7.4",
     "babel-preset-react": "^6.5.0",
     "eslint": "^2.3.0",
@@ -31,6 +30,7 @@
     "expect": "^1.14.0",
     "isomorphic-fetch": "^2.2.1",
     "istanbul": "^0.4.2",
+    "jest-cli": "^13.0.0",
     "mocha": "^2.4.5",
     "nock": "^7.2.2",
     "redux-logger": "^2.6.1",

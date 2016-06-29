@@ -21,7 +21,6 @@ import {
 
 import Landing from '../Onboarding/Landing';
 import LogIn from '../Mentor/LogIn';
-import ForgotPassword from '../Mentor/ForgotPassword';
 import ChangePassword from '../Mentor/ChangePassword';
 
 const NoMatch = () => (
@@ -64,7 +63,6 @@ const App = function App() {
           <IndexRoute component={ChangePassword} />
           <Route path="landing" component={Landing} />
           <Route path="log-in" component={LogIn} />
-          <Route path="forgot-password" component={ForgotPassword} />
           <Route path="change-password" component={ChangePassword} />
         </StackRoute>
 
