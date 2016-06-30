@@ -5,7 +5,7 @@ import React, {
 import { View, Text } from 'react-native';
 import { Provider } from 'react-redux';
 
-import configureStore from '../stores/configureStore';
+import configureStore from 'src/stores/configureStore';
 const initialState = { mentor: { authToken: 'YWRtaW46MTIz' } };
 const store = configureStore(initialState);
 
@@ -15,19 +15,18 @@ import {
   Route,
   StackRoute,
   IndexRoute,
-  Link,
 } from 'react-router-native';
 
-
-import Landing from '../Onboarding/Landing';
-import LogIn from '../Mentor/LogIn';
-import ChangePassword from '../Mentor/ChangePassword';
 
 const NoMatch = () => (
   <View>
     <Text>404 - not found</Text>
   </View>
 );
+
+
+import onboardingRoute from 'src/onboarding/Route';
+
 
 
 const StackContainer = (props) => (
@@ -37,35 +36,11 @@ const StackContainer = (props) => (
 );
 
 
-// TODO: Onboarding will include a wonderful header, or?
-
-// Landing
-// ActivateAccount (Variation of Log In)
-// ResetPassword (Variation of Reset Password)
-// Setup Profile
-  // Picture
-  // Job
-  // Why
-  // Own mentor
-  // Three Words
-  // Skills
-// Creating Account
-// Saved
-
 const App = function App() {
   return (
     <Provider store={store}>
       <Router addressBar>
-        <StackRoute
-          path="/"
-          component={StackContainer}
-        >
-          <IndexRoute component={ChangePassword} />
-          <Route path="landing" component={Landing} />
-          <Route path="log-in" component={LogIn} />
-          <Route path="change-password" component={ChangePassword} />
-        </StackRoute>
-
+        {onboardingRoute}
 
         <Route path="*" component={NoMatch} />
       </Router>

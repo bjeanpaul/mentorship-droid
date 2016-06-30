@@ -9,6 +9,7 @@ export const fontSize = {
   medium: 16,
   large: 18,
   xLarge: 20,
+  xxLarge: 32,
 };
 
 export const fontWeight = {
