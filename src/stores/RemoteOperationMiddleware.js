@@ -10,14 +10,15 @@ export default class RemoteOperationMiddleware {
 
       const {
         types,
-        request,
-        payload = {},
+        url,
+        requestOpts,
+        payload = {}, // passed along with actions
         onSuccess,
         onFailure,
       } = action;
 
 
-      if (!request) {
+      if (!url) {
         return next(action);
       }
 
@@ -35,12 +36,10 @@ export default class RemoteOperationMiddleware {
         type: requestType,
       }));
 
-      const req = new Request(request.url, request);
+      const req = new Request(url, requestOpts);
       req.headers.append('Accept', 'application/json');
       req.headers.append('Content-Type', 'application/json');
       req.headers.append('Authorization', `Basic ${this.getAuthorizationHeaderValue(getState())}`);
-
-      console.log('----- network request starting ----')
 
       return fetch(req)
         .then(response => response.json().then(json => ({ json, response })))
@@ -56,7 +55,7 @@ export default class RemoteOperationMiddleware {
         })
         .then(onSuccess, onFailure)
         .catch((error) => {
-          console.log('----- network request failure ----', error)
+          //console.log('----- network request failure ----', error)
           let errorMessage;
           if (error instanceof TypeError) {
             errorMessage = error.message;

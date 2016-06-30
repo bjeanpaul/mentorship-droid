@@ -8,12 +8,8 @@ import RemoteOperationMiddleware from '../RemoteOperationMiddleware';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
-
-
 const httpRequestMiddleware = new RemoteOperationMiddleware({
-  getAuthorizationHeaderValue: (state) => {
-    return state.user.auth.authToken;
-  },
+  getAuthorizationHeaderValue: (state) => state.user.auth.authToken,
 });
 
 const mockStore = configureMockStore([httpRequestMiddleware.apply, thunk]);
@@ -23,9 +19,7 @@ describe('RemoteOperationMiddleware', () => {
   const store = mockStore({ user: { auth: { authToken: 'XXXsecretXXX' } } });
   const successAction = {
     types: ['request', 'success', 'failure'],
-    request: {
-      url: 'http://example.org/pass/'
-    },
+    url: 'http://example.org/pass/',
     payload: {
       example: 'I am an example payload.',
     },
@@ -33,16 +27,17 @@ describe('RemoteOperationMiddleware', () => {
   const failureAction = Object.assign(
     {},
     successAction,
-    { request: new Request('http://example.org/die/') }
+    { url: 'http://example.org/fail/' },
   );
 
-  // beforeEach(() => {
-  //   nock('http://example.org')
-  //     .get('/pass/')
-  //       .reply(200, {})
-  //     .get('/fail/')
-  //       .reply(404, {});
-  // });
+  beforeEach(() => {
+    nock('http://example.org')
+      .get('/pass/')
+        .reply(200, {})
+      .get('/fail/')
+        .reply(404, {});
+  });
+
 
   afterEach(() => {
     store.clearActions();
@@ -50,9 +45,8 @@ describe('RemoteOperationMiddleware', () => {
   });
 
 
-// it should return the authorization header from the store.
-
   it('should return the authorization header from the store', (done) => {
+    nock.cleanAll();
     nock('http://example.org', { reqheaders: { authorization: 'Basic XXXsecretXXX' } })
       .get('/pass/')
       .reply(200, {});
@@ -62,4 +56,44 @@ describe('RemoteOperationMiddleware', () => {
     });
   });
 
+  describe('should pass the `payload` with the dispatched actions', () => {
+    it('on `request`', (done) => {
+      store.dispatch(successAction)
+        .then(() => {
+          expect(store.getActions()[0].example).toEqual('I am an example payload.');
+          done();
+        });
+    });
+    it('on `success`', (done) => {
+      store.dispatch(successAction)
+        .then(() => {
+          expect(store.getActions()[1].example).toEqual('I am an example payload.');
+          done();
+        });
+    });
+
+    it('on `failure`', (done) => {
+      store.dispatch(failureAction)
+        .then(() => {
+          expect(store.getActions()[1].example).toEqual('I am an example payload.');
+          done();
+        });
+    });
+  });
+
+  describe('should call `onSuccess` and `onFailure` callbacks.', () => {
+    it('on `success`', (done) => {
+      successAction.onSuccess = () => {
+        done();
+      };
+      store.dispatch(successAction);
+    });
+
+    it('on `failure`', (done) => {
+      failureAction.onFailure = () => {
+        done();
+      };
+      store.dispatch(failureAction);
+    });
+  });
 });
