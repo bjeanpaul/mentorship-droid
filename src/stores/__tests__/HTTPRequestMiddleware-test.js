@@ -1,14 +1,14 @@
 /* eslint-disable no-undef */
-jest.unmock('../RemoteOperationMiddleware');
+jest.unmock('../HTTPRequestMiddleware');
 jest.unmock('redux-mock-store');
 jest.unmock('redux-thunk');
 
 
-import RemoteOperationMiddleware from '../RemoteOperationMiddleware';
+import HTTPRequestMiddleware from '../HTTPRequestMiddleware';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
-const httpRequestMiddleware = new RemoteOperationMiddleware({
+const httpRequestMiddleware = new HTTPRequestMiddleware({
   getAuthorizationHeaderValue: (state) => state.user.auth.authToken,
 });
 
@@ -27,7 +27,7 @@ describe('RemoteOperationMiddleware', () => {
   const failureAction = Object.assign(
     {},
     successAction,
-    { url: 'http://example.org/fail/' },
+    { url: 'http://example.org/fail/' }
   );
 
   beforeEach(() => {
@@ -37,7 +37,6 @@ describe('RemoteOperationMiddleware', () => {
       .get('/fail/')
         .reply(404, {});
   });
-
 
   afterEach(() => {
     store.clearActions();

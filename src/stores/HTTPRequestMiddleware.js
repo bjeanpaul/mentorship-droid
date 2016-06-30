@@ -1,4 +1,4 @@
-export default class RemoteOperationMiddleware {
+export default class HTTPRequestMiddleware {
 
   constructor({ getAuthorizationHeaderValue }) {
     this.getAuthorizationHeaderValue = getAuthorizationHeaderValue;
@@ -7,7 +7,6 @@ export default class RemoteOperationMiddleware {
 
   apply({ dispatch, getState }) {
     return next => action => {
-
       const {
         types,
         url,
@@ -17,11 +16,9 @@ export default class RemoteOperationMiddleware {
         onFailure,
       } = action;
 
-
       if (!url) {
         return next(action);
       }
-
       if (
         !Array.isArray(types) ||
         types.length !== 3 ||
@@ -35,6 +32,7 @@ export default class RemoteOperationMiddleware {
       dispatch(Object.assign({}, payload, {
         type: requestType,
       }));
+
 
       const req = new Request(url, requestOpts);
       req.headers.append('Accept', 'application/json');

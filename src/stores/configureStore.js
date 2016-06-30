@@ -5,9 +5,9 @@ import training from '../reducers/training';
 import schedule from '../schedule/ScheduleReducer';
 import mentor from '../Mentor/MentorReducer';
 
-import RemoteOperationMiddleware from './RemoteOperationMiddleware';
+import HTTPRequestMiddleware from './HTTPRequestMiddleware';
 
-const requestMiddleware = new RemoteOperationMiddleware({
+const httpRequestMiddleware = new HTTPRequestMiddleware({
   getAuthorizationHeaderValue: (state) => state.mentor.authToken,
 });
 
@@ -23,7 +23,7 @@ export default function configureStore(initialState = {}) {
     initialState,
     applyMiddleware(
       thunkMiddleware,
-      requestMiddleware.apply
+      httpRequestMiddleware.apply
     )
   );
 }
