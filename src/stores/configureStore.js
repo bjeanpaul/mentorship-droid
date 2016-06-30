@@ -5,10 +5,10 @@ import training from '../reducers/training';
 import schedule from '../schedule/ScheduleReducer';
 import mentor from '../Mentor/MentorReducer';
 
-import RemoteOperationMiddleware from './RemoteOperationMiddleware';
+import HTTPRequestMiddleware from './HTTPRequestMiddleware';
 
-const remoteOperationMiddleware = new RemoteOperationMiddleware({
-  getAuthToken: (getState) => getState().mentor.authToken,
+const httpRequestMiddleware = new HTTPRequestMiddleware({
+  getAuthorizationHeaderValue: (state) => state.mentor.authToken,
 });
 
 const rootReducer = combineReducers({
@@ -23,7 +23,7 @@ export default function configureStore(initialState = {}) {
     initialState,
     applyMiddleware(
       thunkMiddleware,
-      remoteOperationMiddleware.apply
+      httpRequestMiddleware.apply
     )
   );
 }
