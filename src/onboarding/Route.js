@@ -13,7 +13,8 @@ import {
 } from 'react-router-native';
 
 import Welcome from './Welcome'
-
+import ProfilePicture from './ProfilePicture';
+import CameraRoll from './CameraRoll';
 
 const StackContainer = (props) => (
   <View style={{ flex: 1, backgroundColor: 'black' }}>
@@ -30,12 +31,21 @@ const onboardingRoute = (
     component={StackContainer}
     transition="vertical-card-stack"
   >
-    <IndexRoute component={Welcome} />
+    <IndexRoute component={CameraRoll} />
 
     <Route
       path="welcome"
       component={Welcome}
     />
+    <Route
+      path="profile-picture"
+      component={ProfilePicture}
+    />
+    <Route
+      path="camera-roll"
+      component={CameraRoll}
+    />
+
 
   </StackRoute>
 );
