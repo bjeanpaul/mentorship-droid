@@ -13,8 +13,6 @@ const store = configureStore(initialState);
 import {
   Router,
   Route,
-  StackRoute,
-  IndexRoute,
 } from 'react-router-native';
 
 
@@ -29,11 +27,6 @@ import onboardingRoute from 'src/onboarding/Route';
 
 
 
-const StackContainer = (props) => (
-  <View style={{ flex: 1, backgroundColor: 'black' }}>
-    {props.children}
-  </View>
-);
 
 
 const App = function App() {

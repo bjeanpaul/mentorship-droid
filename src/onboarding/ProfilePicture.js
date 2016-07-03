@@ -1,14 +1,8 @@
-import React, {
-  Component,
-} from 'react';
+import React, { Component } from 'react';
 
 import { Link } from 'react-router-native';
 
-import {
-  View,
-  Image,
-  TouchableHighlight,
-} from 'react-native';
+import { View, Image } from 'react-native';
 
 import {
   Text,
@@ -17,36 +11,49 @@ import {
 } from 'src/components';
 
 
-class ProfilePicture extends Component {
+// TODO: Create Progress Bar
+// TODO: Create Navigation Buttons
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      profileSource: this.props.location.query.uri || "app/assets/Profile_Add.png",
-    };
+const NavigationBar = () => {
+  return (
+    <View style={{
+      flexDirection: 'row',
+    }}>
+      <Button style={{ width: 56, marginRight: 16 }}>←</Button>
+      <Button style={{ flex: 1, marginLeft: 0 }}>Next</Button>
+    </View>
+  );
+};
+
+
+const ProfilePicture = ({ location }) => {
+
+  let imageSource;
+  if (location.query.uri) {
+    imageSource = { uri: location.query.uri };
+  } else {
+    imageSource = require("app/assets/Profile_Add.png");
   }
 
-  render() {
+  return (
+    <View style={{ flex: 1 }}>
+      <Heading>Add a profile picture</Heading>
+      <Link to="camera-roll">
+        <View>
+          <Image
+            style={{
+              width: 100,
+              height: 100,
+            }}
+            source={imageSource}
+          />
+          <Text>Choose Photo</Text>
+        </View>
+      </Link>
+      <NavigationBar />
+    </View>
+  );
+};
 
-    console.log(this.props.location.query.uri)
-
-    return (
-      <View style={{ flex: 1 }}>
-        <Heading>Add a profile picture</Heading>
-        <Image
-          style={{
-            width: 100,
-            height: 100,
-            margin: 10,
-          }}
-          source={{ uri: this.state.profileSource }}
-        />
-        <Link to="camera-roll">
-          <Button>Take Photo</Button>
-        </Link>
-      </View>
-    );
-  }
-}
 
 export default ProfilePicture;

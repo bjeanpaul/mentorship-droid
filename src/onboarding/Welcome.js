@@ -25,7 +25,7 @@ const Welcome = ({
     <Image source={require('app/assets/Profile.png')} />
     <Heading style={{ fontSize: fontSize.xxLarge }}>Welcome {name}</Heading>
     <Text style={{ fontSize: fontSize.large }}>Help build a vibrant mentor community. Complete your profile to allow others learn more about you.</Text>
-    <Link to="">
+    <Link to="profile-picture">
       <Button>Complete Profile</Button>
     </Link>
   </View>

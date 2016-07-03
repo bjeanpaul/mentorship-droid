@@ -29,22 +29,22 @@ const onboardingRoute = (
   <StackRoute
     path="/"
     component={StackContainer}
-    transition="vertical-card-stack"
   >
+
     <IndexRoute component={CameraRoll} />
 
-    <Route
-      path="welcome"
-      component={Welcome}
-    />
+
     <Route
       path="profile-picture"
       component={ProfilePicture}
-    />
+    >
+
+    </Route>
     <Route
       path="camera-roll"
       component={CameraRoll}
     />
+
 
 
   </StackRoute>

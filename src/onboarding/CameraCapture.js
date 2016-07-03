@@ -32,9 +32,7 @@ class CameraCapture extends Component {
   renderPreview() {
     return (
       <View style={{ flex: 1, backgroundColor: 'orange' }}>
-        <Image style={{ width: 200, height: 200, borderWidth: 1, borderColor: 'red'}}
-
-        />
+        <Image style={{ width: 200, height: 200, borderWidth: 1, borderColor: 'red'}} />
       </View>
     );
   }

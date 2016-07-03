@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { View, Image, TouchableHighlight, CameraRoll,
-StyleSheet, ScrollView } from 'react-native';
+import { View, Image, CameraRoll, StyleSheet, ScrollView,
+TouchableHighlight } from 'react-native';
 import { Link } from 'react-router-native';
-
 
 import { Text, Heading, Button } from 'src/components';
 
@@ -27,31 +26,17 @@ const styles = StyleSheet.create({
 
 class CameraRollPicker extends Component {
 
-
   constructor(props) {
     super(props);
-
     this.state = {
       images: [],
-    }
+    };
   }
-
 
   componentDidMount() {
-    CameraRoll.getPhotos({
-        first: 25,
-    }).then((data) => {
-      this.storeImages(data);
+    CameraRoll.getPhotos({ first: 25 }).then((data) => {
+      this.setState({ images: data.edges.map((asset) => asset.node.image) });
     });
-  }
-
-  storeImages(data) {
-    const images = data.edges.map((asset) => asset.node.image);
-    this.setState({ images });
-  }
-
-  logImageError(err) {
-    console.log(err);
   }
 
   render() {
@@ -59,9 +44,13 @@ class CameraRollPicker extends Component {
       <ScrollView style={styles.container}>
         <View style={styles.imageGrid}>
           {this.state.images.map((image, index) =>
-            <Link key={`image-${index}`} to={{ pathname: 'profile-picture', query: { uri: image.uri } }} >
+            <TouchableHighlight key={`image-${index}`}
+              onPress={() => {
+                console.log('1123213', this.router);
+              }}
+            >
               <Image source={{ uri: image.uri }} style={styles.image} />
-            </Link>
+            </TouchableHighlight>
           )}
         </View>
       </ScrollView>
