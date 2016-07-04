@@ -6,6 +6,8 @@ import Welcome from './Welcome'
 import ProfilePicture from './ProfilePicture';
 import CameraRoll from './CameraRoll';
 import Job from './Job';
+import Motivation from './Motivation';
+
 
 const StackContainer = (props) => (
   <View style={{ flex: 1, backgroundColor: 'black' }}>
@@ -19,22 +21,11 @@ const onboardingRoute = (
     path="/"
     component={StackContainer}
   >
-
-    <IndexRoute component={Job} />
-
-    <Route
-      path="profile-picture"
-      component={ProfilePicture}
-
-    />
-    <Route
-      path="camera-roll"
-      component={CameraRoll}
-    />
-    <Route
-      path="job"
-      component={Job}
-    />
+    <IndexRoute component={Motivation} />
+    <Route path="profile-picture" component={ProfilePicture} />
+    <Route path="camera-roll" component={CameraRoll} />
+    <Route path="job" component={Job} />
+    <Route path="motivation" component={Motivation} />
 
   </StackRoute>
 );

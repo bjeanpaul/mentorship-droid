@@ -1,11 +1,10 @@
 import React from 'react';
-import { View, Image } from 'react-native';
-import { Link } from 'react-router-native';
+import { View } from 'react-native';
 
 import { Header, TextInput, NavigationBar } from 'src/components';
 
 
-class ProfilePicture extends React.Component {
+class Job extends React.Component {
 
   constructor(props) {
     super(props);
@@ -37,9 +36,5 @@ class ProfilePicture extends React.Component {
     );
   }
 }
-ProfilePicture.propTypes = {
-  location: React.PropTypes.object,
-};
 
-
-export default ProfilePicture;
+export default Job;
