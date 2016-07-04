@@ -39,6 +39,12 @@ const styles = StyleSheet.create({
     color: '#003035',
   },
 
+  header: {
+    height: 90,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   defaultContainer: {
     flex: 1,
     justifyContent: 'center',

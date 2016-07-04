@@ -1,16 +1,6 @@
-import React, { Component } from 'react';
-
-import {
-  View,
-  Text,
-} from 'react-native';
-
-import {
-  Router,
-  Route,
-  StackRoute,
-  IndexRoute,
-} from 'react-router-native';
+import React from 'react';
+import { View } from 'react-native';
+import { Router, Route, StackRoute, IndexRoute } from 'react-router-native';
 
 import Welcome from './Welcome'
 import ProfilePicture from './ProfilePicture';
@@ -21,8 +11,6 @@ const StackContainer = (props) => (
     {props.children}
   </View>
 );
-
-
 
 const onboardingRoute = (
 
@@ -36,6 +24,7 @@ const onboardingRoute = (
     <Route
       path="profile-picture"
       component={ProfilePicture}
+
     />
     <Route
       path="camera-roll"

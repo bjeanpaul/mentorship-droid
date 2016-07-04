@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontFamily: 'Brandon Text',
-    color: '#f77040',
     fontSize: 13,
     fontWeight: '600',
     margin: 16,
@@ -33,7 +32,7 @@ export default class Button extends Component {
 
   constructor(props) {
     super(props);
-    this.borderColor = props.borderColor || '#f77040';
+    this.color = props.color || '#f77040';
   }
 
   setNativeProps(nativeProps) {
@@ -44,9 +43,9 @@ export default class Button extends Component {
     return (
       <View
         ref={component => { this._root = component; }}
-        style={[styles.button, this.props.style, { borderColor: this.borderColor }]}
+        style={[styles.button, this.props.style, { borderColor: this.color }]}
       >
-        <Text style={[styles.buttonText]}>
+        <Text style={[styles.buttonText, { color: this.color }]}>
           {this.props.children}
         </Text>
       </View>
