@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'transparent',
     borderWidth: 1,
-    borderColor: '#f77040',
     borderRadius: 5,
     marginLeft: 24,
     marginRight: 24,
@@ -32,6 +31,11 @@ const styles = StyleSheet.create({
 
 export default class Button extends Component {
 
+  constructor(props) {
+    super(props);
+    this.borderColor = props.borderColor || '#f77040';
+  }
+
   setNativeProps(nativeProps) {
     this._root.setNativeProps(nativeProps);
   }
@@ -40,7 +44,7 @@ export default class Button extends Component {
     return (
       <View
         ref={component => { this._root = component; }}
-        style={[styles.button, this.props.style]}
+        style={[styles.button, this.props.style, { borderColor: this.borderColor }]}
       >
         <Text style={[styles.buttonText]}>
           {this.props.children}

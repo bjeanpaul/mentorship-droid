@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, CameraRoll, StyleSheet, ScrollView,
-TouchableHighlight } from 'react-native';
+import { View, Image, CameraRoll, StyleSheet, ScrollView} from 'react-native';
 import { Link } from 'react-router-native';
 
 import { Text, Heading, Button } from 'src/components';
@@ -26,11 +25,13 @@ const styles = StyleSheet.create({
 
 class CameraRollPicker extends Component {
 
-  constructor(props) {
+  constructor(props, context) {
     super(props);
     this.state = {
       images: [],
     };
+
+    this.context = context;
   }
 
   componentDidMount() {
@@ -44,18 +45,17 @@ class CameraRollPicker extends Component {
       <ScrollView style={styles.container}>
         <View style={styles.imageGrid}>
           {this.state.images.map((image, index) =>
-            <TouchableHighlight key={`image-${index}`}
-              onPress={() => {
-                console.log('1123213', this.router);
-              }}
-            >
+            <Link key={`image-${index}`} to={`profile-picture/?imageURI=${image.uri}`}>
               <Image source={{ uri: image.uri }} style={styles.image} />
-            </TouchableHighlight>
+            </Link>
           )}
         </View>
       </ScrollView>
     );
   }
 }
+CameraRollPicker.contextTypes = {
+  router: React.PropTypes.object.isRequired,
+};
 
 export default CameraRollPicker;

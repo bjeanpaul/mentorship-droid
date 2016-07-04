@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Link } from 'react-router-native';
+import { Link, Back } from 'react-router-native';
 
 import { View, Image } from 'react-native';
 
@@ -12,25 +12,45 @@ import {
 
 
 // TODO: Create Progress Bar
-// TODO: Create Navigation Buttons
+const NavigationBar = ({
+  nextTextLabel = 'NEXT',
+  nextEnabled = false,
+  nextLinkTo = "",
+  backEnabled = true,
+}) => {
 
-const NavigationBar = () => {
+  let backButton = <Button style={{ width: 56, marginRight: 16 }}>←</Button>;
+  if (backEnabled) {
+    backButton = <Back>{ backButton }</Back>;
+  }
+  let nextButton = (
+    <Button
+      borderColor={ nextEnabled ? undefined : '#dfe5e6' }
+      style={{ flex: 1, marginLeft: 0 }}
+    >
+      { nextTextLabel }
+    </Button>);
+  if (nextEnabled && nextLinkTo) {
+    nextButton = <Link to={nextLinkTo}>{ nextButton }</Link>;
+  }
+
   return (
     <View style={{
       flexDirection: 'row',
     }}>
-      <Button style={{ width: 56, marginRight: 16 }}>←</Button>
-      <Button style={{ flex: 1, marginLeft: 0 }}>Next</Button>
+      { backButton }
+      { nextButton }
     </View>
   );
 };
 
 
-const ProfilePicture = ({ location }) => {
+const ProfilePicture = ({ location: { query: { imageURI } } }) => {
+
 
   let imageSource;
-  if (location.query.uri) {
-    imageSource = { uri: location.query.uri };
+  if (imageURI) {
+    imageSource = { uri: imageURI };
   } else {
     imageSource = require("app/assets/Profile_Add.png");
   }
@@ -38,7 +58,7 @@ const ProfilePicture = ({ location }) => {
   return (
     <View style={{ flex: 1 }}>
       <Heading>Add a profile picture</Heading>
-      <Link to="camera-roll">
+      <Link to="camera-roll/">
         <View>
           <Image
             style={{

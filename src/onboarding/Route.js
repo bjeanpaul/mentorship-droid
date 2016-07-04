@@ -31,21 +31,16 @@ const onboardingRoute = (
     component={StackContainer}
   >
 
-    <IndexRoute component={CameraRoll} />
-
+    <IndexRoute component={ProfilePicture} />
 
     <Route
       path="profile-picture"
       component={ProfilePicture}
-    >
-
-    </Route>
+    />
     <Route
       path="camera-roll"
       component={CameraRoll}
     />
-
-
 
   </StackRoute>
 );
