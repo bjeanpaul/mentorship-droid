@@ -9,6 +9,7 @@ export const fontSize = {
   medium: 16,
   large: 18,
   xLarge: 20,
+  xxLarge: 32,
 };
 
 export const fontWeight = {
@@ -36,6 +37,12 @@ const styles = StyleSheet.create({
     fontWeight: fontWeight.medium,
     textAlign: 'center',
     color: '#003035',
+  },
+
+  header: {
+    height: 90,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   defaultContainer: {

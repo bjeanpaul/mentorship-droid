@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text } from 'react-native';
 
 
-import globalStyles from '../StyleSheet';
+import globalStyles from 'src/StyleSheet';
 
 const MyText = (props) => (
     <Text {...props}
