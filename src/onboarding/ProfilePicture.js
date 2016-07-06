@@ -6,11 +6,18 @@ import { Header, Text, NavigationBar } from 'src/components';
 
 
 const ProfilePicture = (props) => {
+
+  const {
+    location,
+    nextPath,
+    selectPicturePath,
+  } = props;
+
   let imageSource;
   let isNextEnabled = false;
-  if (props.location.query.imageURI) {
+  if (location.query.imageURI) {
     isNextEnabled = true;
-    imageSource = { uri: props.location.query.imageURI };
+    imageSource = { uri: location.query.imageURI };
   } else {
     imageSource = require('app/assets/Profile_Add.png');
   }
@@ -18,7 +25,7 @@ const ProfilePicture = (props) => {
   return (
     <View style={{ flex: 1 }}>
       <Header title="Add a profile picture" />
-      <Link to="camera-roll/">
+      <Link to={selectPicturePath}>
         <View>
           <Image
             style={{
@@ -31,13 +38,15 @@ const ProfilePicture = (props) => {
         </View>
       </Link>
       <NavigationBar nextEnabled={isNextEnabled}
-        to="job"
+        to={nextPath}
       />
     </View>
   );
 };
 ProfilePicture.propTypes = {
   location: React.PropTypes.object,
+  selectPicturePath: React.PropTypes.string.isRequired,
+  //nextPath: React.PropTypes.string.isRequired,
 };
 
 
