@@ -1,23 +1,15 @@
 /* eslint-disable react/jsx-no-bind */
-import React, {
-  PropTypes,
-  Component,
-} from 'react';
-
-import {
-  View,
-  TouchableHighlight,
-} from 'react-native';
+import React from 'react';
+import { View } from 'react-native';
 
 import {
   Heading,
-  Text,
   TextLink,
   TextInput,
   Button,
 } from '../Components';
 
-class LogIn extends Component {
+class LogIn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,70 +22,22 @@ class LogIn extends Component {
     return (
       <View>
         <Heading>Log In</Heading>
-
         <TextInput placeholder="Email" />
         <TextInput placeholder="Password" />
-
         <Button>Sign In</Button>
-
         <TextLink>Forgot your password?</TextLink>
       </View>
     );
   }
-
-  // render() {
-  //   const {
-  //     isLoading,
-  //     isAuthenticated,
-  //     errorMessage,
-  //     onSubmitPress,
-  //   } = this.props;
-  //
-  //   const progressBarPartial = isLoading ? <ProgressBar styleAttr="Horizontal" /> : null;
-  //   const errorMessagePartial = errorMessage ? <Text>{errorMessage}</Text> : null;
-  //   const authPartial = isAuthenticated ? <Text>Youre Logged in!</Text> : null;
-  //
-  //   return (
-  //     <View style={Styles.dent}>
-  //         <Text style={Styles.heading}>Log In</Text>
-  //
-  //
-  //         <TextInput
-  //
-  //           placeholder="Email"
-  //           defaultValue={this.state.username}
-  //           onChangeText={(username) => { this.setState({ username }); }}
-  //         />
-  //
-  //         <TextInput
-  //           placeholder="Password"
-  //           defaultValue={this.state.password}
-  //           onChangeText={(password) => { this.setState({ password }); }}
-  //         />
-  //
-  //         {errorMessagePartial}
-  //
-  //         <TouchableHighlight
-  //           onPress={() => {
-  //             onSubmitPress(this.state.username, this.state.password);
-  //           }}
-  //         >
-  //           <Button labelText="Activate Account" />
-  //         </TouchableHighlight>
-  //
-  //         <Text style={[Styles.fontSmall, Styles.textLink]}>Forgot your password?</Text>
-  //     </View>
-  //   );
-  // }
 }
 
 LogIn.propTypes = {
-  defaultUsername: PropTypes.string,
-  defaultPassword: PropTypes.string,
-  errorMessage: PropTypes.string,
-  onSubmitPress: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool.isRequired,
-  isLoading: PropTypes.bool,
+  defaultUsername: React.PropTypes.string,
+  defaultPassword: React.PropTypes.string,
+  errorMessage: React.PropTypes.string,
+  onSubmitPress: React.PropTypes.func.isRequired,
+  isAuthenticated: React.PropTypes.bool.isRequired,
+  isLoading: React.PropTypes.bool,
 };
 
 export default LogIn;
