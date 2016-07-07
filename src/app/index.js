@@ -26,10 +26,28 @@ const NoMatch = () => (
 import onboardingRoute from 'src/onboarding/Route';
 
 
+// TODO: If a user is logged in; show already logged in -- if a user is not logged in
+// show the landing screen.
 
+// TODO: Test Log In
+// TODO: Test "Register"
+// TODO: Test "Password Reset"
+// TODO:
 
 
 const App = function App() {
+
+  // Determine if the user is authenticated or not;
+  console.log()
+  store.getState()
+
+  // Landing
+  // Login
+    // Forgot Pasword
+  // Register
+    // Reset Password
+    // Onboarding
+
   return (
     <Provider store={store}>
       <Router addressBar>

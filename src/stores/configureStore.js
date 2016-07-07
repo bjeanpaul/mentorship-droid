@@ -1,9 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
-import training from '../reducers/training';
-import schedule from '../schedule/ScheduleReducer';
-import mentor from '../mentor/MentorReducer';
+import mentor from 'src/mentor/Reducer';
 
 import HTTPRequestMiddleware from './HTTPRequestMiddleware';
 
@@ -13,8 +11,6 @@ const httpRequestMiddleware = new HTTPRequestMiddleware({
 
 const rootReducer = combineReducers({
   mentor,
-  schedule,
-  training,
 });
 
 export default function configureStore(initialState = {}) {
