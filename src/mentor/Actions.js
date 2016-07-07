@@ -4,8 +4,7 @@ import { generateActionCreators } from 'src/helpers';
 
 import actionTypes from './Constants';
 
-
-const actionCreators = generateActionCreators('mentor', actionTypes);
+const actionCreators = generateActionCreators('mentor/', actionTypes);
 export const fetchMentor = actionCreators.fetch;
 
 export const login = function login(username, password, onSuccess) {
@@ -19,7 +18,7 @@ export const login = function login(username, password, onSuccess) {
 
     // "Login" in this instance means that we're going to use the authToken
     // to fetch the mentor's profile.
-    dispatch(fetchMentor(onSuccess));
+    return dispatch(fetchMentor(onSuccess));
   };
 };
 

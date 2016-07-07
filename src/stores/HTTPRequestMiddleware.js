@@ -53,7 +53,7 @@ export default class HTTPRequestMiddleware {
         })
         .then(onSuccess, onFailure)
         .catch((error) => {
-          //console.log('----- network request failure ----', error)
+          console.log('----- network request failure ----', error)
           let errorMessage;
           if (error instanceof TypeError) {
             errorMessage = error.message;

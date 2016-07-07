@@ -15,7 +15,6 @@ const httpRequestMiddleware = new HTTPRequestMiddleware({
 const mockStore = configureMockStore([httpRequestMiddleware.apply, thunk]);
 
 describe('RemoteOperationMiddleware', () => {
-
   const store = mockStore({ user: { auth: { authToken: 'XXXsecretXXX' } } });
   const successAction = {
     types: ['request', 'success', 'failure'],

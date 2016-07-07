@@ -1,19 +1,14 @@
-import React, {
-  Component,
-} from 'react';
-
+import React from 'react';
 import { View, Text } from 'react-native';
 import { Provider } from 'react-redux';
+import { Router, Route } from 'react-router-native';
 
 import configureStore from 'src/stores/configureStore';
 const initialState = { mentor: { authToken: 'YWRtaW46MTIz' } };
 const store = configureStore(initialState);
 
 
-import {
-  Router,
-  Route,
-} from 'react-router-native';
+
 
 
 const NoMatch = () => (
@@ -32,13 +27,11 @@ import onboardingRoute from 'src/onboarding/Route';
 // TODO: Test Log In
 // TODO: Test "Register"
 // TODO: Test "Password Reset"
-// TODO:
 
 
 const App = function App() {
 
   // Determine if the user is authenticated or not;
-  console.log()
   store.getState()
 
   // Landing
