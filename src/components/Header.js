@@ -8,12 +8,11 @@ const Header = ({
   subtitle = '',
 }) => {
 
-  let subtitleComponent = '';
-
+  let subtitleComponent;
   return (
     <View style={globalStyles.header}>
       <Heading>{title}</Heading>
-      {subtitleComponent}
+      <Text>{subtitleComponent}</Text>
     </View>
   );
 };

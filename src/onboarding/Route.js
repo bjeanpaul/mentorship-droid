@@ -16,14 +16,19 @@ const StackContainer = (props) => (
 export default (
 
   <StackRoute
-    path="/"
+    path="/onboarding"
     component={StackContainer}
   >
-    <IndexRoute component={() => <Welcome nextPath="profile-picture" />} />
+    <IndexRoute component={() => <Welcome nextPath="/onboarding/profile-picture" />} />
     <Route path="profile-picture" component={(props) =>
-        <ProfilePicture {...props} nextPath="occupation" selectPicturePath="select-picture" />}
+        <ProfilePicture {...props}
+          nextPath="/onboarding/occupation"
+          selectPicturePath="/onboarding/select-picture"
+        />}
     />
-    <Route path="select-picture" component={CameraRoll} />
+    <Route path="select-picture"
+      component={(props) => <CameraRoll {...props} nextPath="/onboarding/profile-picture" />}
+    />
     {QuestionRoutes}
 
   </StackRoute>

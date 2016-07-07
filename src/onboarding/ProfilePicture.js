@@ -46,8 +46,7 @@ const ProfilePicture = (props) => {
 ProfilePicture.propTypes = {
   location: React.PropTypes.object,
   selectPicturePath: React.PropTypes.string.isRequired,
-  //nextPath: React.PropTypes.string.isRequired,
+  nextPath: React.PropTypes.string.isRequired,
 };
-
 
 export default ProfilePicture;

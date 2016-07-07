@@ -24,7 +24,7 @@ const questions = [
       },
     },
     navigationBarProps: {
-      to: 'motivation',
+      to: '/onboarding/motivation',
     },
   },
 
@@ -41,7 +41,7 @@ const questions = [
       },
     },
     navigationBarProps: {
-      to: 'inspiration',
+      to: '/onboarding/inspiration',
     },
   },
 
@@ -57,7 +57,7 @@ const questions = [
       },
     },
     navigationBarProps: {
-      to: 'me-in-three',
+      to: '/onboarding/me-in-three',
     },
   },
 
@@ -73,7 +73,7 @@ const questions = [
       },
     },
     navigationBarProps: {
-      to: 'skills-and-strengths',
+      to: '/onboarding/skills-and-strengths',
     },
   },
 

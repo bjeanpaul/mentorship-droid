@@ -1,4 +1,4 @@
-import actionTypes from './MentorConstants';
+import actionTypes from './Constants';
 
 const mentor = function training(state = {
   isLoading: false,
