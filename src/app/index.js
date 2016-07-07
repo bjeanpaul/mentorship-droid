@@ -4,11 +4,16 @@ import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute } from 'react-router-native';
 
 import configureStore from 'src/stores/configureStore';
-const initialState = { mentor: { authToken: 'YWRtaW46MTIz' } };
+const initialState = { mentor: { authToken: '' } };
 const store = configureStore(initialState);
 
-
-
+const Container = (props) => (
+  <View style={{ backgroundColor: 'red' }}>
+    <Text>1</Text>
+    {props.children}
+    <Text>2</Text>
+  </View>
+);
 
 const NoMatch = () => (
   <View>
@@ -17,38 +22,35 @@ const NoMatch = () => (
 );
 
 const Home = () => (
-  <View>
+  <View style={{ flex: 1, backgroundColor: 'red' }}>
     <Text>Welcome to the app, your inside the app.</Text>
   </View>
 );
 
 
-import onboardingRoute from 'src/onboarding/Route';
+// maybe we can keep these outside of memory if the user is already logged in?
 
 
-// TODO: If a user is logged in; show already logged in -- if a user is not logged in
-// show the landing screen.
-
-// TODO: Test Log In
-// TODO: Test "Register"
-// TODO: Test "Password Reset"
-
+import authRoutes from 'src/app/authRoutes';
+//import onboardingRoute from 'src/onboarding/Route';
 
 const App = function App() {
 
-  let indexRoute;
 
-  // Determine if the user is authenticated or not;
+  let routes;
   if (store.getState().mentor.isAuthenticated) {
 
-    indexRoute = <IndexRoute component={Home} />;
-    // show the app
   } else {
-
-
-
+    console.log('-----------')
     // show the login page.
+    routes = authRoutes;
   }
+
+  // /user/login/
+  // /user/hello/
+  // /user/register/
+  // /user/forgotpassword/
+  // /user/onboarding/
 
   // Landing
   // Login
@@ -60,11 +62,7 @@ const App = function App() {
   return (
     <Provider store={store}>
       <Router addressBar>
-
-        <Route path="/" component={Home} />
-
-        {onboardingRoute}
-
+        {routes}
         <Route path="*" component={NoMatch} />
       </Router>
     </Provider>

@@ -9,11 +9,7 @@ import {
   Image,
 } from 'react-native';
 
-import {
-  Text,
-  Heading,
-  Button,
-} from 'src/components';
+import { Text, Heading, Button } from 'src/components';
 
 import { fontSize } from 'src/StyleSheet';
 

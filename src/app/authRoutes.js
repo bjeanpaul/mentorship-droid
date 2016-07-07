@@ -2,12 +2,8 @@ import React from 'react';
 import { View } from 'react-native';
 import { Route, StackRoute, IndexRoute } from 'react-router-native';
 
-
-import Hello from './Hello';
-// import Login from 'src/mentor/Login';
-// import Register from 'src/mentor/Register';
-// import ForgotPassword from 'src/mentor/ForgotPassword';
-
+import Landing from './Landing';
+import Login from 'src/mentor/Login';
 
 const StackContainer = (props) => (
   <View style={{ flex: 1, backgroundColor: 'black' }}>
@@ -16,12 +12,12 @@ const StackContainer = (props) => (
 );
 
 export default (
-
   <StackRoute
-    path="/onboarding"
+    path="/"
     component={StackContainer}
   >
-
-
+    <IndexRoute component={Landing} />
+    <Route path="landing/" component={Landing} />
+    <Route path="login/" component={Login} />
   </StackRoute>
 );

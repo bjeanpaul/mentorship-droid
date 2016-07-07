@@ -7,7 +7,7 @@ import {
   TextLink,
   TextInput,
   Button,
-} from '../Components';
+} from 'src/components';
 
 class LogIn extends React.Component {
   constructor(props) {
