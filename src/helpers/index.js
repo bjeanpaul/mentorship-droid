@@ -1,5 +1,3 @@
-
-
 export const generateActionTypes = function generateActionNames(
   resource,
   operations = ['FETCH', 'CREATE', 'UPDATE', 'DELETE']
@@ -50,15 +48,18 @@ export const generateActionCreators = function generateActionCreators(
   endpoint,
   actionTypes
 ) {
-  const actionCreators = {};
+  let baseURL = 'http://192.168.178.20:8000/mentor';
+  if (global.__TEST__) {
+    baseURL = 'http://example.org';
+  }
 
+  const actionCreators = {};
   const fetchActionTypes = filterActionTypes(actionTypes, 'fetch');
   if (fetchActionTypes.length === 3) {
     actionCreators.fetch = (onSuccess, onFailure) => ({
+      type: '--generated--',
       types: fetchActionTypes,
-      request: {
-        endpoint,
-      },
+      url: `${baseURL}/${endpoint}`,
       onSuccess,
       onFailure,
     });

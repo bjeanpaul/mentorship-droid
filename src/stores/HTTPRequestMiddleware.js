@@ -19,6 +19,7 @@ export default class HTTPRequestMiddleware {
       if (!url) {
         return next(action);
       }
+
       if (
         !Array.isArray(types) ||
         types.length !== 3 ||
@@ -32,7 +33,6 @@ export default class HTTPRequestMiddleware {
       dispatch(Object.assign({}, payload, {
         type: requestType,
       }));
-
 
       const req = new Request(url, requestOpts);
       req.headers.append('Accept', 'application/json');

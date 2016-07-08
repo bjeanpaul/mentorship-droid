@@ -1,12 +1,9 @@
 import React from 'react';
-import {
-  AppRegistry,
-  UIManager,
-} from 'react-native';
+import { AppRegistry, UIManager } from 'react-native';
 
-import MentorshipApp from './src/app';
+import MentorshipApp from 'src/app';
 
-UIManager.setLayoutAnimationEnabledExperimental &&
-  UIManager.setLayoutAnimationEnabledExperimental(true);
+// UIManager.setLayoutAnimationEnabledExperimental &&
+//   UIManager.setLayoutAnimationEnabledExperimental(true);
 
 AppRegistry.registerComponent('app', () => () => <MentorshipApp />);

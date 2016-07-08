@@ -1,13 +1,21 @@
 import React from 'react';
 import { View } from 'react-native'
-import { Heading } from 'src/components';
+import { Heading, Text } from 'src/components';
 import globalStyles from 'src/StyleSheet';
 
-const Header = ({ title = '' }) => (
-  <View style={globalStyles.header}>
-    <Heading>{title}</Heading>
-  </View>
-);
+const Header = ({
+  title = '',
+  subtitle = '',
+}) => {
+
+  let subtitleComponent;
+  return (
+    <View style={globalStyles.header}>
+      <Heading>{title}</Heading>
+      <Text>{subtitleComponent}</Text>
+    </View>
+  );
+};
 Header.propTypes = {
   title: React.PropTypes.string.isRequired,
 };

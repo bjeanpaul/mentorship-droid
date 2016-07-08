@@ -4,6 +4,7 @@ import React, {
 } from 'react';
 
 import {
+  TouchableNativeFeedback,
   View,
   StyleSheet,
 } from 'react-native';
@@ -32,7 +33,9 @@ export default class Button extends Component {
 
   constructor(props) {
     super(props);
+    this.label = props.label || '';
     this.color = props.color || '#f77040';
+    this.onPress = props.onPress;
   }
 
   setNativeProps(nativeProps) {
@@ -40,18 +43,32 @@ export default class Button extends Component {
   }
 
   render() {
-    return (
-      <View
-        ref={component => { this._root = component; }}
-        style={[styles.button, this.props.style, { borderColor: this.color }]}
-      >
+
+    let button = (
+      <View style={[styles.button, this.props.style, { borderColor: this.color }]}>
         <Text style={[styles.buttonText, { color: this.color }]}>
-          {this.props.children}
+          {this.label.toUpperCase()}
         </Text>
+      </View>
+    );
+    if (this.onPress) {
+      button = (
+        <TouchableNativeFeedback
+          onPress={this.onPress}
+        >
+          {button}
+        </TouchableNativeFeedback>
+      );
+    }
+    return (
+      <View ref={component => { this._root = component; }}>
+        {button}
       </View>
     );
   }
 }
 Button.propTypes = {
+  label: PropTypes.string.isRequired,
   style: PropTypes.object,
+  onPress: PropTypes.func,
 };

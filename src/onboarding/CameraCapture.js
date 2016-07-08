@@ -56,8 +56,6 @@ class CameraCapture extends Component {
 
   render() {
 
-    console.log(this.state.capturedImagePath)
-
     if (this.state.capturedImagePath) {
       return this.renderPreview();
     } else {

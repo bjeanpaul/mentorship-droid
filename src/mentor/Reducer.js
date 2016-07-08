@@ -1,10 +1,9 @@
-import actionTypes from './MentorConstants';
+import actionTypes from './Constants';
 
 const mentor = function training(state = {
   isLoading: false,
   isAuthenticated: false,
   authToken: '',
-  results: [],
 }, action) {
   switch (action.type) {
     case actionTypes.MENTOR_AUTH_TOKEN_SET:
@@ -18,6 +17,8 @@ const mentor = function training(state = {
       });
 
     case actionTypes.fetchSuccess:
+
+      console.log(action.json)
       const {
         username,
         first_name,

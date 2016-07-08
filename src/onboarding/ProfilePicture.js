@@ -9,8 +9,8 @@ const ProfilePicture = (props) => {
 
   const {
     location,
-    nextPath,
-    selectPicturePath,
+    nextPath = '/occupation',
+    selectPicturePath = '/profile-picture-camera-roll',
   } = props;
 
   let imageSource;
@@ -45,9 +45,8 @@ const ProfilePicture = (props) => {
 };
 ProfilePicture.propTypes = {
   location: React.PropTypes.object,
-  selectPicturePath: React.PropTypes.string.isRequired,
-  //nextPath: React.PropTypes.string.isRequired,
+  selectPicturePath: React.PropTypes.string,
+  nextPath: React.PropTypes.string,
 };
-
 
 export default ProfilePicture;

@@ -1,4 +1,4 @@
-import { generateActionTypes } from '../helpers';
+import { generateActionTypes } from 'src/helpers';
 
 const actionTypes = generateActionTypes('mentor', [
   'fetch',

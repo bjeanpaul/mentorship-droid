@@ -1,99 +1,75 @@
 /* eslint-disable react/jsx-no-bind */
-import React, {
-  PropTypes,
-  Component,
-} from 'react';
+import React, { PropTypes } from 'react';
+import { View } from 'react-native';
 
 import {
-  View,
-  TouchableHighlight,
-} from 'react-native';
-
-import {
-  Heading,
+  Header,
   Text,
-  TextLink,
   TextInput,
   Button,
-} from '../Components';
+} from 'src/components';
 
-class LogIn extends Component {
-  constructor(props) {
-    super(props);
+class Login extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+
+    this.props = props;
+    this.context = context;
+
+
+
     this.state = {
-      username: this.props.defaultUsername,
-      password: this.props.defaultPassword,
+      username: 'admin',
+      password: '123x',
     };
+
+    this.handleSubmitPress = this.handleSubmitPress.bind(this);
+  }
+
+  handleSubmitPress() {
+    this.props.onSubmitPress(
+      this.state.username,
+      this.state.password,
+      this.context
+    );
   }
 
   render() {
     return (
       <View>
-        <Heading>Log In</Heading>
+        <Header title={this.props.headerTitle} />
 
-        <TextInput placeholder="Email" />
-        <TextInput placeholder="Password" />
+        <TextInput
+          placeholder="Email"
+          value={this.state.username}
+          onChangeText={(username) => this.setState({ username })}
+        />
+        <TextInput
+          placeholder="Password"
+          value={this.state.password}
+          onChangeText={(password) => this.setState({ password })}
+        />
 
-        <Button>Sign In</Button>
+        <Button
+          onPress={this.handleSubmitPress}
+          label={this.props.buttonLabel}
+        />
 
-        <TextLink>Forgot your password?</TextLink>
+      <Text>{this.props.errorMessage}</Text>
       </View>
     );
   }
 
-  // render() {
-  //   const {
-  //     isLoading,
-  //     isAuthenticated,
-  //     errorMessage,
-  //     onSubmitPress,
-  //   } = this.props;
-  //
-  //   const progressBarPartial = isLoading ? <ProgressBar styleAttr="Horizontal" /> : null;
-  //   const errorMessagePartial = errorMessage ? <Text>{errorMessage}</Text> : null;
-  //   const authPartial = isAuthenticated ? <Text>Youre Logged in!</Text> : null;
-  //
-  //   return (
-  //     <View style={Styles.dent}>
-  //         <Text style={Styles.heading}>Log In</Text>
-  //
-  //
-  //         <TextInput
-  //
-  //           placeholder="Email"
-  //           defaultValue={this.state.username}
-  //           onChangeText={(username) => { this.setState({ username }); }}
-  //         />
-  //
-  //         <TextInput
-  //           placeholder="Password"
-  //           defaultValue={this.state.password}
-  //           onChangeText={(password) => { this.setState({ password }); }}
-  //         />
-  //
-  //         {errorMessagePartial}
-  //
-  //         <TouchableHighlight
-  //           onPress={() => {
-  //             onSubmitPress(this.state.username, this.state.password);
-  //           }}
-  //         >
-  //           <Button labelText="Activate Account" />
-  //         </TouchableHighlight>
-  //
-  //         <Text style={[Styles.fontSmall, Styles.textLink]}>Forgot your password?</Text>
-  //     </View>
-  //   );
-  // }
 }
-
-LogIn.propTypes = {
-  defaultUsername: PropTypes.string,
-  defaultPassword: PropTypes.string,
-  errorMessage: PropTypes.string,
+Login.contextTypes = {
+  router: PropTypes.object.isRequired,
+};
+Login.propTypes = {
+  headerTitle: PropTypes.string,
+  buttonLabel: PropTypes.string,
   onSubmitPress: PropTypes.func.isRequired,
-  isAuthenticated: PropTypes.bool.isRequired,
   isLoading: PropTypes.bool,
+  errorMessage: PropTypes.string,
 };
 
-export default LogIn;
+export default Login;

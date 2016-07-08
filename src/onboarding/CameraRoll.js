@@ -31,6 +31,7 @@ class CameraRollPicker extends Component {
       images: [],
     };
 
+    this.nextPath = '/profile-picture';
     this.context = context;
   }
 
@@ -45,7 +46,7 @@ class CameraRollPicker extends Component {
       <ScrollView style={styles.container}>
         <View style={styles.imageGrid}>
           {this.state.images.map((image, index) =>
-            <Link key={`image-${index}`} to={`profile-picture/?imageURI=${image.uri}`}>
+            <Link key={`image-${index}`} to={`${this.nextPath}?imageURI=${image.uri}`}>
               <Image source={{ uri: image.uri }} style={styles.image} />
             </Link>
           )}
