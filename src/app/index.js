@@ -36,7 +36,7 @@ const App = function App() {
 
   return (
     <Provider store={store}>
-      <Router addressBar>
+      <Router>
 
         <StackRoute path="/" component={Container}>
           <IndexRoute component={Landing} />
