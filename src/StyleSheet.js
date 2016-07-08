@@ -55,6 +55,8 @@ const styles = StyleSheet.create({
     fontFamily: 'BrandonText',
     fontSize: fontSize.large,
     color: '#003035',
+    marginLeft: 24,
+    marginRight: 24,
     padding: 0,
     paddingBottom: 8,
     height: 28,

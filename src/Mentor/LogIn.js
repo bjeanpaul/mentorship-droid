@@ -1,43 +1,75 @@
 /* eslint-disable react/jsx-no-bind */
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 
 import {
-  Heading,
-  TextLink,
+  Header,
+  Text,
   TextInput,
   Button,
 } from 'src/components';
 
-class LogIn extends React.Component {
-  constructor(props) {
-    super(props);
+class Login extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+
+    this.props = props;
+    this.context = context;
+
+
+
     this.state = {
-      username: this.props.defaultUsername,
-      password: this.props.defaultPassword,
+      username: 'admin',
+      password: '123x',
     };
+
+    this.handleSubmitPress = this.handleSubmitPress.bind(this);
+  }
+
+  handleSubmitPress() {
+    this.props.onSubmitPress(
+      this.state.username,
+      this.state.password,
+      this.context
+    );
   }
 
   render() {
     return (
       <View>
-        <Heading>Log In</Heading>
-        <TextInput placeholder="Email" />
-        <TextInput placeholder="Password" />
-        <Button>Sign In</Button>
-        <TextLink>Forgot your password?</TextLink>
+        <Header title={this.props.headerTitle} />
+
+        <TextInput
+          placeholder="Email"
+          value={this.state.username}
+          onChangeText={(username) => this.setState({ username })}
+        />
+        <TextInput
+          placeholder="Password"
+          value={this.state.password}
+          onChangeText={(password) => this.setState({ password })}
+        />
+
+        <Button
+          onPress={this.handleSubmitPress}
+          label={this.props.buttonLabel}
+        />
+
+      <Text>{this.props.errorMessage}</Text>
       </View>
     );
   }
-}
 
-LogIn.propTypes = {
-  defaultUsername: React.PropTypes.string,
-  defaultPassword: React.PropTypes.string,
-  errorMessage: React.PropTypes.string,
-  onSubmitPress: React.PropTypes.func.isRequired,
-  isAuthenticated: React.PropTypes.bool.isRequired,
-  isLoading: React.PropTypes.bool,
+}
+Login.contextTypes = {
+  router: PropTypes.object.isRequired,
+};
+Login.propTypes = {
+  headerTitle: PropTypes.string,
+  buttonLabel: PropTypes.string,
+  onSubmitPress: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool,
+  errorMessage: PropTypes.string,
 };
 
-export default LogIn;
+export default Login;

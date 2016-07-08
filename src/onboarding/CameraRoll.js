@@ -31,7 +31,7 @@ class CameraRollPicker extends Component {
       images: [],
     };
 
-    this.nextPath = props.nextPath;
+    this.nextPath = '/profile-picture';
     this.context = context;
   }
 
@@ -56,7 +56,6 @@ class CameraRollPicker extends Component {
   }
 }
 CameraRollPicker.contextTypes = {
-  nextPath: React.PropTypes.string.isRequired,
   router: React.PropTypes.object.isRequired,
 };
 

@@ -17,6 +17,7 @@ class MyTextInput extends Component {
       <View style={{
         borderColor: '#dfe5e6',
         borderBottomWidth: 1,
+        marginBottom: 24,
       }}
       >
         <TextInput

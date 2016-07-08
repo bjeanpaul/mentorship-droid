@@ -10,19 +10,21 @@ const NavigationBar = ({
   to = '',
   backEnabled = true,
 }) => {
-  let backButton = <Button style={{ width: 56, marginRight: 16 }}>←</Button>;
+  let backButton = <Button style={{ width: 56, marginRight: 16 }} label={'←'} />;
   if (backEnabled) {
     backButton = <Back>{ backButton }</Back>;
   }
   let nextButton = (
-    <Button
-      color={ nextEnabled ? undefined : '#dfe5e6' }
-      style={{ flex: 1, marginLeft: 0 }}
-    >
-      { nextTextLabel }
-    </Button>);
+    <View style={{ flex: 1 }}>
+      <Button
+        color={ nextEnabled ? undefined : '#999' }
+        style={{ flex: 1, marginLeft: 0 }}
+        label={nextTextLabel}
+      />
+    </View>
+  );
   if (nextEnabled && to) {
-    nextButton = <Link to={to} style={{ flex: 1 }}>{ nextButton }</Link>;
+    nextButton = <Link style={{ flex: 1 }} to={to}>{ nextButton }</Link>;
   }
 
   return (

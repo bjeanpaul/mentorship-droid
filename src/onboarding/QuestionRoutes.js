@@ -24,7 +24,7 @@ const questions = [
       },
     },
     navigationBarProps: {
-      to: '/onboarding/motivation',
+      to: '/motivation',
     },
   },
 
@@ -41,7 +41,7 @@ const questions = [
       },
     },
     navigationBarProps: {
-      to: '/onboarding/inspiration',
+      to: '/inspiration',
     },
   },
 
@@ -57,7 +57,7 @@ const questions = [
       },
     },
     navigationBarProps: {
-      to: '/onboarding/me-in-three',
+      to: '/me-in-three',
     },
   },
 
@@ -73,7 +73,7 @@ const questions = [
       },
     },
     navigationBarProps: {
-      to: '/onboarding/skills-and-strengths',
+      to: '/skills-and-strengths',
     },
   },
 
@@ -97,6 +97,7 @@ const questions = [
 
 export default questions.map(question =>
   <Route
+    key={question.path}
     path={question.path}
     component={() => <FormView {...question} /> }
   />

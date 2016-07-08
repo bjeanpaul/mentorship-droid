@@ -14,9 +14,9 @@ import { Text, Heading, Button } from 'src/components';
 import { fontSize } from 'src/StyleSheet';
 
 
-const Welcome = ({
+const Hello = ({
   name,
-  nextPath,
+  nextPath = '/profile-picture',
 }) => (
   <View style={{ flex: 1 }}>
     <Image source={require('app/assets/Profile.png')} />
@@ -26,13 +26,13 @@ const Welcome = ({
       others learn more about you.
     </Text>
     <Link to={nextPath}>
-      <Button>Complete Profile</Button>
+      <Button label="Complete Profile" />
     </Link>
   </View>
 );
-Welcome.propTypes = {
-  name: PropTypes.string.isRequired,
-  nextPath: PropTypes.string.isRequired,
+Hello.propTypes = {
+  name: PropTypes.string,
+  nextPath: PropTypes.string,
 };
 
-export default Welcome;
+export default Hello;
