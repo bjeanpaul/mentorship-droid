@@ -62,7 +62,7 @@ describe('Helpers', () => {
 
   describe('action creators', () => {
     describe('should generate action creators based on `actionTypes`', () => {
-
+      //
       it('fetch', () => {
         const actionTypes = generateActionTypes('test', ['fetch']);
         const actionCreators = generateActionCreators('test-endpoint/', actionTypes);

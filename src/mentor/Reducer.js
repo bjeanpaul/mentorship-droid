@@ -1,6 +1,38 @@
 import actionTypes from './Constants';
+import { combineReducers } from 'redux';
 
-const mentor = function training(state = {
+
+// this is kinda generic, I'm going to assume that we're going to have a
+// lot of these, and perhaps we should generate them as well.
+// same going for the fetch reducer.
+const resetPassword = (state = {
+  isLoading: false,
+  isDone: false,
+}, action) => {
+  switch (action.type) {
+    case actionTypes.resetPassword.fetchRequest:
+      return {
+        isLoading: true,
+        isDone: false,
+      };
+    case actionTypes.resetPassword.fetchSuccess:
+      return {
+        isLoading: false,
+        isDone: true,
+      };
+
+    case actionTypes.resetPassword.fetchFailure:
+      return {
+        isLoading: false,
+        isDone: false,
+        errorMessage: action.errorMessage,
+      };
+    default:
+      return state;
+  }
+};
+
+const login = function training(state = {
   isLoading: false,
   isAuthenticated: false,
   authToken: '',
@@ -17,8 +49,6 @@ const mentor = function training(state = {
       });
 
     case actionTypes.fetchSuccess:
-
-      console.log(action.json)
       const {
         username,
         first_name,
@@ -45,4 +75,7 @@ const mentor = function training(state = {
   }
 };
 
-export default mentor;
+export default combineReducers({
+  login,
+  resetPassword,
+});

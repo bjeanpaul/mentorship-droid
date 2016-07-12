@@ -7,9 +7,10 @@ import configureStore from 'src/stores/configureStore';
 const initialState = { mentor: { authToken: '' } };
 const store = configureStore(initialState);
 
-const Container = (props) => (
+// we'll abstract this as well...
+const Container = ({ children }) => (
   <View style={{ backgroundColor: 'black', flex: 1 }}>
-    {props.children}
+    {children}
   </View>
 );
 

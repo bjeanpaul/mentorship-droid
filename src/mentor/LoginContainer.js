@@ -5,8 +5,8 @@ import Login from './Login';
 
 const mapStateToProps = function mapStateToProps(state) {
   return {
-    isLoading: state.mentor.isLoading,
-    errorMessage: state.mentor.errorMessage,
+    isLoading: state.login.isLoading,
+    errorMessage: state.login.errorMessage,
   };
 };
 

@@ -6,7 +6,7 @@ import mentor from 'src/mentor/Reducer';
 import HTTPRequestMiddleware from './HTTPRequestMiddleware';
 
 const httpRequestMiddleware = new HTTPRequestMiddleware({
-  getAuthorizationHeaderValue: (state) => state.mentor.authToken,
+  getAuthorizationHeaderValue: (state) => state.mentor.login.authToken,
 });
 
 const rootReducer = combineReducers({
