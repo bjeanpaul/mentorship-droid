@@ -4,8 +4,9 @@ import { generateActionCreators } from 'src/helpers';
 
 import actionTypes from './Constants';
 
-const actionCreators = generateActionCreators('mentor/', actionTypes);
-export const fetchMentor = actionCreators.fetch;
+
+const mentorActions = generateActionCreators('mentor/', actionTypes);
+export const fetchMentor = mentorActions.fetch;
 
 export const login = function login(username, password, onSuccess) {
   return dispatch => {
@@ -15,17 +16,16 @@ export const login = function login(username, password, onSuccess) {
       type: actionTypes.MENTOR_AUTH_TOKEN_SET,
       authToken,
     });
+
     // "Login" in this instance means that we're going to use the authToken
     // to fetch the mentor's profile.
     return dispatch(fetchMentor(onSuccess));
-
-    // Should we fetch the profile as well?
   };
 };
 
-// TODO: ResetPassword Action, waiting for API implementation.
-export const resetPassword = function(username, password, onSuccess) {
-  return dispatch => {
-    onSuccess();
-  }
-}
+
+const resetPasswordActions = generateActionCreators(
+  'reset-password/',
+  actionTypes.resetPassword
+);
+export const resetPassword = resetPasswordActions.create;

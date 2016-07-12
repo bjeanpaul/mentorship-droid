@@ -62,6 +62,7 @@ describe('Helpers', () => {
 
   describe('action creators', () => {
     describe('should generate action creators based on `actionTypes`', () => {
+
       it('fetch', () => {
         const actionTypes = generateActionTypes('test', ['fetch']);
         const actionCreators = generateActionCreators('test-endpoint/', actionTypes);
@@ -72,6 +73,29 @@ describe('Helpers', () => {
             'TEST_FETCH_REQUEST',
             'TEST_FETCH_SUCCESS',
             'TEST_FETCH_FAILURE',
+          ],
+        });
+      });
+
+      it('create', () => {
+        const actionTypes = generateActionTypes('test', ['create']);
+        const actionCreators = generateActionCreators('test-endpoint/', actionTypes);
+
+        expect(actionCreators.create({
+          test: 'i am code.',
+        })).toEqual({
+          url: 'http://example.org/test-endpoint/',
+          requestOpts: {
+            method: 'POST',
+            body: {
+              test: 'i am code.',
+            },
+          },
+          type: '--generated--',
+          types: [
+            'TEST_CREATE_REQUEST',
+            'TEST_CREATE_SUCCESS',
+            'TEST_CREATE_FAILURE',
           ],
         });
       });

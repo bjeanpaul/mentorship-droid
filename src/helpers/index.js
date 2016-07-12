@@ -48,6 +48,7 @@ export const generateActionCreators = function generateActionCreators(
   endpoint,
   actionTypes
 ) {
+  // React-Native doesn't have globals.
   let baseURL = 'http://192.168.178.20:8000/mentor';
   if (global.__TEST__) {
     baseURL = 'http://example.org';
@@ -60,6 +61,21 @@ export const generateActionCreators = function generateActionCreators(
       type: '--generated--',
       types: fetchActionTypes,
       url: `${baseURL}/${endpoint}`,
+      onSuccess,
+      onFailure,
+    });
+  }
+
+  const createActionTypes = filterActionTypes(actionTypes, 'create');
+  if (createActionTypes.length === 3) {
+    actionCreators.create = (body, onSuccess, onFailure) => ({
+      type: '--generated--',
+      types: createActionTypes,
+      url: `${baseURL}/${endpoint}`,
+      requestOpts: {
+        method: 'POST',
+        body,
+      },
       onSuccess,
       onFailure,
     });
