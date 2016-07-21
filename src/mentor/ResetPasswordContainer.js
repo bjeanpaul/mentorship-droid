@@ -6,15 +6,19 @@ import ResetPassword from './ResetPassword';
 
 
 
-const mapDispatchToProps = function mapDispatchToProps(dispatch, { router }) {
-  return {
-    onSubmitPress: (email) => {
 
+const mapDispatchToProps = function mapDispatchToProps(dispatch, { router }) {
+
+  return {
+    handleNextPressed: () => {
+
+    },
+    handleResetPressed: (email) => {
       dispatch(resetPassword({ email }, () => {
-        console.log('and were done!')
+        router.push('done/');
       }));
     },
-  };
+  }
 };
 
 export default withRouter(connect(

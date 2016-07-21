@@ -23,12 +23,9 @@ export const login = function login(username, password, onSuccess) {
   };
 };
 
-
 const resetPasswordActions = generateActionCreators(
   'reset-password/',
   actionTypes.resetPassword,
-  {
-    disableAuthorizationHeader: true,
-  }
+  { disableAuthorizationHeader: true }
 );
 export const resetPassword = resetPasswordActions.create;

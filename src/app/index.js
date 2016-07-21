@@ -38,7 +38,7 @@ const App = function App() {
 
   return (
     <Provider store={store}>
-      <Router>
+      <Router navigationBar>
 
         <StackRoute path="/" component={Container}>
           <IndexRoute component={ResetPasswordContainer} />

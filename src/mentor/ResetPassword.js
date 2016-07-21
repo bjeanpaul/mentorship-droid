@@ -17,23 +17,12 @@ class ResetPassword extends React.Component {
     this.state = {
       email: 'peter.pistorius@gmail.com',
     };
-    this.handleSubmitPress = this.handleSubmitPress.bind(this);
-  }
-
-  handleSubmitPress() {
-    this.props.onSubmitPress(this.state.email);
   }
 
   render() {
-
-    // isLoading and isDone need to do something;
-
-    console.log(this.props.isDone)
-
     return (
       <View>
         <Header title="Reset Password" />
-
         <TextInput
           placeholder="Email"
           value={this.state.email}
@@ -41,18 +30,19 @@ class ResetPassword extends React.Component {
         />
 
         <Button
-          onPress={this.handleSubmitPress}
+          onPress={() => { this.props.handleResetPressed(this.state.email); }}
           label="Reset Password"
         />
-
         <Text>{this.props.errorMessage}</Text>
+
       </View>
     );
   }
 
 }
 ResetPassword.propTypes = {
-  onSubmitPress: PropTypes.func.isRequired,
+  handleResetPressed: PropTypes.func.isRequired,
+  handleNextPressed: PropTypes.func.isRequired,
   isLoading: PropTypes.bool,
   isDone: PropTypes.bool,
   errorMessage: PropTypes.string,
