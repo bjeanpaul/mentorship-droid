@@ -23,6 +23,7 @@ const NoMatch = () => (
 
 import Landing from 'src/app/Landing';
 import LoginContainer from 'src/mentor/LoginContainer';
+import ResetPasswordContainer from 'src/mentor/ResetPasswordContainer';
 
 import ActivationContainer from 'src/mentor/ActivationContainer';
 import ChangePasswordContainer from 'src/mentor/ChangePasswordContainer';

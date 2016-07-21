@@ -68,7 +68,8 @@ describe('Helpers', () => {
         const actionCreators = generateActionCreators('test-endpoint/', actionTypes);
         expect(actionCreators.fetch()).toEqual({
           url: 'http://example.org/test-endpoint/',
-          type: '--generated--',
+          type: '--generated fetch--',
+          requestOpts: {},
           types: [
             'TEST_FETCH_REQUEST',
             'TEST_FETCH_SUCCESS',
@@ -87,11 +88,11 @@ describe('Helpers', () => {
           url: 'http://example.org/test-endpoint/',
           requestOpts: {
             method: 'POST',
-            body: {
+            body: JSON.stringify({
               test: 'i am code.',
-            },
+            }),
           },
-          type: '--generated--',
+          type: '--generated create--',
           types: [
             'TEST_CREATE_REQUEST',
             'TEST_CREATE_SUCCESS',

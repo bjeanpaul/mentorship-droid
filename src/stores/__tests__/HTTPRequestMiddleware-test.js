@@ -23,6 +23,7 @@ describe('RemoteOperationMiddleware', () => {
       example: 'I am an example payload.',
     },
   };
+  // copy of successAction; with some additional things.
   const failureAction = Object.assign(
     {},
     successAction,
@@ -94,4 +95,27 @@ describe('RemoteOperationMiddleware', () => {
       store.dispatch(failureAction);
     });
   });
+
+  it('should allow authorization headers to be disabled', (done) => {
+    nock.cleanAll();
+    nock('http://example.org', { badheaders: ['authorization'] })
+      .get('/pass/')
+      .reply(200, {});
+
+    const noAuthAction = Object.assign(
+      {},
+      successAction,
+      {
+        url: 'http://example.org/pass/',
+        requestOpts: {
+          disableAuthorizationHeader: true,
+        },
+      }
+    );
+    store.dispatch(noAuthAction).then(() => {
+      done();
+    });
+  });
+
+
 });

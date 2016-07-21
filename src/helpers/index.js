@@ -45,11 +45,12 @@ export const filterActionTypes = function filterActionTypes(
 
 // TODO: Create, Update, Delete
 export const generateActionCreators = function generateActionCreators(
-  endpoint,
-  actionTypes
+  url,
+  actionTypes,
+  requestOpts = {}
 ) {
   // React-Native doesn't have globals.
-  let baseURL = 'http://192.168.178.20:8000/mentor';
+  let baseURL = 'http://192.168.178.84:8000/mentor';
   if (global.__TEST__) {
     baseURL = 'http://example.org';
   }
@@ -58,9 +59,10 @@ export const generateActionCreators = function generateActionCreators(
   const fetchActionTypes = filterActionTypes(actionTypes, 'fetch');
   if (fetchActionTypes.length === 3) {
     actionCreators.fetch = (onSuccess, onFailure) => ({
-      type: '--generated--',
+      type: '--generated fetch--',
       types: fetchActionTypes,
-      url: `${baseURL}/${endpoint}`,
+      url: `${baseURL}/${url}`,
+      requestOpts,
       onSuccess,
       onFailure,
     });
@@ -69,12 +71,11 @@ export const generateActionCreators = function generateActionCreators(
   const createActionTypes = filterActionTypes(actionTypes, 'create');
   if (createActionTypes.length === 3) {
     actionCreators.create = (body, onSuccess, onFailure) => ({
-      type: '--generated--',
+      type: '--generated create--',
       types: createActionTypes,
-      url: `${baseURL}/${endpoint}`,
-      requestOpts: {
-        method: 'POST',
-        body,
+      url: `${baseURL}/${url}`,
+      requestOpts: {...requestOpts, method: 'POST',
+        body: JSON.stringify(body),
       },
       onSuccess,
       onFailure,

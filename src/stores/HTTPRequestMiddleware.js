@@ -10,7 +10,7 @@ export default class HTTPRequestMiddleware {
       const {
         types,
         url,
-        requestOpts,
+        requestOpts = {},
         payload = {}, // passed along with actions
         onSuccess,
         onFailure,
@@ -35,13 +35,26 @@ export default class HTTPRequestMiddleware {
       }));
 
       const req = new Request(url, requestOpts);
-      req.headers.append('Accept', 'application/json');
-      req.headers.append('Content-Type', 'application/json');
-      req.headers.append('Authorization', `Basic ${this.getAuthorizationHeaderValue(getState())}`);
+      req.headers.set('Accept', 'application/json');
+      req.headers.set('Content-Type', 'application/json; charset=utf-8');
+
+      /* some requests don't expect an authorization header at all */
+      if (!requestOpts.disableAuthorizationHeader) {
+        req.headers.append('Authorization',
+          `Basic ${this.getAuthorizationHeaderValue(getState())}`);
+      }
 
       return fetch(req)
-        .then(response => response.json().then(json => ({ json, response })))
+        .then(
+          // TODO: ensure response is valid JSON; otherwise just presume it's plain
+          // text or something.
+          response => response.json()
+            .then(json => ({ json, response }))
+        )
         .then(({ json, response }) => {
+
+          //console.log(json)
+
           if (response.ok !== true) {
             return Promise.reject({ json, response });
           }
@@ -53,7 +66,9 @@ export default class HTTPRequestMiddleware {
         })
         .then(onSuccess, onFailure)
         .catch((error) => {
-          //console.log('----- network request failure ----', error)
+
+
+//          console.log('----- network request failure ----', error)
           let errorMessage;
           if (error instanceof TypeError) {
             errorMessage = error.message;

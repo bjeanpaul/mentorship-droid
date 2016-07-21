@@ -26,6 +26,9 @@ export const login = function login(username, password, onSuccess) {
 
 const resetPasswordActions = generateActionCreators(
   'reset-password/',
-  actionTypes.resetPassword
+  actionTypes.resetPassword,
+  {
+    disableAuthorizationHeader: true,
+  }
 );
 export const resetPassword = resetPasswordActions.create;
