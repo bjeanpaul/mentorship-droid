@@ -117,5 +117,18 @@ describe('RemoteOperationMiddleware', () => {
     });
   });
 
+  it('shouldnt break when json is not returned', () => {
+    nock.cleanAll();
+    nock('http://example.org')
+      .get('/pass/')
+      .reply(200, '', {
+        'Content-Type': 'text/plain; charset=utf-8',
+      });
+
+    store.dispatch(successAction).then(() => {
+      done();
+    });
+  })
+
 
 });

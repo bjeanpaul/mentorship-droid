@@ -45,16 +45,15 @@ export default class HTTPRequestMiddleware {
       }
 
       return fetch(req)
-        .then(
-          // TODO: ensure response is valid JSON; otherwise just presume it's plain
-          // text or something.
-          response => response.json()
-            .then(json => ({ json, response }))
-        )
+        .then((response) => {
+          let n = ({ json: {}, response });
+          const contentType = response.headers.get('content-type');
+          if (contentType && contentType.indexOf('application/json') !== -1) {
+            n = response.json().then(json => ({ json, response }));
+          }
+          return n;
+        })
         .then(({ json, response }) => {
-
-          //console.log(json)
-
           if (response.ok !== true) {
             return Promise.reject({ json, response });
           }
@@ -66,9 +65,7 @@ export default class HTTPRequestMiddleware {
         })
         .then(onSuccess, onFailure)
         .catch((error) => {
-
-
-//          console.log('----- network request failure ----', error)
+          console.log('----- network request failure ----', error)
           let errorMessage;
           if (error instanceof TypeError) {
             errorMessage = error.message;
