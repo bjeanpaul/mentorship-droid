@@ -10,7 +10,7 @@ const httpRequestMiddleware = new HTTPRequestMiddleware({
 });
 
 const rootReducer = combineReducers({
-  mentor,
+  auth: mentor,
 });
 
 export default function configureStore(initialState = {}) {

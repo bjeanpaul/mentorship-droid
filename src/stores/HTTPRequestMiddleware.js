@@ -57,10 +57,12 @@ export default class HTTPRequestMiddleware {
           if (response.ok !== true) {
             return Promise.reject({ json, response });
           }
+
           dispatch(Object.assign({}, payload, {
             type: successType,
             json,
           }));
+
           return { json, response };
         })
         .then(onSuccess, onFailure)

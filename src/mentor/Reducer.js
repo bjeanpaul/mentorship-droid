@@ -2,26 +2,41 @@ import actionTypes from './Constants';
 import { combineReducers } from 'redux';
 
 
+
+
 // this is kinda generic, I'm going to assume that we're going to have a
 // lot of these, and perhaps we should generate them as well.
-// same going for the fetch reducer.
+// same going for the login reducer.
+
+// there may be a great way to just generate everything;
+
+// we generate
+  // constants
+  // actions
+  // reducers (not yet)
+    // at most we need to know 3 things;
+    // network request started, finished, and broken.
+    // maybe we can normalize things
+  // the container view can also be some kind of generated view?
+
+
 const resetPassword = (state = {
   isLoading: false,
   isDone: false,
 }, action) => {
   switch (action.type) {
-    case actionTypes.resetPassword.fetchRequest:
+    case actionTypes.resetPassword.createRequest:
       return {
         isLoading: true,
         isDone: false,
       };
-    case actionTypes.resetPassword.fetchSuccess:
+    case actionTypes.resetPassword.createSuccess:
       return {
         isLoading: false,
         isDone: true,
       };
 
-    case actionTypes.resetPassword.fetchFailure:
+    case actionTypes.resetPassword.createFailure:
       return {
         isLoading: false,
         isDone: false,
