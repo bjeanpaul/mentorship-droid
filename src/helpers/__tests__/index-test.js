@@ -100,6 +100,29 @@ describe('Helpers', () => {
           ],
         });
       });
+
+      it('update', () => {
+        const actionTypes = generateActionTypes('test', ['update']);
+        const actionCreators = generateActionCreators('test-endpoint/', actionTypes);
+
+        expect(actionCreators.create({
+          test: 'i am code.',
+        })).toEqual({
+          url: 'http://example.org/test-endpoint/',
+          requestOpts: {
+            method: 'POST',
+            body: JSON.stringify({
+              test: 'i am code.',
+            }),
+          },
+          type: '--generated update--',
+          types: [
+            'TEST_UPDATE_REQUEST',
+            'TEST_UPDATE_SUCCESS',
+            'TEST_UPDATE_FAILURE',
+          ],
+        });
+      });
     });
   });
 });

@@ -23,6 +23,7 @@ export const generateActionTypes = function generateActionNames(
   return actionTypes;
 };
 
+
 export const filterActionTypes = function filterActionTypes(
   actionTypes,
   operation
@@ -43,7 +44,8 @@ export const filterActionTypes = function filterActionTypes(
   return [];
 };
 
-// TODO: Create, Update, Delete
+
+// TODO: Delete
 export const generateActionCreators = function generateActionCreators(
   url,
   actionTypes,
@@ -54,8 +56,8 @@ export const generateActionCreators = function generateActionCreators(
   if (global.__TEST__) {
     baseURL = 'http://example.org';
   }
-
   const actionCreators = {};
+
   const fetchActionTypes = filterActionTypes(actionTypes, 'fetch');
   if (fetchActionTypes.length === 3) {
     actionCreators.fetch = (onSuccess, onFailure) => ({
@@ -74,13 +76,32 @@ export const generateActionCreators = function generateActionCreators(
       type: '--generated create--',
       types: createActionTypes,
       url: `${baseURL}/${url}`,
-      requestOpts: {...requestOpts, method: 'POST',
+      requestOpts: {...requestOpts,
+        method: 'POST',
         body: JSON.stringify(body),
       },
       onSuccess,
       onFailure,
     });
   }
+
+  const updateActionTypes = filterActionTypes(actionTypes, 'update');
+  if (updateActionTypes.length === 3) {
+    actionCreators.create = (body, onSuccess, onFailure) => ({
+      type: '--generated update--',
+      types: updateActionTypes,
+      url: `${baseURL}/${url}`,
+      requestOpts: {...requestOpts,
+        method: 'POST',
+        body: JSON.stringify(body),
+      },
+      onSuccess,
+      onFailure,
+    });
+  }
+
+
+
 
   return actionCreators;
 };
