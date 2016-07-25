@@ -1,4 +1,6 @@
-import actionTypes from './Constants';
 import { generateActionCreators } from 'src/helpers';
 
-export const actions = generateActionCreators('profile/', actionTypes);
+import actionTypes from './Constants';
+import { profilesSchema } from './Models';
+
+export default generateActionCreators('profile', actionTypes, {}, profilesSchema);

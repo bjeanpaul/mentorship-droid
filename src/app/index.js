@@ -4,8 +4,18 @@ import { Provider } from 'react-redux';
 import { Router, Route, StackRoute, IndexRoute } from 'react-router-native';
 
 import configureStore from 'src/stores/configureStore';
-const initialState = { mentor: { authToken: '' } };
+const initialState = { auth: { login: { authToken: 'YWRtaW46MTIz' } } };
 const store = configureStore(initialState);
+
+
+import profileActions from 'src/profile/Actions';
+
+store.dispatch(profileActions.update('1', {
+  id: '1',
+  first_name: 'Peter'
+}));
+
+
 
 // we'll abstract this as well...
 const Container = ({ children }) => (

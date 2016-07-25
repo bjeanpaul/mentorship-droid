@@ -1,6 +1,5 @@
 import { generateActionTypes } from 'src/helpers';
 
-const types = generateActionTypes('PROFILE',
-  ['fetch', 'update']
-);
+
+const types = generateActionTypes('profile', ['fetch', 'update']);
 export default types;
