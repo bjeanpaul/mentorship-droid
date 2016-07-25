@@ -1,3 +1,5 @@
+import { normalize } from 'normalizr';
+
 export default class HTTPRequestMiddleware {
 
   constructor({ getAuthorizationHeaderValue }) {
@@ -11,7 +13,8 @@ export default class HTTPRequestMiddleware {
         types,
         url,
         requestOpts = {},
-        payload = {}, // passed along with actions
+        payload = {},
+        schema,
         onSuccess,
         onFailure,
       } = action;
@@ -44,6 +47,8 @@ export default class HTTPRequestMiddleware {
           `Basic ${this.getAuthorizationHeaderValue(getState())}`);
       }
 
+      console.log('---- network request ----', url)
+
       return fetch(req)
         .then((response) => {
           let n = ({ json: {}, response });
@@ -58,16 +63,29 @@ export default class HTTPRequestMiddleware {
             return Promise.reject({ json, response });
           }
 
-          dispatch(Object.assign({}, payload, {
-            type: successType,
-            json,
-          }));
+          console.log(json)
+
+          // if we have a schema, normalize the results
+          // TODO: Determine if it's a single or array response.
+          if (schema) {
+            dispatch(Object.assign({}, payload, {
+              type: successType,
+              entities: normalize(json.results, schema),
+            }));
+          } else {
+            dispatch(Object.assign({}, payload, {
+              type: successType,
+              results: json.results,
+            }));
+          }
 
           return { json, response };
         })
         .then(onSuccess, onFailure)
         .catch((error) => {
-          console.log('----- network request failure ----', error)
+          console.log('----- network request failure ----');
+          console.log(error);
+          console.log('----- network request failure ----');
           let errorMessage;
           if (error instanceof TypeError) {
             errorMessage = error.message;

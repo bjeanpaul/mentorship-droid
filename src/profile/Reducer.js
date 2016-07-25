@@ -1,14 +1,19 @@
+import { combineReducers } from 'redux'
 import actionTypes from './Constants';
 
 
-// I'll look into normalizer; I'm pretty sure I can offset these fairly easily.
+
+
+
 
 const reducer = (
   state = {
     isLoading: false,
+    username: undefined,
   },
   action
 ) => {
+
   switch (action.type) {
     case actionTypes.fetchRequest:
     case actionTypes.updateRequest:
@@ -17,11 +22,10 @@ const reducer = (
       };
     case actionTypes.fetchSuccess:
     case actionTypes.updateSuccess:
-      // this will return something;
-      // let's inspect it to see what...
       return {
         isLoading: false,
-      };
+        username: action.entities.result[0],
+      }
     case actionTypes.fetchFailure:
     case actionTypes.updateFaiulure:
       return {

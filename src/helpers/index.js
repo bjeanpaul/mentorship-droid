@@ -1,3 +1,5 @@
+
+
 export const generateActionTypes = function generateActionNames(
   resource,
   operations = ['FETCH', 'CREATE', 'UPDATE', 'DELETE']
@@ -14,7 +16,7 @@ export const generateActionTypes = function generateActionNames(
     actionTypes[success] = success;
     actionTypes[failure] = failure;
     // We generate duplicate "shortcut" constants that aren't dynamic so
-    // that we can reference them in subsequent generators, and reducers.
+    // that we can reference them in subsequent action generators, and reducers.
     const operationLC = operation.toLowerCase();
     actionTypes[`${operationLC}Request`] = request;
     actionTypes[`${operationLC}Success`] = success;
@@ -49,7 +51,8 @@ export const filterActionTypes = function filterActionTypes(
 export const generateActionCreators = function generateActionCreators(
   url,
   actionTypes,
-  requestOpts = {}
+  requestOpts = {},
+  schema
 ) {
   // React-Native doesn't have globals.
   let baseURL = 'http://192.168.178.84:8000/mentor';
@@ -65,6 +68,7 @@ export const generateActionCreators = function generateActionCreators(
       types: fetchActionTypes,
       url: `${baseURL}/${url}`,
       requestOpts,
+      schema,
       onSuccess,
       onFailure,
     });
@@ -80,6 +84,7 @@ export const generateActionCreators = function generateActionCreators(
         method: 'POST',
         body: JSON.stringify(body),
       },
+      schema,
       onSuccess,
       onFailure,
     });
@@ -87,19 +92,19 @@ export const generateActionCreators = function generateActionCreators(
 
   const updateActionTypes = filterActionTypes(actionTypes, 'update');
   if (updateActionTypes.length === 3) {
-    actionCreators.create = (body, onSuccess, onFailure) => ({
+    actionCreators.update = (PK, body, onSuccess, onFailure) => ({
       type: '--generated update--',
       types: updateActionTypes,
-      url: `${baseURL}/${url}`,
+      url: `${baseURL}/${url}/${PK}/`,
       requestOpts: {...requestOpts,
-        method: 'POST',
+        method: 'PUT',
         body: JSON.stringify(body),
       },
+      schema,
       onSuccess,
       onFailure,
     });
   }
-
 
 
 
