@@ -8,12 +8,6 @@ const initialState = { auth: { login: { authToken: 'YWRtaW46MTIz' } } };
 const store = configureStore(initialState);
 
 
-import profileActions from 'src/profile/Actions';
-
-store.dispatch(profileActions.update('1', {
-  id: '1',
-  first_name: 'Peter'
-}));
 
 
 

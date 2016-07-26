@@ -5,7 +5,10 @@ import { generateActionCreators } from 'src/helpers';
 import actionTypes from './Constants';
 
 
-const mentorActions = generateActionCreators('mentor/', actionTypes);
+const mentorActions = generateActionCreators({
+  path: 'mentor',
+  actionTypes,
+});
 export const fetchMentor = mentorActions.fetch;
 
 export const login = function login(username, password, onSuccess) {
@@ -23,9 +26,9 @@ export const login = function login(username, password, onSuccess) {
   };
 };
 
-const resetPasswordActions = generateActionCreators(
-  'reset-password/',
-  actionTypes.resetPassword,
-  { disableAuthorizationHeader: true }
-);
+const resetPasswordActions = generateActionCreators({
+  path: 'reset-password',
+  actionTypes: actionTypes.resetPassword,
+  requestOpts: { disableAuthorizationHeader: true },
+});
 export const resetPassword = resetPasswordActions.create;

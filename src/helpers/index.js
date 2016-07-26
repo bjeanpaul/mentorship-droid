@@ -9,6 +9,8 @@ export const generateActionTypes = function generateActionNames(
 
   operations.forEach((operation) => {
     const operationUC = operation.toUpperCase();
+
+    // TODO: Remove These.
     const request = `${resourceUC}_${operationUC}_REQUEST`;
     const success = `${resourceUC}_${operationUC}_SUCCESS`;
     const failure = `${resourceUC}_${operationUC}_FAILURE`;
@@ -48,14 +50,15 @@ export const filterActionTypes = function filterActionTypes(
 
 
 // TODO: Delete
-export const generateActionCreators = function generateActionCreators(
-  url,
+export const generateActionCreators = function generateActionCreators({
+  path,
   actionTypes,
   requestOpts = {},
-  schema
-) {
-  // React-Native doesn't have globals.
-  let baseURL = 'http://192.168.178.84:8000/mentor';
+  normalizeJSON,
+}) {
+
+  // React-Native doesn't have globals, I hate this solution.
+  let baseURL = 'http://localhost:8000/mentor';
   if (global.__TEST__) {
     baseURL = 'http://example.org';
   }
@@ -66,9 +69,9 @@ export const generateActionCreators = function generateActionCreators(
     actionCreators.fetch = (onSuccess, onFailure) => ({
       type: '--generated fetch--',
       types: fetchActionTypes,
-      url: `${baseURL}/${url}`,
+      url: `${baseURL}/${path}/`,
       requestOpts,
-      schema,
+      normalizeJSON,
       onSuccess,
       onFailure,
     });
@@ -79,12 +82,12 @@ export const generateActionCreators = function generateActionCreators(
     actionCreators.create = (body, onSuccess, onFailure) => ({
       type: '--generated create--',
       types: createActionTypes,
-      url: `${baseURL}/${url}`,
+      url: `${baseURL}/${path}/`,
       requestOpts: {...requestOpts,
         method: 'POST',
         body: JSON.stringify(body),
       },
-      schema,
+      normalizeJSON,
       onSuccess,
       onFailure,
     });
@@ -92,15 +95,20 @@ export const generateActionCreators = function generateActionCreators(
 
   const updateActionTypes = filterActionTypes(actionTypes, 'update');
   if (updateActionTypes.length === 3) {
-    actionCreators.update = (PK, body, onSuccess, onFailure) => ({
+    actionCreators.update = ({
+      id,
+      body,
+      onSuccess,
+      onFailure,
+    }) => ({
       type: '--generated update--',
       types: updateActionTypes,
-      url: `${baseURL}/${url}/${PK}/`,
+      url: `${baseURL}/${path}/${id}/`,
       requestOpts: {...requestOpts,
         method: 'PUT',
         body: JSON.stringify(body),
       },
-      schema,
+      normalizeJSON,
       onSuccess,
       onFailure,
     });

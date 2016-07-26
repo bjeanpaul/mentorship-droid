@@ -55,30 +55,6 @@ describe('RemoteOperationMiddleware', () => {
     });
   });
 
-  describe('should pass the `payload` with the dispatched actions', () => {
-    it('on `request`', (done) => {
-      store.dispatch(successAction)
-        .then(() => {
-          expect(store.getActions()[0].example).toEqual('I am an example payload.');
-          done();
-        });
-    });
-    it('on `success`', (done) => {
-      store.dispatch(successAction)
-        .then(() => {
-          expect(store.getActions()[1].example).toEqual('I am an example payload.');
-          done();
-        });
-    });
-
-    it('on `failure`', (done) => {
-      store.dispatch(failureAction)
-        .then(() => {
-          expect(store.getActions()[1].example).toEqual('I am an example payload.');
-          done();
-        });
-    });
-  });
 
   describe('should call `onSuccess` and `onFailure` callbacks.', () => {
     it('on `success`', (done) => {
@@ -117,7 +93,7 @@ describe('RemoteOperationMiddleware', () => {
     });
   });
 
-  it('shouldnt break when json is not returned', () => {
+  it('shouldnt break when json is not returned', (done) => {
     nock.cleanAll();
     nock('http://example.org')
       .get('/pass/')

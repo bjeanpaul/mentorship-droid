@@ -37,8 +37,9 @@ describe('actions', () => {
 
     it('calls `onSuccess` when completed', (done) => {
       nock('http://example.org')
-        .get('/mentor/')
-          .reply(200, {});
+      .get('/mentor/')
+      .reply(200, {});
+
       store.dispatch(login('username', 'password', () => {
         done();
       }));

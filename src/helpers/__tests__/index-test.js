@@ -61,11 +61,15 @@ describe('Helpers', () => {
   });
 
   describe('action creators', () => {
-    describe('should generate action creators based on `actionTypes`', () => {
+    describe('based on `actionTypes`', () => {
       //
-      it('fetch', () => {
+      it('should generate `fetch`', () => {
         const actionTypes = generateActionTypes('test', ['fetch']);
-        const actionCreators = generateActionCreators('test-endpoint/', actionTypes);
+        const actionCreators = generateActionCreators({
+          path: 'test-endpoint',
+          actionTypes,
+        });
+
         expect(actionCreators.fetch()).toEqual({
           url: 'http://example.org/test-endpoint/',
           type: '--generated fetch--',
@@ -78,9 +82,12 @@ describe('Helpers', () => {
         });
       });
 
-      it('create', () => {
+      it('should generate `create`', () => {
         const actionTypes = generateActionTypes('test', ['create']);
-        const actionCreators = generateActionCreators('test-endpoint/', actionTypes);
+        const actionCreators = generateActionCreators({
+          path: 'test-endpoint',
+          actionTypes,
+        });
 
         expect(actionCreators.create({
           test: 'i am code.',
@@ -101,16 +108,20 @@ describe('Helpers', () => {
         });
       });
 
-      it('update', () => {
+      it('should generate `update`', () => {
         const actionTypes = generateActionTypes('test', ['update']);
-        const actionCreators = generateActionCreators('test-endpoint/', actionTypes);
+        const actionCreators = generateActionCreators({
+          path: 'test-endpoint',
+          actionTypes,
+        });
 
-        expect(actionCreators.create({
-          test: 'i am code.',
+        expect(actionCreators.update({
+          id: '1',
+          body: { test: 'i am code.' },
         })).toEqual({
-          url: 'http://example.org/test-endpoint/',
+          url: 'http://example.org/test-endpoint/1/',
           requestOpts: {
-            method: 'POST',
+            method: 'PUT',
             body: JSON.stringify({
               test: 'i am code.',
             }),
