@@ -28,7 +28,7 @@ class CameraRollPicker extends Component {
   constructor(props, context) {
     super(props);
     this.state = {
-      images: [],
+      photos: [],
     };
 
     this.nextPath = '/profile-picture';
@@ -37,7 +37,7 @@ class CameraRollPicker extends Component {
 
   componentDidMount() {
     CameraRoll.getPhotos({ first: 25 }).then((data) => {
-      this.setState({ images: data.edges.map((asset) => asset.node.image) });
+      this.setState({ photos: data.edges.map((asset) => asset.node.image) });
     });
   }
 
@@ -45,9 +45,9 @@ class CameraRollPicker extends Component {
     return (
       <ScrollView style={styles.container}>
         <View style={styles.imageGrid}>
-          {this.state.images.map((image, index) =>
-            <Link key={`image-${index}`} to={`${this.nextPath}?imageURI=${image.uri}`}>
-              <Image source={{ uri: image.uri }} style={styles.image} />
+          {this.state.photos.map((photo, index) =>
+            <Link key={`photo-${index}`} to={`${this.nextPath}?imageURI=${photo.uri}`}>
+              <Image source={{ uri: photo.uri }} style={styles.image} />
             </Link>
           )}
         </View>

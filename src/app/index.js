@@ -9,6 +9,10 @@ const store = configureStore(initialState);
 
 
 
+import profileActions from 'src/profile/Actions';
+store.dispatch(profileActions.uploadImage('content://media/external/images/media/18'));
+
+
 
 
 // we'll abstract this as well...
@@ -45,7 +49,7 @@ const App = function App() {
       <Router navigationBar>
 
         <StackRoute path="/" component={Container}>
-          <IndexRoute component={ResetPasswordContainer} />
+          <IndexRoute component={ProfilePicture} />
           <Route path="login" component={LoginContainer} />
           <Route path="activate" component={ActivationContainer} />
           <Route path="setup-password" component={ChangePasswordContainer} />

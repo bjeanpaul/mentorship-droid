@@ -1,12 +1,8 @@
-import { combineReducers } from 'redux'
+
 import actionTypes from './Constants';
 
-
-
-
-
-
-const reducer = (
+// we can probably match the image upload stuff in this reducer...
+const profile = (
   state = {
     isLoading: false,
     username: undefined,
@@ -38,4 +34,4 @@ const reducer = (
   }
 };
 
-export default reducer;
+export default profile;

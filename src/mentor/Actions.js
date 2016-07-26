@@ -1,7 +1,5 @@
 import base64 from 'base-64';
-
 import { generateActionCreators } from 'src/helpers';
-
 import actionTypes from './Constants';
 
 

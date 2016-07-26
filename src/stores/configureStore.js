@@ -7,9 +7,11 @@ import mentor from 'src/mentor/Reducer';
 import profile from 'src/profile/Reducer';
 
 import HTTPRequestMiddleware from './HTTPRequestMiddleware';
+import { getAuthToken } from 'src/configuration';
+
 
 const httpRequestMiddleware = new HTTPRequestMiddleware({
-  getAuthorizationHeaderValue: (state) => state.auth.login.authToken,
+  getAuthorizationHeaderValue: getAuthToken,
 });
 
 

@@ -1,4 +1,4 @@
-
+import { getBaseURL } from 'src/configuration';
 
 export const generateActionTypes = function generateActionNames(
   resource,
@@ -56,12 +56,6 @@ export const generateActionCreators = function generateActionCreators({
   requestOpts = {},
   normalizeJSON,
 }) {
-
-  // React-Native doesn't have globals, I hate this solution.
-  let baseURL = 'http://localhost:8000/mentor';
-  if (global.__TEST__) {
-    baseURL = 'http://example.org';
-  }
   const actionCreators = {};
 
   const fetchActionTypes = filterActionTypes(actionTypes, 'fetch');
@@ -82,7 +76,7 @@ export const generateActionCreators = function generateActionCreators({
     actionCreators.create = (body, onSuccess, onFailure) => ({
       type: '--generated create--',
       types: createActionTypes,
-      url: `${baseURL}/${path}/`,
+      url: `${getBaseURL}/${path}/`,
       requestOpts: {...requestOpts,
         method: 'POST',
         body: JSON.stringify(body),
