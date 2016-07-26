@@ -51,7 +51,7 @@ export const filterActionTypes = function filterActionTypes(
 
 // TODO: Delete
 export const generateActionCreators = function generateActionCreators({
-  path,
+  path, // rename to endpoint;
   actionTypes,
   requestOpts = {},
   normalizeJSON,
@@ -63,7 +63,7 @@ export const generateActionCreators = function generateActionCreators({
     actionCreators.fetch = (onSuccess, onFailure) => ({
       type: '--generated fetch--',
       types: fetchActionTypes,
-      url: `${baseURL}/${path}/`,
+      url: `${getBaseURL()}/${path}/`,
       requestOpts,
       normalizeJSON,
       onSuccess,
@@ -76,7 +76,7 @@ export const generateActionCreators = function generateActionCreators({
     actionCreators.create = (body, onSuccess, onFailure) => ({
       type: '--generated create--',
       types: createActionTypes,
-      url: `${getBaseURL}/${path}/`,
+      url: `${getBaseURL()}/${path}/`,
       requestOpts: {...requestOpts,
         method: 'POST',
         body: JSON.stringify(body),
@@ -97,7 +97,7 @@ export const generateActionCreators = function generateActionCreators({
     }) => ({
       type: '--generated update--',
       types: updateActionTypes,
-      url: `${baseURL}/${path}/${id}/`,
+      url: `${getBaseURL()}/${path}/${id}/`,
       requestOpts: {...requestOpts,
         method: 'PUT',
         body: JSON.stringify(body),

@@ -6,6 +6,8 @@ jest.unmock('lodash');
 jest.unmock('normalizr');
 jest.unmock('redux-mock-store');
 jest.unmock('redux-thunk');
+jest.unmock('src/configuration');
+
 
 import 'isomorphic-fetch';
 import nock from 'nock';
