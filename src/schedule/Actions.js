@@ -1,4 +1,8 @@
 import { generateActionCreators } from 'src/helpers';
 
+
 import actionTypes from './Constants';
-export default generateActionCreators('schedule', actionTypes, {});
+export default generateActionCreators({
+  resource: 'schedule',
+  actionTypes,
+);

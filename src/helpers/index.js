@@ -45,11 +45,12 @@ export const filterActionTypes = function filterActionTypes(
 
 // TODO: Delete
 export const generateActionCreators = function generateActionCreators({
-  path, // rename to endpoint;
+  resourcePath,
   actionTypes,
   requestOpts = {},
   normalizeJSON,
 }) {
+  const baseURL = getBaseURL();
   const actionCreators = {};
 
   const fetchActionTypes = filterActionTypes(actionTypes, 'fetch');
@@ -57,7 +58,7 @@ export const generateActionCreators = function generateActionCreators({
     actionCreators.fetch = (onSuccess, onFailure) => ({
       type: '--generated fetch--',
       types: fetchActionTypes,
-      url: `${getBaseURL()}/${path}/`,
+      url: `${baseURL}/${resourcePath}/`,
       requestOpts,
       normalizeJSON,
       onSuccess,
@@ -70,7 +71,7 @@ export const generateActionCreators = function generateActionCreators({
     actionCreators.create = (body, onSuccess, onFailure) => ({
       type: '--generated create--',
       types: createActionTypes,
-      url: `${getBaseURL()}/${path}/`,
+      url: `${baseURL}/${resourcePath}/`,
       requestOpts: {...requestOpts,
         method: 'POST',
         body: JSON.stringify(body),
@@ -81,6 +82,10 @@ export const generateActionCreators = function generateActionCreators({
     });
   }
 
+  // id is required as an argument to update a record;
+  // we have a scenario with profiless, where it's
+  // profile/{id}/image,
+  // which is awkward...
   const updateActionTypes = filterActionTypes(actionTypes, 'update');
   if (updateActionTypes.length === 3) {
     actionCreators.update = ({
@@ -91,7 +96,7 @@ export const generateActionCreators = function generateActionCreators({
     }) => ({
       type: '--generated update--',
       types: updateActionTypes,
-      url: `${getBaseURL()}/${path}/${id}/`,
+      url: `${baseURL}/${resourcePath}/${id}/`,
       requestOpts: {...requestOpts,
         method: 'PUT',
         body: JSON.stringify(body),
