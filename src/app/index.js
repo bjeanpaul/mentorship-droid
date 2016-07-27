@@ -7,13 +7,9 @@ import configureStore from 'src/stores/configureStore';
 const initialState = { auth: { login: { authToken: 'YWRtaW46MTIz' } } };
 const store = configureStore(initialState);
 
+import scheduleActions from 'src/schedule/Actions';
 
-
-import profileActions from 'src/profile/Actions';
-store.dispatch(profileActions.uploadImage('content://media/external/images/media/18'));
-
-
-
+store.dispatch(scheduleActions.fetch());
 
 // we'll abstract this as well...
 const Container = ({ children }) => (
