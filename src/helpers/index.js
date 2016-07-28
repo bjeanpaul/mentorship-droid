@@ -1,4 +1,4 @@
-
+import { getBaseURL } from 'src/configuration';
 
 export const generateActionTypes = function generateActionNames(
   resource,
@@ -12,11 +12,7 @@ export const generateActionTypes = function generateActionNames(
     const request = `${resourceUC}_${operationUC}_REQUEST`;
     const success = `${resourceUC}_${operationUC}_SUCCESS`;
     const failure = `${resourceUC}_${operationUC}_FAILURE`;
-    actionTypes[request] = request;
-    actionTypes[success] = success;
-    actionTypes[failure] = failure;
-    // We generate duplicate "shortcut" constants that aren't dynamic so
-    // that we can reference them in subsequent action generators, and reducers.
+
     const operationLC = operation.toLowerCase();
     actionTypes[`${operationLC}Request`] = request;
     actionTypes[`${operationLC}Success`] = success;
@@ -48,17 +44,13 @@ export const filterActionTypes = function filterActionTypes(
 
 
 // TODO: Delete
-export const generateActionCreators = function generateActionCreators(
-  url,
+export const generateActionCreators = function generateActionCreators({
+  resourcePath,
   actionTypes,
   requestOpts = {},
-  schema
-) {
-  // React-Native doesn't have globals.
-  let baseURL = 'http://192.168.178.84:8000/mentor';
-  if (global.__TEST__) {
-    baseURL = 'http://example.org';
-  }
+  normalizeJSON,
+}) {
+  const baseURL = getBaseURL();
   const actionCreators = {};
 
   const fetchActionTypes = filterActionTypes(actionTypes, 'fetch');
@@ -66,9 +58,9 @@ export const generateActionCreators = function generateActionCreators(
     actionCreators.fetch = (onSuccess, onFailure) => ({
       type: '--generated fetch--',
       types: fetchActionTypes,
-      url: `${baseURL}/${url}`,
+      url: `${baseURL}/${resourcePath}/`,
       requestOpts,
-      schema,
+      normalizeJSON,
       onSuccess,
       onFailure,
     });
@@ -76,31 +68,44 @@ export const generateActionCreators = function generateActionCreators(
 
   const createActionTypes = filterActionTypes(actionTypes, 'create');
   if (createActionTypes.length === 3) {
-    actionCreators.create = (body, onSuccess, onFailure) => ({
+    actionCreators.create = ({
+      body,
+      onSuccess,
+      onFailure
+    }) => ({
       type: '--generated create--',
       types: createActionTypes,
-      url: `${baseURL}/${url}`,
+      url: `${baseURL}/${resourcePath}/`,
       requestOpts: {...requestOpts,
         method: 'POST',
         body: JSON.stringify(body),
       },
-      schema,
+      normalizeJSON,
       onSuccess,
       onFailure,
     });
   }
 
+  // id is required as an argument to update a record;
+  // we have a scenario with profiless, where it's
+  // profile/{id}/image,
+  // which is awkward...
   const updateActionTypes = filterActionTypes(actionTypes, 'update');
   if (updateActionTypes.length === 3) {
-    actionCreators.update = (PK, body, onSuccess, onFailure) => ({
+    actionCreators.update = ({
+      id,
+      body,
+      onSuccess,
+      onFailure,
+    }) => ({
       type: '--generated update--',
       types: updateActionTypes,
-      url: `${baseURL}/${url}/${PK}/`,
+      url: `${baseURL}/${resourcePath}/${id}/`,
       requestOpts: {...requestOpts,
         method: 'PUT',
         body: JSON.stringify(body),
       },
-      schema,
+      normalizeJSON,
       onSuccess,
       onFailure,
     });

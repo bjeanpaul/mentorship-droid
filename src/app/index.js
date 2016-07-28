@@ -4,18 +4,12 @@ import { Provider } from 'react-redux';
 import { Router, Route, StackRoute, IndexRoute } from 'react-router-native';
 
 import configureStore from 'src/stores/configureStore';
-const initialState = { auth: { login: { authToken: 'YWRtaW46MTIz' } } };
+const initialState = { auth: { login: { authToken: 'cGV0ZXJwOjEyMw==' } } };
 const store = configureStore(initialState);
 
+import scheduleActions from 'src/schedule/Actions';
 
-import profileActions from 'src/profile/Actions';
-
-store.dispatch(profileActions.update('1', {
-  id: '1',
-  first_name: 'Peter'
-}));
-
-
+store.dispatch(scheduleActions.fetch());
 
 // we'll abstract this as well...
 const Container = ({ children }) => (
@@ -51,7 +45,7 @@ const App = function App() {
       <Router navigationBar>
 
         <StackRoute path="/" component={Container}>
-          <IndexRoute component={ResetPasswordContainer} />
+          <IndexRoute component={ProfilePicture} />
           <Route path="login" component={LoginContainer} />
           <Route path="activate" component={ActivationContainer} />
           <Route path="setup-password" component={ChangePasswordContainer} />

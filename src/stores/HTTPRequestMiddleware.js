@@ -1,5 +1,3 @@
-import { normalize } from 'normalizr';
-
 export default class HTTPRequestMiddleware {
 
   constructor({ getAuthorizationHeaderValue }) {
@@ -13,8 +11,7 @@ export default class HTTPRequestMiddleware {
         types,
         url,
         requestOpts = {},
-        payload = {},
-        schema,
+        normalizeJSON,
         onSuccess,
         onFailure,
       } = action;
@@ -33,25 +30,28 @@ export default class HTTPRequestMiddleware {
 
       const [requestType, successType, failureType] = types;
 
-      dispatch(Object.assign({}, payload, {
-        type: requestType,
-      }));
+      dispatch({ type: requestType });
 
       const req = new Request(url, requestOpts);
       req.headers.set('Accept', 'application/json');
       req.headers.set('Content-Type', 'application/json; charset=utf-8');
 
-      /* some requests don't expect an authorization header at all */
+      /* some requests don't expect an authorization header at all, so we
+      need to be able to turn it off. */
       if (!requestOpts.disableAuthorizationHeader) {
         req.headers.append('Authorization',
           `Basic ${this.getAuthorizationHeaderValue(getState())}`);
       }
 
-      console.log('---- network request ----', url)
 
       return fetch(req)
         .then((response) => {
           let n = ({ json: {}, response });
+          /* I have noted that sometimes I receive and empty response body,
+          with the incorrect content type.
+
+          TODO: Can I check the length instead?
+          */
           const contentType = response.headers.get('content-type');
           if (contentType && contentType.indexOf('application/json') !== -1) {
             n = response.json().then(json => ({ json, response }));
@@ -62,40 +62,36 @@ export default class HTTPRequestMiddleware {
           if (response.ok !== true) {
             return Promise.reject({ json, response });
           }
-
-          console.log(json)
-
-          // if we have a schema, normalize the results
-          // TODO: Determine if it's a single or array response.
-          if (schema) {
-            dispatch(Object.assign({}, payload, {
-              type: successType,
-              entities: normalize(json.results, schema),
-            }));
-          } else {
-            dispatch(Object.assign({}, payload, {
-              type: successType,
-              results: json.results,
-            }));
-          }
-
+          return { json, response };
+        })
+        .then(normalizeJSON)
+        .then(({ json, response }) => {
+          dispatch({
+            type: successType,
+            payload: json,
+          });
           return { json, response };
         })
         .then(onSuccess, onFailure)
         .catch((error) => {
-          console.log('----- network request failure ----');
-          console.log(error);
-          console.log('----- network request failure ----');
+          console.warn(`----- ERROR: ${url} ----`);
+          console.warn(error, req);
+
           let errorMessage;
           if (error instanceof TypeError) {
             errorMessage = error.message;
           } else {
-            errorMessage = error.json.detail || 'Something bad happened';
+            if (error.json && error.json.detail) {
+              errorMessage = error.json.detail
+            } else {
+              errorMessage = 'Something bad happened';
+            }
           }
-          dispatch(Object.assign({}, payload, {
+
+          dispatch({
             type: failureType,
             errorMessage,
-          }));
+          });
         });
         // end of fetch.
     };
