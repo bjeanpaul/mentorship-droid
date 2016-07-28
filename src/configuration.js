@@ -5,8 +5,8 @@ export const getBaseURL = () => {
   if (global.__TEST__) {
     return 'http://example.org';
   }
-  // virtual-box adapter.
-  return 'http://192.168.56.1:8000/mentor';
+  // geny-motion
+  return 'http://10.0.3.2:8000/mentor';
 };
 
 export const getAuthorizationToken = (state) => state.auth.login.authToken;

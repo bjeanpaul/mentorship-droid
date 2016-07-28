@@ -9,7 +9,7 @@ import actionTypes from './Constants';
 const profileSchema = new Schema('profile');
 
 const actions = generateActionCreators({
-  path: 'profile',
+  resourcePath: 'profile',
   actionTypes,
   normalizeJSON: ({ json }) => {
     if (json.results) {

@@ -68,7 +68,11 @@ export const generateActionCreators = function generateActionCreators({
 
   const createActionTypes = filterActionTypes(actionTypes, 'create');
   if (createActionTypes.length === 3) {
-    actionCreators.create = (body, onSuccess, onFailure) => ({
+    actionCreators.create = ({
+      body,
+      onSuccess,
+      onFailure
+    }) => ({
       type: '--generated create--',
       types: createActionTypes,
       url: `${baseURL}/${resourcePath}/`,

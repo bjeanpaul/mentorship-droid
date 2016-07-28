@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { Router, Route, StackRoute, IndexRoute } from 'react-router-native';
 
 import configureStore from 'src/stores/configureStore';
-const initialState = { auth: { login: { authToken: 'YWRtaW46MTIz' } } };
+const initialState = { auth: { login: { authToken: 'cGV0ZXJwOjEyMw==' } } };
 const store = configureStore(initialState);
 
 import scheduleActions from 'src/schedule/Actions';

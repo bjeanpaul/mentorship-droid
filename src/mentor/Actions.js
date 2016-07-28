@@ -2,9 +2,9 @@ import base64 from 'base-64';
 import { generateActionCreators } from 'src/helpers';
 import actionTypes from './Constants';
 
-
+// TODO: Move to Profile.
 const mentorActions = generateActionCreators({
-  path: 'mentor',
+  resourcePath: 'profile',
   actionTypes,
 });
 export const fetchMentor = mentorActions.fetch;
@@ -25,7 +25,7 @@ export const login = function login(username, password, onSuccess) {
 };
 
 const resetPasswordActions = generateActionCreators({
-  path: 'reset-password',
+  resourcePath: 'reset-password',
   actionTypes: actionTypes.resetPassword,
   requestOpts: { disableAuthorizationHeader: true },
 });

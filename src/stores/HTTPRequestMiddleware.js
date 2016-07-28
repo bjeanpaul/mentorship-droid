@@ -66,18 +66,16 @@ export default class HTTPRequestMiddleware {
         })
         .then(normalizeJSON)
         .then(({ json, response }) => {
-
           dispatch({
             type: successType,
             payload: json,
           });
-
           return { json, response };
         })
         .then(onSuccess, onFailure)
         .catch((error) => {
-          console.warn('----- network request failure ----', url);
-          console.warn(error);
+          console.warn(`----- ERROR: ${url} ----`);
+          console.warn(error, req);
 
           let errorMessage;
           if (error instanceof TypeError) {
