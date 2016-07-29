@@ -20,6 +20,7 @@ export const fontWeight = {
 const styles = StyleSheet.create({
 
   text: {
+    lineHeight: 24,
     fontFamily: 'Brandon Text',
     fontSize: fontSize.medium,
     textAlign: 'center',

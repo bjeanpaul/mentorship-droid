@@ -7,13 +7,12 @@ import {
 } from 'react-native';
 import Calendar from 'react-native-calendar';
 
-import { Text } from 'src/Components';
+import { Text } from 'src/components';
 import { fontSize, fontWeight } from 'src/StyleSheet';
 
 const styles = {
   calendarContainer: {
     flex: 1,
-    backgroundColor: 'orange',
   },
   calendarControls: {
     height: 60,
@@ -50,6 +49,7 @@ const styles = {
     color: '#c0cbcc',
   },
   monthContainer: {
+    flex: 1,
     backgroundColor: '#fff',
   },
   weekRow: {
@@ -83,52 +83,88 @@ const styles = {
 };
 
 const CallInfo = ({
-  <View style={{
-      flex: 1,
-    }}>
-    <Text></Text>
-  </View>
+  date,
+  activity,
+  style,
 }) => {
-
+  return (
+    <View style={[{
+      padding: 25,
+      paddingTop: 20,
+      paddingBottom: 20,
+    }, style]}>
+      <Text style={{
+        fontWeight: fontWeight.bold,
+        fontSize: fontSize.xSmall,
+        textAlign: 'left',
+        color: '#80979a',
+      }}>CALL SCHEDULED FOR:</Text>
+      <Text style={{
+          textAlign: 'left',
+          color: '#003035',
+          fontSize: fontSize.large,
+        }}>{date}</Text>
+      <Text style={{
+          textAlign: 'left',
+          color: '#003035',
+          fontSize: fontSize.large,
+        }}>{activity}</Text>
+    </View>
+  );
 }
 
 
-const ScheduleList = ({
-  calls,
-}) => {
+class ScheduleList extends React.Component {
 
-  calls = [
-    '2016-07-03',
-    '2016-07-05',
-    '2016-07-28',
-    '2016-07-30'
-  ];
 
-  styles.monthContainer.height = Dimensions.get('window').height - 328;
+  constructor(props) {
+    super(props);
+    this.props = props;
+    this.state = {};
+    this.renderCallInfo = this.renderCallInfo.bind(this);
+  }
 
-  return (
-    <View style={{
-      flex: 1,
-    }}>
-      <StatusBar backgroundColor="#003035" />
-      <Calendar
-        eventDates={calls}
-        showControls
-        titleFormat="MMMMM YYYY"
-        prevButtonText="<"
-        nextButtonText=">"
-        onDateSelect={(date) => console.warn('selectedDate:', date)}
-        onTouchPrev={() => console.log('Back TOUCH')}     // eslint-disable-line no-console
-        onTouchNext={() => console.log('Forward TOUCH')}  // eslint-disable-line no-console
-        onSwipePrev={() => console.log('Back SWIPE')}     // eslint-disable-line no-console
-        onSwipeNext={() => console.log('Forward SWIPE')}  // eslint-disable-line no-console
-        customStyle={styles}
-      />
+  renderCallInfo() {
+    // TOOD: Filter calls; and grab the correct information;
+    if (this.state.selectedDate) {
 
-      <CallInfo />
+      console.log('yoyooy')
 
-    </View>
-  );
+      return (<CallInfo
+        style={{ flex: 1 }}
+        date="Thu, Apr 13, 2:00pm"
+        activity="Find out who you are and what you do"
+      />);
+    }
+    return <View />;
+  }
+
+
+  render() {
+
+    return (
+      <View style={{
+        flex: 1,
+      }}>
+        <StatusBar backgroundColor="#003035" />
+        <Calendar
+          eventDates={this.props.calls}
+          showControls
+          prevButtonText="<"
+          nextButtonText=">"
+          onDateSelect={(selectedDate) => this.setState({ selectedDate })}
+          customStyle={styles}
+        />
+
+        <View style={{
+          flex: .3,
+          backgroundColor: '#dfe5e6',
+        }}>
+          {this.renderCallInfo()}
+        </View>
+      </View>
+    );
+  }
 }
 
 export default ScheduleList;
