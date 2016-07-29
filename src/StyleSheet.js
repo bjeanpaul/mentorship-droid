@@ -5,7 +5,7 @@ import {
 
 export const fontSize = {
   xSmall: 12,
-  small: 14,
+  small: 15,
   medium: 16,
   large: 18,
   xLarge: 20,
@@ -20,6 +20,7 @@ export const fontWeight = {
 const styles = StyleSheet.create({
 
   text: {
+    lineHeight: 24,
     fontFamily: 'Brandon Text',
     fontSize: fontSize.medium,
     textAlign: 'center',
@@ -60,13 +61,6 @@ const styles = StyleSheet.create({
     padding: 0,
     paddingBottom: 8,
     height: 28,
-  },
-
-
-  fontSmall: {
-    fontFamily: 'brandon',
-    fontSize: fontSize.small,
-    color: '#9fb1b3',
   },
 });
 

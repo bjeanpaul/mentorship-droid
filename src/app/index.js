@@ -8,7 +8,6 @@ const initialState = { auth: { login: { authToken: 'cGV0ZXJwOjEyMw==' } } };
 const store = configureStore(initialState);
 
 import scheduleActions from 'src/schedule/Actions';
-
 store.dispatch(scheduleActions.fetch());
 
 // we'll abstract this as well...
@@ -23,6 +22,9 @@ const NoMatch = () => (
     <Text>404 - not found</Text>
   </View>
 );
+
+
+import ScheduleList from 'src/schedule/ScheduleList';
 
 
 import Landing from 'src/app/Landing';
@@ -44,8 +46,9 @@ const App = function App() {
     <Provider store={store}>
       <Router navigationBar>
 
+
         <StackRoute path="/" component={Container}>
-          <IndexRoute component={ProfilePicture} />
+          <IndexRoute component={() => <ScheduleList calls={['2016-07-30', '2016-07-31', '2016-07-15',]} />} />
           <Route path="login" component={LoginContainer} />
           <Route path="activate" component={ActivationContainer} />
           <Route path="setup-password" component={ChangePasswordContainer} />
