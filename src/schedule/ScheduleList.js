@@ -1,8 +1,6 @@
 import React from 'react';
 import {
   View,
-  StyleSheet,
-  Dimensions,
   StatusBar,
 } from 'react-native';
 import Calendar from 'react-native-calendar';
