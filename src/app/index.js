@@ -20,10 +20,6 @@ const NoMatch = () => (
   </View>
 );
 
-
-import ScheduleDetail from 'src/schedule/ScheduleDetail';
-
-
 import Landing from 'src/app/Landing';
 import LoginContainer from 'src/mentor/LoginContainer';
 import ResetPasswordContainer from 'src/mentor/ResetPasswordContainer';
@@ -45,7 +41,7 @@ const App = function App() {
 
 
         <StackRoute path="/" component={Container}>
-          <IndexRoute component={() => <ScheduleDetail />} />
+          <IndexRoute component={() => <Landing />} />
           <Route path="login" component={LoginContainer} />
           <Route path="activate" component={ActivationContainer} />
           <Route path="setup-password" component={ChangePasswordContainer} />
