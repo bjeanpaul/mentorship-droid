@@ -2,7 +2,19 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
+
+        <item name="android:colorPrimaryDark">#9aacae</item>
+
+        <item name="android:datePickerDialogTheme">@style/MyDialogTheme</item>
+        <item name="android:timePickerDialogTheme">@style/MyDialogTheme</item>
+
+        <item name="android:colorAccent">#f77040</item>
     </style>
+
+    <style name="MyDialogTheme" parent="android:Theme.Material.Light.Dialog">
+      <item name="android:colorAccent">#f77040</item>
+    </style>
+
+
 
 </resources>
