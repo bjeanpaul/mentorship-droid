@@ -17,8 +17,8 @@ class Login extends React.Component {
     this.context = context;
 
     this.state = {
-      username: 'admin',
-      password: '123x',
+      username: '',
+      password: '',
     };
 
     this.handleSubmitPress = this.handleSubmitPress.bind(this);
