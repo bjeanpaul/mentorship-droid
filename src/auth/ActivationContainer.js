@@ -1,30 +1,29 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 
-import { login } from './Actions';
+import { login } from './actions';
 import Login from './Login';
 
 const mapStateToProps = function mapStateToProps(state) {
   return {
-    headerTitle: 'Activation Account',
+    headerTitle: 'Activate Account',
     buttonLabel: 'Activate',
-    isLoading: state.auth.login.isLoading,
-    errorMessage: state.auth.login.errorMessage,
+    isLoading: state.auth.isLoading,
+    errorMessage: state.auth.errorMessage,
   };
 };
 
-// TODO: are we using react-router v3, we can then get the context
-// in this view, rather than having to rely on having it in t
-const mapDispatchToProps = function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = function mapDispatchToProps(dispatch, { router }) {
   return {
-    onSubmitPress: (username, password, context) => {
+    handleLoginPress: (username, password) => {
       dispatch(login(username, password, () => {
-        context.router.push('/setup-password');
+        router.push('/setup-password');
       }));
     },
   };
 };
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Login);
+)(Login));

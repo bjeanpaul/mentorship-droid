@@ -9,7 +9,7 @@ const httpRequestMiddleware = new HTTPRequestMiddleware({
   getAuthorizationHeaderValue,
 });
 
-import auth from 'src/auth/Reducer';
+import auth from 'src/auth/reducer';
 import profile from 'src/profile/Reducer';
 import schedule from 'src/schedule/Reducer';
 

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { Router, Route, StackRoute, IndexRoute } from 'react-router-native';
 
 import configureStore from 'src/stores/configureStore';
-const initialState = { auth: { login: { authToken: 'cGV0ZXJwOjEyMw==' } } };
+const initialState = { auth: { authToken: 'cGV0ZXJwOjEyMw==' } };
 const store = configureStore(initialState);
 
 // we'll abstract this as well...
@@ -21,11 +21,11 @@ const NoMatch = () => (
 );
 
 import Landing from 'src/app/Landing';
-import LoginContainer from 'src/mentor/LoginContainer';
-import ResetPasswordContainer from 'src/mentor/ResetPasswordContainer';
+import LoginContainer from 'src/auth/LoginContainer';
+import ResetPasswordContainer from 'src/auth/ResetPasswordContainer';
 
-import ActivationContainer from 'src/mentor/ActivationContainer';
-import ChangePasswordContainer from 'src/mentor/ChangePasswordContainer';
+import ActivationContainer from 'src/auth/ActivationContainer';
+import ChangePasswordContainer from 'src/auth/ChangePasswordContainer';
 import Hello from 'src/onboarding/Hello';
 import ProfilePicture from 'src/onboarding/ProfilePicture';
 import CameraRoll from 'src/onboarding/CameraRoll';

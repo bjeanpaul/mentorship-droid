@@ -1,26 +1,20 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 
-import { login } from './Actions';
+import { login } from './actions';
 import Login from './Login';
 
-const mapStateToProps = function mapStateToProps(state) {
+const mapDispatchToProps = function mapDispatchToProps(dispatch, { router }) {
   return {
-    isLoading: state.auth.login.isLoading,
-    errorMessage: state.auth.login.errorMessage,
-  };
-};
-
-const mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    onSubmitPress: (username, password, context) => {
-      dispatch(login(username, password, () => {
-        context.router.push('/hello');
+    handleLoginPress: (email, password) => {
+      dispatch(login(email, password, () => {
+        router.push('/hello');
       }));
     },
   };
 };
 
-export default connect(
-  mapStateToProps,
+export default withRouter(connect(
+  (state) => state.auth,
   mapDispatchToProps
-)(Login);
+)(Login));
