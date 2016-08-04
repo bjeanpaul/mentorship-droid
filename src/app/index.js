@@ -20,10 +20,6 @@ const NoMatch = () => (
   </View>
 );
 
-
-import ScheduleDetail from 'src/schedule/ScheduleDetail';
-
-
 import Landing from 'src/app/Landing';
 import LoginContainer from 'src/mentor/LoginContainer';
 import ResetPasswordContainer from 'src/mentor/ResetPasswordContainer';
@@ -35,8 +31,8 @@ import ProfilePicture from 'src/onboarding/ProfilePicture';
 import CameraRoll from 'src/onboarding/CameraRoll';
 import profileSetupRoutes from 'src/onboarding/QuestionRoutes';
 
-// maybe we can keep these outside of memory if the user is already logged in?
-
+// TODO: How to import components dynamically based on user's logged in state.
+// https://github.com/reactjs/react-router/blob/master/docs/guides/DynamicRouting.md
 const App = function App() {
 
   return (
@@ -45,8 +41,8 @@ const App = function App() {
 
 
         <StackRoute path="/" component={Container}>
-          <IndexRoute component={() => <ScheduleDetail />} />
-          <Route path="login" component={LoginContainer} />
+          <IndexRoute component={() => <LoginContainer />} />
+          <Route path="login" component={Landing} />
           <Route path="activate" component={ActivationContainer} />
           <Route path="setup-password" component={ChangePasswordContainer} />
           <Route path="hello" component={Hello} />

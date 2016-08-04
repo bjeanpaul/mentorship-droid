@@ -17,8 +17,8 @@ class Login extends React.Component {
     this.context = context;
 
     this.state = {
-      username: 'admin',
-      password: '123x',
+      username: '',
+      password: '',
     };
 
     this.handleSubmitPress = this.handleSubmitPress.bind(this);
@@ -57,10 +57,10 @@ class Login extends React.Component {
       </View>
     );
   }
-
 }
-Login.contextTypes = {
-  router: PropTypes.object.isRequired,
+Login.defaultProps = {
+  headerTitle: 'Log In',
+  buttonLabel: 'Log In',
 };
 Login.propTypes = {
   headerTitle: PropTypes.string,
@@ -69,5 +69,9 @@ Login.propTypes = {
   isLoading: PropTypes.bool,
   errorMessage: PropTypes.string,
 };
+Login.contextTypes = {
+  router: PropTypes.object.isRequired,
+};
+
 
 export default Login;
