@@ -9,7 +9,7 @@ const httpRequestMiddleware = new HTTPRequestMiddleware({
   getAuthorizationHeaderValue,
 });
 
-import mentor from 'src/mentor/Reducer';
+import auth from 'src/auth/Reducer';
 import profile from 'src/profile/Reducer';
 import schedule from 'src/schedule/Reducer';
 
@@ -24,8 +24,8 @@ const entities = (state = {}, action) => {
 };
 
 const rootReducer = combineReducers({
-  auth: mentor,
   entities,
+  auth,
   profile,
   schedule,
 });
