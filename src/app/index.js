@@ -42,7 +42,7 @@ const App = function App() {
 
         <StackRoute path="/" component={Container}>
           <IndexRoute component={() => <LoginContainer />} />
-          <Route path="login" component={LoginContainer} />
+          <Route path="login" component={Landing} />
           <Route path="activate" component={ActivationContainer} />
           <Route path="setup-password" component={ChangePasswordContainer} />
           <Route path="hello" component={Hello} />
