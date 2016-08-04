@@ -14,13 +14,20 @@ export const fontSize = {
 
 export const fontWeight = {
   medium: '300',
-  bold: '500',
+  bold: 'bold',
 };
+
+
+export const font = {
+  standard: 'Brandon Text',
+  medium: 'Brandon Text_medium',
+  bold: 'Brandon Text_bold',
+};
+
 
 const styles = StyleSheet.create({
 
   text: {
-    lineHeight: 24,
     fontFamily: 'Brandon Text',
     fontSize: fontSize.medium,
     textAlign: 'center',
@@ -33,9 +40,8 @@ const styles = StyleSheet.create({
   },
 
   heading: {
-    fontFamily: 'Brandon Text',
+    fontFamily: 'Brandon Text_medium',
     fontSize: fontSize.xLarge,
-    fontWeight: fontWeight.medium,
     textAlign: 'center',
     color: '#003035',
   },
