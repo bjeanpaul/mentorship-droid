@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 
 import { login } from './Actions';
-import LogIn from './LogIn';
+import Login from './Login';
 
 const mapStateToProps = function mapStateToProps(state) {
   return {
     headerTitle: 'Activation Account',
     buttonLabel: 'Activate',
-    isLoading: state.mentor.login.isLoading,
-    errorMessage: state.mentor.login.errorMessage,
+    isLoading: state.auth.login.isLoading,
+    errorMessage: state.auth.login.errorMessage,
   };
 };
 
@@ -27,4 +27,4 @@ const mapDispatchToProps = function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(LogIn);
+)(Login);
