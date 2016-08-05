@@ -1,97 +1,29 @@
 # MENTOR TOGETHER #
 
-This application is built with React-Native, targeting Android.
+This app is built with React Native, targetting Android.
 
-## Installation ##
+## Setup ##
 
-Before you attempt to run the package, follow the [Android setup steps](https://facebook.github.io/react-native/docs/android-setup.html)
-for React-Native.
+Follow the [Android setup steps](http://facebook.github.io/react-native/releases/0.28/docs/getting-started.html#content)
+for React Native.
+
+You should end up installing `node`, `watchman`, `react-native-cli`, and
+`Android Studio`.
+
+Once you're done installing React Native's dependencies then run `npm install`,
+to install our projects dependencies.
 
 ```
-> npm install
-> react-native init
 > react-native run-android
 ```
 
+Starts React Native's packager, builds the Android application and runs it
+on your _Android Virtual Device._
 
+## Debugging ##
 
-API documentation:
+`> npm run logs`
 
-- Journey has
+## Tests ##
 
-a list of `Events`:
-  - event type (constants, which are mapped against icons in the UI.)
-    - call started
-    - call scheduled
-    - new message
-    -
-  - title
-  - subtitle
-  - date
-
-Activity:
-  Category
-    - About
-    - Lessons
-      - How is the activity marked as completed. (Have you read it, or have you had a call about it?)
-    - Colour
-
-    Lesson Detail:
-      {
-        0: {
-          "title": "Topic",
-          "icon": "ribbon.png",
-          "content": "Identify: Self-esteem",
-        }
-        1: {
-          "title": "Objective",
-          "icon": "bullseye.png",
-          "content": "To initiate discussion on Self Esteem and assess the current level of Mentees Self Esteem using the:” I am…” poem.",
-        }
-      }
-
-      Questions: Should we allow the content creator to choose and icon, or upload an icon. Further thoughts: Are images stored in the CMS and downloaded, or stored in the application.
-
-Call Scheduling:
-  - Mostly completed.
-
-Call Notes/ Feedback
-  - Just create a json format ourselves.
-
-  Questions:
-  - Are the notes optional? If so, how do we mark an activity as complete.
-
-Chat
-  - Messages
-
-Community:
-
-  DISCUSSIONS:
-  Comments module with likes built into it.
-
-  - List of topics
-    - Posts
-      - Mentor
-      - Title
-      - number of likes
-      - number of responses
-        - Replies
-          - number of likes
-  - Mentions vs. responding to a topic.
-  - Suggestions a new topic
-
-
-
-
-  MENTOR INDEX:
-
-  Questions:
-    - What is the lorem ipsum text, is that a status update or the last post?
-    - What is the date on the right hand side?
-    - Filters: How do they work.
-
-    - Mentor question/ New post mention/ Direct messaging.
-
-      - You can send a direct message to a mentor, and somehow they respond, where?
-
-      
+`> npm test`
