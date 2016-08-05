@@ -31,8 +31,8 @@ import ProfilePicture from 'src/onboarding/ProfilePicture';
 import CameraRoll from 'src/onboarding/CameraRoll';
 import profileSetupRoutes from 'src/onboarding/QuestionRoutes';
 
-// maybe we can keep these outside of memory if the user is already logged in?
-
+// TODO: How to import components dynamically based on user's logged in state.
+// https://github.com/reactjs/react-router/blob/master/docs/guides/DynamicRouting.md
 const App = function App() {
 
   return (

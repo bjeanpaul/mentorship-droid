@@ -46,7 +46,7 @@ export default class Button extends Component {
       <View
         style={[
           styles.button,
-          this.props.disabled ? styles.buttonIsDisabled : undefined,
+          this.props.disabled ? styles.buttonIsDisabled : null,
         ]}
       >
         <Text
