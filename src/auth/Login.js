@@ -1,60 +1,21 @@
-/* eslint-disable react/jsx-no-bind */
 import React, { PropTypes } from 'react';
 
-import { BaseView, Container, Toolbar, Text, TextInput, Button }
-  from 'src/components';
+import { BaseView, Toolbar, Text } from 'src/components';
 
-class Login extends React.Component {
+import LoginForm from './LoginForm';
 
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      username: '',
-      password: '',
-    };
-  }
-
-  render() {
-    return (
-      <BaseView>
-        <Toolbar title={this.props.headerTitle} />
-
-        <Container>
-          <TextInput
-            placeholder="Email"
-            value={this.state.username}
-            onChangeText={(username) => this.setState({ username })}
-          />
-          <TextInput
-            placeholder="Password"
-            value={this.state.password}
-            onChangeText={(password) => this.setState({ password })}
-          />
-        </Container>
-
-        <Button
-          onPress={() => this.props.handleLoginPress(
-            this.state.username,
-            this.state.password
-          )}
-          label={this.props.buttonLabel}
-        />
-
-        <Text>{this.props.errorMessage}</Text>
-
-      </BaseView>
-    );
-  }
-}
-Login.defaultProps = {
-  headerTitle: 'Log In',
-  buttonLabel: 'Log In',
-};
+const Login = (props) => (
+  <BaseView>
+    <Toolbar title="Log in" />
+    <LoginForm
+      {...props}
+      buttonLabel="Log in"
+    />
+    <Text>{props.errorMessage}</Text>
+  </BaseView>
+);
 Login.propTypes = {
-  headerTitle: PropTypes.string,
-  buttonLabel: PropTypes.string,
-  handleLoginPress: PropTypes.func.isRequired,
   isLoading: PropTypes.bool,
   errorMessage: PropTypes.string,
 };
