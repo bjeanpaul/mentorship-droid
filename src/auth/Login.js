@@ -13,16 +13,6 @@ class Login extends React.Component {
       username: '',
       password: '',
     };
-
-    this.handleLoginPress = this.handleLoginPress.bind(this);
-  }
-
-  handleLoginPress() {
-    this.props.handleLoginPress(
-      this.state.username,
-      this.state.password,
-      this.context
-    );
   }
 
   render() {
@@ -44,7 +34,10 @@ class Login extends React.Component {
         </Container>
 
         <Button
-          onPress={this.handleLoginPress}
+          onPress={() => this.props.handleLoginPress(
+            this.state.username,
+            this.state.password
+          )}
           label={this.props.buttonLabel}
         />
 
