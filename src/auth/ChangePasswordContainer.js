@@ -62,7 +62,7 @@ ChangePassword.propTypes = {
 
 const mapStateToProps = function mapStateToProps(state) {
   return {
-    authToken: state.mentor.authToken,
+    authToken: state.auth.authToken,
   };
 };
 

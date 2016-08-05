@@ -14,11 +14,9 @@ import profile from 'src/profile/Reducer';
 import schedule from 'src/schedule/Reducer';
 
 
-// this is just like a generic database thing; pew pew pew;
 const entities = (state = {}, action) => {
-  if (action.entities) {
-    console.log(merge(state, action.entities));
-    return merge(state, action.entities);
+  if (action.payload && action.payload.entities) {
+    return merge(state, action.payload.entities);
   }
   return state;
 };

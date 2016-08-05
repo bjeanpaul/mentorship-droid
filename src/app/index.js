@@ -4,8 +4,7 @@ import { Provider } from 'react-redux';
 import { Router, Route, StackRoute, IndexRoute } from 'react-router-native';
 
 import configureStore from 'src/stores/configureStore';
-const initialState = { auth: { authToken: 'cGV0ZXJwOjEyMw==' } };
-const store = configureStore(initialState);
+const store = configureStore();
 
 // we'll abstract this as well...
 const Container = ({ children }) => (
@@ -22,10 +21,11 @@ const NoMatch = () => (
 
 import Landing from 'src/app/Landing';
 import LoginContainer from 'src/auth/LoginContainer';
-import ResetPasswordContainer from 'src/auth/ResetPasswordContainer';
-
 import ActivationContainer from 'src/auth/ActivationContainer';
+
+import ResetPasswordContainer from 'src/auth/ResetPasswordContainer';
 import ChangePasswordContainer from 'src/auth/ChangePasswordContainer';
+
 import Hello from 'src/onboarding/Hello';
 import ProfilePicture from 'src/onboarding/ProfilePicture';
 import CameraRoll from 'src/onboarding/CameraRoll';
@@ -41,7 +41,7 @@ const App = function App() {
 
 
         <StackRoute path="/" component={Container}>
-          <IndexRoute component={() => <LoginContainer />} />
+          <IndexRoute component={() => <ActivationContainer />} />
           <Route path="login" component={Landing} />
           <Route path="activate" component={ActivationContainer} />
           <Route path="setup-password" component={ChangePasswordContainer} />

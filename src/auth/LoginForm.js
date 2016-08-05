@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
-
-import { Container, TextInput, Button } from 'src/components';
+import { View } from 'react-native';
+import { TextInput, Button } from 'src/components';
 
 
 class LoginForm extends React.Component {
@@ -14,13 +14,14 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <Container>
+      <View>
         <TextInput
           placeholder="Email"
           value={this.state.username}
           onChangeText={(username) => this.setState({ username })}
         />
         <TextInput
+          secureTextEntry
           placeholder="Password"
           value={this.state.password}
           onChangeText={(password) => this.setState({ password })}
@@ -33,7 +34,7 @@ class LoginForm extends React.Component {
           )}
           label={this.props.buttonLabel}
         />
-      </Container>
+      </View>
     );
   }
 }
@@ -43,3 +44,5 @@ LoginForm.propTypes = {
   buttonLabel: PropTypes.string.isRequired,
   handleLoginPress: PropTypes.func.isRequired,
 };
+
+export default LoginForm;
