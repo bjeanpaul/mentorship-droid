@@ -1,37 +1,36 @@
-/* eslint-disable no-undef, padded-blocks */
-jest.unmock('src/helpers/index');
-jest.unmock('src/stores/HTTPRequestMiddleware');
-jest.unmock('../Actions');
-jest.unmock('../Constants');
+/* eslint-disable no-undef */
+jest.unmock('../actions');
+jest.unmock('../constants');
 
 jest.unmock('redux-mock-store');
 jest.unmock('redux-thunk');
 
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import HTTPRequestMiddleware from 'src/stores/HTTPRequestMiddleware';
 
-import actionTypes from '../Constants';
-import { login } from '../Actions';
 
-const httpRequestMiddleware = new HTTPRequestMiddleware({
-  getAuthorizationHeaderValue: (state) => state.user.auth.authToken,
-});
-const mockStore = configureMockStore([httpRequestMiddleware.apply, thunk]);
+import {
+  AUTH_SET_TOKEN,
+} from '../constants';
 
+import { login } from '../actions';
+
+const mockStore = configureMockStore([thunk]);
 
 describe('actions', () => {
-
   const store = mockStore({ user: { auth: '' } });
-
   afterEach(() => {
     nock.cleanAll();
   });
 
   describe('login', () => {
-    it('dispatches MENTOR_AUTH_TOKEN_SET before logging in', () => {
+    it('dispatches AUTH_SET_TOKEN before logging in', () => {
       store.dispatch(login('username', 'password'));
-      expect(store.getActions()[0].type).toEqual(actionTypes.MENTOR_AUTH_TOKEN_SET);
+      expect(store.getActions()[0].type).toEqual(AUTH_SET_TOKEN);
+    });
+
+    it('generates a valid base64 encoded `username:password`', () => {
+      store.dispatch(login('username', 'password'));
       expect(store.getActions()[0].authToken).toEqual('dXNlcm5hbWU6cGFzc3dvcmQ=');
     });
 
