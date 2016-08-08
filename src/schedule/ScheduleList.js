@@ -84,32 +84,34 @@ const CallInfo = ({
   date,
   activity,
   style,
-}) => {
-  return (
-    <View style={[{
-      padding: 25,
-      paddingTop: 20,
-      paddingBottom: 20,
-    }, style]}>
-      <Text style={{
-        fontWeight: fontWeight.bold,
-        fontSize: fontSize.xSmall,
-        textAlign: 'left',
-        color: '#80979a',
-      }}>CALL SCHEDULED FOR:</Text>
-      <Text style={{
-          textAlign: 'left',
-          color: '#003035',
-          fontSize: fontSize.large,
-        }}>{date}</Text>
-      <Text style={{
-          textAlign: 'left',
-          color: '#003035',
-          fontSize: fontSize.large,
-        }}>{activity}</Text>
-    </View>
-  );
-}
+}) => (
+  <View style={[{
+    padding: 25,
+    paddingTop: 20,
+    paddingBottom: 20,
+  }, style]}
+  >
+    <Text style={{
+      fontWeight: fontWeight.bold,
+      fontSize: fontSize.xSmall,
+      textAlign: 'left',
+      color: '#80979a',
+    }}
+    >CALL SCHEDULED FOR:</Text>
+    <Text style={{
+      textAlign: 'left',
+      color: '#003035',
+      fontSize: fontSize.large,
+    }}
+    >{date}</Text>
+    <Text style={{
+      textAlign: 'left',
+      color: '#003035',
+      fontSize: fontSize.large,
+    }}
+    >{activity}</Text>
+  </View>
+);
 
 
 class ScheduleList extends React.Component {
@@ -125,9 +127,6 @@ class ScheduleList extends React.Component {
   renderCallInfo() {
     // TOOD: Filter calls; and grab the correct information;
     if (this.state.selectedDate) {
-
-      console.log('yoyooy')
-
       return (<CallInfo
         style={{ flex: 1 }}
         date="Thu, Apr 13, 2:00pm"
@@ -139,11 +138,11 @@ class ScheduleList extends React.Component {
 
 
   render() {
-
     return (
       <View style={{
         flex: 1,
-      }}>
+      }}
+      >
         <StatusBar backgroundColor="#003035" />
         <Calendar
           eventDates={this.props.calls}
@@ -155,9 +154,10 @@ class ScheduleList extends React.Component {
         />
 
         <View style={{
-          flex: .3,
+          flex: 0.3,
           backgroundColor: '#dfe5e6',
-        }}>
+        }}
+        >
           {this.renderCallInfo()}
         </View>
       </View>

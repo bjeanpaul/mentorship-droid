@@ -5,11 +5,10 @@ import actionTypes from './Constants';
 const profile = (
   state = {
     isLoading: false,
-    username: undefined,
+    username: null,
   },
   action
 ) => {
-
   switch (action.type) {
     case actionTypes.fetchRequest:
     case actionTypes.updateRequest:
@@ -21,7 +20,7 @@ const profile = (
       return {
         isLoading: false,
         username: action.entities.result[0],
-      }
+      };
     case actionTypes.fetchFailure:
     case actionTypes.updateFaiulure:
       return {

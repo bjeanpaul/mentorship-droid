@@ -1,13 +1,11 @@
 import React from 'react';
-import { View } from 'react-native'
+import { View } from 'react-native';
 import { Heading, Text } from 'src/components';
 import globalStyles from 'src/StyleSheet';
 
 const Header = ({
   title = '',
-  subtitle = '',
 }) => {
-
   let subtitleComponent;
   return (
     <View style={globalStyles.header}>

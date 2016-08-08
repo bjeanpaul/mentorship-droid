@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 
 import {
   View,
-  TextInput,
+  TextInput as RNTextInput,
 } from 'react-native';
-
 
 import globalStyles from '../StyleSheet';
 
+
 // TODO: Not a pure function because we want to add
 // some material design animations.
-class MyTextInput extends Component {
-
+class TextInput extends Component {
   render() {
     return (
       <View style={{
@@ -20,7 +19,7 @@ class MyTextInput extends Component {
         marginBottom: 24,
       }}
       >
-        <TextInput
+        <RNTextInput
           {...this.props}
           style={[globalStyles.textInput, this.props.style]}
           underlineColorAndroid="transparent"
@@ -29,36 +28,6 @@ class MyTextInput extends Component {
       </View>
     );
   }
-};
-
-export default MyTextInput;
-
-// TODO: Figure out how to animate the state changes
-// TODO: Try and remove the magic numbers.
-export class MultiLineTextInput extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      height: 0,
-    };
-  }
-
-  render() {
-    return (
-      <View style={styles.textInputContainer}>
-        <RNTextInput multiline enablesReturnKeyAutomatically
-          {...this.props}
-          underlineColorAndroid="transparent"
-          onChange={(event) => {
-            this.setState({
-              height: event.nativeEvent.contentSize.height + 8,
-            });
-          }}
-          style={[styles.textInput, { height: Math.max(28, this.state.height) }]}
-        />
-      </View>
-    );
-  }
-
 }
+
+export default TextInput;

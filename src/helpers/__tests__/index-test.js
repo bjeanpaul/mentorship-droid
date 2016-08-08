@@ -8,7 +8,6 @@ import {
 } from '../index';
 
 describe('Helpers', () => {
-
   it('should generate action constants for fetch, create, update and delete by default', () => {
     const actionTypes = generateActionTypes('test');
     expect(actionTypes).toEqual({

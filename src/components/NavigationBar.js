@@ -1,34 +1,33 @@
 import React from 'react';
 import { View } from 'react-native';
-
 import { Button } from 'src/components';
 
 const NavigationBar = ({
   nextTextLabel = 'NEXT',
   nextEnabled = false,
-  to = '',
-  backEnabled = true,
-}) => {
-  let backButton = <Button style={{ width: 56, marginRight: 16 }} label={'←'} />;
-  let nextButton = (
+}) => (
+  <View style={{ flexDirection: 'row' }}>
+    <Button
+      style={{
+        width: 56,
+        marginRight: 16,
+      }}
+      label={'←'}
+    />;
+
     <View style={{ flex: 1 }}>
       <Button
-        color={ nextEnabled ? undefined : '#999' }
-        style={{ flex: 1, marginLeft: 0 }}
+        color={nextEnabled ? null : '#999'}
+        style={{
+          flex: 1,
+          marginLeft: 0,
+        }}
         label={nextTextLabel}
       />
     </View>
-  );
-  return (
-    <View style={{
-      flexDirection: 'row',
-    }}
-    >
-      { backButton }
-      { nextButton }
-    </View>
-  );
-};
+  </View>
+);
+
 NavigationBar.propTypes = {
   nextTextLabel: React.PropTypes.string,
   nextEnabled: React.PropTypes.bool,

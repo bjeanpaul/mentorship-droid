@@ -74,12 +74,12 @@ export const generateActionCreators = function generateActionCreators({
     actionCreators.create = ({
       body,
       onSuccess,
-      onFailure
+      onFailure,
     }) => ({
       type: '--generated create--',
       types: createActionTypes,
       url,
-      requestOpts: {...requestOpts,
+      requestOpts: { ...requestOpts,
         method: 'POST',
         body: JSON.stringify(body),
       },
@@ -104,7 +104,7 @@ export const generateActionCreators = function generateActionCreators({
       type: '--generated update--',
       types: updateActionTypes,
       url: `${url}${id}/`,
-      requestOpts: {...requestOpts,
+      requestOpts: { ...requestOpts,
         method: 'PUT',
         body: JSON.stringify(body),
       },
@@ -113,7 +113,6 @@ export const generateActionCreators = function generateActionCreators({
       onFailure,
     });
   }
-
 
 
   return actionCreators;
