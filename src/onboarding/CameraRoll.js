@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, Image, CameraRoll, StyleSheet, ScrollView} from 'react-native';
-import { Link } from 'react-router-native';
 
 import { Text, Heading, Button } from 'src/components';
 
@@ -46,9 +45,11 @@ class CameraRollPicker extends Component {
       <ScrollView style={styles.container}>
         <View style={styles.imageGrid}>
           {this.state.photos.map((photo, index) =>
-            <Link key={`photo-${index}`} to={`${this.nextPath}?imageURI=${photo.uri}`}>
-              <Image source={{ uri: photo.uri }} style={styles.image} />
-            </Link>
+            <Image
+              key={`photo-${index}`}
+              source={{ uri: photo.uri }}
+              style={styles.image}
+            />
           )}
         </View>
       </ScrollView>
