@@ -2,36 +2,30 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Text from './Text';
 
+import { font, fontWeight } from './src/styleVars.js';
 
 const styles = StyleSheet.create({
   header: {
+    backgroundColor: '#eee',
   },
-  title: {
+  headerTitle: {
     marginTop: 23,
     marginBottom: 25,
     fontSize: 20,
-    fontFamily: 'Brandon Text_medium',
+    fontFamily: font.medium,
+    fontWeight: fontWeight.medium,
     color: '#003035',
   },
 });
 
-class Toolbar extends React.Component {
-
-  constructor(props, context) {
-    super(props, context);
-    this.title = props.title;
-  }
-
-  render() {
-    return (
-      <View style={styles.header}>
-        <Text style={styles.title}>{this.title}</Text>
-      </View>
-    );
-  }
-}
+// TODO: Add back, add subtitle.
+export const Toolbar = ({ title }) => (
+  <View style={styles.header}>
+    <Text style={styles.headerTitle}>{title}</Text>
+  </View>
+);
 Toolbar.propTypes = {
-  title: React.PropTypes.string,
+  title: React.PropTypes.string.isRequired,
 };
 
 export default Toolbar;
