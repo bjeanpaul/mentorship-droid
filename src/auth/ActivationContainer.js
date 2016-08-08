@@ -1,20 +1,19 @@
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
 
 import { login } from './actions';
 import Activation from './Activation';
 
-const mapDispatchToProps = function mapDispatchToProps(dispatch, { router }) {
+const mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     handleLoginPress: (username, password) => {
       dispatch(login(username, password, () => {
-        router.push('/setup-password');
+        // TODO: Transition to new view.
       }));
     },
   };
 };
 
-export default withRouter(connect(
+export default connect(
   (state) => state.auth,
   mapDispatchToProps
-)(Activation));
+)(Activation);

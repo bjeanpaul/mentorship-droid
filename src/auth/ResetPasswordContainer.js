@@ -1,22 +1,21 @@
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
 
 import { resetPassword } from './actions';
 import ResetPassword from './ResetPassword';
 
-const mapDispatchToProps = function mapDispatchToProps(dispatch, { router }) {
+const mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     handleNextPressed: () => {
     },
     handleResetPressed: (email) => {
       dispatch(resetPassword({ email }, () => {
-        router.push('done/');
+        // TODO: Transition to new view.
       }));
     },
   };
 };
 
-export default withRouter(connect(
+export default connect(
   (state) => state.auth.resetPassword,
   mapDispatchToProps
-)(ResetPassword));
+)(ResetPassword);
