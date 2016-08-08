@@ -55,7 +55,7 @@ describe('Helpers', () => {
       it('should generate `fetch`', () => {
         const actionTypes = generateActionTypes('test', ['fetch']);
         const actionCreators = generateActionCreators({
-          path: 'test-endpoint',
+          resourcePath: 'test-endpoint',
           actionTypes,
         });
 
@@ -74,12 +74,12 @@ describe('Helpers', () => {
       it('should generate `create`', () => {
         const actionTypes = generateActionTypes('test', ['create']);
         const actionCreators = generateActionCreators({
-          path: 'test-endpoint',
+          resourcePath: 'test-endpoint',
           actionTypes,
         });
 
         expect(actionCreators.create({
-          test: 'i am code.',
+          body: { test: 'i am code.' },
         })).toEqual({
           url: 'http://example.org/test-endpoint/',
           requestOpts: {
@@ -100,7 +100,7 @@ describe('Helpers', () => {
       it('should generate `update`', () => {
         const actionTypes = generateActionTypes('test', ['update']);
         const actionCreators = generateActionCreators({
-          path: 'test-endpoint',
+          resourcePath: 'test-endpoint',
           actionTypes,
         });
 

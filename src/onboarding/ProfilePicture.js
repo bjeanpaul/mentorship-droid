@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Image } from 'react-native';
-import { Link } from 'react-router-native';
 
 import { Header, Text, NavigationBar } from 'src/components';
 
@@ -25,18 +24,16 @@ const ProfilePicture = (props) => {
   return (
     <View style={{ flex: 1 }}>
       <Header title="Add a profile picture" />
-      <Link to={selectPicturePath}>
-        <View>
-          <Image
-            style={{
-              width: 100,
-              height: 100,
-            }}
-            source={imageSource}
-          />
-          <Text>Choose Photo</Text>
-        </View>
-      </Link>
+      <View>
+        <Image
+          style={{
+            width: 100,
+            height: 100,
+          }}
+          source={imageSource}
+        />
+        <Text>Choose Photo</Text>
+      </View>
       <NavigationBar nextEnabled={isNextEnabled}
         to={nextPath}
       />

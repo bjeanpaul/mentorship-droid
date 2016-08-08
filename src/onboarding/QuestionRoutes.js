@@ -1,5 +1,4 @@
 import React from 'react';
-import { Route } from 'react-router-native';
 
 import FormView from './FormView';
 import { TextInput } from 'src/components';
@@ -95,10 +94,5 @@ const questions = [
   },
 ];
 
-export default questions.map(question =>
-  <Route
-    key={question.path}
-    path={question.path}
-    component={() => <FormView {...question} /> }
-  />
-);
+
+// TODO: Create Dynamic Routes for this configuration.

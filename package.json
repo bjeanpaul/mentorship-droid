@@ -20,8 +20,6 @@
     "react-native": "^0.28.0",
     "react-native-calendar": "https://github.com/peterp/react-native-calendar/tarball/43ef42c6a5819377a4f6fd32f2a3f1cce73ab735",
     "react-redux": "^4.4.2",
-    "react-router": "^2.5.0",
-    "react-router-native": "2.0.0-alpha.0",
     "redux": "^3.4.0",
     "redux-thunk": "^2.0.1"
   },
