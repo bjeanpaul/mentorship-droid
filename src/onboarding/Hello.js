@@ -2,8 +2,6 @@ import React, {
   PropTypes,
 } from 'react';
 
-import { Link } from 'react-router-native';
-
 import {
   View,
   Image,
@@ -16,7 +14,6 @@ import { fontSize } from 'src/StyleSheet';
 
 const Hello = ({
   name,
-  nextPath = '/profile-picture',
 }) => (
   <View style={{ flex: 1 }}>
     <Image source={require('app/assets/Profile.png')} />
@@ -25,9 +22,7 @@ const Hello = ({
       Help build a vibrant mentor community. Complete your profile to allow
       others learn more about you.
     </Text>
-    <Link to={nextPath}>
-      <Button label="Complete Profile" />
-    </Link>
+    <Button label="Complete Profile" />
   </View>
 );
 Hello.propTypes = {
