@@ -1,15 +1,13 @@
 import React from 'react';
 import { View, Image } from 'react-native';
-
 import { Header, Text, NavigationBar } from 'src/components';
+import IMAGE_PROFILE_ADD from 'app/assets/Profile_Add.png';
 
 
 const ProfilePicture = (props) => {
-
   const {
     location,
     nextPath = '/occupation',
-    selectPicturePath = '/profile-picture-camera-roll',
   } = props;
 
   let imageSource;
@@ -18,7 +16,7 @@ const ProfilePicture = (props) => {
     isNextEnabled = true;
     imageSource = { uri: location.query.imageURI };
   } else {
-    imageSource = require('app/assets/Profile_Add.png');
+    imageSource = IMAGE_PROFILE_ADD;
   }
 
   return (
@@ -34,7 +32,8 @@ const ProfilePicture = (props) => {
         />
         <Text>Choose Photo</Text>
       </View>
-      <NavigationBar nextEnabled={isNextEnabled}
+      <NavigationBar
+        nextEnabled={isNextEnabled}
         to={nextPath}
       />
     </View>

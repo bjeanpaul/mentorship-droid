@@ -104,7 +104,5 @@ describe('RemoteOperationMiddleware', () => {
     store.dispatch(successAction).then(() => {
       done();
     });
-  })
-
-
+  });
 });

@@ -33,7 +33,7 @@ const uploadImage = (path, onSuccess, onFailure) => (dispatch, getState) => {
   });
 
   const request = new XMLHttpRequest();
-  request.onreadystatechange = (e) => {
+  request.onreadystatechange = () => {
     if (request.readyState !== 4) {
       return;
     }
@@ -45,7 +45,6 @@ const uploadImage = (path, onSuccess, onFailure) => (dispatch, getState) => {
         onSuccess();
       }
     } else {
-      console.warn('error uploading image', e);
       dispatch({
         type: actionTypes.image.updateFailure,
       });

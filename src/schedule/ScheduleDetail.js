@@ -9,8 +9,7 @@ import {
 
 import moment from 'moment';
 
-import { BaseView, Container, Text, TextInput, Toolbar, Button }
-  from 'src/components';
+import { BaseView, Container, Text, Toolbar, Button } from 'src/components';
 
 
 const styles = StyleSheet.create({
@@ -38,10 +37,12 @@ const styles = StyleSheet.create({
 });
 
 const Label = ({ title }) => <Text style={styles.label}>{ title }</Text>;
+
 const Separator = () => <View style={styles.separator} />;
+
 const Value = ({ value, placeholder }) => (
-  <Text style={[styles.value, value ? undefined : styles.valueIsRequired ]}>
-    { value || placeholder }
+  <Text style={[styles.value, value ? null : styles.valueIsRequired]}>
+    {value || placeholder}
   </Text>
 );
 
@@ -56,14 +57,14 @@ class ScheduleDetail extends React.Component {
       date: this.props.date,
       time: this.props.time,
       activity: this.props.activity,
-    }
+    };
 
     this.handleDatePress = this.handleDatePress.bind(this);
     this.handleTimePress = this.handleTimePress.bind(this);
   }
 
   async handleDatePress() {
-    const {action, year, month, day} = await DatePickerAndroid.open({
+    const { action, year, month, day } = await DatePickerAndroid.open({
       date: this.state.date ? moment(this.state.date).toDate() : new Date(),
       minDate: new Date(),
     });
@@ -73,7 +74,7 @@ class ScheduleDetail extends React.Component {
   }
 
   async handleTimePress() {
-    const {action, hour, minute} = await TimePickerAndroid.open({ is24Hour: true });
+    const { action, hour, minute } = await TimePickerAndroid.open({ is24Hour: true });
     if (action === TimePickerAndroid.timeSetAction) {
       this.setState({ time: `${hour}:${minute}` });
     }
@@ -99,7 +100,7 @@ class ScheduleDetail extends React.Component {
               </View>
             </TouchableNativeFeedback>
             <TouchableNativeFeedback onPress={this.handleTimePress}>
-              <View style={{ flex: .7 }}>
+              <View style={{ flex: 0.7 }}>
                 <Label title="TIME" />
                 <Value value={this.state.time} placeholder="Add time" />
               </View>
@@ -111,20 +112,22 @@ class ScheduleDetail extends React.Component {
               <Label title="ACTIVITY" />
               <Value
                 value={this.state.activity}
-                placeholder="Add Activity (Optional)" />
+                placeholder="Add Activity (Optional)"
+              />
             </View>
           </TouchableNativeFeedback>
           <Separator />
         </Container>
 
         <Button
-          label='SCHEDULE CALL'
-          disabled={this.state.date === undefined ||
-            this.state.time === undefined}
+          label="SCHEDULE CALL"
+          disabled={
+            typeof this.state.date === 'undefined' || typeof this.state.time === 'undefined'
+          }
         />
       </BaseView>
     );
-  };
+  }
 }
 
 export default ScheduleDetail;

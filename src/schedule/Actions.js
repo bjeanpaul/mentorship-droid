@@ -11,12 +11,10 @@ const scheduleSchema = new Schema('schedule');
 export default generateActionCreators({
   resourcePath: 'schedule',
   actionTypes,
-  normalizeJSON: ({ json, response }) => {
-    return {
-      json: json.results ?
-        normalize(json.results, arrayOf(scheduleSchema))
-        : normalize(json, scheduleSchema),
-      response,
-    }
-  },
+  normalizeJSON: ({ json, response }) => ({
+    json: json.results
+      ? normalize(json.results, arrayOf(scheduleSchema))
+      : normalize(json, scheduleSchema),
+    response,
+  }),
 });

@@ -1,9 +1,7 @@
-import React, { Component, PropTypes } from 'react';
-import { View, Image, TouchableHighlight } from 'react-native';
+import React, { Component } from 'react';
 import Camera from 'react-native-camera';
-
-import { Text, Button } from 'src/components';
-
+import { View, Image, TouchableHighlight } from 'react-native';
+import { Button } from 'src/components';
 
 
 class CameraCapture extends Component {
@@ -12,27 +10,35 @@ class CameraCapture extends Component {
     super(props);
 
     this.state = {
-      capturedImagePath: undefined,
+      capturedImagePath: null,
     };
   }
 
   takePicture() {
-    this.camera.capture()
+    return this.camera.capture()
       .then((data) => {
-
-
         this.setState({
           capturedImagePath: data.path,
         });
-      })
-      .catch((error) => {
       });
   }
 
   renderPreview() {
     return (
-      <View style={{ flex: 1, backgroundColor: 'orange' }}>
-        <Image style={{ width: 200, height: 200, borderWidth: 1, borderColor: 'red'}} />
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: 'orange',
+        }}
+      >
+        <Image
+          style={{
+            width: 200,
+            height: 200,
+            borderWidth: 1,
+            borderColor: 'red',
+          }}
+        />
       </View>
     );
   }
@@ -40,7 +46,7 @@ class CameraCapture extends Component {
   renderCapture() {
     return (
       <View style={{ flex: 1 }}>
-        <View style={{ flex: 1}}>
+        <View style={{ flex: 1 }}>
           <Camera
             ref={ camera => { this.camera = camera; }}
             style={{ flex: 1 }}
@@ -55,7 +61,6 @@ class CameraCapture extends Component {
   }
 
   render() {
-
     if (this.state.capturedImagePath) {
       return this.renderPreview();
     } else {

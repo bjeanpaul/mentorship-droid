@@ -3,9 +3,6 @@ import {
   AUTH_LOGIN_REQUEST,
   AUTH_LOGIN_SUCCESS,
   AUTH_LOGIN_FAILURE,
-  AUTH_PASSWORD_RESET_REQUEST,
-  AUTH_PASSWORD_RESET_SUCCESS,
-  AUTH_PASSWORD_RESET_FAILURE,
 } from './constants';
 
 
@@ -31,7 +28,11 @@ const auth = (
       };
 
     case AUTH_SET_TOKEN:
-      return { ...state, authToken: action.authToken };
+      return {
+        ...state,
+        authToken: action.authToken,
+      };
+
     case AUTH_LOGIN_SUCCESS:
       return {
         ...state,
