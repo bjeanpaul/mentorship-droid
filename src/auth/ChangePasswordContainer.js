@@ -11,7 +11,7 @@ import {
 } from 'src/components';
 
 
-import { resetPassword } from './Actions';
+import { resetPassword } from './actions';
 
 const ChangePassword = (
   {
@@ -62,7 +62,7 @@ ChangePassword.propTypes = {
 
 const mapStateToProps = function mapStateToProps(state) {
   return {
-    authToken: state.mentor.authToken,
+    authToken: state.auth.authToken,
   };
 };
 

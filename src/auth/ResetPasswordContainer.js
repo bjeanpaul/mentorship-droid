@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
-import { resetPassword } from './Actions';
+import { resetPassword } from './actions';
 import ResetPassword from './ResetPassword';
 
 const mapDispatchToProps = function mapDispatchToProps(dispatch, { router }) {
