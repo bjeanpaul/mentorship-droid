@@ -18,7 +18,7 @@ import { login } from '../actions';
 const mockStore = configureMockStore([thunk]);
 
 describe('actions', () => {
-  const store = mockStore({ user: { auth: '' } });
+  const store = mockStore({ auth: {} });
   afterEach(() => {
     nock.cleanAll();
   });
