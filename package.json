@@ -6,7 +6,8 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "emulator": "emulator @reactnative",
     "emulator:logs": "adb logcat *:S ReactNative:V ReactNativeJS:V",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint index.android.js src/**/*.js"
   },
   "dependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
