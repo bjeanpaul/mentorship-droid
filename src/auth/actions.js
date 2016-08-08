@@ -35,7 +35,6 @@ export const login = (email, password, onSuccess) => (dispatch, getState) => {
     if (entities.result.length === 0) {
       return dispatch({ type: AUTH_LOGIN_FAILURE });
     }
-
     // TODO: How do we deal with side affects?
     onSuccess();
     return dispatch({

@@ -36,8 +36,12 @@ describe('actions', () => {
 
     it('calls `onSuccess` when completed', (done) => {
       nock('http://example.org')
-      .get('/mentor/')
-      .reply(200, {});
+      .get('/profile/?email=username')
+      .reply(200, {
+        results: [
+          { name: 'Rodger' },
+        ],
+      });
 
       store.dispatch(login('username', 'password', () => {
         done();
