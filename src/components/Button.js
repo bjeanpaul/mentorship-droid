@@ -1,16 +1,9 @@
-import React, {
-  Component,
-  PropTypes,
-} from 'react';
-
-import {
-  TouchableNativeFeedback,
-  View,
-  StyleSheet,
-} from 'react-native';
-
+import React, { PropTypes } from 'react';
+import { TouchableNativeFeedback, View, StyleSheet } from 'react-native';
 
 import Text from 'Text';
+import { font, fontWeight } from 'src/app/styles';
+
 
 const styles = StyleSheet.create({
   button: {
@@ -21,61 +14,42 @@ const styles = StyleSheet.create({
     marginLeft: 16,
     marginRight: 16,
   },
-  buttonIsDisabled: {
+  buttonDisabled: {
     backgroundColor: '#dfe5e6',
   },
-  buttonText: {
+  label: {
     color: '#fff',
-    fontFamily: 'Brandon Text',
+    fontFamily: font.brandonTextBold,
     fontSize: 13,
-    fontWeight: 'bold',
+    fontWeight: fontWeight.bold,
+    letterSpacing: 1,
     marginTop: 15,
     marginBottom: 17,
-    letterSpacing: 1,
   },
 });
 
-export default class Button extends Component {
-
-  setNativeProps(nativeProps) {
-    this._root.setNativeProps(nativeProps);
-  }
-
-  render() {
-    let button = (
-      <View
-        style={[
-          styles.button,
-          this.props.disabled ? styles.buttonIsDisabled : null,
-        ]}
-      >
-        <Text
-          style={[
-            styles.buttonText,
-          ]}
-        >
-          {this.props.label.toUpperCase()}
-        </Text>
-      </View>
-    );
-    if (this.props.onPress && !this.props.disabled) {
-      button = (
-        <TouchableNativeFeedback onPress={this.props.onPress}>
-          {button}
-        </TouchableNativeFeedback>
-      );
-    }
-
-    return (
-      <View ref={component => { this._root = component; }}>
+const Button = ({
+  label,
+  disabled,
+  handlePress,
+}) => {
+  let button = (
+    <View style={[styles.button, disabled && styles.buttonDisabled]}>
+      <Text style={styles.label}>{label.toUpperCase()}</Text>
+    </View>
+  );
+  if (!disabled) {
+    button = (
+      <TouchableNativeFeedback onPress={handlePress}>
         {button}
-      </View>
+      </TouchableNativeFeedback>
     );
   }
-}
+  return button;
+};
 Button.propTypes = {
   label: PropTypes.string.isRequired,
-  style: PropTypes.object,
-  onPress: PropTypes.func,
+  handlePress: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
 };
+export default Button;

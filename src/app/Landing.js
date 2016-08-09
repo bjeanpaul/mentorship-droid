@@ -1,47 +1,58 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Heading, Button, Text } from 'src/components';
+import { View, Image, StyleSheet } from 'react-native';
+import { BaseView, Text, Link, Button } from 'src/components';
 
+
+const IMG_LANDING = require('app/assets/Landing.png');
+
+const styles = StyleSheet.create({
+  image: {
+    flex: 0.6,
+    overflow: 'hidden',
+    alignItems: 'center',
+  },
+  getStarted: {
+    padding: 15,
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
+  },
+  getStartedHeading: {
+    fontSize: 20,
+    marginBottom: 15,
+  },
+  login: {
+    padding: 15,
+    backgroundColor: 'rgba(42, 45, 48, 0.05)',
+    justifyContent: 'center',
+  },
+  loginText: {
+    color: '#9fb1b3',
+    textAlign: 'center',
+  },
+});
 
 const Landing = () => (
-  <View
-    style={{
-      backgroundColor: '#dfe5e6',
-      flex: 1,
-    }}
-  >
-    <View style={{ flex: 1 }} />
-    <Heading>
-      This is a short, but sweet, description of the application.
-    </Heading>
-
-    <Button
-      style={{
-        marginTop: 20,
-        marginBottom: 20,
-      }}
-
-      label="Get Started"
-    />
-
-    <View
-      style={{
-        height: 48,
-        backgroundColor: 'rgba(42, 45, 48, 0.05)',
-        justifyContent: 'center',
-      }}
-    >
-
-      <Text
-        style={{
-          color: '#9fb1b3',
-          textAlign: 'center',
+  <BaseView>
+    <View style={styles.image}>
+      <Image resizeMode="stretch" source={IMG_LANDING} />
+    </View>
+    <View style={styles.getStarted}>
+      <Text style={styles.getStartedHeading}>
+        This is a short, but sweet, description of the application.
+      </Text>
+      <Button
+        label="Get Started"
+        handlePress={() => {
+          // TODO: Transition
         }}
-      >
-        Already have an account? <Text style={{ color: 'rgba(246, 111, 63, 0.9)' }}>Log in.</Text>
+      />
+    </View>
+    <View style={styles.login}>
+      <Text style={styles.loginText}>
+        Already have an account?
+        <Link> Log in.</Link>
       </Text>
     </View>
-  </View>
+  </BaseView>
 );
 
 export default Landing;

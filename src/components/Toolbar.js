@@ -1,16 +1,23 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import Text from './Text';
+import { View, Image, StyleSheet } from 'react-native';
 
-import { font, fontWeight } from './src/styleVars.js';
+import Text from './Text';
+import { font, fontWeight } from 'src/app/styles.js';
+const IMG_BACK = require('app/assets/Back_Gray.png');
+
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: '#eee',
+    padding: 16,
+    paddingBottom: 11,
+    paddingTop: 24,
+    marginBottom: 27,
+  },
+  headerBackButton: {
+    width: 24,
+    height: 24,
   },
   headerTitle: {
-    marginTop: 23,
-    marginBottom: 25,
     fontSize: 20,
     fontFamily: font.medium,
     fontWeight: fontWeight.medium,
@@ -18,9 +25,11 @@ const styles = StyleSheet.create({
   },
 });
 
-// TODO: Add back, add subtitle.
+// TODO: Add subtitle
+// TODO: Add back button functionality
 export const Toolbar = ({ title }) => (
   <View style={styles.header}>
+    <Image style={styles.headerBackButton} source={IMG_BACK} />
     <Text style={styles.headerTitle}>{title}</Text>
   </View>
 );

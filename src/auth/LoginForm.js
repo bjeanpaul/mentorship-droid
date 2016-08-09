@@ -16,19 +16,22 @@ class LoginForm extends React.Component {
     return (
       <View>
         <TextInput
-          placeholder="Email"
+          autoCapitalize="none"
+          autoCorrect={false}
+          keyboardType="email-address"
+          label="Email"
           value={this.state.username}
           onChangeText={(username) => this.setState({ username })}
         />
         <TextInput
           secureTextEntry
-          placeholder="Password"
+          label="Password"
           value={this.state.password}
           onChangeText={(password) => this.setState({ password })}
         />
 
         <Button
-          onPress={() => this.props.handleLoginPress(
+          handlePress={() => this.props.handleLoginPress(
             this.state.username,
             this.state.password
           )}

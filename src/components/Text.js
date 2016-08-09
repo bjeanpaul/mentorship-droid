@@ -1,15 +1,28 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text as RNText, StyleSheet } from 'react-native';
+
+import { font } from 'src/app/styles';
 
 
-import globalStyles from 'src/StyleSheet';
+const styles = StyleSheet.create({
+  text: {
+    fontFamily: font.brandonText,
+    fontSize: 13,
+    textAlign: 'center',
+  },
+});
 
-const MyText = (props) => (
-    <Text {...props}
-      style={[globalStyles.text, props.style]}
-    >
-      {props.children}
-    </Text>
-);
+const Text = (props) =>
+  <RNText
+    {...props}
+    style={[styles.text, props.style]}
+  >
+    {props.children}
+  </RNText>;
 
-export default MyText;
+Text.propTypes = {
+  children: React.PropTypes.node,
+  style: React.PropTypes.any,
+};
+
+export default Text;
