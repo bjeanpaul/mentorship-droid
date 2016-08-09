@@ -1,11 +1,11 @@
-/* eslint-disable react/jsx-no-bind */
 import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 
 import {
-  Header,
-  Text,
+  BaseView,
+  Toolbar,
   TextInput,
+  Text,
   Button,
 } from 'src/components';
 
@@ -13,36 +13,37 @@ class ResetPassword extends React.Component {
 
   constructor(props) {
     super(props);
-    this.props = props;
     this.state = {
-      email: 'peter.pistorius@gmail.com',
+      email: '',
     };
   }
 
   render() {
     return (
-      <View>
-        <Header title="Reset Password" />
+      <BaseView>
+        <Toolbar title="Send password reset" />
         <TextInput
-          placeholder="Email"
+          autoCapitalize="none"
+          autoCorrect={false}
+          keyboardType="email-address"
+          label="Email"
           value={this.state.email}
           onChangeText={(email) => this.setState({ email })}
         />
 
         <Button
-          onPress={() => { this.props.handleResetPressed(this.state.email); }}
           label="Reset Password"
+          handlePress={() => this.props.handleResetPressed(this.state.email)}
         />
         <Text>{this.props.errorMessage}</Text>
 
-      </View>
+      </BaseView>
     );
   }
 
 }
 ResetPassword.propTypes = {
   handleResetPressed: PropTypes.func.isRequired,
-  handleNextPressed: PropTypes.func.isRequired,
   isLoading: PropTypes.bool,
   isDone: PropTypes.bool,
   errorMessage: PropTypes.string,
