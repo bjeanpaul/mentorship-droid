@@ -4,12 +4,12 @@ import { Provider } from 'react-redux';
 import configureStore from 'src/stores/configureStore';
 const store = configureStore();
 
-import ResetPasswordContainer from 'src/auth/ResetPasswordContainer';
+import Component from 'src/profile/Hello';
 
 const App = function App() {
   return (
     <Provider store={store}>
-      <ResetPasswordContainer />
+      <Component />
     </Provider>
   );
 };

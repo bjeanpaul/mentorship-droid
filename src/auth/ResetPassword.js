@@ -1,13 +1,7 @@
 import React, { PropTypes } from 'react';
-import { View } from 'react-native';
 
-import {
-  BaseView,
-  Toolbar,
-  TextInput,
-  Text,
-  Button,
-} from 'src/components';
+import { BaseView, Toolbar, TextInput, Text, Button } from 'src/components';
+
 
 class ResetPassword extends React.Component {
 

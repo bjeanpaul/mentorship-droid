@@ -9,9 +9,13 @@ const styles = StyleSheet.create({
   },
 });
 
-const BaseView = ({ children }) =>
-  <View style={styles.view}>{children}</View>;
+const BaseView = ({
+  children,
+  style,
+}) => <View style={[styles.view, style]}>{children}</View>;
+
 BaseView.propTypes = {
   children: React.PropTypes.node,
+  style: React.PropTypes.any,
 };
 export default BaseView;
