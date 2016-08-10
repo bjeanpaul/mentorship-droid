@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 
 import { BaseView, Text, Button } from 'src/components';
-import { font, fontWeight } from 'src/app/styles';
+import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 
 
 const IMG_PROFILE = require('app/assets/Profile.png');
@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
     width: 120,
   },
   welcome: {
-    fontFamily: font.brandonTextMedium,
-    fontWeight: fontWeight.medium,
+    fontFamily: FONT.MEDIUM,
+    fontWeight: FONT_WEIGHT.MEDIUM,
     fontSize: 32,
     color: '#022428',
   },
