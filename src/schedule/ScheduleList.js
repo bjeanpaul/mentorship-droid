@@ -1,14 +1,20 @@
-import React from 'react';
-import {
-  View,
-  StatusBar,
-} from 'react-native';
+import React, { PropTypes } from 'react';
+import { View, StatusBar, StyleSheet } from 'react-native';
 import Calendar from 'react-native-calendar';
 
-import { Text } from 'src/components';
-import { fontSize, fontWeight } from 'src/StyleSheet';
+import { Label, Text } from 'src/components';
+import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 
-const styles = {
+const styles = StyleSheet.create({
+  callInfoContainer: {
+    backgroundColor: '#dfe5e6',
+    padding: 24,
+  },
+  callInfoText: {
+    textAlign: 'left',
+    color: '#003035',
+    fontSize: 18,
+  },
   calendarContainer: {
     flex: 1,
   },
@@ -17,18 +23,16 @@ const styles = {
     backgroundColor: '#003035',
   },
   controlButton: {
-    marginLeft: 24,
-    marginRight: 24,
   },
   controlButtonText: {
-    fontFamily: 'Brandon Text',
+    fontFamily: FONT.REGULAR,
+    fontSize: 24,
     color: '#fff',
-    fontSize: fontSize.xLarge,
   },
   title: {
-    fontFamily: 'Brandon Text',
-    fontSize: fontSize.xLarge,
-    fontWeight: fontWeight.medium,
+    fontFamily: FONT.MEDIUM,
+    fontWeight: FONT_WEIGHT.MEDIUM,
+    fontSize: 20,
     textAlign: 'center',
     color: '#fff',
   },
@@ -38,12 +42,12 @@ const styles = {
     justifyContent: 'center',
   },
   day: {
-    fontFamily: 'Brandon Text',
-    fontSize: fontSize.small,
+    fontFamily: FONT.REGULAR,
+    fontSize: 15,
   },
   weekendDayText: {
-    fontFamily: 'Brandon Text',
-    fontSize: fontSize.small,
+    fontFamily: FONT.REGULAR,
+    fontSize: 15,
     color: '#c0cbcc',
   },
   monthContainer: {
@@ -60,13 +64,13 @@ const styles = {
     backgroundColor: '#003035',
   },
   dayHeading: { // day of the week, above the calendar
-    fontFamily: 'Brandon Text',
-    fontSize: fontSize.small,
+    fontFamily: FONT.REGULAR,
+    fontSize: 15,
     color: '#80979a',
   },
   weekendHeading: { // day of the week, weekend baby
-    fontFamily: 'Brandon Text',
-    fontSize: fontSize.small,
+    fontFamily: FONT.REGULAR,
+    fontSize: 15,
     color: '#80979a',
   },
   eventIndicator: {
@@ -78,64 +82,38 @@ const styles = {
   currentDayCircle: {
     backgroundColor: '#97c13c',
   },
-};
+});
 
 const CallInfo = ({
   date,
-  activity,
-  style,
+  activityName,
 }) => (
-  <View style={[{
-    padding: 25,
-    paddingTop: 20,
-    paddingBottom: 20,
-  }, style]}
-  >
-    <Text style={{
-      fontWeight: fontWeight.bold,
-      fontSize: fontSize.xSmall,
-      textAlign: 'left',
-      color: '#80979a',
-    }}
-    >CALL SCHEDULED FOR:</Text>
-    <Text style={{
-      textAlign: 'left',
-      color: '#003035',
-      fontSize: fontSize.large,
-    }}
-    >{date}</Text>
-    <Text style={{
-      textAlign: 'left',
-      color: '#003035',
-      fontSize: fontSize.large,
-    }}
-    >{activity}</Text>
+  <View style={styles.callInfoContainer}>
+    <Label title="CALL SCHEDULED FOR:" />
+    <Text style={styles.callInfoText}>{date}</Text>
+    <Text style={styles.callInfoText}>{activityName}</Text>
   </View>
 );
+CallInfo.propTypes = {
+  date: PropTypes.string,
+  activityName: PropTypes.string,
+};
 
-
+// TODO: Default state when call isn't selectedDate
+// TODO: Abstract away the calendar view into another component.
+// TODO: Define the shape of the calls array objects.
 class ScheduleList extends React.Component {
-
 
   constructor(props) {
     super(props);
     this.props = props;
-    this.state = {};
-    this.renderCallInfo = this.renderCallInfo.bind(this);
+    this.state = {
+      selectedDate: null,
+    };
   }
 
   renderCallInfo() {
-    // TOOD: Filter calls; and grab the correct information;
-    if (this.state.selectedDate) {
-      return (<CallInfo
-        style={{ flex: 1 }}
-        date="Thu, Apr 13, 2:00pm"
-        activity="Find out who you are and what you do"
-      />);
-    }
-    return <View />;
   }
-
 
   render() {
     return (
@@ -153,16 +131,17 @@ class ScheduleList extends React.Component {
           customStyle={styles}
         />
 
-        <View style={{
-          flex: 0.3,
-          backgroundColor: '#dfe5e6',
-        }}
-        >
-          {this.renderCallInfo()}
-        </View>
+        <CallInfo
+          date="Thu, Apr 13, 2:00pm"
+          activityName="Find out who you are and what you do"
+        />
+
       </View>
     );
   }
 }
+ScheduleList.propTypes = {
+  calls: React.propTypes.array,
+};
 
 export default ScheduleList;

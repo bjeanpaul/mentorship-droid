@@ -62,12 +62,16 @@ class ScheduleDetail extends React.Component {
       minDate: new Date(),
     });
     if (action === DatePickerAndroid.dateSetAction) {
-      this.setState({ date: moment(new Date(year, month, day)).format('YYYY-MM-DD') });
+      this.setState({
+        date: moment(new Date(year, month, day)).format('YYYY-MM-DD'),
+      });
     }
   }
 
   async handleTimePress() {
-    const { action, hour, minute } = await TimePickerAndroid.open({ is24Hour: true });
+    const { action, hour, minute } = await TimePickerAndroid.open({
+      is24Hour: true,
+    });
     if (action === TimePickerAndroid.timeSetAction) {
       this.setState({ time: `${hour}:${minute}` });
     }
@@ -77,7 +81,7 @@ class ScheduleDetail extends React.Component {
     let dateValue;
     if (this.state.date) {
       dateValue = moment(this.state.date)
-        .format('dddd, Do MMMM YYYY');
+        .format('ddd, DD MMM YY');
     }
 
     return (
@@ -86,13 +90,13 @@ class ScheduleDetail extends React.Component {
 
           <View style={styles.fieldset}>
             <TouchableNativeFeedback onPress={this.handleDatePress}>
-              <View>
+              <View style={{ flex: 0.6 }}>
                 <Label title="DATE" />
                 <Value value={dateValue} placeholder="Add date" />
               </View>
             </TouchableNativeFeedback>
             <TouchableNativeFeedback onPress={this.handleTimePress}>
-              <View>
+              <View style={{ flex: 0.4 }}>
                 <Label title="TIME" />
                 <Value value={this.state.time} placeholder="Add time" />
               </View>
