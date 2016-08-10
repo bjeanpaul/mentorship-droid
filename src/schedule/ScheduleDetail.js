@@ -1,56 +1,55 @@
 import moment from 'moment';
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { View, DatePickerAndroid, TimePickerAndroid, TouchableNativeFeedback,
   StyleSheet } from 'react-native';
 
-import { BaseView, Container, Text, Toolbar, Button } from 'src/components';
-
+import { BaseView, Text, Label, Toolbar, Button } from 'src/components';
 
 const styles = StyleSheet.create({
-  label: {
-    textAlign: 'left',
-    color: '#80979a',
-    fontSize: 12,
-    marginBottom: 9,
-    fontWeight: 'bold',
+  fieldset: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginLeft: 24,
+    marginRight: 24,
   },
   value: {
     textAlign: 'left',
     color: '#003035',
     fontSize: 20,
   },
-  valueIsRequired: {
+  valueRequired: {
     color: '#f77040',
   },
   separator: {
+    margin: 24,
     borderBottomWidth: 1,
     borderBottomColor: '#e5e5e5',
-    marginTop: 50,
-    marginBottom: 44,
   },
 });
 
-const Label = ({ title }) => <Text style={styles.label}>{ title }</Text>;
 
 const Separator = () => <View style={styles.separator} />;
 
 const Value = ({ value, placeholder }) => (
-  <Text style={[styles.value, value ? null : styles.valueIsRequired]}>
+  <Text style={[styles.value, !value && styles.valueRequired]}>
     {value || placeholder}
   </Text>
 );
+Value.propTypes = {
+  value: PropTypes.string,
+  placeholder: PropTypes.string,
+};
 
 
 class ScheduleDetail extends React.Component {
 
   constructor(props) {
     super(props);
-    this.props = props;
 
     this.state = {
-      date: this.props.date,
-      time: this.props.time,
-      activity: this.props.activity,
+      date: this.props.initialDate,
+      time: this.props.initialTime,
+      activity: this.props.initialActivity,
     };
 
     this.handleDatePress = this.handleDatePress.bind(this);
@@ -85,43 +84,53 @@ class ScheduleDetail extends React.Component {
       <BaseView>
         <Toolbar title="Schedule Call" />
 
-        <Container>
-          <View style={{ flexDirection: 'row' }}>
+          <View style={styles.fieldset}>
             <TouchableNativeFeedback onPress={this.handleDatePress}>
-              <View style={{ flex: 1 }}>
+              <View>
                 <Label title="DATE" />
                 <Value value={dateValue} placeholder="Add date" />
               </View>
             </TouchableNativeFeedback>
             <TouchableNativeFeedback onPress={this.handleTimePress}>
-              <View style={{ flex: 0.7 }}>
+              <View>
                 <Label title="TIME" />
                 <Value value={this.state.time} placeholder="Add time" />
               </View>
             </TouchableNativeFeedback>
           </View>
           <Separator />
-          <TouchableNativeFeedback onPress={this.handleDatePress}>
-            <View>
-              <Label title="ACTIVITY" />
-              <Value
-                value={this.state.activity}
-                placeholder="Add Activity (Optional)"
-              />
-            </View>
-          </TouchableNativeFeedback>
+
+          <View style={styles.fieldset}>
+            <TouchableNativeFeedback onPress={this.handleDatePress}>
+              <View>
+                <Label title="ACTIVITY" />
+                <Value
+                  value={this.state.activity}
+                  placeholder="Add Activity (Optional)"
+                />
+              </View>
+            </TouchableNativeFeedback>
+          </View>
           <Separator />
-        </Container>
 
         <Button
-          label="SCHEDULE CALL"
+          label="Schedule Call"
+          handlePress={() => {
+            // TODO: Hookup action.
+          }}
           disabled={
-            typeof this.state.date === 'undefined' || typeof this.state.time === 'undefined'
+            typeof this.state.date === 'undefined'
+            || typeof this.state.time === 'undefined'
           }
         />
       </BaseView>
     );
   }
 }
+ScheduleDetail.propTypes = {
+  initialDate: PropTypes.string,
+  initialTime: PropTypes.string,
+  initialActivity: PropTypes.object,
+};
 
 export default ScheduleDetail;

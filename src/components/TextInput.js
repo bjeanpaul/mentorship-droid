@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { View, TextInput as RNTextInput, StyleSheet } from 'react-native';
 
-import Text from './Text';
+import Label from './Label';
 import { FONT } from 'src/constants/styles';
 
 
@@ -15,12 +15,6 @@ const styles = StyleSheet.create({
   },
   containerSelected: {
     borderColor: '#003035',
-  },
-  label: {
-    textAlign: 'left',
-    fontFamily: FONT.REGULAR,
-    fontSize: 14,
-    color: '#9fb1b3',
   },
   textInput: {
     fontFamily: FONT.REGULAR,
@@ -44,7 +38,7 @@ export default class TextInput extends React.Component {
   render() {
     let label;
     if (this.props.label) {
-      label = <Text style={styles.label}>{this.props.label}</Text>;
+      label = <Label title={this.props.label} style={styles.label} />;
     }
 
     return (
