@@ -33,7 +33,6 @@ const ProfilePicture = ({
         />
         <Text style={styles.imageLabel}>Choose Photo</Text>
       </View>
-
     </BaseView>
   );
 };
