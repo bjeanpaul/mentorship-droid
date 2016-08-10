@@ -19,23 +19,23 @@ const styles = StyleSheet.create({
   },
 });
 
-// TODO: Picture path should be dynamic.
 const ProfilePicture = ({
-}) => {
-  const IMG_PROFILE_ADD = require('app/assets/Profile_Add.png');
-  return (
-    <BaseView>
-      <Toolbar title="Add a profile picture" />
-      <View style={styles.imageContainer}>
-        <Image
-          style={styles.image}
-          source={IMG_PROFILE_ADD}
-        />
-        <Text style={styles.imageLabel}>Choose Photo</Text>
-      </View>
-    </BaseView>
-  );
-};
+  picturePath,
+}) => (
+  <BaseView>
+    <Toolbar title="Add a profile picture" />
+    <View style={styles.imageContainer}>
+      <Image
+        style={styles.image}
+        source={
+          picturePath && { uri: picturePath}
+          || require('app/assets/Profile_Add.png')
+        }
+      />
+      <Text style={styles.imageLabel}>Choose Photo</Text>
+    </View>
+  </BaseView>
+);
 ProfilePicture.propTypes = {
   picturePath: React.PropTypes.string,
 };

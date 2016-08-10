@@ -8,7 +8,6 @@ import { font, fontWeight } from 'src/app/styles';
 const IMG_PROFILE = require('app/assets/Profile.png');
 
 const styles = StyleSheet.create({
-
   base: {
     justifyContent: 'space-around',
   },
