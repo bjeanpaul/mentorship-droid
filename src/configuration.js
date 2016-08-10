@@ -9,4 +9,4 @@ export const getBaseURL = () => {
   return 'http://10.0.3.2:8000/mentor';
 };
 
-export const getAuthorizationToken = (state) => state.auth.login.authToken;
+export const getAuthorizationToken = (state) => state.auth.authToken;

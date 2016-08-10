@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
-import { View, Image, CameraRoll, StyleSheet, ScrollView} from 'react-native';
-import { Link } from 'react-router-native';
-
-import { Text, Heading, Button } from 'src/components';
+import { View, Image, CameraRoll, StyleSheet, ScrollView } from 'react-native';
 
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#F5FCFF',
-    },
-    imageGrid: {
-      flex: 1,
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      justifyContent: 'center',
-    },
-    image: {
-      width: 100,
-      height: 100,
-      margin: 10,
-    },
+  container: {
+    flex: 1,
+    backgroundColor: '#F5FCFF',
+  },
+  imageGrid: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  },
+  image: {
+    width: 100,
+    height: 100,
+    margin: 10,
+  },
 });
 
 class CameraRollPicker extends Component {
@@ -46,9 +43,11 @@ class CameraRollPicker extends Component {
       <ScrollView style={styles.container}>
         <View style={styles.imageGrid}>
           {this.state.photos.map((photo, index) =>
-            <Link key={`photo-${index}`} to={`${this.nextPath}?imageURI=${photo.uri}`}>
-              <Image source={{ uri: photo.uri }} style={styles.image} />
-            </Link>
+            <Image
+              key={`photo-${index}`}
+              source={{ uri: photo.uri }}
+              style={styles.image}
+            />
           )}
         </View>
       </ScrollView>

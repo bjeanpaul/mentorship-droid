@@ -1,0 +1,17 @@
+extends: airbnb
+parser: babel-eslint
+
+plugins:
+  - react
+
+rules:
+  # ignores
+  no-else-return: 0
+
+  # warnings
+  react/prop-types: 1
+  react/prefer-stateless-function: 1
+
+  # errors
+  object-property-newline: 2
+  no-undefined: 2

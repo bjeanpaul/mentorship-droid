@@ -1,64 +1,72 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
+import { View, TextInput as RNTextInput, StyleSheet } from 'react-native';
 
-import {
-  View,
-  TextInput,
-} from 'react-native';
+import Text from './Text';
+import { FONT } from 'src/constants/styles';
 
 
-import globalStyles from '../StyleSheet';
+const styles = StyleSheet.create({
+  container: {
+    borderColor: '#dfe5e6',
+    borderBottomWidth: 1,
+    marginLeft: 24,
+    marginRight: 24,
+    marginBottom: 27,
+  },
+  containerSelected: {
+    borderColor: '#003035',
+  },
+  label: {
+    textAlign: 'left',
+    fontFamily: FONT.REGULAR,
+    fontSize: 14,
+    color: '#9fb1b3',
+  },
+  textInput: {
+    fontFamily: FONT.REGULAR,
+    fontSize: 18,
+    color: '#003035',
+    padding: 0,
+    lineHeight: 28,
+    marginBottom: 8,
+  },
+});
 
-// TODO: Not a pure function because we want to add
-// some material design animations.
-class MyTextInput extends Component {
-
-  render() {
-    return (
-      <View style={{
-        borderColor: '#dfe5e6',
-        borderBottomWidth: 1,
-        marginBottom: 24,
-      }}
-      >
-        <TextInput
-          {...this.props}
-          style={[globalStyles.textInput, this.props.style]}
-          underlineColorAndroid="transparent"
-          placeholderTextColor="#c0cbcc"
-        />
-      </View>
-    );
-  }
-};
-
-export default MyTextInput;
-
-// TODO: Figure out how to animate the state changes
-// TODO: Try and remove the magic numbers.
-export class MultiLineTextInput extends Component {
+export default class TextInput extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      height: 0,
+      selected: false,
     };
   }
 
   render() {
+    let label;
+    if (this.props.label) {
+      label = <Text style={styles.label}>{this.props.label}</Text>;
+    }
+
     return (
-      <View style={styles.textInputContainer}>
-        <RNTextInput multiline enablesReturnKeyAutomatically
+      <View
+        style={[
+          styles.container,
+          this.state.selected && styles.containerSelected,
+        ]}
+      >
+        {label}
+        <RNTextInput
           {...this.props}
+          style={styles.textInput}
           underlineColorAndroid="transparent"
-          onChange={(event) => {
-            this.setState({
-              height: event.nativeEvent.contentSize.height + 8,
-            });
-          }}
-          style={[styles.textInput, { height: Math.max(28, this.state.height) }]}
+          placeholderTextColor="#c0cbcc"
+          onFocus={() => this.setState({ selected: true })}
+          onBlur={() => this.setState({ selected: false })}
         />
       </View>
     );
   }
-
 }
+TextInput.propTypes = {
+  label: PropTypes.string,
+};

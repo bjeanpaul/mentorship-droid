@@ -50,15 +50,18 @@ export const generateActionCreators = function generateActionCreators({
   requestOpts = {},
   normalizeJSON,
 }) {
-  const baseURL = getBaseURL();
   const actionCreators = {};
+  let url = `${getBaseURL()}/`;
+  if (resourcePath) {
+    url += `${resourcePath}/`;
+  }
 
   const fetchActionTypes = filterActionTypes(actionTypes, 'fetch');
   if (fetchActionTypes.length === 3) {
     actionCreators.fetch = (onSuccess, onFailure) => ({
       type: '--generated fetch--',
       types: fetchActionTypes,
-      url: `${baseURL}/${resourcePath}/`,
+      url,
       requestOpts,
       normalizeJSON,
       onSuccess,
@@ -71,12 +74,12 @@ export const generateActionCreators = function generateActionCreators({
     actionCreators.create = ({
       body,
       onSuccess,
-      onFailure
+      onFailure,
     }) => ({
       type: '--generated create--',
       types: createActionTypes,
-      url: `${baseURL}/${resourcePath}/`,
-      requestOpts: {...requestOpts,
+      url,
+      requestOpts: { ...requestOpts,
         method: 'POST',
         body: JSON.stringify(body),
       },
@@ -100,8 +103,8 @@ export const generateActionCreators = function generateActionCreators({
     }) => ({
       type: '--generated update--',
       types: updateActionTypes,
-      url: `${baseURL}/${resourcePath}/${id}/`,
-      requestOpts: {...requestOpts,
+      url: `${url}${id}/`,
+      requestOpts: { ...requestOpts,
         method: 'PUT',
         body: JSON.stringify(body),
       },
@@ -110,7 +113,6 @@ export const generateActionCreators = function generateActionCreators({
       onFailure,
     });
   }
-
 
 
   return actionCreators;

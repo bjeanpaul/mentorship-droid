@@ -46,7 +46,6 @@ export default class HTTPRequestMiddleware {
 
       return fetch(req)
         .then((response) => {
-          let n = ({ json: {}, response });
           /* I have noted that sometimes I receive and empty response body,
           with the incorrect content type.
 
@@ -54,15 +53,30 @@ export default class HTTPRequestMiddleware {
           */
           const contentType = response.headers.get('content-type');
           if (contentType && contentType.indexOf('application/json') !== -1) {
-            n = response.json().then(json => ({ json, response }));
+            return response.json()
+              .then(json => ({
+                json,
+                response,
+              }));
+          } else {
+            return {
+              json: {},
+              response,
+            };
           }
-          return n;
         })
         .then(({ json, response }) => {
           if (response.ok !== true) {
-            return Promise.reject({ json, response });
+            return Promise.reject({
+              json,
+              response,
+            });
           }
-          return { json, response };
+
+          return {
+            json,
+            response,
+          };
         })
         .then(normalizeJSON)
         .then(({ json, response }) => {
@@ -70,19 +84,20 @@ export default class HTTPRequestMiddleware {
             type: successType,
             payload: json,
           });
-          return { json, response };
+
+          return {
+            json,
+            response,
+          };
         })
         .then(onSuccess, onFailure)
         .catch((error) => {
-          console.warn(`----- ERROR: ${url} ----`);
-          console.warn(error, req);
-
           let errorMessage;
           if (error instanceof TypeError) {
             errorMessage = error.message;
           } else {
             if (error.json && error.json.detail) {
-              errorMessage = error.json.detail
+              errorMessage = error.json.detail;
             } else {
               errorMessage = 'Something bad happened';
             }

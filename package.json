@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "logs": "adb logcat *:S ReactNative:V ReactNativeJS:V",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint index.android.js src/**/*.js",
+    "ci": "npm run lint && npm test"
   },
   "dependencies": {
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
@@ -13,17 +15,16 @@
     "lodash": "^4.14.0",
     "moment": "^2.12.0",
     "normalizr": "^2.2.1",
-    "react": "^15.1.0",
-    "react-native": "^0.28.0",
+    "react": "~15.2.1",
+    "react-native": "^0.31.0",
     "react-native-calendar": "https://github.com/peterp/react-native-calendar/tarball/43ef42c6a5819377a4f6fd32f2a3f1cce73ab735",
     "react-redux": "^4.4.2",
-    "react-router": "^2.5.0",
-    "react-router-native": "^2.0.0-alpha.0",
     "redux": "^3.4.0",
     "redux-thunk": "^2.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
+    "babel-eslint": "^6.1.2",
     "babel-jest": "^13.0.0",
     "babel-polyfill": "^6.7.4",
     "babel-preset-react": "^6.5.0",
