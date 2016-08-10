@@ -34,20 +34,17 @@ const styles = StyleSheet.create({
 });
 
 const Hello = ({
-  name = 'Peter',
+  name = '',
 }) => (
   <BaseView style={styles.base}>
-
-  <View style={styles.imageContainer}>
-    <Image
-      style={styles.image}
-      source={IMG_PROFILE}
-    />
-  </View>
-
-
+    <View style={styles.imageContainer}>
+      <Image
+        style={styles.image}
+        source={IMG_PROFILE}
+      />
+    </View>
     <Text style={styles.welcome}>Welcome {name}</Text>
-    <Text style={styles.intro}>
+      <Text style={styles.intro}>
       Help build a vibrant mentor community. Complete your profile to allow
       others learn more about you.
     </Text>
@@ -60,7 +57,7 @@ const Hello = ({
   </BaseView>
 );
 Hello.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
 };
 
 export default Hello;
