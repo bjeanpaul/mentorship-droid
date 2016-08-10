@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-import { BaseView, Toolbar, Text } from 'src/components';
+import { BaseView, Toolbar, Text, Link } from 'src/components';
 
 import LoginForm from './LoginForm';
 
@@ -13,6 +13,7 @@ const Login = (props) => (
       buttonLabel="Log in"
     />
     <Text>{props.errorMessage}</Text>
+    <Link>Forgot your password?</Link>
   </BaseView>
 );
 Login.propTypes = {
