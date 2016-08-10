@@ -1,13 +1,7 @@
-import React from 'react';
-import {
-  View,
-  DatePickerAndroid,
-  TimePickerAndroid,
-  TouchableNativeFeedback,
-  StyleSheet,
-} from 'react-native';
-
 import moment from 'moment';
+import React from 'react';
+import { View, DatePickerAndroid, TimePickerAndroid, TouchableNativeFeedback,
+  StyleSheet } from 'react-native';
 
 import { BaseView, Container, Text, Toolbar, Button } from 'src/components';
 
