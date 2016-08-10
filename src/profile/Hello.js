@@ -3,9 +3,7 @@ import { View, Image, StyleSheet } from 'react-native';
 
 import { BaseView, Text, Button } from 'src/components';
 import { FONT, FONT_WEIGHT } from 'src/constants/styles';
-
-
-const IMG_PROFILE = require('app/assets/Profile.png');
+import IMAGE_PROFILE from 'app/assets/Profile.png';
 
 const styles = StyleSheet.create({
   base: {
@@ -39,7 +37,7 @@ const Hello = ({
     <View style={styles.imageContainer}>
       <Image
         style={styles.image}
-        source={IMG_PROFILE}
+        source={IMAGE_PROFILE}
       />
     </View>
     <Text style={styles.welcome}>Welcome {name}</Text>

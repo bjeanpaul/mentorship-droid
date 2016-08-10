@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 
 import { BaseView, Toolbar, Text } from 'src/components';
+import IMAGE_PROFILE_ADD from 'app/assets/Profile_Add.png';
 
 
 const styles = StyleSheet.create({
@@ -27,10 +28,7 @@ const ProfilePicture = ({
     <View style={styles.imageContainer}>
       <Image
         style={styles.image}
-        source={
-          picturePath && { uri: picturePath }
-          || require('app/assets/Profile_Add.png')
-        }
+        source={picturePath && { uri: picturePath } || IMAGE_PROFILE_ADD}
       />
       <Text style={styles.imageLabel}>Choose Photo</Text>
     </View>

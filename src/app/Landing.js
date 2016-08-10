@@ -1,9 +1,8 @@
 import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
+
 import { BaseView, Text, Link, Button } from 'src/components';
-
-
-const IMG_LANDING = require('app/assets/Landing.png');
+import IMAGE_LANDING from 'app/assets/Landing.png';
 
 const styles = StyleSheet.create({
   image: {
@@ -29,7 +28,7 @@ const styles = StyleSheet.create({
 const Landing = () => (
   <BaseView>
     <View style={styles.image}>
-      <Image resizeMode="stretch" source={IMG_LANDING} />
+      <Image resizeMode="stretch" source={IMAGE_LANDING} />
     </View>
     <View style={styles.getStarted}>
       <Text style={styles.getStartedHeading}>
