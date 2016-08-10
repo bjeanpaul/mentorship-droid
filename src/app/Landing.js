@@ -24,10 +24,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(42, 45, 48, 0.05)',
     justifyContent: 'center',
   },
-  loginText: {
-    color: '#9fb1b3',
-    textAlign: 'center',
-  },
 });
 
 const Landing = () => (

@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 
 import Text from './Text';
-import { font, fontWeight } from 'src/app/styles.js';
+import { FONT, FONT_WEIGHT } from 'src/app/styles.js';
 const IMG_BACK = require('app/assets/Back_Gray.png');
 
 
@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 20,
-    fontFamily: font.medium,
-    fontWeight: fontWeight.medium,
+    fontFamily: FONT.MEDIUM,
+    fontWeight: FONT_WEIGHT.MEDIUM,
     color: '#003035',
   },
 });

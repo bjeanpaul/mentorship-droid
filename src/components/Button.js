@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { TouchableNativeFeedback, View, StyleSheet } from 'react-native';
 
 import Text from 'Text';
-import { font, fontWeight } from 'src/app/styles';
+import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 
 
 const styles = StyleSheet.create({
@@ -19,9 +19,9 @@ const styles = StyleSheet.create({
   },
   label: {
     color: '#fff',
-    fontFamily: font.brandonTextBold,
+    fontFamily: FONT.BOLD,
     fontSize: 13,
-    fontWeight: fontWeight.bold,
+    fontWeight: FONT_WEIGHT.BOLD,
     letterSpacing: 1,
     marginTop: 15,
     marginBottom: 17,

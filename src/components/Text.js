@@ -1,12 +1,12 @@
 import React from 'react';
 import { Text as RNText, StyleSheet } from 'react-native';
 
-import { font } from 'src/app/styles';
+import { FONT } from 'src/constants/styles';
 
 
 const styles = StyleSheet.create({
   text: {
-    fontFamily: font.brandonText,
+    fontFamily: FONT.REGULAR,
     fontSize: 13,
     textAlign: 'center',
   },

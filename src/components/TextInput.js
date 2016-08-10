@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { View, TextInput as RNTextInput, StyleSheet } from 'react-native';
 
 import Text from './Text';
-import { font } from 'src/app/styles';
+import { FONT } from 'src/constants/styles';
 
 
 const styles = StyleSheet.create({
@@ -18,12 +18,12 @@ const styles = StyleSheet.create({
   },
   label: {
     textAlign: 'left',
-    fontFamily: font.brandonText,
+    fontFamily: FONT.REGULAR,
     fontSize: 14,
     color: '#9fb1b3',
   },
   textInput: {
-    fontFamily: font.brandonText,
+    fontFamily: FONT.REGULAR,
     fontSize: 18,
     color: '#003035',
     padding: 0,
