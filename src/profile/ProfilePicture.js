@@ -28,7 +28,7 @@ const ProfilePicture = ({
       <Image
         style={styles.image}
         source={
-          picturePath && { uri: picturePath}
+          picturePath && { uri: picturePath }
           || require('app/assets/Profile_Add.png')
         }
       />
