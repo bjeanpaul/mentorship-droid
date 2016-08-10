@@ -2,18 +2,19 @@ import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 
 import Text from './Text';
-import { FONT, FONT_WEIGHT } from 'src/constants/styles.js';
+import { FONT, FONT_WEIGHT, COLOR } from 'src/constants/styles.js';
 const IMG_BACK = require('app/assets/Back_Gray.png');
 
 
 const styles = StyleSheet.create({
   header: {
-    padding: 16,
-    paddingBottom: 11,
-    paddingTop: 24,
-    marginBottom: 27,
+    paddingLeft: 16,
+    paddingRight: 16,
+    height: 72,
+    justifyContent: 'center',
   },
   headerBackButton: {
+    position: 'absolute',
     width: 24,
     height: 24,
   },
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: FONT.MEDIUM,
     fontWeight: FONT_WEIGHT.MEDIUM,
-    color: '#003035',
+    color: COLOR.DARK_TEAL,
   },
 });
 
