@@ -1,14 +1,23 @@
 jest.unmock('src/api/request');
 
 import base64 from 'base-64';
-import request from 'src/api/request';
+import request, { ApiResponseError } from 'src/api/request';
 import { Schema } from 'normalizr';
+import { identity } from 'lodash';
 
 
 describe('api/request', () => {
+  beforeEach(() => {
+    fetch.mockReturnValue(Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({ result: {} }),
+    }));
+  });
+
   it('should make requests using the given configuration', async () => {
     fetch.mockReturnValue(Promise.resolve({
-      json: () => ({ result: { bar: 23 } }),
+      ok: true,
+      json: () => Promise.resolve({ result: { bar: 23 } }),
     }));
 
     const res = await request({
@@ -22,6 +31,21 @@ describe('api/request', () => {
       '/mentor-api/foo',
       jasmine.objectContaining({ method: 'GET' }),
     ]]);
+  });
+
+  it('should reject api error responses as ApiResponseErrors', async () => {
+    const response = { ok: false };
+
+    fetch.mockReturnValue(Promise.resolve(response));
+
+    const err = await request({
+      url: '/foo',
+      method: 'GET',
+    })
+    .catch(identity);
+
+    expect(err instanceof ApiResponseError).toBe(true);
+    expect(err.response).toEqual(response);
   });
 
   it('should support requests with json bodies', () => {
@@ -65,7 +89,8 @@ describe('api/request', () => {
 
   it('should support schemas', async () => {
     fetch.mockReturnValue(Promise.resolve({
-      json: () => ({ result: { id: 23 } }),
+      ok: true,
+      json: () => Promise.resolve({ result: { id: 23 } }),
     }));
 
     const res = await request({

@@ -5,6 +5,13 @@ import config from 'src/config';
 import { conj, omitNulls } from 'src/helpers';
 
 
+class ApiResponseError {
+  constructor(response) {
+    this.response = response;
+  }
+}
+
+
 const { API_URL } = config;
 
 
@@ -46,15 +53,24 @@ const parseConf = ({
 });
 
 
+const requestSuccess = (res, schema) => res.json()
+  .then(({ result }) => !isNull(schema)
+    ? normalize(result, schema)
+    : result);
+
+
+const requestFailure = res => Promise.reject(new ApiResponseError(res));
+
+
 const request = rawConf => {
   const { url, schema, conf } = parseConf(rawConf);
 
   return fetch(url, conf)
-    .then(res => res.json())
-    .then(({ result }) => !isNull(schema)
-      ? normalize(result, schema)
-      : result);
+    .then(res => res.ok
+      ? requestSuccess(res, schema)
+      : requestFailure(res));
 };
 
 
 export default request;
+export { ApiResponseError };
