@@ -9,6 +9,7 @@ jest.unmock('redux-thunk');
 jest.unmock('src/configuration');
 jest.unmock('src/helpers');
 jest.unmock('src/config');
+jest.unmock('scripts/helpers');
 
 import 'isomorphic-fetch';
 import nock from 'nock';

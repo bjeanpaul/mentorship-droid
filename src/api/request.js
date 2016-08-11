@@ -84,4 +84,8 @@ const request = rawConf => {
 
 
 export default request;
-export { ApiResponseError };
+
+export {
+  serializeAuth,
+  ApiResponseError,
+};

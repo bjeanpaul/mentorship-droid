@@ -6,7 +6,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "emulator": "emulator @reactnative",
     "emulator:logs": "adb logcat *:S ReactNative:V ReactNativeJS:V",
-    "test": "NODE_ENV=test jest",
+    "test": "NODE_PATH=. NODE_ENV=test jest",
     "lint": "eslint index.android.js src/**/*.js",
     "ci": "npm run lint && npm test"
   },

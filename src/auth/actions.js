@@ -1,47 +1,46 @@
-import base64 from 'base-64';
-import { normalize, Schema, arrayOf } from 'normalizr';
+import { isEmpty } from 'lodash';
+import { listProfiles } from 'src/api';
 
-import { getBaseURL, getAuthorizationToken } from 'src/configuration.js';
 import {
-  AUTH_SET_TOKEN,
-  AUTH_LOGIN_REQUEST,
+  AUTH_LOGIN_BUSY,
   AUTH_LOGIN_SUCCESS,
   AUTH_LOGIN_FAILURE,
 } from './constants';
 
 
-const profileSchema = new Schema('profile');
-
-
-export const login = (email, password, onSuccess) => (dispatch, getState) => {
-  const authToken = base64.encode(`${email}:${password}`);
-  dispatch({
-    type: AUTH_SET_TOKEN,
-    authToken,
-  });
-
-  dispatch({ type: AUTH_LOGIN_REQUEST });
-  return fetch(`${getBaseURL()}/profile/?email=${email}`, {
-    headers: {
-      authorization: `Basic ${getAuthorizationToken(getState())}`,
+const loginBusy = (email, password) => ({
+  type: AUTH_LOGIN_BUSY,
+  payload: {
+    auth: {
+      email,
+      password,
     },
-  })
-  .then(response => response.json())
-  .then(json => {
-    const entities = normalize(json.results, arrayOf(profileSchema));
-    if (entities.result.length === 0) {
-      return dispatch({ type: AUTH_LOGIN_FAILURE });
-    }
-    // TODO: How do we deal with side affects?
-    onSuccess();
-    return dispatch({
-      type: AUTH_LOGIN_SUCCESS,
-      payload: entities,
-    });
-  })
-  .catch(() => dispatch({ type: AUTH_LOGIN_FAILURE }));
-};
+  },
+});
 
-// TODO: resetPassword
-export const resetPassword = () => () => {
-};
+
+const loginFailure = () => ({
+  type: AUTH_LOGIN_FAILURE,
+});
+
+
+const loginSuccess = entities => ({
+  type: AUTH_LOGIN_SUCCESS,
+  payload: { entities },
+});
+
+
+const loginDone = entities => isEmpty(entities.results)
+  ? loginFailure()
+  : loginSuccess(entities);
+
+
+export const login = (email, password) => dispatch => Promise.resolve()
+  .then(() => loginBusy(email, password))
+  .then(dispatch)
+  .then(() => listProfiles({
+    email,
+    password,
+  }))
+  .then(loginDone)
+  .then(dispatch);

@@ -1,51 +1,66 @@
-/* eslint-disable no-undef */
-jest.unmock('../actions');
-jest.unmock('../constants');
+jest
+  .unmock('src/auth/actions')
+  .unmock('src/auth/constants');
 
-jest.unmock('redux-mock-store');
-jest.unmock('redux-thunk');
-
-import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk';
-
+import { login } from 'src/auth/actions';
+import { capture } from 'scripts/helpers';
+import { listProfiles } from 'src/api';
+import { noop } from 'lodash';
 
 import {
-  AUTH_SET_TOKEN,
-} from '../constants';
+  AUTH_LOGIN_BUSY,
+  AUTH_LOGIN_SUCCESS,
+  AUTH_LOGIN_FAILURE,
+} from 'src/auth/constants';
 
-import { login } from '../actions';
 
-const mockStore = configureMockStore([thunk]);
-
-describe('actions', () => {
-  const store = mockStore({ auth: {} });
-  afterEach(() => {
-    nock.cleanAll();
+describe('auth/actions', () => {
+  beforeEach(() => {
+    listProfiles.mockClear();
+    listProfiles.mockReturnValue(Promise.resolve({ results: [23] }));
   });
 
   describe('login', () => {
-    it('dispatches AUTH_SET_TOKEN before logging in', () => {
-      store.dispatch(login('username', 'password'));
-      expect(store.getActions()[0].type).toEqual(AUTH_SET_TOKEN);
-    });
+    it('should dispatch busy', async () => {
+      const [action, ..._rest] = await capture(login('a@b.org', '1337'));
 
-    it('generates a valid base64 encoded `username:password`', () => {
-      store.dispatch(login('username', 'password'));
-      expect(store.getActions()[0].authToken).toEqual('dXNlcm5hbWU6cGFzc3dvcmQ=');
-    });
-
-    it('calls `onSuccess` when completed', (done) => {
-      nock('http://example.org')
-      .get('/profile/?email=username')
-      .reply(200, {
-        results: [
-          { name: 'Rodger' },
-        ],
+      expect(action).toEqual({
+        type: AUTH_LOGIN_BUSY,
+        payload: {
+          auth: {
+            email: 'a@b.org',
+            password: '1337',
+          },
+        },
       });
+    });
 
-      store.dispatch(login('username', 'password', () => {
-        done();
-      }));
+    it('should dispatch success for non-empty results', async () => {
+      listProfiles.mockReturnValue(Promise.resolve({ results: [23] }));
+
+      const [_busy, action] = await capture(login('a@b.org', '1337'));
+
+      expect(action).toEqual({
+        type: AUTH_LOGIN_SUCCESS,
+        payload: { entities: { results: [23] } },
+      });
+    });
+
+    it('should dispatch failure for non-empty results', async () => {
+      listProfiles.mockReturnValue(Promise.resolve({ results: [] }));
+
+      const [_busy, action] = await capture(login('a@b.org', '1337'));
+
+      expect(action).toEqual({ type: AUTH_LOGIN_FAILURE });
+    });
+
+    it('should call listProfiles() with the correct params', async () => {
+      await login('a@b.org', '1337')(noop);
+
+      expect(listProfiles.mock.calls).toEqual([[{
+        email: 'a@b.org',
+        password: '1337',
+      }]]);
     });
   });
 });
