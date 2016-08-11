@@ -2,6 +2,7 @@ jest
   .mock('isomorphic-fetch')
   .unmock('src/api/request');
 
+import base64 from 'base-64';
 import request from 'src/api/request';
 
 
@@ -22,8 +23,8 @@ describe('api/request', () => {
     ]]);
   });
 
-  it('should support requests with json bodies', async () => {
-    await request({
+  it('should support requests with json bodies', () => {
+    request({
       url: '/foo',
       method: 'POST',
       data: { bar: 23 },
@@ -33,8 +34,30 @@ describe('api/request', () => {
       '/mentor-api/foo',
       jasmine.objectContaining({
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
         data: JSON.stringify({ bar: 23 }),
+        headers: jasmine.objectContaining({
+          'Content-Type': 'application/json',
+        }),
+      }),
+    ]]);
+  });
+
+  it('should support auth', () => {
+    request({
+      url: '/foo',
+      method: 'GET',
+      auth: {
+        email: 'a@b.c',
+        password: 'bar',
+      },
+    });
+
+    expect(fetch.mock.calls).toEqual([[
+      '/mentor-api/foo',
+      jasmine.objectContaining({
+        headers: jasmine.objectContaining({
+          Authorization: `Basic ${base64.encode('a@b.c:bar')}`,
+        }),
       }),
     ]]);
   });
