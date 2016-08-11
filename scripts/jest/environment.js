@@ -3,6 +3,7 @@ jest.unmock('nock');
 jest.unmock('base-64');
 jest.unmock('lodash');
 jest.unmock('normalizr');
+jest.unmock('query-string');
 jest.unmock('redux-mock-store');
 jest.unmock('redux-thunk');
 jest.unmock('src/configuration');

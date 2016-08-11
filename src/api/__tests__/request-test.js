@@ -67,6 +67,19 @@ describe('api/request', () => {
     ]]);
   });
 
+  it('should support query parameters', () => {
+    request({
+      url: '/foo',
+      method: 'GET',
+      params: { bar: 23 },
+    });
+
+    expect(fetch.mock.calls).toEqual([[
+      '/mentor-api/foo?bar=23',
+      jasmine.objectContaining({ method: 'GET' }),
+    ]]);
+  });
+
   it('should support auth', () => {
     request({
       url: '/foo',

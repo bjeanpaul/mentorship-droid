@@ -1,3 +1,4 @@
+import qs from 'query-string';
 import base64 from 'base-64';
 import { isNull } from 'lodash';
 import { normalize } from 'normalizr';
@@ -15,10 +16,15 @@ class ApiResponseError {
 const { API_URL } = config;
 
 
-const parseAuth = ({ email, password }) => {
+const serializeAuth = ({ email, password }) => {
   const token = base64.encode(`${email}:${password}`);
   return `Basic ${token}`;
 };
+
+
+const serializeQs = params => !isNull(params)
+  ? `?${qs.stringify(params)}`
+  : '';
 
 
 const parseConf = ({
@@ -27,9 +33,10 @@ const parseConf = ({
   data = null,
   auth = null,
   schema = null,
+  params = null,
   headers = {},
 }) => ({
-  url: API_URL + url,
+  url: API_URL + url + serializeQs(params),
 
   schema,
 
@@ -42,7 +49,7 @@ const parseConf = ({
         : null,
 
       Authorization: !isNull(auth)
-        ? parseAuth(auth)
+        ? serializeAuth(auth)
         : null,
     })),
 
