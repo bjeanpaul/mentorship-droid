@@ -6,10 +6,12 @@ import { Provider } from 'react-redux';
 import configureStore from 'src/stores/configureStore';
 const store = configureStore();
 
+import C from 'src/schedule/ScheduleList';
+
 const App = function App() {
   return (
     <Provider store={store}>
-      <View />
+      <C />
     </Provider>
   );
 };

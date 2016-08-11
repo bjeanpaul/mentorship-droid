@@ -84,21 +84,6 @@ const styles = StyleSheet.create({
   },
 });
 
-const CallInfo = ({
-  date,
-  activityName,
-}) => (
-  <View style={styles.callInfoContainer}>
-    <Label title="CALL SCHEDULED FOR:" />
-    <Text style={styles.callInfoText}>{date}</Text>
-    <Text style={styles.callInfoText}>{activityName}</Text>
-  </View>
-);
-CallInfo.propTypes = {
-  date: PropTypes.string,
-  activityName: PropTypes.string,
-};
-
 // TODO: Default state when call isn't selectedDate
 // TODO: Abstract away the calendar view into another component.
 // TODO: Define the shape of the calls array objects.
@@ -106,13 +91,31 @@ class ScheduleList extends React.Component {
 
   constructor(props) {
     super(props);
-    this.props = props;
     this.state = {
       selectedDate: null,
     };
   }
 
   renderCallInfo() {
+
+    const {
+      date
+      activityName:
+    }
+
+    if (this.state.selectedDate) {
+      return (
+        <View style={styles.callInfoContainer}>
+          <Label title="CALL SCHEDULED FOR:" />
+          <Text style={styles.callInfoText}></Text>
+          <Text style={styles.callInfoText}>{activityName}</Text>
+        </View>
+      )
+    } else {
+      return (
+        <View style={styles.callInfoContainer} />
+      );
+    }
   }
 
   render() {
@@ -130,18 +133,13 @@ class ScheduleList extends React.Component {
           onDateSelect={(selectedDate) => this.setState({ selectedDate })}
           customStyle={styles}
         />
-
-        <CallInfo
-          date="Thu, Apr 13, 2:00pm"
-          activityName="Find out who you are and what you do"
-        />
-
+        {this.renderCallInfo()}
       </View>
     );
   }
 }
 ScheduleList.propTypes = {
-  calls: React.propTypes.array,
+  calls: React.PropTypes.arrayOf,
 };
 
 export default ScheduleList;
