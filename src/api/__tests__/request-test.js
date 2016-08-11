@@ -1,6 +1,4 @@
-jest
-  .mock('isomorphic-fetch')
-  .unmock('src/api/request');
+jest.unmock('src/api/request');
 
 import base64 from 'base-64';
 import request from 'src/api/request';
