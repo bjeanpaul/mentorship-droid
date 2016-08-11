@@ -6,7 +6,6 @@ import MultiLineTextInput from './MultiLineTextInput';
 import NavigationBar from './NavigationBar';
 import BaseView from './BaseView';
 import Toolbar from './Toolbar';
-import Image from './Image';
 
 export {
   BaseView,
@@ -18,5 +17,4 @@ export {
   MultiLineTextInput,
   NavigationBar,
   Toolbar,
-  Image,
 };

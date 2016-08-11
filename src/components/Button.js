@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 
 const Button = ({
   theme = 'orange',
-  label,
+  label = '',
   disabled,
   handlePress,
 }) => {

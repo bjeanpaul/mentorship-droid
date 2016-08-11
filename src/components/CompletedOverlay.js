@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
-import { View, StyleSheet } from 'react-native';
-import { BaseView, Text, Button, Image } from 'src/components';
+import { View, StyleSheet, Image } from 'react-native';
+import { BaseView, Text, Button, CenteredImage } from 'src/components';
 
 import COLORS from 'src/constants/colors';
 import IMAGE_DISMISS_ICON from 'app/assets/close-light.png';
@@ -11,11 +11,20 @@ const styles = StyleSheet.create({
   baseView: {
     backgroundColor: COLORS.OVERLAY_BG,
   },
-  topContainer: {
+  content: {
     flex: 0.7,
     justifyContent: 'center',
   },
-  bottomContainer: {
+  imageContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  image: {
+    flex: 1,
+    height: 80,
+    width: 80,
+  },
+  footer: {
     flex: 0.3,
     justifyContent: 'flex-end',
   },
@@ -32,7 +41,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: COLORS.OVERLAY_MESSAGE,
   },
-  bottomText: {
+  footerText: {
     padding: 16,
     fontSize: 14,
   },
@@ -51,24 +60,29 @@ const CompletedOverlay = ({
     style={styles.baseView}
     statusBarBackgroundColor={COLORS.OVERLAY_STATUS_BG}
   >
-    <View style={styles.topContainer}>
+    <View style={styles.content}>
       <Image
         style={styles.dismissButton}
         source={IMAGE_DISMISS_ICON}
       />
-      <Image source={IMAGE_DONE} />
+      <View style={styles.imageContainer}>
+        <Image
+          style={styles.image}
+          source={IMAGE_DONE}
+        />
+      </View>
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.message}>{message}</Text>
     </View>
 
-    <View style={styles.bottomContainer}>
+    <View style={styles.footer}>
       <Button
         theme="white"
         handlePress={buttonHandlePress}
         label={buttonLabel}
       />
       {bottomText
-        ? <Text style={styles.bottomText} onPress={() => bottomTextHandlePress}>
+        ? <Text style={styles.footerText} onPress={() => bottomTextHandlePress}>
           {bottomText}
         </Text>
         : null
