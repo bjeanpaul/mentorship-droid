@@ -2,10 +2,6 @@ import { getBaseURL } from 'src/configuration';
 import { omitBy, isNull } from 'lodash';
 
 
-// alias for mocking
-export const fetch = window.fetch;
-
-
 export const conj = (...args) => Object.assign({}, ...args);
 
 
