@@ -1,32 +1,60 @@
 import base64 from 'base-64';
+import { isNull } from 'lodash';
+import { normalize } from 'normalizr';
 import config from 'src/config';
 import { conj, omitNulls } from 'src/helpers';
+
+
+const { API_URL } = config;
+
 
 const parseAuth = ({ email, password }) => {
   const token = base64.encode(`${email}:${password}`);
   return `Basic ${token}`;
 };
 
-const parseConf = conf => omitNulls(conj(conf, {
-  url: config.API_URL + conf.url,
-  headers: omitNulls(conj(conf.headers || {}, {
-    'Content-Type': conf.data
-      ? 'application/json'
+
+const parseConf = ({
+  url,
+  method,
+  data = null,
+  auth = null,
+  schema = null,
+  headers = {},
+}) => ({
+  url: API_URL + url,
+
+  schema,
+
+  conf: omitNulls({
+    method,
+
+    headers: omitNulls(conj(headers, {
+      'Content-Type': !isNull(data)
+        ? 'application/json'
+        : null,
+
+      Authorization: !isNull(auth)
+        ? parseAuth(auth)
+        : null,
+    })),
+
+    data: !isNull(data)
+      ? JSON.stringify(data)
       : null,
-    Authorization: conf.auth
-      ? parseAuth(conf.auth)
-      : null,
-  })),
-  data: conf.data
-    ? JSON.stringify(conf.data)
-    : null,
-}));
+  }),
+});
+
 
 const request = rawConf => {
-  const conf = parseConf(rawConf);
+  const { url, schema, conf } = parseConf(rawConf);
 
-  return fetch(conf.url, conf)
-    .then(res => res.json());
+  return fetch(url, conf)
+    .then(res => res.json())
+    .then(({ result }) => !isNull(schema)
+      ? normalize(result, schema)
+      : result);
 };
+
 
 export default request;

@@ -2,11 +2,14 @@ jest.unmock('src/api/request');
 
 import base64 from 'base-64';
 import request from 'src/api/request';
+import { Schema } from 'normalizr';
 
 
 describe('api/request', () => {
   it('should make requests using the given configuration', async () => {
-    fetch.mockReturnValue(Promise.resolve({ json: () => ({ bar: 23 }) }));
+    fetch.mockReturnValue(Promise.resolve({
+      json: () => ({ result: { bar: 23 } }),
+    }));
 
     const res = await request({
       url: '/foo',
@@ -58,5 +61,22 @@ describe('api/request', () => {
         }),
       }),
     ]]);
+  });
+
+  it('should support schemas', async () => {
+    fetch.mockReturnValue(Promise.resolve({
+      json: () => ({ result: { id: 23 } }),
+    }));
+
+    const res = await request({
+      url: '/foo',
+      method: 'GET',
+      schema: new Schema('bars'),
+    });
+
+    expect(res).toEqual({
+      result: 23,
+      entities: { bars: { 23: { id: 23 } } },
+    });
   });
 });
