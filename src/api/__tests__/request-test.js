@@ -8,6 +8,8 @@ import { identity } from 'lodash';
 
 describe('api/request', () => {
   beforeEach(() => {
+    fetch.mockClear();
+
     fetch.mockReturnValue(Promise.resolve({
       ok: true,
       json: () => Promise.resolve({ result: {} }),

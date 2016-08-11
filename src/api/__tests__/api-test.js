@@ -13,6 +13,7 @@ import { parseResults } from 'src/api/parse';
 describe('api', () => {
   beforeEach(() => {
     request.mockImplementation(identity);
+    request.mockClear();
   });
 
   describe('listProfiles', () => {
