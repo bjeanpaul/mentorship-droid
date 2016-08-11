@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { View, StyleSheet, Image } from 'react-native';
-import { BaseView, Text, Button, CenteredImage } from 'src/components';
+import { BaseView, Text, Button } from 'src/components';
 
 import COLORS from 'src/constants/colors';
 import IMAGE_DISMISS_ICON from 'app/assets/close-light.png';
