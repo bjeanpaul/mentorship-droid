@@ -12,6 +12,12 @@ const styles = StyleSheet.create({
     marginLeft: 24,
     marginRight: 24,
   },
+  dateContainer: {
+    flex: 0.6,
+  },
+  timeContainer: {
+    flex: 0.4,
+  },
   value: {
     textAlign: 'left',
     color: '#003035',
@@ -90,13 +96,13 @@ class ScheduleDetail extends React.Component {
 
           <View style={styles.fieldset}>
             <TouchableNativeFeedback onPress={this.handleDatePress}>
-              <View style={{ flex: 0.6 }}>
+              <View style={styles.dateContainer}>
                 <Label title="DATE" />
                 <Value value={dateValue} placeholder="Add date" />
               </View>
             </TouchableNativeFeedback>
             <TouchableNativeFeedback onPress={this.handleTimePress}>
-              <View style={{ flex: 0.4 }}>
+              <View style={styles.timeContainer}>
                 <Label title="TIME" />
                 <Value value={this.state.time} placeholder="Add time" />
               </View>
