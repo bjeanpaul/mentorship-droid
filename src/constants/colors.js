@@ -1,5 +1,11 @@
 export default {
 
+  DEFAULT_BG: '#fff',
+  DEFAULT_STATUS_BG: '#99acae',
+
+  // TOOLBAR
+  TOOLBAR_TITLE: '#003035',
+
   // OVERLAY
   OVERLAY_STATUS_BG: '#935943',
   OVERLAY_BG: 'rgba(246, 111, 63, 0.95)',
@@ -13,4 +19,7 @@ export default {
   BUTTON_DISABLED_LABEL: '#fff',
   BUTTON_ALT_BG: '#fff',
   BUTTON_ALT_LABEL: '#f77040',
+
+  // CALL
+  CALL_NOTIFICATION_TEXT: '#003035',
 };

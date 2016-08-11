@@ -12,7 +12,3 @@ export const FONT_WEIGHT = {
   MEDIUM: '400',
   BOLD: 'bold',
 };
-
-export const COLOR = {
-  DARK_TEAL: '#003035',
-};

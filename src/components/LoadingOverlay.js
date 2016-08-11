@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
-import { StyleSheet, StatusBar, Image } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-import { BaseView, Text } from 'src/components';
+import { BaseView, Text, Image } from 'src/components';
 import SpinningImage from './SpinningImage';
 
 import COLORS from 'src/constants/colors';
@@ -43,8 +43,10 @@ const LoadingOverlay = ({
   }
 
   return (
-    <BaseView style={styles.baseView}>
-      <StatusBar backgroundColor={COLORS.OVERLAY_STATUS_BG} />
+    <BaseView
+      statusBarBackgroundColor={COLORS.OVERLAY_STATUS_BG}
+      style={styles.baseView}
+    >
       {dismissButton}
       <SpinningImage />
       <Text style={styles.title}>{title}</Text>

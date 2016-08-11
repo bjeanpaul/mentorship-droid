@@ -4,9 +4,10 @@ import { View, Image as RNImage, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
+    flex: 1,
   },
   image: {
+    flex: 1,
     height: null,
     width: null,
     resizeMode: 'contain',
@@ -14,8 +15,8 @@ const styles = StyleSheet.create({
 });
 
 const Image = (props) => (
-  <View style={[styles.container, props.style]}>
-    <RNImage {...props} />
+  <View style={[styles.container]}>
+    <RNImage style={[styles.image, props.style]} {...props} />
   </View>
 );
 Image.propTypes = {

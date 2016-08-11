@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     marginRight: 16,
   },
   button_orange: {
-    backgroundColor: COLORS.BUTON,
+    backgroundColor: COLORS.BUTTON_BG,
   },
   button_white: {
     backgroundColor: COLORS.BUTTON_ALT_BG,
