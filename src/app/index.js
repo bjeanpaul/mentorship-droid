@@ -11,7 +11,22 @@ import C from 'src/schedule/ScheduleList';
 const App = function App() {
   return (
     <Provider store={store}>
-      <C />
+      <C
+        calls={[
+          {
+            date: '2016-08-11',
+            activityName: 'Problem',
+          },
+          {
+            date: '2016-08-12',
+            activityName: 'Sausage',
+          },
+          {
+            date: '2016-08-13',
+            activityName: 'Test',
+          },
+        ]}
+      />
     </Provider>
   );
 };

@@ -15,7 +15,7 @@ const BaseView = ({
 }) => <View style={[styles.view, style]}>{children}</View>;
 
 BaseView.propTypes = {
-  children: React.PropTypes.node,
+  children: React.PropTypes.any,
   style: React.PropTypes.any,
 };
 export default BaseView;
