@@ -4,9 +4,14 @@ parser: babel-eslint
 plugins:
   - react
 
+env:
+  jest: true
+  jasmine: true
+
 rules:
   # ignores
   no-else-return: 0
+  import/no-unresolved: 0
 
   # warnings
   react/prop-types: 1
