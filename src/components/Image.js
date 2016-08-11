@@ -18,4 +18,7 @@ const Image = (props) => (
     <RNImage {...props} />
   </View>
 );
+Image.propTypes = {
+  style: PropTypes.any,
+};
 export default Image;

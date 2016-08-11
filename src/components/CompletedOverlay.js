@@ -12,12 +12,12 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.OVERLAY_BG,
   },
   topContainer: {
-     flex: 0.7,
-     justifyContent: 'center',
+    flex: 0.7,
+    justifyContent: 'center',
   },
   bottomContainer: {
     flex: 0.3,
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   dismissButton: {
     position: 'absolute',
@@ -68,13 +68,9 @@ const CompletedOverlay = ({
         label={buttonLabel}
       />
       {bottomText
-        ?
-          <Text
-            style={styles.bottomText}
-            onPress={() => bottomTextHandlePress}
-          >
-            {bottomText}
-          </Text>
+        ? <Text style={styles.bottomText} onPress={() => bottomTextHandlePress}>
+          {bottomText}
+        </Text>
         : null
       }
     </View>
