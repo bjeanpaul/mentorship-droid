@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, StatusBar } from 'react-native';
 
 
 const styles = StyleSheet.create({
@@ -12,9 +12,20 @@ const styles = StyleSheet.create({
 const BaseView = ({
   children,
   style,
-}) => <View style={[styles.view, style]}>{children}</View>;
+  statusBarBackgroundColor,
+}) => (
+  <View style={[styles.view, style]}>
+    { statusBarBackgroundColor
+      ? <StatusBar backgroundColor={statusBarBackgroundColor} />
+      : null
+    }
+    {children}
+  </View>
+);
+
 
 BaseView.propTypes = {
+  statusBarBackgroundColor: React.PropTypes.string,
   children: React.PropTypes.node,
   style: React.PropTypes.any,
 };

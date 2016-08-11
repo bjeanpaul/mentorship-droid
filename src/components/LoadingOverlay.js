@@ -3,8 +3,10 @@ import { StyleSheet, StatusBar, Image } from 'react-native';
 
 import { BaseView, Text } from 'src/components';
 import SpinningImage from './SpinningImage';
+
 import COLORS from 'src/constants/colors';
 import IMAGE_DISMISS_ICON from 'app/assets/close-light.png';
+
 
 const styles = StyleSheet.create({
   baseView: {
@@ -18,7 +20,7 @@ const styles = StyleSheet.create({
     left: 16,
     top: 16,
   },
-  message: {
+  title: {
     fontSize: 20,
     color: COLORS.OVERLAY_TEXT,
     paddingBottom: 80,
@@ -26,7 +28,7 @@ const styles = StyleSheet.create({
 });
 
 const LoadingOverlay = ({
-  message,
+  title,
   dismiss,
 }) => {
   let dismissButton;
@@ -45,12 +47,12 @@ const LoadingOverlay = ({
       <StatusBar backgroundColor={COLORS.OVERLAY_STATUS_BG} />
       {dismissButton}
       <SpinningImage />
-      <Text style={styles.message}>{message}</Text>
+      <Text style={styles.title}>{title}</Text>
     </BaseView>
   );
 };
 LoadingOverlay.propTypes = {
   dismiss: PropTypes.bool,
-  message: PropTypes.string,
+  title: PropTypes.string.isRequired,
 };
 export default LoadingOverlay;
