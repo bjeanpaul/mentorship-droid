@@ -11,7 +11,7 @@ import C from 'src/components/LoadingOverlay'
 const App = function App() {
   return (
     <Provider store={store}>
-      <C dismiss message="yo yo yoy" />
+      <C dismiss message="I am loading things in the background... " />
     </Provider>
   );
 };
