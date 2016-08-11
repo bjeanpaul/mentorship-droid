@@ -6,9 +6,7 @@ import Login from './Login';
 const mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     handleLoginPress: (email, password) => {
-      dispatch(login(email, password, () => {
-        // TODO: Transition to new view.
-      }));
+      dispatch(login(email, password));
     },
   };
 };
