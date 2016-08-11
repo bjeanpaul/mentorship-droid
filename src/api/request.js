@@ -1,6 +1,6 @@
 import qs from 'query-string';
 import base64 from 'base-64';
-import { isNull } from 'lodash';
+import { isNull, identity } from 'lodash';
 import { normalize } from 'normalizr';
 import config from 'src/config';
 import { conj, omitNulls } from 'src/helpers';
@@ -34,13 +34,16 @@ const parseConf = ({
   auth = null,
   schema = null,
   params = null,
+  parse = identity,
   headers = {},
 }) => ({
   url: API_URL + url + serializeQs(params),
 
+  parse,
+
   schema,
 
-  conf: omitNulls({
+  options: omitNulls({
     method,
 
     headers: omitNulls(conj(headers, {
@@ -60,21 +63,22 @@ const parseConf = ({
 });
 
 
-const requestSuccess = (res, schema) => res.json()
-  .then(({ result }) => !isNull(schema)
-    ? normalize(result, schema)
-    : result);
+const requestSuccess = (res, { parse, schema }) => res.json()
+  .then(parse)
+  .then(d => !isNull(schema)
+    ? normalize(d, schema)
+    : d);
 
 
 const requestFailure = res => Promise.reject(new ApiResponseError(res));
 
 
 const request = rawConf => {
-  const { url, schema, conf } = parseConf(rawConf);
+  const { url, options, ...conf } = parseConf(rawConf);
 
-  return fetch(url, conf)
+  return fetch(url, options)
     .then(res => res.ok
-      ? requestSuccess(res, schema)
+      ? requestSuccess(res, conf)
       : requestFailure(res));
 };
 

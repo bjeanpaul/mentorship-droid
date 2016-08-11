@@ -17,7 +17,7 @@ describe('api/request', () => {
   it('should make requests using the given configuration', async () => {
     fetch.mockReturnValue(Promise.resolve({
       ok: true,
-      json: () => Promise.resolve({ result: { bar: 23 } }),
+      json: () => Promise.resolve({ bar: 23 }),
     }));
 
     const res = await request({
@@ -103,7 +103,7 @@ describe('api/request', () => {
   it('should support schemas', async () => {
     fetch.mockReturnValue(Promise.resolve({
       ok: true,
-      json: () => Promise.resolve({ result: { id: 23 } }),
+      json: () => Promise.resolve({ id: 23 }),
     }));
 
     const res = await request({
@@ -116,5 +116,20 @@ describe('api/request', () => {
       result: 23,
       entities: { bars: { 23: { id: 23 } } },
     });
+  });
+
+  it('support a response data parse function', async () => {
+    fetch.mockReturnValue(Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({ bar: 23 }),
+    }));
+
+    const res = await request({
+      url: '/foo',
+      method: 'GET',
+      parse: ({ bar }) => bar,
+    });
+
+    expect(res).toEqual(23);
   });
 });
