@@ -16,6 +16,8 @@ const App = function App() {
         message="Thu, Apr 13, 2:00pm"
         buttonLabel="DO SOMETHING AGAIN?"
         buttonHandlePress={() => consoe.log('pew')}
+
+        bottomText="Schedule another call?"
         />
     </Provider>
   );

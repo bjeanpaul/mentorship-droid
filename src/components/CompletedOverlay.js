@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
-import { StyleSheet } from 'react-native';
-
+import { View, StyleSheet } from 'react-native';
 import { BaseView, Text, Button, Image } from 'src/components';
 
 import COLORS from 'src/constants/colors';
@@ -11,7 +10,14 @@ import IMAGE_DONE from 'app/assets/done-icon.png';
 const styles = StyleSheet.create({
   baseView: {
     backgroundColor: COLORS.OVERLAY_BG,
-    justifyContent: 'center',
+  },
+  topContainer: {
+     flex: 0.7,
+     justifyContent: 'center',
+  },
+  bottomContainer: {
+    flex: 0.3,
+    justifyContent: 'flex-end'
   },
   dismissButton: {
     position: 'absolute',
@@ -25,7 +31,10 @@ const styles = StyleSheet.create({
   message: {
     fontSize: 24,
     color: COLORS.OVERLAY_MESSAGE,
-    marginBottom: 45,
+  },
+  bottomText: {
+    padding: 16,
+    fontSize: 14,
   },
 });
 
@@ -35,24 +44,40 @@ const CompletedOverlay = ({
   message,
   buttonLabel,
   buttonHandlePress,
+  bottomText,
+  bottomTextHandlePress,
 }) => (
   <BaseView
     style={styles.baseView}
     statusBarBackgroundColor={COLORS.OVERLAY_STATUS_BG}
   >
-    <Image
-      style={styles.dismissButton}
-      source={IMAGE_DISMISS_ICON}
-    />
-    <Image source={IMAGE_DONE} />
-    <Text style={styles.title}>{title}</Text>
-    <Text style={styles.message}>{message}</Text>
+    <View style={styles.topContainer}>
+      <Image
+        style={styles.dismissButton}
+        source={IMAGE_DISMISS_ICON}
+      />
+      <Image source={IMAGE_DONE} />
+      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.message}>{message}</Text>
+    </View>
 
-    <Button
-      theme="white"
-      handlePress={buttonHandlePress}
-      label={buttonLabel}
-    />
+    <View style={styles.bottomContainer}>
+      <Button
+        theme="white"
+        handlePress={buttonHandlePress}
+        label={buttonLabel}
+      />
+      {bottomText
+        ?
+          <Text
+            style={styles.bottomText}
+            onPress={() => bottomTextHandlePress}
+          >
+            {bottomText}
+          </Text>
+        : null
+      }
+    </View>
   </BaseView>
 );
 
@@ -61,5 +86,7 @@ CompletedOverlay.propTypes = {
   message: PropTypes.string,
   buttonLabel: PropTypes.string.isRequired,
   buttonHandlePress: PropTypes.func.isRequired,
+  bottomText: PropTypes.string,
+  bottomTextHandlePress: PropTypes.func,
 };
 export default CompletedOverlay;
