@@ -3,6 +3,14 @@ import { conj, omitNulls } from 'src/helpers';
 
 const parseConf = conf => omitNulls(conj(conf, {
   url: config.API_URL + conf.url,
+  headers: omitNulls(conj(conf.headers || {}, {
+    'Content-Type': conf.data
+      ? 'application/json'
+      : null,
+  })),
+  data: conf.data
+    ? JSON.stringify(conf.data)
+    : null,
 }));
 
 
