@@ -9,7 +9,7 @@ import {
 } from './constants';
 
 
-const auth = (state, action) => {
+const authReducer = (state, action) => {
   switch (action.type) {
     case AUTH_LOGIN_BUSY: {
       const { payload: { auth } } = action;
@@ -48,4 +48,4 @@ const auth = (state, action) => {
 };
 
 
-export default auth;
+export default authReducer;
