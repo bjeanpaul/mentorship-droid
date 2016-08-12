@@ -7,19 +7,19 @@ import reduce from 'src/auth/reducer';
 import { serializeAuth } from 'src/api/request';
 
 import {
-  AUTH_LOGIN_BUSY,
+  AUTH_LOGIN_REQUEST,
   AUTH_LOGIN_SUCCESS,
   AUTH_LOGIN_FAILURE,
 } from 'src/auth/constants';
 
 
 describe('auth/reducer', () => {
-  describe('AUTH_LOGIN_BUSY', () => {
+  describe('AUTH_LOGIN_REQUEST', () => {
     it('should mark the state as loading', () => {
       const { isLoading } = reduce({
         isLoading: false,
       }, {
-        type: AUTH_LOGIN_BUSY,
+        type: AUTH_LOGIN_REQUEST,
         payload: {
           auth: {
             email: 'a@b.org',
@@ -35,7 +35,7 @@ describe('auth/reducer', () => {
       const { errorMessage } = reduce({
         errorMessage: 'o_O',
       }, {
-        type: AUTH_LOGIN_BUSY,
+        type: AUTH_LOGIN_REQUEST,
         payload: {
           auth: {
             email: 'a@b.org',
@@ -54,7 +54,7 @@ describe('auth/reducer', () => {
       const { auth } = reduce({
         auth: null,
       }, {
-        type: AUTH_LOGIN_BUSY,
+        type: AUTH_LOGIN_REQUEST,
         payload: {
           auth: {
             email,

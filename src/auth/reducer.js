@@ -2,7 +2,7 @@ import { serializeAuth } from 'src/api/request';
 
 
 import {
-  AUTH_LOGIN_BUSY,
+  AUTH_LOGIN_REQUEST,
   AUTH_LOGIN_SUCCESS,
   AUTH_LOGIN_FAILURE,
 } from './constants';
@@ -10,7 +10,7 @@ import {
 
 const authReducer = (state, action) => {
   switch (action.type) {
-    case AUTH_LOGIN_BUSY: {
+    case AUTH_LOGIN_REQUEST: {
       const { payload: { auth } } = action;
       const { email, password } = auth;
 

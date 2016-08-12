@@ -8,7 +8,7 @@ import { listProfiles } from 'src/api';
 import { noop } from 'lodash';
 
 import {
-  AUTH_LOGIN_BUSY,
+  AUTH_LOGIN_REQUEST,
   AUTH_LOGIN_SUCCESS,
   AUTH_LOGIN_FAILURE,
 } from 'src/auth/constants';
@@ -25,7 +25,7 @@ describe('auth/actions', () => {
       const [action, ..._rest] = await capture(login('a@b.org', '1337'));
 
       expect(action).toEqual({
-        type: AUTH_LOGIN_BUSY,
+        type: AUTH_LOGIN_REQUEST,
         payload: {
           auth: {
             email: 'a@b.org',

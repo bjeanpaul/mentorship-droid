@@ -2,14 +2,14 @@ import { isEmpty } from 'lodash';
 import { listProfiles } from 'src/api';
 
 import {
-  AUTH_LOGIN_BUSY,
+  AUTH_LOGIN_REQUEST,
   AUTH_LOGIN_SUCCESS,
   AUTH_LOGIN_FAILURE,
 } from './constants';
 
 
 const loginBusy = (email, password) => ({
-  type: AUTH_LOGIN_BUSY,
+  type: AUTH_LOGIN_REQUEST,
   payload: {
     auth: {
       email,
