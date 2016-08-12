@@ -1,47 +1,46 @@
-import base64 from 'base-64';
-import { normalize, Schema, arrayOf } from 'normalizr';
+import { isEmpty } from 'lodash';
+import { listProfiles } from 'src/api';
 
-import { getBaseURL, getAuthorizationToken } from 'src/configuration.js';
 import {
-  AUTH_SET_TOKEN,
   AUTH_LOGIN_REQUEST,
   AUTH_LOGIN_SUCCESS,
   AUTH_LOGIN_FAILURE,
 } from './constants';
 
 
-const profileSchema = new Schema('profile');
+const loginBusy = () => ({
+  type: AUTH_LOGIN_REQUEST,
+});
 
 
-export const login = (email, password, onSuccess) => (dispatch, getState) => {
-  const authToken = base64.encode(`${email}:${password}`);
-  dispatch({
-    type: AUTH_SET_TOKEN,
-    authToken,
-  });
+const loginFailure = () => ({
+  type: AUTH_LOGIN_FAILURE,
+});
 
-  dispatch({ type: AUTH_LOGIN_REQUEST });
-  return fetch(`${getBaseURL()}/profile/?email=${email}`, {
-    headers: {
-      authorization: `Basic ${getAuthorizationToken(getState())}`,
-    },
-  })
-  .then(response => response.json())
-  .then(json => {
-    const entities = normalize(json.results, arrayOf(profileSchema));
-    if (entities.result.length === 0) {
-      return dispatch({ type: AUTH_LOGIN_FAILURE });
-    }
-    // TODO: How do we deal with side affects?
-    onSuccess();
-    return dispatch({
-      type: AUTH_LOGIN_SUCCESS,
-      payload: entities,
-    });
-  })
-  .catch(() => dispatch({ type: AUTH_LOGIN_FAILURE }));
-};
 
-// TODO: resetPassword
-export const resetPassword = () => () => {
-};
+const loginSuccess = (entities, auth) => ({
+  type: AUTH_LOGIN_SUCCESS,
+  payload: {
+    entities,
+    auth,
+  },
+});
+
+
+const loginDone = (entities, auth) => isEmpty(entities.results)
+  ? loginFailure()
+  : loginSuccess(entities, auth);
+
+
+export const login = (email, password) => dispatch => Promise.resolve()
+  .then(() => loginBusy(email, password))
+  .then(dispatch)
+  .then(() => listProfiles({
+    email,
+    password,
+  }))
+  .then(entities => loginDone(entities, {
+    email,
+    password,
+  }))
+  .then(dispatch);

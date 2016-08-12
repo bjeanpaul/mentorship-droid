@@ -1,47 +1,61 @@
+import { serializeAuth } from 'src/api/request';
+
+
 import {
-  AUTH_SET_TOKEN,
   AUTH_LOGIN_REQUEST,
   AUTH_LOGIN_SUCCESS,
   AUTH_LOGIN_FAILURE,
 } from './constants';
 
 
-const auth = (
-  state = {
-    authToken: '',
-  },
-  action
-) => {
+const authReducer = (state, action) => {
   switch (action.type) {
-
     case AUTH_LOGIN_REQUEST:
       return {
         ...state,
+
         isLoading: true,
         errorMessage: '',
       };
+
     case AUTH_LOGIN_FAILURE:
       return {
         ...state,
+
+        // TODO use constant for status type instead and put copy in component
         isLoading: false,
         errorMessage: 'Incorrect email or password combination.',
       };
 
-    case AUTH_SET_TOKEN:
-      return {
-        ...state,
-        authToken: action.authToken,
-      };
+    case AUTH_LOGIN_SUCCESS: {
+      const {
+        payload: {
+          auth,
+          entities: {
+            results: [profileId],
+          },
+        },
+      } = action;
 
-    case AUTH_LOGIN_SUCCESS:
+      const { email, password } = auth;
+
       return {
         ...state,
         isLoading: false,
-        profileId: action.payload.result[0],
+        profileId,
+
+        // TODO don't add `authToken` once we are using api in all actions
+        auth: {
+          ...auth,
+          authToken: serializeAuth(email, password),
+        },
       };
+    }
 
     default:
       return state;
   }
 };
-export default auth;
+
+
+export default authReducer;

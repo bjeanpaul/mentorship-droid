@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "logs": "adb logcat *:S ReactNative:V ReactNativeJS:V",
-    "test": "jest",
+    "test": "NODE_PATH=. NODE_ENV=test jest",
     "lint": "eslint index.android.js src/**/*.js",
     "ci": "npm run lint && npm test"
   },
@@ -15,6 +15,7 @@
     "lodash": "^4.14.0",
     "moment": "^2.12.0",
     "normalizr": "^2.2.1",
+    "query-string": "^4.2.2",
     "react": "~15.2.1",
     "react-native": "^0.31.0",
     "react-native-calendar": "https://github.com/peterp/react-native-calendar/tarball/43ef42c6a5819377a4f6fd32f2a3f1cce73ab735",
