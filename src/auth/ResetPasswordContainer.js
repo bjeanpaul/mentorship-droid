@@ -16,6 +16,6 @@ const mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 export default connect(
-  (state) => state.auth.resetPassword,
+  (state) => state.auth,
   mapDispatchToProps
 )(ResetPassword);
