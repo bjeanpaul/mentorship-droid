@@ -1,4 +1,3 @@
-import { conj } from 'src/helpers';
 import { serializeAuth } from 'src/api/request';
 
 
@@ -22,7 +21,10 @@ const authReducer = (state, action) => {
         errorMessage: '',
 
         // TODO don't add `authToken` once we are using api in all actions
-        auth: conj(auth, { authToken: serializeAuth(email, password) }),
+        auth: {
+          ...auth,
+          authToken: serializeAuth(email, password),
+        },
       };
     }
 

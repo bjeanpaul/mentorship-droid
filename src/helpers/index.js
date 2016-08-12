@@ -2,9 +2,6 @@ import { getBaseURL } from 'src/configuration';
 import { omitBy, isNull } from 'lodash';
 
 
-export const conj = (...args) => Object.assign({}, ...args);
-
-
 export const omitNulls = d => omitBy(d, isNull);
 
 

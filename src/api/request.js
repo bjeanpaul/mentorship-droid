@@ -3,7 +3,7 @@ import base64 from 'base-64';
 import { isNull, identity } from 'lodash';
 import { normalize } from 'normalizr';
 import config from 'src/config';
-import { conj, omitNulls } from 'src/helpers';
+import { omitNulls } from 'src/helpers';
 
 
 class ApiResponseError {
@@ -46,7 +46,9 @@ const parseConf = ({
   options: omitNulls({
     method,
 
-    headers: omitNulls(conj(headers, {
+    headers: omitNulls({
+      ...headers,
+
       'Content-Type': !isNull(data)
         ? 'application/json'
         : null,
@@ -54,7 +56,7 @@ const parseConf = ({
       Authorization: !isNull(auth)
         ? serializeAuth(auth)
         : null,
-    })),
+    }),
 
     data: !isNull(data)
       ? JSON.stringify(data)
