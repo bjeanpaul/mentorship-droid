@@ -46,7 +46,7 @@ describe('auth/actions', () => {
       });
     });
 
-    it('should dispatch failure for non-empty results', async () => {
+    it('should dispatch failure for empty results', async () => {
       listProfiles.mockReturnValue(Promise.resolve({ results: [] }));
 
       const [_busy, action] = await capture(login('a@b.org', '1337'));
