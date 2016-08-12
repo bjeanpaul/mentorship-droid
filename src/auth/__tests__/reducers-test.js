@@ -20,12 +20,6 @@ describe('auth/reducer', () => {
         isLoading: false,
       }, {
         type: AUTH_LOGIN_REQUEST,
-        payload: {
-          auth: {
-            email: 'a@b.org',
-            password: '1337',
-          },
-        },
       });
 
       expect(isLoading).toBe(true);
@@ -36,38 +30,9 @@ describe('auth/reducer', () => {
         errorMessage: 'o_O',
       }, {
         type: AUTH_LOGIN_REQUEST,
-        payload: {
-          auth: {
-            email: 'a@b.org',
-            password: '1337',
-          },
-        },
       });
 
       expect(errorMessage).toEqual('');
-    });
-
-    it('should set auth details', () => {
-      const email = 'a@b.org';
-      const password = '1337';
-
-      const { auth } = reduce({
-        auth: null,
-      }, {
-        type: AUTH_LOGIN_REQUEST,
-        payload: {
-          auth: {
-            email,
-            password,
-          },
-        },
-      });
-
-      expect(auth).toEqual({
-        email,
-        password,
-        authToken: serializeAuth(email, password),
-      });
     });
   });
 
@@ -103,6 +68,10 @@ describe('auth/reducer', () => {
           entities: {
             results: [21, 23],
           },
+          auth: {
+            email: 'a@b.org',
+            password: '1337',
+          },
         },
       });
 
@@ -118,10 +87,40 @@ describe('auth/reducer', () => {
           entities: {
             results: [21, 23],
           },
+          auth: {
+            email: 'a@b.org',
+            password: '1337',
+          },
         },
       });
 
       expect(profileId).toEqual(21);
+    });
+
+    it('should set auth details', () => {
+      const email = 'a@b.org';
+      const password = '1337';
+
+      const { auth } = reduce({
+        auth: null,
+      }, {
+        type: AUTH_LOGIN_SUCCESS,
+        payload: {
+          entities: {
+            results: [21, 23],
+          },
+          auth: {
+            email,
+            password,
+          },
+        },
+      });
+
+      expect(auth).toEqual({
+        email,
+        password,
+        authToken: serializeAuth(email, password),
+      });
     });
   });
 });

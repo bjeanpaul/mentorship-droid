@@ -8,14 +8,8 @@ import {
 } from './constants';
 
 
-const loginBusy = (email, password) => ({
+const loginBusy = () => ({
   type: AUTH_LOGIN_REQUEST,
-  payload: {
-    auth: {
-      email,
-      password,
-    },
-  },
 });
 
 
@@ -24,15 +18,18 @@ const loginFailure = () => ({
 });
 
 
-const loginSuccess = entities => ({
+const loginSuccess = (entities, auth) => ({
   type: AUTH_LOGIN_SUCCESS,
-  payload: { entities },
+  payload: {
+    entities,
+    auth,
+  },
 });
 
 
-const loginDone = entities => isEmpty(entities.results)
+const loginDone = (entities, auth) => isEmpty(entities.results)
   ? loginFailure()
-  : loginSuccess(entities);
+  : loginSuccess(entities, auth);
 
 
 export const login = (email, password) => dispatch => Promise.resolve()
@@ -42,5 +39,8 @@ export const login = (email, password) => dispatch => Promise.resolve()
     email,
     password,
   }))
-  .then(loginDone)
+  .then(entities => loginDone(entities, {
+    email,
+    password,
+  }))
   .then(dispatch);

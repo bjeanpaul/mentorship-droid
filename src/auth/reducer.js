@@ -10,23 +10,13 @@ import {
 
 const authReducer = (state, action) => {
   switch (action.type) {
-    case AUTH_LOGIN_REQUEST: {
-      const { payload: { auth } } = action;
-      const { email, password } = auth;
-
+    case AUTH_LOGIN_REQUEST:
       return {
         ...state,
 
         isLoading: true,
         errorMessage: '',
-
-        // TODO don't add `authToken` once we are using api in all actions
-        auth: {
-          ...auth,
-          authToken: serializeAuth(email, password),
-        },
       };
-    }
 
     case AUTH_LOGIN_FAILURE:
       return {
@@ -37,12 +27,30 @@ const authReducer = (state, action) => {
         errorMessage: 'Incorrect email or password combination.',
       };
 
-    case AUTH_LOGIN_SUCCESS:
+    case AUTH_LOGIN_SUCCESS: {
+      const {
+        payload: {
+          auth,
+          entities: {
+            results: [profileId],
+          },
+        },
+      } = action;
+
+      const { email, password } = auth;
+
       return {
         ...state,
         isLoading: false,
-        profileId: action.payload.entities.results[0],
+        profileId,
+
+        // TODO don't add `authToken` once we are using api in all actions
+        auth: {
+          ...auth,
+          authToken: serializeAuth(email, password),
+        },
       };
+    }
 
     default:
       return state;

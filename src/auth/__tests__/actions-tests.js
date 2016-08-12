@@ -21,17 +21,11 @@ describe('auth/actions', () => {
   });
 
   describe('login', () => {
-    it('should dispatch busy', async () => {
+    it('should dispatch request', async () => {
       const [action, ..._rest] = await capture(login('a@b.org', '1337'));
 
       expect(action).toEqual({
         type: AUTH_LOGIN_REQUEST,
-        payload: {
-          auth: {
-            email: 'a@b.org',
-            password: '1337',
-          },
-        },
       });
     });
 
@@ -42,7 +36,13 @@ describe('auth/actions', () => {
 
       expect(action).toEqual({
         type: AUTH_LOGIN_SUCCESS,
-        payload: { entities: { results: [23] } },
+        payload: {
+          entities: { results: [23] },
+          auth: {
+            email: 'a@b.org',
+            password: '1337',
+          },
+        },
       });
     });
 
