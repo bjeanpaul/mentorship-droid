@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 
 import colors from 'src/constants/colors';
-import Text from './Text';
+import Text from 'src/components/Text';
 
 
 const styles = StyleSheet.create({

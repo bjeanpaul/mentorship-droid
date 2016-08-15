@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { View, TextInput as RNTextInput, StyleSheet } from 'react-native';
 
-import Label from './Label';
+import Label from 'src/components/Label';
 import { FONT } from 'src/constants/styles';
 import colors from 'src/constants/colors';
 

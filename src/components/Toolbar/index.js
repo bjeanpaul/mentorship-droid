@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 
-import Text from './Text';
+import Text from 'src/components/Text';
 import { FONT, FONT_WEIGHT } from 'src/constants/styles.js';
 import colors from 'src/constants/colors.js';
 const IMG_BACK = require('app/assets/Back_Gray.png');

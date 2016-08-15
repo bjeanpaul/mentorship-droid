@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 
 import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 import colors from 'src/constants/colors';
-import Text from './Text';
+import Text from 'src/components/Text';
 
 const styles = StyleSheet.create({
   label: {

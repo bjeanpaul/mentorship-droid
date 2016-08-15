@@ -1,8 +1,7 @@
 import React, { PropTypes } from 'react';
 import { StyleSheet } from 'react-native';
 
-import { BaseView, Text, Image } from 'src/components';
-import SpinningImage from './SpinningImage';
+import { BaseView, Text, Image, SpinningImage } from 'src/components';
 
 import colors from 'src/constants/colors';
 import IMAGE_DISMISS_ICON from 'app/assets/close-light.png';
