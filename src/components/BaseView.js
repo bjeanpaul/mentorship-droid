@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, StatusBar } from 'react-native';
+import COLOR from 'src/constants/colors';
 
 
 const styles = StyleSheet.create({
   view: {
-    backgroundColor: 'white',
+    backgroundColor: COLOR.DEFAULT_BG,
     flex: 1,
   },
 });
@@ -12,9 +13,18 @@ const styles = StyleSheet.create({
 const BaseView = ({
   children,
   style,
-}) => <View style={[styles.view, style]}>{children}</View>;
-
+  statusBarBackgroundColor = COLOR.DEFAULT_STATUS_BG,
+}) => (
+  <View style={[styles.view, style]}>
+    { statusBarBackgroundColor
+      ? <StatusBar backgroundColor={statusBarBackgroundColor} />
+      : null
+    }
+    {children}
+  </View>
+);
 BaseView.propTypes = {
+  statusBarBackgroundColor: React.PropTypes.string,
   children: React.PropTypes.any,
   style: React.PropTypes.any,
 };

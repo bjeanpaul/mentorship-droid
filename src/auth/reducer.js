@@ -8,7 +8,7 @@ import {
 } from './constants';
 
 
-const authReducer = (state, action) => {
+const authReducer = (state = {}, action) => {
   switch (action.type) {
     case AUTH_LOGIN_REQUEST:
       return {

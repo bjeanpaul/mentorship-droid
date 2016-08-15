@@ -3,34 +3,36 @@ import { View, Image, StyleSheet } from 'react-native';
 
 import Text from './Text';
 import { FONT, FONT_WEIGHT } from 'src/constants/styles.js';
+import COLOR from 'src/constants/colors.js';
 const IMG_BACK = require('app/assets/Back_Gray.png');
 
 
 const styles = StyleSheet.create({
-  header: {
-    padding: 16,
-    paddingBottom: 11,
-    paddingTop: 24,
-    marginBottom: 27,
+  toolbar: {
+    paddingLeft: 16,
+    paddingRight: 16,
+    height: 72,
+    justifyContent: 'center',
   },
-  headerBackButton: {
+  backButton: {
+    position: 'absolute',
     width: 24,
     height: 24,
   },
-  headerTitle: {
+  title: {
     fontSize: 20,
     fontFamily: FONT.MEDIUM,
     fontWeight: FONT_WEIGHT.MEDIUM,
-    color: '#003035',
+    color: COLOR.TOOLBAR_TITLE,
   },
 });
 
 // TODO: Add subtitle
 // TODO: Add back button functionality
 export const Toolbar = ({ title }) => (
-  <View style={styles.header}>
-    <Image style={styles.headerBackButton} source={IMG_BACK} />
-    <Text style={styles.headerTitle}>{title}</Text>
+  <View style={styles.toolbar}>
+    <Image style={styles.backButton} source={IMG_BACK} />
+    <Text style={styles.title}>{title}</Text>
   </View>
 );
 Toolbar.propTypes = {
