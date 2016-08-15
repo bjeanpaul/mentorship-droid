@@ -1,4 +1,9 @@
 import { getBaseURL } from 'src/configuration';
+import { omitBy, isNull } from 'lodash';
+
+
+export const omitNulls = d => omitBy(d, isNull);
+
 
 export const generateActionTypes = function generateActionNames(
   resource,

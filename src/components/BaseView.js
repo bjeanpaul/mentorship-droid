@@ -25,7 +25,7 @@ const BaseView = ({
 );
 BaseView.propTypes = {
   statusBarBackgroundColor: React.PropTypes.string,
-  children: React.PropTypes.node,
+  children: React.PropTypes.any,
   style: React.PropTypes.any,
 };
 export default BaseView;
