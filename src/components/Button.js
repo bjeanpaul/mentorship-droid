@@ -14,10 +14,10 @@ const styles = StyleSheet.create({
     marginLeft: 16,
     marginRight: 16,
   },
-  button_orange: {
+  buttonDefault: {
     backgroundColor: COLORS.BUTTON_BG,
   },
-  button_white: {
+  buttonWhite: {
     backgroundColor: COLORS.BUTTON_ALT_BG,
   },
   buttonDisabled: {
@@ -31,10 +31,10 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginBottom: 17,
   },
-  label_orange: {
+  labelDefault: {
     color: COLORS.BUTTON_LABEL,
   },
-  label_white: {
+  labelWhite: {
     color: COLORS.BUTTON_ALT_LABEL,
   },
   labelDisabled: {
@@ -42,8 +42,13 @@ const styles = StyleSheet.create({
   },
 });
 
+const THEME = {
+  DEFAULT: 'Default',
+  WHITE: 'White',
+};
+
 const Button = ({
-  theme = 'orange',
+  theme = THEME.DEFAULT,
   label = '',
   disabled,
   handlePress,
@@ -52,14 +57,14 @@ const Button = ({
     <View
       style={[
         styles.button,
-        styles[`button_${theme}`],
+        styles[`button${theme}`],
         disabled && styles.buttonDisabled,
       ]}
     >
       <Text
         style={[
           styles.label,
-          styles[`label_${theme}`],
+          styles[`label${theme}`],
           disabled && styles.labelDisabled,
         ]}
       >
@@ -76,10 +81,11 @@ const Button = ({
   }
   return button;
 };
+Button.THEME = THEME;
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   handlePress: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
-  theme: PropTypes.oneOf(['orange', 'white']),
+  theme: PropTypes.oneOf([THEME.DEFAULT, THEME.WHITE]),
 };
 export default Button;

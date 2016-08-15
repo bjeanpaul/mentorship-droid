@@ -6,10 +6,18 @@ import { Provider } from 'react-redux';
 import configureStore from 'src/stores/configureStore';
 const store = configureStore();
 
+import C from 'src/components/CompletedOverlay';
+
 const App = function App() {
   return (
     <Provider store={store}>
-      <View />
+      <C
+        title="asdsa"
+        message="sadas"
+        buttonLabel="asdsad"
+        onButtonPress={() => {}}
+        linkText="asdas"
+      />
     </Provider>
   );
 };

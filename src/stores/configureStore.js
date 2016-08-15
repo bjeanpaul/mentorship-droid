@@ -10,8 +10,6 @@ const httpRequestMiddleware = new HTTPRequestMiddleware({
 });
 
 import auth from 'src/auth/reducer';
-import profile from 'src/profile/Reducer';
-import schedule from 'src/schedule/Reducer';
 
 
 const entities = (state = {}, action) => {
@@ -24,8 +22,6 @@ const entities = (state = {}, action) => {
 const rootReducer = combineReducers({
   entities,
   auth,
-  profile,
-  schedule,
 });
 
 export default function configureStore(initialState = {}) {

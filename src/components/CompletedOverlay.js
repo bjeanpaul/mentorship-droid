@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     width: 80,
   },
   footer: {
+    paddingBottom: 16,
     flex: 0.3,
     justifyContent: 'flex-end',
   },
@@ -42,7 +43,8 @@ const styles = StyleSheet.create({
     color: COLORS.OVERLAY_MESSAGE,
   },
   footerText: {
-    padding: 16,
+    margin: 16,
+    marginBottom: 0,
     fontSize: 14,
   },
 });
@@ -52,9 +54,9 @@ const CompletedOverlay = ({
   title,
   message,
   buttonLabel,
-  buttonHandlePress,
-  bottomText,
-  bottomTextHandlePress,
+  onButtonPress,
+  linkText,
+  onLinkPress,
 }) => (
   <BaseView
     style={styles.baseView}
@@ -77,26 +79,25 @@ const CompletedOverlay = ({
 
     <View style={styles.footer}>
       <Button
-        theme="white"
-        handlePress={buttonHandlePress}
+        theme={Button.THEME.WHITE}
+        handlePress={onButtonPress}
         label={buttonLabel}
       />
-      {bottomText
-        ? <Text style={styles.footerText} onPress={() => bottomTextHandlePress}>
-          {bottomText}
-        </Text>
+      {linkText
+        ? <Text style={styles.footerText} onPress={onLinkPress}>
+            {linkText}
+          </Text>
         : null
       }
     </View>
   </BaseView>
 );
-
 CompletedOverlay.propTypes = {
   title: PropTypes.string.isRequired,
   message: PropTypes.string,
   buttonLabel: PropTypes.string.isRequired,
-  buttonHandlePress: PropTypes.func.isRequired,
-  bottomText: PropTypes.string,
-  bottomTextHandlePress: PropTypes.func,
+  onButtonPress: PropTypes.func.isRequired,
+  linkText: PropTypes.string,
+  onLinkPress: PropTypes.func,
 };
 export default CompletedOverlay;
