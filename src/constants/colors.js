@@ -2,6 +2,8 @@ export default {
 
   DEFAULT_BG: '#fff',
   DEFAULT_STATUS_BG: '#99acae',
+  DEFAULT_TEXT: '#003035',
+
 
   LABEL_TEXT: '#9fb1b3',
   LINK_TEXT: '#f77040',

@@ -1,18 +1,9 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
 import { Animated, Easing } from 'react-native';
+import styles from './styles';
 
 import IMAGE_LOADER from 'app/assets/loader.png';
-
 const DURATION = 2000;
-
-
-const styles = StyleSheet.create({
-  image: {
-    width: 80,
-    height: 80,
-  },
-});
 
 export default class SpinningImage extends React.Component {
 

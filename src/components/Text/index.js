@@ -1,16 +1,6 @@
 import React from 'react';
-import { Text as RNText, StyleSheet } from 'react-native';
-
-import { FONT } from 'src/constants/styles';
-
-
-const styles = StyleSheet.create({
-  text: {
-    fontFamily: FONT.REGULAR,
-    fontSize: 13,
-    textAlign: 'center',
-  },
-});
+import { Text as RNText } from 'react-native';
+import styles from './styles';
 
 const Text = (props) =>
   <RNText

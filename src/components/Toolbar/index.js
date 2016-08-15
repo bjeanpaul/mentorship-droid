@@ -1,31 +1,9 @@
 import React from 'react';
-import { View, Image, StyleSheet } from 'react-native';
-
+import { View, Image } from 'react-native';
 import Text from 'src/components/Text';
-import { FONT, FONT_WEIGHT } from 'src/constants/styles.js';
-import colors from 'src/constants/colors.js';
+import styles from './styles';
+
 const IMG_BACK = require('app/assets/Back_Gray.png');
-
-
-const styles = StyleSheet.create({
-  toolbar: {
-    paddingLeft: 16,
-    paddingRight: 16,
-    height: 72,
-    justifyContent: 'center',
-  },
-  backButton: {
-    position: 'absolute',
-    width: 24,
-    height: 24,
-  },
-  title: {
-    fontSize: 20,
-    fontFamily: FONT.MEDIUM,
-    fontWeight: FONT_WEIGHT.MEDIUM,
-    color: colors.TOOLBAR_TITLE,
-  },
-});
 
 // TODO: Add subtitle
 // TODO: Add back button functionality
