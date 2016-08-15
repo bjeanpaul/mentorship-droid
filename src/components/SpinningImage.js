@@ -1,8 +1,18 @@
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import { Animated, Easing } from 'react-native';
 
 import IMAGE_LOADER from 'app/assets/loader.png';
 
+const DURATION = 2000;
+
+
+const styles = StyleSheet.create({
+  image: {
+    width: 80,
+    height: 80,
+  },
+});
 
 export default class SpinningImage extends React.Component {
 
@@ -23,7 +33,7 @@ export default class SpinningImage extends React.Component {
       this.state.spinValue,
       {
         toValue: 1,
-        duration: 2000,
+        duration: DURATION,
         easing: Easing.linear,
       }
     ).start(() => this.spin());
@@ -37,11 +47,7 @@ export default class SpinningImage extends React.Component {
     return (
       <Animated.Image
         source={IMAGE_LOADER}
-        style={{
-          width: 80,
-          height: 80,
-          transform: [{ rotate: spin }],
-        }}
+        style={[styles.image, { transform: [{ rotate: spin }] }]}
       />
     );
   }
