@@ -28,7 +28,6 @@
     "babel-eslint": "^6.1.2",
     "babel-jest": "^13.0.0",
     "babel-polyfill": "^6.7.4",
-    "babel-preset-react": "^6.5.0",
     "babel-preset-react-native": "^1.9.0",
     "enzyme": "^2.4.1",
     "eslint": "^2.3.0",
