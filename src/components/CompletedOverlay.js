@@ -79,7 +79,7 @@ const CompletedOverlay = ({
 
     <View style={styles.footer}>
       <Button
-        theme={Button.THEME.WHITE}
+        theme={Button.WhiteTheme}
         handlePress={onButtonPress}
         label={buttonLabel}
       />

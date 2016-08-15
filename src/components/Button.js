@@ -5,6 +5,8 @@ import Text from 'Text';
 import COLORS from 'src/constants/colors';
 import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 
+const THEME_DEFAULT = 'Default';
+const THEME_WHITE = 'White';
 
 const styles = StyleSheet.create({
   button: {
@@ -42,13 +44,8 @@ const styles = StyleSheet.create({
   },
 });
 
-const THEME = {
-  DEFAULT: 'Default',
-  WHITE: 'White',
-};
-
 const Button = ({
-  theme = THEME.DEFAULT,
+  theme = THEME_DEFAULT,
   label = '',
   disabled,
   handlePress,
@@ -81,11 +78,12 @@ const Button = ({
   }
   return button;
 };
-Button.THEME = THEME;
+Button.DefaultTheme = THEME_DEFAULT;
+Button.WhiteTheme = THEME_WHITE;
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   handlePress: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
-  theme: PropTypes.oneOf([THEME.DEFAULT, THEME.WHITE]),
+  theme: PropTypes.oneOf([THEME_DEFAULT, THEME_WHITE]),
 };
 export default Button;
