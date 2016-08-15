@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { StyleSheet } from 'react-native';
 
 import { FONT, FONT_WEIGHT } from 'src/constants/styles';
+import colors from 'src/constants/colors';
 import Text from './Text';
 
 const styles = StyleSheet.create({
@@ -10,7 +11,7 @@ const styles = StyleSheet.create({
     fontWeight: FONT_WEIGHT.BOLD,
     fontSize: 14,
     textAlign: 'left',
-    color: '#9fb1b3',
+    color: colors.LABEL_TEXT,
     marginBottom: 9,
   },
 });

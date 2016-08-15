@@ -2,13 +2,13 @@ import React, { PropTypes } from 'react';
 import { Image, View, StyleSheet } from 'react-native';
 
 import { BaseView, Toolbar, Button, Text } from 'src/components';
-import COLOR from 'src/constants/colors';
+import colors from 'src/constants/colors';
 import IMAGE_MENTEE_PHONE from 'app/assets/Mentee_Phone.png';
 
 
 const styles = StyleSheet.create({
   text: {
-    color: COLOR.CALL_NOTIFICATION_TEXT,
+    color: colors.CALL_NOTIFICATION_TEXT,
     fontSize: 20,
     paddingBottom: 8,
   },

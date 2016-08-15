@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { TouchableNativeFeedback, View, StyleSheet } from 'react-native';
 
 import Text from 'Text';
-import COLORS from 'src/constants/colors';
+import colors from 'src/constants/colors';
 import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 
 const THEME_DEFAULT = 'Default';
@@ -17,13 +17,13 @@ const styles = StyleSheet.create({
     marginRight: 16,
   },
   buttonDefault: {
-    backgroundColor: COLORS.BUTTON_BG,
+    backgroundColor: colors.BUTTON_BG,
   },
   buttonWhite: {
-    backgroundColor: COLORS.BUTTON_ALT_BG,
+    backgroundColor: colors.BUTTON_ALT_BG,
   },
   buttonDisabled: {
-    backgroundColor: COLORS.BUTTON_DISABLED_BG,
+    backgroundColor: colors.BUTTON_DISABLED_BG,
   },
   label: {
     fontFamily: FONT.BOLD,
@@ -34,13 +34,13 @@ const styles = StyleSheet.create({
     marginBottom: 17,
   },
   labelDefault: {
-    color: COLORS.BUTTON_LABEL,
+    color: colors.BUTTON_LABEL,
   },
   labelWhite: {
-    color: COLORS.BUTTON_ALT_LABEL,
+    color: colors.BUTTON_ALT_LABEL,
   },
   labelDisabled: {
-    color: COLORS.BUTTON_DISABLED_LABEL,
+    color: colors.BUTTON_DISABLED_LABEL,
   },
 });
 

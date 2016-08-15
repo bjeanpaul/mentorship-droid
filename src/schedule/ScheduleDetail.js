@@ -5,6 +5,8 @@ import { View, DatePickerAndroid, TimePickerAndroid, TouchableNativeFeedback,
 
 import { BaseView, Text, Label, Toolbar, Button } from 'src/components';
 
+import colors from 'src/constants/colors';
+
 const styles = StyleSheet.create({
   fieldset: {
     flexDirection: 'row',
@@ -20,16 +22,16 @@ const styles = StyleSheet.create({
   },
   value: {
     textAlign: 'left',
-    color: '#003035',
+    color: colors.SCHEDULE_DETAIL_VALUE_TEXT,
     fontSize: 20,
   },
   valueRequired: {
-    color: '#f77040',
+    color: colors.SCHEDULE_DETAIL_VALUE_TEXT_REQUIRED,
   },
   separator: {
     margin: 24,
     borderBottomWidth: 1,
-    borderBottomColor: '#e5e5e5',
+    borderBottomColor: colors.SCHEDULE_DETAIL_SEPARATOR,
   },
 });
 
