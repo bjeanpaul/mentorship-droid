@@ -1,4 +1,5 @@
 import Text from './Text';
+import Label from './Label';
 import Link from './Link';
 import Button from './Button';
 import TextInput from './TextInput';
@@ -11,6 +12,7 @@ export {
   BaseView,
   Toolbar,
   Text,
+  Label,
   Link,
   Button,
   TextInput,
