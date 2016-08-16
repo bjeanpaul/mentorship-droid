@@ -1,6 +1,6 @@
 jest.unmock('src/api/request');
 
-import base64 from 'base-64';
+import axios from 'axios';
 import request, { ApiResponseError } from 'src/api/request';
 import { Schema } from 'normalizr';
 import { identity } from 'lodash';
@@ -8,19 +8,12 @@ import { identity } from 'lodash';
 
 describe('api/request', () => {
   beforeEach(() => {
-    fetch.mockClear();
-
-    fetch.mockReturnValue(Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve({ result: {} }),
-    }));
+    axios.mockClear();
+    axios.mockReturnValue(Promise.resolve({data: { result: {} }}));
   });
 
   it('should make requests using the given configuration', async () => {
-    fetch.mockReturnValue(Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve({ bar: 23 }),
-    }));
+    axios.mockReturnValue(Promise.resolve({ data: { bar: 23 } }));
 
     const res = await request({
       url: '/foo',
@@ -29,16 +22,20 @@ describe('api/request', () => {
 
     expect(res).toEqual({ bar: 23 });
 
-    expect(fetch.mock.calls).toEqual([[
-      '/mentor-api/foo',
-      jasmine.objectContaining({ method: 'GET' }),
+    expect(axios.mock.calls).toEqual([[
+      jasmine.objectContaining({
+        url: '/mentor-api/foo',
+        method: 'GET',
+      }),
     ]]);
   });
 
   it('should reject api error responses as ApiResponseErrors', async () => {
-    const response = { ok: false };
+    const httpErr = new Error();
+    httpErr.message = 'o_O';
+    httpErr.response = 'fake-response';
 
-    fetch.mockReturnValue(Promise.resolve(response));
+    axios.mockReturnValue(Promise.reject(httpErr));
 
     const err = await request({
       url: '/foo',
@@ -46,8 +43,8 @@ describe('api/request', () => {
     })
     .catch(identity);
 
-    expect(err instanceof ApiResponseError).toBe(true);
-    expect(err.response).toEqual(response);
+    expect(err.message).toEqual(httpErr.message);
+    expect(err.response).toEqual(httpErr.response);
   });
 
   it('should support requests with json bodies', () => {
@@ -57,11 +54,9 @@ describe('api/request', () => {
       data: { bar: 23 },
     });
 
-    expect(fetch.mock.calls).toEqual([[
-      '/mentor-api/foo',
+    expect(request.mock.calls).toEqual([[
       jasmine.objectContaining({
-        method: 'POST',
-        data: JSON.stringify({ bar: 23 }),
+        data: { bar: 23 },
         headers: jasmine.objectContaining({
           'Content-Type': 'application/json',
         }),
@@ -76,9 +71,8 @@ describe('api/request', () => {
       params: { bar: 23 },
     });
 
-    expect(fetch.mock.calls).toEqual([[
-      '/mentor-api/foo?bar=23',
-      jasmine.objectContaining({ method: 'GET' }),
+    expect(axios.mock.calls).toEqual([[
+      jasmine.objectContaining({ params: { bar: 23 } }),
     ]]);
   });
 
@@ -92,21 +86,18 @@ describe('api/request', () => {
       },
     });
 
-    expect(fetch.mock.calls).toEqual([[
-      '/mentor-api/foo',
+    expect(axios.mock.calls).toEqual([[
       jasmine.objectContaining({
-        headers: jasmine.objectContaining({
-          Authorization: `Basic ${base64.encode('a@b.c:bar')}`,
-        }),
+        auth: {
+          username: 'a@b.c',
+          password: 'bar',
+        },
       }),
     ]]);
   });
 
   it('should support schemas', async () => {
-    fetch.mockReturnValue(Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve({ id: 23 }),
-    }));
+    axios.mockReturnValue(Promise.resolve(Promise.resolve({ data: { id: 23 } })));
 
     const res = await request({
       url: '/foo',
@@ -120,11 +111,8 @@ describe('api/request', () => {
     });
   });
 
-  it('support a response data parse function', async () => {
-    fetch.mockReturnValue(Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve({ bar: 23 }),
-    }));
+  fit('support a response data parse function', async () => {
+    axios.mockReturnValue(Promise.resolve({ data: { bar: 23 } }));
 
     const res = await request({
       url: '/foo',

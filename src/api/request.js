@@ -1,5 +1,4 @@
-import qs from 'query-string';
-import base64 from 'base-64';
+import axios from 'axios';
 import { isNull, identity } from 'lodash';
 import { normalize } from 'normalizr';
 import config from 'src/config';
@@ -7,24 +6,19 @@ import { omitNulls } from 'src/helpers';
 
 
 class ApiResponseError {
-  constructor(response) {
+  constructor(message, response = null) {
+    this.message = message;
     this.response = response;
   }
 }
 
-
 const { API_URL } = config;
 
 
-const serializeAuth = ({ email, password }) => {
-  const token = base64.encode(`${email}:${password}`);
-  return `Basic ${token}`;
-};
-
-
-const serializeQs = params => !isNull(params)
-  ? `?${qs.stringify(params)}`
-  : '';
+const serializeAuth = ({ email, password }) => ({
+  username: email,
+  password
+});
 
 
 const parseConf = ({
@@ -37,13 +31,13 @@ const parseConf = ({
   parse = identity,
   headers = {},
 }) => ({
-  url: API_URL + url + serializeQs(params),
-
   parse,
 
   schema,
 
   options: omitNulls({
+    url: API_URL + url,
+    params,
     method,
 
     headers: omitNulls({
@@ -52,11 +46,11 @@ const parseConf = ({
       'Content-Type': !isNull(data)
         ? 'application/json'
         : null,
-
-      Authorization: !isNull(auth)
-        ? serializeAuth(auth)
-        : null,
     }),
+
+    auth: !isNull(auth)
+      ? serializeAuth(auth)
+      : null,
 
     data: !isNull(data)
       ? JSON.stringify(data)
@@ -65,23 +59,21 @@ const parseConf = ({
 });
 
 
-const requestSuccess = (res, { parse, schema }) => res.json()
+const requestSuccess = (res, { parse, schema }) => Promise.resolve(res.data)
   .then(parse)
   .then(d => !isNull(schema)
     ? normalize(d, schema)
     : d);
 
 
-const requestFailure = res => Promise.reject(new ApiResponseError(res));
+const requestFailure = e => Promise.reject(new ApiResponseError(e.message, e.response));
 
 
 const request = rawConf => {
-  const { url, options, ...conf } = parseConf(rawConf);
+  const { options, ...conf } = parseConf(rawConf);
 
-  return fetch(url, options)
-    .then(res => res.ok
-      ? requestSuccess(res, conf)
-      : requestFailure(res));
+  return axios(options)
+    .then(res => requestSuccess(res, conf), requestFailure);
 };
 
 
