@@ -38,6 +38,7 @@ const parseConf = ({
   options: omitNulls({
     url: API_URL + url,
     params,
+    data,
     method,
 
     headers: omitNulls({
@@ -50,10 +51,6 @@ const parseConf = ({
 
     auth: !isNull(auth)
       ? serializeAuth(auth)
-      : null,
-
-    data: !isNull(data)
-      ? JSON.stringify(data)
       : null,
   }),
 });

@@ -54,7 +54,7 @@ describe('api/request', () => {
       data: { bar: 23 },
     });
 
-    expect(request.mock.calls).toEqual([[
+    expect(axios.mock.calls).toEqual([[
       jasmine.objectContaining({
         data: { bar: 23 },
         headers: jasmine.objectContaining({
@@ -111,7 +111,7 @@ describe('api/request', () => {
     });
   });
 
-  fit('support a response data parse function', async () => {
+  it('support a response data parse function', async () => {
     axios.mockReturnValue(Promise.resolve({ data: { bar: 23 } }));
 
     const res = await request({
