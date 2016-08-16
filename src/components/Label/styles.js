@@ -1,11 +1,9 @@
-import React, { PropTypes } from 'react';
 import { StyleSheet } from 'react-native';
 
 import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 import colors from 'src/constants/colors';
-import Text from './Text';
 
-const styles = StyleSheet.create({
+export default StyleSheet.create({
   label: {
     fontFamily: FONT.BOLD,
     fontWeight: FONT_WEIGHT.BOLD,
@@ -15,12 +13,3 @@ const styles = StyleSheet.create({
     marginBottom: 9,
   },
 });
-
-const Label = ({ title, style }) =>
-  <Text style={[styles.label, style]}>{title}</Text>;
-
-Label.propTypes = {
-  title: PropTypes.string.isRequired,
-  style: PropTypes.any,
-};
-export default Label;

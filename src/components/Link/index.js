@@ -1,16 +1,6 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-
-import colors from 'src/constants/colors';
-import Text from './Text';
-
-
-const styles = StyleSheet.create({
-  link: {
-    fontSize: 14,
-    color: colors.LINK_TEXT,
-  },
-});
+import Text from 'src/components/Text';
+import styles from './styles';
 
 const Link = (props) =>
   <Text style={[styles.link, props.style]}>{props.children}</Text>;

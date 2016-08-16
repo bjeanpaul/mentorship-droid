@@ -1,14 +1,8 @@
 import React from 'react';
-import { View, StyleSheet, StatusBar } from 'react-native';
+import { View, StatusBar } from 'react-native';
+
+import styles from './styles';
 import colors from 'src/constants/colors';
-
-
-const styles = StyleSheet.create({
-  view: {
-    backgroundColor: colors.DEFAULT_BG,
-    flex: 1,
-  },
-});
 
 const BaseView = ({
   children,
