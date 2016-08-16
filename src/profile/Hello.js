@@ -3,6 +3,7 @@ import { View, Image, StyleSheet } from 'react-native';
 
 import { BaseView, Text, Button } from 'src/components';
 import { FONT, FONT_WEIGHT } from 'src/constants/styles';
+import colors from 'src/constants/colors';
 import IMAGE_PROFILE from 'app/assets/Profile.png';
 
 const styles = StyleSheet.create({
@@ -20,10 +21,10 @@ const styles = StyleSheet.create({
     fontFamily: FONT.MEDIUM,
     fontWeight: FONT_WEIGHT.MEDIUM,
     fontSize: 32,
-    color: '#022428',
+    color: colors.PROFILE_HELLO_WELCOME_TEXT,
   },
   intro: {
-    color: '#80979a',
+    color: colors.PROFILE_HELLO_INTRO_TEXT,
     fontSize: 18,
     paddingLeft: 24,
     paddingRight: 24,

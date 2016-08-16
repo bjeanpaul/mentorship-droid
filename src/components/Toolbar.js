@@ -3,7 +3,7 @@ import { View, Image, StyleSheet } from 'react-native';
 
 import Text from './Text';
 import { FONT, FONT_WEIGHT } from 'src/constants/styles.js';
-import COLOR from 'src/constants/colors.js';
+import colors from 'src/constants/colors.js';
 const IMG_BACK = require('app/assets/Back_Gray.png');
 
 
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: FONT.MEDIUM,
     fontWeight: FONT_WEIGHT.MEDIUM,
-    color: COLOR.TOOLBAR_TITLE,
+    color: colors.TOOLBAR_TITLE,
   },
 });
 

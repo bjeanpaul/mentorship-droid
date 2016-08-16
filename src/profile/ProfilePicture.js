@@ -3,7 +3,7 @@ import { View, Image, StyleSheet } from 'react-native';
 
 import { BaseView, Toolbar, Text } from 'src/components';
 import IMAGE_PROFILE_ADD from 'app/assets/Profile_Add.png';
-
+import colors from 'src/constants/colors';
 
 const styles = StyleSheet.create({
   imageContainer: {
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     marginBottom: 19,
   },
   imageLabel: {
-    color: '#9fb1b3',
+    color: colors.PROFILE_PICTURE_CHOOSE_PHOTO_TEXT,
     fontSize: 18,
   },
 });

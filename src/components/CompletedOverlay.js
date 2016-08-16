@@ -2,14 +2,14 @@ import React, { PropTypes } from 'react';
 import { View, StyleSheet, Image } from 'react-native';
 import { BaseView, Text, Button } from 'src/components';
 
-import COLORS from 'src/constants/colors';
+import colors from 'src/constants/colors';
 import IMAGE_DISMISS_ICON from 'app/assets/close-light.png';
 import IMAGE_DONE from 'app/assets/done-icon.png';
 
 
 const styles = StyleSheet.create({
   baseView: {
-    backgroundColor: COLORS.OVERLAY_BG,
+    backgroundColor: colors.OVERLAY_BG,
   },
   content: {
     flex: 0.7,
@@ -36,11 +36,11 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    color: COLORS.OVERLAY_TEXT,
+    color: colors.OVERLAY_TEXT,
   },
   message: {
     fontSize: 24,
-    color: COLORS.OVERLAY_MESSAGE,
+    color: colors.OVERLAY_MESSAGE,
   },
   footerText: {
     margin: 16,
@@ -60,7 +60,7 @@ const CompletedOverlay = ({
 }) => (
   <BaseView
     style={styles.baseView}
-    statusBarBackgroundColor={COLORS.OVERLAY_STATUS_BG}
+    statusBarBackgroundColor={colors.OVERLAY_STATUS_BG}
   >
     <View style={styles.content}>
       <Image

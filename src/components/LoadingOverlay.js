@@ -4,14 +4,14 @@ import { StyleSheet } from 'react-native';
 import { BaseView, Text, Image } from 'src/components';
 import SpinningImage from './SpinningImage';
 
-import COLORS from 'src/constants/colors';
+import colors from 'src/constants/colors';
 import IMAGE_DISMISS_ICON from 'app/assets/close-light.png';
 
 
 const styles = StyleSheet.create({
   baseView: {
     padding: 24,
-    backgroundColor: COLORS.OVERLAY_BG,
+    backgroundColor: colors.OVERLAY_BG,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    color: COLORS.OVERLAY_TEXT,
+    color: colors.OVERLAY_TEXT,
     paddingBottom: 80,
   },
 });
@@ -44,7 +44,7 @@ const LoadingOverlay = ({
 
   return (
     <BaseView
-      statusBarBackgroundColor={COLORS.OVERLAY_STATUS_BG}
+      statusBarBackgroundColor={colors.OVERLAY_STATUS_BG}
       style={styles.baseView}
     >
       {dismissButton}
