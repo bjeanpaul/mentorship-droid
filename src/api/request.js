@@ -56,6 +56,24 @@ const parseConf = ({
 });
 
 
+const imageData = ({
+  path = null,
+  name = null,
+  type = null,
+  key = 'image',
+}) => {
+  const d = new FormData();
+
+  d.append(key, {
+    uri: path,
+    name,
+    type,
+  });
+
+  return d;
+};
+
+
 const requestSuccess = (res, { parse, schema }) => Promise.resolve(res.data)
   .then(parse)
   .then(d => !isNull(schema)
@@ -77,6 +95,7 @@ const request = rawConf => {
 export default request;
 
 export {
+  imageData,
   serializeAuth,
   ApiResponseError,
 };
