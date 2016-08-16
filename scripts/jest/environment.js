@@ -1,5 +1,4 @@
 import reactNative from 'react-native-mock';
-import 'isomorphic-fetch';
 import nock from 'nock';
 import config from 'src/config';
 
