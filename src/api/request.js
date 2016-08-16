@@ -17,7 +17,7 @@ const { API_URL } = config;
 
 const serializeAuth = ({ email, password }) => ({
   username: email,
-  password
+  password,
 });
 
 
