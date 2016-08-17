@@ -3,6 +3,7 @@ jest.mock('src/api/profiles');
 import { capture } from 'scripts/helpers';
 import { fakeContext } from 'scripts/helpers';
 import { noop } from 'lodash';
+import * as constants from 'src/profile/constants';
 import * as api from 'src/api';
 
 import {
@@ -10,20 +11,6 @@ import {
   updateProfile,
   uploadProfileImage,
 } from 'src/profile/actions';
-
-import {
-  PROFILE_FETCH_REQUEST,
-  PROFILE_FETCH_SUCCESS,
-  PROFILE_FETCH_FAILURE,
-
-  PROFILE_UPDATE_REQUEST,
-  PROFILE_UPDATE_SUCCESS,
-  PROFILE_UPDATE_FAILURE,
-
-  PROFILE_IMAGE_UPDATE_REQUEST,
-  PROFILE_IMAGE_UPDATE_SUCCESS,
-  PROFILE_IMAGE_UPDATE_FAILURE,
-} from 'src/profile/constants';
 
 const { ApiResponseError } = api;
 
@@ -39,7 +26,7 @@ describe('profile/actions', () => {
       const [action] = await capture(fetchProfile(23), fakeContext());
 
       expect(action).toEqual({
-        type: PROFILE_FETCH_REQUEST,
+        type: constants.PROFILE_FETCH_REQUEST,
       });
     });
 
@@ -49,7 +36,7 @@ describe('profile/actions', () => {
       const [_request, action] = await capture(fetchProfile(23), fakeContext());
 
       expect(action).toEqual({
-        type: PROFILE_FETCH_SUCCESS,
+        type: constants.PROFILE_FETCH_SUCCESS,
         payload: { entities: { result: 23 } },
       });
     });
@@ -60,7 +47,7 @@ describe('profile/actions', () => {
       const [_request, action] = await capture(fetchProfile(23), fakeContext());
 
       expect(action).toEqual({
-        type: PROFILE_FETCH_FAILURE,
+        type: constants.PROFILE_FETCH_FAILURE,
       });
     });
 
@@ -84,7 +71,7 @@ describe('profile/actions', () => {
       const [action] = await capture(updateProfile(23, { fake: 'profile' }), ctx);
 
       expect(action).toEqual({
-        type: PROFILE_UPDATE_REQUEST,
+        type: constants.PROFILE_UPDATE_REQUEST,
       });
     });
 
@@ -95,7 +82,7 @@ describe('profile/actions', () => {
       const [_request, action] = await capture(updateProfile(23, { fake: 'profile' }), ctx);
 
       expect(action).toEqual({
-        type: PROFILE_UPDATE_SUCCESS,
+        type: constants.PROFILE_UPDATE_SUCCESS,
       });
     });
 
@@ -106,7 +93,7 @@ describe('profile/actions', () => {
       const [_request, action] = await capture(updateProfile(23, { fake: 'profile' }), ctx);
 
       expect(action).toEqual({
-        type: PROFILE_UPDATE_FAILURE,
+        type: constants.PROFILE_UPDATE_FAILURE,
       });
     });
 
@@ -130,7 +117,7 @@ describe('profile/actions', () => {
       const [action] = await capture(uploadProfileImage(23, 'foo.png'), ctx);
 
       expect(action).toEqual({
-        type: PROFILE_IMAGE_UPDATE_REQUEST,
+        type: constants.PROFILE_IMAGE_UPDATE_REQUEST,
       });
     });
 
@@ -141,7 +128,7 @@ describe('profile/actions', () => {
       const [_request, action] = await capture(uploadProfileImage(23, 'foo.png'), ctx);
 
       expect(action).toEqual({
-        type: PROFILE_IMAGE_UPDATE_SUCCESS,
+        type: constants.PROFILE_IMAGE_UPDATE_SUCCESS,
       });
     });
 
@@ -152,7 +139,7 @@ describe('profile/actions', () => {
       const [_request, action] = await capture(uploadProfileImage(23, 'foo.png'), ctx);
 
       expect(action).toEqual({
-        type: PROFILE_IMAGE_UPDATE_FAILURE,
+        type: constants.PROFILE_IMAGE_UPDATE_FAILURE,
       });
     });
 
