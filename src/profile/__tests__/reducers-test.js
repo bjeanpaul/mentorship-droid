@@ -61,17 +61,23 @@ describe('profile/reducer', () => {
       expect(isLoading).toBe(false);
     });
 
-    it('should update the username', () => {
-      const { username } = reduce({
+    it('should update the profile data', () => {
+      const res = reduce({
         isLoading: true,
       }, {
         type: constants.PROFILE_FETCH_SUCCESS,
         payload: {
-          data: fakeProfileData({ username: 'foo' }),
+          data: fakeProfileData({
+            username: 'foo',
+            name: 'bar',
+          }),
         },
       });
 
-      expect(username).toEqual('foo');
+      expect(res).toEqual(jasmine.objectContaining({
+        username: 'foo',
+        name: 'bar',
+      }));
     });
   });
 

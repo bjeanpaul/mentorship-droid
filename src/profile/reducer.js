@@ -4,8 +4,6 @@ import * as constants from 'src/profile/constants';
 const profile = (
   state = {
     isLoading: false,
-    username: null,
-    errorMessage: null,
   },
   action
 ) => {
@@ -35,11 +33,9 @@ const profile = (
         }
       } = action;
 
-      const { username } = profiles[id];
-
       return {
         ...state,
-        username,
+        ...profiles[id],
         isLoading: false,
       };
     }
