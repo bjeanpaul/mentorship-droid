@@ -1,8 +1,3 @@
-jest
-  .unmock('src/api/request')
-  .unmock('src/auth/reducer')
-  .unmock('src/auth/constants');
-
 import reduce from 'src/auth/reducer';
 import { serializeAuth } from 'src/api/request';
 

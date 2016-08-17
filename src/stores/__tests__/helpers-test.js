@@ -1,6 +1,3 @@
-jest
-  .unmock('src/stores/helpers');
-
 import { getContext } from 'src/stores/helpers';
 import initialState from 'src/stores/initialState';
 

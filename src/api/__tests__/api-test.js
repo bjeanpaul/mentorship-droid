@@ -1,6 +1,5 @@
-jest
-  .unmock('src/api/schemas')
-  .unmock('src/api');
+jest.mock('src/api/request');
+
 
 import { identity } from 'lodash';
 import { arrayOf } from 'normalizr';
