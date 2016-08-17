@@ -1,4 +1,4 @@
-jest.mock('src/api');
+jest.mock('src/api/profiles');
 
 
 import { login } from 'src/auth/actions';
@@ -21,7 +21,7 @@ describe('auth/actions', () => {
 
   describe('login', () => {
     it('should dispatch request', async () => {
-      const [action, ..._rest] = await capture(login('a@b.org', '1337'));
+      const [action] = await capture(login('a@b.org', '1337'));
 
       expect(action).toEqual({
         type: AUTH_LOGIN_REQUEST,
