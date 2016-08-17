@@ -1,19 +1,13 @@
 import React from 'react';
-import { View, StyleSheet, StatusBar } from 'react-native';
-import COLOR from 'src/constants/colors';
+import { View, StatusBar } from 'react-native';
 
-
-const styles = StyleSheet.create({
-  view: {
-    backgroundColor: COLOR.DEFAULT_BG,
-    flex: 1,
-  },
-});
+import styles from './styles';
+import colors from 'src/constants/colors';
 
 const BaseView = ({
   children,
   style,
-  statusBarBackgroundColor = COLOR.DEFAULT_STATUS_BG,
+  statusBarBackgroundColor = colors.DEFAULT_STATUS_BG,
 }) => (
   <View style={[styles.view, style]}>
     { statusBarBackgroundColor

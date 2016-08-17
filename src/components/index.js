@@ -7,6 +7,8 @@ import MultiLineTextInput from './MultiLineTextInput';
 import NavigationBar from './NavigationBar';
 import BaseView from './BaseView';
 import Toolbar from './Toolbar';
+import OverlayCompleted from './Overlay/Completed';
+import OverlayLoading from './Overlay/Loading';
 
 export {
   BaseView,
@@ -19,4 +21,6 @@ export {
   MultiLineTextInput,
   NavigationBar,
   Toolbar,
+  OverlayCompleted,
+  OverlayLoading,
 };

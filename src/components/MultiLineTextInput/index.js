@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TextInput from './TextInput';
+import TextInput from 'src/components/TextInput';
 
 
 export default class MultiLineTextInput extends React.Component {

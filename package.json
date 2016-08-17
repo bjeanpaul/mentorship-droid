@@ -10,12 +10,11 @@
     "ci": "npm run lint && npm test"
   },
   "dependencies": {
+    "axios": "^0.13.1",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
-    "base-64": "^0.1.0",
     "lodash": "^4.14.0",
     "moment": "^2.12.0",
     "normalizr": "^2.2.1",
-    "query-string": "^4.2.2",
     "react": "~15.2.1",
     "react-native": "^0.31.0",
     "react-native-calendar": "https://github.com/peterp/react-native-calendar/tarball/43ef42c6a5819377a4f6fd32f2a3f1cce73ab735",
@@ -45,6 +44,7 @@
   "jest": {
     "setupEnvScriptFile": "scripts/jest/environment.js",
     "unmockedModulePathPatterns": [
+      "axios",
       "isomorphic-fetch",
       "nock",
       "base-64",

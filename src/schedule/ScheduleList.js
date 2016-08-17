@@ -4,17 +4,18 @@ import { View, StatusBar, StyleSheet } from 'react-native';
 
 import Calendar from './ScheduleListCalendar';
 import { BaseView, Label, Text } from 'src/components';
+import colors from 'src/constants/colors';
 
 const styles = StyleSheet.create({
   callInfoContainer: {
     flex: 0.25,
     padding: 24,
-    backgroundColor: '#dfe5e6',
+    backgroundColor: colors.SCHEDULE_INFO_CALL_INFO_BG,
     justifyContent: 'center',
   },
   callInfoText: {
     textAlign: 'left',
-    color: '#003035',
+    color: colors.SCHEDULE_LIST_CALL_INFO_TEXT,
     fontSize: 18,
   },
 });

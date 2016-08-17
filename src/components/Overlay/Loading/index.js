@@ -1,31 +1,9 @@
 import React, { PropTypes } from 'react';
-import { StyleSheet } from 'react-native';
+import { BaseView, Text, Image, SpinningImage } from 'src/components';
+import styles from './styles';
+import colors from 'src/constants/colors';
 
-import { BaseView, Text, Image } from 'src/components';
-import SpinningImage from './SpinningImage';
-
-import COLORS from 'src/constants/colors';
 import IMAGE_DISMISS_ICON from 'app/assets/close-light.png';
-
-
-const styles = StyleSheet.create({
-  baseView: {
-    padding: 24,
-    backgroundColor: COLORS.OVERLAY_BG,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  dismissButton: {
-    position: 'absolute',
-    left: 16,
-    top: 16,
-  },
-  title: {
-    fontSize: 20,
-    color: COLORS.OVERLAY_TEXT,
-    paddingBottom: 80,
-  },
-});
 
 const LoadingOverlay = ({
   title,
@@ -44,7 +22,7 @@ const LoadingOverlay = ({
 
   return (
     <BaseView
-      statusBarBackgroundColor={COLORS.OVERLAY_STATUS_BG}
+      statusBarBackgroundColor={colors.OVERLAY_STATUS_BG}
       style={styles.baseView}
     >
       {dismissButton}
