@@ -1,4 +1,5 @@
-jest.unmock('src/api/request');
+jest.mock('axios');
+
 
 import axios from 'axios';
 import request, { imageData, ApiResponseError } from 'src/api/request';

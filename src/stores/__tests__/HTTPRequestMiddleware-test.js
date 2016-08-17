@@ -1,8 +1,4 @@
 /* eslint-disable no-undef */
-jest.unmock('../HTTPRequestMiddleware');
-jest.unmock('redux-mock-store');
-jest.unmock('redux-thunk');
-
 
 import HTTPRequestMiddleware from '../HTTPRequestMiddleware';
 import configureMockStore from 'redux-mock-store';

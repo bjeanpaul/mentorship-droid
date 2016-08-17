@@ -1,6 +1,5 @@
-jest
-  .unmock('src/auth/actions')
-  .unmock('src/auth/constants');
+jest.mock('src/api');
+
 
 import { login } from 'src/auth/actions';
 import { capture } from 'scripts/helpers';

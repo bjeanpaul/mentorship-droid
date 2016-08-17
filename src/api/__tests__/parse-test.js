@@ -1,5 +1,3 @@
-jest.unmock('src/api/parse');
-
 import { parseResults } from 'src/api/parse';
 
 

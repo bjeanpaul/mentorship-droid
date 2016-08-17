@@ -1,6 +1,3 @@
-jest
-  .unmock('src/stores/contextMiddleware');
-
 import contextMiddleware from 'src/stores/contextMiddleware';
 
 

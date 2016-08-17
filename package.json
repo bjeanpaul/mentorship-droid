@@ -43,26 +43,7 @@
   },
   "jest": {
     "setupEnvScriptFile": "scripts/jest/environment.js",
-    "unmockedModulePathPatterns": [
-      "axios",
-      "isomorphic-fetch",
-      "nock",
-      "base-64",
-      "lodash",
-      "normalizr",
-      "query-string",
-      "react",
-      "react-dom",
-      "react-addons-test-utils",
-      "enzyme",
-      "redux-mock-store",
-      "redux-thunk",
-      "react-native-mock",
-      "src/configuration",
-      "src/helpers",
-      "src/config",
-      "scripts/helpers"
-    ],
+    "automock": false,
     "globals": {
       "__DEV__": true,
       "__TEST__": true
