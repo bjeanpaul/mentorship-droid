@@ -1,67 +1,37 @@
-import { normalize, Schema, arrayOf } from 'normalizr';
-import { generateActionCreators } from 'src/helpers';
-import { getBaseURL, getAuthorizationToken } from 'src/configuration';
+import { trap } from 'src/helpers';
+import { ApiResponseError } from 'src/api';
+import { uploadProfileImage as apiUploadProfileImage } from 'src/api';
 
-import actionTypes from './Constants';
+import {
+  PROFILE_IMAGE_UPDATE_REQUEST,
+  PROFILE_IMAGE_UPDATE_SUCCESS,
+  PROFILE_IMAGE_UPDATE_FAILURE,
+} from 'src/profile/constants';
 
-// TODO: Create an action to fetch our own profile.
 
-const profileSchema = new Schema('profile');
-
-const actions = generateActionCreators({
-  resourcePath: 'profile',
-  actionTypes,
-  normalizeJSON: ({ json }) => {
-    if (json.results) {
-      return normalize(json.results, arrayOf(profileSchema));
-    }
-    return normalize(json, profileSchema);
-  },
+const uploadProfileImageRequest = () => ({
+  type: PROFILE_IMAGE_UPDATE_REQUEST,
 });
 
 
-const uploadImage = (path, onSuccess, onFailure) => (dispatch, _, getState) => {
-  dispatch({
-    type: actionTypes.image.updateRequest,
-  });
-
-  const formData = new FormData();
-  formData.append('image', {
-    uri: path,
-    name: 'image.jpg',
-    type: 'image/png',
-  });
-
-  const request = new XMLHttpRequest();
-  request.onreadystatechange = () => {
-    if (request.readyState !== 4) {
-      return;
-    }
-    if (request.status === 201) {
-      dispatch({
-        type: actionTypes.image.updateSuccess,
-      });
-      if (onSuccess) {
-        onSuccess();
-      }
-    } else {
-      dispatch({
-        type: actionTypes.image.updateFailure,
-      });
-      if (onFailure) {
-        onFailure();
-      }
-    }
-  };
-
-  request.open('PUT', `${getBaseURL()}/profile/1/image/`);
-  request.setRequestHeader('Authorization', `Basic ${getAuthorizationToken(getState())}`);
-  request.send(formData);
-};
+const uploadProfileImageSuccess = () => ({
+  type: PROFILE_IMAGE_UPDATE_SUCCESS,
+});
 
 
-export default {
-  fetch: actions.fetch,
-  update: actions.update,
-  uploadImage,
+const uploadProfileImageFailure = () => ({
+  type: PROFILE_IMAGE_UPDATE_FAILURE,
+});
+
+
+const uploadProfileImage = (id, path) => (dispatch, { auth }) => Promise.resolve()
+  .then(() => uploadProfileImageRequest())
+  .then(dispatch)
+  .then(() => apiUploadProfileImage(id, path, auth))
+  .then(uploadProfileImageSuccess, trap(ApiResponseError, uploadProfileImageFailure))
+  .then(dispatch);
+
+
+export {
+  uploadProfileImage,
 };

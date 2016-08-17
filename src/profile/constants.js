@@ -1,6 +1,10 @@
-import { generateActionTypes } from 'src/helpers';
+const PROFILE_IMAGE_UPDATE_REQUEST = 'PROFILE_IMAGE_UPDATE_REQUEST';
+const PROFILE_IMAGE_UPDATE_SUCCESS = 'PROFILE_IMAGE_UPDATE_SUCCESS';
+const PROFILE_IMAGE_UPDATE_FAILURE = 'PROFILE_IMAGE_UPDATE_FAILURE';
 
 
-export const actionTypes = generateActionTypes('profile', ['fetch', 'update']);
-actionTypes.image = generateActionTypes('profile/image', ['update']);
-export default actionTypes;
+export {
+  PROFILE_IMAGE_UPDATE_REQUEST,
+  PROFILE_IMAGE_UPDATE_SUCCESS,
+  PROFILE_IMAGE_UPDATE_FAILURE,
+};
