@@ -11,6 +11,7 @@ const httpRequestMiddleware = new HTTPRequestMiddleware({
 
 import auth from 'src/auth/reducer';
 
+import initialState from 'src/stores/initalState';
 
 const entities = (state = {}, action) => {
   if (action.payload && action.payload.entities) {
@@ -24,10 +25,10 @@ const rootReducer = combineReducers({
   auth,
 });
 
-export default function configureStore(initialState = {}) {
+export default function configureStore() {
   return createStore(
     rootReducer,
-    initialState,
+    initialState(),
     applyMiddleware(
       thunkMiddleware,
       httpRequestMiddleware.apply
