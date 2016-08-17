@@ -20,7 +20,7 @@ const actions = generateActionCreators({
 });
 
 
-const uploadImage = (path, onSuccess, onFailure) => (dispatch, getState) => {
+const uploadImage = (path, onSuccess, onFailure) => (dispatch, _, getState) => {
   dispatch({
     type: actionTypes.image.updateRequest,
   });
