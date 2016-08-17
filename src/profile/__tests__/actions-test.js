@@ -19,7 +19,7 @@ describe('profile/actions', () => {
   describe('fetchProfile', () => {
     beforeEach(() => {
       api.getProfile.mockClear();
-      api.getProfile.mockReturnValue(Promise.resolve({ result: 23 }));
+      api.getProfile.mockReturnValue(Promise.resolve({ fake: 'data' }));
     });
 
     it('should dispatch request', async () => {
@@ -31,13 +31,14 @@ describe('profile/actions', () => {
     });
 
     it('should dispatch success for successful fetches', async () => {
-      api.getProfile.mockReturnValue(Promise.resolve({ result: 23 }));
+      const data = { fake: 'data' };
+      api.getProfile.mockReturnValue(Promise.resolve(data));
 
       const [_request, action] = await capture(fetchProfile(23), fakeContext());
 
       expect(action).toEqual({
         type: constants.PROFILE_FETCH_SUCCESS,
-        payload: { entities: { result: 23 } },
+        payload: { data },
       });
     });
 

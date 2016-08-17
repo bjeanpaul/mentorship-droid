@@ -10,9 +10,9 @@ const fetchProfileRequest = () => ({
 });
 
 
-const fetchProfileSuccess = entities => ({
+const fetchProfileSuccess = data => ({
   type: constants.PROFILE_FETCH_SUCCESS,
-  payload: { entities },
+  payload: { data },
 });
 
 
