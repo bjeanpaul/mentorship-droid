@@ -1,4 +1,4 @@
-jest.mock('src/api');
+jest.mock('src/api/profiles');
 
 
 import { login } from 'src/auth/actions';
