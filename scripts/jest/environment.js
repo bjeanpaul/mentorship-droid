@@ -2,12 +2,17 @@ import reactNative from 'react-native-mock';
 import 'isomorphic-fetch';
 import nock from 'nock';
 import config from 'src/config';
+import FormData from 'react-native/Libraries/Network/FormData';
+
+// automocking doesn't seem to work for axios
+jest.setMock('axios', jest.fn());
 
 jest.setMock('react-native', reactNative);
 
-global.nock = nock;
+// use react-native's FormData implementation, jsdom's implementation expects
+// form data values to only be strings
+global.FormData = FormData;
 
-// TODO don't use original `fetch` once we aren't using nock anymore
-global.fetch = jest.fn(fetch);
+global.nock = nock;
 
 config.API_URL = '/mentor-api';
