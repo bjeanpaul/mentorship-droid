@@ -1,5 +1,5 @@
 const initialState = () => ({
-  auth: null
+  auth: null,
 });
 
 
