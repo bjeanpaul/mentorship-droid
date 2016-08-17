@@ -69,7 +69,7 @@ describe('profile/actions', () => {
 
     it('should dispatch request', async () => {
       const ctx = fakeContext();
-      const [action] = await capture(updateProfile(23, { fake: 'profile' }), ctx);
+      const [action] = await capture(updateProfile(23, fakeProfileData()), ctx);
 
       expect(action).toEqual({
         type: constants.PROFILE_UPDATE_REQUEST,
@@ -80,7 +80,7 @@ describe('profile/actions', () => {
       api.updateProfile.mockReturnValue(Promise.resolve(null));
 
       const ctx = fakeContext();
-      const [_request, action] = await capture(updateProfile(23, { fake: 'profile' }), ctx);
+      const [_request, action] = await capture(updateProfile(23, fakeProfileData()), ctx);
 
       expect(action).toEqual({
         type: constants.PROFILE_UPDATE_SUCCESS,
@@ -91,7 +91,7 @@ describe('profile/actions', () => {
       api.updateProfile.mockReturnValue(Promise.reject(new ApiResponseError('o_O')));
 
       const ctx = fakeContext();
-      const [_request, action] = await capture(updateProfile(23, { fake: 'profile' }), ctx);
+      const [_request, action] = await capture(updateProfile(23, fakeProfileData()), ctx);
 
       expect(action).toEqual({
         type: constants.PROFILE_UPDATE_FAILURE,
@@ -102,8 +102,8 @@ describe('profile/actions', () => {
       const ctx = fakeContext();
       const { auth } = ctx;
 
-      await updateProfile(23, { fake: 'profile' })(noop, ctx);
-      expect(api.updateProfile.mock.calls).toEqual([[23, { fake: 'profile' }, auth]]);
+      await updateProfile(23, fakeProfileData())(noop, ctx);
+      expect(api.updateProfile.mock.calls).toEqual([[23, fakeProfileData(), auth]]);
     });
   });
 

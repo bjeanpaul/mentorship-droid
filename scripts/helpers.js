@@ -20,8 +20,4 @@ export const fakeContext = () => ({
 });
 
 
-export const fakeProfileData = (overrides = {}) => normalize({
-  id: 23,
-  username: 'foo',
-  ...overrides,
-}, Profile);
+export const fakeProfileData = (data = { id: 23 }) => normalize(data, Profile);

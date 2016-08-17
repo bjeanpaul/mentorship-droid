@@ -61,15 +61,17 @@ describe('profile/reducer', () => {
         type: constants.PROFILE_FETCH_SUCCESS,
         payload: {
           data: fakeProfileData({
-            username: 'foo',
+            id: 23,
             name: 'bar',
+            username: 'foo',
           }),
         },
       });
 
       expect(res).toEqual(jasmine.objectContaining({
-        username: 'foo',
+        id: 23,
         name: 'bar',
+        username: 'foo',
       }));
     });
   });
