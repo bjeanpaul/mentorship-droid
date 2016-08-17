@@ -29,8 +29,8 @@ const profile = (
           data: {
             result: id,
             entities: { profiles },
-          }
-        }
+          },
+        },
       } = action;
 
       return {

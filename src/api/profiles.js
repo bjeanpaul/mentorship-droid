@@ -15,7 +15,7 @@ export const listProfiles = auth => request({
 
 
 export const createProfile = (data, auth) => request({
-  url: `/profile/`,
+  url: '/profile/',
   method: 'POST',
   data,
   auth,
