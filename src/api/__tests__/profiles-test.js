@@ -11,7 +11,7 @@ import { parseResults } from 'src/api/parse';
 import { listProfiles, uploadProfileImage } from 'src/api';
 
 
-describe('api', () => {
+describe('api/profiles', () => {
   beforeEach(() => {
     imageData.mockImplementation(identity);
     imageData.mockClear();
