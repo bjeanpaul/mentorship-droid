@@ -6,6 +6,10 @@ import {
   PROFILE_FETCH_SUCCESS,
   PROFILE_FETCH_FAILURE,
 
+  PROFILE_UPDATE_REQUEST,
+  PROFILE_UPDATE_SUCCESS,
+  PROFILE_UPDATE_FAILURE,
+
   PROFILE_IMAGE_UPDATE_REQUEST,
   PROFILE_IMAGE_UPDATE_SUCCESS,
   PROFILE_IMAGE_UPDATE_FAILURE,
@@ -38,6 +42,29 @@ const fetchProfile = id => (dispatch, { auth }) => Promise.resolve()
   .then(dispatch);
 
 
+const updateProfileRequest = () => ({
+  type: PROFILE_UPDATE_REQUEST,
+});
+
+
+const updateProfileSuccess = () => ({
+  type: PROFILE_UPDATE_SUCCESS,
+});
+
+
+const updateProfileFailure = () => ({
+  type: PROFILE_UPDATE_FAILURE,
+});
+
+
+const updateProfile = (id, data) => (dispatch, { auth }) => Promise.resolve()
+  .then(() => updateProfileRequest())
+  .then(dispatch)
+  .then(() => api.updateProfile(id, data, auth))
+  .then(updateProfileSuccess, trap(ApiResponseError, updateProfileFailure))
+  .then(dispatch);
+
+
 const uploadProfileImageRequest = () => ({
   type: PROFILE_IMAGE_UPDATE_REQUEST,
 });
@@ -63,5 +90,6 @@ const uploadProfileImage = (id, path) => (dispatch, { auth }) => Promise.resolve
 
 export {
   fetchProfile,
+  updateProfile,
   uploadProfileImage,
 };
