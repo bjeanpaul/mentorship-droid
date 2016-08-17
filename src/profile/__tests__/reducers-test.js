@@ -1,16 +1,9 @@
 import reduce from 'src/profile/reducer';
 import * as constants from 'src/profile/constants';
-import { Profile } from 'src/api';
-import { normalize } from 'normalizr';
+import { fakeProfileData } from 'scripts/helpers';
 
 
 describe('profile/reducer', () => {
-  const fakeProfileData = (overrides = {}) => normalize({
-    id: 23,
-    username: 'foo',
-    ...overrides,
-  }, Profile);
-
   describe('PROFILE_FETCH_REQUEST', () => {
     it('should mark the state as loading', () => {
       const { isLoading } = reduce({

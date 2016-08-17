@@ -1,7 +1,7 @@
 jest.mock('src/api/profiles');
 
 import { capture } from 'scripts/helpers';
-import { fakeContext } from 'scripts/helpers';
+import { fakeContext, fakeProfileData } from 'scripts/helpers';
 import { noop } from 'lodash';
 import * as constants from 'src/profile/constants';
 import * as api from 'src/api';
@@ -19,7 +19,7 @@ describe('profile/actions', () => {
   describe('fetchProfile', () => {
     beforeEach(() => {
       api.getProfile.mockClear();
-      api.getProfile.mockReturnValue(Promise.resolve({ fake: 'data' }));
+      api.getProfile.mockReturnValue(Promise.resolve(fakeProfileData()));
     });
 
     it('should dispatch request', async () => {
@@ -31,7 +31,7 @@ describe('profile/actions', () => {
     });
 
     it('should dispatch success for successful fetches', async () => {
-      const data = { fake: 'data' };
+      const data = fakeProfileData();
       api.getProfile.mockReturnValue(Promise.resolve(data));
 
       const [_request, action] = await capture(fetchProfile(23), fakeContext());
