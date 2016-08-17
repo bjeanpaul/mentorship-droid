@@ -3,11 +3,19 @@ jest.mock('src/api/request');
 
 import { identity } from 'lodash';
 import { arrayOf } from 'normalizr';
-import { fakeValue } from 'scripts/helpers';
+import { fakeAuth } from 'scripts/helpers';
 import request, { imageData } from 'src/api/request';
 import { Profile } from 'src/api/schemas';
 import { parseResults } from 'src/api/parse';
-import { listProfiles, uploadProfileImage } from 'src/api';
+
+import {
+  listProfiles,
+  createProfile,
+  getProfile,
+  updateProfile,
+  removeProfile,
+  uploadProfileImage
+} from 'src/api';
 
 
 describe('api/profiles', () => {
@@ -21,19 +29,56 @@ describe('api/profiles', () => {
 
   describe('listProfiles', () => {
     it('should construct a request for listing profiles', () => {
-      expect(listProfiles({
-        email: 'a@b.org',
-        password: '1337',
-      }))
-      .toEqual({
-        url: '/profile',
+      expect(listProfiles(fakeAuth())).toEqual({
+        url: '/profile/',
+        method: 'GET',
         schema: arrayOf(Profile),
         params: { email: 'a@b.org' },
         parse: parseResults,
-        auth: {
-          email: 'a@b.org',
-          password: '1337',
-        },
+        auth: fakeAuth(),
+      });
+    });
+  });
+
+  describe('createProfile', () => {
+    it('should construct a request for creating a profile', () => {
+      expect(createProfile({ fake: 'profile' }, fakeAuth())).toEqual({
+        url: '/profile/',
+        method: 'POST',
+        data: { fake: 'profile' },
+        auth: fakeAuth(),
+      });
+    });
+  });
+
+  describe('getProfile', () => {
+    it('should construct a request for getting a profile', () => {
+      expect(getProfile(23, fakeAuth())).toEqual({
+        url: '/profile/23/',
+        method: 'GET',
+        auth: fakeAuth(),
+        schema: Profile,
+      });
+    });
+  });
+
+  describe('updateProfile', () => {
+    it('should construct a request for updating a profile', () => {
+      expect(updateProfile(23, { fake: 'profile' }, fakeAuth())).toEqual({
+        url: '/profile/23/',
+        method: 'PUT',
+        data: { fake: 'profile' },
+        auth: fakeAuth(),
+      });
+    });
+  });
+
+  describe('removeProfile', () => {
+    it('should construct a request for removing a profile', () => {
+      expect(removeProfile(23, fakeAuth())).toEqual({
+        url: '/profile/23/',
+        method: 'DELETE',
+        auth: fakeAuth(),
       });
     });
   });

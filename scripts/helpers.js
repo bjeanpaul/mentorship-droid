@@ -3,3 +3,9 @@ export const capture = async fn => {
   await fn(v => res.push(v));
   return res;
 };
+
+
+export const fakeAuth = () => ({
+  email: 'a@b.org',
+  password: '1337',
+});
