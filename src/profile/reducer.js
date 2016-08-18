@@ -1,31 +1,51 @@
+import * as constants from 'src/profile/constants';
 
-import actionTypes from './Constants';
 
-// we can probably match the image upload stuff in this reducer...
 const profile = (
   state = {
     isLoading: false,
-    username: null,
   },
   action
 ) => {
   switch (action.type) {
-    case actionTypes.fetchRequest:
-    case actionTypes.updateRequest:
+    case constants.PROFILE_FETCH_REQUEST:
+    case constants.PROFILE_UPDATE_REQUEST:
+    case constants.PROFILE_IMAGE_UPDATE_REQUEST:
       return {
+        ...state,
         isLoading: true,
       };
-    case actionTypes.fetchSuccess:
-    case actionTypes.updateSuccess:
+
+    case constants.PROFILE_UPDATE_SUCCESS:
+    case constants.PROFILE_IMAGE_UPDATE_SUCCESS:
       return {
+        ...state,
         isLoading: false,
-        username: action.entities.result[0],
       };
-    case actionTypes.fetchFailure:
-    case actionTypes.updateFaiulure:
+
+    case constants.PROFILE_FETCH_SUCCESS: {
+      const {
+        payload: {
+          data: {
+            result: id,
+            entities: { profiles },
+          },
+        },
+      } = action;
+
       return {
+        ...state,
+        ...profiles[id],
         isLoading: false,
-        errorMessage: action.errorMessage,
+      };
+    }
+
+    case constants.PROFILE_FETCH_FAILURE:
+    case constants.PROFILE_UPDATE_FAILURE:
+    case constants.PROFILE_IMAGE_UPDATE_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
       };
 
     default:
