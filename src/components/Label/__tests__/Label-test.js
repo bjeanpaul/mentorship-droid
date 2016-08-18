@@ -13,6 +13,6 @@ describe('Label', () => {
         title="foo"
         style={{ fontSize: 23 }}
       />
-    ).toMatchSnapshot()
+    ).toMatchSnapshot();
   });
 });
