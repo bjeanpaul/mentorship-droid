@@ -1,13 +1,16 @@
 import React from 'react';
+import { shallow } from 'enzyme';
 import Button from 'src/components/Button';
 
 
 describe('Button', () => {
+
   function foo() {
     // placeholder function
   }
 
   it('should render its `title,` and map `onPress`', () => {
+
     expect(
       <Button
         label="margle"
@@ -34,5 +37,17 @@ describe('Button', () => {
         disabled
       />
     ).toMatchSnapshot();
+  });
+
+  it('should be able to tap and fire `onPress`', () => {
+    const mockFn = jest.fn();
+    const el = shallow(
+      <Button
+        label="margle"
+        onPress={mockFn}
+      />
+    );
+    el.simulate('press');
+    expect(mockFn).toBeCalled();
   });
 });
