@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import configureStore from 'src/stores/configureStore';
 const store = configureStore();
 
-import { BaseView } from 'src/components';
 import LandingContainer from 'src/onboarding/LandingContainer';
 
 const App = function App() {
