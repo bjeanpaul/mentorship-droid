@@ -5,6 +5,11 @@ import { omitBy, isNull } from 'lodash';
 export const omitNulls = d => omitBy(d, isNull);
 
 
+export const trap = (type, fn) => v => v instanceof type
+  ? Promise.resolve(v).then(fn)
+  : Promise.reject(v);
+
+
 export const generateActionTypes = function generateActionNames(
   resource,
   operations = ['FETCH', 'CREATE', 'UPDATE', 'DELETE']

@@ -1,67 +1,82 @@
-import { normalize, Schema, arrayOf } from 'normalizr';
-import { generateActionCreators } from 'src/helpers';
-import { getBaseURL, getAuthorizationToken } from 'src/configuration';
+import { trap } from 'src/helpers';
+import * as api from 'src/api';
+import * as constants from 'src/profile/constants';
 
-import actionTypes from './Constants';
+const { ApiResponseError } = api;
 
-// TODO: Create an action to fetch our own profile.
 
-const profileSchema = new Schema('profile');
-
-const actions = generateActionCreators({
-  resourcePath: 'profile',
-  actionTypes,
-  normalizeJSON: ({ json }) => {
-    if (json.results) {
-      return normalize(json.results, arrayOf(profileSchema));
-    }
-    return normalize(json, profileSchema);
-  },
+const fetchProfileRequest = () => ({
+  type: constants.PROFILE_FETCH_REQUEST,
 });
 
 
-const uploadImage = (path, onSuccess, onFailure) => (dispatch, _, getState) => {
-  dispatch({
-    type: actionTypes.image.updateRequest,
-  });
-
-  const formData = new FormData();
-  formData.append('image', {
-    uri: path,
-    name: 'image.jpg',
-    type: 'image/png',
-  });
-
-  const request = new XMLHttpRequest();
-  request.onreadystatechange = () => {
-    if (request.readyState !== 4) {
-      return;
-    }
-    if (request.status === 201) {
-      dispatch({
-        type: actionTypes.image.updateSuccess,
-      });
-      if (onSuccess) {
-        onSuccess();
-      }
-    } else {
-      dispatch({
-        type: actionTypes.image.updateFailure,
-      });
-      if (onFailure) {
-        onFailure();
-      }
-    }
-  };
-
-  request.open('PUT', `${getBaseURL()}/profile/1/image/`);
-  request.setRequestHeader('Authorization', `Basic ${getAuthorizationToken(getState())}`);
-  request.send(formData);
-};
+const fetchProfileSuccess = data => ({
+  type: constants.PROFILE_FETCH_SUCCESS,
+  payload: { data },
+});
 
 
-export default {
-  fetch: actions.fetch,
-  update: actions.update,
-  uploadImage,
+const fetchProfileFailure = () => ({
+  type: constants.PROFILE_FETCH_FAILURE,
+});
+
+
+const fetchProfile = id => (dispatch, { auth }) => Promise.resolve()
+  .then(() => fetchProfileRequest())
+  .then(dispatch)
+  .then(() => api.getProfile(id, auth))
+  .then(fetchProfileSuccess, trap(ApiResponseError, fetchProfileFailure))
+  .then(dispatch);
+
+
+const updateProfileRequest = () => ({
+  type: constants.PROFILE_UPDATE_REQUEST,
+});
+
+
+const updateProfileSuccess = () => ({
+  type: constants.PROFILE_UPDATE_SUCCESS,
+});
+
+
+const updateProfileFailure = () => ({
+  type: constants.PROFILE_UPDATE_FAILURE,
+});
+
+
+const updateProfile = (id, data) => (dispatch, { auth }) => Promise.resolve()
+  .then(() => updateProfileRequest())
+  .then(dispatch)
+  .then(() => api.updateProfile(id, data, auth))
+  .then(updateProfileSuccess, trap(ApiResponseError, updateProfileFailure))
+  .then(dispatch);
+
+
+const uploadProfileImageRequest = () => ({
+  type: constants.PROFILE_IMAGE_UPDATE_REQUEST,
+});
+
+
+const uploadProfileImageSuccess = () => ({
+  type: constants.PROFILE_IMAGE_UPDATE_SUCCESS,
+});
+
+
+const uploadProfileImageFailure = () => ({
+  type: constants.PROFILE_IMAGE_UPDATE_FAILURE,
+});
+
+
+const uploadProfileImage = (id, path) => (dispatch, { auth }) => Promise.resolve()
+  .then(() => uploadProfileImageRequest())
+  .then(dispatch)
+  .then(() => api.uploadProfileImage(id, path, auth))
+  .then(uploadProfileImageSuccess, trap(ApiResponseError, uploadProfileImageFailure))
+  .then(dispatch);
+
+
+export {
+  fetchProfile,
+  updateProfile,
+  uploadProfileImage,
 };

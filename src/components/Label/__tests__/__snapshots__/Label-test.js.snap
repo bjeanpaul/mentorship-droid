@@ -1,0 +1,30 @@
+exports[`Label should render its title 0`] = `
+Object {
+  "$$typeof": Symbol(react.element),
+  "_owner": null,
+  "_store": Object {},
+  "key": null,
+  "props": Object {
+    "title": "foo"
+  },
+  "ref": null,
+  "type": [Function Label]
+}
+`;
+
+exports[`Label should support style overriding 0`] = `
+Object {
+  "$$typeof": Symbol(react.element),
+  "_owner": null,
+  "_store": Object {},
+  "key": null,
+  "props": Object {
+    "style": Object {
+      "fontSize": 23
+    },
+    "title": "foo"
+  },
+  "ref": null,
+  "type": [Function Label]
+}
+`;
