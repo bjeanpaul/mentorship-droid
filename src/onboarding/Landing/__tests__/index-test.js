@@ -4,10 +4,10 @@ import Landing from '../index';
 describe('Landing', () => {
   function foo() {}
   function bar() {}
-  it('should map `onGetStarted` and `onLoginPress`', () => {
+  it('should map `onGetStartedPress` and `onLoginPress`', () => {
     expect(
       <Landing
-        onGetStarted={foo}
+        onGetStartedPress={foo}
         onLoginPress={bar}
       />
     ).toMatchSnapshot();

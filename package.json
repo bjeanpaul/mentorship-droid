@@ -48,6 +48,9 @@
     "globals": {
       "__DEV__": true,
       "__TEST__": true
+    },
+    "moduleNameMapper": {
+      "^.*\\.png$": "<rootDir>/scripts/jest/image-stub.js"
     }
   }
 }

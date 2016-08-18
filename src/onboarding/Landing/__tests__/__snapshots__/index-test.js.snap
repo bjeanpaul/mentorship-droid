@@ -1,0 +1,14 @@
+exports[`Landing should map \`onGetStartedPress\` and \`onLoginPress\` 0`] = `
+Object {
+  "$$typeof": Symbol(react.element),
+  "_owner": null,
+  "_store": Object {},
+  "key": null,
+  "props": Object {
+    "onGetStartedPress": [Function foo],
+    "onLoginPress": [Function bar]
+  },
+  "ref": null,
+  "type": [Function Landing]
+}
+`;
