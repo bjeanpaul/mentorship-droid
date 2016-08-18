@@ -7,16 +7,16 @@ import * as constants from './constants';
 const auth = (state = {
   index: 0,
   routes: [
-    { key: constants.ROUTE_AUTH_LANDING },
+    { key: constants.AUTH_ROUTE_LANDING },
   ],
 }, action) => {
   switch (action.type) {
-    case constants.NAVIGATION_AUTH_PUSH:
+    case constants.AUTH_NAVIGATION_PUSH:
       if (!NavigationStateUtils.has(state, action.payload.key)) {
         return NavigationStateUtils.push(state, action.payload);
       }
       return state;
-    case constants.NAVIGATION_AUTH_POP:
+    case constants.AUTH_NAVIGATION_POP:
       return NavigationStateUtils.pop(state);
     default:
       return state;

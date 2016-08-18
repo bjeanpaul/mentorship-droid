@@ -14,7 +14,7 @@ describe('navigation/auth/reducer', () => {
     expect(authReducer(undefined, { type: 'ping?' })).toEqual({
       index: 0,
       routes: [
-        { key: constants.ROUTE_AUTH_LANDING },
+        { key: constants.AUTH_ROUTE_LANDING },
       ],
     });
   });

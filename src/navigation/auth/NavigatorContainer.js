@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 
-import AuthNavigation from './AuthNavigation';
+import Navigator from './Navigator';
 
 export default connect(
   state => ({
     navigationState: state.navigation.auth,
   })
-)(AuthNavigation);
+)(Navigator);

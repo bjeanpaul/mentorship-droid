@@ -5,12 +5,12 @@ import { Provider } from 'react-redux';
 import configureStore from 'src/stores/configureStore';
 const store = configureStore();
 
-import AuthNavigationContainer from 'src/navigation/auth/AuthNavigationContainer';
+import AuthNavigatorContainer from 'src/navigation/auth/NavigatorContainer';
 
 const App = function App() {
   return (
     <Provider store={store}>
-      <AuthNavigationContainer />
+      <AuthNavigatorContainer />
     </Provider>
   );
 };
