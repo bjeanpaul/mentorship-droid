@@ -7,7 +7,6 @@ import { getAuthorizationToken as getAuthorizationHeaderValue } from 'src/config
 
 import auth from 'src/auth/reducer';
 import { getContext } from 'src/stores/helpers';
-import initialState from 'src/stores/initialState';
 import contextMiddleware from 'src/stores/contextMiddleware';
 
 const httpRequestMiddleware = new HTTPRequestMiddleware({
@@ -27,10 +26,10 @@ const rootReducer = combineReducers({
   auth,
 });
 
-export default function configureStore() {
+export default function configureStore(initialState = {}) {
   return createStore(
     rootReducer,
-    initialState(),
+    initialState,
     applyMiddleware(
       thunkMiddleware,
       httpRequestMiddleware.apply,
