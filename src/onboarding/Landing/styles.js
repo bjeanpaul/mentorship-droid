@@ -2,13 +2,20 @@ import { StyleSheet } from 'react-native';
 import colors from 'src/constants/colors';
 
 export default StyleSheet.create({
-  image: {
-    flex: 0.6,
+  imageContainer: {
+    flex: 1,
     overflow: 'hidden',
-    alignItems: 'center',
+  },
+  image: {
+    flex: 1,
+    width: null,
+    height: null,
+    resizeMode: 'cover',
+  },
+  bottom: {
+    justifyContent: 'flex-end',
   },
   getStarted: {
-    flex: .5,
     padding: 15,
     backgroundColor: colors.ONBOARDING_LANDING_GET_STARTED_TEXT,
   },
