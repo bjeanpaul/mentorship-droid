@@ -1,6 +1,5 @@
-import { find, isUndefined, partialRight as partial } from 'lodash';
+import { find, isUndefined, omitBy, isNull } from 'lodash';
 import { getBaseURL } from 'src/configuration';
-import { omitBy, isNull } from 'lodash';
 
 
 export const omitNulls = d => omitBy(d, isNull);
@@ -17,30 +16,6 @@ export const switchError = cases => (e, ...xargs) => {
     ? Promise.resolve().then(() => fn(e, ...xargs))
     : Promise.reject(e);
 };
-
-
-export const apiAction = ({
-  method,
-  request,
-  success,
-  failures,
-}) => (...args) => (dispatch, { auth }) => Promise.resolve()
-  .then(() => request(...args))
-  .then(dispatch)
-  .then(() => method(...args, auth))
-  .then(partial(success, ...args), partial(switchError(failures), ...args))
-  .then(dispatch);
-
-
-export const staticAction = type => () => ({
-  type
-});
-
-
-export const dataAction = type => data => ({
-  type,
-  payload: data
-});
 
 
 export const generateActionTypes = function generateActionNames(
