@@ -11,7 +11,7 @@ export const trap = (type, fn) => v => v instanceof type
 
 
 export const switchError = cases => (e, ...xargs) => {
-  const [type, fn] = find(cases, ([type, fn]) => e instanceof type) || [];
+  const [_type, fn] = find(cases, ([type]) => e instanceof type) || [];
   return !isUndefined(fn)
     ? Promise.resolve().then(() => fn(e, ...xargs))
     : Promise.reject(e);

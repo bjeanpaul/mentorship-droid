@@ -1,4 +1,3 @@
-import { trap } from 'src/helpers';
 import * as api from 'src/api';
 import * as constants from 'src/profile/constants';
 

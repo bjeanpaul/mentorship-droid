@@ -7,7 +7,7 @@ import {
   generateActionCreators,
 } from 'src/helpers';
 
-import { mock} from 'app/scripts/helpers';
+import { mock } from 'app/scripts/helpers';
 
 describe('helpers', () => {
   describe('switchError', () => {

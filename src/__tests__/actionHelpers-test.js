@@ -64,7 +64,6 @@ describe('actionHelpers', () => {
       class A {}
       class B {}
 
-      const success = mock();
       const e = new B();
 
       const fn = apiAction({
@@ -90,7 +89,7 @@ describe('actionHelpers', () => {
         failure: noop,
       });
 
-      const [_request, action] = await capture(fn(21, 23), ctx);
+      await capture(fn(21, 23), ctx);
       expect(method.mock.calls).toEqual([[21, 23, auth]]);
     });
   });

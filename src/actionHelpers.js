@@ -16,11 +16,11 @@ export const apiAction = ({
 
 
 export const staticAction = type => () => ({
-  type
+  type,
 });
 
 
 export const dataAction = type => data => ({
   type,
-  payload: data
+  payload: data,
 });
