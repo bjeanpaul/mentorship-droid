@@ -1,5 +1,6 @@
 import reduce from 'src/auth/reducer';
 import { serializeAuth } from 'src/api/request';
+import { fakeAuth, fakeProfileListData } from 'scripts/helpers';
 
 import {
   AUTH_LOGIN_REQUEST,
@@ -60,13 +61,8 @@ describe('auth/reducer', () => {
       }, {
         type: AUTH_LOGIN_SUCCESS,
         payload: {
-          entities: {
-            results: [21, 23],
-          },
-          auth: {
-            email: 'a@b.org',
-            password: '1337',
-          },
+          ...fakeProfileListData(),
+          auth: fakeAuth(),
         },
       });
 
@@ -79,13 +75,11 @@ describe('auth/reducer', () => {
       }, {
         type: AUTH_LOGIN_SUCCESS,
         payload: {
-          entities: {
-            results: [21, 23],
-          },
-          auth: {
-            email: 'a@b.org',
-            password: '1337',
-          },
+          ...fakeProfileListData([
+            { id: 21 },
+            { id: 23 },
+          ]),
+          auth: fakeAuth(),
         },
       });
 
@@ -93,17 +87,14 @@ describe('auth/reducer', () => {
     });
 
     it('should set auth details', () => {
-      const email = 'a@b.org';
-      const password = '1337';
+      const { email, password } = fakeAuth();
 
       const { auth } = reduce({
         auth: null,
       }, {
         type: AUTH_LOGIN_SUCCESS,
         payload: {
-          entities: {
-            results: [21, 23],
-          },
+          ...fakeProfileListData(),
           auth: {
             email,
             password,
