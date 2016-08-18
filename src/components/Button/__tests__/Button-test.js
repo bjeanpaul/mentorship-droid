@@ -4,10 +4,7 @@ import Button from 'src/components/Button';
 
 
 describe('Button', () => {
-
-  function foo() {
-    // placeholder function
-  }
+  function foo() {}
 
   it('should render its `title,` and map `onPress`', () => {
 
