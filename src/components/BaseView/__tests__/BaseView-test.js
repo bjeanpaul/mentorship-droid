@@ -3,7 +3,7 @@ import { Text } from 'react-native';
 import BaseView from 'src/components/BaseView';
 
 
-describe('Label', () => {
+describe('BaseView', () => {
   it('should render its children', () => {
     expect(
       <BaseView><Text>I am children.</Text></BaseView>
