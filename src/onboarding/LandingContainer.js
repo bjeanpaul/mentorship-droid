@@ -1,9 +1,18 @@
 import { connect } from 'react-redux';
 import Landing from './Landing';
+
+// TODO: Import Navigation Actions.
+const todo = () => {
+  console.log('do me.')
+  return {
+    type: 'TODO',
+  }
+};
+
 export default connect(
   null,
   {
-    onGetStartedPress: () => console.log(1),
-    onLoginPress: () => console.log(2),
+    onGetStartedPress: () => todo,
+    onLoginPress: () => todo,
   }
 )(Landing);
