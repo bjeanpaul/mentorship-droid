@@ -5,134 +5,111 @@ import { fakeProfileData } from 'scripts/helpers';
 
 describe('profile/reducer', () => {
   describe('PROFILE_FETCH_REQUEST', () => {
-    it('should mark the state as loading', () => {
-      const { isLoading } = reduce({
-        isLoading: false,
+    it('should mark the status as busy', () => {
+      const { status } = reduce({
+        status: constants.STATUS_IDLE,
       }, {
         type: constants.PROFILE_FETCH_REQUEST,
       });
 
-      expect(isLoading).toBe(true);
+      expect(status).toEqual(constants.STATUS_BUSY);
     });
   });
 
   describe('PROFILE_UPDATE_REQUEST', () => {
-    it('should mark the state as loading', () => {
-      const { isLoading } = reduce({
-        isLoading: false,
+    it('should mark the state as busy', () => {
+      const { status } = reduce({
+        status: constants.STATUS_IDLE,
       }, {
         type: constants.PROFILE_UPDATE_REQUEST,
       });
 
-      expect(isLoading).toBe(true);
+      expect(status).toEqual(constants.STATUS_BUSY);
     });
   });
 
   describe('PROFILE_IMAGE_UPDATE_REQUEST', () => {
-    it('should mark the state as loading', () => {
-      const { isLoading } = reduce({
-        isLoading: false,
+    it('should mark the state as busy', () => {
+      const { status } = reduce({
+        status: constants.STATUS_IDLE,
       }, {
         type: constants.PROFILE_IMAGE_UPDATE_REQUEST,
       });
 
-      expect(isLoading).toBe(true);
+      expect(status).toEqual(constants.STATUS_BUSY);
     });
   });
 
   describe('PROFILE_FETCH_SUCCESS', () => {
-    it('should mark the state as loading', () => {
-      const { isLoading } = reduce({
-        isLoading: true,
+    it('should mark the state as busy', () => {
+      const { status } = reduce({
+        status: constants.STATUS_BUSY,
       }, {
         type: constants.PROFILE_FETCH_SUCCESS,
-        payload: {
-          data: fakeProfileData()
-        },
+        payload: fakeProfileData(),
       });
 
-      expect(isLoading).toBe(false);
-    });
-
-    it('should update the profile data', () => {
-      const res = reduce({
-        isLoading: true,
-      }, {
-        type: constants.PROFILE_FETCH_SUCCESS,
-        payload: {
-          data: fakeProfileData({
-            id: 23,
-            name: 'bar',
-            username: 'foo',
-          }),
-        },
-      });
-
-      expect(res).toEqual(jasmine.objectContaining({
-        id: 23,
-        name: 'bar',
-        username: 'foo',
-      }));
+      expect(status).toEqual(constants.STATUS_IDLE);
     });
   });
 
   describe('PROFILE_UPDATE_SUCCESS', () => {
-    it('should mark the state as loading', () => {
-      const { isLoading } = reduce({
-        isLoading: true,
+    it('should mark the state as idle', () => {
+      const { status } = reduce({
+        status: constants.STATUS_BUSY,
       }, {
         type: constants.PROFILE_UPDATE_SUCCESS,
       });
 
-      expect(isLoading).toBe(false);
+      expect(status).toEqual(constants.STATUS_IDLE);
     });
   });
 
   describe('PROFILE_IMAGE_UPDATE_SUCCESS', () => {
-    it('should mark the state as loading', () => {
-      const { isLoading } = reduce({
-        isLoading: true,
+    it('should mark the state as idle', () => {
+      const { status } = reduce({
+        status: constants.STATUS_BUSY,
       }, {
         type: constants.PROFILE_IMAGE_UPDATE_SUCCESS,
       });
 
-      expect(isLoading).toBe(false);
+      expect(status).toEqual(constants.STATUS_IDLE);
     });
   });
 
   describe('PROFILE_FETCH_FAILURE', () => {
-    it('should mark the state as loading', () => {
-      const { isLoading } = reduce({
-        isLoading: true,
+    it('should mark the state as erroneous', () => {
+      const { status } = reduce({
+        status: constants.STATUS_BUSY,
       }, {
         type: constants.PROFILE_FETCH_FAILURE,
       });
 
-      expect(isLoading).toBe(false);
+      expect(status).toEqual(constants.STATUS_ERROR);
     });
   });
 
   describe('PROFILE_UPDATE_FAILURE', () => {
-    it('should mark the state as not loading', () => {
-      const { isLoading } = reduce({
-        isLoading: true,
+    it('should mark the state as erroneous', () => {
+      const { status } = reduce({
+        status: constants.STATUS_BUSY,
       }, {
         type: constants.PROFILE_UPDATE_FAILURE,
       });
 
-      expect(isLoading).toBe(false);
+      expect(status).toEqual(constants.STATUS_ERROR);
     });
   });
 
   describe('PROFILE_IMAGE_UPDATE_FAILURE', () => {
-    it('should mark the state as not loading', () => {
-      const { isLoading } = reduce({
-        isLoading: true,
+    it('should mark the state as erroneous', () => {
+      const { status } = reduce({
+        status: constants.STATUS_BUSY,
       }, {
         type: constants.PROFILE_IMAGE_UPDATE_FAILURE,
       });
 
-      expect(isLoading).toBe(false);
+      expect(status).toEqual(constants.STATUS_ERROR);
     });
   });
 });

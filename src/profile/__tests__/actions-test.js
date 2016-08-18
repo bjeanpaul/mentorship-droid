@@ -38,7 +38,7 @@ describe('profile/actions', () => {
 
       expect(action).toEqual({
         type: constants.PROFILE_FETCH_SUCCESS,
-        payload: { data },
+        payload: data,
       });
     });
 
