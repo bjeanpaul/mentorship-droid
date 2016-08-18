@@ -18,18 +18,18 @@ const loginFailure = () => ({
 });
 
 
-const loginSuccess = (entities, auth) => ({
+const loginSuccess = (data, auth) => ({
   type: AUTH_LOGIN_SUCCESS,
   payload: {
-    entities,
+    data,
     auth,
   },
 });
 
 
-const loginDone = (entities, auth) => isEmpty(entities.results)
-  ? loginFailure()
-  : loginSuccess(entities, auth);
+const loginDone = (data, auth) => !isEmpty(data.result)
+  ? loginSuccess(data, auth)
+  : loginFailure()
 
 
 export const login = (email, password) => dispatch => Promise.resolve()
@@ -39,7 +39,7 @@ export const login = (email, password) => dispatch => Promise.resolve()
     email,
     password,
   }))
-  .then(entities => loginDone(entities, {
+  .then(data => loginDone(data, {
     email,
     password,
   }))

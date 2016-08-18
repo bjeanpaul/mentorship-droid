@@ -31,8 +31,8 @@ const authReducer = (state = {}, action) => {
       const {
         payload: {
           auth,
-          entities: {
-            results: [profileId],
+          data: {
+            result: [profileId],
           },
         },
       } = action;

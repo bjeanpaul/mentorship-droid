@@ -1,4 +1,4 @@
-import { normalize } from 'normalizr';
+import { normalize, arrayOf } from 'normalizr';
 import { Profile } from 'src/api';
 
 
@@ -21,3 +21,5 @@ export const fakeContext = () => ({
 
 
 export const fakeProfileData = (data = { id: 23 }) => normalize(data, Profile);
+
+export const fakeProfileListData = (data = [{ id: 23 }]) => normalize(data, arrayOf(Profile));

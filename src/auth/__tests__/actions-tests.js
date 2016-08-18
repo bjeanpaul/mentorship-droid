@@ -2,7 +2,7 @@ jest.mock('src/api/profiles');
 
 
 import { login } from 'src/auth/actions';
-import { capture } from 'scripts/helpers';
+import { capture, fakeProfileListData } from 'scripts/helpers';
 import { listProfiles } from 'src/api';
 import { noop } from 'lodash';
 
@@ -16,7 +16,7 @@ import {
 describe('auth/actions', () => {
   beforeEach(() => {
     listProfiles.mockClear();
-    listProfiles.mockReturnValue(Promise.resolve({ results: [23] }));
+    listProfiles.mockReturnValue(Promise.resolve(fakeProfileListData()));
   });
 
   describe('login', () => {
@@ -29,14 +29,15 @@ describe('auth/actions', () => {
     });
 
     it('should dispatch success for non-empty results', async () => {
-      listProfiles.mockReturnValue(Promise.resolve({ results: [23] }));
+      const data = fakeProfileListData();
+      listProfiles.mockReturnValue(Promise.resolve(data));
 
       const [_busy, action] = await capture(login('a@b.org', '1337'));
 
       expect(action).toEqual({
         type: AUTH_LOGIN_SUCCESS,
         payload: {
-          entities: { results: [23] },
+          data,
           auth: {
             email: 'a@b.org',
             password: '1337',
@@ -46,7 +47,7 @@ describe('auth/actions', () => {
     });
 
     it('should dispatch failure for empty results', async () => {
-      listProfiles.mockReturnValue(Promise.resolve({ results: [] }));
+      listProfiles.mockReturnValue(Promise.resolve(fakeProfileListData([])));
 
       const [_busy, action] = await capture(login('a@b.org', '1337'));
 
