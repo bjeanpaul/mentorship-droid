@@ -7,8 +7,8 @@ import { getAuthorizationToken as getAuthorizationHeaderValue } from 'src/config
 
 import auth from 'src/auth/reducer';
 import { getContext } from 'src/stores/helpers';
-import initialState from 'src/stores/initalState';
-import contextMiddleware from 'src/contextMiddleware';
+import initialState from 'src/stores/initialState';
+import contextMiddleware from 'src/stores/contextMiddleware';
 
 const httpRequestMiddleware = new HTTPRequestMiddleware({
   getAuthorizationHeaderValue,

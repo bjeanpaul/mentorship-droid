@@ -4,7 +4,6 @@ import Link from './Link';
 import Button from './Button';
 import TextInput from './TextInput';
 import MultiLineTextInput from './MultiLineTextInput';
-import NavigationBar from './NavigationBar';
 import BaseView from './BaseView';
 import Toolbar from './Toolbar';
 import OverlayCompleted from './Overlay/Completed';
@@ -19,7 +18,6 @@ export {
   Button,
   TextInput,
   MultiLineTextInput,
-  NavigationBar,
   Toolbar,
   OverlayCompleted,
   OverlayLoading,

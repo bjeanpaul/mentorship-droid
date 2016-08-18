@@ -11,7 +11,7 @@ const Button = ({
   theme = THEME_DEFAULT,
   label = '',
   disabled,
-  handlePress,
+  onPress,
 }) => {
   let button = (
     <View
@@ -34,7 +34,7 @@ const Button = ({
   );
   if (!disabled) {
     button = (
-      <TouchableNativeFeedback onPress={handlePress}>
+      <TouchableNativeFeedback onPress={onPress}>
         {button}
       </TouchableNativeFeedback>
     );
@@ -45,7 +45,7 @@ Button.DefaultTheme = THEME_DEFAULT;
 Button.WhiteTheme = THEME_WHITE;
 Button.propTypes = {
   label: PropTypes.string.isRequired,
-  handlePress: PropTypes.func.isRequired,
+  onPress: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
   theme: PropTypes.oneOf([THEME_DEFAULT, THEME_WHITE]),
 };
