@@ -16,29 +16,13 @@ const profile = (
         isLoading: true,
       };
 
+    case constants.PROFILE_FETCH_SUCCESS:
     case constants.PROFILE_UPDATE_SUCCESS:
     case constants.PROFILE_IMAGE_UPDATE_SUCCESS:
       return {
         ...state,
         isLoading: false,
       };
-
-    case constants.PROFILE_FETCH_SUCCESS: {
-      const {
-        payload: {
-          data: {
-            result: id,
-            entities: { profiles },
-          },
-        },
-      } = action;
-
-      return {
-        ...state,
-        ...profiles[id],
-        isLoading: false,
-      };
-    }
 
     case constants.PROFILE_FETCH_FAILURE:
     case constants.PROFILE_UPDATE_FAILURE:

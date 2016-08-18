@@ -46,33 +46,10 @@ describe('profile/reducer', () => {
         isLoading: true,
       }, {
         type: constants.PROFILE_FETCH_SUCCESS,
-        payload: {
-          data: fakeProfileData()
-        },
+        payload: fakeProfileData(),
       });
 
       expect(isLoading).toBe(false);
-    });
-
-    it('should update the profile data', () => {
-      const res = reduce({
-        isLoading: true,
-      }, {
-        type: constants.PROFILE_FETCH_SUCCESS,
-        payload: {
-          data: fakeProfileData({
-            id: 23,
-            name: 'bar',
-            username: 'foo',
-          }),
-        },
-      });
-
-      expect(res).toEqual(jasmine.objectContaining({
-        id: 23,
-        name: 'bar',
-        username: 'foo',
-      }));
     });
   });
 
