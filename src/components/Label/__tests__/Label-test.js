@@ -1,6 +1,4 @@
 import React from 'react';
-import { Text } from 'react-native';
-import { shallow } from 'enzyme';
 import Label from 'src/components/Label';
 
 
@@ -13,8 +11,8 @@ describe('Label', () => {
     expect(
       <Label
         title="foo"
-        style={{fontSize: 23}}
+        style={{ fontSize: 23 }}
       />
-    ).toMatchSnapshot()
+    ).toMatchSnapshot();
   });
 });

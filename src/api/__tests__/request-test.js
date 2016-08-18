@@ -2,7 +2,7 @@ jest.mock('axios');
 
 
 import axios from 'axios';
-import request, { imageData, ApiResponseError } from 'src/api/request';
+import request, { imageData } from 'src/api/request';
 import { Schema } from 'normalizr';
 import { identity } from 'lodash';
 
@@ -11,7 +11,7 @@ describe('api/request', () => {
   describe('request', () => {
     beforeEach(() => {
       axios.mockClear();
-      axios.mockReturnValue(Promise.resolve({data: { result: {} }}));
+      axios.mockReturnValue(Promise.resolve({ data: { result: {} } }));
     });
 
     it('should make requests using the given configuration', async () => {
@@ -140,7 +140,7 @@ describe('api/request', () => {
           uri: '/foo',
           name: 'rar.png',
           type: 'image/png',
-        })
+        }),
       ]);
     });
   });

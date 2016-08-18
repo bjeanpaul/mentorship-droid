@@ -15,10 +15,10 @@ rules:
   import/no-unresolved: 0
 
   # warnings
-  react/prop-types: 1
   react/prefer-stateless-function: 1
 
   # errors
+  react/prop-types: 1
   object-property-newline: 2
   no-undefined: 2
   no-unused-vars:

@@ -8,12 +8,12 @@ describe('helpers', () => {
         auth: {
           email: 'a@b.org',
           password: '1337',
-        }
+        },
       })).toEqual(jasmine.objectContaining({
         auth: {
           email: 'a@b.org',
           password: '1337',
-        }
+        },
       }));
     });
   });

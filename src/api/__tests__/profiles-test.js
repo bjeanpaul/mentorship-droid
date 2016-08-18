@@ -3,7 +3,7 @@ jest.mock('src/api/request');
 
 import { identity } from 'lodash';
 import { arrayOf } from 'normalizr';
-import { fakeAuth } from 'scripts/helpers';
+import { fakeAuth } from 'app/scripts/helpers';
 import request, { imageData } from 'src/api/request';
 import { Profile } from 'src/api/schemas';
 import { parseResults } from 'src/api/parse';
@@ -14,7 +14,7 @@ import {
   getProfile,
   updateProfile,
   removeProfile,
-  uploadProfileImage
+  uploadProfileImage,
 } from 'src/api';
 
 

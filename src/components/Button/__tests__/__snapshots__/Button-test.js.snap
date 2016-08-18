@@ -1,0 +1,46 @@
+exports[`Button should be disabled 0`] = `
+Object {
+  "$$typeof": Symbol(react.element),
+  "_owner": null,
+  "_store": Object {},
+  "key": null,
+  "props": Object {
+    "disabled": true,
+    "label": "margle",
+    "onPress": [Function foo]
+  },
+  "ref": null,
+  "type": [Function Button]
+}
+`;
+
+exports[`Button should change style with \`white\` theme 0`] = `
+Object {
+  "$$typeof": Symbol(react.element),
+  "_owner": null,
+  "_store": Object {},
+  "key": null,
+  "props": Object {
+    "label": "margle",
+    "onPress": [Function foo],
+    "theme": "White"
+  },
+  "ref": null,
+  "type": [Function Button]
+}
+`;
+
+exports[`Button should render its \`title,\` and map \`onPress\` 0`] = `
+Object {
+  "$$typeof": Symbol(react.element),
+  "_owner": null,
+  "_store": Object {},
+  "key": null,
+  "props": Object {
+    "label": "margle",
+    "onPress": [Function foo]
+  },
+  "ref": null,
+  "type": [Function Button]
+}
+`;

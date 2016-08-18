@@ -1,7 +1,6 @@
 jest.mock('src/api/profiles');
 
-import { capture } from 'scripts/helpers';
-import { fakeContext, fakeProfileData } from 'scripts/helpers';
+import { capture, fakeContext, fakeProfileData } from 'app/scripts/helpers';
 import { noop } from 'lodash';
 import * as constants from 'src/profile/constants';
 import * as api from 'src/api';

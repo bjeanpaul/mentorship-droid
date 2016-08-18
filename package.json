@@ -5,8 +5,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "logs": "adb logcat *:S ReactNative:V ReactNativeJS:V",
-    "test": "NODE_PATH=. NODE_ENV=test jest",
-    "lint": "eslint index.android.js src/**/*.js",
+    "test": "NODE_ENV=test jest",
+    "lint": "eslint index.android.js 'src/**/*.js'",
     "ci": "npm run lint && npm test"
   },
   "dependencies": {
@@ -48,6 +48,9 @@
     "globals": {
       "__DEV__": true,
       "__TEST__": true
+    },
+    "moduleNameMapper": {
+      "^.*\\.png$": "<rootDir>/scripts/jest/image-stub.js"
     }
   }
 }
