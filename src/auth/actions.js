@@ -18,11 +18,12 @@ const loginFailure = () => ({
 });
 
 
-const loginSuccess = (data, auth) => ({
+const loginSuccess = ({ result, entities }, auth) => ({
   type: AUTH_LOGIN_SUCCESS,
   payload: {
-    data,
     auth,
+    result,
+    entities,
   },
 });
 

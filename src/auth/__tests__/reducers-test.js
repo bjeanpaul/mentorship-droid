@@ -61,7 +61,7 @@ describe('auth/reducer', () => {
       }, {
         type: AUTH_LOGIN_SUCCESS,
         payload: {
-          data: fakeProfileListData(),
+          ...fakeProfileListData(),
           auth: {
             email: 'a@b.org',
             password: '1337',
@@ -78,7 +78,7 @@ describe('auth/reducer', () => {
       }, {
         type: AUTH_LOGIN_SUCCESS,
         payload: {
-          data: fakeProfileListData([
+          ...fakeProfileListData([
             { id: 21 },
             { id: 23 },
           ]),
@@ -101,7 +101,7 @@ describe('auth/reducer', () => {
       }, {
         type: AUTH_LOGIN_SUCCESS,
         payload: {
-          data: fakeProfileListData(),
+          ...fakeProfileListData(),
           auth: {
             email,
             password,

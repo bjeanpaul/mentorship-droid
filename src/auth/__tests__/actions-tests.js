@@ -37,7 +37,7 @@ describe('auth/actions', () => {
       expect(action).toEqual({
         type: AUTH_LOGIN_SUCCESS,
         payload: {
-          data,
+          ...data,
           auth: {
             email: 'a@b.org',
             password: '1337',

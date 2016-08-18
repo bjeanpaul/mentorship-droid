@@ -31,9 +31,7 @@ const authReducer = (state = {}, action) => {
       const {
         payload: {
           auth,
-          data: {
-            result: [profileId],
-          },
+          result: [profileId],
         },
       } = action;
 
