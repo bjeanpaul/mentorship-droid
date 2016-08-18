@@ -5,12 +5,12 @@ import { Provider } from 'react-redux';
 import configureStore from 'src/stores/configureStore';
 const store = configureStore();
 
-import LandingContainer from 'src/onboarding/LandingContainer';
+import AuthNavigationContainer from 'src/navigation/auth/AuthNavigationContainer';
 
 const App = function App() {
   return (
     <Provider store={store}>
-      <LandingContainer />
+      <AuthNavigationContainer />
     </Provider>
   );
 };

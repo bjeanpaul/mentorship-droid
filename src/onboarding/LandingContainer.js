@@ -1,17 +1,14 @@
 import { connect } from 'react-redux';
 import Landing from './Landing';
-
-// TODO: Import Navigation Actions.
-function todo() {
-  return {
-    type: 'TODO',
-  };
-}
+import {
+  pushActivateAccountRoute,
+  pushLoginRoute,
+} from 'src/navigation/auth/actions';
 
 export default connect(
   null,
   {
-    onGetStartedPress: () => todo,
-    onLoginPress: () => todo,
+    onGetStartedPress: pushActivateAccountRoute,
+    onLoginPress: pushLoginRoute,
   }
 )(Landing);
