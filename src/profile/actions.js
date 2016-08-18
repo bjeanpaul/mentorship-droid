@@ -12,7 +12,7 @@ const fetchProfileRequest = () => ({
 
 const fetchProfileSuccess = data => ({
   type: constants.PROFILE_FETCH_SUCCESS,
-  payload: { data },
+  payload: data,
 });
 
 
