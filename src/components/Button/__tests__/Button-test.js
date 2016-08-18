@@ -7,7 +7,6 @@ describe('Button', () => {
   function foo() {}
 
   it('should render its `title,` and map `onPress`', () => {
-
     expect(
       <Button
         label="margle"
