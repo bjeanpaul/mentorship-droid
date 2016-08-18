@@ -1,6 +1,6 @@
 import reduce from 'src/profile/reducer';
 import * as constants from 'src/profile/constants';
-import { fakeProfileData } from 'scripts/helpers';
+import { fakeProfileData } from 'app/scripts/helpers';
 
 
 describe('profile/reducer', () => {

@@ -1,6 +1,6 @@
 import reduce from 'src/auth/reducer';
 import { serializeAuth } from 'src/api/request';
-import { fakeAuth, fakeProfileListData } from 'scripts/helpers';
+import { fakeAuth, fakeProfileListData } from 'app/scripts/helpers';
 
 import {
   AUTH_LOGIN_REQUEST,
