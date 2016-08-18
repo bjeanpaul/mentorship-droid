@@ -3,7 +3,7 @@ import * as constants from 'src/profile/constants';
 
 const profile = (
   state = {
-    isLoading: false,
+    status: constants.STATUS_IDLE,
   },
   action
 ) => {
@@ -13,7 +13,7 @@ const profile = (
     case constants.PROFILE_IMAGE_UPDATE_REQUEST:
       return {
         ...state,
-        isLoading: true,
+        status: constants.STATUS_BUSY,
       };
 
     case constants.PROFILE_FETCH_SUCCESS:
@@ -21,7 +21,7 @@ const profile = (
     case constants.PROFILE_IMAGE_UPDATE_SUCCESS:
       return {
         ...state,
-        isLoading: false,
+        status: constants.STATUS_IDLE,
       };
 
     case constants.PROFILE_FETCH_FAILURE:
@@ -29,7 +29,7 @@ const profile = (
     case constants.PROFILE_IMAGE_UPDATE_FAILURE:
       return {
         ...state,
-        isLoading: false,
+        status: constants.STATUS_ERROR,
       };
 
     default:
