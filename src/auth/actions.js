@@ -30,7 +30,7 @@ const loginSuccess = ({ result, entities }, auth) => ({
 
 const loginDone = (data, auth) => !isEmpty(data.result)
   ? loginSuccess(data, auth)
-  : loginFailure()
+  : loginFailure();
 
 
 export const login = (email, password) => dispatch => Promise.resolve()
