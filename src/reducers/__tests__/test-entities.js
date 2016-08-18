@@ -1,6 +1,6 @@
 jest.mock('src/constants/actions', () => ({
   __esModule: true,
-  ACTIONS_WITH_ENTITIES: ['ACTION_WITH_ENTITIES']
+  ACTIONS_WITH_ENTITIES: ['ACTION_WITH_ENTITIES'],
 }));
 
 import reduce from 'src/reducers/entities';

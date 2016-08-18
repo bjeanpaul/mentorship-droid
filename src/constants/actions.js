@@ -8,4 +8,4 @@ const ACTIONS_WITH_ENTITIES = [
 
 export {
   ACTIONS_WITH_ENTITIES,
-}
+};
