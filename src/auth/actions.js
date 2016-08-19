@@ -16,8 +16,6 @@ export const loginDone = data => !isEmpty(data.result)
   : loginNotFound();
 
 
-// TODO use ...NOT_FOUND where ...FAILURE is, and add change ...FAILURE to mean
-// system errors
 export const login = (email, password) => dispatch => Promise.resolve()
   .then(loginRequest)
   .then(dispatch)
