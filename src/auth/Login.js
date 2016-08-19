@@ -33,6 +33,14 @@ const LoginStatusMessage = ({ type }) => {
         </Text>
       );
 
+    case constants.AUTH_STATUS_ERROR:
+      return (
+        <Text>
+          Sorry, we seem to have an issue on our side. We've been notified of
+          the problem and will look into it as soon as possible.
+        </Text>
+      );
+
     default:
       return null;
   }
