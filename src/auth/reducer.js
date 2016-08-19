@@ -1,16 +1,10 @@
 import { serializeAuth } from 'src/api/request';
-
-
-import {
-  AUTH_LOGIN_REQUEST,
-  AUTH_LOGIN_SUCCESS,
-  AUTH_LOGIN_FAILURE,
-} from './constants';
+import * as constants from 'src/auth/constants';
 
 
 const authReducer = (state = {}, action) => {
   switch (action.type) {
-    case AUTH_LOGIN_REQUEST:
+    case constants.AUTH_LOGIN_REQUEST:
       return {
         ...state,
 
@@ -18,7 +12,7 @@ const authReducer = (state = {}, action) => {
         errorMessage: '',
       };
 
-    case AUTH_LOGIN_FAILURE:
+    case constants.AUTH_LOGIN_FAILURE:
       return {
         ...state,
 
@@ -27,7 +21,7 @@ const authReducer = (state = {}, action) => {
         errorMessage: 'Incorrect email or password combination.',
       };
 
-    case AUTH_LOGIN_SUCCESS: {
+    case constants.AUTH_LOGIN_SUCCESS: {
       const {
         payload: {
           auth,
