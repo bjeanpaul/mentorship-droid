@@ -4,8 +4,6 @@ jest.mock('src/actionHelpers', () => ({
   dataAction: global.mock(),
 }));
 
-import { capture, fakeContext, fakeProfileData } from 'app/scripts/helpers';
-import { noop } from 'lodash';
 import * as constants from 'src/profile/constants';
 import * as api from 'src/api';
 

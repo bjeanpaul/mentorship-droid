@@ -14,6 +14,7 @@ jest.setMock('react-native', reactNative);
 // form data values to only be strings
 global.FormData = FormData;
 
+// for use in jest.mock() factory functions
 global.mock = mock;
 
 global.nock = nock;
