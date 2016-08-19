@@ -21,7 +21,7 @@ describe('helpers', () => {
     it('should create actions of the given type and dataStatus', () => {
       expect(dataStatus('FOO')({ bar: 23 })).toEqual({
         type: 'FOO',
-        payload: { bar: 23 },
+        details: { bar: 23 },
       });
     });
   });
