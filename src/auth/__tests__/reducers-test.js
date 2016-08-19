@@ -86,15 +86,13 @@ describe('auth/reducer', () => {
     });
 
     it('should set auth details', () => {
-      const { email, password } = fakeAuth();
-
       const { auth } = reduce({
         auth: null,
       }, {
         type: AUTH_LOGIN_SUCCESS,
         payload: {
           ...fakeProfileListData(),
-          auth: fakeAuth()
+          auth: fakeAuth(),
         },
       });
 
