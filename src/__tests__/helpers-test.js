@@ -7,8 +7,6 @@ import {
   generateActionCreators,
 } from 'src/helpers';
 
-import { mock } from 'app/scripts/helpers';
-
 describe('helpers', () => {
   describe('switchError', () => {
     it('should call the first function corresponding to a matching type', async () => {
