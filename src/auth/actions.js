@@ -28,6 +28,8 @@ const loginDone = (data, auth) => !isEmpty(data.result)
   : loginFailure();
 
 
+// TODO use ...NOT_FOUND where ...FAILURE is, and add change ...FAILURE to mean
+// system errors
 export const login = (email, password) => dispatch => Promise.resolve()
   .then(() => loginBusy(email, password))
   .then(dispatch)

@@ -1,24 +1,24 @@
 import { serializeAuth } from 'src/api/request';
 import * as constants from 'src/auth/constants';
+import { authStatusIdle, authStatusBusy, authStatusNotFound } from 'src/auth/statuses';
 
 
-const authReducer = (state = {}, action) => {
+const authReducer = (state = {
+  status: authStatusIdle(),
+}, action) => {
   switch (action.type) {
     case constants.AUTH_LOGIN_REQUEST:
       return {
         ...state,
-
-        isLoading: true,
-        errorMessage: '',
+        status: authStatusBusy(),
       };
 
+    // TODO use ...NOT_FOUND where ...FAILURE is, and add change ...FAILURE to mean
+    // system errors
     case constants.AUTH_LOGIN_FAILURE:
       return {
         ...state,
-
-        // TODO use constant for status type instead and put copy in component
-        isLoading: false,
-        errorMessage: 'Incorrect email or password combination.',
+        status: authStatusNotFound(),
       };
 
     case constants.AUTH_LOGIN_SUCCESS: {
@@ -33,8 +33,8 @@ const authReducer = (state = {}, action) => {
 
       return {
         ...state,
-        isLoading: false,
         profileId,
+        status: authStatusIdle(),
 
         // TODO don't add `authToken` once we are using api in all actions
         auth: {
