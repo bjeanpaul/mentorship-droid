@@ -4,7 +4,7 @@ import * as statuses from 'src/auth/statuses';
 
 
 const authReducer = (state = {
-  status: authStatusIdle(),
+  status: statuses.authStatusIdle(),
 }, action) => {
   switch (action.type) {
     case constants.AUTH_LOGIN_REQUEST:

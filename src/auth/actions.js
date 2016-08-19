@@ -33,6 +33,6 @@ export const login = (email, password) => dispatch => Promise.resolve()
     },
   }))
   .then(loginDone, switchError([
-    [ApiResponseError, loginFailure]
+    [ApiResponseError, loginFailure],
   ]))
   .then(dispatch);
