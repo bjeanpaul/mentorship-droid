@@ -2,17 +2,16 @@ import reduce from 'src/auth/reducer';
 import { serializeAuth } from 'src/api/request';
 import { fakeAuth, fakeProfileListData } from 'app/scripts/helpers';
 import * as constants from 'src/auth/constants';
+import { loginRequest, loginSuccess, loginFailure } from 'src/auth/actions';
 import { authStatusIdle, authStatusBusy, authStatusNotFound } from 'src/auth/statuses';
 
 
 describe('auth/reducer', () => {
   describe('AUTH_LOGIN_REQUEST', () => {
-    it('should mark the status as busy', () => {
+    it('should mark the status as request', () => {
       const { status } = reduce({
         status: authStatusIdle(),
-      }, {
-        type: constants.AUTH_LOGIN_REQUEST,
-      });
+      }, loginRequest());
 
       expect(status).toEqual(authStatusBusy());
     });
@@ -22,9 +21,7 @@ describe('auth/reducer', () => {
     it('should mark the status as not found', () => {
       const { status } = reduce({
         status: authStatusBusy(),
-      }, {
-        type: constants.AUTH_LOGIN_FAILURE,
-      });
+      }, loginFailure());
 
       expect(status).toEqual(authStatusNotFound());
     });
@@ -34,13 +31,10 @@ describe('auth/reducer', () => {
     it('should mark the status as idle', () => {
       const { status } = reduce({
         status: authStatusBusy(),
-      }, {
-        type: constants.AUTH_LOGIN_SUCCESS,
-        payload: {
-          ...fakeProfileListData(),
-          auth: fakeAuth(),
-        },
-      });
+      }, loginSuccess({
+        ...fakeProfileListData(),
+        auth: fakeAuth(),
+      }));
 
       expect(status).toEqual(authStatusIdle());
     });
@@ -48,16 +42,13 @@ describe('auth/reducer', () => {
     it('should set the profile id to the first given entity', () => {
       const { profileId } = reduce({
         profileId: null,
-      }, {
-        type: constants.AUTH_LOGIN_SUCCESS,
-        payload: {
-          ...fakeProfileListData([
-            { id: 21 },
-            { id: 23 },
-          ]),
-          auth: fakeAuth(),
-        },
-      });
+      }, loginSuccess({
+        ...fakeProfileListData([
+          { id: 21 },
+          { id: 23 },
+        ]),
+        auth: fakeAuth(),
+      }));
 
       expect(profileId).toEqual(21);
     });
@@ -67,16 +58,13 @@ describe('auth/reducer', () => {
 
       const { auth } = reduce({
         auth: null,
-      }, {
-        type: constants.AUTH_LOGIN_SUCCESS,
-        payload: {
-          ...fakeProfileListData(),
-          auth: {
-            email,
-            password,
-          },
+      }, loginSuccess({
+        ...fakeProfileListData(),
+        auth: {
+          email,
+          password,
         },
-      });
+      }));
 
       expect(auth).toEqual({
         email,
