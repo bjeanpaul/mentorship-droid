@@ -8,7 +8,6 @@ export const listActivities = auth => request({
   url: '/activity/',
   method: 'GET',
   schema: arrayOf(Activity),
-  params: { email: auth.email },
   parse: parseResults,
   auth,
 });

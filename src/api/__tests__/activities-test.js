@@ -27,7 +27,6 @@ describe('api/activities', () => {
         url: '/activity/',
         method: 'GET',
         schema: arrayOf(Activity),
-        params: { email: 'a@b.org' },
         parse: parseResults,
         auth: fakeAuth(),
       });
