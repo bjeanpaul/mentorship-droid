@@ -45,7 +45,7 @@ export const removeProfile = (id, auth) => request({
 });
 
 
-export const uploadProfileImage = (id, path, auth) => request({
+export const updateProfileImage = (id, path, auth) => request({
   url: `/profile/${id}/image/`,
   method: 'PUT',
   auth,
