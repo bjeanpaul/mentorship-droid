@@ -4,6 +4,7 @@ import React, { PropTypes } from 'react';
 import { BaseView, Toolbar, Text, Link } from 'src/components';
 
 import LoginForm from 'src/auth/LoginForm';
+import * as constants from 'src/auth/constants';
 
 
 const Login = ({ status, ...props }) => (
@@ -25,7 +26,7 @@ const Login = ({ status, ...props }) => (
 
 const LoginStatusMessage = ({ type }) => {
   switch (type) {
-    case type:
+    case constants.AUTH_STATUS_NOT_FOUND:
       return (
         <Text>
           Sorry, we couldn't find an account with that username and password combination.
