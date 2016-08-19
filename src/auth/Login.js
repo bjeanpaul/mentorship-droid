@@ -4,7 +4,6 @@ import React, { PropTypes } from 'react';
 import { BaseView, Toolbar, Text, Link } from 'src/components';
 
 import LoginForm from 'src/auth/LoginForm';
-import * as constants from 'src/auth/constants';
 
 
 const Login = ({ status, ...props }) => (
@@ -32,13 +31,22 @@ const LoginStatusMessage = ({ type }) => {
           Sorry, we couldn't find an account with that username and password combination.
         </Text>
       );
+
+    default:
+      return null;
   }
 };
 
 
 Login.propTypes = {
+  status: PropTypes.object,
   isLoading: PropTypes.bool,
   errorMessage: PropTypes.string,
+};
+
+
+LoginStatusMessage.propTypes = {
+  type: PropTypes.string,
 };
 
 

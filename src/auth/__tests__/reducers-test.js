@@ -5,7 +5,6 @@ import * as constants from 'src/auth/constants';
 import { authStatusIdle, authStatusBusy, authStatusNotFound } from 'src/auth/statuses';
 
 
-
 describe('auth/reducer', () => {
   describe('AUTH_LOGIN_REQUEST', () => {
     it('should mark the status as busy', () => {

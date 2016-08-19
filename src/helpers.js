@@ -25,7 +25,7 @@ export const staticStatus = type => () => ({
 
 export const dataStatus = type => details => ({
   type,
-  details
+  details,
 });
 
 
