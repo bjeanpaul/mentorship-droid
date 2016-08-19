@@ -3,7 +3,6 @@ import 'isomorphic-fetch';
 import nock from 'nock';
 import config from 'src/config';
 import FormData from 'react-native/Libraries/Network/FormData';
-import { mock } from 'app/scripts/helpers';
 
 // automocking doesn't seem to work for axios
 jest.setMock('axios', jest.fn());
@@ -14,9 +13,13 @@ jest.setMock('react-native', reactNative);
 // form data values to only be strings
 global.FormData = FormData;
 
-// for use in jest.mock() factory functions
-global.mock = mock;
-
 global.nock = nock;
 
 config.API_URL = '/mentor-api';
+
+
+global.mock = (...args) => {
+  // TODO invesitage why importing helpers in this module seems to make jest unhappy
+  const { mock } = require('app/scripts/helpers');
+  return mock(...args);
+};
