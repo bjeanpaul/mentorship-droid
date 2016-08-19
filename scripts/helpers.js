@@ -1,3 +1,4 @@
+import { uniqueId } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
 import { Profile } from 'src/api';
 
@@ -20,6 +21,17 @@ export const fakeContext = () => ({
 });
 
 
+export const mock = () => {
+  const __id = uniqueId();
+
+  return (...args) => ({
+    __id,
+    args,
+  });
+};
+
+
 export const fakeProfileData = (data = { id: 23 }) => normalize(data, Profile);
+
 
 export const fakeProfileListData = (data = [{ id: 23 }]) => normalize(data, arrayOf(Profile));
