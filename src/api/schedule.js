@@ -1,5 +1,5 @@
 import { arrayOf } from 'normalizr';
-import request, { imageData } from 'src/api/request';
+import request from 'src/api/request';
 import { ScheduledCall } from 'src/api/schemas';
 import { parseResults } from 'src/api/parse';
 
