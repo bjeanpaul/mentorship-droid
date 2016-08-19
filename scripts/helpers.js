@@ -1,6 +1,6 @@
 import { uniqueId } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
-import { Profile } from 'src/api';
+import { Profile, ScheduledCall } from 'src/api';
 
 
 export const capture = async (fn, ...xargs) => {
@@ -31,7 +31,17 @@ export const mock = () => {
 };
 
 
-export const fakeProfileData = (data = { id: 23 }) => normalize(data, Profile);
+export const fakeProfileData = (data = { id: 23 }) => (
+  normalize(data, Profile));
 
 
-export const fakeProfileListData = (data = [{ id: 23 }]) => normalize(data, arrayOf(Profile));
+export const fakeScheduledCallData = (data = { id: 23 }) => (
+  normalize(data, ScheduledCall));
+
+
+export const fakeProfileListData = (data = [{ id: 23 }]) => (
+  normalize(data, arrayOf(Profile)));
+
+
+export const fakeScheduledCallListData = (data = [{ id: 23 }]) => (
+  normalize(data, arrayOf(ScheduledCall)));
