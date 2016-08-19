@@ -1,5 +1,4 @@
 import reduce from 'src/auth/reducer';
-import { serializeAuth } from 'src/api/request';
 import { fakeAuth, fakeProfileListData } from 'app/scripts/helpers';
 
 import {
@@ -95,18 +94,11 @@ describe('auth/reducer', () => {
         type: AUTH_LOGIN_SUCCESS,
         payload: {
           ...fakeProfileListData(),
-          auth: {
-            email,
-            password,
-          },
+          auth: fakeAuth()
         },
       });
 
-      expect(auth).toEqual({
-        email,
-        password,
-        authToken: serializeAuth(email, password),
-      });
+      expect(auth).toEqual(fakeAuth());
     });
   });
 });
