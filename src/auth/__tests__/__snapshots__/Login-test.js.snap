@@ -1,0 +1,16 @@
+exports[`auth/Login should draw not found statuses 0`] = `
+Object {
+  "$$typeof": Symbol(react.element),
+  "_owner": null,
+  "_store": Object {},
+  "key": null,
+  "props": Object {
+    "onLoginPress": [Function noop],
+    "status": Object {
+      "type": "STATUS_NOT_FOUND"
+    }
+  },
+  "ref": null,
+  "type": [Function Login]
+}
+`;
