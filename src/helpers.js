@@ -18,6 +18,17 @@ export const switchError = cases => (e, ...xargs) => {
 };
 
 
+export const staticStatus = type => () => ({
+  type,
+});
+
+
+export const dataStatus = type => details => ({
+  type,
+  details
+});
+
+
 export const generateActionTypes = function generateActionNames(
   resource,
   operations = ['FETCH', 'CREATE', 'UPDATE', 'DELETE']

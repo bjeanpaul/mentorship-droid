@@ -2,6 +2,8 @@ import { mock } from 'app/scripts/helpers';
 import { identity, noop } from 'lodash';
 
 import {
+  dataStatus,
+  staticStatus,
   switchError,
   generateActionTypes,
   filterActionTypes,
@@ -9,6 +11,21 @@ import {
 } from 'src/helpers';
 
 describe('helpers', () => {
+  describe('staticStatus', () => {
+    it('should create actions of the given type', () => {
+      expect(staticStatus('FOO')()).toEqual({ type: 'FOO' });
+    });
+  });
+
+  describe('dataStatus', () => {
+    it('should create actions of the given type and dataStatus', () => {
+      expect(dataStatus('FOO')({ bar: 23 })).toEqual({
+        type: 'FOO',
+        payload: { bar: 23 },
+      });
+    });
+  });
+
   describe('switchError', () => {
     it('should call the first function corresponding to a matching type', async () => {
       class A {}
