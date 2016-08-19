@@ -33,7 +33,6 @@ describe('api/profiles', () => {
         url: '/profile/',
         method: 'GET',
         schema: arrayOf(Profile),
-        params: { email: 'a@b.org' },
         parse: parseResults,
         auth: fakeAuth(),
       });

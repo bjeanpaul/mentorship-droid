@@ -8,7 +8,6 @@ export const listProfiles = auth => request({
   url: '/profile/',
   method: 'GET',
   schema: arrayOf(Profile),
-  params: { email: auth.email },
   parse: parseResults,
   auth,
 });
