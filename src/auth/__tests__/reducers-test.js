@@ -1,12 +1,7 @@
 import reduce from 'src/auth/reducer';
 import { serializeAuth } from 'src/api/request';
 import { fakeAuth, fakeProfileListData } from 'app/scripts/helpers';
-
-import {
-  AUTH_LOGIN_REQUEST,
-  AUTH_LOGIN_SUCCESS,
-  AUTH_LOGIN_FAILURE,
-} from 'src/auth/constants';
+import * as constants from 'src/auth/constants';
 
 
 describe('auth/reducer', () => {
@@ -15,7 +10,7 @@ describe('auth/reducer', () => {
       const { isLoading } = reduce({
         isLoading: false,
       }, {
-        type: AUTH_LOGIN_REQUEST,
+        type: constants.AUTH_LOGIN_REQUEST,
       });
 
       expect(isLoading).toBe(true);
@@ -25,7 +20,7 @@ describe('auth/reducer', () => {
       const { errorMessage } = reduce({
         errorMessage: 'o_O',
       }, {
-        type: AUTH_LOGIN_REQUEST,
+        type: constants.AUTH_LOGIN_REQUEST,
       });
 
       expect(errorMessage).toEqual('');
@@ -37,7 +32,7 @@ describe('auth/reducer', () => {
       const { isLoading } = reduce({
         isLoading: true,
       }, {
-        type: AUTH_LOGIN_FAILURE,
+        type: constants.AUTH_LOGIN_FAILURE,
       });
 
       expect(isLoading).toBe(false);
@@ -47,7 +42,7 @@ describe('auth/reducer', () => {
       const { errorMessage } = reduce({
         errorMessage: '',
       }, {
-        type: AUTH_LOGIN_FAILURE,
+        type: constants.AUTH_LOGIN_FAILURE,
       });
 
       expect(errorMessage).toEqual('Incorrect email or password combination.');
@@ -59,7 +54,7 @@ describe('auth/reducer', () => {
       const { isLoading } = reduce({
         isLoading: true,
       }, {
-        type: AUTH_LOGIN_SUCCESS,
+        type: constants.AUTH_LOGIN_SUCCESS,
         payload: {
           ...fakeProfileListData(),
           auth: fakeAuth(),
@@ -73,7 +68,7 @@ describe('auth/reducer', () => {
       const { profileId } = reduce({
         profileId: null,
       }, {
-        type: AUTH_LOGIN_SUCCESS,
+        type: constants.AUTH_LOGIN_SUCCESS,
         payload: {
           ...fakeProfileListData([
             { id: 21 },
@@ -92,7 +87,7 @@ describe('auth/reducer', () => {
       const { auth } = reduce({
         auth: null,
       }, {
-        type: AUTH_LOGIN_SUCCESS,
+        type: constants.AUTH_LOGIN_SUCCESS,
         payload: {
           ...fakeProfileListData(),
           auth: {
