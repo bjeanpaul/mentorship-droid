@@ -16,3 +16,10 @@ global.FormData = FormData;
 global.nock = nock;
 
 config.API_URL = '/mentor-api';
+
+
+global.mock = (...args) => {
+  // TODO invesitage why importing helpers in this module seems to make jest unhappy
+  const { mock } = require('app/scripts/helpers');
+  return mock(...args);
+};
