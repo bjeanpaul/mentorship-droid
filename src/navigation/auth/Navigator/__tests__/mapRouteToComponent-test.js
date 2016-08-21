@@ -10,7 +10,6 @@ import ActivationContainer from 'src/auth/ActivationContainer';
 import ResetPasswordContainer from 'src/auth/ResetPasswordContainer';
 
 
-// TODO: Login, Activation, ResetPassword
 describe('navigation/auth/navigator', () => {
   const mockStore = {
     subscribe: () => {},
