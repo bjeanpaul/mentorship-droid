@@ -31,7 +31,7 @@ class LoginForm extends React.Component {
         />
 
         <Button
-          handlePress={() => this.props.handleLoginPress(
+          onPress={() => this.props.onLoginPress(
             this.state.username,
             this.state.password
           )}
@@ -45,7 +45,7 @@ LoginForm.propTypes = {
   initialUsername: PropTypes.string,
   initialPassword: PropTypes.string,
   buttonLabel: PropTypes.string.isRequired,
-  handleLoginPress: PropTypes.func.isRequired,
+  onLoginPress: PropTypes.func.isRequired,
 };
 
 export default LoginForm;

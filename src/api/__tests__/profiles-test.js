@@ -14,7 +14,7 @@ import {
   getProfile,
   updateProfile,
   removeProfile,
-  uploadProfileImage,
+  updateProfileImage,
 } from 'src/api';
 
 
@@ -33,7 +33,6 @@ describe('api/profiles', () => {
         url: '/profile/',
         method: 'GET',
         schema: arrayOf(Profile),
-        params: { email: 'a@b.org' },
         parse: parseResults,
         auth: fakeAuth(),
       });
@@ -83,9 +82,9 @@ describe('api/profiles', () => {
     });
   });
 
-  describe('uploadProfileImage', () => {
-    it('should construct a request for uploading a profile image', () => {
-      expect(uploadProfileImage(1, '/foo.png', {
+  describe('updateProfileImage', () => {
+    it('should construct a request for updateing a profile image', () => {
+      expect(updateProfileImage(1, '/foo.png', {
         email: 'a@b.org',
         password: '1337',
       }))
