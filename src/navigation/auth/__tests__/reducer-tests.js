@@ -10,7 +10,6 @@ import authReducer from 'src/navigation/auth/reducer';
 
 describe('navigation/auth/reducer', () => {
   it('should have landing as the first route', () => {
-    // eslint-disable-next-line no-undefined
     expect(authReducer(void 0, { type: 'ping?' })).toEqual({
       index: 0,
       routes: [
