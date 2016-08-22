@@ -1,86 +1,62 @@
 import reduce from 'src/auth/reducer';
 import { fakeAuth, fakeProfileListData } from 'app/scripts/helpers';
-
-import {
-  AUTH_LOGIN_REQUEST,
-  AUTH_LOGIN_SUCCESS,
-  AUTH_LOGIN_FAILURE,
-} from 'src/auth/constants';
+import * as statuses from 'src/auth/statuses';
+import * as actions from 'src/auth/actions';
 
 
 describe('auth/reducer', () => {
   describe('AUTH_LOGIN_REQUEST', () => {
-    it('should mark the state as loading', () => {
-      const { isLoading } = reduce({
-        isLoading: false,
-      }, {
-        type: AUTH_LOGIN_REQUEST,
-      });
+    it('should mark the status as request', () => {
+      const { status } = reduce({
+        status: statuses.authStatusIdle(),
+      }, actions.loginRequest());
 
-      expect(isLoading).toBe(true);
+      expect(status).toEqual(statuses.authStatusBusy());
     });
+  });
 
-    it('should clear the current error message', () => {
-      const { errorMessage } = reduce({
-        errorMessage: 'o_O',
-      }, {
-        type: AUTH_LOGIN_REQUEST,
-      });
+  describe('AUTH_LOGIN_NOT_FOUND', () => {
+    it('should mark the status as not found', () => {
+      const { status } = reduce({
+        status: statuses.authStatusBusy(),
+      }, actions.loginNotFound());
 
-      expect(errorMessage).toEqual('');
+      expect(status).toEqual(statuses.authStatusNotFound());
     });
   });
 
   describe('AUTH_LOGIN_FAILURE', () => {
-    it('should mark the state as not loading', () => {
-      const { isLoading } = reduce({
-        isLoading: true,
-      }, {
-        type: AUTH_LOGIN_FAILURE,
-      });
+    it('should mark the status as erroroneous', () => {
+      const { status } = reduce({
+        status: statuses.authStatusBusy(),
+      }, actions.loginFailure());
 
-      expect(isLoading).toBe(false);
-    });
-
-    it('should clear the current error message', () => {
-      const { errorMessage } = reduce({
-        errorMessage: '',
-      }, {
-        type: AUTH_LOGIN_FAILURE,
-      });
-
-      expect(errorMessage).toEqual('Incorrect email or password combination.');
+      expect(status).toEqual(statuses.authStatusError());
     });
   });
 
   describe('AUTH_LOGIN_SUCCESS', () => {
-    it('should mark the state as not loading', () => {
-      const { isLoading } = reduce({
-        isLoading: true,
-      }, {
-        type: AUTH_LOGIN_SUCCESS,
-        payload: {
-          ...fakeProfileListData(),
-          auth: fakeAuth(),
-        },
-      });
+    it('should mark the status as idle', () => {
+      const { status } = reduce({
+        status: statuses.authStatusBusy(),
+      }, actions.loginSuccess({
+        ...fakeProfileListData(),
+        auth: fakeAuth(),
+      }));
 
-      expect(isLoading).toBe(false);
+      expect(status).toEqual(statuses.authStatusIdle());
     });
 
     it('should set the profile id to the first given entity', () => {
       const { profileId } = reduce({
         profileId: null,
-      }, {
-        type: AUTH_LOGIN_SUCCESS,
-        payload: {
-          ...fakeProfileListData([
-            { id: 21 },
-            { id: 23 },
-          ]),
-          auth: fakeAuth(),
-        },
-      });
+      }, actions.loginSuccess({
+        ...fakeProfileListData([
+          { id: 21 },
+          { id: 23 },
+        ]),
+        auth: fakeAuth(),
+      }));
 
       expect(profileId).toEqual(21);
     });
@@ -88,13 +64,10 @@ describe('auth/reducer', () => {
     it('should set auth details', () => {
       const { auth } = reduce({
         auth: null,
-      }, {
-        type: AUTH_LOGIN_SUCCESS,
-        payload: {
-          ...fakeProfileListData(),
-          auth: fakeAuth(),
-        },
-      });
+      }, actions.loginSuccess({
+        ...fakeProfileListData(),
+        auth: fakeAuth(),
+      }));
 
       expect(auth).toEqual(fakeAuth());
     });

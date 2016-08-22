@@ -1,30 +1,30 @@
-import {
-  AUTH_LOGIN_REQUEST,
-  AUTH_LOGIN_SUCCESS,
-  AUTH_LOGIN_FAILURE,
-} from './constants';
+import * as constants from 'src/auth/constants';
+import * as statuses from 'src/auth/statuses';
 
 
-const authReducer = (state = {}, action) => {
+const authReducer = (state = {
+  status: statuses.authStatusIdle(),
+}, action) => {
   switch (action.type) {
-    case AUTH_LOGIN_REQUEST:
+    case constants.AUTH_LOGIN_REQUEST:
       return {
         ...state,
-
-        isLoading: true,
-        errorMessage: '',
+        status: statuses.authStatusBusy(),
       };
 
-    case AUTH_LOGIN_FAILURE:
+    case constants.AUTH_LOGIN_FAILURE:
       return {
         ...state,
-
-        // TODO use constant for status type instead and put copy in component
-        isLoading: false,
-        errorMessage: 'Incorrect email or password combination.',
+        status: statuses.authStatusError(),
       };
 
-    case AUTH_LOGIN_SUCCESS: {
+    case constants.AUTH_LOGIN_NOT_FOUND:
+      return {
+        ...state,
+        status: statuses.authStatusNotFound(),
+      };
+
+    case constants.AUTH_LOGIN_SUCCESS: {
       const {
         payload: {
           auth,
@@ -34,9 +34,9 @@ const authReducer = (state = {}, action) => {
 
       return {
         ...state,
-        isLoading: false,
-        profileId,
         auth,
+        profileId,
+        status: statuses.authStatusIdle(),
       };
     }
 

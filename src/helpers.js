@@ -15,3 +15,14 @@ export const switchError = cases => (e, ...xargs) => {
     ? Promise.resolve().then(() => fn(e, ...xargs))
     : Promise.reject(e);
 };
+
+
+export const staticStatus = type => () => ({
+  type,
+});
+
+
+export const dataStatus = type => details => ({
+  type,
+  details,
+});
