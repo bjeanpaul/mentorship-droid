@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 import * as constants from 'src/navigation/auth/constants';
 
+import NotFound from 'src/components/NotFound';
 import LandingContainer from 'src/onboarding/LandingContainer';
 import LoginContainer from 'src/auth/LoginContainer';
 import ActivationContainer from 'src/auth/ActivationContainer';
@@ -18,7 +18,7 @@ const mapRouteToComponent = (key) => {
     case constants.AUTH_ROUTE_RESET_PASSWORD:
       return <ResetPasswordContainer />;
     default:
-      return <View><Text>Route Not Found</Text></View>;
+      return <NotFound />;
   }
 };
 export default mapRouteToComponent;
