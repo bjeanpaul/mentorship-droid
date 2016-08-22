@@ -1,8 +1,8 @@
 import * as constants from './constants';
-import { pushRoute, popRoute } from 'src/actionHelpers';
+import { pushRoute, staticAction } from 'src/actionHelpers';
 
 
-export const popAuthRoute = popRoute(constants.AUTH_NAVIGATION_POP);
+export const popAuthRoute = staticAction(constants.AUTH_NAVIGATION_POP);
 export const pushAuthRoute = pushRoute(constants.AUTH_NAVIGATION_PUSH);
 
 
