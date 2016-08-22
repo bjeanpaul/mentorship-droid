@@ -9,7 +9,7 @@ const CategoryList = ({
   onCategoryPress,
 }) => (
   <BaseView>
-      <View style={styles.heading}>
+      <View style={styles.header}>
         <Text style={styles.text}>Relationship Stages</Text>
       </View>
 

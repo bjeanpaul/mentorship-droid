@@ -4,7 +4,7 @@ import colors from 'src/constants/colors';
 
 
 export default StyleSheet.create({
-  heading: {
+  header: {
     height: 96,
     backgroundColor: colors.CATEGORY_LIST_HEADING_BG,
     justifyContent: 'center',
