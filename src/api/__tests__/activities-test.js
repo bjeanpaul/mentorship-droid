@@ -11,7 +11,6 @@ import { parseResults } from 'src/api/parse';
 import {
   listActivities,
   getActivity,
-  updateActivity,
 } from 'src/api';
 
 
@@ -40,17 +39,6 @@ describe('api/activities', () => {
         method: 'GET',
         auth: fakeAuth(),
         schema: Activity,
-      });
-    });
-  });
-
-  describe('updateActivity', () => {
-    it('should construct a request for updating an activity', () => {
-      expect(updateActivity(23, { fake: 'activity' }, fakeAuth())).toEqual({
-        url: '/activity/23/',
-        method: 'PUT',
-        data: { fake: 'activity' },
-        auth: fakeAuth(),
       });
     });
   });

@@ -19,11 +19,3 @@ export const getActivity = (id, auth) => request({
   schema: Activity,
   auth,
 });
-
-
-export const updateActivity = (id, data, auth) => request({
-  url: `/activity/${id}/`,
-  method: 'PUT',
-  data,
-  auth,
-});
