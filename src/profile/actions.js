@@ -26,8 +26,8 @@ const updateProfile = apiAction({
 });
 
 
-const uploadProfileImage = apiAction({
-  method: api.uploadProfileImage,
+const updateProfileImage = apiAction({
+  method: api.updateProfileImage,
   request: staticAction(constants.PROFILE_IMAGE_UPDATE_REQUEST),
   success: staticAction(constants.PROFILE_IMAGE_UPDATE_SUCCESS),
   failures: [[ApiResponseError, staticAction(constants.PROFILE_IMAGE_UPDATE_FAILURE)]],
@@ -37,5 +37,5 @@ const uploadProfileImage = apiAction({
 export {
   fetchProfile,
   updateProfile,
-  uploadProfileImage,
+  updateProfileImage,
 };
