@@ -38,7 +38,7 @@
     "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-native-mock": "^0.2.6",
-    "redux-logger": "^2.6.1",
+    "redux-logger": "^2.6.1"
   },
   "jest": {
     "setupEnvScriptFile": "scripts/jest/environment.js",
