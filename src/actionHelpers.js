@@ -24,3 +24,9 @@ export const dataAction = type => data => ({
   type,
   payload: data,
 });
+
+
+export const pushRoute = type => key => ({
+  type,
+  payload: { key },
+});
