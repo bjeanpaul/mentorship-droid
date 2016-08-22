@@ -1,4 +1,3 @@
-import { serializeAuth } from 'src/api/request';
 import * as constants from 'src/auth/constants';
 import * as statuses from 'src/auth/statuses';
 
@@ -33,18 +32,11 @@ const authReducer = (state = {
         },
       } = action;
 
-      const { email, password } = auth;
-
       return {
         ...state,
+        auth,
         profileId,
         status: statuses.authStatusIdle(),
-
-        // TODO don't add `authToken` once we are using api in all actions
-        auth: {
-          ...auth,
-          authToken: serializeAuth(email, password),
-        },
       };
     }
 

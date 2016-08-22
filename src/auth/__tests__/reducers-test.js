@@ -1,5 +1,4 @@
 import reduce from 'src/auth/reducer';
-import { serializeAuth } from 'src/api/request';
 import { fakeAuth, fakeProfileListData } from 'app/scripts/helpers';
 import * as statuses from 'src/auth/statuses';
 import * as actions from 'src/auth/actions';
@@ -63,23 +62,14 @@ describe('auth/reducer', () => {
     });
 
     it('should set auth details', () => {
-      const { email, password } = fakeAuth();
-
       const { auth } = reduce({
         auth: null,
       }, actions.loginSuccess({
         ...fakeProfileListData(),
-        auth: {
-          email,
-          password,
-        },
+        auth: fakeAuth(),
       }));
 
-      expect(auth).toEqual({
-        email,
-        password,
-        authToken: serializeAuth(email, password),
-      });
+      expect(auth).toEqual(fakeAuth());
     });
   });
 });
