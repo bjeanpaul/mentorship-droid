@@ -10,7 +10,7 @@ import { View, Text } from 'react-native';
 const NotFound = () => (
   <View>
     <Text>
-      You have stubmled into an unknown realm of the application.
+      You have stumbled into an unknown realm of the application.
       This is certainly a bug, and something that you should never have seen.
     </Text>
   </View>
