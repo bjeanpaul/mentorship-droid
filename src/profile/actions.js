@@ -25,6 +25,22 @@ const updateProfile = apiAction({
   failures: [[ApiResponseError, staticAction(constants.PROFILE_UPDATE_FAILURE)]],
 });
 
+// this should really update the entities; but is that a normal thing
+// to do... it's starting to feel like that's breaking down.
+const changeProfileImage = path => {
+  return {
+    type: constants.PROFILE_IMAGE_CHANGE,
+    payload: {
+      entities: {
+        profile: {
+          1: {
+            picture: path,
+          },
+        },
+      },
+    },
+  };
+};
 
 const updateProfileImage = apiAction({
   method: api.updateProfileImage,
@@ -37,5 +53,6 @@ const updateProfileImage = apiAction({
 export {
   fetchProfile,
   updateProfile,
+  changeProfileImage,
   updateProfileImage,
 };

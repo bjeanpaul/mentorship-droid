@@ -46,4 +46,7 @@ const authReducer = (state = {
 };
 
 
+export const getProfileId = state => state.auth.profileId || 1;
+
+
 export default authReducer;

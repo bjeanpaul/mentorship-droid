@@ -38,4 +38,9 @@ const profile = (
   }
 };
 
+
+export const getProfile = (state, profileId) => state.entities.profile[profileId] || {
+};
+
+
 export default profile;
