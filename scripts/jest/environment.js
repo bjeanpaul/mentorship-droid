@@ -1,6 +1,5 @@
 import reactNative from 'react-native-mock';
 import 'isomorphic-fetch';
-import nock from 'nock';
 import config from 'src/config';
 import FormData from 'react-native/Libraries/Network/FormData';
 
@@ -13,7 +12,6 @@ jest.setMock('react-native', reactNative);
 // form data values to only be strings
 global.FormData = FormData;
 
-global.nock = nock;
 
 config.API_URL = '/mentor-api';
 
