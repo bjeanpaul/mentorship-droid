@@ -1,9 +1,10 @@
 import * as constants from 'src/profile/constants';
+import * as statuses from 'src/profile/statuses';
 
 
 const profile = (
   state = {
-    status: constants.STATUS_IDLE,
+    status: statuses.profileStatusIdle(),
   },
   action
 ) => {
@@ -13,7 +14,7 @@ const profile = (
     case constants.PROFILE_IMAGE_UPDATE_REQUEST:
       return {
         ...state,
-        status: constants.STATUS_BUSY,
+        status: statuses.profileStatusBusy(),
       };
 
     case constants.PROFILE_FETCH_SUCCESS:
@@ -21,7 +22,7 @@ const profile = (
     case constants.PROFILE_IMAGE_UPDATE_SUCCESS:
       return {
         ...state,
-        status: constants.STATUS_IDLE,
+        status: statuses.profileStatusIdle(),
       };
 
     case constants.PROFILE_FETCH_FAILURE:
@@ -29,7 +30,7 @@ const profile = (
     case constants.PROFILE_IMAGE_UPDATE_FAILURE:
       return {
         ...state,
-        status: constants.STATUS_ERROR,
+        status: statuses.profileStatusError(),
       };
 
     default:
