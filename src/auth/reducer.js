@@ -1,24 +1,28 @@
 import { serializeAuth } from 'src/api/request';
 import * as constants from 'src/auth/constants';
-import { authStatusIdle, authStatusBusy, authStatusNotFound } from 'src/auth/statuses';
+import * as statuses from 'src/auth/statuses';
 
 
 const authReducer = (state = {
-  status: authStatusIdle(),
+  status: statuses.authStatusIdle(),
 }, action) => {
   switch (action.type) {
     case constants.AUTH_LOGIN_REQUEST:
       return {
         ...state,
-        status: authStatusBusy(),
+        status: statuses.authStatusBusy(),
       };
 
-    // TODO use ...NOT_FOUND where ...FAILURE is, and add change ...FAILURE to mean
-    // system errors
     case constants.AUTH_LOGIN_FAILURE:
       return {
         ...state,
-        status: authStatusNotFound(),
+        status: statuses.authStatusError(),
+      };
+
+    case constants.AUTH_LOGIN_NOT_FOUND:
+      return {
+        ...state,
+        status: statuses.authStatusNotFound(),
       };
 
     case constants.AUTH_LOGIN_SUCCESS: {
@@ -34,7 +38,7 @@ const authReducer = (state = {
       return {
         ...state,
         profileId,
-        status: authStatusIdle(),
+        status: statuses.authStatusIdle(),
 
         // TODO don't add `authToken` once we are using api in all actions
         auth: {

@@ -3,7 +3,7 @@ jest.mock('src/api/profiles');
 
 import { login } from 'src/auth/actions';
 import { capture, fakeProfileListData } from 'app/scripts/helpers';
-import { listProfiles } from 'src/api';
+import { listProfiles, ApiResponseError } from 'src/api';
 import { noop } from 'lodash';
 import * as constants from 'src/auth/constants';
 
@@ -27,7 +27,7 @@ describe('auth/actions', () => {
       const data = fakeProfileListData();
       listProfiles.mockReturnValue(Promise.resolve(data));
 
-      const [_busy, action] = await capture(login('a@b.org', '1337'));
+      const [_request, action] = await capture(login('a@b.org', '1337'));
 
       expect(action).toEqual({
         type: constants.AUTH_LOGIN_SUCCESS,
@@ -41,10 +41,18 @@ describe('auth/actions', () => {
       });
     });
 
-    it('should dispatch failure for empty results', async () => {
+    it('should dispatch not found for empty results', async () => {
       listProfiles.mockReturnValue(Promise.resolve(fakeProfileListData([])));
 
-      const [_busy, action] = await capture(login('a@b.org', '1337'));
+      const [_request, action] = await capture(login('a@b.org', '1337'));
+
+      expect(action).toEqual({ type: constants.AUTH_LOGIN_NOT_FOUND });
+    });
+
+    it('should dispatch failure for api errors', async () => {
+      listProfiles.mockReturnValue(Promise.reject(new ApiResponseError('o_O')));
+
+      const [_request, action] = await capture(login('a@b.org', '1337'));
 
       expect(action).toEqual({ type: constants.AUTH_LOGIN_FAILURE });
     });
