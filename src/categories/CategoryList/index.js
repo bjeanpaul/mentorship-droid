@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
-import { View } from 'react-native';
-import { BaseView, Link, Text } from 'src/components';
+import { View, TouchableNativeFeedback } from 'react-native';
+import { BaseView, Text } from 'src/components';
 import styles from './styles';
 
 
@@ -10,23 +10,20 @@ const CategoryList = ({
 }) => (
   <BaseView>
       <View style={styles.header}>
-        <Text style={styles.text}>Relationship Stages</Text>
+        <Text style={styles.text}>Relationship </Text>
       </View>
 
       <View style={styles.list}>
         {categories.map(({ id, title, color }) => (
-        <View
+        <TouchableNativeFeedback
           key={id}
           categoryId={id}
-          style={[styles.category, { backgroundColor: color }]}
+          onPress={() => onCategoryPress(id)}
         >
-          <Link
-            style={styles.text}
-            onPress={() => onCategoryPress(id)}
-          >
-            {title}
-          </Link>
-        </View>
+          <View style={[styles.category, { backgroundColor: color }]}>
+            <Text style={styles.text}>{title}</Text>
+          </View>
+        </TouchableNativeFeedback>
         ))}
       </View>
   </BaseView>

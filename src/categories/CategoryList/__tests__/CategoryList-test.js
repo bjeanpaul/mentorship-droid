@@ -32,13 +32,11 @@ describe('CategoryList', () => {
     const el = shallow(createComponent({ onCategoryPress }));
 
     el.findWhere(child => child.prop('categoryId') === 1)
-      .find('Link')
       .simulate('press');
 
     expect(onCategoryPress.mock.calls).toEqual([[1]]);
 
     el.findWhere(child => child.prop('categoryId') === 2)
-      .find('Link')
       .simulate('press');
 
     expect(onCategoryPress.mock.calls).toEqual([[1], [2]]);
