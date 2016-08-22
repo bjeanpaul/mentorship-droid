@@ -5,12 +5,7 @@ import { login } from 'src/auth/actions';
 import { capture, fakeProfileListData } from 'app/scripts/helpers';
 import { listProfiles } from 'src/api';
 import { noop } from 'lodash';
-
-import {
-  AUTH_LOGIN_REQUEST,
-  AUTH_LOGIN_SUCCESS,
-  AUTH_LOGIN_FAILURE,
-} from 'src/auth/constants';
+import * as constants from 'src/auth/constants';
 
 
 describe('auth/actions', () => {
@@ -24,7 +19,7 @@ describe('auth/actions', () => {
       const [action] = await capture(login('a@b.org', '1337'));
 
       expect(action).toEqual({
-        type: AUTH_LOGIN_REQUEST,
+        type: constants.AUTH_LOGIN_REQUEST,
       });
     });
 
@@ -35,7 +30,7 @@ describe('auth/actions', () => {
       const [_busy, action] = await capture(login('a@b.org', '1337'));
 
       expect(action).toEqual({
-        type: AUTH_LOGIN_SUCCESS,
+        type: constants.AUTH_LOGIN_SUCCESS,
         payload: {
           ...data,
           auth: {
@@ -51,7 +46,7 @@ describe('auth/actions', () => {
 
       const [_busy, action] = await capture(login('a@b.org', '1337'));
 
-      expect(action).toEqual({ type: AUTH_LOGIN_FAILURE });
+      expect(action).toEqual({ type: constants.AUTH_LOGIN_FAILURE });
     });
 
     it('should call listProfiles() with the correct params', async () => {

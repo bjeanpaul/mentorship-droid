@@ -1,25 +1,20 @@
 import { isEmpty } from 'lodash';
 import { listProfiles } from 'src/api';
-
-import {
-  AUTH_LOGIN_REQUEST,
-  AUTH_LOGIN_SUCCESS,
-  AUTH_LOGIN_FAILURE,
-} from './constants';
+import * as constants from 'src/auth/constants';
 
 
 const loginBusy = () => ({
-  type: AUTH_LOGIN_REQUEST,
+  type: constants.AUTH_LOGIN_REQUEST,
 });
 
 
 const loginFailure = () => ({
-  type: AUTH_LOGIN_FAILURE,
+  type: constants.AUTH_LOGIN_FAILURE,
 });
 
 
 const loginSuccess = ({ result, entities }, auth) => ({
-  type: AUTH_LOGIN_SUCCESS,
+  type: constants.AUTH_LOGIN_SUCCESS,
   payload: {
     auth,
     result,
@@ -33,6 +28,8 @@ const loginDone = (data, auth) => !isEmpty(data.result)
   : loginFailure();
 
 
+// TODO use ...NOT_FOUND where ...FAILURE is, and add change ...FAILURE to mean
+// system errors
 export const login = (email, password) => dispatch => Promise.resolve()
   .then(() => loginBusy(email, password))
   .then(dispatch)
