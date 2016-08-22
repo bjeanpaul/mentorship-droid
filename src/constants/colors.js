@@ -4,7 +4,6 @@ export default {
   DEFAULT_STATUS_BG: '#99acae',
   DEFAULT_TEXT: '#003035',
 
-
   LABEL_TEXT: '#9fb1b3',
   LINK_TEXT: '#f77040',
 
@@ -52,4 +51,7 @@ export default {
 
   ONBOARDING_LANDING_GET_STARTED_TEXT: 'rgba(255, 255, 255, 0.5)',
   ONBOARDING_LANDING_LOGIN_BG: 'rgba(42, 45, 48, 0.05)',
+
+  CATEGORY_LIST_HEADING_BG: '#003035',
+  CATEGORY_LIST_TEXT: '#fff',
 };

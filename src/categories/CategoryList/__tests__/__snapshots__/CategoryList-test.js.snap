@@ -1,0 +1,25 @@
+exports[`CategoryList should render 0`] = `
+Object {
+  "$$typeof": Symbol(react.element),
+  "_owner": null,
+  "_store": Object {},
+  "key": null,
+  "props": Object {
+    "categories": Array [
+      Object {
+        "color": "#c4cd39",
+        "id": 1,
+        "title": "Connect"
+      },
+      Object {
+        "color": "#97c13c",
+        "id": 2,
+        "title": "Level"
+      }
+    ],
+    "onCategoryPress": [Function noop]
+  },
+  "ref": null,
+  "type": [Function CategoryList]
+}
+`;
