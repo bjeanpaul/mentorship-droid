@@ -24,3 +24,14 @@ export const dataAction = type => data => ({
   type,
   payload: data,
 });
+
+
+export const popRoute = type => () => ({
+  type,
+});
+
+
+export const pushRoute = type => (key) => ({
+  type,
+  payload: { key },
+});
