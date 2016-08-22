@@ -8,5 +8,4 @@ describe('Not Found', () => {
       <NotFound />
     ).toMatchSnapshot();
   });
-
 });
