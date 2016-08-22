@@ -1,13 +1,12 @@
-import { noop } from 'lodash';
 import React, { PropTypes } from 'react';
 import { View } from 'react-native';
-import { BaseView, ListItem, Link, Text } from 'src/components';
+import { BaseView, Link, Text } from 'src/components';
 import styles from './styles';
 
 
 const CategoryList = ({
   categories,
-  onCategoryPress
+  onCategoryPress,
 }) => (
   <BaseView>
       <View style={styles.heading}>
@@ -19,10 +18,12 @@ const CategoryList = ({
         <View
           key={id}
           categoryId={id}
-          style={[styles.category, { backgroundColor: color }]}>
+          style={[styles.category, { backgroundColor: color }]}
+        >
           <Link
             style={styles.text}
-            onPress={() => onCategoryPress(id)}>
+            onPress={() => onCategoryPress(id)}
+          >
             {title}
           </Link>
         </View>
@@ -30,6 +31,12 @@ const CategoryList = ({
       </View>
   </BaseView>
 );
+
+
+CategoryList.propTypes = {
+  categories: PropTypes.array.isRequired,
+  onCategoryPress: PropTypes.func.isRequired,
+};
 
 
 export default CategoryList;

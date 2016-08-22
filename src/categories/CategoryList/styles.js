@@ -10,7 +10,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   list: {
-    flex: 1
+    flex: 1,
   },
   category: {
     flex: 1,
