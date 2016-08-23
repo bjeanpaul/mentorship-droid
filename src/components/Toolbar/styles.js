@@ -11,6 +11,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   backButton: {
+    backgroundColor: 'red',
     position: 'absolute',
     width: 24,
     height: 24,
