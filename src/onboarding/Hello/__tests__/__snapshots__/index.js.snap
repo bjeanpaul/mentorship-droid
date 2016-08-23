@@ -1,0 +1,14 @@
+exports[`Hello should map props correctly 0`] = `
+Object {
+  "$$typeof": Symbol(react.element),
+  "_owner": null,
+  "_store": Object {},
+  "key": null,
+  "props": Object {
+    "name": "Jeff",
+    "onCompleteProfilePress": [Function noop]
+  },
+  "ref": null,
+  "type": [Function Hello]
+}
+`;

@@ -9,13 +9,13 @@ class CameraRollPicker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      photos: [],
+      photos: this.props.initialPhotos || [],
     };
   }
 
   componentDidMount() {
     CameraRoll.getPhotos({ first: 25 }).then((data) => {
-      this.setState({ photos: data.edges.map((asset) => asset.node.image) });
+      this.setState({ photos: data.edges.map((asset) => asset.node.image.uri) });
     });
   }
 
@@ -23,14 +23,14 @@ class CameraRollPicker extends React.Component {
     return (
         <ScrollView style={{ flex: 1 }}>
           <View style={styles.imageGrid}>
-            {this.state.photos.map((photo, index) =>
+            {this.state.photos.map((photoPath, index) =>
                 <TouchableNativeFeedback
                   key={index}
-                  onPress={() => this.props.onPhotoPress(photo.uri)}
+                  onPress={() => this.props.onPhotoPress(photoPath)}
                 >
                   <View style={styles.imageContainer}>
                     <Image
-                      source={{ uri: photo.uri }}
+                      source={{ uri: photoPath }}
                       style={styles.image}
                     />
                   </View>
@@ -44,6 +44,7 @@ class CameraRollPicker extends React.Component {
 }
 
 CameraRollPicker.propTypes = {
+  initialPhotos: PropTypes.array,
   onPhotoPress: PropTypes.func.isRequired,
 };
 

@@ -1,0 +1,14 @@
+exports[`ProfilePicture should map props correctly 0`] = `
+Object {
+  "$$typeof": Symbol(react.element),
+  "_owner": null,
+  "_store": Object {},
+  "key": null,
+  "props": Object {
+    "imagePath": "path/to/image.png",
+    "onChoosePhotoPress": [Function noop]
+  },
+  "ref": null,
+  "type": [Function ProfilePicture]
+}
+`;

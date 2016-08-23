@@ -1,0 +1,18 @@
+exports[`CameraRoll should map props correctly 0`] = `
+Object {
+  "$$typeof": Symbol(react.element),
+  "_owner": null,
+  "_store": Object {},
+  "key": null,
+  "props": Object {
+    "initialPhotos": Array [
+      "path/to/photo1.png",
+      "path/to/photo2.png",
+      "path/to/photo3.png"
+    ],
+    "onPhotoPress": [Function noop]
+  },
+  "ref": null,
+  "type": [Function CameraRollPicker]
+}
+`;
