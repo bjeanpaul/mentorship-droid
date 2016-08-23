@@ -1,4 +1,3 @@
-import { keys } from 'lodash';
 import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 import styles, { themes } from './styles';

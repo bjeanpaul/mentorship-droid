@@ -1,4 +1,3 @@
-import { fromPairs } from 'lodash';
 import { StyleSheet } from 'react-native';
 
 import { FONT, FONT_WEIGHT } from 'src/constants/styles';
@@ -24,6 +23,6 @@ export const themes = {
   default: StyleSheet.create({
     header: {
       backgroundColor: colors.HEADER_BG_DEFAULT,
-    }
+    },
   }),
 };

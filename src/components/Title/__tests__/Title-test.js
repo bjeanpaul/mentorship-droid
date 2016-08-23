@@ -1,6 +1,5 @@
 import React from 'react';
-import { Text } from 'react-native';
-import { Header, Title } from 'src/components';
+import { Title } from 'src/components';
 
 
 describe('Header', () => {

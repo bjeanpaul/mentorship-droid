@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { Header, Title } from 'src/components';
 
 
