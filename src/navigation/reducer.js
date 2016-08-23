@@ -6,7 +6,7 @@ import * as constants from './constants';
 const navigation = (state = {
   index: 0,
   routes: [
-    { key: constants.ROUTE_ONBOARDING_PROFILE_PICTURE },
+    { key: constants.ROUTE_LANDING },
   ],
 }, action) => {
   switch (action.type) {
