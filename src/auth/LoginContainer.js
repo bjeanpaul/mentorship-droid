@@ -1,17 +1,12 @@
 import { connect } from 'react-redux';
-
 import { login } from './actions';
+import * as nav from 'src/navigation/actions';
 import Login from './Login';
 
-const mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    handleLoginPress: (email, password) => {
-      dispatch(login(email, password));
-    },
-  };
-};
 
 export default connect(
   (state) => state.auth,
-  mapDispatchToProps
+  {
+    onLoginPress: login,
+  }
 )(Login);

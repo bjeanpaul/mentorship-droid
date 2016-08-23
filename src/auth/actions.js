@@ -11,10 +11,13 @@ export const loginFailure = staticAction(constants.AUTH_LOGIN_FAILURE);
 export const loginNotFound = staticAction(constants.AUTH_LOGIN_NOT_FOUND);
 
 
-export const loginDone = data => !isEmpty(data.result)
-  ? loginSuccess(data)
-  : loginNotFound();
-
+export const loginDone = data => {
+  if (!isEmpty(data.result)) {
+    return loginSuccess(data);
+  } else {
+    return loginNotFound();
+  }
+};
 
 export const login = (email, password) => dispatch => Promise.resolve()
   .then(loginRequest)

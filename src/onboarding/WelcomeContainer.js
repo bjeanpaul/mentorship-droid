@@ -1,16 +1,16 @@
 import { connect } from 'react-redux';
 import Hello from 'src/onboarding/Hello';
-import * as navigate from '../actions';
+import * as nav from 'src/navigation/actions';
 
 import { getProfileId } from 'src/auth/reducer';
 import { getProfile } from 'src/profile/reducer';
 
 
 const mapStateToProps = state => ({
-  name: getProfile(state, getProfileId(state)).name,
+  name: '',
 });
 
 
 export default connect(mapStateToProps, {
-  onCompleteProfilePress: navigate.pushProfilePictureRoute,
+  onCompleteProfilePress: nav.pushProfilePictureRoute,
 })(Hello);
