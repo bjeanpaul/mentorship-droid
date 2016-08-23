@@ -1,4 +1,4 @@
-exports[`Header should render 1`] = `
+exports[`Title should render 1`] = `
 <Text
   style={
     Array [
@@ -25,7 +25,7 @@ exports[`Header should render 1`] = `
 </Text>
 `;
 
-exports[`Header should support style overriding 1`] = `
+exports[`Title should support style overriding 1`] = `
 <Text
   style={
     Array [
@@ -54,7 +54,7 @@ exports[`Header should support style overriding 1`] = `
 </Text>
 `;
 
-exports[`Header should support theming 1`] = `
+exports[`Title should support theming 1`] = `
 <Text
   style={
     Array [
