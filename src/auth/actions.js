@@ -23,7 +23,7 @@ export const login = (email, password) => dispatch => Promise.resolve()
     email,
     password,
   }, {
-    email
+    email,
   }))
   .then(data => ({
     ...data,
