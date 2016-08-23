@@ -7,20 +7,20 @@ import * as statuses from 'src/auth/statuses';
 
 describe('auth/Login', () => {
   it('should draw not found statuses', () => {
-    expect(
+    expect(render(
       <Login
         status={statuses.authStatusNotFound()}
         onLoginPress={noop}
       />
-    ).toMatchSnapshot();
+    )).toMatchSnapshot();
   });
 
   it('should draw error statuses', () => {
-    expect(
+    expect(render(
       <Login
         status={statuses.authStatusError()}
         onLoginPress={noop}
       />
-    ).toMatchSnapshot();
+    )).toMatchSnapshot();
   });
 });

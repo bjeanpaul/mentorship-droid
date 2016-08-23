@@ -1,11 +1,7 @@
-exports[`Not Found should render with a warning message 0`] = `
-Object {
-  "$$typeof": Symbol(react.element),
-  "_owner": null,
-  "_store": Object {},
-  "key": null,
-  "props": Object {},
-  "ref": null,
-  "type": [Function NotFound]
-}
+exports[`Not Found should render with a warning message 1`] = `
+<View>
+  <Text>
+    You have stumbled into an unknown realm of the application. This is certainly a bug, and something that you should never have seen.
+  </Text>
+</View>
 `;

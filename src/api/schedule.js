@@ -4,11 +4,12 @@ import { ScheduledCall } from 'src/api/schemas';
 import { parseResults } from 'src/api/parse';
 
 
-export const listScheduledCalls = auth => request({
+export const listScheduledCalls = (auth, params = {}) => request({
   url: '/schedule/',
   method: 'GET',
   schema: arrayOf(ScheduledCall),
   parse: parseResults,
+  params,
   auth,
 });
 

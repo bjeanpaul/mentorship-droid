@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import Landing from '../index';
 
 describe('Landing', () => {
@@ -7,12 +6,12 @@ describe('Landing', () => {
   function bar() {}
 
   it('should map `onGetStartedPress` and `onLoginPress`', () => {
-    expect(
+    expect(render(
       <Landing
         onGetStartedPress={foo}
         onLoginPress={bar}
       />
-    ).toMatchSnapshot();
+    )).toMatchSnapshot();
   });
 
   it('should be able to tap and fire `onGetStartedPress`', () => {

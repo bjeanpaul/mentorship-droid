@@ -1,41 +1,49 @@
-exports[`Link should render its children 0`] = `
-Object {
-  "$$typeof": Symbol(react.element),
-  "_owner": null,
-  "_store": Object {},
-  "key": null,
-  "props": Object {
-    "children": Object {
-      "$$typeof": Symbol(react.element),
-      "_owner": null,
-      "_store": Object {},
-      "key": null,
-      "props": Object {
-        "children": "Woop, hoop, poop."
+exports[`Link should render its children 1`] = `
+<Text
+  onPress={[Function foo]}
+  style={
+    Array [
+      Object {
+        "color": "#003035",
+        "fontFamily": "Brandon Text",
+        "fontSize": 13,
+        "textAlign": "center"
       },
-      "ref": null,
-      "type": [Function Constructor]
-    },
-    "onPress": [Function foo]
-  },
-  "ref": null,
-  "type": [Function Link]
-}
+      Array [
+        Object {
+          "color": "#f77040",
+          "fontSize": 14
+        },
+        undefined
+      ]
+    ]
+  }>
+  <Text>
+    Woop, hoop, poop.
+  </Text>
+</Text>
 `;
 
-exports[`Link should support style overriding 0`] = `
-Object {
-  "$$typeof": Symbol(react.element),
-  "_owner": null,
-  "_store": Object {},
-  "key": null,
-  "props": Object {
-    "onPress": [Function foo],
-    "style": Object {
-      "fontSize": 23
-    }
-  },
-  "ref": null,
-  "type": [Function Link]
-}
+exports[`Link should support style overriding 1`] = `
+<Text
+  onPress={[Function foo]}
+  style={
+    Array [
+      Object {
+        "color": "#003035",
+        "fontFamily": "Brandon Text",
+        "fontSize": 13,
+        "textAlign": "center"
+      },
+      Array [
+        Object {
+          "color": "#f77040",
+          "fontSize": 14
+        },
+        Object {
+          "fontSize": 23
+        }
+      ]
+    ]
+  } />
 `;
