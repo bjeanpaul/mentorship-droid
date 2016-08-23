@@ -3,7 +3,7 @@ jest.mock('src/api/profiles');
 
 import { login } from 'src/auth/actions';
 import { capture, fakeProfileListData } from 'app/scripts/helpers';
-import { listProfiles, ApiResponseError } from 'src/api';
+import { listProfiles, ApiAuthenticationError, ApiResponseError } from 'src/api';
 import { noop } from 'lodash';
 import * as constants from 'src/auth/constants';
 
@@ -41,8 +41,8 @@ describe('auth/actions', () => {
       });
     });
 
-    it('should dispatch not found for empty results', async () => {
-      listProfiles.mockReturnValue(Promise.resolve(fakeProfileListData([])));
+    it('should dispatch not found for auth failures', async () => {
+      listProfiles.mockReturnValue(Promise.reject(new ApiAuthenticationError('o_O')));
 
       const [_request, action] = await capture(login('a@b.org', '1337'));
 

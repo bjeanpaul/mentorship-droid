@@ -3,4 +3,4 @@ export * from 'src/api/profiles';
 export * from 'src/api/schedule';
 export * from 'src/api/activities';
 export * from 'src/api/categories';
-export { ApiResponseError } from 'src/api/request';
+export * from 'src/api/errors';
