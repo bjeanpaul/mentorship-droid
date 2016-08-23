@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { shallow } from 'enzyme';
 import Link from 'src/components/Link';
 
 
@@ -8,20 +7,20 @@ describe('Link', () => {
   function foo() {}
 
   it('should render its children', () => {
-    expect(
+    expect(render(
       <Link onPress={foo}>
         <Text>Woop, hoop, poop.</Text>
       </Link>
-    ).toMatchSnapshot();
+    )).toMatchSnapshot();
   });
 
   it('should support style overriding', () => {
-    expect(
+    expect(render(
       <Link
         style={{ fontSize: 23 }}
         onPress={foo}
       />
-    ).toMatchSnapshot();
+    )).toMatchSnapshot();
   });
 
   it('should be able to tap and fire `onPress`', () => {

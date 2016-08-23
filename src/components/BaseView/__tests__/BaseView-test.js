@@ -5,13 +5,13 @@ import BaseView from 'src/components/BaseView';
 
 describe('BaseView', () => {
   it('should render its children', () => {
-    expect(
+    expect(render(
       <BaseView><Text>I am children.</Text></BaseView>
-    ).toMatchSnapshot();
+    )).toMatchSnapshot();
   });
 
   it('should support style overriding', () => {
-    expect(
+    expect(render(
       <BaseView
         style={{
           backgroundColor: 'red',
@@ -19,6 +19,6 @@ describe('BaseView', () => {
       >
         <Text>I am children.</Text>
       </BaseView>
-    ).toMatchSnapshot();
+    )).toMatchSnapshot();
   });
 });

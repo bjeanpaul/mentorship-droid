@@ -4,15 +4,15 @@ import Label from 'src/components/Label';
 
 describe('Label', () => {
   it('should render its title', () => {
-    expect(<Label title="foo" />).toMatchSnapshot();
+    expect(render(<Label title="foo" />)).toMatchSnapshot();
   });
 
   it('should support style overriding', () => {
-    expect(
+    expect(render(
       <Label
         title="foo"
         style={{ fontSize: 23 }}
       />
-    ).toMatchSnapshot();
+    )).toMatchSnapshot();
   });
 });
