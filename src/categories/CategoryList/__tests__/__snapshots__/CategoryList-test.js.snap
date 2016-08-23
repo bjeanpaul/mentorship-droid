@@ -11,11 +11,18 @@ exports[`CategoryList should render 1`] = `
   }>
   <View
     style={
-      Object {
-        "backgroundColor": "#003035",
-        "height": 96,
-        "justifyContent": "center"
-      }
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16
+        },
+        Object {
+          "backgroundColor": "#003035"
+        },
+        Object {}
+      ]
     }>
     <Text
       style={
@@ -26,14 +33,20 @@ exports[`CategoryList should render 1`] = `
             "fontSize": 13,
             "textAlign": "center"
           },
-          Object {
-            "color": "#fff",
-            "fontFamily": "Brandon Text_medium",
-            "fontSize": 20
-          }
+          Array [
+            Object {
+              "fontFamily": "Brandon Text_medium",
+              "fontSize": 20,
+              "fontWeight": "400"
+            },
+            Object {
+              "color": "#fff"
+            },
+            Object {}
+          ]
         ]
       }>
-      Relationship 
+      Relationship Stages
     </Text>
   </View>
   <View

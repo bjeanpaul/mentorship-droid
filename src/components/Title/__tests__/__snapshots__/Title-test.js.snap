@@ -1,0 +1,82 @@
+exports[`Header should render 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#003035",
+        "fontFamily": "Brandon Text",
+        "fontSize": 13,
+        "textAlign": "center"
+      },
+      Array [
+        Object {
+          "fontFamily": "Brandon Text_medium",
+          "fontSize": 20,
+          "fontWeight": "400"
+        },
+        Object {
+          "color": "#fff"
+        },
+        Object {}
+      ]
+    ]
+  }>
+  Microscopic Hummingbirds
+</Text>
+`;
+
+exports[`Header should support style overriding 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#003035",
+        "fontFamily": "Brandon Text",
+        "fontSize": 13,
+        "textAlign": "center"
+      },
+      Array [
+        Object {
+          "fontFamily": "Brandon Text_medium",
+          "fontSize": 20,
+          "fontWeight": "400"
+        },
+        Object {
+          "color": "#fff"
+        },
+        Object {
+          "fontSize": 22
+        }
+      ]
+    ]
+  }>
+  Microscopic Hummingbirds
+</Text>
+`;
+
+exports[`Header should support theming 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#003035",
+        "fontFamily": "Brandon Text",
+        "fontSize": 13,
+        "textAlign": "center"
+      },
+      Array [
+        Object {
+          "fontFamily": "Brandon Text_medium",
+          "fontSize": 20,
+          "fontWeight": "400"
+        },
+        Object {
+          "color": "#eee"
+        },
+        Object {}
+      ]
+    ]
+  }>
+  Microscopic Hummingbirds
+</Text>
+`;
