@@ -2,6 +2,9 @@ import * as constants from 'src/profile/constants';
 import * as statuses from 'src/profile/statuses';
 
 
+export const getProfile = (state, profileId) => state.entities.profile[profileId];
+
+
 const profile = (
   state = {
     status: statuses.profileStatusIdle(),
@@ -43,10 +46,5 @@ const profile = (
       return state;
   }
 };
-
-
-export const getProfile = (state, profileId) => state.entities.profile[profileId] || {
-};
-
 
 export default profile;
