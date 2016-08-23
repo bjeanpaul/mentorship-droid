@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import Button from 'src/components/Button';
 
 
@@ -7,32 +6,32 @@ describe('Button', () => {
   function foo() {}
 
   it('should render its `title,` and map `onPress`', () => {
-    expect(
+    expect(render(
       <Button
         label="margle"
         onPress={foo}
       />
-    ).toMatchSnapshot();
+    )).toMatchSnapshot();
   });
 
   it('should change style with `white` theme', () => {
-    expect(
+    expect(render(
       <Button
         label="margle"
         onPress={foo}
         theme={Button.WhiteTheme}
       />
-    ).toMatchSnapshot();
+    )).toMatchSnapshot();
   });
 
   it('should be disabled', () => {
-    expect(
+    expect(render(
       <Button
         label="margle"
         onPress={foo}
         disabled
       />
-    ).toMatchSnapshot();
+    )).toMatchSnapshot();
   });
 
   it('should be able to tap and fire `onPress`', () => {

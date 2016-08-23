@@ -8,6 +8,10 @@ env:
   jest: true
   jasmine: true
 
+globals:
+  render: false
+  shallow: false
+
 rules:
   # ignores
   no-else-return: 0
