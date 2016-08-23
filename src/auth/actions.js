@@ -34,11 +34,8 @@ export const login = (email, password) => dispatch => Promise.resolve()
       password,
     },
   }))
-  .then(
-    d => loginDone(d, dispatch),
-    () => switchError([
-      [ApiAuthenticationError, loginNotFound],
-      [ApiResponseError, loginFailure],
-    ])
-  )
+  .then(d => loginDone(d, dispatch), switchError([
+    [ApiAuthenticationError, loginNotFound],
+    [ApiResponseError, loginFailure],
+  ]))
   .then(dispatch);
