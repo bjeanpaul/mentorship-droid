@@ -9,7 +9,7 @@ import CameraRoll from './CameraRoll';
 const mapRouteToComponent = (key) => {
   switch (key) {
     case constants.ONBOARDING_ROUTE_HELLO:
-      return <ProfilePicture />;
+      return <Welcome />;
     case constants.ONBOARDING_ROUTE_PROFILE_PICTURE:
       return <ProfilePicture />;
     case constants.ONBOARDING_ROUTE_CAMERA_ROLL:

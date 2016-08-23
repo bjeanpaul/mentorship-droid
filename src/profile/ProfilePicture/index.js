@@ -7,7 +7,7 @@ import styles from './styles';
 
 
 const ProfilePicture = ({
-  picturePath,
+  imagePath,
   onChoosePhotoPress,
 }) => (
   <BaseView>
@@ -17,7 +17,7 @@ const ProfilePicture = ({
         <Image
           style={styles.image}
           source={
-            picturePath && { uri: picturePath } ||
+            imagePath && { uri: imagePath } ||
             images.PROFILE_FACE_ADD
           }
         />
@@ -27,7 +27,7 @@ const ProfilePicture = ({
   </BaseView>
 );
 ProfilePicture.propTypes = {
-  picturePath: React.PropTypes.string,
+  imagePath: React.PropTypes.string,
   onChoosePhotoPress: React.PropTypes.func.isRequired,
 };
 

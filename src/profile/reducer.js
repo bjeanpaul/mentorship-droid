@@ -33,6 +33,12 @@ const profile = (
         status: statuses.profileStatusError(),
       };
 
+    case constants.PROFILE_IMAGE_CHANGE:
+      return {
+        ...state,
+        newProfileImagePath: action.payload.newProfileImagePath,
+      };
+
     default:
       return state;
   }
