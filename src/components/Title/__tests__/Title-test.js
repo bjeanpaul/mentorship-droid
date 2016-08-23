@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title } from 'src/components';
+import { View, Title } from 'src/components';
 
 
 describe('Title', () => {

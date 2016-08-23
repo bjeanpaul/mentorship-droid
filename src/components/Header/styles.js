@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
 
-import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 import colors from 'src/constants/colors';
 
 
