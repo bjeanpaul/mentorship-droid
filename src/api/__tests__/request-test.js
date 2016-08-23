@@ -51,7 +51,7 @@ describe('api/request', () => {
       expect(err.response).toEqual(httpErr.response);
     });
 
-    it('should reject a 403 response as an ApiForbiddenError', async () => {
+    it('should reject a 403 response as an ApiAuthenticationError', async () => {
       const httpErr = new Error();
       httpErr.message = 'o_O';
       httpErr.response = { status: 403 };
@@ -64,7 +64,7 @@ describe('api/request', () => {
       })
       .catch(identity);
 
-      expect(err instanceof errors.ApiForbiddenError).toBe(true);
+      expect(err instanceof errors.ApiAuthenticationError).toBe(true);
       expect(err.message).toEqual(httpErr.message);
       expect(err.response).toEqual(httpErr.response);
     });

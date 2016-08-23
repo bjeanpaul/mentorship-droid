@@ -77,7 +77,7 @@ const requestSuccess = (res, { parse, schema }) => Promise.resolve(res.data)
 
 const requestFailure = e => {
   const type = {
-    403: errors.ApiForbiddenError,
+    403: errors.ApiAuthenticationError,
     404: errors.ApiNotFoundError,
   }[e.response.status] || errors.ApiResponseError;
 

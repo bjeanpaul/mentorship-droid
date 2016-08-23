@@ -1,5 +1,5 @@
 import { isEmpty } from 'lodash';
-import { listProfiles, ApiForbiddenError, ApiResponseError } from 'src/api';
+import { listProfiles, ApiAuthenticationError, ApiResponseError } from 'src/api';
 import { switchError } from 'src/helpers';
 import { staticAction, dataAction } from 'src/actionHelpers';
 import * as constants from 'src/auth/constants';
@@ -28,7 +28,7 @@ export const login = (email, password) => dispatch => Promise.resolve()
     },
   }))
   .then(loginSuccess, switchError([
-    [ApiForbiddenError, loginNotFound],
+    [ApiAuthenticationError, loginNotFound],
     [ApiResponseError, loginFailure],
   ]))
   .then(dispatch);

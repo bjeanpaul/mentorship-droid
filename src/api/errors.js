@@ -6,5 +6,5 @@ export class ApiResponseError {
 }
 
 
-export class ApiForbiddenError extends ApiResponseError {}
+export class ApiAuthenticationError extends ApiResponseError {}
 export class ApiNotFoundError extends ApiResponseError {}
