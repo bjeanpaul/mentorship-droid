@@ -16,7 +16,6 @@ import {
 import {
   fetchProfile,
   updateProfile,
-  changeProfileImage,
   updateProfileImage,
 } from 'src/profile/actions';
 
@@ -43,17 +42,6 @@ describe('profile/actions', () => {
         success: staticAction(constants.PROFILE_UPDATE_SUCCESS),
         failures: [[ApiResponseError, staticAction(constants.PROFILE_UPDATE_FAILURE)]],
       }));
-    });
-  });
-
-  describe('changeProfileImage', () => {
-    it('should create actions for profile image change', () => {
-      expect(changeProfileImage('path/to/image.png')).toEqual({
-        type: constants.PROFILE_IMAGE_CHANGE,
-        payload: {
-          newProfileImagePath: 'path/to/image.png',
-        },
-      });
     });
   });
 

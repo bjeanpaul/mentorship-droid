@@ -113,19 +113,4 @@ describe('profile/reducer', () => {
       expect(status).toEqual(statuses.profileStatusError());
     });
   });
-
-  describe('PROFILE_IMAGE_CHANGE', () => {
-    it('should update newProfileImagePath', () => {
-      const { newProfileImagePath } = reduce(void 0,
-        {
-          type: constants.PROFILE_IMAGE_CHANGE,
-          payload: {
-            newProfileImagePath: 'path/to/image.png',
-          },
-        }
-      );
-
-      expect(newProfileImagePath).toEqual('path/to/image.png');
-    });
-  });
 });

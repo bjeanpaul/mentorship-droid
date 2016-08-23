@@ -6,6 +6,7 @@ describe('CameraRoll', () => {
   function noop() {}
 
   it('should map props correctly', () => {
+
     expect(
       <CameraRoll
         initialPhotos={[
