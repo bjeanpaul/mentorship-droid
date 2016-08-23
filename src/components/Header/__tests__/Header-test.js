@@ -1,12 +1,12 @@
 import React from 'react';
-import { Header, Title } from 'src/components';
+import { Header, Text } from 'src/components';
 
 
 describe('Header', () => {
   it('should render', () => {
     expect(render(
       <Header>
-        <Title>Microscopic Hummingbirds</Title>
+        <Text>Header</Text>
       </Header>
     )).toMatchSnapshot();
   });
@@ -14,15 +14,15 @@ describe('Header', () => {
   it('should support style overriding', () => {
     expect(render(
       <Header style={{ backgroundColor: '#cc3333' }}>
-        <Title>Microscopic Hummingbirds</Title>
+        <Text>Header with style</Text>
       </Header>
     )).toMatchSnapshot();
   });
 
   it('should support theming', () => {
     expect(render(
-      <Header theme={{ header: { backgroundColor: '#33cccc' } }}>
-        <Title>Microscopic Hummingbirds</Title>
+      <Header theme={Header.themes.dark}>
+        <Text style={{ color: '#fff' }}>Header with theme</Text>
       </Header>
     )).toMatchSnapshot();
   });

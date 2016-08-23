@@ -6,12 +6,13 @@ import Text from 'src/components/Text';
 export const Title = ({
   style = {},
   children = '',
-  theme = themes.default,
+  theme = {},
 }) => (
   <Text style={[styles.title, theme.title, style]}>
     {children}
   </Text>
 );
+
 
 Title.propTypes = {
   style: PropTypes.object,
@@ -20,5 +21,7 @@ Title.propTypes = {
 };
 
 
+Title.themes = themes;
+
+
 export default Title;
-export { themes };

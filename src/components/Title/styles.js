@@ -14,9 +14,9 @@ export default StyleSheet.create({
 
 
 export const themes = {
-  default: StyleSheet.create({
+  light: StyleSheet.create({
     title: {
-      color: colors.ALT_TEXT,
+      color: colors.TEXT_LIGHT,
     },
   }),
 };

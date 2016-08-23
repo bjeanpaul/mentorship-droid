@@ -14,9 +14,7 @@ exports[`Title should render 1`] = `
           "fontSize": 20,
           "fontWeight": "400"
         },
-        Object {
-          "color": "#fff"
-        },
+        undefined,
         Object {}
       ]
     ]
@@ -41,9 +39,7 @@ exports[`Title should support style overriding 1`] = `
           "fontSize": 20,
           "fontWeight": "400"
         },
-        Object {
-          "color": "#fff"
-        },
+        undefined,
         Object {
           "fontSize": 22
         }

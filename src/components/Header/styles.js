@@ -11,18 +11,13 @@ export default StyleSheet.create({
     height: 72,
     justifyContent: 'center',
   },
-  title: {
-    fontSize: 20,
-    fontFamily: FONT.MEDIUM,
-    fontWeight: FONT_WEIGHT.MEDIUM,
-  },
 });
 
 
 export const themes = {
-  default: StyleSheet.create({
+  dark: StyleSheet.create({
     header: {
-      backgroundColor: colors.HEADER_BG_DEFAULT,
+      backgroundColor: colors.BG_DARK,
     },
   }),
 };

@@ -2,8 +2,10 @@ export default {
 
   DEFAULT_BG: '#fff',
   DEFAULT_STATUS_BG: '#99acae',
+  BG_DARK: '#003035',
+
   DEFAULT_TEXT: '#003035',
-  ALT_TEXT: '#fff',
+  TEXT_LIGHT: '#fff',
 
   LABEL_TEXT: '#9fb1b3',
   LINK_TEXT: '#f77040',
@@ -14,8 +16,6 @@ export default {
   TEXT_INPUT_PLACEHOLDER_TEXT: '#c0cbcc',
 
   TOOLBAR_TITLE: '#003035',
-
-  HEADER_BG_DEFAULT: '#003035',
 
   OVERLAY_STATUS_BG: '#935943',
   OVERLAY_BG: 'rgba(246, 111, 63, 0.95)',

@@ -6,12 +6,13 @@ import styles, { themes } from './styles';
 export const Header = ({
   style = {},
   children = [],
-  theme = themes.default,
+  theme = {},
 }) => (
   <View style={[styles.header, theme.header, style]}>
     {children}
   </View>
 );
+
 
 Header.propTypes = {
   style: PropTypes.object,
@@ -20,5 +21,7 @@ Header.propTypes = {
 };
 
 
+Header.themes = themes;
+
+
 export default Header;
-export { themes };

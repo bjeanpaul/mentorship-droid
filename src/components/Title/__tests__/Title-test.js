@@ -5,19 +5,21 @@ import { Title } from 'src/components';
 describe('Title', () => {
   it('should render', () => {
     expect(render(
-      <Title>Microscopic Hummingbirds</Title>
+      <Title>Title</Title>
     )).toMatchSnapshot();
   });
 
   it('should support style overriding', () => {
     expect(render(
-      <Title style={{ fontSize: 22 }}>Microscopic Hummingbirds</Title>
+      <Title style={{ color: '#222' }}>Title with style</Title>
     )).toMatchSnapshot();
   });
 
   it('should support theming', () => {
     expect(render(
-      <Title theme={{ title: { color: '#eee' } }}>Microscopic Hummingbirds</Title>
+      <View style={{ backgroundColor: '#000' }}>
+        <Title theme={Title.themes.light}>Title with theme</Title>
+      </View>
     )).toMatchSnapshot();
   });
 });

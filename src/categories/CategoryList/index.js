@@ -9,8 +9,8 @@ const CategoryList = ({
   onCategoryPress,
 }) => (
   <BaseView>
-      <Header>
-        <Title>Relationship Stages</Title>
+      <Header theme={Header.themes.dark}>
+        <Title theme={Title.themes.light}>Relationship Stages</Title>
       </Header>
 
       <View style={styles.list}>
@@ -21,7 +21,7 @@ const CategoryList = ({
           onPress={() => onCategoryPress(id)}
         >
           <View style={[styles.category, { backgroundColor: color }]}>
-            <Title>{title}</Title>
+            <Title theme={Title.themes.light}>{title}</Title>
           </View>
         </TouchableNativeFeedback>
         ))}
