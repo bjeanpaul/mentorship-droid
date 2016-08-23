@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Title } from 'src/components';
+import { View } from 'react-native';
+import { Title } from 'src/components';
 
 
 describe('Title', () => {

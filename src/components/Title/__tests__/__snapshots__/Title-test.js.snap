@@ -19,7 +19,7 @@ exports[`Title should render 1`] = `
       ]
     ]
   }>
-  Microscopic Hummingbirds
+  Title
 </Text>
 `;
 
@@ -41,38 +41,45 @@ exports[`Title should support style overriding 1`] = `
         },
         undefined,
         Object {
-          "fontSize": 22
+          "color": "#222"
         }
       ]
     ]
   }>
-  Microscopic Hummingbirds
+  Title with style
 </Text>
 `;
 
 exports[`Title should support theming 1`] = `
-<Text
+<View
   style={
-    Array [
-      Object {
-        "color": "#003035",
-        "fontFamily": "Brandon Text",
-        "fontSize": 13,
-        "textAlign": "center"
-      },
+    Object {
+      "backgroundColor": "#000"
+    }
+  }>
+  <Text
+    style={
       Array [
         Object {
-          "fontFamily": "Brandon Text_medium",
-          "fontSize": 20,
-          "fontWeight": "400"
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
         },
-        Object {
-          "color": "#eee"
-        },
-        Object {}
+        Array [
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400"
+          },
+          Object {
+            "color": "#fff"
+          },
+          Object {}
+        ]
       ]
-    ]
-  }>
-  Microscopic Hummingbirds
-</Text>
+    }>
+    Title with theme
+  </Text>
+</View>
 `;

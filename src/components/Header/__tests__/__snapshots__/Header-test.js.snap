@@ -21,18 +21,10 @@ exports[`Header should render 1`] = `
           "fontSize": 13,
           "textAlign": "center"
         },
-        Array [
-          Object {
-            "fontFamily": "Brandon Text_medium",
-            "fontSize": 20,
-            "fontWeight": "400"
-          },
-          undefined,
-          Object {}
-        ]
+        undefined
       ]
     }>
-    Microscopic Hummingbirds
+    Header
   </Text>
 </View>
 `;
@@ -62,18 +54,10 @@ exports[`Header should support style overriding 1`] = `
           "fontSize": 13,
           "textAlign": "center"
         },
-        Array [
-          Object {
-            "fontFamily": "Brandon Text_medium",
-            "fontSize": 20,
-            "fontWeight": "400"
-          },
-          undefined,
-          Object {}
-        ]
+        undefined
       ]
     }>
-    Microscopic Hummingbirds
+    Header with style
   </Text>
 </View>
 `;
@@ -89,7 +73,7 @@ exports[`Header should support theming 1`] = `
         "paddingRight": 16
       },
       Object {
-        "backgroundColor": "#33cccc"
+        "backgroundColor": "#003035"
       },
       Object {}
     ]
@@ -103,18 +87,12 @@ exports[`Header should support theming 1`] = `
           "fontSize": 13,
           "textAlign": "center"
         },
-        Array [
-          Object {
-            "fontFamily": "Brandon Text_medium",
-            "fontSize": 20,
-            "fontWeight": "400"
-          },
-          undefined,
-          Object {}
-        ]
+        Object {
+          "color": "#fff"
+        }
       ]
     }>
-    Microscopic Hummingbirds
+    Header with theme
   </Text>
 </View>
 `;
