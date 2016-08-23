@@ -18,16 +18,13 @@ jest.setMock('axios', jest.fn());
 // form data values to only be strings
 global.FormData = FormData;
 
-
 config.API_URL = '/mentor-api';
-
 
 global.mock = (...args) => {
   // TODO invesitage why importing helpers in this module seems to make jest unhappy
   const { mock } = require('app/scripts/helpers');
   return mock(...args);
 };
-
 
 // https://github.com/facebook/react/issues/7386
 global.shallow = (...args) => {

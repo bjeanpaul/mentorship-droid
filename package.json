@@ -43,9 +43,7 @@
   ],
   "jest": {
     "preset": "jest-react-native",
-    "setupFiles": [
-      "scripts/jest/environment.js"
-    ],
+    "setupTestFrameworkScriptFile": "scripts/jest/environment.js",
     "automock": false,
     "globals": {
       "__DEV__": true,
