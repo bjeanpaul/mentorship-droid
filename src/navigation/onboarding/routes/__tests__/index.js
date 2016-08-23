@@ -5,7 +5,6 @@ import { fakeStore } from 'app/scripts/helpers';
 
 import * as constants from '../../constants';
 import mapRouteToComponent from '../index';
-import NotFound from 'src/components/NotFound';
 import Welcome from '../Welcome';
 import ProfilePicture from '../ProfilePicture';
 import CameraRoll from '../CameraRoll';

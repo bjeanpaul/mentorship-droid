@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import { View, Image, CameraRoll, ScrollView, TouchableNativeFeedback } from 'react-native';
-import { BaseView } from 'src/components';
 import styles from './styles';
 
 
@@ -40,7 +39,6 @@ class CameraRollPicker extends React.Component {
         </ScrollView>
     );
   }
-
 }
 
 CameraRollPicker.propTypes = {
