@@ -4,7 +4,6 @@ import styles from './styles';
 
 
 class CameraRollPicker extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
