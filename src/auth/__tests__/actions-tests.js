@@ -63,6 +63,8 @@ describe('auth/actions', () => {
       expect(listProfiles.mock.calls).toEqual([[{
         email: 'a@b.org',
         password: '1337',
+      }, {
+        email: 'a@b.org',
       }]]);
     });
   });

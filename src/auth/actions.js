@@ -22,6 +22,8 @@ export const login = (email, password) => dispatch => Promise.resolve()
   .then(() => listProfiles({
     email,
     password,
+  }, {
+    email,
   }))
   .then(data => ({
     ...data,

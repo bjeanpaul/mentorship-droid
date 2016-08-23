@@ -4,11 +4,12 @@ import { Profile } from 'src/api/schemas';
 import { parseResults } from 'src/api/parse';
 
 
-export const listProfiles = auth => request({
+export const listProfiles = (auth, params = {}) => request({
   url: '/profile/',
   method: 'GET',
   schema: arrayOf(Profile),
   parse: parseResults,
+  params,
   auth,
 });
 

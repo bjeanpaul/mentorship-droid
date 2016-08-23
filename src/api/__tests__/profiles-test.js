@@ -29,12 +29,13 @@ describe('api/profiles', () => {
 
   describe('listProfiles', () => {
     it('should construct a request for listing profiles', () => {
-      expect(listProfiles(fakeAuth())).toEqual({
+      expect(listProfiles(fakeAuth(), { foo: 23 })).toEqual({
         url: '/profile/',
         method: 'GET',
         schema: arrayOf(Profile),
         parse: parseResults,
         auth: fakeAuth(),
+        params: { foo: 23 },
       });
     });
   });

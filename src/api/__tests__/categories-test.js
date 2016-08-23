@@ -22,12 +22,13 @@ describe('api/category', () => {
 
   describe('listCategories', () => {
     it('should construct a request for listing categories', () => {
-      expect(listCategories(fakeAuth())).toEqual({
+      expect(listCategories(fakeAuth(), { foo: 23 })).toEqual({
         url: '/category/',
         method: 'GET',
         schema: arrayOf(Category),
         parse: parseResults,
         auth: fakeAuth(),
+        params: { foo: 23 },
       });
     });
   });
