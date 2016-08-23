@@ -1,18 +1,20 @@
 import React, { PropTypes } from 'react';
 import { NavigationExperimental } from 'react-native';
 const { CardStack: NavigationCardStack } = NavigationExperimental;
-import routes from '../routes';
 
-
-const RootNavigation = ({ navigationState }) => (
+const NavigationStack = ({
+  navigationState,
+  routeToComponent,
+}) => (
   <NavigationCardStack
     navigationState={navigationState}
-    renderScene={(sceneProps) => routes(sceneProps.scene.route.key)}
+    renderScene={(sceneProps) => routeToComponent(sceneProps.scene.route.key)}
   />
 );
 
-RootNavigation.propTypes = {
+NavigationStack.propTypes = {
+  routeToComponent: PropTypes.func.isRequired,
   navigationState: PropTypes.any.isRequired,
 };
 
-export default RootNavigation;
+export default NavigationStack;
