@@ -1,6 +1,5 @@
 import React from 'react';
 import { noop } from 'lodash';
-import { shallow } from 'enzyme';
 import CategoryList from 'src/categories/CategoryList';
 
 
@@ -24,7 +23,7 @@ describe('CategoryList', () => {
   }
 
   it('should render', () => {
-    expect(createComponent()).toMatchSnapshot();
+    expect(render(createComponent())).toMatchSnapshot();
   });
 
   it('should call onCategoryPress when a category is pressed', () => {

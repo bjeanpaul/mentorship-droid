@@ -1,25 +1,99 @@
-exports[`CategoryList should render 0`] = `
-Object {
-  "$$typeof": Symbol(react.element),
-  "_owner": null,
-  "_store": Object {},
-  "key": null,
-  "props": Object {
-    "categories": Array [
+exports[`CategoryList should render 1`] = `
+<View
+  style={
+    Array [
       Object {
-        "color": "#c4cd39",
-        "id": 1,
-        "title": "Connect"
+        "backgroundColor": "#fff",
+        "flex": 1
       },
+      undefined
+    ]
+  }>
+  <View
+    style={
       Object {
-        "color": "#97c13c",
-        "id": 2,
-        "title": "Level"
+        "backgroundColor": "#003035",
+        "height": 96,
+        "justifyContent": "center"
       }
-    ],
-    "onCategoryPress": [Function noop]
-  },
-  "ref": null,
-  "type": [Function CategoryList]
-}
+    }>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "color": "#fff",
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20
+          }
+        ]
+      }>
+      Relationship 
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1
+      }
+    }>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+  </View>
+</View>
 `;
