@@ -76,13 +76,13 @@ const requestSuccess = (res, { parse, schema }) => Promise.resolve(res.data)
 
 
 const requestFailure = e => {
-  const type = {
+  const ErrorType = {
     403: errors.ApiAuthenticationError,
     404: errors.ApiNotFoundError,
   }[e.response.status] || errors.ApiResponseError;
 
-  return Promise.reject(new type(e.message, e.response));
-}
+  return Promise.reject(new ErrorType(e.message, e.response));
+};
 
 
 const request = rawConf => {

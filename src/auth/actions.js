@@ -1,4 +1,3 @@
-import { isEmpty } from 'lodash';
 import { listProfiles, ApiAuthenticationError, ApiResponseError } from 'src/api';
 import { switchError } from 'src/helpers';
 import { staticAction, dataAction } from 'src/actionHelpers';
