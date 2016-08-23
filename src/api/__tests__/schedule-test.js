@@ -25,12 +25,13 @@ describe('api/schedule', () => {
 
   describe('listScheduledCalls', () => {
     it('should construct a request for listing scheduled calls', () => {
-      expect(listScheduledCalls(fakeAuth())).toEqual({
+      expect(listScheduledCalls(fakeAuth(), { foo: 23 })).toEqual({
         url: '/schedule/',
         method: 'GET',
         schema: arrayOf(ScheduledCall),
         parse: parseResults,
         auth: fakeAuth(),
+        params: { foo: 23 },
       });
     });
   });
