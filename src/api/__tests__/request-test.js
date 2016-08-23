@@ -2,6 +2,7 @@ jest.mock('axios');
 
 
 import axios from 'axios';
+import * as errors from 'src/api/errors';
 import request, { imageData } from 'src/api/request';
 import { Schema } from 'normalizr';
 import { identity } from 'lodash';
@@ -32,10 +33,10 @@ describe('api/request', () => {
       ]]);
     });
 
-    it('should reject api error responses as ApiResponseErrors', async () => {
+    it('should reject an api error response as an ApiResponseError', async () => {
       const httpErr = new Error();
       httpErr.message = 'o_O';
-      httpErr.response = 'fake-response';
+      httpErr.response = { status: 500 };
 
       axios.mockReturnValue(Promise.reject(httpErr));
 
@@ -45,6 +46,43 @@ describe('api/request', () => {
       })
       .catch(identity);
 
+      expect(err instanceof errors.ApiResponseError).toBe(true);
+      expect(err.message).toEqual(httpErr.message);
+      expect(err.response).toEqual(httpErr.response);
+    });
+
+    it('should reject a 403 response as an ApiForbiddenError', async () => {
+      const httpErr = new Error();
+      httpErr.message = 'o_O';
+      httpErr.response = { status: 403 };
+
+      axios.mockReturnValue(Promise.reject(httpErr));
+
+      const err = await request({
+        url: '/foo',
+        method: 'GET',
+      })
+      .catch(identity);
+
+      expect(err instanceof errors.ApiForbiddenError).toBe(true);
+      expect(err.message).toEqual(httpErr.message);
+      expect(err.response).toEqual(httpErr.response);
+    });
+
+    it('should reject a 404 response as an ApiNotFoundError', async () => {
+      const httpErr = new Error();
+      httpErr.message = 'o_O';
+      httpErr.response = { status: 404 };
+
+      axios.mockReturnValue(Promise.reject(httpErr));
+
+      const err = await request({
+        url: '/foo',
+        method: 'GET',
+      })
+      .catch(identity);
+
+      expect(err instanceof errors.ApiNotFoundError).toBe(true);
       expect(err.message).toEqual(httpErr.message);
       expect(err.response).toEqual(httpErr.response);
     });

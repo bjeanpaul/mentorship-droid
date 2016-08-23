@@ -3,14 +3,8 @@ import { isNull, identity } from 'lodash';
 import { normalize } from 'normalizr';
 import config from 'src/config';
 import { omitNulls } from 'src/helpers';
+import * as errors from './errors';
 
-
-class ApiResponseError {
-  constructor(message, response = null) {
-    this.message = message;
-    this.response = response;
-  }
-}
 
 const { API_URL } = config;
 
@@ -81,7 +75,14 @@ const requestSuccess = (res, { parse, schema }) => Promise.resolve(res.data)
     : d);
 
 
-const requestFailure = e => Promise.reject(new ApiResponseError(e.message, e.response));
+const requestFailure = e => {
+  const type = {
+    403: errors.ApiForbiddenError,
+    404: errors.ApiNotFoundError,
+  }[e.response.status] || errors.ApiResponseError;
+
+  return Promise.reject(new type(e.message, e.response));
+}
 
 
 const request = rawConf => {
@@ -97,5 +98,4 @@ export default request;
 export {
   imageData,
   serializeAuth,
-  ApiResponseError,
 };
