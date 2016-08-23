@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
+import * as navigate from '../actions';
 import CameraRoll from 'src/profile/CameraRoll';
-import * as actions from 'src/navigation/onboarding/actions';
 import { changeProfileImage } from 'src/profile/actions';
 
 
@@ -8,7 +8,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onPhotoPress: path => {
       dispatch(changeProfileImage(path));
-      return dispatch(actions.popOnboardingRoute());
+      return dispatch(navigate.popOnboardingRoute());
     },
   };
 };

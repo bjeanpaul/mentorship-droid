@@ -1,5 +1,5 @@
 import React from 'react';
-import * as constants from 'src/navigation/onboarding/constants';
+import * as constants from '../constants';
 
 import NotFound from 'src/components/NotFound';
 import Welcome from './Welcome';

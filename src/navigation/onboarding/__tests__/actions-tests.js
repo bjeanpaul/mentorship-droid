@@ -1,36 +1,30 @@
+import * as navigate from '../actions';
+import * as constants from '../constants';
 
-import {
-  pushLoginRoute,
-  pushResetPasswordRoute,
-  pushActivateAccountRoute,
-} from 'src/navigation/auth/actions';
-
-import * as constants from 'src/navigation/auth/constants';
-
-describe('navigation/auth/actions', () => {
-  it('should push route for login', () => {
-    expect(pushLoginRoute()).toEqual({
-      type: constants.AUTH_NAVIGATION_PUSH,
+describe('navigation/onboarding/actions', () => {
+  it('pushHelloRoute', () => {
+    expect(navigate.pushHelloRoute()).toEqual({
+      type: constants.ONBOARDING_NAVIGATION_PUSH,
       payload: {
-        key: constants.AUTH_ROUTE_LOGIN,
+        key: constants.ONBOARDING_ROUTE_HELLO,
       },
     });
   });
 
-  it('should push route for password reset', () => {
-    expect(pushResetPasswordRoute()).toEqual({
-      type: constants.AUTH_NAVIGATION_PUSH,
+  it('pushProfilePictureRoute', () => {
+    expect(navigate.pushProfilePictureRoute()).toEqual({
+      type: constants.ONBOARDING_NAVIGATION_PUSH,
       payload: {
-        key: constants.AUTH_ROUTE_RESET_PASSWORD,
+        key: constants.ONBOARDING_ROUTE_PROFILE_PICTURE,
       },
     });
   });
 
-  it('should push route for login', () => {
-    expect(pushActivateAccountRoute()).toEqual({
-      type: constants.AUTH_NAVIGATION_PUSH,
+  it('pushCameraRollRoute', () => {
+    expect(navigate.pushCameraRollRoute()).toEqual({
+      type: constants.ONBOARDING_NAVIGATION_PUSH,
       payload: {
-        key: constants.AUTH_ROUTE_ACTIVATE,
+        key: constants.ONBOARDING_ROUTE_CAMERA_ROLL,
       },
     });
   });

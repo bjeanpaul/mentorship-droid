@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { NavigationExperimental } from 'react-native';
 const { CardStack: NavigationCardStack } = NavigationExperimental;
-import routes from 'src/navigation/onboarding/routes';
+import routes from '../routes';
 
 
 const RootNavigation = ({ navigationState }) => (
@@ -11,10 +11,8 @@ const RootNavigation = ({ navigationState }) => (
   />
 );
 
-
 RootNavigation.propTypes = {
   navigationState: PropTypes.any.isRequired,
 };
-
 
 export default RootNavigation;

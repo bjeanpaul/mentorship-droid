@@ -21,6 +21,13 @@ export const fakeContext = () => ({
 });
 
 
+export const fakeStore = {
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => {},
+};
+
+
 export const mock = () => {
   const __id = uniqueId();
 

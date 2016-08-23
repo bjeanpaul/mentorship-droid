@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { Provider } from 'react-redux';
 
+import { fakeStore } from 'app/scripts/helpers';
 import mapRouteToComponent from '../mapRouteToComponent';
 import * as constants from 'src/navigation/auth/constants';
 import LandingContainer from 'src/onboarding/LandingContainer';
@@ -11,16 +12,10 @@ import ResetPasswordContainer from 'src/auth/ResetPasswordContainer';
 
 
 describe('navigation/auth/navigator', () => {
-  const mockStore = {
-    subscribe: () => {},
-    dispatch: () => {},
-    getState: () => {},
-  };
-
   describe('mapRouteToComponent', () => {
     it('landing', () => {
       const el = shallow(
-        <Provider store={mockStore}>
+        <Provider store={fakeStore}>
           {mapRouteToComponent(constants.AUTH_ROUTE_LANDING)}
         </Provider>
       );
@@ -29,7 +24,7 @@ describe('navigation/auth/navigator', () => {
 
     it('log in', () => {
       const el = shallow(
-        <Provider store={mockStore}>
+        <Provider store={fakeStore}>
           {mapRouteToComponent(constants.AUTH_ROUTE_LOGIN)}
         </Provider>
       );
@@ -38,7 +33,7 @@ describe('navigation/auth/navigator', () => {
 
     it('activation', () => {
       const el = shallow(
-        <Provider store={mockStore}>
+        <Provider store={fakeStore}>
           {mapRouteToComponent(constants.AUTH_ROUTE_ACTIVATE)}
         </Provider>
       );
@@ -47,7 +42,7 @@ describe('navigation/auth/navigator', () => {
 
     it('reset password', () => {
       const el = shallow(
-        <Provider store={mockStore}>
+        <Provider store={fakeStore}>
           {mapRouteToComponent(constants.AUTH_ROUTE_RESET_PASSWORD)}
         </Provider>
       );
