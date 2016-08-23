@@ -1,8 +1,11 @@
 import * as constants from 'src/profile/constants';
 import * as statuses from 'src/profile/statuses';
 
+import { getProfileId } from 'src/auth/reducer';
 
-export const getProfile = (state, profileId) => state.entities.profile[profileId];
+
+export const getProfile = (state, profileId) => state.entities.profiles[profileId];
+export const getProfileName = (state) => getProfile(state, getProfileId(state)).first_name;
 
 
 const profile = (
@@ -34,12 +37,6 @@ const profile = (
       return {
         ...state,
         status: statuses.profileStatusError(),
-      };
-
-    case constants.PROFILE_IMAGE_CHANGE:
-      return {
-        ...state,
-        newProfileImagePath: action.payload.newProfileImagePath,
       };
 
     default:

@@ -1,7 +1,6 @@
-import {
-  PROFILE_IMAGE_CHANGE,
-  PROFILE_FETCH_SUCCESS,
-} from 'src/profile/constants';
+import { PROFILE_FETCH_SUCCESS } from 'src/profile/constants';
+
+import { AUTH_LOGIN_SUCCESS } from 'src/auth/constants';
 
 import {
   SCHEDULED_CALL_LIST_SUCCESS,
@@ -11,7 +10,7 @@ import {
 
 
 const ACTIONS_WITH_ENTITIES = [
-  PROFILE_IMAGE_CHANGE,
+  AUTH_LOGIN_SUCCESS,
   PROFILE_FETCH_SUCCESS,
   SCHEDULED_CALL_LIST_SUCCESS,
   SCHEDULED_CALL_CREATE_SUCCESS,

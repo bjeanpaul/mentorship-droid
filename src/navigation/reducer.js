@@ -6,14 +6,10 @@ import * as constants from './constants';
 const navigation = (state = {
   index: 0,
   routes: [
-    { key: constants.ROUTE_AUTH_ACTIVATION },
+    { key: constants.ROUTE_ONBOARDING_PROFILE_PICTURE },
   ],
 }, action) => {
-  console.log('---------------------------------------------------------');
-  console.log(action);
-  console.log('---------------------------------------------------------');
   switch (action.type) {
-
 
     case constants.NAVIGATION_REPLACE:
       return NavigationStateUtils.replace(state, action.payload);

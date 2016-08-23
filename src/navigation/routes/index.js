@@ -8,8 +8,8 @@ import LoginContainer from 'src/auth/LoginContainer';
 import ActivationContainer from 'src/auth/ActivationContainer';
 
 import WelcomeContainer from 'src/onboarding/WelcomeContainer';
-// import ProfilePicture from './ProfilePicture';
-// import CameraRoll from './CameraRoll';
+import ProfilePictureContainer from 'src/onboarding/ProfilePictureContainer';
+import CameraRollContainer from 'src/onboarding/CameraRollContainer';
 
 
 const routes = (key) => {
@@ -26,6 +26,10 @@ const routes = (key) => {
 
     case constants.ROUTE_ONBOARDING_WELCOME:
       return <WelcomeContainer />;
+    case constants.ROUTE_ONBOARDING_PROFILE_PICTURE:
+      return <ProfilePictureContainer />;
+    case constants.ROUTE_ONBOARDING_CAMERA_ROLL:
+      return <CameraRollContainer />
 
 
     default:

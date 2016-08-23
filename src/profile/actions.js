@@ -34,17 +34,8 @@ const updateProfileImage = apiAction({
 });
 
 
-const changeProfileImage = path => ({
-  type: constants.PROFILE_IMAGE_CHANGE,
-  payload: {
-    newProfileImagePath: path,
-  },
-});
-
-
 export {
   fetchProfile,
   updateProfile,
-  changeProfileImage,
   updateProfileImage,
 };

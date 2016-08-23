@@ -3,6 +3,7 @@ import { listProfiles, ApiResponseError } from 'src/api';
 import { switchError } from 'src/helpers';
 import { staticAction, dataAction } from 'src/actionHelpers';
 import * as constants from 'src/auth/constants';
+import { pushWelcomeRoute } from 'src/navigation/actions';
 
 
 export const loginRequest = staticAction(constants.AUTH_LOGIN_REQUEST);
@@ -11,13 +12,10 @@ export const loginFailure = staticAction(constants.AUTH_LOGIN_FAILURE);
 export const loginNotFound = staticAction(constants.AUTH_LOGIN_NOT_FOUND);
 
 
-export const loginDone = data => {
-  if (!isEmpty(data.result)) {
-    return loginSuccess(data);
-  } else {
-    return loginNotFound();
-  }
-};
+export const loginDone = data => !isEmpty(data.result)
+  ? loginSuccess(data)
+  : loginNotFound();
+
 
 export const login = (email, password) => dispatch => Promise.resolve()
   .then(loginRequest)
@@ -38,4 +36,6 @@ export const login = (email, password) => dispatch => Promise.resolve()
   .then(loginDone, switchError([
     [ApiResponseError, loginFailure],
   ]))
+  .then(dispatch)
+  .then(pushWelcomeRoute)
   .then(dispatch);
