@@ -2,7 +2,7 @@ import React from 'react';
 import { Title } from 'src/components';
 
 
-describe('Header', () => {
+describe('Title', () => {
   it('should render', () => {
     expect(render(
       <Title>Microscopic Hummingbirds</Title>
