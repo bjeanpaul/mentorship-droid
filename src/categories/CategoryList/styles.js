@@ -17,5 +17,5 @@ export default StyleSheet.create({
     fontFamily: FONT.MEDIUM,
     fontWeight: FONT_WEIGHT.MEDIUM,
     color: colors.TEXT_LIGHT,
-  }
+  },
 });
