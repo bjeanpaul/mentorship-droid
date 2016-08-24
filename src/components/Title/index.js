@@ -15,7 +15,7 @@ export const Title = ({
 
 
 Title.propTypes = {
-  style: PropTypes.object,
+  style: PropTypes.any,
   children: PropTypes.string,
   theme: PropTypes.object,
 };
