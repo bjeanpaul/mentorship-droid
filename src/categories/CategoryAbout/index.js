@@ -2,15 +2,15 @@ import React from 'react';
 import { View } from 'react-native';
 
 
-const CategoryList = () => (
+const CategoryAbout = () => (
   <View>
     {/* TODO */}
   </View>
 );
 
 
-CategoryList.propTypes = {
+CategoryAbout.propTypes = {
 };
 
 
-export default CategoryList;
+export default CategoryAbout;
