@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { View, TouchableNativeFeedback } from 'react-native';
-import { BaseView, Header, Title } from 'src/components';
+import { BaseView, Header, Title, Text } from 'src/components';
 import styles from './styles';
 
 
@@ -21,7 +21,7 @@ const CategoryList = ({
           onPress={() => onCategoryPress(id)}
         >
           <View style={[styles.category, { backgroundColor: color }]}>
-            <Title theme={Title.themes.light}>{title}</Title>
+            <Text style={styles.categoryTitle}>{title}</Text>
           </View>
         </TouchableNativeFeedback>
         ))}

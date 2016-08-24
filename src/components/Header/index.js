@@ -15,9 +15,12 @@ export const Header = ({
 
 
 Header.propTypes = {
-  style: PropTypes.object,
-  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   theme: PropTypes.object,
+  style: PropTypes.any,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 
