@@ -1,14 +1,28 @@
 import base from 'src/config/base';
-import prd from 'src/config/prd';
-import dev from 'src/config/dev';
 import test from 'src/config/test';
+
+
+let production;
+let development;
+
+try {
+  production = require('src/config/production');
+} catch (e) {
+  production = {};
+}
+
+try {
+  development = require('src/config/development');
+} catch (e) {
+  development = {};
+}
 
 
 export default {
   ...base,
   ...{
-    prd,
-    dev,
+    production,
+    development,
     test,
-  }[process.env.NODE_ENV || 'prd'],
+  }[process.env.NODE_ENV || 'production'],
 };
