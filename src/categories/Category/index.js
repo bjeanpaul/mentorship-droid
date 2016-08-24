@@ -50,7 +50,6 @@ class Category extends Component {
             onPress={() => this.onTabChange(TAB_ACTIVITIES)}
             isActive={this.state.activeTab === TAB_ACTIVITIES}
           >
-            <CategoryActivityList />
           </CategoryTab>
 
           <CategoryTab
@@ -59,7 +58,6 @@ class Category extends Component {
             onPress={() => this.onTabChange(TAB_ABOUT)}
             isActive={this.state.activeTab === TAB_ABOUT}
           >
-            <CategoryAbout />
           </CategoryTab>
         </View>
 
