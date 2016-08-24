@@ -1,17 +1,16 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import ProfilePicture from '../index';
 
 describe('ProfilePicture', () => {
   function noop() {}
 
   it('should map props correctly', () => {
-    expect(
+    expect(render(
       <ProfilePicture
         imagePath="path/to/image.png"
         onChoosePhotoPress={noop}
       />
-    ).toMatchSnapshot();
+    )).toMatchSnapshot();
   });
 
   it('should be able to tap and fire `onChoosePhotoPress`', () => {

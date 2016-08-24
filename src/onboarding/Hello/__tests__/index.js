@@ -1,17 +1,16 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import Hello from '../index';
 
 describe('Hello', () => {
   function noop() {}
 
   it('should map props correctly', () => {
-    expect(
+    expect(render(
       <Hello
         name="Jeff"
         onCompleteProfilePress={noop}
       />
-    ).toMatchSnapshot();
+    ).toJSON()).toMatchSnapshot();
   });
 
   it('should be able to tap and fire `onCompleteProfilePress`', () => {

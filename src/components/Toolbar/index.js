@@ -1,9 +1,7 @@
-import { connect } from 'react-redux';
 import React from 'react';
 import { View, Image, TouchableWithoutFeedback } from 'react-native';
 import Text from 'src/components/Text';
 import styles from './styles';
-import { popRoute } from 'src/navigation/actions';
 
 const IMG_BACK = require('app/assets/Back_Gray.png');
 
@@ -23,9 +21,7 @@ export const Toolbar = ({
 );
 Toolbar.propTypes = {
   title: React.PropTypes.string.isRequired,
-  onBackPress: React.PropTypes.func.isRequired,
+  onBackPress: React.PropTypes.func,
 };
 
-export default connect(null, {
-  onBackPress: popRoute,
-})(Toolbar);
+export default Toolbar;

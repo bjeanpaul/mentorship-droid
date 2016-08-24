@@ -1,13 +1,11 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import CameraRoll from '../index';
 
 describe('CameraRoll', () => {
   function noop() {}
 
   it('should map props correctly', () => {
-
-    expect(
+    expect(render(
       <CameraRoll
         initialPhotos={[
           'path/to/photo1.png',
@@ -16,7 +14,7 @@ describe('CameraRoll', () => {
         ]}
         onPhotoPress={noop}
       />
-    ).toMatchSnapshot();
+    )).toMatchSnapshot();
   });
 
   it('should be able to tap and fire `onPhotoPress`', () => {
