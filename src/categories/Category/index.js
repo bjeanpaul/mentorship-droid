@@ -106,7 +106,7 @@ const tabPropType = PropTypes.oneOf([TAB_ACTIVITIES, TAB_ABOUT]);
 
 Category.propTypes = {
   category: PropTypes.object.isRequired,
-  initialActiveTab: tabPropType
+  initialActiveTab: tabPropType,
 };
 
 
