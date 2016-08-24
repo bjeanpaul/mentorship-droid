@@ -17,7 +17,7 @@ HeaderIcon.types = Icon.types;
 
 HeaderIcon.propTypes = {
   type: PropTypes.number.isRequired,
-  style: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+  style: PropTypes.any,
 };
 
 
