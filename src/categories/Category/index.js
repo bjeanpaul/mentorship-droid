@@ -49,16 +49,14 @@ class Category extends Component {
             title="Activities"
             onPress={() => this.onTabChange(TAB_ACTIVITIES)}
             isActive={this.state.activeTab === TAB_ACTIVITIES}
-          >
-          </CategoryTab>
+          />
 
           <CategoryTab
             tabId={TAB_ABOUT}
             title="About"
             onPress={() => this.onTabChange(TAB_ABOUT)}
             isActive={this.state.activeTab === TAB_ABOUT}
-          >
-          </CategoryTab>
+          />
         </View>
 
         <CategoryTabBody tab={this.state.activeTab} category={category} />
