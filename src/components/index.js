@@ -6,6 +6,8 @@ import TextInput from './TextInput';
 import MultiLineTextInput from './MultiLineTextInput';
 import BaseView from './BaseView';
 import Toolbar from './Toolbar';
+import Header from './Header';
+import Title from './Title';
 import OverlayCompleted from './Overlay/Completed';
 import OverlayLoading from './Overlay/Loading';
 
@@ -19,6 +21,8 @@ export {
   TextInput,
   MultiLineTextInput,
   Toolbar,
+  Header,
+  Title,
   OverlayCompleted,
   OverlayLoading,
 };

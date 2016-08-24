@@ -1,0 +1,98 @@
+exports[`Header should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 72,
+        "justifyContent": "center",
+        "paddingLeft": 16,
+        "paddingRight": 16
+      },
+      undefined,
+      Object {}
+    ]
+  }>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        undefined
+      ]
+    }>
+    Header
+  </Text>
+</View>
+`;
+
+exports[`Header should support style overriding 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 72,
+        "justifyContent": "center",
+        "paddingLeft": 16,
+        "paddingRight": 16
+      },
+      undefined,
+      Object {
+        "backgroundColor": "#cc3333"
+      }
+    ]
+  }>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        undefined
+      ]
+    }>
+    Header with style
+  </Text>
+</View>
+`;
+
+exports[`Header should support theming 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 72,
+        "justifyContent": "center",
+        "paddingLeft": 16,
+        "paddingRight": 16
+      },
+      Object {
+        "backgroundColor": "#003035"
+      },
+      Object {}
+    ]
+  }>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        Object {
+          "color": "#fff"
+        }
+      ]
+    }>
+    Header with theme
+  </Text>
+</View>
+`;
