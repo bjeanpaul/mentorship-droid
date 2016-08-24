@@ -1,9 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Image } from 'react-native';
+
 import images from 'src/constants/images';
-
-import backLight from 'app/assets/back-light.png';
-
 import styles from './styles';
 
 
