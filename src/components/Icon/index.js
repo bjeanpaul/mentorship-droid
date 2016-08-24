@@ -21,7 +21,7 @@ Icon.types = {
 
 Icon.propTypes = {
   type: PropTypes.number.isRequired,
-  style: PropTypes.object,
+  style: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
 };
 
 

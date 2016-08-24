@@ -10,4 +10,12 @@ describe('HeaderIcon', () => {
       </Header>
     )).toMatchSnapshot();
   });
+
+  it('should support style overriding', () => {
+    expect(render(
+      <Header theme={Header.themes.dark}>
+        <HeaderIcon type={HeaderIcon.types.backLight} style={{ left: 48 }} />
+      </Header>
+    )).toMatchSnapshot();
+  });
 });
