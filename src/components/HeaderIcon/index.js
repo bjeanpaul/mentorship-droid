@@ -6,7 +6,7 @@ import styles from './styles';
 
 const HeaderIcon = ({
   type,
-  style = {}
+  style = {},
 }) => (
   <Icon type={type} style={[styles.icon, style]} />
 );
