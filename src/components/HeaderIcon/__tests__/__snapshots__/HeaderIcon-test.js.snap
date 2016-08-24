@@ -19,10 +19,13 @@ exports[`HeaderIcon should render 1`] = `
     style={
       Array [
         Object {
+          "height": 24,
+          "width": 24
+        },
+        Object {
           "position": "absolute",
           "top": 24
-        },
-        Object {}
+        }
       ]
     } />
 </View>
