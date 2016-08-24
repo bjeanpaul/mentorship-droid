@@ -1,16 +1,16 @@
 import React from 'react';
 import Category, { TAB_ACTIVITIES, TAB_ABOUT } from 'src/categories/Category';
+import { fakeCategory } from 'app/scripts/helpers';
 
 
 describe('Category', () => {
   function createComponent(props = {}) {
     return (
       <Category
-        category={{
-          id: 1,
+        category={fakeCategory({
           title: 'Level',
           color: '#97c13c',
-        }}
+        })}
         {...props}
       />
     );
