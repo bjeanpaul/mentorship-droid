@@ -1,5 +1,5 @@
-const base = require('src/config/base');
-const test = require('src/config/test');
+import base from 'src/config/base';
+import test from 'src/config/test';
 
 
 let production;
