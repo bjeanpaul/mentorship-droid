@@ -8,6 +8,8 @@ import BaseView from './BaseView';
 import Toolbar from './Toolbar';
 import Header from './Header';
 import Title from './Title';
+import Icon from './Icon';
+import HeaderIcon from './HeaderIcon';
 import OverlayCompleted from './Overlay/Completed';
 import OverlayLoading from './Overlay/Loading';
 
@@ -23,6 +25,8 @@ export {
   Toolbar,
   Header,
   Title,
+  Icon,
+  HeaderIcon,
   OverlayCompleted,
   OverlayLoading,
 };
