@@ -3,8 +3,6 @@ import React, { PropTypes } from 'react';
 import Icon from 'src/components/Icon';
 import styles from './styles';
 
-import backLight from 'app/assets/back-light.png';
-
 
 const HeaderIcon = ({
   type,
