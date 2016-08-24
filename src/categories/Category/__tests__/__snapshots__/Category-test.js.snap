@@ -138,7 +138,25 @@ exports[`Category should render 1`] = `
       </Text>
     </View>
   </View>
-  <View />
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "paddingBottom": 43,
+          "paddingTop": 24
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#eff2f2",
+            "height": 160,
+            "width": 160
+          }
+        } />
+    </View>
+  </View>
 </View>
 `;
 
@@ -282,7 +300,25 @@ exports[`Category should render the currently active tab 1`] = `
       </Text>
     </View>
   </View>
-  <View />
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "paddingBottom": 43,
+          "paddingTop": 24
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#eff2f2",
+            "height": 160,
+            "width": 160
+          }
+        } />
+    </View>
+  </View>
 </View>
 `;
 
@@ -426,6 +462,24 @@ exports[`Category should render the currently active tab 2`] = `
       </Text>
     </View>
   </View>
-  <View />
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "paddingBottom": 43,
+          "paddingTop": 24
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#eff2f2",
+            "height": 160,
+            "width": 160
+          }
+        } />
+    </View>
+  </View>
 </View>
 `;

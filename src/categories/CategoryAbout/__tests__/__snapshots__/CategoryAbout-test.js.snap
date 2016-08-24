@@ -1,0 +1,43 @@
+exports[`CategoryAbout should render 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "paddingBottom": 43,
+        "paddingTop": 24
+      }
+    }>
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 160,
+          "width": 160
+        }
+      } />
+  </View>
+</View>
+`;
+
+exports[`CategoryAbout should render a fallback if the category does not have an image 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "paddingBottom": 43,
+        "paddingTop": 24
+      }
+    }>
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 160,
+          "width": 160
+        }
+      } />
+  </View>
+</View>
+`;
