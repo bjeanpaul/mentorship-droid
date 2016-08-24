@@ -1,0 +1,77 @@
+exports[`Category should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16
+        },
+        undefined,
+        Array [
+          Object {
+            "height": 64
+          },
+          Object {
+            "backgroundColor": "#c4cd39"
+          }
+        ]
+      ]
+    }>
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": 24,
+            "width": 24
+          },
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24
+            },
+            Object {
+              "top": 20
+            }
+          ]
+        ]
+      } />
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Array [
+            Object {
+              "fontFamily": "Brandon Text_medium",
+              "fontSize": 20,
+              "fontWeight": "400"
+            },
+            Object {
+              "color": "#fff"
+            },
+            Object {}
+          ]
+        ]
+      }>
+      Connect
+    </Text>
+  </View>
+</View>
+`;
