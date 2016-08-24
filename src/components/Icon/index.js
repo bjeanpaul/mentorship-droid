@@ -1,18 +1,17 @@
 import React, { PropTypes } from 'react';
-import { View, Image } from 'react-native';
-
-import Text from 'src/components/Text';
-import styles from './styles';
+import { Image } from 'react-native';
 
 import backLight from 'app/assets/back-light.png';
+
+import styles from './styles';
 
 
 const Icon = ({
   type,
-  style = {}
+  style = {},
 }) => (
   <Image source={type} style={[styles.icon, style]} />
-)
+);
 
 
 Icon.types = {

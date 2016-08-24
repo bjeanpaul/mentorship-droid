@@ -5,7 +5,7 @@ import Icon from 'src/components/Icon';
 describe('Icon', () => {
   it('should render its `backLight` type', () => {
     expect(render(
-      <Icon type={Icon.types.backLight}/>
+      <Icon type={Icon.types.backLight} />
     )).toMatchSnapshot();
   });
 
