@@ -18,6 +18,24 @@ const serializeAuth = ({ email, password }) => ({
 });
 
 
+const toCamelCase = d => deepMapKeys(d, k => camelCase(k));
+
+
+const toSnakeCase = d => deepMapKeys(d, k => snakeCase(k));
+
+
+const parse = (d, { parseFn, normalizeCase }) => {
+  const res = normalizeCase
+    ? toCamelCase(d)
+    : d;
+
+  return parseFn(res);
+};
+
+
+const serialize = d => toSnakeCase(d);
+
+
 const parseConf = ({
   url,
   method,
@@ -26,7 +44,7 @@ const parseConf = ({
   schema = null,
   params = null,
   normalizeCase = true,
-  parse = identity,
+  parse: parseFn = identity,
   headers = {},
 }) => ({
   parse,
@@ -34,6 +52,8 @@ const parseConf = ({
   schema,
 
   normalizeCase,
+
+  parseFn,
 
   options: omitNulls({
     url: API_URL + url,
@@ -100,24 +120,6 @@ const request = rawConf => {
   return axios(options)
     .then(res => requestSuccess(res, conf), requestFailure);
 };
-
-
-const toCamelCase = d => deepMapKeys(d, k => camelCase(k));
-
-
-const toSnakeCase = d => deepMapKeys(d, k => snakeCase(k));
-
-
-const parse = (d, { parse: parseFn, normalizeCase }) => {
-  const res = normalizeCase
-    ? toCamelCase(d)
-    : d;
-
-  return parseFn(res);
-};
-
-
-const serialize = d => toSnakeCase(d);
 
 
 export default request;

@@ -205,7 +205,7 @@ describe('api/request', () => {
 
     it('should support disabling of case normalizing', async () => {
       axios.mockReturnValue(Promise.resolve({
-        data: { foo_bar: 23, },
+        data: { foo_bar: 23 },
       }));
 
       const res = await request({
