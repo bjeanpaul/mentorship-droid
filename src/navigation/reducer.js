@@ -2,6 +2,19 @@ import { NavigationExperimental } from 'react-native';
 const { StateUtils: NavigationStateUtils } = NavigationExperimental;
 import * as constants from './constants';
 
+import { AUTH_LOGIN_SUCCESS } from 'src/auth/constants';
+
+
+
+
+const mapActionToNavigationAction = {};
+mapActionToNavigationAction[AUTH_LOGIN_SUCCESS] = {
+  type: constants.NAVIGATION_PUSH,
+  payload: {
+    key: constants.ROUTE_ONBOARDING_WELCOME,
+  },
+};
+
 
 const navigation = (state = {
   index: 0,
@@ -9,8 +22,11 @@ const navigation = (state = {
     { key: constants.ROUTE_LANDING },
   ],
 }, action) => {
-  switch (action.type) {
+  if (action.type in mapActionToNavigationAction) {
+    return navigation(state, mapActionToNavigationAction[action.type]);
+  }
 
+  switch (action.type) {
     case constants.NAVIGATION_REPLACE:
       return NavigationStateUtils.replace(state, action.payload);
 

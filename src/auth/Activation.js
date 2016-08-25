@@ -14,6 +14,8 @@ const Activation = ({
     <Toolbar title="Activate Account" />
     <LoginForm
       {...props}
+      initialUsername="admin@example.org"
+      initialPassword="123"
       buttonLabel="Activate"
     />
     <LoginStatusMessage {...status} />

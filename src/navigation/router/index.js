@@ -11,7 +11,7 @@ import CameraRollContainer from 'src/onboarding/CameraRollContainer';
 
 
 const COMPONENT_ROUTES = {
-  ROUTE_LANDING: LandingContainer,
+  ROUTE_LANDING: ActivationContainer,
 
   ROUTE_AUTH_ACTIVATION: ActivationContainer,
   ROUTE_AUTH_LOGIN: LoginContainer,
