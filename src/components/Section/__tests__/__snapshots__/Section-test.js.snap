@@ -34,7 +34,6 @@ exports[`Section should render 1`] = `
       }>
       FOO BAR BAZ
     </Text>
-    >
   </View>
   <Text
     style={
