@@ -22,10 +22,10 @@ const COMPONENT_ROUTES = {
 };
 
 
-const router = key => {
+const Router = key => {
   const Container = COMPONENT_ROUTES[key] || NotFound;
   return <Container />;
 };
-router.COMPONENT_ROUTES = COMPONENT_ROUTES;
+Router.COMPONENT_ROUTES = COMPONENT_ROUTES;
 
-export default router;
+export default Router;
