@@ -12,6 +12,8 @@ describe('CategoryAbout', () => {
         category={fakeCategory({
           title: 'Level',
           image: images.ONBOARDING_LANDING,
+          about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+          goal: 'Ut enim ad minim veniam, quis nostrud exercitation',
         })}
         {...props}
       />

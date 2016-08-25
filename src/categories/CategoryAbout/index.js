@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { View, Image } from 'react-native';
+import { Section } from 'src/components';
 
 import styles from './styles';
 
@@ -7,6 +8,9 @@ import styles from './styles';
 const CategoryAbout = ({
   category: {
     image,
+    title,
+    about,
+    goal,
   },
 }) => (
   <View>
@@ -17,6 +21,10 @@ const CategoryAbout = ({
           : <View style={styles.imageFallback} />
       }
     </View>
+
+    <Section title={`About ${title}`}>{about}</Section>
+
+    <Section title={`Goal of ${title}`}>{goal}</Section>
   </View>
 );
 

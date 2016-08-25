@@ -4,7 +4,7 @@ exports[`CategoryAbout should render 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "paddingBottom": 43,
+        "paddingBottom": 19,
         "paddingTop": 24
       }
     }>
@@ -17,6 +17,130 @@ exports[`CategoryAbout should render 1`] = `
         }
       } />
   </View>
+  <View
+    style={
+      Object {
+        "padding": 24
+      }
+    }>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#dfe5e6",
+          "borderBottomWidth": 1,
+          "paddingBottom": 11
+        }
+      }>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              },
+              Object {}
+            ]
+          ]
+        }>
+        ABOUT LEVEL
+      </Text>
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Array [
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            },
+            Object {}
+          ]
+        ]
+      }>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "padding": 24
+      }
+    }>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#dfe5e6",
+          "borderBottomWidth": 1,
+          "paddingBottom": 11
+        }
+      }>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              },
+              Object {}
+            ]
+          ]
+        }>
+        GOAL OF LEVEL
+      </Text>
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Array [
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            },
+            Object {}
+          ]
+        ]
+      }>
+      Ut enim ad minim veniam, quis nostrud exercitation
+    </Text>
+  </View>
 </View>
 `;
 
@@ -26,7 +150,7 @@ exports[`CategoryAbout should render a fallback if the category does not have an
     style={
       Object {
         "alignItems": "center",
-        "paddingBottom": 43,
+        "paddingBottom": 19,
         "paddingTop": 24
       }
     }>
@@ -38,6 +162,130 @@ exports[`CategoryAbout should render a fallback if the category does not have an
           "width": 160
         }
       } />
+  </View>
+  <View
+    style={
+      Object {
+        "padding": 24
+      }
+    }>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#dfe5e6",
+          "borderBottomWidth": 1,
+          "paddingBottom": 11
+        }
+      }>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              },
+              Object {}
+            ]
+          ]
+        }>
+        ABOUT LEVEL
+      </Text>
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Array [
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            },
+            Object {}
+          ]
+        ]
+      }>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "padding": 24
+      }
+    }>
+    <View
+      style={
+        Object {
+          "borderBottomColor": "#dfe5e6",
+          "borderBottomWidth": 1,
+          "paddingBottom": 11
+        }
+      }>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              },
+              Object {}
+            ]
+          ]
+        }>
+        GOAL OF LEVEL
+      </Text>
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Array [
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            },
+            Object {}
+          ]
+        ]
+      }>
+      Ut enim ad minim veniam, quis nostrud exercitation
+    </Text>
   </View>
 </View>
 `;

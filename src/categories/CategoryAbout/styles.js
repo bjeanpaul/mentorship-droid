@@ -10,7 +10,7 @@ const IMAGE_HEIGHT = 160;
 export default StyleSheet.create({
   imageContainer: {
     paddingTop: 24,
-    paddingBottom: 43,
+    paddingBottom: 19,
     alignItems: 'center',
   },
   image: {
