@@ -48,14 +48,14 @@ class Category extends Component {
             tabId={TAB_ACTIVITIES}
             title="Activities"
             onPress={() => this.onTabChange(TAB_ACTIVITIES)}
-            isActive={this.state.activeTab === TAB_ACTIVITIES}
+            active={this.state.activeTab === TAB_ACTIVITIES}
           />
 
           <CategoryTab
             tabId={TAB_ABOUT}
             title="About"
             onPress={() => this.onTabChange(TAB_ABOUT)}
-            isActive={this.state.activeTab === TAB_ABOUT}
+            active={this.state.activeTab === TAB_ABOUT}
           />
         </View>
 
@@ -68,13 +68,13 @@ class Category extends Component {
 
 const CategoryTab = ({
   tabId,
-  isActive,
+  active,
   title,
   onPress,
 }) => (
   <TouchableNativeFeedback onPress={onPress} tabId={tabId}>
-    <View style={[styles.tab, isActive && styles.tabIsActive]}>
-      <Text style={[styles.tabTitle, isActive && styles.tabTitleIsActive]}>{title}</Text>
+    <View style={[styles.tab, active && styles.tabIsActive]}>
+      <Text style={[styles.tabTitle, active && styles.tabTitleIsActive]}>{title}</Text>
     </View>
   </TouchableNativeFeedback>
 );
@@ -108,7 +108,7 @@ Category.propTypes = {
 
 CategoryTab.propTypes = {
   tabId: PropTypes.string.isRequired,
-  isActive: PropTypes.bool.isRequired,
+  active: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
 };
