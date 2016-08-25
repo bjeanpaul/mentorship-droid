@@ -179,17 +179,14 @@ exports[`Category should render 1`] = `
                 "fontSize": 13,
                 "textAlign": "center"
               },
-              Array [
-                Object {
-                  "color": "#9fb1b3",
-                  "fontFamily": "Brandon Text_bold",
-                  "fontSize": 12,
-                  "fontWeight": "bold",
-                  "letterSpacing": 1,
-                  "textAlign": "left"
-                },
-                Object {}
-              ]
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              }
             ]
           }>
           ABOUT LEVEL
@@ -204,15 +201,12 @@ exports[`Category should render 1`] = `
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
-                "textAlign": "left"
-              },
-              Object {}
-            ]
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            }
           ]
         }>
         touba
@@ -241,17 +235,14 @@ exports[`Category should render 1`] = `
                 "fontSize": 13,
                 "textAlign": "center"
               },
-              Array [
-                Object {
-                  "color": "#9fb1b3",
-                  "fontFamily": "Brandon Text_bold",
-                  "fontSize": 12,
-                  "fontWeight": "bold",
-                  "letterSpacing": 1,
-                  "textAlign": "left"
-                },
-                Object {}
-              ]
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              }
             ]
           }>
           GOAL OF LEVEL
@@ -266,15 +257,12 @@ exports[`Category should render 1`] = `
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
-                "textAlign": "left"
-              },
-              Object {}
-            ]
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            }
           ]
         }>
         laog
@@ -465,17 +453,14 @@ exports[`Category should render the currently active tab 1`] = `
                 "fontSize": 13,
                 "textAlign": "center"
               },
-              Array [
-                Object {
-                  "color": "#9fb1b3",
-                  "fontFamily": "Brandon Text_bold",
-                  "fontSize": 12,
-                  "fontWeight": "bold",
-                  "letterSpacing": 1,
-                  "textAlign": "left"
-                },
-                Object {}
-              ]
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              }
             ]
           }>
           ABOUT LEVEL
@@ -490,15 +475,12 @@ exports[`Category should render the currently active tab 1`] = `
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
-                "textAlign": "left"
-              },
-              Object {}
-            ]
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            }
           ]
         }>
         touba
@@ -527,17 +509,14 @@ exports[`Category should render the currently active tab 1`] = `
                 "fontSize": 13,
                 "textAlign": "center"
               },
-              Array [
-                Object {
-                  "color": "#9fb1b3",
-                  "fontFamily": "Brandon Text_bold",
-                  "fontSize": 12,
-                  "fontWeight": "bold",
-                  "letterSpacing": 1,
-                  "textAlign": "left"
-                },
-                Object {}
-              ]
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              }
             ]
           }>
           GOAL OF LEVEL
@@ -552,15 +531,12 @@ exports[`Category should render the currently active tab 1`] = `
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
-                "textAlign": "left"
-              },
-              Object {}
-            ]
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            }
           ]
         }>
         laog
@@ -751,17 +727,14 @@ exports[`Category should render the currently active tab 2`] = `
                 "fontSize": 13,
                 "textAlign": "center"
               },
-              Array [
-                Object {
-                  "color": "#9fb1b3",
-                  "fontFamily": "Brandon Text_bold",
-                  "fontSize": 12,
-                  "fontWeight": "bold",
-                  "letterSpacing": 1,
-                  "textAlign": "left"
-                },
-                Object {}
-              ]
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              }
             ]
           }>
           ABOUT LEVEL
@@ -776,15 +749,12 @@ exports[`Category should render the currently active tab 2`] = `
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
-                "textAlign": "left"
-              },
-              Object {}
-            ]
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            }
           ]
         }>
         touba
@@ -813,17 +783,14 @@ exports[`Category should render the currently active tab 2`] = `
                 "fontSize": 13,
                 "textAlign": "center"
               },
-              Array [
-                Object {
-                  "color": "#9fb1b3",
-                  "fontFamily": "Brandon Text_bold",
-                  "fontSize": 12,
-                  "fontWeight": "bold",
-                  "letterSpacing": 1,
-                  "textAlign": "left"
-                },
-                Object {}
-              ]
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              }
             ]
           }>
           GOAL OF LEVEL
@@ -838,15 +805,12 @@ exports[`Category should render the currently active tab 2`] = `
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
-                "textAlign": "left"
-              },
-              Object {}
-            ]
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            }
           ]
         }>
         laog

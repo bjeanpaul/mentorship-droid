@@ -40,17 +40,14 @@ exports[`CategoryAbout should render 1`] = `
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "color": "#9fb1b3",
-                "fontFamily": "Brandon Text_bold",
-                "fontSize": 12,
-                "fontWeight": "bold",
-                "letterSpacing": 1,
-                "textAlign": "left"
-              },
-              Object {}
-            ]
+            Object {
+              "color": "#9fb1b3",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 12,
+              "fontWeight": "bold",
+              "letterSpacing": 1,
+              "textAlign": "left"
+            }
           ]
         }>
         ABOUT LEVEL
@@ -65,15 +62,12 @@ exports[`CategoryAbout should render 1`] = `
             "fontSize": 13,
             "textAlign": "center"
           },
-          Array [
-            Object {
-              "fontSize": 18,
-              "paddingBottom": 12,
-              "paddingTop": 18,
-              "textAlign": "left"
-            },
-            Object {}
-          ]
+          Object {
+            "fontSize": 18,
+            "paddingBottom": 12,
+            "paddingTop": 18,
+            "textAlign": "left"
+          }
         ]
       }>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -102,17 +96,14 @@ exports[`CategoryAbout should render 1`] = `
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "color": "#9fb1b3",
-                "fontFamily": "Brandon Text_bold",
-                "fontSize": 12,
-                "fontWeight": "bold",
-                "letterSpacing": 1,
-                "textAlign": "left"
-              },
-              Object {}
-            ]
+            Object {
+              "color": "#9fb1b3",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 12,
+              "fontWeight": "bold",
+              "letterSpacing": 1,
+              "textAlign": "left"
+            }
           ]
         }>
         GOAL OF LEVEL
@@ -127,15 +118,12 @@ exports[`CategoryAbout should render 1`] = `
             "fontSize": 13,
             "textAlign": "center"
           },
-          Array [
-            Object {
-              "fontSize": 18,
-              "paddingBottom": 12,
-              "paddingTop": 18,
-              "textAlign": "left"
-            },
-            Object {}
-          ]
+          Object {
+            "fontSize": 18,
+            "paddingBottom": 12,
+            "paddingTop": 18,
+            "textAlign": "left"
+          }
         ]
       }>
       Ut enim ad minim veniam, quis nostrud exercitation
@@ -186,17 +174,14 @@ exports[`CategoryAbout should render a fallback if the category does not have an
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "color": "#9fb1b3",
-                "fontFamily": "Brandon Text_bold",
-                "fontSize": 12,
-                "fontWeight": "bold",
-                "letterSpacing": 1,
-                "textAlign": "left"
-              },
-              Object {}
-            ]
+            Object {
+              "color": "#9fb1b3",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 12,
+              "fontWeight": "bold",
+              "letterSpacing": 1,
+              "textAlign": "left"
+            }
           ]
         }>
         ABOUT LEVEL
@@ -211,15 +196,12 @@ exports[`CategoryAbout should render a fallback if the category does not have an
             "fontSize": 13,
             "textAlign": "center"
           },
-          Array [
-            Object {
-              "fontSize": 18,
-              "paddingBottom": 12,
-              "paddingTop": 18,
-              "textAlign": "left"
-            },
-            Object {}
-          ]
+          Object {
+            "fontSize": 18,
+            "paddingBottom": 12,
+            "paddingTop": 18,
+            "textAlign": "left"
+          }
         ]
       }>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -248,17 +230,14 @@ exports[`CategoryAbout should render a fallback if the category does not have an
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "color": "#9fb1b3",
-                "fontFamily": "Brandon Text_bold",
-                "fontSize": 12,
-                "fontWeight": "bold",
-                "letterSpacing": 1,
-                "textAlign": "left"
-              },
-              Object {}
-            ]
+            Object {
+              "color": "#9fb1b3",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 12,
+              "fontWeight": "bold",
+              "letterSpacing": 1,
+              "textAlign": "left"
+            }
           ]
         }>
         GOAL OF LEVEL
@@ -273,15 +252,12 @@ exports[`CategoryAbout should render a fallback if the category does not have an
             "fontSize": 13,
             "textAlign": "center"
           },
-          Array [
-            Object {
-              "fontSize": 18,
-              "paddingBottom": 12,
-              "paddingTop": 18,
-              "textAlign": "left"
-            },
-            Object {}
-          ]
+          Object {
+            "fontSize": 18,
+            "paddingBottom": 12,
+            "paddingTop": 18,
+            "textAlign": "left"
+          }
         ]
       }>
       Ut enim ad minim veniam, quis nostrud exercitation
