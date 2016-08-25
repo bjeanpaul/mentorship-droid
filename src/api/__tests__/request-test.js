@@ -151,7 +151,7 @@ describe('api/request', () => {
       });
     });
 
-    it('support a response data parse function', async () => {
+    it('should support a response data parse function', async () => {
       axios.mockReturnValue(Promise.resolve({ data: { bar: 23 } }));
 
       const res = await request({
@@ -161,6 +161,68 @@ describe('api/request', () => {
       });
 
       expect(res).toEqual(23);
+    });
+
+    it('should support case normalizing', async () => {
+      axios.mockReturnValue(Promise.resolve({
+        data: {
+          foo_bar: [{
+            baz_quux: { corge_grault: 23 },
+          }],
+        },
+      }));
+
+      const res = await request({
+        url: '/foo',
+        method: 'GET',
+        data: {
+          garplyWaldo: {
+            fredXxyyxx: [{
+              lerpLarp: { loremWinrar: 21 },
+            }],
+          },
+        },
+      });
+
+      expect(res).toEqual({
+        fooBar: [{
+          bazQuux: { corgeGrault: 23 },
+        }],
+      });
+
+      expect(axios.mock.calls).toEqual([[
+        jasmine.objectContaining({
+          data: {
+            garply_waldo: {
+              fred_xxyyxx: [{
+                lerp_larp: { lorem_winrar: 21 },
+              }],
+            },
+          },
+        }),
+      ]]);
+    });
+
+    it('should support disabling of case normalizing', async () => {
+      axios.mockReturnValue(Promise.resolve({
+        data: { foo_bar: 23, },
+      }));
+
+      const res = await request({
+        url: '/foo',
+        method: 'GET',
+        data: { garplyWaldo: 21 },
+      });
+
+      expect(res).toEqual({
+        fooBar: 23,
+      });
+
+      expect(axios.mock.calls).toEqual([[
+        jasmine.objectContaining({
+          data: { garply_waldo: 21 },
+        }),
+      ]]);
     });
   });
 
