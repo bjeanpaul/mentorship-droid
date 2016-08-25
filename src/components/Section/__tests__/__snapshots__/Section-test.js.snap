@@ -22,21 +22,19 @@ exports[`Section should render 1`] = `
             "fontSize": 13,
             "textAlign": "center"
           },
-          Array [
-            Object {
-              "color": "#9fb1b3",
-              "fontFamily": "Brandon Text_bold",
-              "fontSize": 12,
-              "fontWeight": "bold",
-              "letterSpacing": 1,
-              "textAlign": "left"
-            },
-            Object {}
-          ]
+          Object {
+            "color": "#9fb1b3",
+            "fontFamily": "Brandon Text_bold",
+            "fontSize": 12,
+            "fontWeight": "bold",
+            "letterSpacing": 1,
+            "textAlign": "left"
+          }
         ]
       }>
       FOO BAR BAZ
     </Text>
+    >
   </View>
   <Text
     style={
@@ -47,15 +45,12 @@ exports[`Section should render 1`] = `
           "fontSize": 13,
           "textAlign": "center"
         },
-        Array [
-          Object {
-            "fontSize": 18,
-            "paddingBottom": 12,
-            "paddingTop": 18,
-            "textAlign": "left"
-          },
-          Object {}
-        ]
+        Object {
+          "fontSize": 18,
+          "paddingBottom": 12,
+          "paddingTop": 18,
+          "textAlign": "left"
+        }
       ]
     }>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
