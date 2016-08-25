@@ -59,4 +59,5 @@ export default {
   ONBOARDING_LANDING_LOGIN_BG: 'rgba(42, 45, 48, 0.05)',
 
   CATEGORY_ACTIVE_TAB_BORDER: 'rgba(0, 0, 0, 0.3)',
+  CATEGORY_ACTIVITY_LIST_ITEM_BORDER: '#dfe5e6',
 };

@@ -1,16 +1,33 @@
-import React from 'react';
-import { View } from 'react-native';
+import React, { PropTypes } from 'react';
+import { View, TouchableNativeFeedback } from 'react-native';
+import { Text } from 'src/components';
+import styles from './styles';
 
 
-const CategoryActivityList = () => (
-  <View>
-    {/* TODO */}
+const ActivityActivityList = ({
+  activities,
+  onActivityPress,
+}) => (
+  <View style={styles.list}>
+    {activities.map(({ id, title }) => (
+    <TouchableNativeFeedback
+      key={id}
+      activityId={id}
+      onPress={() => onActivityPress(id)}
+    >
+      <View style={styles.activity}>
+        <Text style={styles.activityTitle}>{title}</Text>
+      </View>
+    </TouchableNativeFeedback>
+    ))}
   </View>
 );
 
 
-CategoryActivityList.propTypes = {
+ActivityActivityList.propTypes = {
+  onActivityPress: PropTypes.func.isRequired,
+  activities: PropTypes.array.isRequired,
 };
 
 
-export default CategoryActivityList;
+export default ActivityActivityList;
