@@ -3,10 +3,10 @@ import { castArray, flattenDeep, findLast, isUndefined } from 'lodash';
 
 const getTextTransform = (style, transforms) => {
   const styleList = flattenDeep(castArray(style));
-  const k = findLast(styleList, k => transforms.has(k));
+  const key = findLast(styleList, k => transforms.has(k));
 
-  return !isUndefined(k)
-    ? transforms.get(k)
+  return !isUndefined(key)
+    ? transforms.get(key)
     : null;
 };
 
