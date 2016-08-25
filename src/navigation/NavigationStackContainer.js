@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import NavigationStack from './NavigationStack';
 
-import routeToScene from './routes';
+import router from './router';
 
 export default connect(
   state => ({
-    routeToScene,
+    router,
     navigationState: state.navigation,
   })
 )(NavigationStack);

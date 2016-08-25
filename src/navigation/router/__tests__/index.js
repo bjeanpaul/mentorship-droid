@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { fakeStore } from 'app/scripts/helpers';
 
 import * as constants from 'src/navigation/constants';
-import routes from 'src/navigation/routes';
+import router from 'src/navigation/router';
 
 
 import NotFound from 'src/components/NotFound';
@@ -19,7 +19,7 @@ import CameraRollContainer from 'src/onboarding/CameraRollContainer';
 
 const componentForRoute = (constant) => shallow(
   <Provider store={fakeStore}>
-    {routes(constant)}
+    {router(constant)}
   </Provider>
 );
 

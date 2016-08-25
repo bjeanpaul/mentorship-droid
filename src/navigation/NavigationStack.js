@@ -5,17 +5,17 @@ const { CardStack: NavigationCardStack } = NavigationExperimental;
 
 const NavigationStack = ({
   navigationState,
-  routeToScene,
+  router,
 }) => (
   <NavigationCardStack
     navigationState={navigationState}
-    renderScene={(sceneProps) => routeToScene(sceneProps.scene.route.key)}
+    renderScene={(sceneProps) => router(sceneProps.scene.route.key)}
   />
 );
 
 NavigationStack.propTypes = {
   navigationState: PropTypes.any.isRequired,
-  routeToScene: PropTypes.func.isRequired,
+  router: PropTypes.func.isRequired,
 };
 
 export default NavigationStack;
