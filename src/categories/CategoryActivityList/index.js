@@ -8,7 +8,7 @@ const ActivityActivityList = ({
   activities,
   onActivityPress,
 }) => (
-  <View style={styles.list}>
+  <View>
     {activities.map(({ id, title }) => (
     <TouchableNativeFeedback
       key={id}

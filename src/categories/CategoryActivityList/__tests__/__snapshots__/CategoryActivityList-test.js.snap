@@ -1,6 +1,5 @@
 exports[`CategoryActivityList should render 1`] = `
-<View
-  style={undefined}>
+<View>
   <View
     style={
       Array [
