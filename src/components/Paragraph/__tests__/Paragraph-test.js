@@ -2,7 +2,7 @@ import React from 'react';
 import { Paragraph } from 'src/components';
 
 
-describe('Section', () => {
+describe('Paragraph', () => {
   it('should render', () => {
     expect(render(
       <Paragraph>

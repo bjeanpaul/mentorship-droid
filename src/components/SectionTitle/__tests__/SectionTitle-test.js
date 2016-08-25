@@ -2,7 +2,7 @@ import React from 'react';
 import { SectionTitle } from 'src/components';
 
 
-describe('Section', () => {
+describe('SectionTitle', () => {
   it('should render', () => {
     expect(render(
       <SectionTitle>Lorem ipsum dolor sit amet</SectionTitle>

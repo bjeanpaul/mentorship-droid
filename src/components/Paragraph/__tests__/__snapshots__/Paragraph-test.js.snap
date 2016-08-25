@@ -1,4 +1,4 @@
-exports[`Section should render 1`] = `
+exports[`Paragraph should render 1`] = `
 <Text
   style={
     Array [
@@ -23,7 +23,7 @@ exports[`Section should render 1`] = `
 </Text>
 `;
 
-exports[`Section should support style overrides 1`] = `
+exports[`Paragraph should support style overrides 1`] = `
 <Text
   style={
     Array [
