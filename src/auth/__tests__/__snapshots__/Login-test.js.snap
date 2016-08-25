@@ -112,7 +112,7 @@ exports[`auth/Login should draw error statuses 1`] = `
           }
         }
         underlineColorAndroid="transparent"
-        value="admin@example.org" />
+        value={undefined} />
     </View>
     <View
       style={
@@ -169,7 +169,7 @@ exports[`auth/Login should draw error statuses 1`] = `
           }
         }
         underlineColorAndroid="transparent"
-        value="123" />
+        value={undefined} />
     </View>
     <View
       style={
@@ -210,7 +210,7 @@ exports[`auth/Login should draw error statuses 1`] = `
         undefined
       ]
     }>
-    Sorry, we seem to have an issue on our side. We've been notified of the problem and will look into it as soon as possible.
+    Sorry, we seem to have an issue on our side. We\'ve been notified of the problem and will look into it as soon as possible.
   </Text>
 </View>
 `;
@@ -329,7 +329,7 @@ exports[`auth/Login should draw not found statuses 1`] = `
           }
         }
         underlineColorAndroid="transparent"
-        value="admin@example.org" />
+        value={undefined} />
     </View>
     <View
       style={
@@ -386,7 +386,7 @@ exports[`auth/Login should draw not found statuses 1`] = `
           }
         }
         underlineColorAndroid="transparent"
-        value="123" />
+        value={undefined} />
     </View>
     <View
       style={
@@ -427,7 +427,7 @@ exports[`auth/Login should draw not found statuses 1`] = `
         undefined
       ]
     }>
-    Sorry, we couldn't find an account with that username and password combination.
+    Sorry, we couldn\'t find an account with that username and password combination.
   </Text>
 </View>
 `;
