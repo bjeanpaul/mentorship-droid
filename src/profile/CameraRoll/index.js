@@ -6,15 +6,25 @@ import styles from './styles';
 class CameraRollPicker extends React.Component {
   constructor(props) {
     super(props);
+
+    const {
+      initialPhotos = [],
+    } = props;
+
     this.state = {
-      photos: [],
+      photos: initialPhotos,
     };
   }
 
   componentDidMount() {
-    CameraRoll.getPhotos({ first: 25 }).then((data) => {
-      this.setState({ photos: data.edges.map((asset) => asset.node.image.uri) });
-    });
+    return CameraRoll
+      .getPhotos({ first: 25 })
+      .then((data) => {
+        this.setState({
+          photos: this.state.photos
+            .concat(data.edges.map((asset) => asset.node.image.uri)),
+        });
+      });
   }
 
   render() {
@@ -24,6 +34,7 @@ class CameraRollPicker extends React.Component {
             {this.state.photos.map((photoPath, index) =>
                 <TouchableNativeFeedback
                   key={index}
+                  photoId={index}
                   onPress={() => this.props.onPhotoPress(photoPath)}
                 >
                   <View style={styles.imageContainer}>
@@ -42,6 +53,7 @@ class CameraRollPicker extends React.Component {
 
 CameraRollPicker.propTypes = {
   onPhotoPress: PropTypes.func.isRequired,
+  initialPhotos: PropTypes.array,
 };
 
 export default CameraRollPicker;

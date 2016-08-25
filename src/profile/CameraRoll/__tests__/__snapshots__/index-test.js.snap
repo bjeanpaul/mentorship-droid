@@ -12,6 +12,85 @@ exports[`CameraRoll should map props correctly 1`] = `
         "flexDirection": "row",
         "flexWrap": "wrap"
       }
-    } />
+    }>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+  </View>
 </ScrollView>
 `;
