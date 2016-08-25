@@ -1,8 +1,7 @@
 import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 
-import SectionTitle from 'src/components/SectionTitle';
-import Paragraph from 'src/components/Paragraph';
+import Text from 'src/components/Text';
 import styles from './styles';
 
 
@@ -12,10 +11,10 @@ export const Section = ({
 }) => (
   <View style={styles.section}>
     <View style={styles.header}>
-      <SectionTitle>{title}</SectionTitle>
+      <Text style={Text.types.sectionTitle}>{title}</Text>
     </View>
 
-    <Paragraph>{children}</Paragraph>
+    <Text style={Text.types.paragraph}>{children}</Text>
   </View>
 );
 

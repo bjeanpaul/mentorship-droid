@@ -13,8 +13,6 @@ import HeaderIcon from './HeaderIcon';
 import OverlayCompleted from './Overlay/Completed';
 import OverlayLoading from './Overlay/Loading';
 import Section from './Section';
-import SectionTitle from './SectionTitle';
-import Paragraph from './Paragraph';
 
 export {
   BaseView,
@@ -33,6 +31,4 @@ export {
   OverlayCompleted,
   OverlayLoading,
   Section,
-  SectionTitle,
-  Paragraph,
 };
