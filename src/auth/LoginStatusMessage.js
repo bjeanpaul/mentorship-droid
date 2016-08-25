@@ -3,6 +3,7 @@ import React, { PropTypes } from 'react';
 import { Text } from 'src/components';
 import * as constants from './constants';
 
+{/* TODO different colour for error? */}
 const LoginStatusMessage = ({ type }) => {
   switch (type) {
     case constants.AUTH_STATUS_NOT_FOUND:

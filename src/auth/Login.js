@@ -14,11 +14,7 @@ const Login = ({
     <LoginForm
       {...props}
       buttonLabel="Log in"
-      initialUsername="admin@example.org"
-      initialPassword="123"
     />
-
-    {/* TODO different colour for error? */}
     <LoginStatusMessage {...status} />
   </BaseView>
 );
