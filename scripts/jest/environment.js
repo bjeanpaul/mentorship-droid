@@ -12,15 +12,6 @@ global.render = render;
 jest.mock('TextInput', () => 'TextInput');
 jest.mock('ScrollView', () => 'ScrollView');
 
-
-jest.mock('CameraRoll', () => ({
-  getPhotos: () => Promise.resolve([
-    { node: { image: { uri: 'image/photo/1.png' } } },
-    { node: { image: { uri: 'image/photo/2.png' } } },
-    { node: { image: { uri: 'image/photo/3.png' } } },
-  ]),
-}));
-
 // automocking doesn't seem to work for axios
 jest.setMock('axios', jest.fn());
 
