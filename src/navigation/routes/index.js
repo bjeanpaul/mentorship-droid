@@ -3,7 +3,7 @@ import * as constants from '../constants';
 
 
 import NotFound from 'src/components/NotFound';
-import LandingContainer from './LandingContainer';
+import LandingContainer from 'src/onboarding/LandingContainer';
 import LoginContainer from 'src/auth/LoginContainer';
 import ActivationContainer from 'src/auth/ActivationContainer';
 
