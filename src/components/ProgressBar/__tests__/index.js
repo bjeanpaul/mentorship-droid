@@ -14,5 +14,4 @@ describe('ProgressBar', () => {
       <ProgressBar completed={1} />
     )).toMatchSnapshot();
   });
-
 });
