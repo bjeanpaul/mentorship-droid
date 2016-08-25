@@ -17,7 +17,7 @@ export const fakeAuth = () => ({
 
 
 export const fakeContext = () => ({
-  auth: fakeAuth()
+  auth: fakeAuth(),
 });
 
 

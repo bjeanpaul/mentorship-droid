@@ -7,7 +7,7 @@ class CameraRollPicker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      photos: this.props.initialPhotos || [],
+      photos: [],
     };
   }
 
@@ -41,7 +41,6 @@ class CameraRollPicker extends React.Component {
 }
 
 CameraRollPicker.propTypes = {
-  initialPhotos: PropTypes.array,
   onPhotoPress: PropTypes.func.isRequired,
 };
 

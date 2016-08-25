@@ -6,30 +6,19 @@ describe('CameraRoll', () => {
 
   it('should map props correctly', () => {
     expect(render(
-      <CameraRoll
-        initialPhotos={[
-          'path/to/photo1.png',
-          'path/to/photo2.png',
-          'path/to/photo3.png',
-        ]}
-        onPhotoPress={noop}
-      />
+      <CameraRoll onPhotoPress={noop} />
     )).toMatchSnapshot();
   });
 
   it('should be able to tap and fire `onPhotoPress`', () => {
     const onPhotoPress = jest.fn();
     const el = shallow(
-      <CameraRoll
-        initialPhotos={[
-          'path/to/photo1.png',
-          'path/to/photo2.png',
-          'path/to/photo3.png',
-        ]}
-        onPhotoPress={onPhotoPress}
-      />
+      <CameraRoll onPhotoPress={onPhotoPress} />
     );
+
+    //console.log(el.find('TouchableNativeFeedback'));
+
     el.find('TouchableNativeFeedback').at(1).simulate('press');
-    expect(onPhotoPress).toBeCalledWith('path/to/photo2.png');
+    expect(onPhotoPress).toBeCalledWith('image/photo/2.png');
   });
 });
