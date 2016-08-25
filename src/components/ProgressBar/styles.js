@@ -3,11 +3,12 @@ import colors from 'src/constants/colors';
 
 
 export default StyleSheet.create({
-  progressBar: {
+  bar: {
     height: 6,
+    flexDirection: 'row',
     backgroundColor: colors.PROGRESS_BAR_BG,
   },
-  progressIndicator: {
+  completed: {
     backgroundColor: colors.PROGRESS_INDICATOR_BG,
   },
 });

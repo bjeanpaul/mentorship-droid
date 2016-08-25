@@ -4,15 +4,16 @@ import { View } from 'react-native';
 import styles from './styles';
 
 const ProgressBar = ({
-  progress,
+  completed,
 }) => (
-  <View style={styles.progressBar}>
-    <View style={[styles.progressIndicator, { flex: progress }]} />
+  <View style={styles.bar}>
+    <View style={[styles.completed, { flex: completed }]} />
+    <View style={{ flex: 1.0 - completed }} />
   </View>
 );
 
 ProgressBar.propTypes = {
-  progress: PropTypes.number.isRequired,
+  completed: PropTypes.number.isRequired,
 };
 
 export default ProgressBar;
