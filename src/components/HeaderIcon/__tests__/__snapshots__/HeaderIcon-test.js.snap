@@ -1,0 +1,73 @@
+exports[`HeaderIcon should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 72,
+        "justifyContent": "center",
+        "paddingLeft": 16,
+        "paddingRight": 16
+      },
+      Object {
+        "backgroundColor": "#003035"
+      },
+      Object {}
+    ]
+  }>
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "height": 24,
+          "width": 24
+        },
+        Array [
+          Object {
+            "position": "absolute",
+            "top": 24
+          },
+          Object {}
+        ]
+      ]
+    } />
+</View>
+`;
+
+exports[`HeaderIcon should support style overriding 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 72,
+        "justifyContent": "center",
+        "paddingLeft": 16,
+        "paddingRight": 16
+      },
+      Object {
+        "backgroundColor": "#003035"
+      },
+      Object {}
+    ]
+  }>
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "height": 24,
+          "width": 24
+        },
+        Array [
+          Object {
+            "position": "absolute",
+            "top": 24
+          },
+          Object {
+            "left": 48
+          }
+        ]
+      ]
+    } />
+</View>
+`;
