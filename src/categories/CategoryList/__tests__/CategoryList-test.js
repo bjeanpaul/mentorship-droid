@@ -1,6 +1,7 @@
 import React from 'react';
 import { noop } from 'lodash';
 import CategoryList from 'src/categories/CategoryList';
+import { fakeCategory } from 'app/scripts/helpers';
 
 
 describe('CategoryList', () => {
@@ -16,7 +17,7 @@ describe('CategoryList', () => {
           id: 2,
           title: 'Level',
           color: '#97c13c',
-        }]}
+        }].map(fakeCategory)}
         {...props}
       />
     );
