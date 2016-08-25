@@ -3,15 +3,19 @@ const { StateUtils: NavigationStateUtils } = NavigationExperimental;
 import * as constants from './constants';
 
 import { AUTH_LOGIN_SUCCESS } from 'src/auth/constants';
-
-
-
+import { ONBOARDING_CHANGE_PROFILE } from 'src/onboarding/constants';
 
 const mapActionToNavigationAction = {};
 mapActionToNavigationAction[AUTH_LOGIN_SUCCESS] = {
   type: constants.NAVIGATION_PUSH,
   payload: {
     key: constants.ROUTE_ONBOARDING_WELCOME,
+  },
+};
+mapActionToNavigationAction[ONBOARDING_CHANGE_PROFILE] = {
+  type: constants.NAVIGATION_POP,
+  payload: {
+    key: constants.ROUTE_ONBOARDING_PROFILE_PICTURE,
   },
 };
 

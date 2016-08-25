@@ -1,5 +1,4 @@
 import * as constants from 'src/onboarding/constants';
-import { popRoute } from 'src/navigation/actions';
 
 export const changeProfileImage = path => ({
   type: constants.ONBOARDING_CHANGE_PROFILE,
@@ -7,9 +6,3 @@ export const changeProfileImage = path => ({
     profilePicture: path,
   },
 });
-
-export const changeProfileImageAndPreview = path => dispatch => Promise.resolve()
-  .then(() => changeProfileImage(path))
-  .then(dispatch)
-  .then(popRoute)
-  .then(dispatch);
