@@ -9,6 +9,9 @@ export default {
 
   LABEL_TEXT: '#9fb1b3',
   LINK_TEXT: '#f77040',
+  SECTION_TITLE_TEXT: '#9fb1b3',
+
+  SECTION_DIVIDER: '#dfe5e6',
 
   TEXT_INPUT_BORDER_COLOR: '#dfe5e6',
   TEXT_INPUT_BORDER_COLOR_SELECTED: '#003035',

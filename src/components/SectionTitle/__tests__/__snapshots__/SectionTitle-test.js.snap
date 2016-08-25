@@ -1,0 +1,55 @@
+exports[`SectionTitle should render 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#003035",
+        "fontFamily": "Brandon Text",
+        "fontSize": 13,
+        "textAlign": "center"
+      },
+      Array [
+        Object {
+          "color": "#9fb1b3",
+          "fontFamily": "Brandon Text_bold",
+          "fontSize": 12,
+          "fontWeight": "bold",
+          "letterSpacing": 1,
+          "textAlign": "left"
+        },
+        Object {}
+      ]
+    ]
+  }>
+  LOREM IPSUM DOLOR SIT AMET
+</Text>
+`;
+
+exports[`SectionTitle should support style overrides 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#003035",
+        "fontFamily": "Brandon Text",
+        "fontSize": 13,
+        "textAlign": "center"
+      },
+      Array [
+        Object {
+          "color": "#9fb1b3",
+          "fontFamily": "Brandon Text_bold",
+          "fontSize": 12,
+          "fontWeight": "bold",
+          "letterSpacing": 1,
+          "textAlign": "left"
+        },
+        Object {
+          "color": "#333"
+        }
+      ]
+    ]
+  }>
+  LOREM IPSUM DOLOR SIT AMET
+</Text>
+`;
