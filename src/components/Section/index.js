@@ -11,7 +11,7 @@ export const Section = ({
 }) => (
   <View style={styles.section}>
     <View style={styles.header}>
-      <Text style={Text.types.sectionTitle}>{title}</Text>>
+      <Text style={Text.types.sectionTitle}>{title}</Text>
     </View>
 
     <Text style={Text.types.paragraph}>{children}</Text>
