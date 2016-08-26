@@ -1,6 +1,7 @@
 import * as constants from 'src/profile/constants';
 import * as statuses from 'src/profile/statuses';
 
+export const getProfile = (state, profileId) => state.entities.profiles[profileId];
 
 const profile = (
   state = {

@@ -59,6 +59,13 @@ export const fakeActivity = data => ({
 });
 
 
+export const fakeStore = {
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => {},
+};
+
+
 export const fakeProfileData = (data = { id: 23 }) => (
   normalize(data, Profile));
 

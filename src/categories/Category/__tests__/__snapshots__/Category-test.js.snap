@@ -137,7 +137,137 @@ exports[`Category should render 1`] = `
       </Text>
     </View>
   </View>
-  <View />
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "paddingBottom": 19,
+          "paddingTop": 24
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#eff2f2",
+            "height": 160,
+            "width": 160
+          }
+        } />
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 24
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#dfe5e6",
+            "borderBottomWidth": 1,
+            "paddingBottom": 11
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          ABOUT LEVEL
+        </Text>
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            }
+          ]
+        }>
+        touba
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 24
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#dfe5e6",
+            "borderBottomWidth": 1,
+            "paddingBottom": 11
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          GOAL OF LEVEL
+        </Text>
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            }
+          ]
+        }>
+        laog
+      </Text>
+    </View>
+  </View>
 </View>
 `;
 
@@ -280,7 +410,137 @@ exports[`Category should render the currently active tab 1`] = `
       </Text>
     </View>
   </View>
-  <View />
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "paddingBottom": 19,
+          "paddingTop": 24
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#eff2f2",
+            "height": 160,
+            "width": 160
+          }
+        } />
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 24
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#dfe5e6",
+            "borderBottomWidth": 1,
+            "paddingBottom": 11
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          ABOUT LEVEL
+        </Text>
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            }
+          ]
+        }>
+        touba
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 24
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#dfe5e6",
+            "borderBottomWidth": 1,
+            "paddingBottom": 11
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          GOAL OF LEVEL
+        </Text>
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            }
+          ]
+        }>
+        laog
+      </Text>
+    </View>
+  </View>
 </View>
 `;
 
@@ -423,6 +683,136 @@ exports[`Category should render the currently active tab 2`] = `
       </Text>
     </View>
   </View>
-  <View />
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "paddingBottom": 19,
+          "paddingTop": 24
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#eff2f2",
+            "height": 160,
+            "width": 160
+          }
+        } />
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 24
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#dfe5e6",
+            "borderBottomWidth": 1,
+            "paddingBottom": 11
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          ABOUT LEVEL
+        </Text>
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            }
+          ]
+        }>
+        touba
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 24
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#dfe5e6",
+            "borderBottomWidth": 1,
+            "paddingBottom": 11
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          GOAL OF LEVEL
+        </Text>
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left"
+            }
+          ]
+        }>
+        laog
+      </Text>
+    </View>
+  </View>
 </View>
 `;

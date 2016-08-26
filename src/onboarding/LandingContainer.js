@@ -1,14 +1,9 @@
 import { connect } from 'react-redux';
-import Landing from './Landing';
-import {
-  pushActivateAccountRoute,
-  pushLoginRoute,
-} from 'src/navigation/auth/actions';
+import * as nav from 'src/navigation/actions';
+import Landing from 'src/onboarding/Landing';
 
-export default connect(
-  null,
-  {
-    onGetStartedPress: pushActivateAccountRoute,
-    onLoginPress: pushLoginRoute,
-  }
-)(Landing);
+
+export default connect(null, {
+  onGetStartedPress: nav.pushActivationRoute,
+  onLoginPress: nav.pushLoginRoute,
+})(Landing);
