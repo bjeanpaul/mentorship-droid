@@ -50,15 +50,8 @@ Button.propTypes = {
   label: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
-  theme: PropTypes.oneOf([
-    themes.default,
-    themes.light,
-    themes.transparent,
-  ]),
-  layout: PropTypes.oneOf([
-    layouts.default,
-    layouts.inline,
-  ]),
+  theme: PropTypes.any,
+  layout: PropTypes.any,
 };
 
 
