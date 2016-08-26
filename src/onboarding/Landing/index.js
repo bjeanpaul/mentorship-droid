@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { View, Image } from 'react-native';
-import { BaseView, Text, Link, Button, Icon } from 'src/components';
+import { BaseView, Text, Link, Button } from 'src/components';
 
 import styles from './styles';
 import images from 'src/constants/images';
@@ -21,10 +21,7 @@ const Landing = ({
         <Text style={styles.getStartedHeading}>
           This is a short, but sweet, description of the application.
         </Text>
-        <Button
-          theme={Button.themes.transparent}
-          onPress={onGetStartedPress}
-        >
+        <Button onPress={onGetStartedPress}>
           GET STARTED
         </Button>
       </View>
