@@ -15,6 +15,17 @@ describe('Text', () => {
     )).toMatchSnapshot();
   });
 
+  it('should render titles', () => {
+    expect(render(
+      <Text style={Text.types.title}>
+        This is a section title. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </Text>
+    )).toMatchSnapshot();
+  });
+
   it('should render paragraphs', () => {
     expect(render(
       <Text style={Text.types.paragraph}>
