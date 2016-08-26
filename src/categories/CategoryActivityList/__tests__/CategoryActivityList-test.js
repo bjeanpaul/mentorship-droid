@@ -32,8 +32,8 @@ describe('CategoryActivityList', () => {
         fakeActivity({
           icon: TEST_ICON,
           isComplete: false,
-        })
-      ]
+        }),
+      ],
     }))).toMatchSnapshot();
   });
 
@@ -43,8 +43,8 @@ describe('CategoryActivityList', () => {
         fakeActivity({
           icon: TEST_ICON,
           isComplete: true,
-        })
-      ]
+        }),
+      ],
     }))).toMatchSnapshot();
   });
 
@@ -54,8 +54,8 @@ describe('CategoryActivityList', () => {
         fakeActivity({
           icon: null,
           isComplete: false,
-        })
-      ]
+        }),
+      ],
     }))).toMatchSnapshot();
   });
 
@@ -65,8 +65,8 @@ describe('CategoryActivityList', () => {
         fakeActivity({
           icon: null,
           isComplete: true,
-        })
-      ]
+        }),
+      ],
     }))).toMatchSnapshot();
   });
 
