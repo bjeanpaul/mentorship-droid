@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
 
-import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 import colors from 'src/constants/colors';
 
 
@@ -10,10 +9,22 @@ export default StyleSheet.create({
     height: 120,
     borderBottomWidth: 1,
     borderBottomColor: colors.CATEGORY_ACTIVITY_LIST_ITEM_BORDER,
-    justifyContent: 'center',
+    alignItems: 'flex-start',
+  },
+  activityIcon: {
+    width: 72,
+    height: 72,
+    borderRadius: 72,
+    top: 24,
+    overlayColor: colors.DEFAULT_BG,
+    position: 'absolute',
+  },
+  activityIconIsIncomplete: {
+    backgroundColor: colors.CATEGORY_ACTIVITY_LIST_ICON_INCOMPLETE,
   },
   activityTitle: {
     fontSize: 18,
     textAlign: 'left',
+    marginLeft: 104,
   },
 });

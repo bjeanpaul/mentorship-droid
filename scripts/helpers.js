@@ -80,3 +80,8 @@ export const fakeProfileListData = (data = [{ id: 23 }]) => (
 
 export const fakeScheduledCallListData = (data = [{ id: 23 }]) => (
   normalize(data, arrayOf(ScheduledCall)));
+
+export const TEST_ICON = [
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/',
+  '5/53/Emoji_u1f605.svg/128px-Emoji_u1f605.svg.png',
+].join('\n');

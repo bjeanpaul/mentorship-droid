@@ -1,22 +1,43 @@
 import React, { PropTypes } from 'react';
-import { View, TouchableNativeFeedback } from 'react-native';
+import { View, Image, TouchableNativeFeedback } from 'react-native';
 import { Text } from 'src/components';
+import images from 'src/constants/images';
 import styles from './styles';
 
 
 const CategoryActivityList = ({
+  category: { color },
   activities,
   onActivityPress,
 }) => (
   <View>
-    {activities.map(({ id, title }) => (
+    {activities.map(({ id, title, icon, isComplete }) => (
     <TouchableNativeFeedback
       key={id}
       activityId={id}
       onPress={() => onActivityPress(id)}
     >
       <View style={styles.activity}>
-        <Text style={styles.activityTitle}>{title}</Text>
+        <Image
+          source={
+            icon
+              ? { uri: icon }
+              : images.ACTIVITY_ICON_FALLBACK
+          }
+          style={[
+            styles.activityIcon,
+            isComplete
+              ? { backgroundColor: color }
+              : styles.activityIconIsIncomplete,
+          ]}
+        />
+
+      <Text
+        numberOfLines={3}
+        style={styles.activityTitle}
+      >
+      {title}
+    </Text>
       </View>
     </TouchableNativeFeedback>
     ))}
@@ -25,8 +46,9 @@ const CategoryActivityList = ({
 
 
 CategoryActivityList.propTypes = {
-  onActivityPress: PropTypes.func.isRequired,
+  category: PropTypes.object.isRequired,
   activities: PropTypes.array.isRequired,
+  onActivityPress: PropTypes.func.isRequired,
 };
 
 

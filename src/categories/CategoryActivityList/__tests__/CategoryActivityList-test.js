@@ -1,7 +1,7 @@
 import React from 'react';
 import { noop } from 'lodash';
 import CategoryActivityList from 'src/categories/CategoryActivityList';
-import { fakeCategory, fakeActivity } from 'app/scripts/helpers';
+import { fakeCategory, fakeActivity, TEST_ICON } from 'app/scripts/helpers';
 
 
 describe('CategoryActivityList', () => {
@@ -24,6 +24,50 @@ describe('CategoryActivityList', () => {
 
   it('should render', () => {
     expect(render(createComponent())).toMatchSnapshot();
+  });
+
+  it('should render incomplete activities', () => {
+    expect(render(createComponent({
+      activities: [
+        fakeActivity({
+          icon: TEST_ICON,
+          isComplete: false,
+        })
+      ]
+    }))).toMatchSnapshot();
+  });
+
+  it('should render complete activities', () => {
+    expect(render(createComponent({
+      activities: [
+        fakeActivity({
+          icon: TEST_ICON,
+          isComplete: true,
+        })
+      ]
+    }))).toMatchSnapshot();
+  });
+
+  it('should render a fallback for incomplete activities without an icon', () => {
+    expect(render(createComponent({
+      activities: [
+        fakeActivity({
+          icon: null,
+          isComplete: false,
+        })
+      ]
+    }))).toMatchSnapshot();
+  });
+
+  it('should render a fallback for complete activities without an icon', () => {
+    expect(render(createComponent({
+      activities: [
+        fakeActivity({
+          icon: null,
+          isComplete: true,
+        })
+      ]
+    }))).toMatchSnapshot();
   });
 
   it('should call onActivityPress when a activity is pressed', () => {
