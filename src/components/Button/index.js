@@ -1,31 +1,30 @@
 import React, { PropTypes } from 'react';
 import { TouchableNativeFeedback, View } from 'react-native';
 import Text from 'src/components/Text';
-import styles from './styles';
+import styles, { themes, layouts } from './styles';
 
-
-const THEME_DEFAULT = 'Default';
-const THEME_WHITE = 'White';
 
 const Button = ({
-  theme = THEME_DEFAULT,
-  label = '',
+  theme = themes.default,
+  layout = layouts.default,
+  label,
   disabled,
   onPress,
 }) => {
   let button = (
     <View
       style={[
-        styles.button,
-        styles[`button${theme}`],
-        disabled && styles.buttonDisabled,
+        styles.container,
+        theme.container,
+        layout,
+        disabled && theme.containerIsDisabled,
       ]}
     >
       <Text
         style={[
-          styles.label,
-          styles[`label${theme}`],
-          disabled && styles.labelDisabled,
+          styles.title,
+          theme.title,
+          disabled && theme.titleIsDisabled,
         ]}
       >
         {label.toUpperCase()}
@@ -41,12 +40,19 @@ const Button = ({
   }
   return button;
 };
-Button.DefaultTheme = THEME_DEFAULT;
-Button.WhiteTheme = THEME_WHITE;
+
+
+Button.themes = themes;
+Button.layouts = layouts;
+
+
 Button.propTypes = {
   label: PropTypes.string.isRequired,
   onPress: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
-  theme: PropTypes.oneOf([THEME_DEFAULT, THEME_WHITE]),
+  theme: PropTypes.any,
+  layout: PropTypes.any,
 };
+
+
 export default Button;
