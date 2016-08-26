@@ -7,7 +7,7 @@ import styles, { themes, layouts } from './styles';
 const Button = ({
   theme = themes.default,
   layout = layouts.default,
-  label,
+  children,
   disabled,
   onPress,
 }) => {
@@ -27,7 +27,7 @@ const Button = ({
           disabled && theme.titleIsDisabled,
         ]}
       >
-        {label.toUpperCase()}
+        {children}
       </Text>
     </View>
   );
@@ -47,7 +47,7 @@ Button.layouts = layouts;
 
 
 Button.propTypes = {
-  label: PropTypes.string.isRequired,
+  children: PropTypes.any,
   onPress: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
   theme: PropTypes.any,

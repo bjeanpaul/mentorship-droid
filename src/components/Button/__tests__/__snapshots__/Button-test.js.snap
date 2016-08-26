@@ -45,9 +45,7 @@ exports[`Button should be disabled 1`] = `
           }
         ]
       ]
-    }>
-    MARGLE
-  </Text>
+    } />
 </View>
 `;
 
