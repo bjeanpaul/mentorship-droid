@@ -1,11 +1,18 @@
 import React, { PropTypes } from 'react';
 import { NavigationExperimental } from 'react-native';
 const { CardStack: NavigationCardStack } = NavigationExperimental;
+import NotFound from 'src/components/NotFound';
+import ROUTES_COMPONENTS from 'src/navigation/routes/components';
+
+
+const router = key => {
+  const Container = ROUTES_COMPONENTS[key] || NotFound;
+  return <Container />;
+};
 
 
 const NavigationStack = ({
   navigationState,
-  router,
 }) => (
   <NavigationCardStack
     navigationState={navigationState}
@@ -13,9 +20,10 @@ const NavigationStack = ({
   />
 );
 
+
 NavigationStack.propTypes = {
   navigationState: PropTypes.any.isRequired,
-  router: PropTypes.func.isRequired,
 };
+
 
 export default NavigationStack;
