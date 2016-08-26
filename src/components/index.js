@@ -11,6 +11,7 @@ import Icon from './Icon';
 import HeaderIcon from './HeaderIcon';
 import OverlayCompleted from './Overlay/Completed';
 import OverlayLoading from './Overlay/Loading';
+import ProgressBar from './ProgressBar';
 import Section from './Section';
 
 export {
@@ -28,5 +29,6 @@ export {
   HeaderIcon,
   OverlayCompleted,
   OverlayLoading,
+  ProgressBar,
   Section,
 };
