@@ -1,4 +1,3 @@
-
 import { pushRoute, popRoute } from 'src/navigation/actions';
 import * as constants from 'src/navigation/constants';
 

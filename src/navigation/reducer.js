@@ -11,7 +11,6 @@ const navigation = (state = {
     { key: constants.ROUTE_LANDING },
   ],
 }, action) => {
-  // some actions cause routes to transition.
   if (action.type in ROUTES_ACTIONS) {
     return navigation(state, ROUTES_ACTIONS[action.type]());
   }
