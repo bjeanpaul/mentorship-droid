@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { View, TouchableNativeFeedback } from 'react-native';
-import { BaseView, Header, Title, Text } from 'src/components';
+import { BaseView, Header, Text } from 'src/components';
 import styles from './styles';
 
 
@@ -9,8 +9,10 @@ const CategoryList = ({
   onCategoryPress,
 }) => (
   <BaseView>
-      <Header theme={Header.themes.dark}>
-        <Title theme={Title.themes.light}>Relationship Stages</Title>
+      <Header style={Header.themes.dark}>
+        <Text style={[Text.types.title, Text.themes.light]}>
+          Relationship Stages
+        </Text>
       </Header>
 
       <View style={styles.list}>
@@ -21,7 +23,7 @@ const CategoryList = ({
           onPress={() => onCategoryPress(id)}
         >
           <View style={[styles.category, { backgroundColor: color }]}>
-            <Text style={styles.categoryTitle}>{title}</Text>
+            <Text style={[styles.categoryTitle, Text.themes.light]}>{title}</Text>
           </View>
         </TouchableNativeFeedback>
         ))}

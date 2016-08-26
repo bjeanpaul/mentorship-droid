@@ -8,7 +8,6 @@ exports[`Header should render 1`] = `
         "paddingLeft": 16,
         "paddingRight": 16
       },
-      undefined,
       Object {}
     ]
   }>
@@ -29,6 +28,40 @@ exports[`Header should render 1`] = `
 </View>
 `;
 
+exports[`Header should support a dark theme 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 72,
+        "justifyContent": "center",
+        "paddingLeft": 16,
+        "paddingRight": 16
+      },
+      Object {
+        "backgroundColor": "#003035"
+      }
+    ]
+  }>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        Object {
+          "color": "#fff"
+        }
+      ]
+    }>
+    Header with theme
+  </Text>
+</View>
+`;
+
 exports[`Header should support style overriding 1`] = `
 <View
   style={
@@ -39,7 +72,6 @@ exports[`Header should support style overriding 1`] = `
         "paddingLeft": 16,
         "paddingRight": 16
       },
-      undefined,
       Object {
         "backgroundColor": "#cc3333"
       }
@@ -58,41 +90,6 @@ exports[`Header should support style overriding 1`] = `
       ]
     }>
     Header with style
-  </Text>
-</View>
-`;
-
-exports[`Header should support theming 1`] = `
-<View
-  style={
-    Array [
-      Object {
-        "height": 72,
-        "justifyContent": "center",
-        "paddingLeft": 16,
-        "paddingRight": 16
-      },
-      Object {
-        "backgroundColor": "#003035"
-      },
-      Object {}
-    ]
-  }>
-  <Text
-    style={
-      Array [
-        Object {
-          "color": "#003035",
-          "fontFamily": "Brandon Text",
-          "fontSize": 13,
-          "textAlign": "center"
-        },
-        Object {
-          "color": "#fff"
-        }
-      ]
-    }>
-    Header with theme
   </Text>
 </View>
 `;
