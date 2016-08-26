@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Text as RNText } from 'react-native';
-import styles, { types, STYLE_TRANSFORMS } from './styles';
+import styles, { types, themes, STYLE_TRANSFORMS } from './styles';
 import transform from './transform';
 
 
@@ -14,7 +14,7 @@ const Text = ({
   return (
     <RNText
       {...props}
-      style={[styles.text, style]}
+      style={[styles.default, style]}
     >
       {text}
     </RNText>
@@ -29,6 +29,7 @@ Text.propTypes = {
 
 
 Text.types = types;
+Text.themes = themes;
 
 
 export default Text;
