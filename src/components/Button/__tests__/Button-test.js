@@ -14,12 +14,32 @@ describe('Button', () => {
     )).toMatchSnapshot();
   });
 
-  it('should change style with `white` theme', () => {
+  it('should render "light" theme', () => {
     expect(render(
       <Button
         label="margle"
         onPress={foo}
-        theme={Button.WhiteTheme}
+        theme={Button.themes.light}
+      />
+    )).toMatchSnapshot();
+  });
+
+  it('should render "transparent" theme', () => {
+    expect(render(
+      <Button
+        label="margle"
+        onPress={foo}
+        theme={Button.themes.transparent}
+      />
+    )).toMatchSnapshot();
+  });
+
+  it('should render "inline" layout', () => {
+    expect(render(
+      <Button
+        label="margle"
+        onPress={foo}
+        layout={Button.layouts.inline}
       />
     )).toMatchSnapshot();
   });
