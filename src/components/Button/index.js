@@ -3,7 +3,6 @@ import { TouchableNativeFeedback, View } from 'react-native';
 import Text from 'src/components/Text';
 import styles, { themes, layouts } from './styles';
 
-
 const Button = ({
   theme = themes.default,
   layout = layouts.default,
