@@ -6,9 +6,8 @@ import styles, { themes } from './styles';
 export const Header = ({
   style = {},
   children = [],
-  theme = {},
 }) => (
-  <View style={[styles.header, theme.header, style]}>
+  <View style={[styles.default, style]}>
     {children}
   </View>
 );
