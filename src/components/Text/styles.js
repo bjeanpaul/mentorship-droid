@@ -1,6 +1,8 @@
 import { StyleSheet } from 'react-native';
-import { FONT } from 'src/constants/styles';
+
 import colors from 'src/constants/colors';
+import { FONT, FONT_WEIGHT } from 'src/constants/styles';
+
 
 export default StyleSheet.create({
   text: {
@@ -10,3 +12,27 @@ export default StyleSheet.create({
     textAlign: 'center',
   },
 });
+
+
+export const types = StyleSheet.create({
+  paragraph: {
+    textAlign: 'left',
+    fontSize: 18,
+    paddingTop: 18,
+    paddingBottom: 12,
+  },
+
+  sectionTitle: {
+    color: colors.SECTION_TITLE_TEXT,
+    fontSize: 12,
+    letterSpacing: 1,
+    textAlign: 'left',
+    fontFamily: FONT.BOLD,
+    fontWeight: FONT_WEIGHT.BOLD,
+  },
+});
+
+
+export const STYLE_TRANSFORMS = new Map([
+  [types.sectionTitle, 'uppercase'],
+]);

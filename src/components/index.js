@@ -12,6 +12,7 @@ import Icon from './Icon';
 import HeaderIcon from './HeaderIcon';
 import OverlayCompleted from './Overlay/Completed';
 import OverlayLoading from './Overlay/Loading';
+import Section from './Section';
 
 export {
   BaseView,
@@ -29,4 +30,5 @@ export {
   HeaderIcon,
   OverlayCompleted,
   OverlayLoading,
+  Section,
 };
