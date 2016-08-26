@@ -1,5 +1,5 @@
 exports[`CategoryActivityList should render 1`] = `
-<View>
+<ScrollView>
   <View
     style={
       Array [
@@ -52,11 +52,11 @@ exports[`CategoryActivityList should render 1`] = `
       TouchableNativeFeedback is not supported on this platform!
     </Text>
   </View>
-</View>
+</ScrollView>
 `;
 
 exports[`CategoryActivityList should render a fallback for complete activities without an icon 1`] = `
-<View>
+<ScrollView>
   <View
     style={
       Array [
@@ -83,11 +83,11 @@ exports[`CategoryActivityList should render a fallback for complete activities w
       TouchableNativeFeedback is not supported on this platform!
     </Text>
   </View>
-</View>
+</ScrollView>
 `;
 
 exports[`CategoryActivityList should render a fallback for incomplete activities without an icon 1`] = `
-<View>
+<ScrollView>
   <View
     style={
       Array [
@@ -114,11 +114,11 @@ exports[`CategoryActivityList should render a fallback for incomplete activities
       TouchableNativeFeedback is not supported on this platform!
     </Text>
   </View>
-</View>
+</ScrollView>
 `;
 
 exports[`CategoryActivityList should render complete activities 1`] = `
-<View>
+<ScrollView>
   <View
     style={
       Array [
@@ -145,11 +145,11 @@ exports[`CategoryActivityList should render complete activities 1`] = `
       TouchableNativeFeedback is not supported on this platform!
     </Text>
   </View>
-</View>
+</ScrollView>
 `;
 
 exports[`CategoryActivityList should render incomplete activities 1`] = `
-<View>
+<ScrollView>
   <View
     style={
       Array [
@@ -176,5 +176,5 @@ exports[`CategoryActivityList should render incomplete activities 1`] = `
       TouchableNativeFeedback is not supported on this platform!
     </Text>
   </View>
-</View>
+</ScrollView>
 `;

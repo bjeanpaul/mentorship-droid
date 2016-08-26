@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { View, Image, TouchableNativeFeedback } from 'react-native';
+import { View, Image, ScrollView, TouchableNativeFeedback } from 'react-native';
 import { Text } from 'src/components';
 import images from 'src/constants/images';
 import styles from './styles';
@@ -10,7 +10,7 @@ const CategoryActivityList = ({
   activities,
   onActivityPress,
 }) => (
-  <View>
+  <ScrollView>
     {activities.map(({ id, title, icon, isComplete }) => console.log(icon) || (
     <TouchableNativeFeedback
       key={id}
@@ -49,7 +49,7 @@ const CategoryActivityList = ({
       </View>
     </TouchableNativeFeedback>
     ))}
-  </View>
+  </ScrollView>
 );
 
 

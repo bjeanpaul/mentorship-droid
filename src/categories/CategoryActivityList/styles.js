@@ -18,7 +18,7 @@ export default StyleSheet.create({
     top: 24,
     position: 'absolute',
     justifyContent: 'center',
-    alignItem: 'center',
+    alignItems: 'center',
   },
   activityIcon: {
     width: 50,
