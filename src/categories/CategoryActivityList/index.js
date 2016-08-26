@@ -4,7 +4,7 @@ import { Text } from 'src/components';
 import styles from './styles';
 
 
-const ActivityActivityList = ({
+const CategoryActivityList = ({
   activities,
   onActivityPress,
 }) => (
@@ -24,10 +24,10 @@ const ActivityActivityList = ({
 );
 
 
-ActivityActivityList.propTypes = {
+CategoryActivityList.propTypes = {
   onActivityPress: PropTypes.func.isRequired,
   activities: PropTypes.array.isRequired,
 };
 
 
-export default ActivityActivityList;
+export default CategoryActivityList;
