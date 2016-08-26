@@ -18,33 +18,7 @@ const CategoryActivityList = ({
       onPress={() => onActivityPress(id)}
     >
       <View style={styles.activity}>
-        <View
-          style={[
-            styles.activityIconContainer,
-            isComplete
-              ? { backgroundColor: color }
-              : styles.activityIconContainerIsIncomplete,
-          ]}
-        >
-          <Image
-            source={
-              icon
-                ? { uri: icon }
-                : images.ACTIVITY_ICON_FALLBACK
-            }
-            style={styles.activityIcon}
-          />
-        </View>
-
-        {
-          isComplete
-            ? <Image
-                style={styles.activityCompleteAnnotation}
-                source={images.ACTIVITY_COMPLETE_ANNOTATION}
-              />
-            : null
-        }
-
+        <CategoryActivityIcon icon={icon} color={color} isComplete={isComplete} />
         <Text numberOfLines={3} style={styles.activityTitle}>{title}</Text>
       </View>
     </TouchableNativeFeedback>
@@ -53,10 +27,53 @@ const CategoryActivityList = ({
 );
 
 
+const CategoryActivityIcon = ({
+  icon,
+  color,
+  isComplete,
+}) => (
+  <View style={styles.activityIconContainer}>
+    <View
+      style={[
+        styles.activityIcon,
+        isComplete
+          ? { backgroundColor: color }
+          : styles.activityIconIsIncomplete,
+      ]}
+    >
+      <Image
+        source={
+          icon
+            ? { uri: icon }
+            : images.ACTIVITY_ICON_FALLBACK
+        }
+        style={styles.activityIconImage}
+      />
+    </View>
+
+    {
+      isComplete
+        ? <Image
+          style={styles.activityCompleteAnnotation}
+          source={images.ACTIVITY_COMPLETE_ANNOTATION}
+        />
+        : null
+    }
+  </View>
+);
+
+
 CategoryActivityList.propTypes = {
   category: PropTypes.object.isRequired,
   activities: PropTypes.array.isRequired,
   onActivityPress: PropTypes.func.isRequired,
+};
+
+
+CategoryActivityIcon.propTypes = {
+  icon: PropTypes.string,
+  color: PropTypes.string.isRequired,
+  isComplete: PropTypes.bool.isRequired,
 };
 
 
