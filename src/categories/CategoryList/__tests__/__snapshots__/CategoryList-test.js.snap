@@ -20,8 +20,7 @@ exports[`CategoryList should render 1`] = `
         },
         Object {
           "backgroundColor": "#003035"
-        },
-        Object {}
+        }
       ]
     }>
     <Text
@@ -41,8 +40,7 @@ exports[`CategoryList should render 1`] = `
             },
             Object {
               "color": "#fff"
-            },
-            Object {}
+            }
           ]
         ]
       }>

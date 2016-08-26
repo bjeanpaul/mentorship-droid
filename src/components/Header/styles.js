@@ -4,7 +4,7 @@ import colors from 'src/constants/colors';
 
 
 export default StyleSheet.create({
-  header: {
+  default: {
     paddingLeft: 16,
     paddingRight: 16,
     height: 72,
@@ -13,10 +13,8 @@ export default StyleSheet.create({
 });
 
 
-export const themes = {
-  dark: StyleSheet.create({
-    header: {
-      backgroundColor: colors.BG_DARK,
-    },
-  }),
-};
+export const themes = StyleSheet.create({
+  dark: {
+    backgroundColor: colors.BG_DARK,
+  },
+});

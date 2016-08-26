@@ -18,7 +18,6 @@ exports[`Category should render 1`] = `
           "paddingLeft": 16,
           "paddingRight": 16
         },
-        undefined,
         Array [
           Object {
             "height": 64
@@ -65,13 +64,13 @@ exports[`Category should render 1`] = `
             },
             Object {
               "color": "#fff"
-            },
-            Object {}
+            }
           ]
         ]
       }>
       Level
     </Text>
+    >
   </View>
   <View
     style={
@@ -292,7 +291,6 @@ exports[`Category should render the currently active tab 1`] = `
           "paddingLeft": 16,
           "paddingRight": 16
         },
-        undefined,
         Array [
           Object {
             "height": 64
@@ -339,13 +337,13 @@ exports[`Category should render the currently active tab 1`] = `
             },
             Object {
               "color": "#fff"
-            },
-            Object {}
+            }
           ]
         ]
       }>
       Level
     </Text>
+    >
   </View>
   <View
     style={
@@ -566,7 +564,6 @@ exports[`Category should render the currently active tab 2`] = `
           "paddingLeft": 16,
           "paddingRight": 16
         },
-        undefined,
         Array [
           Object {
             "height": 64
@@ -613,13 +610,13 @@ exports[`Category should render the currently active tab 2`] = `
             },
             Object {
               "color": "#fff"
-            },
-            Object {}
+            }
           ]
         ]
       }>
       Level
     </Text>
+    >
   </View>
   <View
     style={

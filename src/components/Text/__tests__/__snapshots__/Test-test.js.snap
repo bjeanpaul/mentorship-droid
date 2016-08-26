@@ -60,3 +60,50 @@ exports[`Text should render section titles 1`] = `
   THIS IS A SECTION TITLE. LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNTUT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.
 </Text>
 `;
+
+exports[`Text should render titles 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#003035",
+        "fontFamily": "Brandon Text",
+        "fontSize": 13,
+        "textAlign": "center"
+      },
+      Object {
+        "fontFamily": "Brandon Text_medium",
+        "fontSize": 20,
+        "fontWeight": "400"
+      }
+    ]
+  }>
+  This is a section title. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</Text>
+`;
+
+exports[`Text should support a light theme 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#000"
+    }
+  }>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        Object {
+          "color": "#fff"
+        }
+      ]
+    }>
+    Title with theme
+  </Text>
+</View>
+`;

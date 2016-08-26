@@ -5,7 +5,7 @@ import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 
 
 export default StyleSheet.create({
-  text: {
+  default: {
     color: colors.DEFAULT_TEXT,
     fontFamily: FONT.REGULAR,
     fontSize: 13,
@@ -15,6 +15,12 @@ export default StyleSheet.create({
 
 
 export const types = StyleSheet.create({
+  title: {
+    fontSize: 20,
+    fontFamily: FONT.MEDIUM,
+    fontWeight: FONT_WEIGHT.MEDIUM,
+  },
+
   paragraph: {
     textAlign: 'left',
     fontSize: 18,
@@ -29,6 +35,13 @@ export const types = StyleSheet.create({
     textAlign: 'left',
     fontFamily: FONT.BOLD,
     fontWeight: FONT_WEIGHT.BOLD,
+  },
+});
+
+
+export const themes = StyleSheet.create({
+  light: {
+    color: colors.TEXT_LIGHT,
   },
 });
 
