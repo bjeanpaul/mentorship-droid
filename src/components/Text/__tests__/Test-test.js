@@ -1,4 +1,5 @@
 import React from 'react';
+import { View } from 'react-native';
 import { Text } from 'src/components';
 
 
@@ -33,6 +34,14 @@ describe('Text', () => {
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
         ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </Text>
+    )).toMatchSnapshot();
+  });
+
+  it('should support a light theme', () => {
+    expect(render(
+      <View style={{ backgroundColor: '#000' }}>
+        <Text style={Text.themes.light}>Title with theme</Text>
+      </View>
     )).toMatchSnapshot();
   });
 });
