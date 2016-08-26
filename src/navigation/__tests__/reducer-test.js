@@ -1,19 +1,14 @@
-
-import {
-  pushAuthRoute,
-  popAuthRoute,
-} from 'src/navigation/auth/actions';
-
-import * as constants from 'src/navigation/auth/constants';
-import authReducer from 'src/navigation/auth/reducer';
+import { pushRoute, popRoute } from 'src/navigation/actions';
+import * as constants from 'src/navigation/constants';
+import reduce from 'src/navigation/reducer';
 
 
-describe('navigation/auth/reducer', () => {
-  it('should have landing as the first route', () => {
-    expect(authReducer(void 0, { type: 'ping?' })).toEqual({
+describe('navigation/reducer', () => {
+  it('should have `ROUTE_LANDING` as the first default route', () => {
+    expect(reduce(void 0, { type: 'ping?' })).toEqual({
       index: 0,
       routes: [
-        { key: constants.AUTH_ROUTE_LANDING },
+        { key: constants.ROUTE_LANDING },
       ],
     });
   });
@@ -26,7 +21,7 @@ describe('navigation/auth/reducer', () => {
       ],
     };
 
-    expect(authReducer(state, pushAuthRoute('Pong!')))
+    expect(reduce(state, pushRoute('Pong!')))
     .toEqual({
       index: 1,
       routes: [
@@ -44,7 +39,7 @@ describe('navigation/auth/reducer', () => {
         { key: 'Pong!' },
       ],
     };
-    expect(authReducer(state, popAuthRoute()))
+    expect(reduce(state, popRoute()))
     .toEqual({
       index: 0,
       routes: [

@@ -1,23 +1,30 @@
+import { noop } from 'lodash';
 import React, { PropTypes } from 'react';
-
-import { BaseView, Toolbar, Text } from 'src/components';
+import { BaseView, Toolbar, Link } from 'src/components';
 
 import LoginForm from './LoginForm';
+import LoginStatusMessage from './LoginStatusMessage';
 
 
-const Login = (props) => (
+const Activation = ({
+  status,
+  ...props,
+}) => (
   <BaseView>
-    <Toolbar title="Account Activation" />
+    <Toolbar title="Activate Account" />
     <LoginForm
       {...props}
       buttonLabel="Activate"
     />
-    <Text>{props.errorMessage}</Text>
+    <LoginStatusMessage {...status} />
+
+    {/* TODO */}
+    <Link onPress={noop}>Forgot your password?</Link>
   </BaseView>
 );
-Login.propTypes = {
-  isLoading: PropTypes.bool,
-  errorMessage: PropTypes.string,
+
+Activation.propTypes = {
+  status: PropTypes.object,
 };
 
-export default Login;
+export default Activation;

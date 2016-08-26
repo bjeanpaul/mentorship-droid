@@ -41,11 +41,12 @@ class LoginForm extends React.Component {
     );
   }
 }
+
 LoginForm.propTypes = {
-  initialUsername: PropTypes.string,
-  initialPassword: PropTypes.string,
   buttonLabel: PropTypes.string.isRequired,
   onLoginPress: PropTypes.func.isRequired,
+  initialUsername: PropTypes.string,
+  initialPassword: PropTypes.string,
 };
 
 export default LoginForm;

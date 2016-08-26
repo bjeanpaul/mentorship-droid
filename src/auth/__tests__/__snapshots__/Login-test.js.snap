@@ -19,14 +19,21 @@ exports[`auth/Login should draw error statuses 1`] = `
       }
     }>
     <Image
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function bound touchableHandleResponderGrant]}
+      onResponderMove={[Function bound touchableHandleResponderMove]}
+      onResponderRelease={[Function bound touchableHandleResponderRelease]}
+      onResponderTerminate={[Function bound touchableHandleResponderTerminate]}
+      onResponderTerminationRequest={[Function bound touchableHandleResponderTerminationRequest]}
+      onStartShouldSetResponder={[Function bound touchableHandleStartShouldSetResponder]}
       source={1}
-      style={
-        Object {
-          "height": 24,
-          "position": "absolute",
-          "width": 24
-        }
-      } />
+      style={undefined}
+      testID={undefined} />
     <Text
       style={
         Array [
@@ -203,28 +210,7 @@ exports[`auth/Login should draw error statuses 1`] = `
         undefined
       ]
     }>
-    Sorry, we seem to have an issue on our side. We've been notified of the problem and will look into it as soon as possible.
-  </Text>
-  <Text
-    onPress={[Function noop]}
-    style={
-      Array [
-        Object {
-          "color": "#003035",
-          "fontFamily": "Brandon Text",
-          "fontSize": 13,
-          "textAlign": "center"
-        },
-        Array [
-          Object {
-            "color": "#f77040",
-            "fontSize": 14
-          },
-          undefined
-        ]
-      ]
-    }>
-    Forgot your password?
+    Sorry, we seem to have an issue on our side. We\'ve been notified of the problem and will look into it as soon as possible.
   </Text>
 </View>
 `;
@@ -250,14 +236,21 @@ exports[`auth/Login should draw not found statuses 1`] = `
       }
     }>
     <Image
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function bound touchableHandleResponderGrant]}
+      onResponderMove={[Function bound touchableHandleResponderMove]}
+      onResponderRelease={[Function bound touchableHandleResponderRelease]}
+      onResponderTerminate={[Function bound touchableHandleResponderTerminate]}
+      onResponderTerminationRequest={[Function bound touchableHandleResponderTerminationRequest]}
+      onStartShouldSetResponder={[Function bound touchableHandleStartShouldSetResponder]}
       source={1}
-      style={
-        Object {
-          "height": 24,
-          "position": "absolute",
-          "width": 24
-        }
-      } />
+      style={undefined}
+      testID={undefined} />
     <Text
       style={
         Array [
@@ -434,28 +427,7 @@ exports[`auth/Login should draw not found statuses 1`] = `
         undefined
       ]
     }>
-    Sorry, we couldn't find an account with that username and password combination.
-  </Text>
-  <Text
-    onPress={[Function noop]}
-    style={
-      Array [
-        Object {
-          "color": "#003035",
-          "fontFamily": "Brandon Text",
-          "fontSize": 13,
-          "textAlign": "center"
-        },
-        Array [
-          Object {
-            "color": "#f77040",
-            "fontSize": 14
-          },
-          undefined
-        ]
-      ]
-    }>
-    Forgot your password?
+    Sorry, we couldn\'t find an account with that username and password combination.
   </Text>
 </View>
 `;
