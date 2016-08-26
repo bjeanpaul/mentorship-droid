@@ -3,23 +3,13 @@ import colors from 'src/constants/colors';
 import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 
 export default StyleSheet.create({
-  button: {
+  container: {
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 5,
-    marginLeft: 16,
-    marginRight: 16,
   },
-  buttonDefault: {
-    backgroundColor: colors.BUTTON_BG,
-  },
-  buttonWhite: {
-    backgroundColor: colors.BUTTON_ALT_BG,
-  },
-  buttonDisabled: {
-    backgroundColor: colors.BUTTON_DISABLED_BG,
-  },
-  label: {
+
+  title: {
     fontFamily: FONT.BOLD,
     fontWeight: FONT_WEIGHT.BOLD,
     fontSize: 13,
@@ -27,13 +17,72 @@ export default StyleSheet.create({
     marginTop: 15,
     marginBottom: 17,
   },
-  labelDefault: {
-    color: colors.BUTTON_LABEL,
+
+
+});
+
+
+export const layouts = StyleSheet.create({
+  default: {
+    marginLeft: 16,
+    marginRight: 16,
   },
-  labelWhite: {
-    color: colors.BUTTON_ALT_LABEL,
-  },
-  labelDisabled: {
-    color: colors.BUTTON_DISABLED_LABEL,
+
+  inline: {
+    marginLeft: 0,
+    marginRight: 0,
   },
 });
+
+
+export const themes = {
+  default: StyleSheet.create({
+    container: {
+      backgroundColor: colors.BUTTON_BG,
+    },
+
+    title: {
+      color: colors.BUTTON_TITLE,
+    },
+
+    containerIsDisabled: {
+      backgroundColor: colors.BUTTON_DISABLED_BG,
+    },
+
+    titleIsDisabled: {
+      color: colors.BUTTON_DISABLED_TITLE,
+    },
+  }),
+
+
+  light: StyleSheet.create({
+    container: {
+      backgroundColor: colors.BUTTON_LIGHT_BG,
+    },
+
+    title: {
+      color: colors.BUTTON_LIGHT_TITLE,
+    },
+
+    containerIsDisabled: {
+      backgroundColor: colors.BUTTON_DISABLED_BG,
+    },
+
+    titleIsDisabled: {
+      color: colors.BUTTON_DISABLED_TITLE,
+    },
+  }),
+
+
+  transparent: StyleSheet.create({
+    container: {
+      backgroundColor: colors.BUTTON_TRANSPARENT_BG,
+      borderColor: colors.BUTTON_TRANSPARENT_BORDER,
+      borderWidth: 1,
+    },
+
+    title: {
+      color: colors.BUTTON_TRANSPARENT_TITLE,
+    },
+  }),
+};

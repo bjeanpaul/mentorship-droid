@@ -10,6 +10,16 @@ export const capture = async (fn, ...xargs) => {
 };
 
 
+export const mock = () => {
+  const __id = uniqueId();
+
+  return (...args) => ({
+    __id,
+    args,
+  });
+};
+
+
 export const fakeAuth = () => ({
   email: 'a@b.org',
   password: '1337',
@@ -21,20 +31,21 @@ export const fakeContext = () => ({
 });
 
 
+export const fakeCategory = (data) => ({
+  id: 1,
+  title: 'Level',
+  color: '#97c13c',
+  about: 'touba',
+  goal: 'laog',
+  image: null,
+  ...data,
+});
+
+
 export const fakeStore = {
   subscribe: () => {},
   dispatch: () => {},
   getState: () => {},
-};
-
-
-export const mock = () => {
-  const __id = uniqueId();
-
-  return (...args) => ({
-    __id,
-    args,
-  });
 };
 
 
