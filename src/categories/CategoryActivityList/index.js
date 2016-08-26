@@ -18,19 +18,23 @@ const CategoryActivityList = ({
       onPress={() => onActivityPress(id)}
     >
       <View style={styles.activity}>
-        <Image
-          source={
-            icon
-              ? { uri: icon }
-              : images.ACTIVITY_ICON_FALLBACK
-          }
+        <View
           style={[
-            styles.activityIcon,
+            styles.activityIconContainer,
             isComplete
               ? { backgroundColor: color }
-              : styles.activityIconIsIncomplete,
+              : styles.activityIconContainerIsIncomplete,
           ]}
-        />
+        >
+          <Image
+            source={
+              icon
+                ? { uri: icon }
+                : images.ACTIVITY_ICON_FALLBACK
+            }
+            style={styles.activityIcon}
+          />
+        </View>
 
         {
           isComplete

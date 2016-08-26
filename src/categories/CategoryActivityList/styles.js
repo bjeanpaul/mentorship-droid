@@ -11,15 +11,20 @@ export default StyleSheet.create({
     borderBottomColor: colors.CATEGORY_ACTIVITY_LIST_ITEM_BORDER,
     alignItems: 'flex-start',
   },
-  activityIcon: {
+  activityIconContainer: {
     width: 72,
     height: 72,
     borderRadius: 72,
     top: 24,
-    overlayColor: colors.DEFAULT_BG,
     position: 'absolute',
+    justifyContent: 'center',
+    alignItem: 'center',
   },
-  activityIconIsIncomplete: {
+  activityIcon: {
+    width: 50,
+    height: 50,
+  },
+  activityIconContainerIsIncomplete: {
     backgroundColor: colors.CATEGORY_ACTIVITY_LIST_ICON_INCOMPLETE,
   },
   activityCompleteAnnotation: {
