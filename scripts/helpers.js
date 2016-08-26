@@ -10,17 +10,6 @@ export const capture = async (fn, ...xargs) => {
 };
 
 
-export const fakeAuth = () => ({
-  email: 'a@b.org',
-  password: '1337',
-});
-
-
-export const fakeContext = () => ({
-  auth: fakeAuth()
-});
-
-
 export const mock = () => {
   const __id = uniqueId();
 
@@ -29,6 +18,28 @@ export const mock = () => {
     args,
   });
 };
+
+
+export const fakeAuth = () => ({
+  email: 'a@b.org',
+  password: '1337',
+});
+
+
+export const fakeContext = () => ({
+  auth: fakeAuth(),
+});
+
+
+export const fakeCategory = (data) => ({
+  id: 1,
+  title: 'Level',
+  color: '#97c13c',
+  about: 'touba',
+  goal: 'laog',
+  image: null,
+  ...data,
+});
 
 
 export const fakeProfileData = (data = { id: 23 }) => (
