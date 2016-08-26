@@ -10,8 +10,7 @@ exports[`HeaderIcon should render 1`] = `
       },
       Object {
         "backgroundColor": "#003035"
-      },
-      Object {}
+      }
     ]
   }>
   <Image
@@ -46,8 +45,7 @@ exports[`HeaderIcon should support style overriding 1`] = `
       },
       Object {
         "backgroundColor": "#003035"
-      },
-      Object {}
+      }
     ]
   }>
   <Image

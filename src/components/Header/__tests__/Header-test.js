@@ -19,9 +19,9 @@ describe('Header', () => {
     )).toMatchSnapshot();
   });
 
-  it('should support theming', () => {
+  it('should support a dark theme', () => {
     expect(render(
-      <Header theme={Header.themes.dark}>
+      <Header style={Header.themes.dark}>
         <Text style={{ color: '#fff' }}>Header with theme</Text>
       </Header>
     )).toMatchSnapshot();
