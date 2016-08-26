@@ -2,7 +2,6 @@ import { listProfiles, ApiAuthenticationError, ApiResponseError } from 'src/api'
 import { switchError } from 'src/helpers';
 import { staticAction, dataAction } from 'src/actionHelpers';
 import * as constants from 'src/auth/constants';
-import { pushWelcomeRoute } from 'src/navigation/actions';
 
 
 export const loginRequest = staticAction(constants.AUTH_LOGIN_REQUEST);
@@ -13,8 +12,6 @@ export const loginNotFound = staticAction(constants.AUTH_LOGIN_NOT_FOUND);
 
 export const loginDone = (data, dispatch) => Promise.resolve(data)
   .then(loginSuccess)
-  .then(dispatch)
-  .then(pushWelcomeRoute)
   .then(dispatch);
 
 

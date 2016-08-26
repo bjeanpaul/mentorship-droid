@@ -1,12 +1,7 @@
 import * as constants from 'src/profile/constants';
 import * as statuses from 'src/profile/statuses';
 
-import { getProfileId } from 'src/auth/reducer';
-
-
 export const getProfile = (state, profileId) => state.entities.profiles[profileId];
-export const getProfileName = (state) => getProfile(state, getProfileId(state)).first_name;
-
 
 const profile = (
   state = {

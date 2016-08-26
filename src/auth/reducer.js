@@ -2,7 +2,12 @@ import * as constants from 'src/auth/constants';
 import * as statuses from 'src/auth/statuses';
 
 
-export const getProfileId = state => state.auth.profileId;
+export const getProfileId = state => {
+  if (!state.auth.profileId) {
+    throw new Error('all logged in users should have an assigned profileId');
+  }
+  return state.auth.profileId;
+};
 
 
 const authReducer = (state = {

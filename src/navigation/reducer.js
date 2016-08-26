@@ -1,6 +1,8 @@
 import { NavigationExperimental } from 'react-native';
 const { StateUtils: NavigationStateUtils } = NavigationExperimental;
-import * as constants from './constants';
+
+import * as constants from 'src/navigation/constants';
+import ROUTES_ACTIONS from 'src/navigation/routes/actions';
 
 
 const navigation = (state = {
@@ -9,11 +11,12 @@ const navigation = (state = {
     { key: constants.ROUTE_LANDING },
   ],
 }, action) => {
+  if (action.type in ROUTES_ACTIONS) {
+    return navigation(state, ROUTES_ACTIONS[action.type]());
+  }
+
+
   switch (action.type) {
-
-    case constants.NAVIGATION_REPLACE:
-      return NavigationStateUtils.replace(state, action.payload);
-
     case constants.NAVIGATION_PUSH:
       if (!NavigationStateUtils.has(state, action.payload.key)) {
         return NavigationStateUtils.push(state, action.payload);
@@ -27,5 +30,6 @@ const navigation = (state = {
       return state;
   }
 };
+
 
 export default navigation;
