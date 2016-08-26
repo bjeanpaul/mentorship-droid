@@ -9,7 +9,7 @@ const Icon = ({
   type,
   style = {},
 }) => (
-  <Image source={type} style={[styles.icon, style]} />
+  <Image source={type} style={[styles.default, style]} />
 );
 
 
