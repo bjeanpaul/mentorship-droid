@@ -84,5 +84,13 @@ export const themes = {
     title: {
       color: colors.BUTTON_TRANSPARENT_TITLE,
     },
+
+    containerIsDisabled: {
+      borderColor: colors.BUTTON_TRANSPARENT_DISABLED_BORDER,
+    },
+
+    titleIsDisabled: {
+      color: colors.BUTTON_TRANSPARENT_DISABLED_TITLE,
+    },
   }),
 };

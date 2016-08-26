@@ -32,5 +32,5 @@ export {
   OverlayLoading,
   ProgressBar,
   Section,
-  Pagination
+  Pagination,
 };

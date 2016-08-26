@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Image, TouchableWithoutFeedback } from 'react-native';
 
-import { BaseView, Toolbar, Text, Pagination } from 'src/components';
+import { BaseView, Toolbar, Text } from 'src/components';
 import images from 'src/constants/images';
 import styles from './styles';
 
@@ -24,10 +24,6 @@ const ProfilePicture = ({
         <Text style={styles.imageLabel}>Choose Photo</Text>
         </View>
       </TouchableWithoutFeedback>
-      <Pagination
-        onBackPress={() => console.log('12312312')}
-        onNextPress={() => console.log('12312312')}
-      />
   </BaseView>
 );
 ProfilePicture.propTypes = {

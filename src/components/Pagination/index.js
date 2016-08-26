@@ -9,17 +9,18 @@ const Pagination = ({
   onNextPress,
   disabled,
 }) => (
-  <View style={{
-    flexDirection: 'row',
-    justifyContent: 'space-around'
-  }}>
+  <View style={styles.container}>
     <Button
+      theme={Button.themes.transparent}
+      layout={[Button.layouts.inline, styles.backButtonLayout]}
       onPress={onBackPress}
       label="BACK"
     />
     <Button
-      disabled={disabled}
+      theme={Button.themes.transparent}
+      layout={[Button.layouts.inline, styles.nextButtonLayout]}
       onPress={onNextPress}
+      disabled={disabled}
       label="NEXT"
     />
   </View>
