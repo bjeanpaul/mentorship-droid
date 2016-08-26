@@ -10,6 +10,11 @@ export const loginFailure = staticAction(constants.AUTH_LOGIN_FAILURE);
 export const loginNotFound = staticAction(constants.AUTH_LOGIN_NOT_FOUND);
 
 
+export const loginDone = (data, dispatch) => Promise.resolve(data)
+  .then(loginSuccess)
+  .then(dispatch);
+
+
 export const login = (email, password) => dispatch => Promise.resolve()
   .then(loginRequest)
   .then(dispatch)
@@ -26,7 +31,7 @@ export const login = (email, password) => dispatch => Promise.resolve()
       password,
     },
   }))
-  .then(loginSuccess, switchError([
+  .then(d => loginDone(d, dispatch), switchError([
     [ApiAuthenticationError, loginNotFound],
     [ApiResponseError, loginFailure],
   ]))

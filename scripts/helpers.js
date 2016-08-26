@@ -17,8 +17,15 @@ export const fakeAuth = () => ({
 
 
 export const fakeContext = () => ({
-  auth: fakeAuth()
+  auth: fakeAuth(),
 });
+
+
+export const fakeStore = {
+  subscribe: () => {},
+  dispatch: () => {},
+  getState: () => {},
+};
 
 
 export const mock = () => {

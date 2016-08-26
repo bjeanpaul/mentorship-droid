@@ -6,17 +6,16 @@ let production;
 let development;
 
 try {
-  production = require('src/config/production');
+  production = require('src/config/production').default;
 } catch (e) {
   production = {};
 }
 
 try {
-  development = require('src/config/development');
+  development = require('src/config/development').default;
 } catch (e) {
   development = {};
 }
-
 
 export default {
   ...base,
