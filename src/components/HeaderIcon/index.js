@@ -8,7 +8,7 @@ const HeaderIcon = ({
   type,
   style = {},
 }) => (
-  <Icon type={type} style={[styles.icon, style]} />
+  <Icon type={type} style={[styles.default, style]} />
 );
 
 
