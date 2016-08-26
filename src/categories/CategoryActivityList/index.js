@@ -11,7 +11,7 @@ const CategoryActivityList = ({
   onActivityPress,
 }) => (
   <ScrollView>
-    {activities.map(({ id, title, icon, isComplete }) => console.log(icon) || (
+    {activities.map(({ id, title, icon, isComplete }) => (
     <TouchableNativeFeedback
       key={id}
       activityId={id}
