@@ -3,6 +3,7 @@ import PROFILE_FACE from 'app/assets/Profile.png';
 import PROFILE_FACE_ADD from 'app/assets/Profile_Add.png';
 import BACK_LIGHT from 'app/assets/back-light.png';
 import ACTIVITY_ICON_FALLBACK from 'app/assets/activity-icon-fallback.png';
+import ACTIVITY_COMPLETE_ANNOTATION from 'app/assets/done.png';
 
 
 export default {
@@ -11,4 +12,5 @@ export default {
   PROFILE_FACE_ADD,
   BACK_LIGHT,
   ACTIVITY_ICON_FALLBACK,
+  ACTIVITY_COMPLETE_ANNOTATION,
 };

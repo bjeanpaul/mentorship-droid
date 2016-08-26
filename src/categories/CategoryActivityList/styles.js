@@ -22,6 +22,13 @@ export default StyleSheet.create({
   activityIconIsIncomplete: {
     backgroundColor: colors.CATEGORY_ACTIVITY_LIST_ICON_INCOMPLETE,
   },
+  activityCompleteAnnotation: {
+    position: 'absolute',
+    width: 24,
+    height: 24,
+    top: 20,
+    left: 68,
+  },
   activityTitle: {
     fontSize: 18,
     textAlign: 'left',

@@ -11,7 +11,7 @@ const CategoryActivityList = ({
   onActivityPress,
 }) => (
   <View>
-    {activities.map(({ id, title, icon, isComplete }) => (
+    {activities.map(({ id, title, icon, isComplete }) => console.log(icon) || (
     <TouchableNativeFeedback
       key={id}
       activityId={id}
@@ -32,12 +32,16 @@ const CategoryActivityList = ({
           ]}
         />
 
-      <Text
-        numberOfLines={3}
-        style={styles.activityTitle}
-      >
-      {title}
-    </Text>
+        {
+          isComplete
+            ? <Image
+                style={styles.activityCompleteAnnotation}
+                source={images.ACTIVITY_COMPLETE_ANNOTATION}
+              />
+            : null
+        }
+
+        <Text numberOfLines={3} style={styles.activityTitle}>{title}</Text>
       </View>
     </TouchableNativeFeedback>
     ))}
