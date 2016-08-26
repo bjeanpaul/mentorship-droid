@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { View, TouchableNativeFeedback } from 'react-native';
 
-import { BaseView, Header, HeaderIcon, Title, Text } from 'src/components';
+import { BaseView, Header, HeaderIcon, Text } from 'src/components';
 import CategoryActivityList from 'src/categories/CategoryActivityList';
 import CategoryAbout from 'src/categories/CategoryAbout';
 import styles from './styles';
@@ -40,7 +40,7 @@ class Category extends Component {
       <BaseView>
         <Header style={[styles.header, { backgroundColor: color }]}>
           <HeaderIcon type={HeaderIcon.types.backLight} style={styles.back} />
-          <Title theme={Title.themes.light}>{title}</Title>
+          <Text style={[Text.types.title, Text.themes.light]}>{title}</Text>>
         </Header>
 
         <View style={[styles.tabGroup, { backgroundColor: color }]}>
