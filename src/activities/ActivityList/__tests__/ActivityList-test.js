@@ -1,13 +1,13 @@
 import React from 'react';
 import { noop } from 'lodash';
-import CategoryActivityList from 'src/categories/CategoryActivityList';
+import ActivityList from 'src/activities/ActivityList';
 import { fakeCategory, fakeActivity, TEST_ICON } from 'app/scripts/helpers';
 
 
-describe('CategoryActivityList', () => {
+describe('ActivityList', () => {
   function createComponent(props = {}) {
     return (
-      <CategoryActivityList
+      <ActivityList
         onActivityPress={noop}
         category={fakeCategory()}
         activities={[{

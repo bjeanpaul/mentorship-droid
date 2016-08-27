@@ -1,4 +1,4 @@
-exports[`CategoryActivityList should render 1`] = `
+exports[`ActivityList should render 1`] = `
 <ScrollView>
   <View
     style={
@@ -55,7 +55,7 @@ exports[`CategoryActivityList should render 1`] = `
 </ScrollView>
 `;
 
-exports[`CategoryActivityList should render a fallback for complete activities without an icon 1`] = `
+exports[`ActivityList should render a fallback for complete activities without an icon 1`] = `
 <ScrollView>
   <View
     style={
@@ -86,7 +86,7 @@ exports[`CategoryActivityList should render a fallback for complete activities w
 </ScrollView>
 `;
 
-exports[`CategoryActivityList should render a fallback for incomplete activities without an icon 1`] = `
+exports[`ActivityList should render a fallback for incomplete activities without an icon 1`] = `
 <ScrollView>
   <View
     style={
@@ -117,7 +117,7 @@ exports[`CategoryActivityList should render a fallback for incomplete activities
 </ScrollView>
 `;
 
-exports[`CategoryActivityList should render complete activities 1`] = `
+exports[`ActivityList should render complete activities 1`] = `
 <ScrollView>
   <View
     style={
@@ -148,7 +148,7 @@ exports[`CategoryActivityList should render complete activities 1`] = `
 </ScrollView>
 `;
 
-exports[`CategoryActivityList should render incomplete activities 1`] = `
+exports[`ActivityList should render incomplete activities 1`] = `
 <ScrollView>
   <View
     style={

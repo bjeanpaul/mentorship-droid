@@ -1,5 +1,5 @@
 import React from 'react';
-import Category, { TAB_ACTIVITIES, TAB_ABOUT } from 'src/categories/Category';
+import Category, { TAB_ACTIVITIES, TAB_ABOUT } from 'src/activities/Category';
 import { fakeCategory } from 'app/scripts/helpers';
 
 

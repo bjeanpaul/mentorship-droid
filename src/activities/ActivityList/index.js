@@ -5,7 +5,7 @@ import images from 'src/constants/images';
 import styles from './styles';
 
 
-const CategoryActivityList = ({
+const ActivityList = ({
   category: { color },
   activities,
   onActivityPress,
@@ -18,7 +18,7 @@ const CategoryActivityList = ({
       onPress={() => onActivityPress(id)}
     >
       <View style={styles.activity}>
-        <CategoryActivityIcon icon={icon} color={color} isComplete={isComplete} />
+        <ActivityIcon icon={icon} color={color} isComplete={isComplete} />
         <Text numberOfLines={3} style={styles.activityTitle}>{title}</Text>
       </View>
     </TouchableNativeFeedback>
@@ -27,7 +27,7 @@ const CategoryActivityList = ({
 );
 
 
-const CategoryActivityIcon = ({
+const ActivityIcon = ({
   icon,
   color,
   isComplete,
@@ -63,18 +63,18 @@ const CategoryActivityIcon = ({
 );
 
 
-CategoryActivityList.propTypes = {
+ActivityList.propTypes = {
   category: PropTypes.object.isRequired,
   activities: PropTypes.array.isRequired,
   onActivityPress: PropTypes.func.isRequired,
 };
 
 
-CategoryActivityIcon.propTypes = {
+ActivityIcon.propTypes = {
   icon: PropTypes.string,
   color: PropTypes.string.isRequired,
   isComplete: PropTypes.bool.isRequired,
 };
 
 
-export default CategoryActivityList;
+export default ActivityList;
