@@ -26,8 +26,9 @@ export default StyleSheet.create({
     backgroundColor: colors.CATEGORY_ACTIVITY_LIST_ICON_INCOMPLETE,
   },
   activityIconImage: {
-    width: 50,
-    height: 50,
+    width: 72,
+    height: 72,
+    borderRadius: 72,
   },
   activityCompleteAnnotation: {
     position: 'absolute',
