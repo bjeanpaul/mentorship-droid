@@ -40,4 +40,32 @@ export default StyleSheet.create({
     fontFamily: FONT.BOLD,
     fontWeight: FONT_WEIGHT.BOLD,
   },
+  section: {
+    paddingBottom: 29,
+  },
+  sectionHeader: {
+    paddingLeft: 24,
+    paddingRight: 24,
+    height: 72,
+    backgroundColor: colors.ACTIVITY_SECTION_HEADER_BG,
+    borderColor: colors.ACTIVITY_SECTION_HEADER_BORDER,
+    justifyContent: 'center',
+  },
+  sectionIcon: {
+    width: 40,
+    height: 40,
+    top: 16,
+    position: 'absolute',
+    resizeMode: 'contain',
+  },
+  sectionTitle: {
+    fontSize: 12,
+    fontFamily: FONT.BOLD,
+    fontWeight: FONT_WEIGHT.BOLD,
+    color: colors.ACTIVITY_SECTION_HEADER_TITLE,
+  },
+  sectionBody: {
+    paddingLeft: 24,
+    paddingRight: 24,
+  }
 });

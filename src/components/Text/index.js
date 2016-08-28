@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Text as RNText } from 'react-native';
-import styles, { types, themes, STYLE_TRANSFORMS } from './styles';
+import styles, { types, themes, uppercase, STYLE_TRANSFORMS } from './styles';
 import transform from './transform';
 
 
@@ -30,6 +30,7 @@ Text.propTypes = {
 
 Text.types = types;
 Text.themes = themes;
+Text.uppercase = uppercase;
 
 
 export default Text;

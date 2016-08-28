@@ -42,7 +42,7 @@ describe('Activity', () => {
     expect(onBackPress.mock.calls).toEqual([[]]);
   });
 
-  fit('should call onSchedulePress when the top schedule button is pressed', () => {
+  it('should call onSchedulePress when the top schedule button is pressed', () => {
     const onSchedulePress = jest.fn();
 
     shallow(createComponent({ onSchedulePress }))
