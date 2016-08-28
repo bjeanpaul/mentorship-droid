@@ -141,7 +141,7 @@ const ActionButton = ({
 }) => (
   <TouchableNativeFeedback onPress={onPress}>
     <View style={[styles.actionContainer, style.container]}>
-      <Text style={[Text.uppercase, styles.action, style.button]}>
+      <Text style={[Text.uppercase, styles.actionText, style.action]}>
         {children}
       </Text>
     </View>
