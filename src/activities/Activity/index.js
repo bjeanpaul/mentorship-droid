@@ -49,7 +49,7 @@ const Activity = ({
       <View style={[styles.about, { backgroundColor: color }]}>
         <Text style={[Text.themes.light, styles.title]}>{title}</Text>
         <Status style={styles.statusAbout} />
-        <Action style={styles.actionAbout} onSchedulePress={onSchedulePress} />
+        <Action onSchedulePress={onSchedulePress} />
       </View>
 
       <Section
@@ -108,6 +108,13 @@ const Activity = ({
         {skillsDeveloped}
       </Section>
 
+      <View style={[styles.shortcuts, { backgroundColor: color }]}>
+        <Status style={styles.statusShortcuts} />
+        <Action
+          style={{ container: styles.actionContainerShortcuts }}
+          onSchedulePress={onSchedulePress}
+        />
+      </View>
     </ScrollView>
   </BaseView>
 );

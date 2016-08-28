@@ -18,20 +18,35 @@ export default StyleSheet.create({
     paddingTop: 9,
     paddingBottom: 9,
   },
+  about: {
+    paddingTop: 10,
+    paddingBottom: 24,
+  },
+  shortcuts: {
+    paddingTop: 23,
+    paddingBottom: 24,
+  },
   status: {
     color: colors.ACTIVITY_ABOUT,
     fontSize: 16,
   },
   statusAbout: {
-    paddingBottom: 2,
+    paddingBottom: 27,
+  },
+  statusShortcuts: {
+    paddingBottom: 19,
   },
   actionContainer: {
-    margin: 24,
+    marginLeft: 24,
+    marginRight: 24,
     paddingTop: 15,
     paddingBottom: 17,
     borderColor: colors.TEXT_LIGHT,
     borderWidth: 2,
     borderRadius: 4,
+  },
+  actionContainerShortcuts: {
+    marginTop: 0,
   },
   actionText: {
     fontSize: 13,
