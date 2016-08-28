@@ -8,7 +8,7 @@ export default StyleSheet.create({
     padding: 16,
     height: 120,
     borderBottomWidth: 1,
-    borderBottomColor: colors.CATEGORY_ACTIVITY_LIST_ITEM_BORDER,
+    borderBottomColor: colors.ACTIVITY_LIST_ITEM_BORDER,
     alignItems: 'flex-start',
   },
   activityIconContainer: {
@@ -23,7 +23,7 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   activityIconIsIncomplete: {
-    backgroundColor: colors.CATEGORY_ACTIVITY_LIST_ICON_INCOMPLETE,
+    backgroundColor: colors.ACTIVITY_LIST_ICON_INCOMPLETE,
   },
   activityIconImage: {
     width: 72,
