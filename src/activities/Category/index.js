@@ -40,7 +40,7 @@ class Category extends Component {
       <BaseView>
         <Header style={[styles.header, { backgroundColor: color }]}>
           <HeaderIcon type={HeaderIcon.types.backLight} style={styles.back} />
-          <Text style={[Text.types.title, Text.themes.light]}>{title}</Text>>
+          <Text style={[Text.types.title, Text.themes.light]}>{title}</Text>
         </Header>
 
         <View style={[styles.tabGroup, { backgroundColor: color }]}>

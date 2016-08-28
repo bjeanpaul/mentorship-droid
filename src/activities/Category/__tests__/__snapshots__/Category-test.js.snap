@@ -28,25 +28,31 @@ exports[`Category should render 1`] = `
         ]
       ]
     }>
-    <Image
-      source={1}
+    <View
+      onPress={[Function noop]}
       style={
         Array [
           Object {
-            "height": 24,
-            "width": 24
+            "position": "absolute",
+            "top": 24
           },
+          Object {
+            "top": 20
+          }
+        ]
+      }>
+      <Image
+        source={1}
+        style={
           Array [
             Object {
-              "position": "absolute",
-              "top": 24
+              "height": 24,
+              "width": 24
             },
-            Object {
-              "top": 20
-            }
+            Object {}
           ]
-        ]
-      } />
+        } />
+    </View>
     <Text
       style={
         Array [
@@ -70,7 +76,6 @@ exports[`Category should render 1`] = `
       }>
       Level
     </Text>
-    >
   </View>
   <View
     style={
@@ -301,25 +306,31 @@ exports[`Category should render the currently active tab 1`] = `
         ]
       ]
     }>
-    <Image
-      source={1}
+    <View
+      onPress={[Function noop]}
       style={
         Array [
           Object {
-            "height": 24,
-            "width": 24
+            "position": "absolute",
+            "top": 24
           },
+          Object {
+            "top": 20
+          }
+        ]
+      }>
+      <Image
+        source={1}
+        style={
           Array [
             Object {
-              "position": "absolute",
-              "top": 24
+              "height": 24,
+              "width": 24
             },
-            Object {
-              "top": 20
-            }
+            Object {}
           ]
-        ]
-      } />
+        } />
+    </View>
     <Text
       style={
         Array [
@@ -343,7 +354,6 @@ exports[`Category should render the currently active tab 1`] = `
       }>
       Level
     </Text>
-    >
   </View>
   <View
     style={
@@ -574,25 +584,31 @@ exports[`Category should render the currently active tab 2`] = `
         ]
       ]
     }>
-    <Image
-      source={1}
+    <View
+      onPress={[Function noop]}
       style={
         Array [
           Object {
-            "height": 24,
-            "width": 24
+            "position": "absolute",
+            "top": 24
           },
+          Object {
+            "top": 20
+          }
+        ]
+      }>
+      <Image
+        source={1}
+        style={
           Array [
             Object {
-              "position": "absolute",
-              "top": 24
+              "height": 24,
+              "width": 24
             },
-            Object {
-              "top": 20
-            }
+            Object {}
           ]
-        ]
-      } />
+        } />
+    </View>
     <Text
       style={
         Array [
@@ -616,7 +632,6 @@ exports[`Category should render the currently active tab 2`] = `
       }>
       Level
     </Text>
-    >
   </View>
   <View
     style={
