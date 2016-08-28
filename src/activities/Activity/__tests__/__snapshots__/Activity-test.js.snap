@@ -1,0 +1,51 @@
+exports[`Activity should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16
+        },
+        Object {
+          "backgroundColor": "#97c13c"
+        }
+      ]
+    }>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Array [
+            Object {
+              "fontFamily": "Brandon Text_medium",
+              "fontSize": 20,
+              "fontWeight": "400"
+            },
+            Object {
+              "color": "#fff"
+            }
+          ]
+        ]
+      }>
+      Activity 1
+    </Text>
+  </View>
+</View>
+`;
