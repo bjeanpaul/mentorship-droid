@@ -1,7 +1,8 @@
 import React from 'react';
 import { noop } from 'lodash';
 import ActivityList from 'src/activities/ActivityList';
-import { fakeCategory, fakeActivity, TEST_ICON } from 'app/scripts/helpers';
+import { fakeCategory, fakeActivity } from 'app/scripts/helpers';
+import { ACTIVITY_ICON } from 'app/scripts/fixtures';
 
 
 describe('ActivityList', () => {
@@ -30,7 +31,7 @@ describe('ActivityList', () => {
     expect(render(createComponent({
       activities: [
         fakeActivity({
-          icon: TEST_ICON,
+          icon: ACTIVITY_ICON,
           isComplete: false,
         }),
       ],
@@ -41,7 +42,7 @@ describe('ActivityList', () => {
     expect(render(createComponent({
       activities: [
         fakeActivity({
-          icon: TEST_ICON,
+          icon: ACTIVITY_ICON,
           isComplete: true,
         }),
       ],
