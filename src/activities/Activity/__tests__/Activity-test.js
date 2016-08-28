@@ -3,6 +3,7 @@ import React from 'react';
 
 import Activity from 'src/activities/Activity';
 import { fakeCategory, fakeActivity, uidEquals } from 'app/scripts/helpers';
+import { ACTIVITY_POSTER } from 'app/scripts/fixtures';
 
 
 describe('Activity', () => {
@@ -17,6 +18,16 @@ describe('Activity', () => {
 
   it('should render', () => {
     const el = render(createComponent());
+    expect(el).toMatchSnapshot();
+  });
+
+  it('should not try display a poster if none is given', () => {
+    const el = render(createComponent({ poster: null }));
+    expect(el).toMatchSnapshot();
+  });
+
+  it('should display the poster if one is given', () => {
+    const el = render(createComponent({ poster: ACTIVITY_POSTER }));
     expect(el).toMatchSnapshot();
   });
 
