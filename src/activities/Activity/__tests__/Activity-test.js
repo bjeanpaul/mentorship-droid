@@ -12,6 +12,7 @@ describe('Activity', () => {
       category={fakeCategory()}
       activity={fakeActivity({ title: 'Activity 1' })}
       onBackPress={noop}
+      onSchedulePress={noop}
       {...props}
     />
   );
@@ -39,5 +40,18 @@ describe('Activity', () => {
       .simulate('press');
 
     expect(onBackPress.mock.calls).toEqual([[]]);
+  });
+
+  fit('should call onSchedulePress when the top schedule button is pressed', () => {
+    const onSchedulePress = jest.fn();
+
+    shallow(createComponent({ onSchedulePress }))
+      .find('Action')
+      .shallow()
+      .find('ActionButton')
+      .shallow()
+      .simulate('press');
+
+    expect(onSchedulePress.mock.calls).toEqual([[]]);
   });
 });

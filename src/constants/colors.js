@@ -66,6 +66,9 @@ export default {
 
   CATEGORY_ACTIVE_TAB_BORDER: 'rgba(0, 0, 0, 0.3)',
   CATEGORY_ABOUT_IMAGE_FALLBACK_BG: '#eff2f2',
+
   ACTIVITY_LIST_ITEM_BORDER: '#dfe5e6',
   ACTIVITY_LIST_ICON_INCOMPLETE: '#ebebeb',
+
+  ACTIVITY_STATUS: 'rgba(0, 0, 0, 0.35)',
 };
