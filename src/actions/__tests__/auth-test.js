@@ -1,7 +1,7 @@
 jest.mock('src/api/profiles');
 
 
-import { login } from 'src/auth/actions';
+import { login } from 'src/actions/auth';
 import { capture, fakeProfileListData } from 'app/scripts/helpers';
 import { listProfiles, ApiAuthenticationError, ApiResponseError } from 'src/api';
 import { noop } from 'lodash';

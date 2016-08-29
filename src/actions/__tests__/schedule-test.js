@@ -20,7 +20,7 @@ import {
   fetchScheduledCall,
   updateScheduledCall,
   removeScheduledCall,
-} from 'src/schedule/actions';
+} from 'src/actions/schedule';
 
 const { ApiResponseError } = api;
 

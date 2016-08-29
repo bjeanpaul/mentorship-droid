@@ -1,4 +1,4 @@
-import { pushRoute, popRoute } from 'src/navigation/actions';
+import { pushRoute, popRoute } from 'src/actions/navigation';
 import * as constants from 'src/constants/navigation';
 import reduce from 'src/reducers/navigation';
 

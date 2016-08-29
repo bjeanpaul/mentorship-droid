@@ -17,7 +17,7 @@ import {
   fetchProfile,
   updateProfile,
   updateProfileImage,
-} from 'src/profile/actions';
+} from 'src/actions/profile';
 
 const { ApiResponseError } = api;
 

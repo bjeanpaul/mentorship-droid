@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import * as nav from 'src/navigation/actions';
+import * as nav from 'src/actions/navigation';
 import Landing from 'src/onboarding/Landing';
 
 

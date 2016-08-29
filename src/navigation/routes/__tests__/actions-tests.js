@@ -5,7 +5,7 @@ import { AUTH_LOGIN_SUCCESS } from 'src/constants/auth';
 import { ONBOARDING_CHANGE_PROFILE } from 'src/constants/onboarding';
 
 
-describe('navigation/routes', () => {
+describe('navigation/routes/actions', () => {
   describe('navigation actions caused by other actions', () => {
     it('AUTH_LOGIN_SUCCESS ', () => {
       expect(ROUTE_ACTIONS[AUTH_LOGIN_SUCCESS]()).toEqual({

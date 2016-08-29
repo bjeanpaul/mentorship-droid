@@ -1,5 +1,5 @@
 import { fromPairs } from 'lodash';
-import { makePushRoute, popRoute } from 'src/navigation/actions';
+import { makePushRoute, popRoute } from 'src/actions/navigation';
 import * as constants from 'src/constants/navigation';
 
 import { AUTH_LOGIN_SUCCESS } from 'src/constants/auth';

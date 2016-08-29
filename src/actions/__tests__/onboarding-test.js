@@ -1,4 +1,4 @@
-import * as actions from 'src/onboarding/actions';
+import * as actions from 'src/actions/onboarding';
 import * as constants from 'src/constants/onboarding';
 
 describe('changeProfileImage', () => {
