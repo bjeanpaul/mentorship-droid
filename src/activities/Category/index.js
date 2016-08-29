@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { View, TouchableNativeFeedback } from 'react-native';
 
 import { BaseView, Header, HeaderIcon, Text } from 'src/components';
-import CategoryActivityList from 'src/categories/CategoryActivityList';
-import CategoryAbout from 'src/categories/CategoryAbout';
+import ActivityList from 'src/activities/ActivityList';
+import CategoryAbout from 'src/activities/CategoryAbout';
 import styles from './styles';
 
 
@@ -86,7 +86,7 @@ const CategoryTabBody = ({
 }) => {
   switch (tab) {
     case TAB_ACTIVITIES:
-      return <CategoryActivityList {...props} />;
+      return <ActivityList {...props} />;
 
     case TAB_ABOUT:
       return <CategoryAbout {...props} />;
