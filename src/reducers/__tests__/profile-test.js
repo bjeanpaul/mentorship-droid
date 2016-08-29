@@ -1,6 +1,6 @@
 import reduce from 'src/reducers/profile';
 import * as constants from 'src/constants/profile';
-import * as statuses from 'src/profile/statuses';
+import * as statuses from 'src/statuses/profile';
 import { fakeProfileData } from 'app/scripts/helpers';
 
 

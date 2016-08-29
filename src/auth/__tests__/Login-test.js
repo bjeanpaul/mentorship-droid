@@ -2,7 +2,7 @@ import React from 'react';
 import { noop } from 'lodash';
 
 import Login from 'src/auth/Login';
-import * as statuses from 'src/auth/statuses';
+import * as statuses from 'src/statuses/auth';
 
 
 describe('auth/Login', () => {

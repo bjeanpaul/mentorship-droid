@@ -1,6 +1,6 @@
 import reduce from 'src/reducers/auth';
 import { fakeAuth, fakeProfileListData } from 'app/scripts/helpers';
-import * as statuses from 'src/auth/statuses';
+import * as statuses from 'src/statuses/auth';
 import * as actions from 'src/actions/auth';
 
 

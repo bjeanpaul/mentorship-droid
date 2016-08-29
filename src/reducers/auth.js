@@ -1,5 +1,5 @@
 import * as constants from 'src/constants/auth';
-import * as statuses from 'src/auth/statuses';
+import * as statuses from 'src/statuses/auth';
 
 
 export const getProfileId = state => {
