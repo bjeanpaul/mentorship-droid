@@ -137,7 +137,7 @@ exports[`Category should render 1`] = `
       </Text>
     </View>
   </View>
-  <View>
+  <ScrollView>
     <View
       style={
         Object {
@@ -267,7 +267,7 @@ exports[`Category should render 1`] = `
         laog
       </Text>
     </View>
-  </View>
+  </ScrollView>
 </View>
 `;
 
@@ -410,7 +410,7 @@ exports[`Category should render the currently active tab 1`] = `
       </Text>
     </View>
   </View>
-  <View>
+  <ScrollView>
     <View
       style={
         Object {
@@ -540,7 +540,7 @@ exports[`Category should render the currently active tab 1`] = `
         laog
       </Text>
     </View>
-  </View>
+  </ScrollView>
 </View>
 `;
 
@@ -683,7 +683,7 @@ exports[`Category should render the currently active tab 2`] = `
       </Text>
     </View>
   </View>
-  <View>
+  <ScrollView>
     <View
       style={
         Object {
@@ -813,6 +813,6 @@ exports[`Category should render the currently active tab 2`] = `
         laog
       </Text>
     </View>
-  </View>
+  </ScrollView>
 </View>
 `;

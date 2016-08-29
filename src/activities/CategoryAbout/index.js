@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, ScrollView } from 'react-native';
 import { Section } from 'src/components';
 
 import styles from './styles';
@@ -13,7 +13,7 @@ const CategoryAbout = ({
     goal,
   },
 }) => (
-  <View>
+  <ScrollView>
     <View style={styles.imageContainer}>
       {
         image
@@ -25,7 +25,7 @@ const CategoryAbout = ({
     <Section title={`About ${title}`}>{about}</Section>
 
     <Section title={`Goal of ${title}`}>{goal}</Section>
-  </View>
+  </ScrollView>
 );
 
 

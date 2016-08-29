@@ -1,5 +1,5 @@
 exports[`CategoryAbout should render 1`] = `
-<View>
+<ScrollView>
   <View
     style={
       Object {
@@ -129,11 +129,11 @@ exports[`CategoryAbout should render 1`] = `
       Ut enim ad minim veniam, quis nostrud exercitation
     </Text>
   </View>
-</View>
+</ScrollView>
 `;
 
 exports[`CategoryAbout should render a fallback if the category does not have an image 1`] = `
-<View>
+<ScrollView>
   <View
     style={
       Object {
@@ -263,5 +263,5 @@ exports[`CategoryAbout should render a fallback if the category does not have an
       Ut enim ad minim veniam, quis nostrud exercitation
     </Text>
   </View>
-</View>
+</ScrollView>
 `;
