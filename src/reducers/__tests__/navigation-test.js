@@ -1,6 +1,6 @@
 import { pushRoute, popRoute } from 'src/navigation/actions';
 import * as constants from 'src/navigation/constants';
-import reduce from 'src/navigation/reducer';
+import reduce from 'src/reducers/navigation';
 
 
 describe('navigation/reducer', () => {

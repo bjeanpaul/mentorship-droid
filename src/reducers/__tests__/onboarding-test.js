@@ -1,4 +1,4 @@
-import reduce from 'src/onboarding/reducer';
+import reduce from 'src/reducers/onboarding';
 import * as constants from 'src/onboarding/constants';
 
 

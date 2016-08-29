@@ -1,10 +1,10 @@
-import reduce from 'src/profile/reducer';
+import reduce from 'src/reducers/profile';
 import * as constants from 'src/profile/constants';
 import * as statuses from 'src/profile/statuses';
 import { fakeProfileData } from 'app/scripts/helpers';
 
 
-describe('profile/reducer', () => {
+describe('reducers/profile', () => {
   describe('PROFILE_FETCH_REQUEST', () => {
     it('should mark the status as busy', () => {
       const { status } = reduce({
