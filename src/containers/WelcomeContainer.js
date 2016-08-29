@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Hello from './Hello';
+import Hello from 'src/views/Hello';
 import { pushProfilePictureRoute } from 'src/actions/navigation';
 
 import { getProfileId } from 'src/reducers/auth';

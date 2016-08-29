@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
-import { resetPassword } from './actions';
-import ResetPassword from './ResetPassword';
+import { resetPassword } from 'src/actions/auth';
+import ResetPassword from 'src/views/ResetPassword';
 
 const mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {

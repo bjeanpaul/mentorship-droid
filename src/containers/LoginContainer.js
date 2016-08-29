@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { login } from './actions';
-import Login from './Login';
+import { login } from 'src/actions/auth';
+import Login from 'src/views/Login';
 
 
 export default connect(

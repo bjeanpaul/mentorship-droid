@@ -11,7 +11,7 @@ import {
 } from 'src/components';
 
 
-import { resetPassword } from './actions';
+import { resetPassword } from 'src/actions/auth';
 
 const ChangePassword = (
   {

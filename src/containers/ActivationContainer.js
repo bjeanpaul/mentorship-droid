@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
-import { login } from './actions';
-import Activation from './Activation';
+import { login } from 'src/actions/auth';
+import Activation from 'src/views/Activation';
 
 
 export default connect(

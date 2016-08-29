@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import NavigationStack from './NavigationStack';
+import NavigationStack from 'src/views/NavigationStack';
 
 
 export default connect(
