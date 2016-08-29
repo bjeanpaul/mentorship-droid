@@ -82,5 +82,5 @@ export default StyleSheet.create({
   sectionBody: {
     paddingLeft: 24,
     paddingRight: 24,
-  }
+  },
 });
