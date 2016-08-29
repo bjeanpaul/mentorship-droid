@@ -29,7 +29,10 @@ class Category extends Component {
   }
 
   render() {
-    const { category } = this.props;
+    const {
+      category,
+      ...props,
+    } = this.props;
 
     const {
       color,
@@ -59,7 +62,11 @@ class Category extends Component {
           />
         </View>
 
-        <CategoryTabBody tab={this.state.activeTab} category={category} />
+        <CategoryTabBody
+          tab={this.state.activeTab}
+          category={category}
+          {...props}
+        />
       </BaseView>
     );
   }
