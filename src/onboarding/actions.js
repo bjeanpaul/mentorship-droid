@@ -1,4 +1,4 @@
-import * as constants from 'src/onboarding/constants';
+import * as constants from 'src/constants/onboarding';
 
 export const changeProfileImage = path => ({
   type: constants.ONBOARDING_CHANGE_PROFILE,

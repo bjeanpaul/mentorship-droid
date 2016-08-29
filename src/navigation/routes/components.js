@@ -1,5 +1,5 @@
 import { fromPairs } from 'lodash';
-import * as constants from 'src/navigation/constants';
+import * as constants from 'src/constants/navigation';
 
 import LandingContainer from 'src/onboarding/LandingContainer';
 import LoginContainer from 'src/auth/LoginContainer';

@@ -1,5 +1,5 @@
 import reduce from 'src/reducers/profile';
-import * as constants from 'src/profile/constants';
+import * as constants from 'src/constants/profile';
 import * as statuses from 'src/profile/statuses';
 import { fakeProfileData } from 'app/scripts/helpers';
 

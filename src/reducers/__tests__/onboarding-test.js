@@ -1,5 +1,5 @@
 import reduce from 'src/reducers/onboarding';
-import * as constants from 'src/onboarding/constants';
+import * as constants from 'src/constants/onboarding';
 
 
 describe('onboarding/reducer', () => {

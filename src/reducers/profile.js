@@ -1,4 +1,4 @@
-import * as constants from 'src/profile/constants';
+import * as constants from 'src/constants/profile';
 import * as statuses from 'src/profile/statuses';
 
 export const getProfile = (state, profileId) => state.entities.profiles[profileId];

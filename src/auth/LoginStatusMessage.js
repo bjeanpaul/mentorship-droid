@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 import { Text } from 'src/components';
-import * as constants from './constants';
+import * as constants from 'src/constants/auth';
 
 /* TODO different colour for error? */
 const LoginStatusMessage = ({ type }) => {

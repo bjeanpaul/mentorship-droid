@@ -5,7 +5,7 @@ import { login } from 'src/auth/actions';
 import { capture, fakeProfileListData } from 'app/scripts/helpers';
 import { listProfiles, ApiAuthenticationError, ApiResponseError } from 'src/api';
 import { noop } from 'lodash';
-import * as constants from 'src/auth/constants';
+import * as constants from 'src/constants/auth';
 
 
 describe('auth/actions', () => {

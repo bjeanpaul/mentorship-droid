@@ -4,7 +4,7 @@ jest.mock('src/actionHelpers', () => ({
   dataAction: global.mock(),
 }));
 
-import * as constants from 'src/profile/constants';
+import * as constants from 'src/constants/profile';
 import * as api from 'src/api';
 
 import {

@@ -1,5 +1,5 @@
 import * as api from 'src/api';
-import * as constants from 'src/profile/constants';
+import * as constants from 'src/constants/profile';
 
 import {
   apiAction,

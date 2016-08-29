@@ -1,4 +1,4 @@
-import * as constants from 'src/onboarding/constants';
+import * as constants from 'src/constants/onboarding';
 
 
 const onboarding = (state = {}, action) => {

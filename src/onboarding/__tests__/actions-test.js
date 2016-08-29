@@ -1,5 +1,5 @@
 import * as actions from 'src/onboarding/actions';
-import * as constants from 'src/onboarding/constants';
+import * as constants from 'src/constants/onboarding';
 
 describe('changeProfileImage', () => {
   it('should create actions for profile image change', () => {

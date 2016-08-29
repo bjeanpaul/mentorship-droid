@@ -1,9 +1,9 @@
 import { fromPairs } from 'lodash';
 import { makePushRoute, popRoute } from 'src/navigation/actions';
-import * as constants from 'src/navigation/constants';
+import * as constants from 'src/constants/navigation';
 
-import { AUTH_LOGIN_SUCCESS } from 'src/auth/constants';
-import { ONBOARDING_CHANGE_PROFILE } from 'src/onboarding/constants';
+import { AUTH_LOGIN_SUCCESS } from 'src/constants/auth';
+import { ONBOARDING_CHANGE_PROFILE } from 'src/constants/onboarding';
 
 
 export default fromPairs([

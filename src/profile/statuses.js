@@ -1,4 +1,4 @@
-import * as constants from 'src/profile/constants';
+import * as constants from 'src/constants/profile';
 import { staticStatus } from 'src/helpers';
 
 

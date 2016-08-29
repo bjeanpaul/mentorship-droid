@@ -1,5 +1,5 @@
 import * as api from 'src/api';
-import * as constants from 'src/schedule/constants';
+import * as constants from 'src/constants/schedule';
 
 import {
   apiAction,

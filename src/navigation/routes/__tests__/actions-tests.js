@@ -1,8 +1,8 @@
-import * as constants from 'src/navigation/constants';
+import * as constants from 'src/constants/navigation';
 
 import ROUTE_ACTIONS from 'src/navigation/routes/actions';
-import { AUTH_LOGIN_SUCCESS } from 'src/auth/constants';
-import { ONBOARDING_CHANGE_PROFILE } from 'src/onboarding/constants';
+import { AUTH_LOGIN_SUCCESS } from 'src/constants/auth';
+import { ONBOARDING_CHANGE_PROFILE } from 'src/constants/onboarding';
 
 
 describe('navigation/routes', () => {

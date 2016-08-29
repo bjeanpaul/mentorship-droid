@@ -1,5 +1,5 @@
 import { pushRoute, popRoute } from 'src/navigation/actions';
-import * as constants from 'src/navigation/constants';
+import * as constants from 'src/constants/navigation';
 
 describe('navigation/actions', () => {
   it('should create action for pushing a route ', () => {

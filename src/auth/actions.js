@@ -1,7 +1,7 @@
 import { listProfiles, ApiAuthenticationError, ApiResponseError } from 'src/api';
 import { switchError } from 'src/helpers';
 import { staticAction, dataAction } from 'src/actionHelpers';
-import * as constants from 'src/auth/constants';
+import * as constants from 'src/constants/auth';
 
 
 export const loginRequest = staticAction(constants.AUTH_LOGIN_REQUEST);

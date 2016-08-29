@@ -5,7 +5,7 @@ jest.mock('src/actionHelpers', () => ({
 }));
 
 
-import * as constants from 'src/schedule/constants';
+import * as constants from 'src/constants/schedule';
 import * as api from 'src/api';
 
 import {
