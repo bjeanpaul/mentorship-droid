@@ -31,13 +31,30 @@ export const fakeContext = () => ({
 });
 
 
-export const fakeCategory = (data) => ({
+export const fakeCategory = data => ({
   id: 1,
   title: 'Level',
   color: '#97c13c',
   about: 'touba',
   goal: 'laog',
   image: null,
+  ...data,
+});
+
+
+export const fakeActivity = data => ({
+  id: 1,
+  title: 'Activity 3',
+  instructions: 'snoitcrutsni',
+  isComplete: false,
+  lessonRationale: 'elanoitar',
+  objective: 'raaar',
+  prompts: 'tspmorp',
+  reflectionPoints: 'tsnoip',
+  skillsDeveloped: 'depoleved',
+  topic: 'cipot',
+  icon: null,
+  poster: null,
   ...data,
 });
 

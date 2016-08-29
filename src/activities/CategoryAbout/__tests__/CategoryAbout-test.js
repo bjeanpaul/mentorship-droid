@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CategoryAbout from 'src/categories/CategoryAbout';
+import CategoryAbout from 'src/activities/CategoryAbout';
 import { fakeCategory } from 'app/scripts/helpers';
 import images from 'src/constants/images';
 
