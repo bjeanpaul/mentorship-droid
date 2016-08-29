@@ -126,7 +126,6 @@ class ScheduleDetail extends React.Component {
           <Separator />
 
         <Button
-          label="Schedule Call"
           handlePress={() => {
             // TODO: Hookup action.
           }}
@@ -134,7 +133,9 @@ class ScheduleDetail extends React.Component {
             typeof this.state.date === 'undefined'
             || typeof this.state.time === 'undefined'
           }
-        />
+        >
+          SCHEDULE CALL
+        </Button>
       </BaseView>
     );
   }

@@ -21,10 +21,9 @@ const Landing = ({
         <Text style={styles.getStartedHeading}>
           This is a short, but sweet, description of the application.
         </Text>
-        <Button
-          label="Get Started"
-          onPress={onGetStartedPress}
-        />
+        <Button onPress={onGetStartedPress}>
+          GET STARTED
+        </Button>
       </View>
       <View style={styles.login}>
         <Text style={styles.loginText}>

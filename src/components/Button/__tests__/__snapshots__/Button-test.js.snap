@@ -46,7 +46,7 @@ exports[`Button should be disabled 1`] = `
         ]
       ]
     }>
-    MARGLE
+    margle
   </Text>
 </View>
 `;
@@ -139,6 +139,35 @@ exports[`Button should render "transparent" theme 1`] = `
 `;
 
 exports[`Button should render its \`title,\` and map \`onPress\` 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffbcbc",
+        "borderColor": "red",
+        "borderWidth": 1,
+        "height": 100,
+        "justifyContent": "center",
+        "margin": 10,
+        "width": 300
+      },
+      undefined
+    ]
+  }>
+  <Text
+    style={
+      Object {
+        "color": "#333333",
+        "margin": 20
+      }
+    }>
+    TouchableNativeFeedback is not supported on this platform!
+  </Text>
+</View>
+`;
+
+exports[`Button should take any kind of children 1`] = `
 <View
   style={
     Array [
