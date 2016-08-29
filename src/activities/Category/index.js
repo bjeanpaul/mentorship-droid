@@ -31,7 +31,7 @@ class Category extends Component {
   render() {
     const {
       category,
-      ...props
+      ...props,
     } = this.props;
 
     const {
