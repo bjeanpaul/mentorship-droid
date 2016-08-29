@@ -18,7 +18,7 @@ export default StyleSheet.create({
   tab: {
     flex: 1,
   },
-  tabActive: {
+  tabIsActive: {
     borderBottomWidth: 2,
     borderBottomColor: colors.CATEGORY_ACTIVE_TAB_BORDER,
   },
@@ -29,7 +29,7 @@ export default StyleSheet.create({
     color: colors.TEXT_LIGHT,
     opacity: 0.5,
   },
-  tabTitleActive: {
+  tabTitleIsActive: {
     opacity: 1,
   },
 });
