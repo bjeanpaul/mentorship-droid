@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import configureStore from 'src/stores/configureStore';
 const store = configureStore();
 
-import RootNavigation from 'src/navigation/NavigationStackContainer';
+import RootNavigation from 'src/containers/NavigationStackContainer';
 
 const App = function App() {
   return (

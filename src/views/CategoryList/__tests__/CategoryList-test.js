@@ -1,6 +1,6 @@
 import React from 'react';
 import { noop } from 'lodash';
-import CategoryList from 'src/activities/CategoryList';
+import CategoryList from 'src/views/CategoryList';
 import { fakeCategory } from 'app/scripts/helpers';
 
 

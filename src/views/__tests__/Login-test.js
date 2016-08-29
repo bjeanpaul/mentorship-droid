@@ -1,7 +1,7 @@
 import React from 'react';
 import { noop } from 'lodash';
 
-import Login from 'src/auth/Login';
+import Login from 'src/views/Login';
 import * as statuses from 'src/statuses/auth';
 
 

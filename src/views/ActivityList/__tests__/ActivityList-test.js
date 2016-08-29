@@ -1,6 +1,6 @@
 import React from 'react';
 import { noop } from 'lodash';
-import ActivityList from 'src/activities/ActivityList';
+import ActivityList from 'src/views/ActivityList';
 import { fakeCategory, fakeActivity } from 'app/scripts/helpers';
 import { ACTIVITY_ICON } from 'app/scripts/fixtures';
 

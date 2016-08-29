@@ -1,12 +1,12 @@
 import { fromPairs } from 'lodash';
 import * as constants from 'src/constants/navigation';
 
-import LandingContainer from 'src/onboarding/LandingContainer';
-import LoginContainer from 'src/auth/LoginContainer';
-import ActivationContainer from 'src/auth/ActivationContainer';
-import WelcomeContainer from 'src/onboarding/WelcomeContainer';
-import ProfilePictureContainer from 'src/onboarding/ProfilePictureContainer';
-import CameraRollContainer from 'src/onboarding/CameraRollContainer';
+import LandingContainer from 'src/containers/LandingContainer';
+import LoginContainer from 'src/containers/LoginContainer';
+import ActivationContainer from 'src/containers/ActivationContainer';
+import WelcomeContainer from 'src/containers/WelcomeContainer';
+import ProfilePictureContainer from 'src/containers/ProfilePictureContainer';
+import CameraRollContainer from 'src/containers/CameraRollContainer';
 
 
 export default fromPairs([

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import * as nav from 'src/actions/navigation';
-import Landing from 'src/onboarding/Landing';
+import Landing from 'src/views/Landing';
 
 
 export default connect(null, {

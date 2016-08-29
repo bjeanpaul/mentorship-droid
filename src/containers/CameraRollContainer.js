@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import CameraRoll from 'src/profile/CameraRoll';
+import CameraRoll from 'src/views/CameraRoll';
 import { changeProfileImage } from 'src/actions/onboarding';
 
 export default connect(null, {

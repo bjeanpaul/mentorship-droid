@@ -1,6 +1,6 @@
 import * as constants from 'src/constants/navigation';
 
-import ROUTE_ACTIONS from 'src/navigation/routes/actions';
+import ROUTE_ACTIONS from 'src/actions/routes';
 import { AUTH_LOGIN_SUCCESS } from 'src/constants/auth';
 import { ONBOARDING_CHANGE_PROFILE } from 'src/constants/onboarding';
 

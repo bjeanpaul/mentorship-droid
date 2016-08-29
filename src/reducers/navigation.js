@@ -2,7 +2,7 @@ import { NavigationExperimental } from 'react-native';
 const { StateUtils: NavigationStateUtils } = NavigationExperimental;
 
 import * as constants from 'src/constants/navigation';
-import ROUTES_ACTIONS from 'src/navigation/routes/actions';
+import ROUTES_ACTIONS from 'src/actions/routes';
 
 
 const navigation = (state = {
