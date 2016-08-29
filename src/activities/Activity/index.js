@@ -171,7 +171,7 @@ const Section = ({
       </Text>
     </View>
 
-    <View style={styles.sectionBodk}>
+    <View style={styles.sectionBody}>
       <Text style={Text.types.paragraph}>{children}</Text>
     </View>
   </View>

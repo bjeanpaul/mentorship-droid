@@ -215,7 +215,12 @@ exports[`Activity should display the poster if one is given 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -295,7 +300,12 @@ exports[`Activity should display the poster if one is given 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -375,7 +385,12 @@ exports[`Activity should display the poster if one is given 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -455,7 +470,12 @@ exports[`Activity should display the poster if one is given 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -535,7 +555,12 @@ exports[`Activity should display the poster if one is given 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -615,7 +640,12 @@ exports[`Activity should display the poster if one is given 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -695,7 +725,12 @@ exports[`Activity should display the poster if one is given 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -999,7 +1034,12 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -1079,7 +1119,12 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -1159,7 +1204,12 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -1239,7 +1289,12 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -1319,7 +1374,12 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -1399,7 +1459,12 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -1479,7 +1544,12 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -1783,7 +1853,12 @@ exports[`Activity should render 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -1863,7 +1938,12 @@ exports[`Activity should render 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -1943,7 +2023,12 @@ exports[`Activity should render 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -2023,7 +2108,12 @@ exports[`Activity should render 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -2103,7 +2193,12 @@ exports[`Activity should render 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -2183,7 +2278,12 @@ exports[`Activity should render 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
@@ -2263,7 +2363,12 @@ exports[`Activity should render 1`] = `
         </Text>
       </View>
       <View
-        style={undefined}>
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
         <Text
           style={
             Array [
