@@ -35,8 +35,9 @@ class LoginForm extends React.Component {
             this.state.username,
             this.state.password
           )}
-          label={this.props.buttonLabel}
-        />
+        >
+          {this.props.buttonLabel}
+        </Button>
       </View>
     );
   }

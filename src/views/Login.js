@@ -13,7 +13,7 @@ const Login = ({
     <Toolbar title="Log in" />
     <LoginForm
       {...props}
-      buttonLabel="Log in"
+      buttonLabel="LOG IN"
     />
     <LoginStatusMessage {...status} />
   </BaseView>

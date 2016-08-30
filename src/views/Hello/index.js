@@ -22,10 +22,9 @@ const Hello = ({
       Help build a vibrant mentor community. Complete your profile to allow
       others learn more about you.
     </Text>
-    <Button
-      label="Complete Profile"
-      onPress={onCompleteProfilePress}
-    />
+    <Button onPress={onCompleteProfilePress}>
+      COMPLETE PROFILE
+    </Button>
   </BaseView>
 );
 Hello.propTypes = {
