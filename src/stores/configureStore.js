@@ -11,8 +11,8 @@ export default function configureStore(initialState = {}) {
     rootReducer,
     initialState,
     applyMiddleware(
-      thunkMiddleware,
       contextMiddleware(getContext),
+      thunkMiddleware,
     )
   );
 }
