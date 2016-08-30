@@ -7,8 +7,8 @@ import styles from './styles';
 
 export default class TextInput extends React.Component {
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       selected: false,
     };
@@ -30,7 +30,7 @@ export default class TextInput extends React.Component {
         {label}
         <RNTextInput
           {...this.props}
-          style={styles.textInput}
+          style={[styles.textInput, this.props.style]}
           underlineColorAndroid="transparent"
           placeholderTextColor={colors.TEXT_INPUT_PLACEHOLDER_TEXT}
           onFocus={() => this.setState({ selected: true })}
@@ -41,5 +41,6 @@ export default class TextInput extends React.Component {
   }
 }
 TextInput.propTypes = {
+  style: PropTypes.any,
   label: PropTypes.string,
 };
