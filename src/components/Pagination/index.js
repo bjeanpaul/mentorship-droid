@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 import Button from 'src/components/Button';
+import Icon from 'src/components/Icon';
 import styles from './styles';
 
 
@@ -14,15 +15,17 @@ const Pagination = ({
       theme={Button.themes.transparent}
       layout={[Button.layouts.inline, styles.backButtonLayout]}
       onPress={onBackPress}
-      label="BACK"
-    />
+    >
+      <Icon type={Icon.types.backOrange} />
+    </Button>
     <Button
       theme={Button.themes.transparent}
       layout={[Button.layouts.inline, styles.nextButtonLayout]}
       onPress={onNextPress}
       disabled={disabled}
-      label="NEXT"
-    />
+    >
+      NEXT
+    </Button>
   </View>
 );
 

@@ -7,7 +7,7 @@ export default StyleSheet.create({
   },
 
   backButtonLayout: {
-    width: 54,
+    width: 58,
     marginRight: 16,
   },
 
