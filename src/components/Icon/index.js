@@ -15,6 +15,7 @@ const Icon = ({
 
 Icon.types = {
   backLight: images.BACK_LIGHT,
+  backOrange: images.BACK_ORANGE,
 };
 
 

@@ -1,12 +1,12 @@
-import { PROFILE_FETCH_SUCCESS } from 'src/profile/constants';
+import { PROFILE_FETCH_SUCCESS } from 'src/constants/profile';
 
-import { AUTH_LOGIN_SUCCESS } from 'src/auth/constants';
+import { AUTH_LOGIN_SUCCESS } from 'src/constants/auth';
 
 import {
   SCHEDULED_CALL_LIST_SUCCESS,
   SCHEDULED_CALL_CREATE_SUCCESS,
   SCHEDULED_CALL_FETCH_SUCCESS,
-} from 'src/profile/constants';
+} from 'src/constants/profile';
 
 
 const ACTIONS_WITH_ENTITIES = [
