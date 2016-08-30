@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 import { BaseView, Header, Text, Pagination, ProgressBar, TextInput } from 'src/components';
 import styles from './styles';
