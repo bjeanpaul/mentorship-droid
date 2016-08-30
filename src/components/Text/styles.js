@@ -39,6 +39,9 @@ export const types = StyleSheet.create({
 });
 
 
+export const { uppercase } = StyleSheet.create({ uppercase: {} });
+
+
 export const themes = StyleSheet.create({
   light: {
     color: colors.TEXT_LIGHT,
@@ -47,5 +50,6 @@ export const themes = StyleSheet.create({
 
 
 export const STYLE_TRANSFORMS = new Map([
+  [uppercase, 'uppercase'],
   [types.sectionTitle, 'uppercase'],
 ]);

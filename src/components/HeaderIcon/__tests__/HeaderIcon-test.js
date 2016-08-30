@@ -18,4 +18,14 @@ describe('HeaderIcon', () => {
       </Header>
     )).toMatchSnapshot();
   });
+
+  it('should call onPress when pressed', () => {
+    const onPress = jest.fn();
+    const el = shallow(
+      <HeaderIcon type={HeaderIcon.types.backLight} onPress={onPress} />
+    );
+
+    el.simulate('press');
+    expect(onPress.mock.calls).toEqual([[]]);
+  });
 });

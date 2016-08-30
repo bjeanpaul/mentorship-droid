@@ -80,3 +80,6 @@ export const fakeProfileListData = (data = [{ id: 23 }]) => (
 
 export const fakeScheduledCallListData = (data = [{ id: 23 }]) => (
   normalize(data, arrayOf(ScheduledCall)));
+
+
+export const uidEquals = id => node => node.prop('uid') === id;

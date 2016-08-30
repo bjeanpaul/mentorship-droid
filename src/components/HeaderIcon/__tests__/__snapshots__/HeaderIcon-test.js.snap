@@ -13,23 +13,29 @@ exports[`HeaderIcon should render 1`] = `
       }
     ]
   }>
-  <Image
-    source={1}
+  <View
+    onPress={[Function noop]}
     style={
       Array [
         Object {
-          "height": 24,
-          "width": 24
+          "position": "absolute",
+          "top": 24
         },
+        Object {}
+      ]
+    }>
+    <Image
+      source={1}
+      style={
         Array [
           Object {
-            "position": "absolute",
-            "top": 24
+            "height": 24,
+            "width": 24
           },
           Object {}
         ]
-      ]
-    } />
+      } />
+  </View>
 </View>
 `;
 
@@ -48,24 +54,30 @@ exports[`HeaderIcon should support style overriding 1`] = `
       }
     ]
   }>
-  <Image
-    source={1}
+  <View
+    onPress={[Function noop]}
     style={
       Array [
         Object {
-          "height": 24,
-          "width": 24
+          "position": "absolute",
+          "top": 24
         },
+        Object {
+          "left": 48
+        }
+      ]
+    }>
+    <Image
+      source={1}
+      style={
         Array [
           Object {
-            "position": "absolute",
-            "top": 24
+            "height": 24,
+            "width": 24
           },
-          Object {
-            "left": 48
-          }
+          Object {}
         ]
-      ]
-    } />
+      } />
+  </View>
 </View>
 `;

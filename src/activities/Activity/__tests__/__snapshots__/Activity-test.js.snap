@@ -1,0 +1,2456 @@
+exports[`Activity should display the poster if one is given 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <ScrollView>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 16,
+            "paddingRight": 16
+          },
+          Object {
+            "backgroundColor": "#97c13c"
+          }
+        ]
+      }>
+      <View
+        onPress={[Function noop]}
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24
+            },
+            Object {}
+          ]
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24
+              },
+              Object {}
+            ]
+          } />
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "fontFamily": "Brandon Text_medium",
+                "fontSize": 20,
+                "fontWeight": "400"
+              },
+              Object {
+                "color": "#fff"
+              }
+            ]
+          ]
+        }>
+        Level
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "paddingBottom": 24,
+            "paddingTop": 10
+          },
+          Object {
+            "backgroundColor": "#97c13c"
+          }
+        ]
+      }>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "color": "#fff"
+              },
+              Object {
+                "fontFamily": "Brandon Text_medium",
+                "fontSize": 32,
+                "fontWeight": "400",
+                "paddingBottom": 9,
+                "paddingTop": 9
+              }
+            ]
+          ]
+        }>
+        Activity 1
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 16
+              },
+              Object {
+                "paddingBottom": 27
+              }
+            ]
+          ]
+        }>
+        Discuss this activity with your Mentee
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          TOPIC
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          cipot
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          OBJECTIVE
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          raaar
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          LESSON RATIONALE
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          elanoitar
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          INSTRUCTIONS
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          snoitcrutsni
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          PROMPTS
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          tspmorp
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          REFLECTION POINTS
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          tsnoip
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          SKILLS DEVELOPED
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          depoleved
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "paddingBottom": 24,
+            "paddingTop": 23
+          },
+          Object {
+            "backgroundColor": "#97c13c"
+          }
+        ]
+      }>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 16
+              },
+              Object {
+                "paddingBottom": 19
+              }
+            ]
+          ]
+        }>
+        Discuss this activity with your Mentee
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+    </View>
+  </ScrollView>
+</View>
+`;
+
+exports[`Activity should not try display a poster if none is given 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <ScrollView>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 16,
+            "paddingRight": 16
+          },
+          Object {
+            "backgroundColor": "#97c13c"
+          }
+        ]
+      }>
+      <View
+        onPress={[Function noop]}
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24
+            },
+            Object {}
+          ]
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24
+              },
+              Object {}
+            ]
+          } />
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "fontFamily": "Brandon Text_medium",
+                "fontSize": 20,
+                "fontWeight": "400"
+              },
+              Object {
+                "color": "#fff"
+              }
+            ]
+          ]
+        }>
+        Level
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "paddingBottom": 24,
+            "paddingTop": 10
+          },
+          Object {
+            "backgroundColor": "#97c13c"
+          }
+        ]
+      }>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "color": "#fff"
+              },
+              Object {
+                "fontFamily": "Brandon Text_medium",
+                "fontSize": 32,
+                "fontWeight": "400",
+                "paddingBottom": 9,
+                "paddingTop": 9
+              }
+            ]
+          ]
+        }>
+        Activity 1
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 16
+              },
+              Object {
+                "paddingBottom": 27
+              }
+            ]
+          ]
+        }>
+        Discuss this activity with your Mentee
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          TOPIC
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          cipot
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          OBJECTIVE
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          raaar
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          LESSON RATIONALE
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          elanoitar
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          INSTRUCTIONS
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          snoitcrutsni
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          PROMPTS
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          tspmorp
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          REFLECTION POINTS
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          tsnoip
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          SKILLS DEVELOPED
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          depoleved
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "paddingBottom": 24,
+            "paddingTop": 23
+          },
+          Object {
+            "backgroundColor": "#97c13c"
+          }
+        ]
+      }>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 16
+              },
+              Object {
+                "paddingBottom": 19
+              }
+            ]
+          ]
+        }>
+        Discuss this activity with your Mentee
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+    </View>
+  </ScrollView>
+</View>
+`;
+
+exports[`Activity should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <ScrollView>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 16,
+            "paddingRight": 16
+          },
+          Object {
+            "backgroundColor": "#97c13c"
+          }
+        ]
+      }>
+      <View
+        onPress={[Function noop]}
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24
+            },
+            Object {}
+          ]
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24
+              },
+              Object {}
+            ]
+          } />
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "fontFamily": "Brandon Text_medium",
+                "fontSize": 20,
+                "fontWeight": "400"
+              },
+              Object {
+                "color": "#fff"
+              }
+            ]
+          ]
+        }>
+        Level
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "paddingBottom": 24,
+            "paddingTop": 10
+          },
+          Object {
+            "backgroundColor": "#97c13c"
+          }
+        ]
+      }>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "color": "#fff"
+              },
+              Object {
+                "fontFamily": "Brandon Text_medium",
+                "fontSize": 32,
+                "fontWeight": "400",
+                "paddingBottom": 9,
+                "paddingTop": 9
+              }
+            ]
+          ]
+        }>
+        Activity 1
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 16
+              },
+              Object {
+                "paddingBottom": 27
+              }
+            ]
+          ]
+        }>
+        Discuss this activity with your Mentee
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          TOPIC
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          cipot
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          OBJECTIVE
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          raaar
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          LESSON RATIONALE
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          elanoitar
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          INSTRUCTIONS
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          snoitcrutsni
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          PROMPTS
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          tspmorp
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          REFLECTION POINTS
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          tsnoip
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingBottom": 29
+        }
+      }>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#f9fafa",
+            "borderColor": "#dfe5e6",
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40
+              },
+              Object {
+                "tintColor": "#97c13c"
+              }
+            ]
+          } />
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Array [
+                Object {},
+                Object {
+                  "color": "#80979a",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                }
+              ]
+            ]
+          }>
+          SKILLS DEVELOPED
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        }>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left"
+              }
+            ]
+          }>
+          depoleved
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "paddingBottom": 24,
+            "paddingTop": 23
+          },
+          Object {
+            "backgroundColor": "#97c13c"
+          }
+        ]
+      }>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Array [
+              Object {
+                "color": undefined,
+                "fontSize": 16
+              },
+              Object {
+                "paddingBottom": 19
+              }
+            ]
+          ]
+        }>
+        Discuss this activity with your Mentee
+      </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+    </View>
+  </ScrollView>
+</View>
+`;
