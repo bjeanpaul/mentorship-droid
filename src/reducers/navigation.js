@@ -8,7 +8,7 @@ import ROUTES_ACTIONS from 'src/actions/routes';
 const navigation = (state = {
   index: 0,
   routes: [
-    { key: constants.ROUTE_LANDING },
+    { key: constants.ROUTE_ONBOARDING_OCCUPATION },
   ],
 }, action) => {
   if (action.type in ROUTES_ACTIONS) {
