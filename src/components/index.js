@@ -13,6 +13,7 @@ import OverlayCompleted from './Overlay/Completed';
 import OverlayLoading from './Overlay/Loading';
 import ProgressBar from './ProgressBar';
 import Section from './Section';
+import Pagination from './Pagination';
 
 export {
   BaseView,
@@ -31,4 +32,5 @@ export {
   OverlayLoading,
   ProgressBar,
   Section,
+  Pagination,
 };
