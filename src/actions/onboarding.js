@@ -6,3 +6,9 @@ export const changeProfileImage = path => ({
     profilePicture: path,
   },
 });
+
+
+export const updateProfile = (payload) => ({
+  type: constants.ONBOARDING_CHANGE_PROFILE,
+  payload,
+});

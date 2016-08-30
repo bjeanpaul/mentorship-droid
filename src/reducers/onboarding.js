@@ -7,7 +7,7 @@ const onboarding = (state = {}, action) => {
     case constants.ONBOARDING_CHANGE_PROFILE:
       return {
         ...state,
-        profilePicture: action.payload.profilePicture,
+        ...action.payload,
       };
 
     default:
