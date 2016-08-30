@@ -1,4 +1,4 @@
-import { partialRight as partial } from 'lodash';
+import { partialRight as partial, isFunction } from 'lodash';
 import { switchError } from 'src/helpers';
 
 
@@ -24,3 +24,11 @@ export const dataAction = type => data => ({
   type,
   payload: data,
 });
+
+
+export const castThunk = fn => (...args) => {
+  const obj = fn(...args);
+  return !isFunction(obj)
+    ? dispatch => dispatch(obj)
+    : obj;
+};

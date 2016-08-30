@@ -4,6 +4,7 @@ import {
   apiAction,
   staticAction,
   dataAction,
+  castThunk,
 } from 'src/actionHelpers';
 
 import { mock, capture, fakeContext } from 'app/scripts/helpers';
@@ -106,6 +107,18 @@ describe('actionHelpers', () => {
         type: 'FOO',
         payload: { bar: 23 },
       });
+    });
+  });
+
+  describe('castThunk', () => {
+    it('should cast non-thunks to thunks', async () => {
+      expect(await capture(castThunk(() => 23)()))
+        .toEqual([23]);
+    });
+
+    it('should be a no-op wrapper for thunks', async () => {
+      expect(await capture(castThunk(() => dispatch => dispatch(23))()))
+        .toEqual([23]);
     });
   });
 });
