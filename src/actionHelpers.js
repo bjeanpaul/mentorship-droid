@@ -1,5 +1,6 @@
 import { partialRight as partial, isFunction } from 'lodash';
 import { switchError } from 'src/helpers';
+import Promise from 'bluebird';
 
 
 export const apiAction = ({
@@ -31,4 +32,13 @@ export const castThunk = fn => (...args) => {
   return !isFunction(obj)
     ? dispatch => dispatch(obj)
     : obj;
+};
+
+
+export const sequence = actions => (...args) => (...storeArgs) => {
+  const thunks = actions
+    .map(castThunk)
+    .map(fn => fn(...args));
+
+  return Promise.each(thunks, fn => fn(...storeArgs), { concurrency: 1 });
 };
