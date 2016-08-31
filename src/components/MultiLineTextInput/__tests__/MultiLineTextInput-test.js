@@ -17,14 +17,14 @@ describe('MultiLineTextInput', () => {
     expect(el.find('Text').at(0).children().nodes[0]).toEqual(5);
   });
 
+  // TODO
   it('should show updated number of characters', () => {
-    const el = shallow(
-      <MultiLineTextInput
-        value="12345"
-        maxLength={50}
-      />
-    );
-    // TODO
+    // const el = shallow(
+    //   <MultiLineTextInput
+    //     value="12345"
+    //     maxLength={50}
+    //   />
+    // );
     // el.find('TextInput').simulate('change', { target: { value: '1234567890' } });
   });
 
