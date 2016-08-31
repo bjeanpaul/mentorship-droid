@@ -1,6 +1,9 @@
-const contextMiddleware = fn => (dispatch, getState) => next => action => (
-  typeof action === 'function'
-    ? action(dispatch, fn(getState()), getState)
+import { isFunction } from 'lodash';
+
+
+const contextMiddleware = fn => () => next => action => (
+  isFunction(action)
+    ? next((dispatch, getState) => action(dispatch, fn(getState()), getState))
     : next(action));
 
 
