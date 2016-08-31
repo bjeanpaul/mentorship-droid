@@ -24,14 +24,14 @@ exports[`OnboardingOccupation should enable pagination next button 1`] = `
             "backgroundColor": "#f77040"
           },
           Object {
-            "flex": 0.6666666666666667
+            "flex": 0.5714285714285714
           }
         ]
       } />
     <View
       style={
         Object {
-          "flex": 0.33333333333333326
+          "flex": 0.4285714285714286
         }
       } />
   </View>
@@ -105,7 +105,7 @@ exports[`OnboardingOccupation should enable pagination next button 1`] = `
           ]
         }
         underlineColorAndroid="transparent"
-        value="" />
+        value="Because I love children." />
     </View>
     <Text
       style={
@@ -126,7 +126,7 @@ exports[`OnboardingOccupation should enable pagination next button 1`] = `
           }
         ]
       }>
-      0
+      24
       /
       50
     </Text>
@@ -176,56 +176,25 @@ exports[`OnboardingOccupation should enable pagination next button 1`] = `
           Array [
             Object {
               "alignItems": "center",
-              "borderRadius": 5,
-              "justifyContent": "center"
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
             },
-            Object {
-              "backgroundColor": "transparent",
-              "borderColor": "#f77040",
-              "borderWidth": 1
-            },
-            Array [
-              Object {
-                "marginLeft": 0,
-                "marginRight": 0
-              },
-              Object {
-                "flex": 1
-              }
-            ],
-            Object {
-              "borderColor": "#dfe5e6"
-            }
+            undefined
           ]
         }>
         <Text
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-                "fontSize": 13,
-                "textAlign": "center"
-              },
-              Array [
-                Object {
-                  "fontFamily": "Brandon Text_bold",
-                  "fontSize": 13,
-                  "fontWeight": "bold",
-                  "letterSpacing": 1,
-                  "marginBottom": 17,
-                  "marginTop": 15
-                },
-                Object {
-                  "color": "#f77040"
-                },
-                Object {
-                  "color": "#dfe5e6"
-                }
-              ]
-            ]
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
           }>
-          NEXT
+          TouchableNativeFeedback is not supported on this platform!
         </Text>
       </View>
     </View>
@@ -259,14 +228,14 @@ exports[`OnboardingOccupation should render 1`] = `
             "backgroundColor": "#f77040"
           },
           Object {
-            "flex": 0.6666666666666667
+            "flex": 0.5714285714285714
           }
         ]
       } />
     <View
       style={
         Object {
-          "flex": 0.33333333333333326
+          "flex": 0.4285714285714286
         }
       } />
   </View>

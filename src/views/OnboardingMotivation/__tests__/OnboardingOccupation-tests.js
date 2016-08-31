@@ -21,8 +21,7 @@ describe('OnboardingOccupation', () => {
 
   it('should enable pagination next button', () => {
     expect(render(createComponent({
-      jobTitle: 'Uncle',
-      jobSector: 'Family Member',
+      jobMotivation: 'Because I love children.',
     }))).toMatchSnapshot();
   });
 });
