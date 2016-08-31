@@ -13,6 +13,7 @@ import OnboardingOccupationContainer from 'src/containers/OnboardingOccupationCo
 import OnboardingMotivationContainer from 'src/containers/OnboardingMotivationContainer';
 import OnboardingOwnMentorContainer from 'src/containers/OnboardingOwnMentorContainer';
 import OnboardingThreeWordsContainer from 'src/containers/OnboardingThreeWordsContainer';
+import OnboardingSkillsContainer from 'src/containers/OnboardingSkillsContainer';
 
 
 export default fromPairs([
@@ -28,4 +29,5 @@ export default fromPairs([
   [constants.ROUTE_ONBOARDING_MOTIVATION, OnboardingMotivationContainer],
   [constants.ROUTE_ONBOARDING_OWN_MENTOR, OnboardingOwnMentorContainer],
   [constants.ROUTE_ONBOARDING_THREE_WORDS, OnboardingThreeWordsContainer],
+  [constants.ROUTE_ONBOARDING_SKILLS, OnboardingSkillsContainer],
 ]);
