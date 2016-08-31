@@ -11,6 +11,7 @@ const OnboardingOwnMentor = ({
   onBackPress,
   onNextPress,
 }) => {
+  // TODO: Create tag text input component
   const isPaginationDisabled = threeWords.split(' ').length < 3;
   return (
     <BaseView>
