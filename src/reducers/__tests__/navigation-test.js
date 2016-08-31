@@ -1,50 +1,81 @@
-import { pushRoute, popRoute } from 'src/actions/navigation';
-import * as constants from 'src/constants/navigation';
+import * as routes from 'src/constants/routes';
+import * as landing from 'src/actions/landing';
+import * as navigation from 'src/actions/navigation';
+import * as auth from 'src/actions/auth';
+import * as onboarding from 'src/actions/onboarding';
 import reduce from 'src/reducers/navigation';
+
+import {
+  reset,
+  push,
+  pop,
+  back,
+  forward,
+  insert,
+  createRoute,
+} from 'src/navigationHelpers';
+
+
+const fakeState = () => ({
+  routes: ['A', 'B', 'C'].map(createRoute),
+  index: 1,
+});
 
 
 describe('navigation/reducer', () => {
-  it('should have `ROUTE_LANDING` as the first default route', () => {
-    expect(reduce(void 0, { type: 'ping?' })).toEqual({
-      index: 0,
-      routes: [
-        { key: constants.ROUTE_LANDING },
-      ],
+  describe('NAVIGATE_BACK', () => {
+    it('should go back', () => {
+      expect(reduce(fakeState(), navigation.navigateBack()))
+        .toEqual(back(fakeState()));
     });
   });
 
-  it('should push new routes onto the stack', () => {
-    const state = {
-      index: 0,
-      routes: [
-        { key: 'Ping?' },
-      ],
-    };
-
-    expect(reduce(state, pushRoute('Pong!')))
-    .toEqual({
-      index: 1,
-      routes: [
-        { key: 'Ping?' },
-        { key: 'Pong!' },
-      ],
+  describe('NAVIGATE_FORWARD', () => {
+    it('should go forward', () => {
+      expect(reduce(fakeState(), navigation.navigateForward()))
+        .toEqual(forward(fakeState()));
     });
   });
 
-  it('should pop routes off the stack', () => {
-    const state = {
-      index: 1,
-      routes: [
-        { key: 'Ping?' },
-        { key: 'Pong!' },
-      ],
-    };
-    expect(reduce(state, popRoute()))
-    .toEqual({
-      index: 0,
-      routes: [
-        { key: 'Ping?' },
-      ],
+  describe('LANDING_GET_STARTED', () => {
+    it('should push the activation route', () => {
+      expect(reduce(fakeState(), landing.landingGetStarted()))
+        .toEqual(push(fakeState(), createRoute(routes.ROUTE_AUTH_ACTIVATION)));
+    });
+  });
+
+  describe('LANDING_LOGIN', () => {
+    it('should push the login route', () => {
+      expect(reduce(fakeState(), landing.landingLogin()))
+        .toEqual(push(fakeState(), createRoute(routes.ROUTE_AUTH_LOGIN)));
+    });
+  });
+
+  describe('AUTH_LOGIN_SUCCESS', () => {
+    it('should reset navigation state to contain only the welcome route', () => {
+      expect(reduce(fakeState(), auth.loginSuccess()))
+        .toEqual(reset(fakeState(), [createRoute(routes.ROUTE_ONBOARDING_WELCOME)]));
+    });
+  });
+
+  describe('ONBOARDING_START_PROFILE', () => {
+    it('should reset navigation state to the onboarding steps', () => {
+      expect(reduce(fakeState(), onboarding.startProfile()))
+        .toEqual(reset(fakeState(), routes.ONBOARDING_STEPS.map(createRoute), 0));
+    });
+  });
+
+  describe('ONBOARDING_CHOOSE_PROFILE_PICTURE', () => {
+    it('should insert the camera roll route', () => {
+      expect(reduce(fakeState(), onboarding.chooseProfilePicture()))
+        .toEqual(insert(fakeState(), createRoute(routes.ROUTE_ONBOARDING_CAMERA_ROLL)));
+    });
+  });
+
+  describe('ONBOARDING_UPDATE_PROFILE_PICTURE', () => {
+    it('should pop from the state', () => {
+      expect(reduce(fakeState(), onboarding.updateProfilePicture()))
+        .toEqual(pop(fakeState()));
     });
   });
 });
