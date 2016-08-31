@@ -11,7 +11,7 @@ export const chooseProfilePicture = () => ({
 });
 
 
-export const updateProfileImage = path => ({
+export const updateProfilePicture = path => ({
   type: constants.ONBOARDING_UPDATE_PROFILE_PICTURE,
   payload: {
     profilePicture: path,

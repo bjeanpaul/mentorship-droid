@@ -14,7 +14,7 @@ import {
   getProfile,
   updateProfile,
   removeProfile,
-  updateProfileImage,
+  updateProfilePicture,
 } from 'src/api';
 
 
@@ -83,9 +83,9 @@ describe('api/profiles', () => {
     });
   });
 
-  describe('updateProfileImage', () => {
+  describe('updateProfilePicture', () => {
     it('should construct a request for updateing a profile image', () => {
-      expect(updateProfileImage(1, '/foo.png', {
+      expect(updateProfilePicture(1, '/foo.png', {
         email: 'a@b.org',
         password: '1337',
       }))

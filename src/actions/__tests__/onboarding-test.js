@@ -19,9 +19,9 @@ describe('actions/onboarding', () => {
     });
   });
 
-  describe('updateProfileImage', () => {
+  describe('updateProfilePicture', () => {
     it('should create an action for profile image change', () => {
-      expect(actions.updateProfileImage('path/to/image.png')).toEqual({
+      expect(actions.updateProfilePicture('path/to/image.png')).toEqual({
         type: constants.ONBOARDING_UPDATE_PROFILE_PICTURE,
         payload: {
           profilePicture: 'path/to/image.png',
