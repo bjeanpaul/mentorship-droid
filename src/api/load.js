@@ -1,4 +1,4 @@
-import { merge } from 'lodash';
+import { merge, map } from 'lodash';
 import { listCategories } from 'src/api/categories';
 import { listActivities } from 'src/api/activities';
 
@@ -8,7 +8,9 @@ const load = auth => Promise.resolve()
     listCategories(auth),
     listActivities(auth),
   ]))
-  .then((...res) => merge(...res));
+  .then((res) => map(res, 'entities'))
+  .then(merge)
+  .then(entities => ({ entities }));
 
 
 export default load;

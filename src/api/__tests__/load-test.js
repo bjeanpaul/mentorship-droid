@@ -27,10 +27,12 @@ describe('api/load', () => {
 
       const res = await load(fakeAuth());
 
-      expect(res).toEqual(merge([
-        helpers.fakeCategoryListData(),
-        helpers.fakeActivityListData(),
-      ]));
+      expect(res).toEqual({
+        entities: merge([
+          helpers.fakeCategoryListData().entities,
+          helpers.fakeActivityListData().entities,
+        ]),
+      });
     });
 
     it('should call api methods with the correct params', async () => {
