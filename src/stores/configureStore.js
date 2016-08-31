@@ -3,7 +3,9 @@ import thunkMiddleware from 'redux-thunk';
 
 import { getContext } from 'src/stores/helpers';
 import contextMiddleware from 'src/stores/contextMiddleware';
+import chainMiddleware from 'src/stores/chainMiddleware';
 import rootReducer from 'src/reducers';
+import routeActions from 'src/actions/routes';
 
 
 export default function configureStore(initialState = {}) {
@@ -11,8 +13,9 @@ export default function configureStore(initialState = {}) {
     rootReducer,
     initialState,
     applyMiddleware(
-      thunkMiddleware,
       contextMiddleware(getContext),
+      chainMiddleware(routeActions),
+      thunkMiddleware,
     )
   );
 }

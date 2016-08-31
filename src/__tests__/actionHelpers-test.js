@@ -1,12 +1,16 @@
 import { identity, noop } from 'lodash';
+import defer from 'promise-defer';
+
+import { mock, capture, fakeContext } from 'app/scripts/helpers';
 
 import {
   apiAction,
   staticAction,
   dataAction,
+  castThunk,
+  sequence,
 } from 'src/actionHelpers';
 
-import { mock, capture, fakeContext } from 'app/scripts/helpers';
 
 describe('actionHelpers', () => {
   describe('apiAction', () => {
@@ -106,6 +110,75 @@ describe('actionHelpers', () => {
         type: 'FOO',
         payload: { bar: 23 },
       });
+    });
+  });
+
+  describe('castThunk', () => {
+    it('should cast non-thunks to thunks', async () => {
+      expect(await capture(castThunk(() => 23)()))
+        .toEqual([23]);
+    });
+
+    it('should be a no-op wrapper for thunks', async () => {
+      expect(await capture(castThunk(() => dispatch => dispatch(23))()))
+        .toEqual([23]);
+    });
+  });
+
+  describe('sequence', () => {
+    it('should wrap non-thunks', async () => {
+      expect(await capture(sequence([() => 21, () => 23])()))
+        .toEqual([21, 23]);
+    });
+
+    it('should run the given action creators sequentially', async () => {
+      const res = [];
+
+      const d1 = defer();
+      const d2 = defer();
+      const d3 = defer();
+
+      const a1 = (...args) => (dispatch, ...storeArgs) => d1.promise
+        .then(() => ['a1', ...args, ...storeArgs])
+        .then(dispatch);
+
+      const a2 = (...args) => (dispatch, ...storeArgs) => d2.promise
+        .then(() => ['a2', ...args, ...storeArgs])
+        .then(dispatch);
+
+      const a3 = (...args) => (dispatch, ...storeArgs) => d3.promise
+        .then(() => ['a3', ...args, ...storeArgs])
+        .then(dispatch);
+
+      const seq = sequence([a1, a2, a3]);
+
+      const p = seq(21, 23)((...args) => res.push(...args), 2, 3);
+
+      expect(res).toEqual([]);
+
+      d2.resolve();
+      jest.runAllTimers();
+
+      expect(res).toEqual([]);
+
+      d1.resolve();
+      jest.runAllTimers();
+
+      expect(res).toEqual([
+        ['a1', 21, 23, 2, 3],
+        ['a2', 21, 23, 2, 3],
+      ]);
+
+      d3.resolve();
+      jest.runAllTimers();
+
+      expect(res).toEqual([
+        ['a1', 21, 23, 2, 3],
+        ['a2', 21, 23, 2, 3],
+        ['a3', 21, 23, 2, 3],
+      ]);
+
+      await p;
     });
   });
 });
