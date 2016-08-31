@@ -110,14 +110,17 @@ exports[`OnboardingOccupation should enable pagination next button 1`] = `
       onFocus={[Function onFocus]}
       placeholderTextColor="#c0cbcc"
       style={
-        Object {
-          "color": "#003035",
-          "fontFamily": "Brandon Text",
-          "fontSize": 18,
-          "lineHeight": 28,
-          "marginBottom": 8,
-          "padding": 0
-        }
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 18,
+            "lineHeight": 28,
+            "marginBottom": 8,
+            "padding": 0
+          },
+          undefined
+        ]
       }
       underlineColorAndroid="transparent"
       value="Family Member" />
@@ -166,14 +169,17 @@ exports[`OnboardingOccupation should enable pagination next button 1`] = `
       onFocus={[Function onFocus]}
       placeholderTextColor="#c0cbcc"
       style={
-        Object {
-          "color": "#003035",
-          "fontFamily": "Brandon Text",
-          "fontSize": 18,
-          "lineHeight": 28,
-          "marginBottom": 8,
-          "padding": 0
-        }
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 18,
+            "lineHeight": 28,
+            "marginBottom": 8,
+            "padding": 0
+          },
+          undefined
+        ]
       }
       underlineColorAndroid="transparent"
       value="Uncle" />
@@ -361,14 +367,17 @@ exports[`OnboardingOccupation should render 1`] = `
       onFocus={[Function onFocus]}
       placeholderTextColor="#c0cbcc"
       style={
-        Object {
-          "color": "#003035",
-          "fontFamily": "Brandon Text",
-          "fontSize": 18,
-          "lineHeight": 28,
-          "marginBottom": 8,
-          "padding": 0
-        }
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 18,
+            "lineHeight": 28,
+            "marginBottom": 8,
+            "padding": 0
+          },
+          undefined
+        ]
       }
       underlineColorAndroid="transparent"
       value="" />
@@ -417,14 +426,17 @@ exports[`OnboardingOccupation should render 1`] = `
       onFocus={[Function onFocus]}
       placeholderTextColor="#c0cbcc"
       style={
-        Object {
-          "color": "#003035",
-          "fontFamily": "Brandon Text",
-          "fontSize": 18,
-          "lineHeight": 28,
-          "marginBottom": 8,
-          "padding": 0
-        }
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 18,
+            "lineHeight": 28,
+            "marginBottom": 8,
+            "padding": 0
+          },
+          undefined
+        ]
       }
       underlineColorAndroid="transparent"
       value="" />
