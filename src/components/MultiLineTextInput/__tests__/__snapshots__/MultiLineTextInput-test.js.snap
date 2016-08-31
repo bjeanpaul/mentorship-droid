@@ -14,7 +14,6 @@ exports[`MultiLineTextInput should render correctly 1`] = `
       ]
     }>
     <TextInput
-      enablesReturnKeyAutomatically={true}
       multiline={true}
       onBlur={[Function onBlur]}
       onChange={[Function onChange]}

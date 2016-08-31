@@ -5,11 +5,14 @@ import styles from './styles';
 
 
 export default class MultiLineTextInput extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+    const { value = '' } = props;
+
     this.state = {
       height: 0,
-      charCount: 0,
+      charCount: value.length || 0,
     };
   }
 
@@ -50,6 +53,7 @@ export default class MultiLineTextInput extends React.Component {
 
 
 MultiLineTextInput.propTypes = {
+  value: PropTypes.string,
   onChangeText: PropTypes.func,
   maxLength: PropTypes.number,
 };
