@@ -35,10 +35,14 @@ export const castThunk = fn => (...args) => {
 };
 
 
-export const sequence = actions => (...args) => (...storeArgs) => {
+export const sequence = actions => (...args) => {
   const thunks = actions
     .map(castThunk)
     .map(fn => fn(...args));
 
-  return Promise.each(thunks, fn => fn(...storeArgs), { concurrency: 1 });
+  return (...storeArgs) => {
+    let p = Promise.resolve();
+    for (const fn of thunks) p = p.then(() => fn(...storeArgs));
+    return p;
+  };
 };

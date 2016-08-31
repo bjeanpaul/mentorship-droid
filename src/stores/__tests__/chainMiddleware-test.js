@@ -10,13 +10,10 @@ describe('chainMiddleware', () => {
 
     await middleware({ dispatch: noop })(next)({ type: 'FOO' });
 
-    const [[a], [b]] = next.mock.calls;
+    const [[action]] = next.mock.calls;
 
-    expect(a)
-      .toEqual({ type: 'FOO' });
-
-    expect(await capture(b))
-      .toEqual([{ type: 'BAR' }]);
+    expect(await capture(action))
+      .toEqual([{ type: 'FOO' }, { type: 'BAR' }]);
   });
 
   it('should support non-thunks', async () => {
@@ -25,13 +22,10 @@ describe('chainMiddleware', () => {
 
     await middleware({ dispatch: noop })(next)({ type: 'FOO' });
 
-    const [[a], [b]] = next.mock.calls;
+    const [[action]] = next.mock.calls;
 
-    expect(a)
-      .toEqual({ type: 'FOO' });
-
-    expect(await capture(b))
-      .toEqual([{ type: 'BAR' }]);
+    expect(await capture(action))
+      .toEqual([{ type: 'FOO' }, { type: 'BAR' }]);
   });
 
   it('should pass on actions without mappings', async () => {
