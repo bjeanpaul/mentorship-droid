@@ -26,3 +26,4 @@ export const pushOnboardingMotivation = makePushRoute(constants.ROUTE_ONBOARDING
 export const pushOnboardingOwnMentor = makePushRoute(constants.ROUTE_ONBOARDING_OWN_MENTOR);
 export const pushOnboardingThreeWords = makePushRoute(constants.ROUTE_ONBOARDING_THREE_WORDS);
 export const pushOnboardingSkills = makePushRoute(constants.ROUTE_ONBOARDING_SKILLS);
+export const pushOnboardingDone = makePushRoute(constants.ROUTE_ONBOARDING_DONE);
