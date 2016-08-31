@@ -43,7 +43,7 @@ exports[`Loading should render 1`] = `
         }
       ]
     }>
-    Loading your information...
+    Loading...
   </Text>
 </View>
 `;
