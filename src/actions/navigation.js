@@ -23,6 +23,6 @@ export const pushProfilePictureRoute = makePushRoute(constants.ROUTE_ONBOARDING_
 export const pushCameraRollRoute = makePushRoute(constants.ROUTE_ONBOARDING_CAMERA_ROLL);
 export const pushOnboardingOccupationRoute = makePushRoute(constants.ROUTE_ONBOARDING_OCCUPATION);
 export const pushOnboardingMotivation = makePushRoute(constants.ROUTE_ONBOARDING_MOTIVATION);
-export const pushOnboardingInspiration = makePushRoute(constants.ROUTE_ONBOARDING_INSPIRATION);
+export const pushOnboardingOwnMentor = makePushRoute(constants.ROUTE_ONBOARDING_OWN_MENTOR);
 export const pushOnboardingThreeWords = makePushRoute(constants.ROUTE_ONBOARDING_THREE_WORDS);
 export const pushOnboardingSkills = makePushRoute(constants.ROUTE_ONBOARDING_SKILLS);

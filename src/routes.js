@@ -11,6 +11,7 @@ import ProfilePictureContainer from 'src/containers/ProfilePictureContainer';
 import CameraRollContainer from 'src/containers/CameraRollContainer';
 import OnboardingOccupationContainer from 'src/containers/OnboardingOccupationContainer';
 import OnboardingMotivationContainer from 'src/containers/OnboardingMotivationContainer';
+import OnboardingOwnMentorContainer from 'src/containers/OnboardingOwnMentorContainer';
 
 
 export default fromPairs([
@@ -24,4 +25,5 @@ export default fromPairs([
   [constants.ROUTE_ONBOARDING_CAMERA_ROLL, CameraRollContainer],
   [constants.ROUTE_ONBOARDING_OCCUPATION, OnboardingOccupationContainer],
   [constants.ROUTE_ONBOARDING_MOTIVATION, OnboardingMotivationContainer],
+  [constants.ROUTE_ONBOARDING_OWN_MENTOR, OnboardingOwnMentorContainer],
 ]);
