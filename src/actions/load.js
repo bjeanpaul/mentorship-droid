@@ -1,5 +1,5 @@
 import { apiAction, staticAction, dataAction } from 'src/actionHelpers';
-import * as constants from 'src/constants/auth';
+import * as constants from 'src/constants/load';
 import * as api from 'src/api';
 
 const { ApiResponseError } = api;

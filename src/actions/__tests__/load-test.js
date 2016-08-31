@@ -5,7 +5,7 @@ jest.mock('src/actionHelpers', () => ({
 }));
 
 import * as api from 'src/api';
-import * as constants from 'src/constants/profile';
+import * as constants from 'src/constants/load';
 import { apiAction, staticAction, dataAction } from 'src/actionHelpers';
 import { load } from 'src/actions/load';
 
