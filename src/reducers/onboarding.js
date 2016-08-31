@@ -4,10 +4,11 @@ import * as constants from 'src/constants/onboarding';
 const onboarding = (state = {}, action) => {
   switch (action.type) {
 
-    case constants.ONBOARDING_CHANGE_PROFILE:
+    case constants.ONBOARDING_UPDATE_PROFILE_PICTURE:
+    case constants.ONBOARDING_UPDATE_PROFILE:
       return {
         ...state,
-        profilePicture: action.payload.profilePicture,
+        ...action.payload,
       };
 
     default:
