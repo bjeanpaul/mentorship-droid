@@ -27,7 +27,6 @@ export default class MultiLineTextInput extends React.Component {
         <TextInput
           {...this.props}
           multiline
-          enablesReturnKeyAutomatically
           onChange={(event) => this.setState({
             height: event.nativeEvent.contentSize.height,
           })}
