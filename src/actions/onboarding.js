@@ -1,7 +1,8 @@
 import * as constants from 'src/constants/onboarding';
 
-export const changeProfileImage = path => ({
-  type: constants.ONBOARDING_CHANGE_PROFILE,
+
+export const updateProfileImage = path => ({
+  type: constants.ONBOARDING_UPDATE_PROFILE_PICTURE,
   payload: {
     profilePicture: path,
   },
@@ -9,6 +10,6 @@ export const changeProfileImage = path => ({
 
 
 export const updateProfile = (payload) => ({
-  type: constants.ONBOARDING_CHANGE_PROFILE,
+  type: constants.ONBOARDING_UPDATE_PROFILE,
   payload,
 });

@@ -14,7 +14,7 @@ const OnboardingOccupation = ({
   const isPaginationDisabled = jobTitle.length === 0 || jobSector.length === 0;
   return (
     <BaseView>
-      <ProgressBar completed={0.3 / 0.7} />
+      <ProgressBar completed={3 / 7} />
       <Header>
         <Text style={Text.types.title}>What do you do?</Text>
       </Header>

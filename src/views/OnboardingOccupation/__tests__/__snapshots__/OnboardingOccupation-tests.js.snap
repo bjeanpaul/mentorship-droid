@@ -24,7 +24,7 @@ exports[`OnboardingOccupation should enable pagination next button 1`] = `
             "backgroundColor": "#f77040"
           },
           Object {
-            "flex": 0.4285714285714286
+            "flex": 0.42857142857142855
           }
         ]
       } />
@@ -275,7 +275,7 @@ exports[`OnboardingOccupation should render 1`] = `
             "backgroundColor": "#f77040"
           },
           Object {
-            "flex": 0.4285714285714286
+            "flex": 0.42857142857142855
           }
         ]
       } />
