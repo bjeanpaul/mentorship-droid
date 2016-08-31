@@ -1,19 +1,21 @@
-import { pushRoute, popRoute } from 'src/actions/navigation';
+import * as actions from 'src/actions/navigation';
 import * as constants from 'src/constants/navigation';
 
-describe('navigation/actions', () => {
-  it('should create action for pushing a route ', () => {
-    expect(pushRoute('i.am.a.test.route')).toEqual({
-      type: constants.NAVIGATION_PUSH,
-      payload: {
-        key: 'i.am.a.test.route',
-      },
+
+describe('actions/navigation', () => {
+  describe('navigationBack', () => {
+    it('should create an action for navigating back', () => {
+      expect(actions.navigateBack()).toEqual({
+        type: constants.NAVIGATE_BACK,
+      });
     });
   });
 
-  it('should create action for popping a route', () => {
-    expect(popRoute()).toEqual({
-      type: constants.NAVIGATION_POP,
+  describe('navigationForward', () => {
+    it('should create an action for navigating forward', () => {
+      expect(actions.navigateForward()).toEqual({
+        type: constants.NAVIGATE_FORWARD,
+      });
     });
   });
 });
