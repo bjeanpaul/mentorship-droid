@@ -11,7 +11,7 @@ const OnboardingMotivation = ({
   onBackPress,
   onNextPress,
 }) => {
-  const isPaginationDisabled = jobMotivation.length <= 10;
+  const isPaginationDisabled = jobMotivation.length === 0;
   return (
     <BaseView>
       <ProgressBar completed={4 / 7} />
