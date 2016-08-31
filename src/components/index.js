@@ -14,6 +14,7 @@ import OverlayLoading from './Overlay/Loading';
 import ProgressBar from './ProgressBar';
 import Section from './Section';
 import Pagination from './Pagination';
+import SpinningImage from './SpinningImage';
 
 export {
   BaseView,
@@ -33,4 +34,5 @@ export {
   ProgressBar,
   Section,
   Pagination,
+  SpinningImage,
 };
