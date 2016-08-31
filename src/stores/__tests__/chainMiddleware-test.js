@@ -8,31 +8,37 @@ describe('chainMiddleware', () => {
     const target = () => dispatch => dispatch({ type: 'BAR' });
     const middleware = chainMiddleware({ FOO: target });
 
-    middleware({ dispatch: noop })(next)({ type: 'FOO' });
+    await middleware({ dispatch: noop })(next)({ type: 'FOO' });
 
-    const [[res]] = next.mock.calls;
+    const [[a], [b]] = next.mock.calls;
 
-    expect(await capture(res()))
-      .toEqual([{ type: 'FOO' }, { type: 'BAR' }]);
+    expect(a)
+      .toEqual({ type: 'FOO' });
+
+    expect(await capture(b))
+      .toEqual([{ type: 'BAR' }]);
   });
 
   it('should support non-thunks', async () => {
     const next = jest.fn();
     const middleware = chainMiddleware({ FOO: () => ({ type: 'BAR' }) });
 
-    middleware({ dispatch: noop })(next)({ type: 'FOO' });
+    await middleware({ dispatch: noop })(next)({ type: 'FOO' });
 
-    const [[res]] = next.mock.calls;
+    const [[a], [b]] = next.mock.calls;
 
-    expect(await capture(res()))
-      .toEqual([{ type: 'FOO' }, { type: 'BAR' }]);
+    expect(a)
+      .toEqual({ type: 'FOO' });
+
+    expect(await capture(b))
+      .toEqual([{ type: 'BAR' }]);
   });
 
   it('should pass on actions without mappings', async () => {
     const next = jest.fn();
     const middleware = chainMiddleware({ FOO: () => ({ type: 'BAR' }) });
 
-    middleware({ dispatch: noop })(next)({ type: 'BAZ' });
+    await middleware({ dispatch: noop })(next)({ type: 'BAZ' });
     expect(next.mock.calls).toEqual([[{ type: 'BAZ' }]]);
   });
 });

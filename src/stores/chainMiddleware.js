@@ -1,11 +1,22 @@
-import { constant, has } from 'lodash';
-import { sequence } from 'src/actionHelpers';
+import { has, mapValues } from 'lodash';
+import { castThunk } from 'src/actionHelpers';
 
 
-const chainMiddleware = mappings => () => next => action => (
-  has(mappings, action.type)
-    ? next(sequence([constant(action), mappings[action.type]]))
-    : next(action));
+const chainMiddleware = rawMappings => {
+  const mappings = mapValues(rawMappings, castThunk);
+  let isChaining = false;
+
+  return () => next => async action => {
+    if (!has(mappings, action.type)) {
+      await next(action);
+    } else if (!isChaining) {
+      isChaining = true;
+      await next(action);
+      await next(mappings[action.type]());
+      isChaining = false;
+    }
+  };
+};
 
 
 export default chainMiddleware;
