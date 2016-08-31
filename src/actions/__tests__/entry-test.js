@@ -5,14 +5,14 @@ jest.mock('src/actionHelpers', () => ({
 }));
 
 import * as api from 'src/api';
-import * as constants from 'src/constants/load';
+import * as constants from 'src/constants/entry';
 import { apiAction, staticAction, dataAction } from 'src/actionHelpers';
-import { load } from 'src/actions/load';
+import { load } from 'src/actions/entry';
 
 const { ApiResponseError } = api;
 
 
-describe('actions/load', () => {
+describe('actions/entry', () => {
   describe('load', () => {
     it('should create actions for loading from the api', () => {
       expect(load).toEqual(apiAction({
