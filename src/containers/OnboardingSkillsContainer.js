@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import OnboardingSkills from 'src/views/OnboardingSkills';
 import { updateProfile } from 'src/actions/onboarding';
 import { popRoute, pushOnboardingOwnMentor } from 'src/actions/navigation';
+import { noop } from 'lodash';
 
 export default connect(
   (state) => ({
@@ -10,6 +11,6 @@ export default connect(
   {
     onChangeText: updateProfile,
     onBackPress: popRoute,
-    onNextPress: pushOnboardingOwnMentor,
+    onNextPress: noop, // TODO
   }
 )(OnboardingSkills);
