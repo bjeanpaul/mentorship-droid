@@ -11,9 +11,9 @@ import ProfilePictureContainer from 'src/containers/ProfilePictureContainer';
 import CameraRollContainer from 'src/containers/CameraRollContainer';
 import OnboardingOccupationContainer from 'src/containers/OnboardingOccupationContainer';
 import OnboardingMotivationContainer from 'src/containers/OnboardingMotivationContainer';
-//import OnboardingInspirationContainer from 'src/containers/OnboardingInspirationContainer';
-//import OnboardingThreeWordsContainer from 'src/containers/OnboardingThreeWordsContainer';
-//import OnboardingSkillsContainer from 'src/containers/OnboardingSkillsContainer';
+// import OnboardingInspirationContainer from 'src/containers/OnboardingInspirationContainer';
+// import OnboardingThreeWordsContainer from 'src/containers/OnboardingThreeWordsContainer';
+// import OnboardingSkillsContainer from 'src/containers/OnboardingSkillsContainer';
 
 
 export default fromPairs([
