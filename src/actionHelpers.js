@@ -1,6 +1,5 @@
 import { partialRight as partial, isFunction } from 'lodash';
 import { switchError } from 'src/helpers';
-import Promise from 'bluebird';
 
 
 export const apiAction = ({
