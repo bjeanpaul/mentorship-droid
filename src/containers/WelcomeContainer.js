@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Hello from 'src/views/Hello';
-import { pushProfilePictureRoute } from 'src/actions/navigation';
+import { startProfile } from 'src/actions/onboarding';
 
 import { getProfileId } from 'src/reducers/auth';
 import { getProfile } from 'src/reducers/profile';
@@ -9,6 +9,6 @@ export default connect(
   state => ({
     name: getProfile(state, getProfileId(state)).firstName,
   }), {
-    onCompleteProfilePress: pushProfilePictureRoute,
+    onCompleteProfilePress: startProfile,
   }
 )(Hello);
