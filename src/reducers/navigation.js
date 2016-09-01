@@ -5,12 +5,12 @@ import * as auth from 'src/constants/auth';
 import * as onboarding from 'src/constants/onboarding';
 
 import {
-  reset,
   push,
-  pop,
+  popCurrent,
   back,
   forward,
-  insert,
+  insertAfterCurrent,
+  pushList,
   createRoute,
 } from 'src/navigationHelpers';
 
@@ -33,16 +33,16 @@ const navigationReducer = (state = {
       return push(state, createRoute(routes.ROUTE_AUTH_LOGIN));
 
     case auth.AUTH_LOGIN_SUCCESS:
-      return reset(state, [createRoute(routes.ROUTE_ONBOARDING_WELCOME)]);
+      return push(state, createRoute(routes.ROUTE_ONBOARDING_WELCOME));
 
     case onboarding.ONBOARDING_START_PROFILE:
-      return reset(state, routes.ONBOARDING_STEPS.map(createRoute), 0);
+      return pushList(state, routes.ONBOARDING_STEPS.map(createRoute));
 
     case onboarding.ONBOARDING_CHOOSE_PROFILE_PICTURE:
-      return insert(state, createRoute(routes.ROUTE_ONBOARDING_CAMERA_ROLL));
+      return insertAfterCurrent(state, createRoute(routes.ROUTE_ONBOARDING_CAMERA_ROLL));
 
     case onboarding.ONBOARDING_UPDATE_PROFILE_PICTURE:
-      return pop(state);
+      return popCurrent(state);
 
     default:
       return state;

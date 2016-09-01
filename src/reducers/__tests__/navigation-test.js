@@ -6,13 +6,13 @@ import * as onboarding from 'src/actions/onboarding';
 import reduce from 'src/reducers/navigation';
 
 import {
-  reset,
-  push,
-  pop,
+  createRoute,
   back,
   forward,
-  insert,
-  createRoute,
+  push,
+  pushList,
+  popCurrent,
+  insertAfterCurrent,
 } from 'src/navigationHelpers';
 
 
@@ -52,30 +52,31 @@ describe('navigation/reducer', () => {
   });
 
   describe('AUTH_LOGIN_SUCCESS', () => {
-    it('should reset navigation state to contain only the welcome route', () => {
+    it('should push the welcome route', () => {
       expect(reduce(fakeState(), auth.loginSuccess()))
-        .toEqual(reset(fakeState(), [createRoute(routes.ROUTE_ONBOARDING_WELCOME)]));
+        .toEqual(push(fakeState(), createRoute(routes.ROUTE_ONBOARDING_WELCOME)));
     });
   });
 
   describe('ONBOARDING_START_PROFILE', () => {
-    it('should reset navigation state to the onboarding steps', () => {
+    it('should push on the onboarding steps', () => {
       expect(reduce(fakeState(), onboarding.startProfile()))
-        .toEqual(reset(fakeState(), routes.ONBOARDING_STEPS.map(createRoute), 0));
+        .toEqual(pushList(fakeState(), routes.ONBOARDING_STEPS.map(createRoute)));
     });
   });
 
   describe('ONBOARDING_CHOOSE_PROFILE_PICTURE', () => {
     it('should insert the camera roll route', () => {
+      const cameraRollRoute = createRoute(routes.ROUTE_ONBOARDING_CAMERA_ROLL);
       expect(reduce(fakeState(), onboarding.chooseProfilePicture()))
-        .toEqual(insert(fakeState(), createRoute(routes.ROUTE_ONBOARDING_CAMERA_ROLL)));
+        .toEqual(insertAfterCurrent(fakeState(), cameraRollRoute));
     });
   });
 
   describe('ONBOARDING_UPDATE_PROFILE_PICTURE', () => {
     it('should pop from the state', () => {
       expect(reduce(fakeState(), onboarding.updateProfilePicture()))
-        .toEqual(pop(fakeState()));
+        .toEqual(popCurrent(fakeState()));
     });
   });
 });
