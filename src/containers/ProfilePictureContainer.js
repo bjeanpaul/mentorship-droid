@@ -1,11 +1,14 @@
 import { connect } from 'react-redux';
 import ProfilePicture from 'src/views/ProfilePicture';
-import { pushCameraRollRoute } from 'src/actions/navigation';
+import { navigateBack, navigateForward } from 'src/actions/navigation';
+import { chooseProfilePicture } from 'src/actions/onboarding';
 
 export default connect(
   state => ({
     imagePath: state.onboarding.profilePicture,
   }), {
-    onChoosePhotoPress: pushCameraRollRoute,
+    onChoosePhotoPress: chooseProfilePicture,
+    onBackPress: navigateBack,
+    onNextPress: navigateForward,
   }
 )(ProfilePicture);
