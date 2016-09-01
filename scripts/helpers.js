@@ -13,12 +13,9 @@ export const capture = async (fn, ...xargs) => {
 
 export const mock = () => {
   const __id = uniqueId();
-
-  // we need to wrap jest.fn() so we can still do equality testing on our mock
-  // function's results
   const fn = jest.fn();
 
-  return (...args) => extend((...fnArgs) => fn(...fnArgs), fn, {
+  return (...args) => extend(fn, {
     __id,
     args,
   });

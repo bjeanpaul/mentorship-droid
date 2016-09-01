@@ -6,8 +6,9 @@ jest.mock('src/actionHelpers', () => ({
 
 jest.mock('src/api/profiles');
 
+import { isEqual } from 'lodash';
 import * as constants from 'src/constants/entry';
-import { enter as apiEnter, profileIsComplete, ApiResponseError } from 'src/api';
+import { load, profileIsComplete, ApiResponseError } from 'src/api';
 import { apiAction, staticAction, dataAction } from 'src/actionHelpers';
 import { enter, enterNewUser, enterExistingUser } from 'src/actions/entry';
 import { capture, fakeContext } from 'app/scripts/helpers';
@@ -22,14 +23,14 @@ describe('actions/entry', () => {
 
   describe('enterExistingUser', () => {
     it('should create actions for entering from the api', () => {
-      expect(enterExistingUser.signature).toEqual(apiAction({
-        method: apiEnter,
+      expect(isEqual(enterExistingUser, apiAction({
+        method: load,
         request: staticAction(constants.EXISTING_USER_ENTER_REQUEST),
         success: dataAction(constants.EXISTING_USER_ENTER_SUCCESS),
         failures: [
           [ApiResponseError, staticAction(constants.EXISTING_USER_ENTER_FAILURE)],
         ],
-      }).signature);
+      }))).toBe(true);
     });
   });
 
