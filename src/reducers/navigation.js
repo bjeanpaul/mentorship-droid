@@ -2,7 +2,6 @@ import { NavigationExperimental } from 'react-native';
 const { StateUtils: NavigationStateUtils } = NavigationExperimental;
 
 import * as constants from 'src/constants/navigation';
-import ROUTES_ACTIONS from 'src/actions/routes';
 
 
 const navigation = (state = {
@@ -11,11 +10,6 @@ const navigation = (state = {
     { key: constants.ROUTE_LANDING },
   ],
 }, action) => {
-  if (action.type in ROUTES_ACTIONS) {
-    return navigation(state, ROUTES_ACTIONS[action.type]());
-  }
-
-
   switch (action.type) {
     case constants.NAVIGATION_PUSH:
       if (!NavigationStateUtils.has(state, action.payload.key)) {

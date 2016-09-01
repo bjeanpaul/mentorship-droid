@@ -1,26 +1,30 @@
+import noop from 'lodash';
 import contextMiddleware from 'src/stores/contextMiddleware';
+import { capture } from 'app/scripts/helpers';
 
 
 describe('contextMiddleware', () => {
-  it('should provide context to function actions', () => {
+  it('should provide context to function actions', async () => {
     const middleware = contextMiddleware(({ foo }) => ({ foo }));
+
+    const next = jest.fn();
 
     const getState = () => ({
       foo: 21,
       bar: 23,
     });
 
-    const dispatch = () => null;
-    const next = () => null;
-    const action = jest.fn();
+    const action = (dispatch, { foo }) => dispatch({ baz: foo });
 
-    middleware(dispatch, getState)(next)(action);
+    middleware({
+      dispatch: noop,
+      getState: noop,
+    })(next)(action);
 
-    expect(action.mock.calls).toEqual([[
-      dispatch,
-      { foo: 21 },
-      getState,
-    ]]);
+    const [[res]] = next.mock.calls;
+
+    expect(await capture(res, getState))
+      .toEqual([{ baz: 21 }]);
   });
 
   it('should pass on non-function actions', () => {

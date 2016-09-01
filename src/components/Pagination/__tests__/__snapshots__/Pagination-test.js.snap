@@ -1,0 +1,156 @@
+exports[`Button should be disabled 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "margin": 16
+    }
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffbcbc",
+          "borderColor": "red",
+          "borderWidth": 1,
+          "height": 100,
+          "justifyContent": "center",
+          "margin": 10,
+          "width": 300
+        },
+        undefined
+      ]
+    }>
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "margin": 20
+        }
+      }>
+      TouchableNativeFeedback is not supported on this platform!
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 5,
+          "justifyContent": "center"
+        },
+        Object {
+          "backgroundColor": "transparent",
+          "borderColor": "#f77040",
+          "borderWidth": 1
+        },
+        Array [
+          Object {
+            "marginLeft": 0,
+            "marginRight": 0
+          },
+          Object {
+            "flex": 1
+          }
+        ],
+        Object {
+          "borderColor": "#dfe5e6"
+        }
+      ]
+    }>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Array [
+            Object {
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 13,
+              "fontWeight": "bold",
+              "letterSpacing": 1,
+              "marginBottom": 17,
+              "marginTop": 15
+            },
+            Object {
+              "color": "#f77040"
+            },
+            Object {
+              "color": "#dfe5e6"
+            }
+          ]
+        ]
+      }>
+      NEXT
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Button should render props correctly 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "margin": 16
+    }
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffbcbc",
+          "borderColor": "red",
+          "borderWidth": 1,
+          "height": 100,
+          "justifyContent": "center",
+          "margin": 10,
+          "width": 300
+        },
+        undefined
+      ]
+    }>
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "margin": 20
+        }
+      }>
+      TouchableNativeFeedback is not supported on this platform!
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffbcbc",
+          "borderColor": "red",
+          "borderWidth": 1,
+          "height": 100,
+          "justifyContent": "center",
+          "margin": 10,
+          "width": 300
+        },
+        undefined
+      ]
+    }>
+    <Text
+      style={
+        Object {
+          "color": "#333333",
+          "margin": 20
+        }
+      }>
+      TouchableNativeFeedback is not supported on this platform!
+    </Text>
+  </View>
+</View>
+`;

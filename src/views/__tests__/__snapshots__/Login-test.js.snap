@@ -102,14 +102,17 @@ exports[`auth/Login should draw error statuses 1`] = `
         onFocus={[Function onFocus]}
         placeholderTextColor="#c0cbcc"
         style={
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 18,
-            "lineHeight": 28,
-            "marginBottom": 8,
-            "padding": 0
-          }
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 18,
+              "lineHeight": 28,
+              "marginBottom": 8,
+              "padding": 0
+            },
+            undefined
+          ]
         }
         underlineColorAndroid="transparent"
         value={undefined} />
@@ -159,14 +162,17 @@ exports[`auth/Login should draw error statuses 1`] = `
         placeholderTextColor="#c0cbcc"
         secureTextEntry={true}
         style={
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 18,
-            "lineHeight": 28,
-            "marginBottom": 8,
-            "padding": 0
-          }
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 18,
+              "lineHeight": 28,
+              "marginBottom": 8,
+              "padding": 0
+            },
+            undefined
+          ]
         }
         underlineColorAndroid="transparent"
         value={undefined} />
@@ -319,14 +325,17 @@ exports[`auth/Login should draw not found statuses 1`] = `
         onFocus={[Function onFocus]}
         placeholderTextColor="#c0cbcc"
         style={
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 18,
-            "lineHeight": 28,
-            "marginBottom": 8,
-            "padding": 0
-          }
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 18,
+              "lineHeight": 28,
+              "marginBottom": 8,
+              "padding": 0
+            },
+            undefined
+          ]
         }
         underlineColorAndroid="transparent"
         value={undefined} />
@@ -376,14 +385,17 @@ exports[`auth/Login should draw not found statuses 1`] = `
         placeholderTextColor="#c0cbcc"
         secureTextEntry={true}
         style={
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 18,
-            "lineHeight": 28,
-            "marginBottom": 8,
-            "padding": 0
-          }
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 18,
+              "lineHeight": 28,
+              "marginBottom": 8,
+              "padding": 0
+            },
+            undefined
+          ]
         }
         underlineColorAndroid="transparent"
         value={undefined} />
