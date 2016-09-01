@@ -1,7 +1,17 @@
+import { every, pick, isNull } from 'lodash';
 import { arrayOf } from 'normalizr';
 import request, { imageData } from 'src/api/request';
 import { Profile } from 'src/api/schemas';
 import { parseResults } from 'src/api/parse';
+
+
+export const REQUIRED_PROFILE_FIELDS = [
+  'inspiration',
+  'job_sector',
+  'job_title',
+  'motivation',
+  'profile_pick'
+];
 
 
 export const listProfiles = (auth, params = {}) => request({
@@ -55,3 +65,8 @@ export const updateProfilePicture = (id, path, auth) => request({
     type: 'image/png',
   }),
 });
+
+
+export const profileIsComplete = profile => every(
+  pick(profile, REQUIRED_PROFILE_FIELDS),
+  v => !isNull(v));

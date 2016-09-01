@@ -1,7 +1,7 @@
 jest.mock('src/api/request');
 
 
-import { identity } from 'lodash';
+import { identity, fromPairs } from 'lodash';
 import { arrayOf } from 'normalizr';
 import { fakeAuth } from 'app/scripts/helpers';
 import request, { imageData } from 'src/api/request';
@@ -15,6 +15,8 @@ import {
   updateProfile,
   removeProfile,
   updateProfilePicture,
+  profileIsComplete,
+  REQUIRED_PROFILE_FIELDS,
 } from 'src/api';
 
 
@@ -102,6 +104,24 @@ describe('api/profiles', () => {
           password: '1337',
         },
       });
+    });
+  });
+
+  describe('profileIsComplete', () => {
+    it('should return true only if all required fields are not null', () => {
+      const profile = fromPairs([
+        REQUIRED_PROFILE_FIELDS,
+        REQUIRED_PROFILE_FIELDS.map(() => 'FAKE_FIELD_VALUE'),
+      ]);
+
+      expect(profileIsComplete(profile)).toBe(true);
+
+      REQUIRED_PROFILE_FIELDS.forEach(name => (
+        expect(profileIsComplete({
+          ...profile,
+          ...fromPairs([[name, null]]),
+        }))
+        .toBe(false)));
     });
   });
 });
