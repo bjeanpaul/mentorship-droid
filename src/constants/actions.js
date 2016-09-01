@@ -1,7 +1,7 @@
 import { PROFILE_FETCH_SUCCESS } from 'src/constants/profile';
 
 import { AUTH_LOGIN_SUCCESS } from 'src/constants/auth';
-import { LOAD_SUCCESS } from 'src/constants/load';
+import { LOAD_SUCCESS } from 'src/constants/entry';
 
 import {
   SCHEDULED_CALL_LIST_SUCCESS,
