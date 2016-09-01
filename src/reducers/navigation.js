@@ -1,7 +1,7 @@
 import * as routes from 'src/constants/routes';
 import * as landing from 'src/constants/landing';
 import * as navigation from 'src/constants/navigation';
-import * as auth from 'src/constants/auth';
+import * as entry from 'src/constants/entry';
 import * as onboarding from 'src/constants/onboarding';
 
 import {
@@ -32,8 +32,14 @@ const navigationReducer = (state = {
     case landing.SHOW_LOGIN_REQUEST:
       return push(state, createRoute(routes.ROUTE_AUTH_LOGIN));
 
-    case auth.AUTH_LOGIN_SUCCESS:
+    case entry.NEW_USER_ENTER:
       return push(state, createRoute(routes.ROUTE_ONBOARDING_WELCOME));
+
+    case entry.EXISTING_USER_ENTER_REQUEST:
+      return push(state, createRoute(routes.ROUTE_LOADING));
+
+    case entry.EXISTING_USER_ENTER_SUCCESS:
+      return push(state, createRoute(routes.ROUTE_JOURNEY));
 
     case onboarding.ONBOARDING_START_PROFILE:
       return pushList(state, routes.ONBOARDING_STEPS.map(createRoute));

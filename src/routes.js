@@ -5,7 +5,6 @@ import LandingContainer from 'src/containers/LandingContainer';
 import LoginContainer from 'src/containers/LoginContainer';
 import ActivationContainer from 'src/containers/ActivationContainer';
 
-
 import WelcomeContainer from 'src/containers/WelcomeContainer';
 import ProfilePictureContainer from 'src/containers/ProfilePictureContainer';
 import CameraRollContainer from 'src/containers/CameraRollContainer';
@@ -14,6 +13,10 @@ import OnboardingMotivationContainer from 'src/containers/OnboardingMotivationCo
 import OnboardingOwnMentorContainer from 'src/containers/OnboardingOwnMentorContainer';
 import OnboardingThreeWordsContainer from 'src/containers/OnboardingThreeWordsContainer';
 import OnboardingSkillsContainer from 'src/containers/OnboardingSkillsContainer';
+
+import LoadingContainer from 'src/containers/LoadingContainer';
+
+import JourneyContainer from 'src/containers/JourneyContainer';
 
 
 export default fromPairs([
@@ -30,4 +33,8 @@ export default fromPairs([
   [constants.ROUTE_ONBOARDING_OWN_MENTOR, OnboardingOwnMentorContainer],
   [constants.ROUTE_ONBOARDING_THREE_WORDS, OnboardingThreeWordsContainer],
   [constants.ROUTE_ONBOARDING_SKILLS, OnboardingSkillsContainer],
+
+  [constants.ROUTE_LOADING, LoadingContainer],
+
+  [constants.ROUTE_JOURNEY, JourneyContainer],
 ]);
