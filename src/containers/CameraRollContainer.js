@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import CameraRoll from 'src/views/CameraRoll';
-import { updateProfileImage } from 'src/actions/onboarding';
+import { updateProfilePicture } from 'src/actions/onboarding';
 
 export default connect(null, {
-  onPhotoPress: path => updateProfileImage(path),
+  onPhotoPress: path => updateProfilePicture(path),
 })(CameraRoll);

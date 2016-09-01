@@ -9,6 +9,7 @@ import Toolbar from './Toolbar';
 import Header from './Header';
 import Icon from './Icon';
 import HeaderIcon from './HeaderIcon';
+import SpinningImage from './SpinningImage';
 import OverlayCompleted from './Overlay/Completed';
 import OverlayLoading from './Overlay/Loading';
 import ProgressBar from './ProgressBar';
@@ -28,6 +29,7 @@ export {
   Header,
   Icon,
   HeaderIcon,
+  SpinningImage,
   OverlayCompleted,
   OverlayLoading,
   ProgressBar,

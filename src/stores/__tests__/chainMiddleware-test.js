@@ -8,11 +8,11 @@ describe('chainMiddleware', () => {
     const target = () => dispatch => dispatch({ type: 'BAR' });
     const middleware = chainMiddleware({ FOO: target });
 
-    middleware({ dispatch: noop })(next)({ type: 'FOO' });
+    await middleware({ dispatch: noop })(next)({ type: 'FOO' });
 
-    const [[res]] = next.mock.calls;
+    const [[action]] = next.mock.calls;
 
-    expect(await capture(res()))
+    expect(await capture(action))
       .toEqual([{ type: 'FOO' }, { type: 'BAR' }]);
   });
 
@@ -20,11 +20,11 @@ describe('chainMiddleware', () => {
     const next = jest.fn();
     const middleware = chainMiddleware({ FOO: () => ({ type: 'BAR' }) });
 
-    middleware({ dispatch: noop })(next)({ type: 'FOO' });
+    await middleware({ dispatch: noop })(next)({ type: 'FOO' });
 
-    const [[res]] = next.mock.calls;
+    const [[action]] = next.mock.calls;
 
-    expect(await capture(res()))
+    expect(await capture(action))
       .toEqual([{ type: 'FOO' }, { type: 'BAR' }]);
   });
 
@@ -32,7 +32,7 @@ describe('chainMiddleware', () => {
     const next = jest.fn();
     const middleware = chainMiddleware({ FOO: () => ({ type: 'BAR' }) });
 
-    middleware({ dispatch: noop })(next)({ type: 'BAZ' });
+    await middleware({ dispatch: noop })(next)({ type: 'BAZ' });
     expect(next.mock.calls).toEqual([[{ type: 'BAZ' }]]);
   });
 });
