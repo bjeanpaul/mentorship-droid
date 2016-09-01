@@ -1,4 +1,4 @@
-import { uniqueId } from 'lodash';
+import { merge, extend, uniqueId } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
 import { Profile, ScheduledCall, Activity, Category } from 'src/api';
 
@@ -13,7 +13,7 @@ export const capture = async (fn, ...xargs) => {
 export const mock = () => {
   const __id = uniqueId();
 
-  return (...args) => ({
+  return (...args) => extend(jest.fn(), {
     __id,
     args,
   });
@@ -60,6 +60,25 @@ export const fakeActivity = data => ({
   poster: null,
   ...data,
 });
+
+
+export const fakeProfile = data => ({
+  id: 23,
+  ...data,
+});
+
+
+export const fakeState = (overrides = {}) => merge({}, {
+  auth: {
+    profileId: 23,
+    auth: fakeAuth(),
+  },
+  entities: {
+    profiles: {
+      23: fakeProfile({ id: 23 }),
+    },
+  },
+}, overrides);
 
 
 export const fakeStore = {

@@ -1,52 +1,27 @@
-import { merge } from 'lodash';
 import { getContext } from 'src/stores/helpers';
+import { fakeState, fakeProfile, fakeAuth } from 'app/scripts/helpers';
 
 
 describe('helpers', () => {
-  const createState = (overrides = {}) => merge({}, {
-    auth: {
-      profileId: 23,
-      auth: {
-        email: 'a@b.org',
-        password: '1337',
-      },
-    },
-    entities: {
-      profiles: {
-        23: { id: 23 },
-      },
-    },
-  }, overrides);
-
   describe('getContext', () => {
     it('should get auth details', () => {
-      expect(getContext(createState({
-        auth: {
-          auth: {
-            email: 'a@b.org',
-            password: '1337',
-          },
-        },
+      expect(getContext(fakeState({
+        auth: { auth: fakeAuth() },
       }))).toEqual(jasmine.objectContaining({
-        auth: {
-          email: 'a@b.org',
-          password: '1337',
-        },
+        auth: fakeAuth(),
       }));
     });
 
     it('should get profile details', () => {
-      expect(getContext(createState({
-        auth: {
-          profileId: 23,
-        },
+      expect(getContext(fakeState({
+        auth: { profileId: 23 },
         entities: {
           profiles: {
-            23: { id: 23 },
+            23: fakeProfile({ id: 23 }),
           },
-        }
+        },
       }))).toEqual(jasmine.objectContaining({
-        profile: { id: 23 },
+        profile: fakeProfile({ id: 23 }),
       }));
     });
   });
