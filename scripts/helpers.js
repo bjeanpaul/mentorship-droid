@@ -1,6 +1,6 @@
 import { uniqueId } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
-import { Profile, ScheduledCall } from 'src/api';
+import { Profile, ScheduledCall, Activity, Category } from 'src/api';
 
 
 export const capture = async (fn, ...xargs) => {
@@ -18,6 +18,9 @@ export const mock = () => {
     args,
   });
 };
+
+
+export const uidEquals = id => node => node.prop('uid') === id;
 
 
 export const fakeAuth = () => ({
@@ -82,4 +85,9 @@ export const fakeScheduledCallListData = (data = [{ id: 23 }]) => (
   normalize(data, arrayOf(ScheduledCall)));
 
 
-export const uidEquals = id => node => node.prop('uid') === id;
+export const fakeCategoryListData = (data = [fakeCategory()]) => (
+  normalize(data, arrayOf(Category)));
+
+
+export const fakeActivityListData = (data = [fakeActivity()]) => (
+  normalize(data, arrayOf(Activity)));
