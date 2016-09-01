@@ -26,11 +26,6 @@ describe('Stepper', () => {
   });
 
 
-  it('should map props correctly', () => {
-    expect(render(createComponent())).toMatchSnapshot();
-  });
-
-
   it('should toggle the rendering of the progressBar', () => {
     expect(render(createComponent({
       hideProgress: true,
