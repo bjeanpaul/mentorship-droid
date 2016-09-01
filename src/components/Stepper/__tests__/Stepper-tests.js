@@ -4,57 +4,36 @@ import Stepper, { Step } from 'src/components/Stepper';
 
 
 describe('Stepper', () => {
-  it('should only render one step at a time', () => {
-    const el = shallow(
-      <Stepper>
-        <Step><Text>Step 1</Text></Step>
-        <Step><Text>Step 2</Text></Step>
-      </Stepper>
-    );
-    expect(el.find('Step').length).toBe(1);
+  const createComponent = (props = {}) => (
+    <Stepper
+      navigationState={{
+        index: 1,
+        routes: [
+          { key: 'STEP_0' },
+          { key: 'STEP_1' },
+        ],
+      }}
+      {...props}
+    >
+      <Step><Text>Step 1</Text></Step>
+      <Step><Text>Step 2</Text></Step>
+    </Stepper>
+  );
+
+
+  it('should map props correctly', () => {
+    expect(render(createComponent())).toMatchSnapshot();
   });
 
 
-  it('should render the first step', () => {
-    const el = shallow(
-      <Stepper>
-        <Step><Text>Step 1</Text></Step>
-        <Step><Text>Step 2</Text></Step>
-      </Stepper>
-    );
-    expect(el.find('Step').find('Text').html()).toEqual('<Text>Step 1</Text>');
-  });
-
-
-  it('should render step based on index', () => {
-    const el = shallow(
-      <Stepper index={1}>
-        <Step><Text>Step 1</Text></Step>
-        <Step><Text>Step 2</Text></Step>
-      </Stepper>
-    );
-    expect(el.find('Step').find('Text').html()).toEqual('<Text>Step 2</Text>');
-  });
-
-
-  it('should render progress bar by default', () => {
-    const el = shallow(
-      <Stepper>
-        <Step><Text>Step 1</Text></Step>
-        <Step><Text>Step 2</Text></Step>
-      </Stepper>
-    );
-    expect(el.find('ProgressBar').length).toBe(1);
+  it('should map props correctly', () => {
+    expect(render(createComponent())).toMatchSnapshot();
   });
 
 
   it('should toggle the rendering of the progressBar', () => {
-    const el = shallow(
-      <Stepper showProgress={false}>
-        <Step><Text>Step 1</Text></Step>
-        <Step><Text>Step 2</Text></Step>
-      </Stepper>
-    );
-    expect(el.find('ProgressBar').length).toBe(0);
+    expect(render(createComponent({
+      hideProgress: true,
+    }))).toMatchSnapshot();
   });
 });
