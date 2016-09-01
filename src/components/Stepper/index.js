@@ -4,7 +4,6 @@ import { NavigationExperimental } from 'react-native';
 const { CardStack: NavigationCardStack } = NavigationExperimental;
 
 
-
 const Step = ({
   children,
 }) => (
@@ -16,18 +15,18 @@ const Step = ({
 
 const Stepper = ({
   children,
-  index = 0,
   navigationState,
-  showProgress = true,
+  hideProgress,
 }) => {
   let progressBar;
-  if (showProgress) {
+  if (!hideProgress) {
     progressBar = (
       <ProgressBar
-        completed={ index + 1 / React.Children.count(children) }
+        completed={ navigationState.index + 1 / React.Children.count(children) }
       />
     );
   }
+
   return (
     <BaseView>
       {progressBar}
@@ -41,10 +40,12 @@ const Stepper = ({
 
 
 Stepper.propTypes = {
-  navigationState: PropTypes.object,
+  navigationState: PropTypes.shape({
+    index: PropTypes.number,
+    routes: PropTypes.array,
+  }),
+  hideProgress: PropTypes.bool,
   children: PropTypes.arrayOf(Step).isRequired,
-  index: PropTypes.number,
-  showProgress: PropTypes.bool,
 };
 
 
