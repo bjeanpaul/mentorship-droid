@@ -14,6 +14,7 @@ describe('Stepper', () => {
     expect(el.find('Step').length).toBe(1);
   });
 
+
   it('should render the first step', () => {
     const el = shallow(
       <Stepper>
@@ -23,6 +24,7 @@ describe('Stepper', () => {
     );
     expect(el.find('Step').find('Text').html()).toEqual('<Text>Step 1</Text>');
   });
+
 
   it('should render step based on index', () => {
     const el = shallow(
@@ -55,6 +57,4 @@ describe('Stepper', () => {
     );
     expect(el.find('ProgressBar').length).toBe(0);
   });
-
-
 });
