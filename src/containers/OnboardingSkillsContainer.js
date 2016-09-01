@@ -4,6 +4,7 @@ import OnboardingSkills from 'src/views/OnboardingSkills';
 import { updateProfile } from 'src/actions/onboarding';
 import { navigateBack } from 'src/actions/navigation';
 
+
 export default connect(
   (state) => ({
     skills: state.onboarding.skills,
