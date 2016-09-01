@@ -10,5 +10,5 @@ export const getContext = ({
   auth,
   profile: profileId
     ? profiles[profileId]
-    : null
+    : null,
 });

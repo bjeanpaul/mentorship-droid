@@ -10,7 +10,7 @@ export const REQUIRED_PROFILE_FIELDS = [
   'job_sector',
   'job_title',
   'motivation',
-  'profile_pick'
+  'profile_pick',
 ];
 
 
