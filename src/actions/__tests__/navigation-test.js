@@ -6,7 +6,7 @@ describe('actions/navigation', () => {
   describe('navigationBack', () => {
     it('should create an action for navigating back', () => {
       expect(actions.navigateBack()).toEqual({
-        type: constants.NAVIGATE_BACK,
+        type: constants.NAVIGATE_BACK_REQUEST,
       });
     });
   });
@@ -14,7 +14,7 @@ describe('actions/navigation', () => {
   describe('navigationForward', () => {
     it('should create an action for navigating forward', () => {
       expect(actions.navigateForward()).toEqual({
-        type: constants.NAVIGATE_FORWARD,
+        type: constants.NAVIGATE_FORWARD_REQUEST,
       });
     });
   });

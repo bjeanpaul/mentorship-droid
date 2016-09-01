@@ -20,16 +20,16 @@ const navigationReducer = (state = {
   routes: [createRoute(routes.ROUTE_LANDING)],
 }, action) => {
   switch (action.type) {
-    case navigation.NAVIGATE_BACK:
+    case navigation.NAVIGATE_BACK_REQUEST:
       return back(state);
 
-    case navigation.NAVIGATE_FORWARD:
+    case navigation.NAVIGATE_FORWARD_REQUEST:
       return forward(state);
 
-    case landing.LANDING_GET_STARTED:
+    case landing.SHOW_ACTIVATION_REQUEST:
       return push(state, createRoute(routes.ROUTE_AUTH_ACTIVATION));
 
-    case landing.LANDING_LOGIN:
+    case landing.SHOW_LOGIN_REQUEST:
       return push(state, createRoute(routes.ROUTE_AUTH_LOGIN));
 
     case auth.AUTH_LOGIN_SUCCESS:

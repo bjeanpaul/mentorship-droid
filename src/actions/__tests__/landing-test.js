@@ -3,18 +3,18 @@ import * as constants from 'src/constants/landing';
 
 
 describe('actions/landing', () => {
-  describe('landingGetStarted', () => {
+  describe('showActivation', () => {
     it('should create an action for get started', () => {
-      expect(actions.landingGetStarted()).toEqual({
-        type: constants.LANDING_GET_STARTED,
+      expect(actions.showActivation()).toEqual({
+        type: constants.SHOW_ACTIVATION_REQUEST,
       });
     });
   });
 
-  describe('landingLogin', () => {
+  describe('showLogin', () => {
     it('should create an action for login', () => {
-      expect(actions.landingLogin()).toEqual({
-        type: constants.LANDING_LOGIN,
+      expect(actions.showLogin()).toEqual({
+        type: constants.SHOW_LOGIN_REQUEST,
       });
     });
   });

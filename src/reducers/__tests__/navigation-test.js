@@ -23,30 +23,30 @@ const fakeState = () => ({
 
 
 describe('navigation/reducer', () => {
-  describe('NAVIGATE_BACK', () => {
+  describe('NAVIGATE_BACK_REQUEST', () => {
     it('should go back', () => {
       expect(reduce(fakeState(), navigation.navigateBack()))
         .toEqual(back(fakeState()));
     });
   });
 
-  describe('NAVIGATE_FORWARD', () => {
+  describe('NAVIGATE_FORWARD_REQUEST', () => {
     it('should go forward', () => {
       expect(reduce(fakeState(), navigation.navigateForward()))
         .toEqual(forward(fakeState()));
     });
   });
 
-  describe('LANDING_GET_STARTED', () => {
+  describe('SHOW_ACTIVATION_REQUEST', () => {
     it('should push the activation route', () => {
-      expect(reduce(fakeState(), landing.landingGetStarted()))
+      expect(reduce(fakeState(), landing.showActivation()))
         .toEqual(push(fakeState(), createRoute(routes.ROUTE_AUTH_ACTIVATION)));
     });
   });
 
-  describe('LANDING_LOGIN', () => {
+  describe('SHOW_LOGIN_REQUEST', () => {
     it('should push the login route', () => {
-      expect(reduce(fakeState(), landing.landingLogin()))
+      expect(reduce(fakeState(), landing.showLogin()))
         .toEqual(push(fakeState(), createRoute(routes.ROUTE_AUTH_LOGIN)));
     });
   });

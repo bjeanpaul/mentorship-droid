@@ -1,11 +1,11 @@
 import * as constants from 'src/constants/landing';
 
 
-export const landingGetStarted = () => ({
-  type: constants.LANDING_GET_STARTED,
+export const showActivation = () => ({
+  type: constants.SHOW_ACTIVATION_REQUEST,
 });
 
 
-export const landingLogin = () => ({
-  type: constants.LANDING_LOGIN,
+export const showLogin = () => ({
+  type: constants.SHOW_LOGIN_REQUEST,
 });
