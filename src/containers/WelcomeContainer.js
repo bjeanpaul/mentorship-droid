@@ -7,7 +7,7 @@ import { getProfile } from 'src/reducers/profile';
 
 export default connect(
   state => ({
-    name: getProfile(state, getProfileId(state)).firstName,
+    name: 'XXXX', //getProfile(state, getProfileId(state)).firstName,
   }), {
     onCompleteProfilePress: pushProfilePictureRoute,
   }

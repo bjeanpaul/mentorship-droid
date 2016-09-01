@@ -1,5 +1,8 @@
 import React, { PropTypes } from 'react';
 import { ProgressBar, BaseView } from 'src/components';
+import { NavigationExperimental } from 'react-native';
+const { CardStack: NavigationCardStack } = NavigationExperimental;
+
 
 
 const Step = ({
@@ -14,26 +17,31 @@ const Step = ({
 const Stepper = ({
   children,
   index = 0,
+  navigationState,
   showProgress = true,
 }) => {
   let progressBar;
   if (showProgress) {
     progressBar = (
       <ProgressBar
-        completed={ index + 1 / React.Children.count(children) + 1 }
+        completed={ index + 1 / React.Children.count(children) }
       />
     );
   }
   return (
     <BaseView>
       {progressBar}
-      {children[index]}
+      <NavigationCardStack
+        navigationState={navigationState}
+        renderScene={() => children[navigationState.index]}
+      />
     </BaseView>
   );
 };
 
 
 Stepper.propTypes = {
+  navigationState: PropTypes.object,
   children: PropTypes.arrayOf(Step).isRequired,
   index: PropTypes.number,
   showProgress: PropTypes.bool,
