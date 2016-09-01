@@ -1,6 +1,7 @@
 import { merge, extend, uniqueId } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
 import { Profile, ScheduledCall, Activity, Category } from 'src/api';
+import { getContext } from 'src/stores/helpers';
 
 
 export const capture = async (fn, ...xargs) => {
@@ -13,7 +14,11 @@ export const capture = async (fn, ...xargs) => {
 export const mock = () => {
   const __id = uniqueId();
 
-  return (...args) => extend(jest.fn(), {
+  // we need to wrap jest.fn() so we can still do equality testing on our mock
+  // function's results
+  const fn = jest.fn();
+
+  return (...args) => extend((...fnArgs) => fn(...fnArgs), fn, {
     __id,
     args,
   });
@@ -26,11 +31,6 @@ export const uidEquals = id => node => node.prop('uid') === id;
 export const fakeAuth = () => ({
   email: 'a@b.org',
   password: '1337',
-});
-
-
-export const fakeContext = () => ({
-  auth: fakeAuth(),
 });
 
 
@@ -79,6 +79,9 @@ export const fakeState = (overrides = {}) => merge({}, {
     },
   },
 }, overrides);
+
+
+export const fakeContext = (overrides = {}) => getContext(fakeState(overrides));
 
 
 export const fakeStore = {
