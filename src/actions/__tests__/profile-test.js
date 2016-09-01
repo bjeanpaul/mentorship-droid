@@ -16,7 +16,7 @@ import {
 import {
   fetchProfile,
   updateProfile,
-  updateProfileImage,
+  updateProfilePicture,
 } from 'src/actions/profile';
 
 const { ApiResponseError } = api;
@@ -45,10 +45,10 @@ describe('profile/actions', () => {
     });
   });
 
-  describe('updateProfileImage', () => {
+  describe('updateProfilePicture', () => {
     it('should create actions for profile image api updates', () => {
-      expect(updateProfileImage).toEqual(apiAction({
-        method: api.updateProfileImage,
+      expect(updateProfilePicture).toEqual(apiAction({
+        method: api.updateProfilePicture,
         request: staticAction(constants.PROFILE_IMAGE_UPDATE_REQUEST),
         success: staticAction(constants.PROFILE_IMAGE_UPDATE_SUCCESS),
         failures: [[ApiResponseError, staticAction(constants.PROFILE_IMAGE_UPDATE_FAILURE)]],

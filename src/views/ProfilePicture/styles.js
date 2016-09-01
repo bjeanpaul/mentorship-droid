@@ -14,4 +14,8 @@ export default StyleSheet.create({
     color: colors.PROFILE_PICTURE_CHOOSE_PHOTO_TEXT,
     fontSize: 18,
   },
+  footer: {
+    flex: 1,
+    justifyContent: 'flex-end',
+  },
 });

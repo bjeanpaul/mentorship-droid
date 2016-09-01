@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import OnboardingOccupation from 'src/views/OnboardingOccupation';
 import { updateProfile } from 'src/actions/onboarding';
-import { popRoute, pushOnboardingMotivation } from 'src/actions/navigation';
+import { navigateBack, navigateForward } from 'src/actions/navigation';
+
 
 export default connect(
   (state) => ({
@@ -10,7 +11,7 @@ export default connect(
   }),
   {
     onChangeText: updateProfile,
-    onBackPress: popRoute,
-    onNextPress: pushOnboardingMotivation,
+    onBackPress: navigateBack,
+    onNextPress: navigateForward,
   }
 )(OnboardingOccupation);
