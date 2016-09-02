@@ -2,6 +2,7 @@ import { noop } from 'lodash';
 import chainMiddleware from 'src/stores/chainMiddleware';
 import { capture } from 'app/scripts/helpers';
 
+
 describe('chainMiddleware', () => {
   it('should chain actions with mappings', async () => {
     const next = jest.fn();
@@ -10,10 +11,10 @@ describe('chainMiddleware', () => {
 
     await middleware({ dispatch: noop })(next)({ type: 'FOO' });
 
-    const [[action]] = next.mock.calls;
+    const [[a], [b]] = next.mock.calls;
 
-    expect(await capture(action))
-      .toEqual([{ type: 'FOO' }, { type: 'BAR' }]);
+    expect(a).toEqual({ type: 'FOO' });
+    expect(await capture(b)).toEqual([{ type: 'BAR' }]);
   });
 
   it('should support non-thunks', async () => {
@@ -22,10 +23,10 @@ describe('chainMiddleware', () => {
 
     await middleware({ dispatch: noop })(next)({ type: 'FOO' });
 
-    const [[action]] = next.mock.calls;
+    const [[a], [b]] = next.mock.calls;
 
-    expect(await capture(action))
-      .toEqual([{ type: 'FOO' }, { type: 'BAR' }]);
+    expect(a).toEqual({ type: 'FOO' });
+    expect(await capture(b)).toEqual([{ type: 'BAR' }]);
   });
 
   it('should pass on actions without mappings', async () => {

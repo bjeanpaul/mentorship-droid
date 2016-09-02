@@ -1,7 +1,8 @@
 import * as routes from 'src/constants/routes';
 import * as landing from 'src/actions/landing';
 import * as navigation from 'src/actions/navigation';
-import * as auth from 'src/actions/auth';
+import * as entry from 'src/actions/entry';
+import * as sync from 'src/actions/sync';
 import * as onboarding from 'src/actions/onboarding';
 import reduce from 'src/reducers/navigation';
 
@@ -51,10 +52,24 @@ describe('navigation/reducer', () => {
     });
   });
 
-  describe('AUTH_LOGIN_SUCCESS', () => {
+  describe('NEW_USER_ENTER', () => {
     it('should push the welcome route', () => {
-      expect(reduce(fakeState(), auth.loginSuccess()))
+      expect(reduce(fakeState(), entry.enterNewUser()))
         .toEqual(push(fakeState(), createRoute(routes.ROUTE_ONBOARDING_WELCOME)));
+    });
+  });
+
+  describe('LOAD_REQUEST', () => {
+    it('should push the loading route', () => {
+      expect(reduce(fakeState(), sync.loadRequest()))
+        .toEqual(push(fakeState(), createRoute(routes.ROUTE_LOADING)));
+    });
+  });
+
+  describe('LOAD_SUCCESS', () => {
+    it('should push the journey route', () => {
+      expect(reduce(fakeState(), sync.loadSuccess({ entities: {} })))
+        .toEqual(push(fakeState(), createRoute(routes.ROUTE_JOURNEY)));
     });
   });
 

@@ -1,13 +1,11 @@
-import { apiAction, staticAction, dataAction } from 'src/actionHelpers';
+import { staticAction } from 'src/actionHelpers';
+import { profileIsComplete } from 'src/api';
 import * as constants from 'src/constants/entry';
-import * as api from 'src/api';
 
-const { ApiResponseError } = api;
+export const enterNewUser = staticAction(constants.NEW_USER_ENTER);
+export const enterExistingUser = staticAction(constants.NEW_USER_ENTER);
 
-
-export const load = apiAction({
-  method: api.load,
-  request: staticAction(constants.LOAD_REQUEST),
-  success: dataAction(constants.LOAD_SUCCESS),
-  failures: [[ApiResponseError, staticAction(constants.LOAD_FAILURE)]],
-});
+export const enter = () => (dispatch, { profile }) => (
+  profileIsComplete(profile)
+    ? dispatch(enterExistingUser())
+    : dispatch(enterNewUser()));
