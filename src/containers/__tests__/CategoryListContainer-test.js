@@ -12,9 +12,7 @@ describe('CategoryListContainer', () => {
             23: fakeCategory({ id: 23 }),
           },
         },
-      }), {
-        categoryId: 23,
-      })).toEqual(jasmine.objectContaining({
+      }))).toEqual(jasmine.objectContaining({
         categories: [
           fakeCategory({ id: 21 }),
           fakeCategory({ id: 23 }),
