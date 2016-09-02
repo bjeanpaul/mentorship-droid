@@ -13,7 +13,14 @@ const chooseActivity = activityId => ({
 });
 
 
+const scheduleActivityCall = activityId => ({
+  type: constants.ACTIVITY_SCHEDULE_CALL,
+  payload: { activityId },
+});
+
+
 export {
   chooseCategory,
   chooseActivity,
+  scheduleActivityCall,
 };

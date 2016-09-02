@@ -20,4 +20,13 @@ describe('actions/activities', () => {
       });
     });
   });
+
+  describe('scheduleActivityCall', () => {
+    it('should create for choosing a category', () => {
+      expect(actions.scheduleActivityCall(21)).toEqual({
+        type: constants.ACTIVITY_SCHEDULE_CALL,
+        payload: { activityId: 21 },
+      });
+    });
+  });
 });

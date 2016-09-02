@@ -121,4 +121,13 @@ describe('navigation/reducer', () => {
         })));
     });
   });
+
+  describe('ACTIVITY_SCHEDULE_CALL', () => {
+    it('should push on the activity route', () => {
+      expect(reduce(fakeState(), activities.scheduleActivityCall(23)))
+        .toEqual(push(fakeState(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
+          activityId: 23,
+        })));
+    });
+  });
 });
