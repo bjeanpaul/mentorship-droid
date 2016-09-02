@@ -5,9 +5,11 @@ import NotFound from 'src/components/NotFound';
 import ROUTES_COMPONENTS from 'src/routes';
 
 
-const router = key => {
+const Router = ({
+  sceneProps: { scene: { route: { key, context } } },
+}) => {
   const Container = ROUTES_COMPONENTS[key] || NotFound;
-  return <Container />;
+  return <Container {...context} />;
 };
 
 
@@ -16,13 +18,18 @@ const NavigationStack = ({
 }) => (
   <NavigationCardStack
     navigationState={navigationState}
-    renderScene={(sceneProps) => router(sceneProps.scene.route.key)}
+    renderScene={sceneProps => <Router sceneProps={sceneProps} />}
   />
 );
 
 
 NavigationStack.propTypes = {
   navigationState: PropTypes.any.isRequired,
+};
+
+
+Router.propTypes = {
+  sceneProps: PropTypes.object.isRequired,
 };
 
 
