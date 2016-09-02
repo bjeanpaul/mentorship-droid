@@ -1,6 +1,7 @@
+import { noop } from 'lodash';
 import React from 'react';
 import Category, { TAB_ACTIVITIES, TAB_ABOUT } from 'src/views/Category';
-import { fakeCategory } from 'app/scripts/helpers';
+import { uidEquals, fakeCategory } from 'app/scripts/helpers';
 
 
 describe('Category', () => {
@@ -11,6 +12,7 @@ describe('Category', () => {
           title: 'Level',
           color: '#97c13c',
         })}
+        onBackPress={noop}
         {...props}
       />
     );
@@ -30,6 +32,15 @@ describe('Category', () => {
     expect(el).toMatchSnapshot();
   });
 
+  it('should call onBackPress when the back button is pressed', () => {
+    const onBackPress = jest.fn();
+    const el = shallow(createComponent({ onBackPress }));
+
+    el.findWhere(uidEquals('back'))
+      .simulate('press');
+
+    expect(onBackPress.mock.calls).toEqual([[]]);
+  });
   it('should call onTabChange when a tab is pressed', () => {
     const el = shallow(createComponent());
     const onTabChange = jest.fn();
