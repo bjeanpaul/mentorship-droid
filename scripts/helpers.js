@@ -55,6 +55,7 @@ export const fakeActivity = data => ({
   topic: 'cipot',
   icon: null,
   poster: null,
+  category: 23,
   ...data,
 });
 

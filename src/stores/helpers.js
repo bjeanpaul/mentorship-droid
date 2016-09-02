@@ -28,7 +28,7 @@ export const getCategoryActivities = ({
   entities: { activities },
 }, targetCategoryId) => (
   values(activities)
-    .filter(({ categoryId }) => categoryId === targetCategoryId));
+    .filter(({ category }) => category === targetCategoryId));
 
 
 export const getCategory = ({ entities: { categories } }, id) => categories[id];

@@ -110,12 +110,12 @@ describe('helpers', () => {
 
       const activity1 = fakeActivity({
         id: 1,
-        categoryId: 7,
+        category: 7,
       });
 
       const activity2 = fakeActivity({
         id: 2,
-        categoryId: 7,
+        category: 7,
       });
 
       state.entities.activities = {
@@ -123,7 +123,7 @@ describe('helpers', () => {
         2: activity2,
         3: fakeActivity({
           id: 3,
-          categoryId: 8,
+          category: 8,
         }),
       };
 
