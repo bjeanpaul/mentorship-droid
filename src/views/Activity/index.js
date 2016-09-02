@@ -12,6 +12,7 @@ const Activity = ({
     title: categoryTitle,
   },
   activity: {
+    id,
     title,
     poster,
     topic,
@@ -49,7 +50,7 @@ const Activity = ({
       <View style={[styles.about, { backgroundColor: color }]}>
         <Text style={[Text.themes.light, styles.title]}>{title}</Text>
         <Status style={styles.statusAbout} />
-        <Action onSchedulePress={onSchedulePress} />
+        <Action onPress={() => onSchedulePress(id)} />
       </View>
 
       <Section
@@ -112,7 +113,7 @@ const Activity = ({
         <Status style={styles.statusShortcuts} />
         <Action
           style={{ container: styles.actionContainerShortcuts }}
-          onSchedulePress={onSchedulePress}
+          onPress={() => onSchedulePress(id)}
         />
       </View>
     </ScrollView>
@@ -133,9 +134,9 @@ const Status = ({
 // TODO handle cases where call notes or scheduled call exist
 const Action = ({
   style,
-  onSchedulePress,
+  onPress,
 }) => (
-  <ActionButton style={style} onPress={onSchedulePress}>
+  <ActionButton style={style} onPress={onPress}>
     Schedule Call
   </ActionButton>
 );
@@ -193,7 +194,7 @@ Status.propTypes = {
 
 Action.propTypes = {
   style: PropTypes.any,
-  onSchedulePress: PropTypes.func.isRequired,
+  onPress: PropTypes.func.isRequired,
 };
 
 

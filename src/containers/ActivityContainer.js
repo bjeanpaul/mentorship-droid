@@ -1,8 +1,7 @@
-import { noop } from 'lodash';
 import { connect } from 'react-redux';
 import Activity from 'src/views/Activity';
 import { getCategory, getActivity } from 'src/stores/helpers';
-import { dismissScreen } from 'src/actions/navigation';
+import { dismissScreen, scheduleActivityCall } from 'src/actions/navigation';
 
 
 const mapStateToProps = (state, { activityId }) => {
@@ -19,7 +18,7 @@ const mapStateToProps = (state, { activityId }) => {
 
 const propsToActions = {
   // TODO
-  onSchedulePress: noop,
+  onSchedulePress: scheduleActivityCall,
   onBackPress: dismissScreen,
 };
 
