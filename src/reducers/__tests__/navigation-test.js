@@ -2,6 +2,7 @@ import * as routes from 'src/constants/routes';
 import * as landing from 'src/actions/landing';
 import * as navigation from 'src/actions/navigation';
 import * as entry from 'src/actions/entry';
+import * as sync from 'src/actions/sync';
 import * as onboarding from 'src/actions/onboarding';
 import reduce from 'src/reducers/navigation';
 
@@ -58,16 +59,16 @@ describe('navigation/reducer', () => {
     });
   });
 
-  describe('EXISTING_USER_ENTER_REQUEST', () => {
+  describe('LOAD_REQUEST', () => {
     it('should push the loading route', () => {
-      expect(reduce(fakeState(), entry.enterExistingUserRequest()))
+      expect(reduce(fakeState(), sync.loadRequest()))
         .toEqual(push(fakeState(), createRoute(routes.ROUTE_LOADING)));
     });
   });
 
-  describe('EXISTING_USER_ENTER_SUCCESS', () => {
+  describe('LOAD_SUCCESS', () => {
     it('should push the journey route', () => {
-      expect(reduce(fakeState(), entry.enterExistingUserSuccess({ entities: {} })))
+      expect(reduce(fakeState(), sync.loadSuccess({ entities: {} })))
         .toEqual(push(fakeState(), createRoute(routes.ROUTE_JOURNEY)));
     });
   });
