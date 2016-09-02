@@ -1,3 +1,4 @@
+import { unary } from 'lodash';
 import * as routes from 'src/constants/routes';
 import * as landing from 'src/constants/landing';
 import * as navigation from 'src/constants/navigation';
@@ -48,7 +49,7 @@ const navigationReducer = (state = {
       return push(state, createRoute(routes.ROUTE_JOURNEY));
 
     case onboarding.ONBOARDING_START_PROFILE:
-      return pushList(state, routes.ONBOARDING_STEPS.map(createRoute));
+      return pushList(state, routes.ONBOARDING_STEPS.map(unary(createRoute)));
 
     case onboarding.ONBOARDING_CHOOSE_PROFILE_PICTURE:
       return insertAfterCurrent(state, createRoute(routes.ROUTE_ONBOARDING_CAMERA_ROLL));

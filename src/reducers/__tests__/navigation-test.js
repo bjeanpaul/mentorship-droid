@@ -1,3 +1,4 @@
+import { unary } from 'lodash';
 import * as routes from 'src/constants/routes';
 import * as landing from 'src/actions/landing';
 import * as navigation from 'src/actions/navigation';
@@ -19,7 +20,7 @@ import {
 
 
 const fakeState = () => ({
-  routes: ['A', 'B', 'C'].map(createRoute),
+  routes: ['A', 'B', 'C'].map(unary(createRoute)),
   index: 1,
 });
 
@@ -84,7 +85,7 @@ describe('navigation/reducer', () => {
   describe('ONBOARDING_START_PROFILE', () => {
     it('should push on the onboarding steps', () => {
       expect(reduce(fakeState(), onboarding.startProfile()))
-        .toEqual(pushList(fakeState(), routes.ONBOARDING_STEPS.map(createRoute)));
+        .toEqual(pushList(fakeState(), routes.ONBOARDING_STEPS.map(unary(createRoute))));
     });
   });
 
@@ -106,18 +107,18 @@ describe('navigation/reducer', () => {
   describe('CATEGORY_CHOOSE', () => {
     it('should push on the category route', () => {
       expect(reduce(fakeState(), activities.chooseCategory(23)))
-        .toEqual(pushList(fakeState(), createRoute(routes.ROUTE_CATEGORY), {
+        .toEqual(push(fakeState(), createRoute(routes.ROUTE_CATEGORY, {
           categoryId: 23,
-        }));
+        })));
     });
   });
 
   describe('ACTIVITY_CHOOSE', () => {
     it('should push on the activity route', () => {
       expect(reduce(fakeState(), activities.chooseActivity(23)))
-        .toEqual(pushList(fakeState(), createRoute(routes.ROUTE_ACTIVITY), {
+        .toEqual(push(fakeState(), createRoute(routes.ROUTE_ACTIVITY, {
           activityId: 23,
-        }));
+        })));
     });
   });
 });

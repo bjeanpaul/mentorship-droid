@@ -1,7 +1,7 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import Activity from 'src/activities/Activity';
+import Activity from 'src/views/Activity';
 import { fakeCategory, fakeActivity, uidEquals } from 'app/scripts/helpers';
 import { ACTIVITY_POSTER } from 'app/scripts/fixtures';
 

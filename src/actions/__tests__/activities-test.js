@@ -16,7 +16,7 @@ describe('actions/activities', () => {
     it('should create for choosing a category', () => {
       expect(actions.chooseCategory(21)).toEqual({
         type: constants.CATEGORY_CHOOSE,
-        payload: { categoryId: 23 },
+        payload: { categoryId: 21 },
       });
     });
   });
