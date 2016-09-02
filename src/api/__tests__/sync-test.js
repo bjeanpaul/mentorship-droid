@@ -11,7 +11,7 @@ const { load } = api;
 const { fakeAuth } = helpers;
 
 
-describe('api/load', () => {
+describe('api/sync', () => {
   beforeEach(() => {
     api.listCategories.mockClear();
     api.listCategories.mockReturnValue(helpers.fakeCategoryListData());
