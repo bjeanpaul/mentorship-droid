@@ -48,6 +48,25 @@ export const popCurrent = state => ({
 });
 
 
+const makeStepperNavigationReducer = ({ FORWARD, BACK }) => (state = {
+  index: 0,
+  routes: [
+    { key: 'STEP_0' },
+  ],
+}, action) => {
+  switch (action.type) {
+    case FORWARD:
+      return push(state, {
+        key: `STEP_${state.index + 1}`,
+      });
+    case BACK:
+      return popCurrent(state);
+    default:
+      return state;
+  }
+};
+
+
 export {
   reset,
   push,
@@ -57,4 +76,5 @@ export {
   pushList,
   popCurrent,
   insertAfterCurrent,
+  makeStepperNavigationReducer,
 };
