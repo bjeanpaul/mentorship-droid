@@ -74,6 +74,12 @@ export const fakeState = (overrides = {}) => merge({}, {
     profiles: {
       23: fakeProfile({ id: 23 }),
     },
+    categories: {
+      21: fakeCategory({ id: 21 }),
+    },
+    activities: {
+      2: fakeActivity({ id: 2 }),
+    },
   },
 }, overrides);
 
