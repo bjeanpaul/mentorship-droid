@@ -4,6 +4,7 @@ import * as navigation from 'src/actions/navigation';
 import * as entry from 'src/actions/entry';
 import * as sync from 'src/actions/sync';
 import * as onboarding from 'src/actions/onboarding';
+import * as activities from 'src/actions/activities';
 import reduce from 'src/reducers/navigation';
 
 import {
@@ -35,6 +36,13 @@ describe('navigation/reducer', () => {
     it('should go forward', () => {
       expect(reduce(fakeState(), navigation.navigateForward()))
         .toEqual(forward(fakeState()));
+    });
+  });
+
+  describe('SCREEN_DISMISS', () => {
+    it('should pop the current route', () => {
+      expect(reduce(fakeState(), navigation.dismissScreen()))
+        .toEqual(popCurrent(fakeState()));
     });
   });
 
@@ -92,6 +100,24 @@ describe('navigation/reducer', () => {
     it('should pop from the state', () => {
       expect(reduce(fakeState(), onboarding.updateProfilePicture()))
         .toEqual(popCurrent(fakeState()));
+    });
+  });
+
+  describe('CATEGORY_CHOOSE', () => {
+    it('should push on the category route', () => {
+      expect(reduce(fakeState(), activities.chooseCategory(23)))
+        .toEqual(pushList(fakeState(), createRoute(routes.ROUTE_CATEGORY), {
+          categoryId: 23,
+        }));
+    });
+  });
+
+  describe('ACTIVITY_CHOOSE', () => {
+    it('should push on the activity route', () => {
+      expect(reduce(fakeState(), activities.chooseActivity(23)))
+        .toEqual(pushList(fakeState(), createRoute(routes.ROUTE_ACTIVITY), {
+          activityId: 23,
+        }));
     });
   });
 });

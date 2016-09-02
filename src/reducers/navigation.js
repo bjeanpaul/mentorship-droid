@@ -4,6 +4,8 @@ import * as navigation from 'src/constants/navigation';
 import * as entry from 'src/constants/entry';
 import * as onboarding from 'src/constants/onboarding';
 import * as sync from 'src/constants/sync';
+import * as activities from 'src/constants/activities';
+
 
 import {
   push,
@@ -26,6 +28,9 @@ const navigationReducer = (state = {
 
     case navigation.NAVIGATE_FORWARD_REQUEST:
       return forward(state);
+
+    case navigation.SCREEN_DISMISS:
+      return popCurrent(state);
 
     case landing.SHOW_ACTIVATION_REQUEST:
       return push(state, createRoute(routes.ROUTE_AUTH_ACTIVATION));
@@ -50,6 +55,16 @@ const navigationReducer = (state = {
 
     case onboarding.ONBOARDING_UPDATE_PROFILE_PICTURE:
       return popCurrent(state);
+
+    case activities.CATEGORY_CHOOSE: {
+      const { payload: { categoryId } } = action;
+      return push(state, createRoute(routes.ROUTE_CATEGORY, { categoryId }));
+    }
+
+    case activities.ACTIVITY_CHOOSE: {
+      const { payload: { activityId } } = action;
+      return push(state, createRoute(routes.ROUTE_ACTIVITY, { activityId }));
+    }
 
     default:
       return state;
