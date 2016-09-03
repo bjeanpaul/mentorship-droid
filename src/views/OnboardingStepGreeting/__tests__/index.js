@@ -1,7 +1,7 @@
 import React from 'react';
 import Hello from '../index';
 
-describe('Hello', () => {
+describe('OnboardingStepGreeting', () => {
   function noop() {}
 
   it('should map props correctly', () => {

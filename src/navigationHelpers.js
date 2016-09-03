@@ -60,7 +60,7 @@ const makeStepperNavigationReducer = ({ FORWARD, BACK }) => (state = {
         key: `STEP_${state.index + 1}`,
       });
     case BACK:
-      return popCurrent(state);
+      return pop(state);
     default:
       return state;
   }
