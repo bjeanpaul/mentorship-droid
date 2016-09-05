@@ -6,11 +6,14 @@ import { parseResults } from 'src/api/parse';
 
 
 export const REQUIRED_PROFILE_FIELDS = [
-  'inspiration',
-  'job_sector',
-  'job_title',
+  'jobTitle',
+  'jobSector',
+  'occupation',
   'motivation',
-  'profile_pick',
+  'inspiration',
+  'tags',
+  'skills',
+  'profilePic',
 ];
 
 
@@ -69,4 +72,4 @@ export const updateProfilePicture = (id, path, auth) => request({
 
 export const profileIsComplete = profile => every(
   pick(profile, REQUIRED_PROFILE_FIELDS),
-  v => !isNull(v));
+  v => v !== '' && typeof v !== 'undefined' && !isNull(v));
