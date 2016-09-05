@@ -1,6 +1,19 @@
 exports[`NavTabBar should render 1`] = `
 <View
-  style={undefined}>
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "borderTopColor": "#dfe5e6",
+      "borderTopWidth": 1,
+      "bottom": 0,
+      "flexDirection": "row",
+      "height": 56,
+      "justifyContent": "space-between",
+      "left": 0,
+      "position": "absolute",
+      "right": 0
+    }
+  }>
   <View
     style={
       Array [

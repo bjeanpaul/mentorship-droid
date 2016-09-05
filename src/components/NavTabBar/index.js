@@ -73,13 +73,19 @@ export const NavTab = ({
   onPress,
 }) => (
   <TouchableNativeFeedback onPress={() => !active && onPress(type)}>
-    <View>
+    <View style={styles.tab}>
       <Image
         source={icons[type]}
-        style={[styles.tab, active && styles.tabIsActive]}
+        style={[styles.tabIcon, active && styles.tabIconIsActive]}
       />
 
-      {active && <Text style={styles.tabLabel}>{titles[type]}</Text>}
+      {
+        active
+          ? <Text style={[styles.tabTitle, active && styles.tabTitleIsActive]}>
+            {titles[type]}
+          </Text>
+          : null
+      }
     </View>
   </TouchableNativeFeedback>
 );
