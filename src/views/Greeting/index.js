@@ -5,7 +5,7 @@ import images from 'src/constants/images';
 import styles from './styles';
 
 
-const OnboardingStepGreeting = ({
+const Greeting = ({
   firstName,
   onCompleteProfilePress,
 }) => (
@@ -30,10 +30,10 @@ const OnboardingStepGreeting = ({
 );
 
 
-OnboardingStepGreeting.propTypes = {
+Greeting.propTypes = {
   firstName: PropTypes.string,
   onCompleteProfilePress: PropTypes.func.isRequired,
 };
 
 
-export default OnboardingStepGreeting;
+export default Greeting;

@@ -2,14 +2,15 @@ import { pick } from 'lodash';
 import { connect } from 'react-redux';
 import { chooseProfilePicture, updateProfile, stepForward } from 'src/actions/onboarding';
 
-
-import Greeting from 'src/views/OnboardingStepGreeting';
-import ProfilePicture from 'src/views/OnboardingFormStepProfilePicture';
-import Occupation from 'src/views/OnboardingFormStepOccupation';
-import Motivation from 'src/views/OnboardingFormStepMotivation';
-import Inspiration from 'src/views/OnboardingFormStepInspiration';
-import ThreeWords from 'src/views/OnboardingFormStepThreeWords';
-import Skills from 'src/views/OnboardingFormStepSkills';
+import Greeting from 'src/views/Greeting';
+import ProfilePicture from 'src/views/ProfilePicture';
+import {
+  Occupation,
+  Motivation,
+  Inspiration,
+  Skills,
+  ThreeWords,
+} from 'src/views/OnboardingFormSteps';
 
 
 const onboardContainer = ({

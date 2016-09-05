@@ -6,7 +6,7 @@ import images from 'src/constants/images';
 import styles from './styles';
 
 
-const OnboardingStepProfilePicture = ({
+const ProfilePicture = ({
   profilePicture,
   onChoosePhotoPress,
 }) => (
@@ -30,9 +30,10 @@ const OnboardingStepProfilePicture = ({
 );
 
 
-OnboardingStepProfilePicture.propTypes = {
+ProfilePicture.propTypes = {
   profilePicture: PropTypes.string,
   onChoosePhotoPress: PropTypes.func.isRequired,
 };
 
-export default OnboardingStepProfilePicture;
+
+export default ProfilePicture;
