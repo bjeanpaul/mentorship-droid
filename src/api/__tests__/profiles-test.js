@@ -108,20 +108,23 @@ describe('api/profiles', () => {
   });
 
   describe('profileIsComplete', () => {
-    it('should return true only if all required fields are not null', () => {
-      const profile = fromPairs([
-        REQUIRED_PROFILE_FIELDS,
-        REQUIRED_PROFILE_FIELDS.map(() => 'FAKE_FIELD_VALUE'),
-      ]);
-
+    it('should return true if required fields are filled-in', () => {
+      const profile = fromPairs(REQUIRED_PROFILE_FIELDS.map(
+        (key) => [key, 'FAKE FIELD VALUE']
+      ));
       expect(profileIsComplete(profile)).toBe(true);
+    });
 
-      REQUIRED_PROFILE_FIELDS.forEach(name => (
-        expect(profileIsComplete({
-          ...profile,
-          ...fromPairs([[name, null]]),
-        }))
-        .toBe(false)));
+    it('should return true if required fields are empty', () => {
+      const profile = fromPairs(REQUIRED_PROFILE_FIELDS.map(
+        (key) => [key, 'FAKE FIELD VALUE']
+      ));
+      expect(profileIsComplete({ ...profile,
+        jobTitle: '' })).toBe(false);
+      expect(profileIsComplete({ ...profile,
+          jobTitle: undefined })).toBe(false); // eslint-disable-line no-undefined
+      expect(profileIsComplete({ ...profile,
+        jobTitle: null })).toBe(false);
     });
   });
 });
