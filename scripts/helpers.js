@@ -55,6 +55,7 @@ export const fakeActivity = data => ({
   topic: 'cipot',
   icon: null,
   poster: null,
+  category: 23,
   ...data,
 });
 
@@ -73,6 +74,12 @@ export const fakeState = (overrides = {}) => merge({}, {
   entities: {
     profiles: {
       23: fakeProfile({ id: 23 }),
+    },
+    categories: {
+      21: fakeCategory({ id: 21 }),
+    },
+    activities: {
+      2: fakeActivity({ id: 2 }),
     },
   },
 }, overrides);
