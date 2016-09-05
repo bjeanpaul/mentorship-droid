@@ -1,42 +1,68 @@
-
-/*
- TODO:
-Import Views, try to generic these containment views dynamically.
-*/
+import { pick } from 'lodash';
+import { connect } from 'react-redux';
+import { chooseProfilePicture, updateProfile, stepForward } from 'src/actions/onboarding';
 
 
-const config = {
-  Greeting: {
+import Greeting from 'src/views/OnboardingStepGreeting';
+import ProfilePicture from 'src/views/OnboardingFormStepProfilePicture';
+import Occupation from 'src/views/OnboardingFormStepOccupation';
+import Motivation from 'src/views/OnboardingFormStepMotivation';
+import Inspiration from 'src/views/OnboardingFormStepInspiration';
+import ThreeWords from 'src/views/OnboardingFormStepThreeWords';
+import Skills from 'src/views/OnboardingFormStepSkills';
+
+
+const onboardContainer = ({
+  component,
+  profileProps,
+  actions = {
+    onChangeText: updateProfile,
+  },
+}) => connect(
+  state => pick(state.onboarding.profile, profileProps),
+  actions,
+)(component);
+
+
+export default {
+  Greeting: onboardContainer({
+    component: Greeting,
     profileProps: ['firstName'],
-  },
-  ProfilePicture: {
+    actions: {
+      onCompleteProfilePress: stepForward,
+    },
+  }),
+
+  ProfilePicture: onboardContainer({
+    component: ProfilePicture,
     profileProps: ['profilePicture'],
-  },
-  Occupation: {
-    profileProps: ['jobTitle', 'jobMotivation',],
-  },
-  Motivation: {
-    profileProps: ['motivation',],
-  },
-  Inspiration: {
-    profileProps: ['inspiration',],
-  },
-  Tags: {
+    actions: {
+      onChoosePhotoPress: chooseProfilePicture,
+    },
+  }),
+
+  Occupation: onboardContainer({
+    component: Occupation,
+    profileProps: ['jobTitle', 'jobSector'],
+  }),
+
+  Motivation: onboardContainer({
+    component: Motivation,
+    profileProps: ['motivation'],
+  }),
+
+  Inspiration: onboardContainer({
+    component: Inspiration,
+    profileProps: ['inspiration'],
+  }),
+
+  ThreeWords: onboardContainer({
+    component: ThreeWords,
     profileProps: ['tags'],
-  },
-  Skills: {
+  }),
+
+  Skills: onboardContainer({
+    component: Skills,
     profileProps: ['skills'],
-  },
+  }),
 };
-
-
-export [
-  'Greeting',
-  'ProfilePicture',
-  'Occupation',
-  'Motivation',
-  'Inspiration',
-  'Tags',
-  'Skills',
-  'Upload',
-];

@@ -7,19 +7,19 @@ import styles from './styles';
 
 
 const OnboardingStepProfilePicture = ({
-  imagePath,
+  profilePicture,
   onChoosePhotoPress,
 }) => (
   <FormStep
     title="Add a profile picture"
-    paginationDisabled={!imagePath}
+    paginationDisabled={!profilePicture}
   >
     <TouchableWithoutFeedback onPress={onChoosePhotoPress}>
       <View style={styles.imageContainer}>
         <Image
           style={styles.image}
           source={
-            imagePath && { uri: imagePath } ||
+            profilePicture && { uri: profilePicture } ||
             images.PROFILE_FACE_ADD
           }
         />
@@ -31,7 +31,7 @@ const OnboardingStepProfilePicture = ({
 
 
 OnboardingStepProfilePicture.propTypes = {
-  imagePath: PropTypes.string,
+  profilePicture: PropTypes.string,
   onChoosePhotoPress: PropTypes.func.isRequired,
 };
 

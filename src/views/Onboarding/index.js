@@ -1,33 +1,19 @@
 import React, { PropTypes } from 'react';
 import { Stepper } from 'src/components';
+import containers from 'src/containers/OnboardingStepsContainer';
 
-
-import OnboardingStepGreetingContainer
-  from 'src/containers/OnboardingStepGreetingContainer';
-import OnboardingFormStepProfilePictureContainer
-    from 'src/containers/OnboardingFormStepProfilePictureContainer';
-import OnboardingFormStepOccupationContainer
-  from 'src/containers/OnboardingFormStepOccupationContainer';
-import OnboardingFormStepInspirationContainer
-    from 'src/containers/OnboardingFormStepInspirationContainer';
-import OnboardingFormStepMotivationContainer
-    from 'src/containers/OnboardingFormStepMotivationContainer';
-import OnboardingFormStepThreeWordsContainer
-  from 'src/containers/OnboardingFormStepThreeWordsContainer';
-import OnboardingFormStepSkillsContainer
-  from 'src/containers/OnboardingFormStepSkillsContainer';
 
 const Onboarding = ({
   navigationState,
 }) => (
   <Stepper navigationState={navigationState}>
-    <OnboardingStepGreetingContainer />
-    <OnboardingFormStepProfilePictureContainer />
-    <OnboardingFormStepOccupationContainer />
-    <OnboardingFormStepInspirationContainer />
-    <OnboardingFormStepMotivationContainer />
-    <OnboardingFormStepThreeWordsContainer />
-    <OnboardingFormStepSkillsContainer />
+    <containers.Occupation />
+    <containers.Greeting />
+    <containers.ProfilePicture />
+    <containers.Inspiration />
+    <containers.Motivation />
+    <containers.ThreeWords />
+    <containers.Skills />
   </Stepper>
 );
 

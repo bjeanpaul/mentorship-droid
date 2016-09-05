@@ -3,6 +3,7 @@ import { View, Image } from 'react-native';
 import { BaseView, Text, Link, Button } from 'src/components';
 
 
+import OnboardingStepsContainer from 'src/containers/OnboardingStepsContainer';
 import OnboardingContainer from 'src/containers/OnboardingContainer';
 
 import styles from './styles';
