@@ -72,4 +72,4 @@ export const updateProfilePicture = (id, path, auth) => request({
 
 export const profileIsComplete = profile => every(
   pick(profile, REQUIRED_PROFILE_FIELDS),
-  v => !isNull(v));
+  v => v !== '' && typeof v !== 'undefined' && !isNull(v));
