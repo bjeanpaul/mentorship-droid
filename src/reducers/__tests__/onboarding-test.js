@@ -4,7 +4,7 @@ import * as constants from 'src/constants/onboarding';
 
 describe('reducer/onboarding', () => {
   it('ONBOARDING_UPDATE_PROFILE_PICTURE', () => {
-    const { profilePicture } = reduce(void 0,
+    const { profile: { profilePicture } } = reduce(void 0,
       {
         type: constants.ONBOARDING_UPDATE_PROFILE_PICTURE,
         payload: {
@@ -16,7 +16,7 @@ describe('reducer/onboarding', () => {
   });
 
   it('ONBOARDING_UPDATE_PROFILE', () => {
-    const { jobTitle, jobSector } = reduce(void 0,
+    const { profile: { jobTitle, jobSector } } = reduce(void 0,
       {
         type: constants.ONBOARDING_UPDATE_PROFILE,
         payload: {

@@ -62,9 +62,9 @@ describe('navigation/reducer', () => {
   });
 
   describe('NEW_USER_ENTER', () => {
-    it('should push the welcome route', () => {
+    it('should push the onboarding route', () => {
       expect(reduce(fakeState(), entry.enterNewUser()))
-        .toEqual(push(fakeState(), createRoute(routes.ROUTE_ONBOARDING_WELCOME)));
+        .toEqual(push(fakeState(), createRoute(routes.ROUTE_ONBOARDING)));
     });
   });
 
@@ -79,13 +79,6 @@ describe('navigation/reducer', () => {
     it('should push the journey route', () => {
       expect(reduce(fakeState(), sync.loadSuccess({ entities: {} })))
         .toEqual(push(fakeState(), createRoute(routes.ROUTE_JOURNEY)));
-    });
-  });
-
-  describe('ONBOARDING_START_PROFILE', () => {
-    it('should push on the onboarding steps', () => {
-      expect(reduce(fakeState(), onboarding.startProfile()))
-        .toEqual(pushList(fakeState(), routes.ONBOARDING_STEPS.map(unary(createRoute))));
     });
   });
 
