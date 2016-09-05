@@ -119,12 +119,21 @@ describe('api/profiles', () => {
       const profile = fromPairs(REQUIRED_PROFILE_FIELDS.map(
         (key) => [key, 'FAKE FIELD VALUE']
       ));
-      expect(profileIsComplete({ ...profile,
-        jobTitle: '' })).toBe(false);
-      expect(profileIsComplete({ ...profile,
-          jobTitle: undefined })).toBe(false); // eslint-disable-line no-undefined
-      expect(profileIsComplete({ ...profile,
-        jobTitle: null })).toBe(false);
+
+      expect(profileIsComplete({
+        ...profile,
+        jobTitle: '',
+      })).toBe(false);
+
+      expect(profileIsComplete({
+        ...profile,
+        jobTitle: void 0,
+      })).toBe(false);
+
+      expect(profileIsComplete({
+        ...profile,
+        jobTitle: null,
+      })).toBe(false);
     });
   });
 });
