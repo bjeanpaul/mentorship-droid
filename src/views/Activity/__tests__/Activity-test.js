@@ -1,7 +1,7 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import Activity from 'src/activities/Activity';
+import Activity from 'src/views/Activity';
 import { fakeCategory, fakeActivity, uidEquals } from 'app/scripts/helpers';
 import { ACTIVITY_POSTER } from 'app/scripts/fixtures';
 
@@ -45,28 +45,36 @@ describe('Activity', () => {
   it('should call onSchedulePress when the top schedule button is pressed', () => {
     const onSchedulePress = jest.fn();
 
-    shallow(createComponent({ onSchedulePress }))
-      .find('Action')
+    const el = shallow(createComponent({
+      id: 23,
+      onSchedulePress,
+    }));
+
+    el.find('Action')
       .at(0)
       .shallow()
       .find('ActionButton')
       .shallow()
       .simulate('press');
 
-    expect(onSchedulePress.mock.calls).toEqual([[]]);
+    expect(onSchedulePress).toBeCalled();
   });
 
   it('should call onSchedulePress when the bottom schedule button is pressed', () => {
     const onSchedulePress = jest.fn();
 
-    shallow(createComponent({ onSchedulePress }))
-      .find('Action')
+    const el = shallow(createComponent({
+      id: 23,
+      onSchedulePress,
+    }));
+
+    el.find('Action')
       .at(1)
       .shallow()
       .find('ActionButton')
       .shallow()
       .simulate('press');
 
-    expect(onSchedulePress.mock.calls).toEqual([[]]);
+    expect(onSchedulePress).toBeCalled();
   });
 });

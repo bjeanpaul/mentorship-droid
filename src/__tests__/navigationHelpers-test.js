@@ -1,3 +1,5 @@
+import { unary } from 'lodash';
+
 import {
   createRoute,
   push,
@@ -10,17 +12,20 @@ import {
 describe('navigationHelpers', () => {
   describe('createRoute', () => {
     it('should create a route', () => {
-      expect(createRoute('FOO')).toEqual({ key: 'FOO' });
+      expect(createRoute('FOO', { bar: 23 })).toEqual({
+        key: 'FOO',
+        context: { bar: 23 },
+      });
     });
   });
 
   describe('insertAfterCurrent', () => {
     it('should insert the given route after the current index', () => {
       expect(insertAfterCurrent({
-        routes: ['A', 'B', 'D', 'E'].map(createRoute),
+        routes: ['A', 'B', 'D', 'E'].map(unary(createRoute)),
         index: 1,
       }, createRoute('C'))).toEqual({
-        routes: ['A', 'B', 'C', 'D', 'E'].map(createRoute),
+        routes: ['A', 'B', 'C', 'D', 'E'].map(unary(createRoute)),
         index: 2,
       });
     });
@@ -42,7 +47,7 @@ describe('navigationHelpers', () => {
         routes: [createRoute('A')],
         index: 1,
       }, createRoute('B'))).toEqual({
-        routes: ['A', 'B'].map(createRoute),
+        routes: ['A', 'B'].map(unary(createRoute)),
         index: 1,
       });
     });
@@ -63,8 +68,8 @@ describe('navigationHelpers', () => {
       expect(pushList({
         routes: [createRoute('A')],
         index: 0,
-      }, ['B', 'C'].map(createRoute))).toEqual({
-        routes: ['A', 'B', 'C'].map(createRoute),
+      }, ['B', 'C'].map(unary(createRoute)))).toEqual({
+        routes: ['A', 'B', 'C'].map(unary(createRoute)),
         index: 1,
       });
     });
@@ -73,8 +78,8 @@ describe('navigationHelpers', () => {
       expect(pushList({
         routes: [createRoute('A')],
         index: 0,
-      }, ['B', 'A', 'C'].map(createRoute))).toEqual({
-        routes: ['A', 'B', 'C'].map(createRoute),
+      }, ['B', 'A', 'C'].map(unary(createRoute)))).toEqual({
+        routes: ['A', 'B', 'C'].map(unary(createRoute)),
         index: 1,
       });
     });
@@ -93,10 +98,10 @@ describe('navigationHelpers', () => {
   describe('popCurrent', () => {
     it('should pop the current route off the stack', () => {
       expect(popCurrent({
-        routes: ['A', 'B', 'C'].map(createRoute),
+        routes: ['A', 'B', 'C'].map(unary(createRoute)),
         index: 1,
       })).toEqual({
-        routes: ['A', 'C'].map(createRoute),
+        routes: ['A', 'C'].map(unary(createRoute)),
         index: 0,
       });
     });
