@@ -1,4 +1,4 @@
-exports[`ProfilePicture should map props correctly 1`] = `
+exports[`FormStep should render 1`] = `
 <View
   style={
     Array [
@@ -31,58 +31,11 @@ exports[`ProfilePicture should map props correctly 1`] = `
         ]
       ]
     }>
-    Add a profile picture
+    Test Test Title
   </Text>
-  <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
-    accessible={true}
-    hitSlop={undefined}
-    onLayout={undefined}
-    onResponderGrant={[Function bound touchableHandleResponderGrant]}
-    onResponderMove={[Function bound touchableHandleResponderMove]}
-    onResponderRelease={[Function bound touchableHandleResponderRelease]}
-    onResponderTerminate={[Function bound touchableHandleResponderTerminate]}
-    onResponderTerminationRequest={[Function bound touchableHandleResponderTerminationRequest]}
-    onStartShouldSetResponder={[Function bound touchableHandleStartShouldSetResponder]}
-    style={
-      Object {
-        "alignItems": "center"
-      }
-    }
-    testID={undefined}>
-    <Image
-      source={
-        Object {
-          "uri": "path/to/image.png"
-        }
-      }
-      style={
-        Object {
-          "height": 120,
-          "marginBottom": 19,
-          "width": 120
-        }
-      } />
-    <Text
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 13,
-            "textAlign": "center"
-          },
-          Object {
-            "color": "#9fb1b3",
-            "fontSize": 18
-          }
-        ]
-      }>
-      Choose Photo
-    </Text>
-  </View>
+  <Text>
+    I am a child.
+  </Text>
   <View
     style={
       Object {

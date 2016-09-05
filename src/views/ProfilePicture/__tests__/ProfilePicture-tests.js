@@ -19,16 +19,6 @@ describe('ProfilePicture', () => {
     expect(render(createComponent())).toMatchSnapshot();
   });
 
-  it('should enable pagination next button if there is an profilePicture', () => {
-    expect(render(createComponent({
-      profilePicture: 'path/to/image.png',
-    }))).toMatchSnapshot();
-  });
-
-  it('should disable pagination next button if there is no profilePicture', () => {
-    expect(render(createComponent({ profilePicture: null }))).toMatchSnapshot();
-  });
-
   it('should be able to tap and fire `onChoosePhotoPress`', () => {
     const onChoosePhotoPress = jest.fn();
     const el = shallow(
