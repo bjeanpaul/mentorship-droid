@@ -4,19 +4,13 @@ import { View, TouchableNativeFeedback, Image } from 'react-native';
 import { Text } from 'src/components';
 import styles from './styles';
 import images from 'src/constants/images';
-
-
-export const NAV_TAB_ACTIVITIES = 'NAV_TAB_ACTIVITIES';
-export const NAV_TAB_CHAT = 'NAV_TAB_CHAT';
-export const NAV_TAB_COMMUNITY = 'NAV_TAB_COMMUNITY';
-export const NAV_TAB_JOURNEY = 'NAV_TAB_JOURNEY';
-export const NAV_TAB_SCHEDULED_CALLS = 'NAV_TAB_SCHEDULED_CALLS';
+import * as constants from 'src/constants/navigation';
 
 
 const tabs = {
-  activities: NAV_TAB_ACTIVITIES,
-  journey: NAV_TAB_JOURNEY,
-  scheduledCalls: NAV_TAB_SCHEDULED_CALLS,
+  activities: constants.NAV_TAB_ACTIVITIES,
+  journey: constants.NAV_TAB_JOURNEY,
+  scheduledCalls: constants.NAV_TAB_SCHEDULED_CALLS,
 };
 
 
@@ -44,24 +38,24 @@ export const NavTabBar = ({
 }) => (
   <View style={styles.bar}>
     <NavTab
-      uid={NAV_TAB_JOURNEY}
+      uid={tabs.journey}
       onPress={onTabPress}
-      type={NAV_TAB_JOURNEY}
-      active={activeTab === NAV_TAB_JOURNEY}
+      type={tabs.journey}
+      active={activeTab === tabs.journey}
     />
 
     <NavTab
-      uid={NAV_TAB_ACTIVITIES}
+      uid={tabs.activities}
       onPress={onTabPress}
-      type={NAV_TAB_ACTIVITIES}
-      active={activeTab === NAV_TAB_ACTIVITIES}
+      type={tabs.activities}
+      active={activeTab === tabs.activities}
     />
 
     <NavTab
-      uid={NAV_TAB_SCHEDULED_CALLS}
+      uid={tabs.scheduledCalls}
       onPress={onTabPress}
-      type={NAV_TAB_SCHEDULED_CALLS}
-      active={activeTab === NAV_TAB_SCHEDULED_CALLS}
+      type={tabs.scheduledCalls}
+      active={activeTab === tabs.scheduledCalls}
     />
   </View>
 );
