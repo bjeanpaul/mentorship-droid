@@ -1,0 +1,105 @@
+exports[`OnboardingStepGreeting should map props correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "flex": 1
+        },
+        Object {
+          "justifyContent": "space-around"
+        }
+      ]
+    }>
+    <View
+      style={
+        Object {
+          "alignItems": "center"
+        }
+      }>
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 120,
+            "width": 120
+          }
+        } />
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "color": "#022428",
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 32,
+            "fontWeight": "400"
+          }
+        ]
+      }>
+      Welcome 
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "color": "#80979a",
+            "fontSize": 18,
+            "paddingLeft": 24,
+            "paddingRight": 24
+          }
+        ]
+      }>
+      Help build a vibrant mentor community. Complete your profile to allow others learn more about you.
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+  </View>
+</View>
+`;

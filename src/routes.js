@@ -24,7 +24,7 @@ export default fromPairs([
   [constants.ROUTE_AUTH_ACTIVATION, ActivationContainer],
   [constants.ROUTE_AUTH_LOGIN, LoginContainer],
 
-  [constants.ROUTES_ONBOARDING, OnboardingContainer],
+  [constants.ROUTE_ONBOARDING, OnboardingContainer],
   [constants.ROUTE_ONBOARDING_CAMERA_ROLL, CameraRollContainer],
 
   [constants.ROUTE_LOADING, LoadingContainer],

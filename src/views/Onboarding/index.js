@@ -7,8 +7,8 @@ const Onboarding = ({
   navigationState,
 }) => (
   <Stepper navigationState={navigationState}>
-    <containers.Occupation />
     <containers.Greeting />
+    <containers.Occupation />
     <containers.ProfilePicture />
     <containers.Inspiration />
     <containers.Motivation />
