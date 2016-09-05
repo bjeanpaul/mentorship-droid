@@ -19,7 +19,7 @@ import {
 
 const navigationReducer = (state = {
   index: 0,
-  routes: [createRoute(routes.ROUTE_LANDING)],
+  routes: [createRoute(routes.ROUTE_ONBOARDING)],
 }, action) => {
   switch (action.type) {
     case navigation.NAVIGATE_BACK_REQUEST:
@@ -49,7 +49,7 @@ const navigationReducer = (state = {
     case onboarding.ONBOARDING_CHOOSE_PROFILE_PICTURE:
       return insertAfterCurrent(state, createRoute(routes.ROUTE_ONBOARDING_CAMERA_ROLL));
 
-    case onboarding.ONBOARDING_UPDATE_PROFILE_PICTURE:
+    case onboarding.ONBOARDING_CHANGE_PROFILE_PICTURE:
       return popCurrent(state);
 
     case activities.CATEGORY_CHOOSE: {

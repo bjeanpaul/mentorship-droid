@@ -19,10 +19,10 @@ describe('actions/onboarding', () => {
     });
   });
 
-  describe('updateProfilePicture', () => {
+  describe('changeProfilePicture', () => {
     it('should create an action for profile image change', () => {
-      expect(actions.updateProfilePicture('path/to/image.png')).toEqual({
-        type: constants.ONBOARDING_UPDATE_PROFILE_PICTURE,
+      expect(actions.changeProfilePicture('path/to/image.png')).toEqual({
+        type: constants.ONBOARDING_CHANGE_PROFILE_PICTURE,
         payload: {
           profilePicture: 'path/to/image.png',
         },
@@ -36,7 +36,7 @@ describe('actions/onboarding', () => {
         jobTitle: 'Uncle',
         jobSector: 'Family',
       })).toEqual({
-        type: constants.ONBOARDING_UPDATE_PROFILE,
+        type: constants.ONBOARDING_CHANGE_PROFILE,
         payload: {
           jobTitle: 'Uncle',
           jobSector: 'Family',

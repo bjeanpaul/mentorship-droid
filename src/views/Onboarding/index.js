@@ -7,13 +7,16 @@ const Onboarding = ({
   navigationState,
 }) => (
   <Stepper navigationState={navigationState}>
+    <containers.ProfilePicture />
+    <containers.Saving />
     <containers.Greeting />
     <containers.Occupation />
-    <containers.ProfilePicture />
+
     <containers.Inspiration />
     <containers.Motivation />
     <containers.ThreeWords />
     <containers.Skills />
+    <containers.Saving />
   </Stepper>
 );
 

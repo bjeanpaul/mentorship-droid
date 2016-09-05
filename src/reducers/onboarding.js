@@ -9,10 +9,13 @@ const navigation = makeStepperNavigationReducer({
 });
 
 
-const profile = (state = {}, action) => {
+const profile = (state = {
+  jobTitle: 'test',
+  jobSector: 'dog',
+}, action) => {
   switch (action.type) {
-    case constants.ONBOARDING_UPDATE_PROFILE_PICTURE:
-    case constants.ONBOARDING_UPDATE_PROFILE:
+    case constants.ONBOARDING_CHANGE_PROFILE_PICTURE:
+    case constants.ONBOARDING_CHANGE_PROFILE:
       return {
         ...state,
         ...action.payload,

@@ -105,6 +105,7 @@ const requestSuccess = (res, { schema, ...opts }) => Promise.resolve(res.data)
 
 
 const requestFailure = e => {
+  console.log(e)
   const ErrorType = {
     403: errors.ApiAuthenticationError,
     404: errors.ApiNotFoundError,

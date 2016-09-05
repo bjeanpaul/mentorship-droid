@@ -90,9 +90,9 @@ describe('navigation/reducer', () => {
     });
   });
 
-  describe('ONBOARDING_UPDATE_PROFILE_PICTURE', () => {
+  describe('ONBOARDING_CHANGE_PROFILE_PICTURE', () => {
     it('should pop from the state', () => {
-      expect(reduce(fakeState(), onboarding.updateProfilePicture()))
+      expect(reduce(fakeState(), onboarding.changeProfilePicture()))
         .toEqual(popCurrent(fakeState()));
     });
   });

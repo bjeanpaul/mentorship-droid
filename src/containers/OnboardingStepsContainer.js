@@ -1,6 +1,6 @@
 import { pick } from 'lodash';
 import { connect } from 'react-redux';
-import { chooseProfilePicture, updateProfile, stepForward } from 'src/actions/onboarding';
+import { chooseProfilePicture, changeProfile, save, stepForward } from 'src/actions/onboarding';
 import { getAuthUserProfile } from 'src/stores/helpers';
 
 
@@ -13,13 +13,14 @@ import {
   Skills,
   ThreeWords,
 } from 'src/views/OnboardingFormSteps';
+import Saving from 'src/views/OnboardingSaving';
 
 
 const onboardContainer = ({
   component,
   profileProps,
   actions = {
-    onChangeText: updateProfile,
+    onChangeText: changeProfile,
   },
 }) => connect(
   state => pick(state.onboarding.profile, profileProps),
@@ -68,4 +69,13 @@ export default {
     component: Skills,
     profileProps: ['skills'],
   }),
+
+  Saving: connect(
+    state => ({
+      id: state.auth.profileId,
+      profile: state.onboarding.profile,
+    }),
+    { save }
+  )(Saving),
+
 };
