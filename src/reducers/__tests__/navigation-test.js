@@ -1,8 +1,11 @@
+import { unary } from 'lodash';
 import * as routes from 'src/constants/routes';
 import * as landing from 'src/actions/landing';
 import * as navigation from 'src/actions/navigation';
-import * as auth from 'src/actions/auth';
+import * as entry from 'src/actions/entry';
+import * as sync from 'src/actions/sync';
 import * as onboarding from 'src/actions/onboarding';
+import * as activities from 'src/actions/activities';
 import reduce from 'src/reducers/navigation';
 
 import {
@@ -17,7 +20,7 @@ import {
 
 
 const fakeState = () => ({
-  routes: ['A', 'B', 'C'].map(createRoute),
+  routes: ['A', 'B', 'C'].map(unary(createRoute)),
   index: 1,
 });
 
@@ -37,6 +40,13 @@ describe('navigation/reducer', () => {
     });
   });
 
+  describe('SCREEN_DISMISS', () => {
+    it('should pop the current route', () => {
+      expect(reduce(fakeState(), navigation.dismissScreen()))
+        .toEqual(popCurrent(fakeState()));
+    });
+  });
+
   describe('SHOW_ACTIVATION_REQUEST', () => {
     it('should push the activation route', () => {
       expect(reduce(fakeState(), landing.showActivation()))
@@ -51,17 +61,31 @@ describe('navigation/reducer', () => {
     });
   });
 
-  describe('AUTH_LOGIN_SUCCESS', () => {
+  describe('NEW_USER_ENTER', () => {
     it('should push the welcome route', () => {
-      expect(reduce(fakeState(), auth.loginSuccess()))
+      expect(reduce(fakeState(), entry.enterNewUser()))
         .toEqual(push(fakeState(), createRoute(routes.ROUTE_ONBOARDING_WELCOME)));
+    });
+  });
+
+  describe('LOAD_REQUEST', () => {
+    it('should push the loading route', () => {
+      expect(reduce(fakeState(), sync.loadRequest()))
+        .toEqual(push(fakeState(), createRoute(routes.ROUTE_LOADING)));
+    });
+  });
+
+  describe('LOAD_SUCCESS', () => {
+    it('should push the journey route', () => {
+      expect(reduce(fakeState(), sync.loadSuccess({ entities: {} })))
+        .toEqual(push(fakeState(), createRoute(routes.ROUTE_JOURNEY)));
     });
   });
 
   describe('ONBOARDING_START_PROFILE', () => {
     it('should push on the onboarding steps', () => {
       expect(reduce(fakeState(), onboarding.startProfile()))
-        .toEqual(pushList(fakeState(), routes.ONBOARDING_STEPS.map(createRoute)));
+        .toEqual(pushList(fakeState(), routes.ONBOARDING_STEPS.map(unary(createRoute))));
     });
   });
 
@@ -77,6 +101,33 @@ describe('navigation/reducer', () => {
     it('should pop from the state', () => {
       expect(reduce(fakeState(), onboarding.updateProfilePicture()))
         .toEqual(popCurrent(fakeState()));
+    });
+  });
+
+  describe('CATEGORY_CHOOSE', () => {
+    it('should push on the category route', () => {
+      expect(reduce(fakeState(), activities.chooseCategory(23)))
+        .toEqual(push(fakeState(), createRoute(routes.ROUTE_CATEGORY, {
+          categoryId: 23,
+        })));
+    });
+  });
+
+  describe('ACTIVITY_CHOOSE', () => {
+    it('should push on the activity route', () => {
+      expect(reduce(fakeState(), activities.chooseActivity(23)))
+        .toEqual(push(fakeState(), createRoute(routes.ROUTE_ACTIVITY, {
+          activityId: 23,
+        })));
+    });
+  });
+
+  describe('ACTIVITY_SCHEDULE_CALL', () => {
+    it('should push on the activity route', () => {
+      expect(reduce(fakeState(), activities.scheduleActivityCall(23)))
+        .toEqual(push(fakeState(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
+          activityId: 23,
+        })));
     });
   });
 });

@@ -1,7 +1,11 @@
 import { PROFILE_FETCH_SUCCESS } from 'src/constants/profile';
 
 import { AUTH_LOGIN_SUCCESS } from 'src/constants/auth';
+<<<<<<< HEAD
 import { LOAD_SUCCESS } from 'src/constants/entry';
+=======
+import { EXISTING_USER_ENTER_SUCCESS } from 'src/constants/entry';
+>>>>>>> develop
 
 import {
   SCHEDULED_CALL_LIST_SUCCESS,
@@ -13,7 +17,7 @@ import {
 const ACTIONS_WITH_ENTITIES = [
   AUTH_LOGIN_SUCCESS,
   PROFILE_FETCH_SUCCESS,
-  LOAD_SUCCESS,
+  EXISTING_USER_ENTER_SUCCESS,
   SCHEDULED_CALL_LIST_SUCCESS,
   SCHEDULED_CALL_CREATE_SUCCESS,
   SCHEDULED_CALL_FETCH_SUCCESS,

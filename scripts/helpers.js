@@ -1,6 +1,7 @@
-import { uniqueId } from 'lodash';
+import { merge, extend, uniqueId } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
 import { Profile, ScheduledCall, Activity, Category } from 'src/api';
+import { getContext } from 'src/stores/helpers';
 
 
 export const capture = async (fn, ...xargs) => {
@@ -12,8 +13,9 @@ export const capture = async (fn, ...xargs) => {
 
 export const mock = () => {
   const __id = uniqueId();
+  const fn = jest.fn();
 
-  return (...args) => ({
+  return (...args) => extend(fn, {
     __id,
     args,
   });
@@ -26,11 +28,6 @@ export const uidEquals = id => node => node.prop('uid') === id;
 export const fakeAuth = () => ({
   email: 'a@b.org',
   password: '1337',
-});
-
-
-export const fakeContext = () => ({
-  auth: fakeAuth(),
 });
 
 
@@ -58,8 +55,37 @@ export const fakeActivity = data => ({
   topic: 'cipot',
   icon: null,
   poster: null,
+  category: 23,
   ...data,
 });
+
+
+export const fakeProfile = data => ({
+  id: 23,
+  ...data,
+});
+
+
+export const fakeState = (overrides = {}) => merge({}, {
+  auth: {
+    profileId: 23,
+    auth: fakeAuth(),
+  },
+  entities: {
+    profiles: {
+      23: fakeProfile({ id: 23 }),
+    },
+    categories: {
+      21: fakeCategory({ id: 21 }),
+    },
+    activities: {
+      2: fakeActivity({ id: 2 }),
+    },
+  },
+}, overrides);
+
+
+export const fakeContext = (overrides = {}) => getContext(fakeState(overrides));
 
 
 export const fakeStore = {

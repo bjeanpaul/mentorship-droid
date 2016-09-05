@@ -5,14 +5,29 @@ import LandingContainer from 'src/containers/LandingContainer';
 import LoginContainer from 'src/containers/LoginContainer';
 import ActivationContainer from 'src/containers/ActivationContainer';
 
+<<<<<<< HEAD
 
 // import ProfilePictureContainer from 'src/containers/ProfilePictureContainer';
+=======
+import WelcomeContainer from 'src/containers/WelcomeContainer';
+import ProfilePictureContainer from 'src/containers/ProfilePictureContainer';
+>>>>>>> develop
 import CameraRollContainer from 'src/containers/CameraRollContainer';
 // import OnboardingOccupationContainer from 'src/containers/OnboardingOccupationContainer';
 // import OnboardingMotivationContainer from 'src/containers/OnboardingMotivationContainer';
 // import OnboardingOwnMentorContainer from 'src/containers/OnboardingOwnMentorContainer';
 // import OnboardingThreeWordsContainer from 'src/containers/OnboardingThreeWordsContainer';
 // import OnboardingSkillsContainer from 'src/containers/OnboardingSkillsContainer';
+
+import LoadingContainer from 'src/containers/LoadingContainer';
+
+import JourneyContainer from 'src/containers/JourneyContainer';
+
+import CategoryListContainer from 'src/containers/CategoryListContainer';
+import CategoryContainer from 'src/containers/CategoryContainer';
+import ActivityContainer from 'src/containers/ActivityContainer';
+
+import ScheduleCallContainer from 'src/containers/ScheduleCallContainer';
 
 
 export default fromPairs([
@@ -23,9 +38,27 @@ export default fromPairs([
 
   // [constants.ROUTE_ONBOARDING_PROFILE_PICTURE, ProfilePictureContainer],
   [constants.ROUTE_ONBOARDING_CAMERA_ROLL, CameraRollContainer],
+<<<<<<< HEAD
   // [constants.ROUTE_ONBOARDING_OCCUPATION, OnboardingOccupationContainer],
   // [constants.ROUTE_ONBOARDING_MOTIVATION, OnboardingMotivationContainer],
   // [constants.ROUTE_ONBOARDING_OWN_MENTOR, OnboardingOwnMentorContainer],
   // [constants.ROUTE_ONBOARDING_THREE_WORDS, OnboardingThreeWordsContainer],
   // [constants.ROUTE_ONBOARDING_SKILLS, OnboardingSkillsContainer],
+=======
+  [constants.ROUTE_ONBOARDING_OCCUPATION, OnboardingOccupationContainer],
+  [constants.ROUTE_ONBOARDING_MOTIVATION, OnboardingMotivationContainer],
+  [constants.ROUTE_ONBOARDING_OWN_MENTOR, OnboardingOwnMentorContainer],
+  [constants.ROUTE_ONBOARDING_THREE_WORDS, OnboardingThreeWordsContainer],
+  [constants.ROUTE_ONBOARDING_SKILLS, OnboardingSkillsContainer],
+
+  [constants.ROUTE_LOADING, LoadingContainer],
+
+  [constants.ROUTE_JOURNEY, JourneyContainer],
+
+  [constants.ROUTE_CATEGORY_LIST, CategoryListContainer],
+  [constants.ROUTE_CATEGORY, CategoryContainer],
+  [constants.ROUTE_ACTIVITY, ActivityContainer],
+
+  [constants.ROUTE_SCHEDULE_CALL, ScheduleCallContainer],
+>>>>>>> develop
 ]);

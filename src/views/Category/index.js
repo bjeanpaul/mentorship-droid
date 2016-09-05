@@ -31,6 +31,7 @@ class Category extends Component {
   render() {
     const {
       category,
+      onBackPress,
       ...props,
     } = this.props;
 
@@ -42,7 +43,12 @@ class Category extends Component {
     return (
       <BaseView>
         <Header style={[styles.header, { backgroundColor: color }]}>
-          <HeaderIcon type={HeaderIcon.types.backLight} style={styles.back} />
+          <HeaderIcon
+            uid="back"
+            type={HeaderIcon.types.backLight}
+            style={styles.back}
+            onPress={onBackPress}
+          />
           <Text style={[Text.types.title, Text.themes.light]}>{title}</Text>
         </Header>
 
@@ -109,6 +115,7 @@ const tabPropType = PropTypes.oneOf([TAB_ACTIVITIES, TAB_ABOUT]);
 
 Category.propTypes = {
   category: PropTypes.object.isRequired,
+  onBackPress: PropTypes.func.isRequired,
   initialActiveTab: tabPropType,
 };
 

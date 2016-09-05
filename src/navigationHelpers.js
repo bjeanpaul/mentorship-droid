@@ -12,7 +12,10 @@ const {
 } = NavigationExperimental;
 
 
-export const createRoute = key => ({ key });
+export const createRoute = (key, context = {}) => ({
+  key,
+  context,
+});
 
 
 export const insertAfterCurrent = (state, route) => !has(state, route.key)
