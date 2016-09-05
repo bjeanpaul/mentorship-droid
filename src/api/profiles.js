@@ -6,11 +6,13 @@ import { parseResults } from 'src/api/parse';
 
 
 export const REQUIRED_PROFILE_FIELDS = [
-  'inspiration',
-  'job_sector',
-  'job_title',
+  'jobSector',
+  'jobTitle',
   'motivation',
-  'profile_pick',
+  'inspiration',
+  'tags',
+  'skills',
+  'profilePic',
 ];
 
 

@@ -1,3 +1,4 @@
+// TODO: Consider renaming this to something more descriptive.
 import { PROFILE_FETCH_SUCCESS } from 'src/constants/profile';
 
 import { AUTH_LOGIN_SUCCESS } from 'src/constants/auth';

@@ -5,6 +5,7 @@ import LandingContainer from 'src/containers/LandingContainer';
 import LoginContainer from 'src/containers/LoginContainer';
 import ActivationContainer from 'src/containers/ActivationContainer';
 
+import OnboardingContainer from 'src/containers/OnboardingContainer';
 import CameraRollContainer from 'src/containers/CameraRollContainer';
 import LoadingContainer from 'src/containers/LoadingContainer';
 
@@ -23,6 +24,7 @@ export default fromPairs([
   [constants.ROUTE_AUTH_ACTIVATION, ActivationContainer],
   [constants.ROUTE_AUTH_LOGIN, LoginContainer],
 
+  [constants.ROUTES_ONBOARDING, OnboardingContainer],
   [constants.ROUTE_ONBOARDING_CAMERA_ROLL, CameraRollContainer],
 
   [constants.ROUTE_LOADING, LoadingContainer],
