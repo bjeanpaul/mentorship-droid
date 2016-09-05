@@ -1,11 +1,7 @@
 import { PROFILE_FETCH_SUCCESS } from 'src/constants/profile';
 
 import { AUTH_LOGIN_SUCCESS } from 'src/constants/auth';
-<<<<<<< HEAD
-import { LOAD_SUCCESS } from 'src/constants/entry';
-=======
 import { EXISTING_USER_ENTER_SUCCESS } from 'src/constants/entry';
->>>>>>> develop
 
 import {
   SCHEDULED_CALL_LIST_SUCCESS,

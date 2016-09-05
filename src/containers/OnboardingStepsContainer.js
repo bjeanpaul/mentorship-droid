@@ -1,6 +1,8 @@
 import { pick } from 'lodash';
 import { connect } from 'react-redux';
 import { chooseProfilePicture, updateProfile, stepForward } from 'src/actions/onboarding';
+import { getAuthUserProfile } from 'src/stores/helpers';
+
 
 import Greeting from 'src/views/Greeting';
 import ProfilePicture from 'src/views/ProfilePicture';
@@ -26,13 +28,13 @@ const onboardContainer = ({
 
 
 export default {
-  Greeting: onboardContainer({
-    component: Greeting,
-    profileProps: ['firstName'],
-    actions: {
+  Greeting: connect(
+    state => ({
+      name: getAuthUserProfile(state).firstName,
+    }), {
       onCompleteProfilePress: stepForward,
-    },
-  }),
+    }
+  )(Greeting),
 
   ProfilePicture: onboardContainer({
     component: ProfilePicture,
