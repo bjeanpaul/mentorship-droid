@@ -4,7 +4,7 @@ import { BaseView, Text } from 'src/components';
 
 const NotYetImplemented = () => (
   <BaseView>
-    <Text>Sorry, implemenation for this screen is yet to be completed.</Text>
+    <Text>Sorry, implementation for this screen is yet to be completed.</Text>
   </BaseView>
 );
 

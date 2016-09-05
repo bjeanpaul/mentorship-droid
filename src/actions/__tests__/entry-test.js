@@ -18,7 +18,7 @@ describe('actions/entry', () => {
     });
 
     it('should call enterNewUser() if a profile is not complete', async () => {
-      profileIsComplete.mockReturnValue(true);
+      profileIsComplete.mockReturnValue(false);
       expect(await capture(enter(), fakeContext())).toEqual([enterNewUser()]);
     });
   });
