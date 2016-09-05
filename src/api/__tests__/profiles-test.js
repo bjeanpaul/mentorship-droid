@@ -115,7 +115,7 @@ describe('api/profiles', () => {
       expect(profileIsComplete(profile)).toBe(true);
     });
 
-    it('should return true if required fields are empty', () => {
+    it('should return false if required fields are empty', () => {
       const profile = fromPairs(REQUIRED_PROFILE_FIELDS.map(
         (key) => [key, 'FAKE FIELD VALUE']
       ));
