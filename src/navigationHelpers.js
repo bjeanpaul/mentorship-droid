@@ -12,6 +12,14 @@ const {
 } = NavigationExperimental;
 
 
+export {
+  reset,
+  pop,
+  back,
+  forward,
+};
+
+
 export const createRoute = (key, context = {}) => ({
   key,
   context,
@@ -51,7 +59,7 @@ export const popCurrent = state => ({
 });
 
 
-const makeStepperNavigationReducer = ({ FORWARD, BACK }) => (state = {
+export const makeStepperNavigationReducer = ({ FORWARD, BACK }) => (state = {
   index: 0,
   routes: [
     { key: 'STEP_0' },
@@ -70,14 +78,22 @@ const makeStepperNavigationReducer = ({ FORWARD, BACK }) => (state = {
 };
 
 
-export {
-  reset,
-  push,
-  pop,
-  back,
-  forward,
-  pushList,
-  popCurrent,
-  insertAfterCurrent,
-  makeStepperNavigationReducer,
-};
+export const getCurrentStack = ({
+  currentStack,
+  stacks,
+}) => stacks[currentStack];
+
+
+export const changeStack = ({
+  currentStack,
+  stacks,
+}, stack) => ({
+  currentStack: stack,
+  stacks,
+});
+
+
+export const createStack = (routes = []) => ({
+  index: Math.max(routes.length - 1, 0),
+  routes,
+});
