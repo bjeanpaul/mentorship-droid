@@ -1,4 +1,3 @@
-import { snakeCase } from 'lodash'
 import * as api from 'src/api';
 import * as constants from 'src/constants/onboarding';
 

@@ -3,11 +3,6 @@ import * as statuses from 'src/statuses/auth';
 
 
 const authReducer = (state = {
-  profileId: 1,
-  auth: {
-    email: 'admin@example.org',
-    password: '123',
-  },
   status: statuses.authStatusIdle(),
 }, action) => {
   switch (action.type) {
