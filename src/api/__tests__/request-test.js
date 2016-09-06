@@ -97,9 +97,6 @@ describe('api/request', () => {
       expect(axios.mock.calls).toEqual([[
         jasmine.objectContaining({
           data: { bar: 23 },
-          headers: jasmine.objectContaining({
-            'Content-Type': 'application/json',
-          }),
         }),
       ]]);
     });
@@ -212,16 +209,35 @@ describe('api/request', () => {
         url: '/foo',
         method: 'GET',
         data: { garplyWaldo: 21 },
+        normalizeCase: false,
       });
 
       expect(res).toEqual({
-        fooBar: 23,
+        foo_bar: 23,
       });
 
       expect(axios.mock.calls).toEqual([[
         jasmine.objectContaining({
-          data: { garply_waldo: 21 },
+          data: { garplyWaldo: 21 },
         }),
+      ]]);
+    });
+
+    it('should not normalize case for FormData', async () => {
+      const data = new FormData();
+
+      axios.mockReturnValue(Promise.resolve({
+        data: { foo_bar: 23 },
+      }));
+
+      await request({
+        url: '/foo',
+        method: 'GET',
+        data,
+      });
+
+      expect(axios.mock.calls).toEqual([[
+        jasmine.objectContaining({ data }),
       ]]);
     });
   });

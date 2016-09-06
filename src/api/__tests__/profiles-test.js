@@ -94,11 +94,7 @@ describe('api/profiles', () => {
       .toEqual({
         url: '/profile/1/image/',
         method: 'PUT',
-        data: {
-          path: '/foo.png',
-          name: 'rar.png',
-          type: 'image/png',
-        },
+        data: { path: '/foo.png' },
         auth: {
           email: 'a@b.org',
           password: '1337',
