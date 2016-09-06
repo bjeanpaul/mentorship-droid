@@ -11,7 +11,7 @@ import {
 
 
 export default (state = createStack([
-  createRoute(routes.ROUTE_LANDING),
+  createRoute(routes.ROUTE_ONBOARDING),
 ]), action) => {
   switch (action.type) {
     case onboarding.ONBOARDING_CHOOSE_PROFILE_PICTURE:

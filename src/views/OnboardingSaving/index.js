@@ -3,7 +3,7 @@ import { OverlayLoading } from 'src/components';
 
 
 class Saving extends React.Component {
-
+  // TODO: Stepper should dispatch an action when it's on the last view
   componentDidMount() {
     const {
       id,
@@ -24,7 +24,7 @@ class Saving extends React.Component {
 
 Saving.propTypes = {
   profile: PropTypes.any.isRequired,
-  id: PropTypes.number,
+  id: PropTypes.string.isRequired,
   save: PropTypes.func.isRequired,
 };
 

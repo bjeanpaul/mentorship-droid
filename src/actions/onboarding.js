@@ -4,6 +4,7 @@ import * as constants from 'src/constants/onboarding';
 import {
   apiAction,
   staticAction,
+  dataAction,
 } from 'src/actionHelpers';
 
 const { ApiResponseError } = api;
@@ -31,7 +32,7 @@ const changeProfile = (payload) => ({
 const updateProfile = apiAction({
   method: api.updateProfile,
   request: staticAction(constants.ONBOARDING_UPDATE_PROFILE_REQUEST),
-  success: staticAction(constants.ONBOARDING_UPDATE_PROFILE_SUCCESS),
+  success: dataAction(constants.ONBOARDING_UPDATE_PROFILE_SUCCESS),
   failures: [[ApiResponseError, staticAction(constants.ONBOARDING_UPDATE_PROFILE_FAILURE)]],
 });
 
@@ -39,15 +40,16 @@ const updateProfile = apiAction({
 const updateProfilePicture = apiAction({
   method: api.updateProfilePicture,
   request: staticAction(constants.ONBOARDING_UPDATE_IMAGE_REQUEST),
-  success: staticAction(constants.ONBOARDING_UPDATE_IMAGE_SUCCESS),
+  success: dataAction(constants.ONBOARDING_UPDATE_IMAGE_SUCCESS),
   failures: [[ApiResponseError, staticAction(constants.ONBOARDING_UPDATE_IMAGE_FAILURE)]],
 });
 
 
-const save = ({ id, profile }) => dispatch => {
-  dispatch(updateProfile(id, profile));
-  dispatch(updateProfilePicture(id, profile.profilePicture));
-};
+const save = ({ id, profile }) => dispatch => Promise.resolve()
+  .then(() => updateProfilePicture(id, profile.profilePicture))
+  .then(dispatch)
+  .then(() => updateProfile(id, profile))
+  .then(dispatch);
 
 
 const stepBack = () => ({

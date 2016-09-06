@@ -13,6 +13,8 @@ const Activation = ({
   <BaseView>
     <Toolbar title="Activate Account" />
     <LoginForm
+      initialUsername="admin@example.org"
+      initialPassword="123"
       {...props}
       buttonLabel="ACTIVATE"
     />

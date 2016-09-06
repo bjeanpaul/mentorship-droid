@@ -71,6 +71,7 @@ describe('api/profiles', () => {
         method: 'PUT',
         data: { fake: 'profile' },
         auth: fakeAuth(),
+        schema: Profile,
       });
     });
   });

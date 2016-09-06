@@ -31,7 +31,7 @@ const onboardContainer = ({
 export default {
   Greeting: connect(
     state => ({
-      name: getAuthUserProfile(state).firstName,
+      firstName: getAuthUserProfile(state).firstName,
     }), {
       onCompleteProfilePress: stepForward,
     }
