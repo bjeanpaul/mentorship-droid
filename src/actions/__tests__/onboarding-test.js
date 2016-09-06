@@ -10,7 +10,7 @@ describe('actions/onboarding', () => {
       });
     });
 
-    it('should create an action for stepping back', () => {
+    it('should create an action for stepping forward', () => {
       expect(actions.stepForward()).toEqual({
         type: constants.ONBOARDING_STEP_FORWARD_REQUEST,
       });
