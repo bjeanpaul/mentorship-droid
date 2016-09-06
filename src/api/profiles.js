@@ -62,11 +62,7 @@ export const updateProfilePicture = (id, path, auth) => request({
   url: `/profile/${id}/image/`,
   method: 'PUT',
   auth,
-  data: imageData({
-    path,
-    name: 'rar.png',
-    type: 'image/png',
-  }),
+  data: imageData({ path }),
 });
 
 
