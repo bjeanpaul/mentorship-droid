@@ -6,19 +6,15 @@ import {
   push,
   createStack,
   createRoute,
-  popCurrent,
 } from 'src/navigationHelpers';
 
 
 export default (state = createStack([
-  createRoute(routes.ROUTE_JOURNEY),
+  createRoute(routes.ROUTE_LOADING),
 ]), action) => {
   switch (action.type) {
-    case sync.LOAD_REQUEST:
-      return push(state, createRoute(routes.ROUTE_LOADING));
-
     case sync.LOAD_SUCCESS:
-      return popCurrent(state);
+      return push(state, createRoute(routes.ROUTE_JOURNEY));
 
     default:
       return state;
