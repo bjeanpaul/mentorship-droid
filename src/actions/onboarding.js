@@ -46,8 +46,6 @@ const updateProfilePicture = apiAction({
 
 
 const save = ({ id, profile }) => dispatch => {
-
-  console.log(profile)
   dispatch(updateProfile(id, profile));
   dispatch(updateProfilePicture(id, profile.profilePicture));
 };
