@@ -1,13 +1,8 @@
-jest.mock('src/constants/routes', () => ({
-  STACKS_TO_NAV_TABS: {
-    FOO: 'NAV_TAB_FOO',
-  },
-}));
-
-
 import React from 'react';
 import { View } from 'react-native';
 import { mapStateToProps } from 'src/containers/NavigatorContainer';
+import { NAV_TAB_ACTIVITIES } from 'src/constants/navigation';
+import { STACK_ACTIVITIES } from 'src/constants/routes';
 
 
 describe('NavigatorContainer', () => {
@@ -15,14 +10,14 @@ describe('NavigatorContainer', () => {
     it('should map the current stack as the active tab', () => {
       expect(mapStateToProps({
         routes: {
-          currentStack: 'FOO',
+          currentStack: STACK_ACTIVITIES,
         },
       }, {
         children: <View />,
         hideNav: false,
       }))
       .toEqual(jasmine.objectContaining({
-        activeTab: 'NAV_TAB_FOO',
+        activeTab: NAV_TAB_ACTIVITIES,
       }));
     });
 
@@ -42,7 +37,7 @@ describe('NavigatorContainer', () => {
     it('should set the active tab to null hideNav prop is true', () => {
       expect(mapStateToProps({
         routes: {
-          currentStack: 'FOO',
+          currentStack: STACK_ACTIVITIES,
         },
       }, {
         hideNav: true,
