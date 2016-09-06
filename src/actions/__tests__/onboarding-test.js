@@ -3,10 +3,16 @@ import * as constants from 'src/constants/onboarding';
 
 
 describe('actions/onboarding', () => {
-  describe('startProfile', () => {
-    it('should create an action for starting a profile', () => {
-      expect(actions.startProfile()).toEqual({
-        type: constants.ONBOARDING_START_PROFILE,
+  describe('navigation', () => {
+    it('should create an action for stepping back', () => {
+      expect(actions.stepBack()).toEqual({
+        type: constants.ONBOARDING_STEP_BACK_REQUEST,
+      });
+    });
+
+    it('should create an action for stepping back', () => {
+      expect(actions.stepForward()).toEqual({
+        type: constants.ONBOARDING_STEP_FORWARD_REQUEST,
       });
     });
   });
@@ -30,9 +36,9 @@ describe('actions/onboarding', () => {
     });
   });
 
-  describe('updateProfile', () => {
+  describe('changeProfile', () => {
     it('should create an action for profile change', () => {
-      expect(actions.updateProfile({
+      expect(actions.changeProfile({
         jobTitle: 'Uncle',
         jobSector: 'Family',
       })).toEqual({
