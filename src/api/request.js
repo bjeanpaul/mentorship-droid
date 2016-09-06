@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { isNull, identity } from 'lodash';
+import { isNull, identity, isPlainObject } from 'lodash';
 import { normalize } from 'normalizr';
 import config from 'src/config';
 import { omitNulls } from 'src/helpers';
@@ -33,7 +33,9 @@ const parse = (d, { parseFn, normalizeCase }) => {
 };
 
 
-const serialize = d => toSnakeCase(d);
+const serialize = (d, { normalizeCase }) => normalizeCase && isPlainObject(d)
+  ? toSnakeCase(d)
+  : d;
 
 
 const parseConf = ({
@@ -64,13 +66,7 @@ const parseConf = ({
       ? serialize(data, { normalizeCase })
       : null,
 
-    headers: omitNulls({
-      ...headers,
-
-      'Content-Type': !isNull(data)
-        ? 'application/json'
-        : null,
-    }),
+    headers,
 
     auth: !isNull(auth)
       ? serializeAuth(auth)
@@ -81,9 +77,9 @@ const parseConf = ({
 
 const imageData = ({
   path = null,
-  name = null,
-  type = null,
   key = 'image',
+  name = 'image.png',
+  type = 'image/png',
 }) => {
   const d = new FormData();
 

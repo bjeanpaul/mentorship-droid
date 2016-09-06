@@ -96,7 +96,7 @@ describe('api/profiles', () => {
         method: 'PUT',
         data: {
           path: '/foo.png',
-          name: 'rar.png',
+          name: 'image.png',
           type: 'image/png',
         },
         auth: {
