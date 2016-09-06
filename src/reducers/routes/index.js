@@ -21,7 +21,7 @@ const navigationReducer = ({
 
 
 const routesReducer = (inputState = {
-  currentStack: routes.STACK_LANDING,
+  currentStack: routes.STACK_ONBOARDING,
   stacks: void 0,
 }, action) => {
   let state = {
