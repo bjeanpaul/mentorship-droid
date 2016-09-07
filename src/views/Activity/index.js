@@ -35,7 +35,12 @@ const Activity = ({
           onPress={onBackPress}
         />
 
-        <Text style={[Text.types.title, Text.themes.light]}>{categoryTitle}</Text>
+        <Text
+          numberOfLines={1}
+          style={[Text.types.title, Text.themes.light, styles.categoryTitle]}
+        >
+          {categoryTitle}
+        </Text>
       </Header>
 
       {
@@ -48,7 +53,12 @@ const Activity = ({
       }
 
       <View style={[styles.about, { backgroundColor: color }]}>
-        <Text style={[Text.themes.light, styles.title]}>{title}</Text>
+        <Text
+          numberOfLines={1}
+          style={[Text.themes.light, styles.title]}
+        >
+          {title}
+        </Text>
         <Status style={styles.statusAbout} />
         <Action onPress={() => onSchedulePress(id)} />
       </View>

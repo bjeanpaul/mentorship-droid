@@ -16,8 +16,10 @@ const Activation = ({
       initialUsername="admin@example.org"
       initialPassword="123"
       {...props}
+      status={status}
       buttonLabel="ACTIVATE"
     />
+
     <LoginStatusMessage {...status} />
 
     {/* TODO */}

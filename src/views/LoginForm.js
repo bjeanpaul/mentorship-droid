@@ -2,13 +2,14 @@ import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 import { TextInput, Button } from 'src/components';
 
+import * as constants from 'src/constants/auth';
 
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: this.props.initialUsername,
-      password: this.props.initialPassword,
+      username: props.initialUsername,
+      password: props.initialPassword,
     };
   }
 
@@ -21,16 +22,17 @@ class LoginForm extends React.Component {
           keyboardType="email-address"
           label="Email"
           value={this.state.username}
-          onChangeText={(username) => this.setState({ username })}
+          onChangeText={username => this.setState({ username })}
         />
         <TextInput
           secureTextEntry
           label="Password"
           value={this.state.password}
-          onChangeText={(password) => this.setState({ password })}
+          onChangeText={password => this.setState({ password })}
         />
 
         <Button
+          disabled={this.props.status.type === constants.AUTH_STATUS_BUSY}
           onPress={() => this.props.onLoginPress(
             this.state.username,
             this.state.password
@@ -48,6 +50,7 @@ LoginForm.propTypes = {
   onLoginPress: PropTypes.func.isRequired,
   initialUsername: PropTypes.string,
   initialPassword: PropTypes.string,
+  status: PropTypes.object,
 };
 
 export default LoginForm;
