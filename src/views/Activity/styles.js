@@ -5,6 +5,10 @@ import colors from 'src/constants/colors';
 
 
 export default StyleSheet.create({
+  categoryTitle: {
+    marginLeft: 48,
+    marginRight: 48,
+  },
   poster: {
     width: 360,
     height: 248,
@@ -15,6 +19,8 @@ export default StyleSheet.create({
     fontSize: 32,
     fontFamily: FONT.MEDIUM,
     fontWeight: FONT_WEIGHT.MEDIUM,
+    marginLeft: 24,
+    marginRight: 24,
     paddingTop: 9,
     paddingBottom: 9,
   },
@@ -27,8 +33,10 @@ export default StyleSheet.create({
     paddingBottom: 24,
   },
   status: {
-    color: colors.ACTIVITY_ABOUT,
+    color: colors.ACTIVITY_STATUS,
     fontSize: 16,
+    marginLeft: 24,
+    marginRight: 24,
   },
   statusAbout: {
     paddingBottom: 27,
