@@ -17,6 +17,7 @@ import Section from './Section';
 import Pagination from './Pagination';
 import Stepper, { Step } from './Stepper';
 import NavTabBar from './NavTabBar';
+import NotFound from './NotFound';
 
 
 export {
@@ -41,4 +42,5 @@ export {
   Stepper,
   Step,
   NavTabBar,
+  NotFound,
 };
