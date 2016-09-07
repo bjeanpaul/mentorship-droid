@@ -14,12 +14,6 @@ export default (state = createStack([
   createRoute(routes.ROUTE_ONBOARDING),
 ]), action) => {
   switch (action.type) {
-    case onboarding.ONBOARDING_CHOOSE_PROFILE_PICTURE:
-      return insertAfterCurrent(state, createRoute(routes.ROUTE_ONBOARDING_CAMERA_ROLL));
-
-    case onboarding.ONBOARDING_CHANGE_PROFILE_PICTURE:
-      return popCurrent(state);
-
     default:
       return state;
   }

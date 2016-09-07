@@ -5,12 +5,12 @@ import { Provider } from 'react-redux';
 import configureStore from 'src/stores/configureStore';
 const store = configureStore();
 
-import RootNavigation from 'src/containers/NavigationStackContainer';
+import TopNavigationContainer from 'src/containers/TopNavigationContainer';
 
 const App = function App() {
   return (
     <Provider store={store}>
-      <RootNavigation />
+      <TopNavigationContainer />
     </Provider>
   );
 };
