@@ -1,49 +1,24 @@
-import React from 'react';
-import { View } from 'react-native';
+import { fromPairs } from 'lodash';
 import { mapStateToProps } from 'src/containers/NavigatorContainer';
-import { NAV_TAB_ACTIVITIES } from 'src/constants/navigation';
-import { STACK_ACTIVITIES } from 'src/constants/routes';
+import * as constants from 'src/constants/navigation';
 
 
 describe('NavigatorContainer', () => {
   describe('mapStateToProps', () => {
-    it('should map the current stack as the active tab', () => {
+    it('should provide navigation state for each tab', () => {
       expect(mapStateToProps({
-        routes: {
-          currentStack: STACK_ACTIVITIES,
+        navigation: {
+          activities: 'ACTIVITIES_STACK',
+          journey: 'JOURNEY_STACK',
+          scheduledCalls: 'SCHEDULED_CALLS_STACK',
         },
-      }, {
-        children: <View />,
-        hideNav: false,
       }))
       .toEqual(jasmine.objectContaining({
-        activeTab: NAV_TAB_ACTIVITIES,
-      }));
-    });
-
-    it('should set the active tab to null if the current stack has no tab', () => {
-      expect(mapStateToProps({
-        routes: {
-          currentStack: 'BAR',
-        },
-      }, {
-        hideNav: false,
-      }))
-      .toEqual(jasmine.objectContaining({
-        activeTab: null,
-      }));
-    });
-
-    it('should set the active tab to null hideNav prop is true', () => {
-      expect(mapStateToProps({
-        routes: {
-          currentStack: STACK_ACTIVITIES,
-        },
-      }, {
-        hideNav: true,
-      }))
-      .toEqual(jasmine.objectContaining({
-        activeTab: null,
+        navigationStates: fromPairs([
+          [constants.NAV_TAB_ACTIVITIES, 'ACTIVITIES_STACK'],
+          [constants.NAV_TAB_JOURNEY, 'JOURNEY_STACK'],
+          [constants.NAV_TAB_SCHEDULED_CALLS, 'SCHEDULED_CALLS_STACK'],
+        ]),
       }));
     });
   });
