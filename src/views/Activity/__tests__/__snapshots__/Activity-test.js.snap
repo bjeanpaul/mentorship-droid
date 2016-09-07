@@ -48,6 +48,7 @@ exports[`Activity should display the poster if one is given 1`] = `
           } />
       </View>
       <Text
+        numberOfLines={1}
         style={
           Array [
             Object {
@@ -64,6 +65,10 @@ exports[`Activity should display the poster if one is given 1`] = `
               },
               Object {
                 "color": "#fff"
+              },
+              Object {
+                "marginLeft": 48,
+                "marginRight": 48
               }
             ]
           ]
@@ -84,6 +89,7 @@ exports[`Activity should display the poster if one is given 1`] = `
         ]
       }>
       <Text
+        numberOfLines={1}
         style={
           Array [
             Object {
@@ -100,6 +106,8 @@ exports[`Activity should display the poster if one is given 1`] = `
                 "fontFamily": "Brandon Text_medium",
                 "fontSize": 32,
                 "fontWeight": "400",
+                "marginLeft": 24,
+                "marginRight": 24,
                 "paddingBottom": 9,
                 "paddingTop": 9
               }
@@ -119,8 +127,10 @@ exports[`Activity should display the poster if one is given 1`] = `
             },
             Array [
               Object {
-                "color": undefined,
-                "fontSize": 16
+                "color": "rgba(0, 0, 0, 0.35)",
+                "fontSize": 16,
+                "marginLeft": 24,
+                "marginRight": 24
               },
               Object {
                 "paddingBottom": 27
@@ -775,8 +785,10 @@ exports[`Activity should display the poster if one is given 1`] = `
             },
             Array [
               Object {
-                "color": undefined,
-                "fontSize": 16
+                "color": "rgba(0, 0, 0, 0.35)",
+                "fontSize": 16,
+                "marginLeft": 24,
+                "marginRight": 24
               },
               Object {
                 "paddingBottom": 19
@@ -867,6 +879,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
           } />
       </View>
       <Text
+        numberOfLines={1}
         style={
           Array [
             Object {
@@ -883,6 +896,10 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               },
               Object {
                 "color": "#fff"
+              },
+              Object {
+                "marginLeft": 48,
+                "marginRight": 48
               }
             ]
           ]
@@ -903,6 +920,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         ]
       }>
       <Text
+        numberOfLines={1}
         style={
           Array [
             Object {
@@ -919,6 +937,8 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                 "fontFamily": "Brandon Text_medium",
                 "fontSize": 32,
                 "fontWeight": "400",
+                "marginLeft": 24,
+                "marginRight": 24,
                 "paddingBottom": 9,
                 "paddingTop": 9
               }
@@ -938,8 +958,10 @@ exports[`Activity should not try display a poster if none is given 1`] = `
             },
             Array [
               Object {
-                "color": undefined,
-                "fontSize": 16
+                "color": "rgba(0, 0, 0, 0.35)",
+                "fontSize": 16,
+                "marginLeft": 24,
+                "marginRight": 24
               },
               Object {
                 "paddingBottom": 27
@@ -1594,8 +1616,10 @@ exports[`Activity should not try display a poster if none is given 1`] = `
             },
             Array [
               Object {
-                "color": undefined,
-                "fontSize": 16
+                "color": "rgba(0, 0, 0, 0.35)",
+                "fontSize": 16,
+                "marginLeft": 24,
+                "marginRight": 24
               },
               Object {
                 "paddingBottom": 19
@@ -1686,6 +1710,7 @@ exports[`Activity should render 1`] = `
           } />
       </View>
       <Text
+        numberOfLines={1}
         style={
           Array [
             Object {
@@ -1702,6 +1727,10 @@ exports[`Activity should render 1`] = `
               },
               Object {
                 "color": "#fff"
+              },
+              Object {
+                "marginLeft": 48,
+                "marginRight": 48
               }
             ]
           ]
@@ -1722,6 +1751,7 @@ exports[`Activity should render 1`] = `
         ]
       }>
       <Text
+        numberOfLines={1}
         style={
           Array [
             Object {
@@ -1738,6 +1768,8 @@ exports[`Activity should render 1`] = `
                 "fontFamily": "Brandon Text_medium",
                 "fontSize": 32,
                 "fontWeight": "400",
+                "marginLeft": 24,
+                "marginRight": 24,
                 "paddingBottom": 9,
                 "paddingTop": 9
               }
@@ -1757,8 +1789,10 @@ exports[`Activity should render 1`] = `
             },
             Array [
               Object {
-                "color": undefined,
-                "fontSize": 16
+                "color": "rgba(0, 0, 0, 0.35)",
+                "fontSize": 16,
+                "marginLeft": 24,
+                "marginRight": 24
               },
               Object {
                 "paddingBottom": 27
@@ -2413,8 +2447,10 @@ exports[`Activity should render 1`] = `
             },
             Array [
               Object {
-                "color": undefined,
-                "fontSize": 16
+                "color": "rgba(0, 0, 0, 0.35)",
+                "fontSize": 16,
+                "marginLeft": 24,
+                "marginRight": 24
               },
               Object {
                 "paddingBottom": 19
