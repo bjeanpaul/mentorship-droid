@@ -1,5 +1,3 @@
-import { invert } from 'lodash';
-
 const ROUTE_LANDING = 'ROUTE_LANDING';
 
 const ROUTE_AUTH_LOGIN = 'ROUTE_AUTH_LOGIN';
