@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import { View, Image } from 'react-native';
 import { BaseView, Text, Link, Button } from 'src/components';
-
 import styles from './styles';
 import images from 'src/constants/images';
+
 
 const Landing = ({
   onGetStartedPress,
@@ -34,9 +34,12 @@ const Landing = ({
     </View>
   </BaseView>
 );
+
+
 Landing.propTypes = {
   onGetStartedPress: PropTypes.func.isRequired,
   onLoginPress: PropTypes.func.isRequired,
 };
+
 
 export default Landing;

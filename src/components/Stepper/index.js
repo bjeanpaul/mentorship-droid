@@ -22,7 +22,7 @@ const Stepper = ({
   if (!hideProgress) {
     progressBar = (
       <ProgressBar
-        completed={ navigationState.index + 1 / React.Children.count(children) }
+        completed={ (navigationState.index + 1) / React.Children.count(children) }
       />
     );
   }

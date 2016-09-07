@@ -15,6 +15,7 @@ import OverlayLoading from './Overlay/Loading';
 import ProgressBar from './ProgressBar';
 import Section from './Section';
 import Pagination from './Pagination';
+import Stepper, { Step } from './Stepper';
 import NavTabBar from './NavTabBar';
 
 
@@ -37,5 +38,7 @@ export {
   ProgressBar,
   Section,
   Pagination,
+  Stepper,
+  Step,
   NavTabBar,
 };

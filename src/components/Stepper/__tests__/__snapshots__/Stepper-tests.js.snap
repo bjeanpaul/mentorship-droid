@@ -24,14 +24,14 @@ exports[`Stepper should map props correctly 1`] = `
             "backgroundColor": "#f77040"
           },
           Object {
-            "flex": 1.5
+            "flex": 1
           }
         ]
       } />
     <View
       style={
         Object {
-          "flex": -0.5
+          "flex": 0
         }
       } />
   </View>

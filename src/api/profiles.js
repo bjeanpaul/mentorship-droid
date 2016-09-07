@@ -46,6 +46,7 @@ export const getProfile = (id, auth) => request({
 export const updateProfile = (id, data, auth) => request({
   url: `/profile/${id}/`,
   method: 'PUT',
+  schema: Profile,
   data,
   auth,
 });

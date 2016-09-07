@@ -3,10 +3,16 @@ import * as constants from 'src/constants/onboarding';
 
 
 describe('actions/onboarding', () => {
-  describe('startProfile', () => {
-    it('should create an action for starting a profile', () => {
-      expect(actions.startProfile()).toEqual({
-        type: constants.ONBOARDING_START_PROFILE,
+  describe('navigation', () => {
+    it('should create an action for stepping back', () => {
+      expect(actions.stepBack()).toEqual({
+        type: constants.ONBOARDING_STEP_BACK_REQUEST,
+      });
+    });
+
+    it('should create an action for stepping forward', () => {
+      expect(actions.stepForward()).toEqual({
+        type: constants.ONBOARDING_STEP_FORWARD_REQUEST,
       });
     });
   });
@@ -19,10 +25,10 @@ describe('actions/onboarding', () => {
     });
   });
 
-  describe('updateProfilePicture', () => {
+  describe('changeProfilePicture', () => {
     it('should create an action for profile image change', () => {
-      expect(actions.updateProfilePicture('path/to/image.png')).toEqual({
-        type: constants.ONBOARDING_UPDATE_PROFILE_PICTURE,
+      expect(actions.changeProfilePicture('path/to/image.png')).toEqual({
+        type: constants.ONBOARDING_CHANGE_PROFILE_PICTURE,
         payload: {
           profilePicture: 'path/to/image.png',
         },
@@ -30,13 +36,13 @@ describe('actions/onboarding', () => {
     });
   });
 
-  describe('updateProfile', () => {
+  describe('changeProfile', () => {
     it('should create an action for profile change', () => {
-      expect(actions.updateProfile({
+      expect(actions.changeProfile({
         jobTitle: 'Uncle',
         jobSector: 'Family',
       })).toEqual({
-        type: constants.ONBOARDING_UPDATE_PROFILE,
+        type: constants.ONBOARDING_CHANGE_PROFILE,
         payload: {
           jobTitle: 'Uncle',
           jobSector: 'Family',
