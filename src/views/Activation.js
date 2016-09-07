@@ -18,7 +18,6 @@ const Activation = ({
       {...props}
       status={status}
       buttonLabel="ACTIVATE"
-
     />
 
     <LoginStatusMessage {...status} />
