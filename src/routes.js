@@ -16,6 +16,7 @@ import CategoryContainer from 'src/containers/CategoryContainer';
 import ActivityContainer from 'src/containers/ActivityContainer';
 
 import ScheduleCallContainer from 'src/containers/ScheduleCallContainer';
+import ScheduledCallsContainer from 'src/containers/ScheduledCallsContainer';
 
 
 export default fromPairs([
@@ -35,4 +36,5 @@ export default fromPairs([
   [constants.ROUTE_ACTIVITY, ActivityContainer],
 
   [constants.ROUTE_SCHEDULE_CALL, ScheduleCallContainer],
+  [constants.ROUTE_SCHEDULED_CALLS, ScheduledCallsContainer],
 ]);

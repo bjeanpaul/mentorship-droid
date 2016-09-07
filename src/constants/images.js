@@ -12,6 +12,11 @@ import ACTIVITY_RATIONALE from 'app/assets/rationale.png';
 import ACTIVITY_REFLECTION_POINTS from 'app/assets/reflection-points.png';
 import ACTIVITY_SKILLS_DEVELOPED from 'app/assets/skills-developed.png';
 import ACTIVITY_TOPIC from 'app/assets/topic.png';
+import NAV_TAB_ACTIVITIES from 'app/assets/nav-activities.png';
+import NAV_TAB_CHAT from 'app/assets/nav-chat.png';
+import NAV_TAB_COMMUNITY from 'app/assets/nav-community.png';
+import NAV_TAB_JOURNEY from 'app/assets/nav-journey.png';
+import NAV_TAB_SCHEDULED_CALLS from 'app/assets/nav-calls.png';
 
 
 export default {
@@ -29,4 +34,9 @@ export default {
   ACTIVITY_REFLECTION_POINTS,
   ACTIVITY_SKILLS_DEVELOPED,
   ACTIVITY_TOPIC,
+  NAV_TAB_ACTIVITIES,
+  NAV_TAB_CHAT,
+  NAV_TAB_COMMUNITY,
+  NAV_TAB_JOURNEY,
+  NAV_TAB_SCHEDULED_CALLS,
 };
