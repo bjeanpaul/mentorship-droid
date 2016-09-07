@@ -1,0 +1,35 @@
+exports[`NavigationStack should display a not-found view if the route is not found 1`] = `
+<NavigationTransitioner
+  navigationState={
+    Object {
+      "index": 0,
+      "routes": Array [
+        Object {
+          "context": Object {},
+          "key": "B"
+        }
+      ]
+    }
+  }
+  render={[Function bound _render]}
+  style={undefined} />
+`;
+
+exports[`NavigationStack should display the current route 1`] = `
+<NavigationTransitioner
+  navigationState={
+    Object {
+      "index": 0,
+      "routes": Array [
+        Object {
+          "context": Object {
+            "text": "Foo"
+          },
+          "key": "A"
+        }
+      ]
+    }
+  }
+  render={[Function bound _render]}
+  style={undefined} />
+`;

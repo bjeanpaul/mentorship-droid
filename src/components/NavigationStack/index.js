@@ -2,41 +2,38 @@ import React, { PropTypes } from 'react';
 import { NavigationExperimental } from 'react-native';
 
 import { NotFound } from 'src/components';
-import NavigatorContainer from 'src/containers/NavigatorContainer';
-import ROUTES_COMPONENTS from 'src/routes';
 
 const { CardStack: NavigationCardStack } = NavigationExperimental;
 
 
 const Router = ({
+  routes,
   sceneProps: { scene: { route: { key, context } } },
 }) => {
-  const Container = ROUTES_COMPONENTS[key] || NotFound;
-
-  return (
-    <NavigatorContainer hideNav={Container.hideNav}>
-      <Container {...context} />
-    </NavigatorContainer>
-  );
+  const Component = routes[key] || NotFound;
+  return <Component {...context} />;
 };
 
 
 const NavigationStack = ({
+  routes,
   navigationState,
 }) => (
   <NavigationCardStack
     navigationState={navigationState}
-    renderScene={sceneProps => <Router sceneProps={sceneProps} />}
+    renderScene={sceneProps => <Router routes={routes} sceneProps={sceneProps} />}
   />
 );
 
 
 NavigationStack.propTypes = {
+  routes: PropTypes.object.isRequired,
   navigationState: PropTypes.any.isRequired,
 };
 
 
 Router.propTypes = {
+  routes: PropTypes.object.isRequired,
   sceneProps: PropTypes.object.isRequired,
 };
 
