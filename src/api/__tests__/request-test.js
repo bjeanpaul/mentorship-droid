@@ -35,6 +35,7 @@ describe('api/request', () => {
 
     it('should reject non-error-response request failures', async () => {
       const requestErr = new Error('o_O');
+      requestErr.response = void 0;
       axios.mockReturnValue(Promise.reject(requestErr));
 
       const err = await request({

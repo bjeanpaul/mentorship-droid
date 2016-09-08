@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { isNull, identity, isPlainObject } from 'lodash';
+import { isNull, identity, isPlainObject, isUndefined } from 'lodash';
 import { normalize } from 'normalizr';
 import config from 'src/config';
 import { omitNulls } from 'src/helpers';
@@ -110,7 +110,7 @@ const requestFailureErrorResponse = e => {
 };
 
 
-const requestFailure = e => Promise.reject('response' in e
+const requestFailure = e => Promise.reject(!isUndefined(e.response)
   ? requestFailureErrorResponse(e)
   : e);
 
