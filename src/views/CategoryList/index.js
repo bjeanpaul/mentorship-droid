@@ -3,13 +3,12 @@ import { View, TouchableNativeFeedback } from 'react-native';
 import { BaseView, Header, Text } from 'src/components';
 import styles from './styles';
 import colors from 'src/constants/colors';
-import { makeGradient } from 'src/helpers'
+import { makeGradient } from 'src/helpers';
 
 const CategoryList = ({
   categories,
   onCategoryPress,
 }) => {
-
   const gradient = makeGradient(
     colors.CATEGORY_LIST_GRADIENT_START,
     colors.CATEGORY_LIST_GRADIENT_END,
