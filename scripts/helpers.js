@@ -52,7 +52,6 @@ export const fakeActivity = data => ({
   prompts: 'tspmorp',
   reflectionPoints: 'tsnoip',
   skillsDeveloped: 'depoleved',
-  topic: 'cipot',
   icon: null,
   poster: null,
   category: 23,

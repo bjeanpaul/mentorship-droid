@@ -15,7 +15,6 @@ const Activity = ({
     id,
     title,
     poster,
-    topic,
     objective,
     lessonRationale,
     instructions,
@@ -62,14 +61,6 @@ const Activity = ({
         <Status style={styles.statusAbout} />
         <Action onPress={() => onSchedulePress(id)} />
       </View>
-
-      <Section
-        color={color}
-        icon={images.ACTIVITY_TOPIC}
-        title="Topic"
-      >
-        {topic}
-      </Section>
 
       <Section
         color={color}
