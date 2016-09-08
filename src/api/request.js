@@ -100,14 +100,19 @@ const requestSuccess = (res, { schema, ...opts }) => Promise.resolve(res.data)
     : d);
 
 
-const requestFailure = e => {
+const requestFailureErrorResponse = e => {
   const ErrorType = {
     403: errors.ApiAuthenticationError,
     404: errors.ApiNotFoundError,
   }[e.response.status] || errors.ApiResponseError;
 
-  return Promise.reject(new ErrorType(e.message, e.response));
+  return new ErrorType(e.message, e.response);
 };
+
+
+const requestFailure = e => Promise.reject('response' in e
+  ? requestFailureErrorResponse(e)
+  : e);
 
 
 const request = rawConf => {
