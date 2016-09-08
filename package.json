@@ -6,15 +6,13 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "logs": "adb logcat *:S ReactNative:V ReactNativeJS:V",
     "test": "NODE_ENV=test jest",
-    "test:watch": "NODE_ENV=test jest --watch", 
+    "test:watch": "NODE_ENV=test jest --watch",
     "lint": "eslint index.android.js 'src/**/*.js'",
     "ci": "npm run lint && npm test"
   },
   "dependencies": {
     "axios": "^0.13.1",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
-    "camelcase": "^3.0.0",
-    "decamelize": "^1.2.0",
     "deep-map-keys": "^1.2.0",
     "lodash": "^4.14.0",
     "moment": "^2.12.0",
