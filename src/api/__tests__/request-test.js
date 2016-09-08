@@ -33,11 +33,24 @@ describe('api/request', () => {
       ]]);
     });
 
-    it('should reject an api error response as an ApiResponseError', async () => {
-      const httpErr = new Error();
-      httpErr.message = 'o_O';
-      httpErr.response = { status: 500 };
+    it('should reject non-error-response request failures', async () => {
+      const requestErr = new Error('o_O');
+      requestErr.response = void 0;
+      axios.mockReturnValue(Promise.reject(requestErr));
 
+      const err = await request({
+        url: '/foo',
+        method: 'GET',
+      })
+      .catch(identity);
+
+      expect(err instanceof Error).toBe(true);
+      expect(err.message).toEqual(requestErr.message);
+    });
+
+    it('should reject an api error response as an ApiResponseError', async () => {
+      const httpErr = new Error('o_O');
+      httpErr.response = { status: 500 };
       axios.mockReturnValue(Promise.reject(httpErr));
 
       const err = await request({
