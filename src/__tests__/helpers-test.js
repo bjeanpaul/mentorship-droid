@@ -5,6 +5,7 @@ import {
   dataStatus,
   staticStatus,
   switchError,
+  makeGradient,
 } from 'src/helpers';
 
 
@@ -21,6 +22,15 @@ describe('helpers', () => {
         type: 'FOO',
         details: { bar: 23 },
       });
+    });
+  });
+
+  describe('makeGradient', () => {
+    it('should generate colors from a start and finish range for n steps', () => {
+      const g = makeGradient('#C4CD39', '#00AA9F', 10);
+      expect(g.length).toBe(10);
+      expect(g[0]).toEqual('#C4CD39');
+      expect(g[9]).toEqual('#00AA9F');
     });
   });
 
