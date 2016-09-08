@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { View, TouchableNativeFeedback } from 'react-native';
 import { BaseView, Header, Text } from 'src/components';
 import styles from './styles';
+import colors from 'src/constants/colors';
 
 
 const CategoryList = ({
@@ -16,13 +17,18 @@ const CategoryList = ({
       </Header>
 
       <View style={styles.list}>
-        {categories.map(({ id, title, color }) => (
+        {categories.map(({ id, title, color }, index) => (
         <TouchableNativeFeedback
           key={id}
           categoryId={id}
           onPress={() => onCategoryPress(id)}
         >
-          <View style={[styles.category, { backgroundColor: color }]}>
+          <View
+            style={[
+              styles.category,
+              { backgroundColor: color || colors.CATEGORY_LIST_GRADIENT[index] },
+            ]}
+          >
             <Text style={[styles.categoryTitle, Text.themes.light]}>{title}</Text>
           </View>
         </TouchableNativeFeedback>
