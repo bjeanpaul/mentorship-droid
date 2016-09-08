@@ -1,11 +1,9 @@
 import axios from 'axios';
-import { isNull, identity, isPlainObject, isUndefined } from 'lodash';
+import { isNull, identity, isPlainObject, isUndefined, snakeCase, camelCase } from 'lodash';
 import { normalize } from 'normalizr';
 import config from 'src/config';
 import { omitNulls } from 'src/helpers';
 import * as errors from './errors';
-import snakeCase from 'decamelize';
-import camelCase from 'camelcase';
 import deepMapKeys from 'deep-map-keys';
 
 
