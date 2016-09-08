@@ -7,7 +7,7 @@ export const makeGradient = (start, end, length) => {
   const e = convert.hex.rgb(end);
 
   return Array.from({ length }, (v, i) => {
-    const p = (i / (length - 1));
+    const p = i / (length - 1);
     const r = s[0] + p * (e[0] - s[0]);
     const g = s[1] + p * (e[1] - s[1]);
     const b = s[2] + p * (e[2] - s[2]);
