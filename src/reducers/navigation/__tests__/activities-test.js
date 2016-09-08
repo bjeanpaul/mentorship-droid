@@ -1,10 +1,10 @@
-import reduce from 'src/reducers/routes/activities';
+import reduce from 'src/reducers/navigation/activities';
 import * as activities from 'src/actions/activities';
 import * as routes from 'src/constants/routes';
 import { createStack, createRoute, push } from 'src/navigationHelpers';
 
 
-describe('src/reducers/routes/activities', () => {
+describe('src/reducers/navigation/activities', () => {
   describe('CATEGORY_CHOOSE', () => {
     it('should push on the category route', () => {
       expect(reduce(createStack(), activities.chooseCategory(23)))

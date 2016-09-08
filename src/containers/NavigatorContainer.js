@@ -1,27 +1,25 @@
-import { has } from 'lodash';
+import { fromPairs } from 'lodash';
 import { connect } from 'react-redux';
 
-import { STACKS_TO_NAV_TABS } from 'src/constants/routes';
-import { changeNavTab } from 'src/actions/navigation';
 import Navigator from 'src/views/Navigator';
+import routes from 'src/routes';
+import * as constants from 'src/constants/navigation';
 
 
 export const mapStateToProps = ({
-  routes: { currentStack },
-}, {
-  hideNav,
-  children,
+  navigation: {
+    journey,
+    activities,
+    scheduledCalls,
+  },
 }) => ({
-  children,
-  activeTab: !hideNav && has(STACKS_TO_NAV_TABS, currentStack)
-    ? STACKS_TO_NAV_TABS[currentStack]
-    : null,
+  routes,
+  navigationStates: fromPairs([
+    [constants.NAV_TAB_ACTIVITIES, activities],
+    [constants.NAV_TAB_JOURNEY, journey],
+    [constants.NAV_TAB_SCHEDULED_CALLS, scheduledCalls],
+  ]),
 });
 
 
-export const propsToActions = {
-  onTabPress: changeNavTab,
-};
-
-
-export default connect(mapStateToProps, propsToActions)(Navigator);
+export default connect(mapStateToProps)(Navigator);

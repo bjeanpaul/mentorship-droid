@@ -7,7 +7,10 @@ import ActivationContainer from 'src/containers/ActivationContainer';
 
 import OnboardingContainer from 'src/containers/OnboardingContainer';
 import CameraRollContainer from 'src/containers/CameraRollContainer';
+
 import LoadingContainer from 'src/containers/LoadingContainer';
+
+import NavigatorContainer from 'src/containers/NavigatorContainer';
 
 import JourneyContainer from 'src/containers/JourneyContainer';
 
@@ -29,6 +32,9 @@ export default fromPairs([
   [constants.ROUTE_ONBOARDING_CAMERA_ROLL, CameraRollContainer],
 
   [constants.ROUTE_LOADING, LoadingContainer],
+
+  [constants.ROUTE_NAVIGATOR, NavigatorContainer],
+
   [constants.ROUTE_JOURNEY, JourneyContainer],
 
   [constants.ROUTE_CATEGORY_LIST, CategoryListContainer],

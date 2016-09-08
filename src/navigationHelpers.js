@@ -78,21 +78,6 @@ export const makeStepperNavigationReducer = ({ FORWARD, BACK }) => (state = {
 };
 
 
-export const getCurrentStack = ({
-  currentStack,
-  stacks,
-}) => stacks[currentStack];
-
-
-export const changeStack = ({
-  currentStack,
-  stacks,
-}, stack) => ({
-  currentStack: stack,
-  stacks,
-});
-
-
 export const createStack = (routes = []) => ({
   index: Math.max(routes.length - 1, 0),
   routes,

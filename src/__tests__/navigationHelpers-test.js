@@ -7,8 +7,6 @@ import {
   popCurrent,
   insertAfterCurrent,
   createStack,
-  changeStack,
-  getCurrentStack,
 } from 'src/navigationHelpers';
 
 
@@ -139,39 +137,6 @@ describe('navigationHelpers', () => {
           createRoute('BAR'),
         ],
       });
-    });
-  });
-
-  describe('changeStack', () => {
-    it('should change the stack', () => {
-      expect(changeStack({
-        currentStack: 'FOO',
-        stacks: {
-          FOO: createStack(),
-          BAR: createStack(),
-        },
-      }, 'BAR')).toEqual({
-        currentStack: 'BAR',
-        stacks: {
-          FOO: createStack(),
-          BAR: createStack(),
-        },
-      });
-    });
-  });
-
-  describe('getCurrentStack', () => {
-    it('should get the current stack', () => {
-      const foo = createStack([createRoute('BAR')]);
-      const baz = createStack([createRoute('QUUX')]);
-
-      expect(getCurrentStack({
-        currentStack: 'FOO',
-        stacks: {
-          FOO: foo,
-          BAZ: baz,
-        },
-      })).toEqual(foo);
     });
   });
 });
