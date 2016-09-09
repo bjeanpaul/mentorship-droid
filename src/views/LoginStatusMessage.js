@@ -16,8 +16,8 @@ const LoginStatusMessage = ({ type }) => {
     case constants.AUTH_STATUS_ERROR:
       return (
         <Text>
-          Sorry, we seem to have an issue on our side. We've been notified of
-          the problem and will look into it as soon as possible.
+          {/* TODO Figure out if we can log this */}
+          Sorry, we seem to have an issue on our side.
         </Text>
       );
 
