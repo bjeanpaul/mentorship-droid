@@ -25,27 +25,30 @@ exports[`Activity should display the poster if one is given 1`] = `
         ]
       }>
       <View
-        onPress={[Function noop]}
         style={
           Array [
             Object {
-              "position": "absolute",
-              "top": 24
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
             },
-            Object {}
+            undefined
           ]
         }>
-        <Image
-          source={1}
+        <Text
           style={
-            Array [
-              Object {
-                "height": 24,
-                "width": 24
-              },
-              Object {}
-            ]
-          } />
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
       </View>
       <Text
         numberOfLines={1}
@@ -771,27 +774,30 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         ]
       }>
       <View
-        onPress={[Function noop]}
         style={
           Array [
             Object {
-              "position": "absolute",
-              "top": 24
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
             },
-            Object {}
+            undefined
           ]
         }>
-        <Image
-          source={1}
+        <Text
           style={
-            Array [
-              Object {
-                "height": 24,
-                "width": 24
-              },
-              Object {}
-            ]
-          } />
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
       </View>
       <Text
         numberOfLines={1}
@@ -1517,27 +1523,30 @@ exports[`Activity should render 1`] = `
         ]
       }>
       <View
-        onPress={[Function noop]}
         style={
           Array [
             Object {
-              "position": "absolute",
-              "top": 24
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
             },
-            Object {}
+            undefined
           ]
         }>
-        <Image
-          source={1}
+        <Text
           style={
-            Array [
-              Object {
-                "height": 24,
-                "width": 24
-              },
-              Object {}
-            ]
-          } />
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
       </View>
       <Text
         numberOfLines={1}
