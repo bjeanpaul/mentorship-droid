@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import Activity from 'src/views/Activity';
 import { getCategory, getActivity } from 'src/stores/helpers';
-import { dismissScreen, scheduleActivityCall } from 'src/actions/navigation';
+import { scheduleActivityCall } from 'src/actions/activities';
+import { dismissScreen } from 'src/actions/navigation';
 
 
 const mapStateToProps = (state, { activityId }) => {
