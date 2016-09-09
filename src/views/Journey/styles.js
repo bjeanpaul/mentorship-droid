@@ -5,7 +5,7 @@ export default StyleSheet.create({
   header: {
     alignItems: 'flex-start',
   },
-  nextCallLabel: {
+  nextCall: {
     fontSize: 12,
     fontFamily: FONT.BOLD,
     fontWeight: FONT_WEIGHT.BOLD,
@@ -16,5 +16,26 @@ export default StyleSheet.create({
   },
   hasDate: {
     color: '#003035',
-  }
+  },
+  mentee: {
+    flex: 0.4,
+    width: null,
+    height: null,
+    resizeMode: 'cover',
+    zIndex: 3,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  icon: {
+    width: 44,
+    height: 44,
+    marginLeft: 24,
+    marginRight: 24,
+  },
+  eventsContainer: {
+    flex: 0.6,
+    backgroundColor: 'pink',
+    marginTop: -12,
+  },
 });

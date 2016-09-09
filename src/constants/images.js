@@ -18,6 +18,10 @@ import NAV_TAB_COMMUNITY from 'app/assets/nav-community.png';
 import NAV_TAB_JOURNEY from 'app/assets/nav-journey.png';
 import NAV_TAB_SCHEDULED_CALLS from 'app/assets/nav-calls.png';
 
+import JOURNEY_MENTEE from 'app/assets/timeline.png';
+import JOURNEY_CALL_ICON from 'app/assets/call-icon.png';
+import JOURNEY_MESSAGE_ICON from 'app/assets/message-icon.png';
+
 
 export default {
   ONBOARDING_LANDING,
@@ -39,4 +43,8 @@ export default {
   NAV_TAB_COMMUNITY,
   NAV_TAB_JOURNEY,
   NAV_TAB_SCHEDULED_CALLS,
+
+  JOURNEY_MENTEE,
+  JOURNEY_CALL_ICON,
+  JOURNEY_MESSAGE_ICON,
 };
