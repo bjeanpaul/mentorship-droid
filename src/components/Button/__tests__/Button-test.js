@@ -47,6 +47,17 @@ describe('Button', () => {
     )).toMatchSnapshot();
   });
 
+  it('should render "stretch" layout', () => {
+    expect(render(
+      <Button
+        onPress={foo}
+        layout={Button.layouts.stretch}
+      >
+        margle
+      </Button>
+    )).toMatchSnapshot();
+  });
+
   it('should be disabled', () => {
     expect(render(
       <Button

@@ -7,6 +7,7 @@ import {
   popCurrent,
   insertAfterCurrent,
   createStack,
+  replaceAt,
 } from 'src/navigationHelpers';
 
 
@@ -59,6 +60,32 @@ describe('navigationHelpers', () => {
         index: 1,
       }, createRoute('A'))).toEqual({
         routes: [createRoute('A')],
+        index: 1,
+      });
+    });
+  });
+
+  describe('replaceAt', () => {
+    it('should replace routes using the given key and new route', () => {
+      const stack = {
+        routes: [createRoute('A'), createRoute('B')],
+        index: 1,
+      };
+
+      expect(replaceAt(stack, 'A', createRoute('C'))).toEqual({
+        routes: ['C', 'B'].map(unary(createRoute)),
+        index: 0,
+      });
+    });
+
+    it('should be a no-op if the route is already on the stack', () => {
+      const stack = {
+        routes: [createRoute('A'), createRoute('B')],
+        index: 1,
+      };
+
+      expect(replaceAt(stack, 'B', createRoute('A'))).toEqual({
+        routes: ['A', 'B'].map(unary(createRoute)),
         index: 1,
       });
     });

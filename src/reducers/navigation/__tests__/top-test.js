@@ -4,7 +4,7 @@ import * as landing from 'src/actions/landing';
 import * as sync from 'src/actions/sync';
 import * as onboarding from 'src/actions/onboarding';
 import * as routes from 'src/constants/routes';
-import { createStack, createRoute, push, pop } from 'src/navigationHelpers';
+import { createStack, createRoute, push, pop, replaceAt } from 'src/navigationHelpers';
 
 
 describe('src/reducers/navigation/top', () => {
@@ -52,9 +52,20 @@ describe('src/reducers/navigation/top', () => {
   });
 
   describe('LOAD_SUCCESS', () => {
-    it('should push the navigator route', () => {
-      expect(reduce(createStack(), sync.loadSuccess()))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_NAVIGATOR)));
+    it('should replace the loading route with the navigator route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_LOADING));
+      const route = createRoute(routes.ROUTE_NAVIGATOR);
+      expect(reduce(state, sync.loadSuccess()))
+        .toEqual(replaceAt(state, routes.ROUTE_LOADING, route));
+    });
+  });
+
+  describe('LOAD_FAILURE', () => {
+    it('should replace the loading route with the load failure route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_LOADING));
+      const route = createRoute(routes.ROUTE_LOADING_FAILURE);
+      expect(reduce(state, sync.loadFailure()))
+        .toEqual(replaceAt(state, routes.ROUTE_LOADING, route));
     });
   });
 });
