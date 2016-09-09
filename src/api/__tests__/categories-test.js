@@ -6,7 +6,7 @@ import { arrayOf } from 'normalizr';
 import { fakeAuth } from 'app/scripts/helpers';
 import request from 'src/api/request';
 import { Category } from 'src/api/schemas';
-import { parseResults } from 'src/api/parse';
+import { parseCategoryListResults } from 'src/api/parse';
 
 import {
   listCategories,
@@ -22,14 +22,14 @@ describe('api/category', () => {
 
   describe('listCategories', () => {
     it('should construct a request for listing categories', () => {
-      expect(listCategories(fakeAuth(), { foo: 23 })).toEqual({
+      expect(listCategories(fakeAuth(), { foo: 23 })).toEqual(jasmine.objectContaing({
         url: '/category/',
         method: 'GET',
         schema: arrayOf(Category),
-        parse: parseResults,
+        parse: parseCategoryListResults,
         auth: fakeAuth(),
         params: { foo: 23 },
-      });
+      }));
     });
   });
 
