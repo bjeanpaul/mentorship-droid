@@ -3,6 +3,7 @@ import * as activities from 'src/constants/activities';
 
 
 import {
+  pop,
   push,
   createStack,
   createRoute,
@@ -27,6 +28,9 @@ export default (state = createStack([
       const { payload: { activityId } } = action;
       return push(state, createRoute(routes.ROUTE_SCHEDULE_CALL, { activityId }));
     }
+
+    case activities.ACTIVITY_SCREEN_DISMISS:
+      return pop(state);
 
     default:
       return state;
