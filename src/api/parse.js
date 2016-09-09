@@ -1,9 +1,37 @@
 import { flow } from 'lodash';
 import colors from 'src/constants/colors';
 import { makeGradient } from 'src/helpers';
+import config from 'src/config';
+
+const { API_URL } = config;
+
+
+const imageUrl = url => url
+  ? API_URL + url
+  : url;
 
 
 export const parseResults = ({ results }) => results;
+
+
+export const parseCategory = ({
+  image,
+  ...d,
+}) => ({
+  ...d,
+  image: imageUrl(image),
+});
+
+
+export const parseActivity = ({
+  ...d,
+  poster,
+  icon,
+}) => ({
+  ...d,
+  poster: imageUrl(poster),
+  icon: imageUrl(icon),
+});
 
 
 export const parseCategories = categories => {
@@ -13,7 +41,7 @@ export const parseCategories = categories => {
     categories.length,
   );
 
-  return categories.map(({ color, ...d }, i) => ({
+  return categories.map(({ color, ...d }, i) => parseCategory({
     ...d,
     color: !color
       ? gradient[i]
@@ -22,4 +50,8 @@ export const parseCategories = categories => {
 };
 
 
+export const parseActivities = activities => activities.map(parseActivity);
+
+
 export const parseCategoryListResults = flow(parseResults, parseCategories);
+export const parseActivityListResults = flow(parseResults, parseActivities);
