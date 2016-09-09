@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import NotYetImplemented from 'src/views/NotYetImplemented';
+import Journey from 'src/views/Journey';
 
 
-export default connect()(NotYetImplemented);
+export default connect()(Journey);
