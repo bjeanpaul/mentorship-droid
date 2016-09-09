@@ -63,6 +63,11 @@ describe('api/parse', () => {
       const { image } = parseCategory(fakeCategory({ image: '/foo.jpg' }));
       expect(image).toEqual(`${API_URL}/foo.jpg`);
     });
+
+    it('should not parse the image url if it is falsy', () => {
+      const { image } = parseCategory(fakeCategory({ image: null }));
+      expect(image).toEqual(null);
+    });
   });
 
   describe('parseActivity', () => {
@@ -74,6 +79,16 @@ describe('api/parse', () => {
     it('should prepend the base api url to the icon url', () => {
       const { icon } = parseActivity(fakeActivity({ icon: '/foo.jpg' }));
       expect(icon).toEqual(`${API_URL}/foo.jpg`);
+    });
+
+    it('should not parse the poster url if it is falsy', () => {
+      const { poster } = parseActivity(fakeActivity({ poster: null }));
+      expect(poster).toEqual(null);
+    });
+
+    it('should not parse the icon url if it is falsy', () => {
+      const { icon } = parseActivity(fakeActivity({ icon: null }));
+      expect(icon).toEqual(null);
     });
   });
 });
