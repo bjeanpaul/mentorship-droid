@@ -1,8 +1,7 @@
 import { connect } from 'react-redux';
 import Category from 'src/views/Category';
 import { getCategory, getCategoryActivities } from 'src/stores/helpers';
-import { chooseActivity } from 'src/actions/activities';
-import { dismissScreen } from 'src/actions/navigation';
+import { dismissActivityScreen, chooseActivity } from 'src/actions/activities';
 
 
 const mapStateToProps = (state, { categoryId }) => ({
@@ -13,7 +12,7 @@ const mapStateToProps = (state, { categoryId }) => ({
 
 const propsToActions = {
   onActivityPress: chooseActivity,
-  onBackPress: dismissScreen,
+  onBackPress: dismissActivityScreen,
 };
 
 

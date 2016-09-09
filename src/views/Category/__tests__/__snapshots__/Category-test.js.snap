@@ -29,29 +29,30 @@ exports[`Category should render 1`] = `
       ]
     }>
     <View
-      onPress={[Function noop]}
       style={
         Array [
           Object {
-            "position": "absolute",
-            "top": 24
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
           },
-          Object {
-            "top": 20
-          }
+          undefined
         ]
       }>
-      <Image
-        source={1}
+      <Text
         style={
-          Array [
-            Object {
-              "height": 24,
-              "width": 24
-            },
-            Object {}
-          ]
-        } />
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
     </View>
     <Text
       style={
@@ -307,29 +308,30 @@ exports[`Category should render the currently active tab 1`] = `
       ]
     }>
     <View
-      onPress={[Function noop]}
       style={
         Array [
           Object {
-            "position": "absolute",
-            "top": 24
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
           },
-          Object {
-            "top": 20
-          }
+          undefined
         ]
       }>
-      <Image
-        source={1}
+      <Text
         style={
-          Array [
-            Object {
-              "height": 24,
-              "width": 24
-            },
-            Object {}
-          ]
-        } />
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
     </View>
     <Text
       style={
@@ -585,29 +587,30 @@ exports[`Category should render the currently active tab 2`] = `
       ]
     }>
     <View
-      onPress={[Function noop]}
       style={
         Array [
           Object {
-            "position": "absolute",
-            "top": 24
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
           },
-          Object {
-            "top": 20
-          }
+          undefined
         ]
       }>
-      <Image
-        source={1}
+      <Text
         style={
-          Array [
-            Object {
-              "height": 24,
-              "width": 24
-            },
-            Object {}
-          ]
-        } />
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
     </View>
     <Text
       style={

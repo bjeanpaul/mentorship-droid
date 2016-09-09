@@ -17,8 +17,6 @@ export default StyleSheet.create({
     marginTop: 15,
     marginBottom: 17,
   },
-
-
 });
 
 
@@ -31,6 +29,10 @@ export const layouts = StyleSheet.create({
   inline: {
     marginLeft: 0,
     marginRight: 0,
+  },
+
+  stretch: {
+    alignSelf: 'stretch',
   },
 });
 

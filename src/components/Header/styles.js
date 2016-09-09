@@ -17,4 +17,7 @@ export const themes = StyleSheet.create({
   dark: {
     backgroundColor: colors.BG_DARK,
   },
+  orange: {
+    backgroundColor: colors.BG_ORANGE,
+  },
 });

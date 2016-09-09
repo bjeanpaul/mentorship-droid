@@ -1,6 +1,6 @@
 import { noop } from 'lodash';
 import React, { PropTypes } from 'react';
-import { View } from 'react-native';
+import { TouchableNativeFeedback, View } from 'react-native';
 
 import Icon from 'src/components/Icon';
 import styles from './styles';
@@ -11,9 +11,11 @@ const HeaderIcon = ({
   style = {},
   onPress = noop,
 }) => (
-  <View style={[styles.default, style]} onPress={onPress}>
-    <Icon type={type} />
-  </View>
+  <TouchableNativeFeedback onPress={onPress}>
+    <View style={[styles.default, style]}>
+      <Icon type={type} />
+    </View>
+  </TouchableNativeFeedback>
 );
 
 
