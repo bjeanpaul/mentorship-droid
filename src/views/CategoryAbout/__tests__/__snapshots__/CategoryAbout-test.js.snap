@@ -9,7 +9,11 @@ exports[`CategoryAbout should render 1`] = `
       }
     }>
     <Image
-      source={1}
+      source={
+        Object {
+          "uri": "http://8d5ebfb8.ngrok.io/category-image.png"
+        }
+      }
       style={
         Object {
           "height": 160,
@@ -143,7 +147,11 @@ exports[`CategoryAbout should render a fallback if the category does not have an
       }
     }>
     <Image
-      source={1}
+      source={
+        Object {
+          "uri": "http://8d5ebfb8.ngrok.io/category-image.png"
+        }
+      }
       style={
         Object {
           "height": 160,
