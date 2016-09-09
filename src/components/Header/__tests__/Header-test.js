@@ -19,10 +19,18 @@ describe('Header', () => {
     )).toMatchSnapshot();
   });
 
-  it('should support a dark theme', () => {
+  it('should support dark theme', () => {
     expect(render(
       <Header style={Header.themes.dark}>
-        <Text style={{ color: '#fff' }}>Header with theme</Text>
+        <Text style={{ color: '#fff' }}>Header with dark theme</Text>
+      </Header>
+    )).toMatchSnapshot();
+  });
+
+  it('should support orange theme', () => {
+    expect(render(
+      <Header style={Header.themes.orange}>
+        <Text style={{ color: '#fff' }}>Header with orange aheme</Text>
       </Header>
     )).toMatchSnapshot();
   });
