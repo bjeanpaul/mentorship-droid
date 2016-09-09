@@ -7,6 +7,7 @@ const {
     pop,
     back,
     forward,
+    replaceAt: _replaceAt,
     push: _push,
   },
 } = NavigationExperimental;
@@ -82,3 +83,8 @@ export const createStack = (routes = []) => ({
   index: Math.max(routes.length - 1, 0),
   routes,
 });
+
+
+export const replaceAt = (state, key, route) => !has(state, route.key)
+  ? _replaceAt(state, key, route)
+  : state;
