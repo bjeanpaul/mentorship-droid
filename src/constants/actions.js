@@ -2,7 +2,7 @@ import { PROFILE_FETCH_SUCCESS } from 'src/constants/profile';
 import { ONBOARDING_UPDATE_PROFILE_SUCCESS } from 'src/constants/onboarding';
 
 import { AUTH_LOGIN_SUCCESS } from 'src/constants/auth';
-import { EXISTING_USER_ENTER_SUCCESS } from 'src/constants/entry';
+import { LOAD_SUCCESS } from 'src/constants/sync';
 
 import {
   SCHEDULED_CALL_LIST_SUCCESS,
@@ -15,7 +15,7 @@ const ACTIONS_WITH_ENTITIES = [
   AUTH_LOGIN_SUCCESS,
   PROFILE_FETCH_SUCCESS,
   ONBOARDING_UPDATE_PROFILE_SUCCESS,
-  EXISTING_USER_ENTER_SUCCESS,
+  LOAD_SUCCESS,
   SCHEDULED_CALL_LIST_SUCCESS,
   SCHEDULED_CALL_CREATE_SUCCESS,
   SCHEDULED_CALL_FETCH_SUCCESS,
