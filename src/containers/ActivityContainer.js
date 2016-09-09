@@ -1,8 +1,7 @@
 import { connect } from 'react-redux';
 import Activity from 'src/views/Activity';
 import { getCategory, getActivity } from 'src/stores/helpers';
-import { scheduleActivityCall } from 'src/actions/activities';
-import { dismissScreen } from 'src/actions/navigation';
+import { scheduleActivityCall, dismissActivityScreen } from 'src/actions/activities';
 
 
 const mapStateToProps = (state, { activityId }) => {
@@ -20,7 +19,7 @@ const mapStateToProps = (state, { activityId }) => {
 const propsToActions = {
   // TODO
   onSchedulePress: scheduleActivityCall,
-  onBackPress: dismissScreen,
+  onBackPress: dismissActivityScreen,
 };
 
 
