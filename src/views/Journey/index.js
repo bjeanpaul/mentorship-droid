@@ -20,7 +20,7 @@ const ScheduledCallHeader = ({
     </Link>
   </Header>
 );
-ScheduleCallsHeader.propTypes = {
+ScheduledCallHeader.propTypes = {
   date: PropTypes.string,
   onDatePress: PropTypes.func,
 };
