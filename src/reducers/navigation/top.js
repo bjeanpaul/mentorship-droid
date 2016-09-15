@@ -14,7 +14,7 @@ import {
 
 
 export default (state = createStack([
-  createRoute(routes.ROUTE_JOURNEY),
+  createRoute(routes.ROUTE_LANDING),
 ]), action) => {
   switch (action.type) {
     case landing.SHOW_ACTIVATION_REQUEST:
