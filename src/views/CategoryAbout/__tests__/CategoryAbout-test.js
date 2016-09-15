@@ -2,7 +2,7 @@ import React from 'react';
 
 import CategoryAbout from 'src/views/CategoryAbout';
 import { fakeCategory } from 'app/scripts/helpers';
-import images from 'src/constants/images';
+import { CATEGORY_IMAGE } from 'app/scripts/fixtures';
 
 
 describe('CategoryAbout', () => {
@@ -11,7 +11,7 @@ describe('CategoryAbout', () => {
       <CategoryAbout
         category={fakeCategory({
           title: 'Level',
-          image: images.ONBOARDING_LANDING,
+          image: CATEGORY_IMAGE,
           about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
           goal: 'Ut enim ad minim veniam, quis nostrud exercitation',
         })}

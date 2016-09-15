@@ -3,6 +3,7 @@ import PROFILE_FACE from 'app/assets/Profile.png';
 import PROFILE_FACE_ADD from 'app/assets/Profile_Add.png';
 import BACK_LIGHT from 'app/assets/back-light.png';
 import BACK_ORANGE from 'app/assets/back-orange.png';
+import DISMISS_LIGHT from 'app/assets/close-light.png';
 import ACTIVITY_ICON_FALLBACK from 'app/assets/activity-icon-fallback.png';
 import ACTIVITY_COMPLETE_ANNOTATION from 'app/assets/done.png';
 import ACTIVITY_INSTRUCTIONS from 'app/assets/instructions.png';
@@ -17,6 +18,11 @@ import NAV_TAB_CHAT from 'app/assets/nav-chat.png';
 import NAV_TAB_COMMUNITY from 'app/assets/nav-community.png';
 import NAV_TAB_JOURNEY from 'app/assets/nav-journey.png';
 import NAV_TAB_SCHEDULED_CALLS from 'app/assets/nav-calls.png';
+import NAV_TAB_ACTIVITIES_ACTIVE from 'app/assets/nav-activities-active.png';
+import NAV_TAB_CHAT_ACTIVE from 'app/assets/nav-chat-active.png';
+import NAV_TAB_COMMUNITY_ACTIVE from 'app/assets/nav-community-active.png';
+import NAV_TAB_JOURNEY_ACTIVE from 'app/assets/nav-journey-active.png';
+import NAV_TAB_SCHEDULED_CALLS_ACTIVE from 'app/assets/nav-calls-active.png';
 
 import JOURNEY_BG from 'app/assets/journey-bg.png';
 import JOURNEY_MENTEE from 'app/assets/journey-mentee.png';
@@ -30,6 +36,7 @@ export default {
   PROFILE_FACE_ADD,
   BACK_LIGHT,
   BACK_ORANGE,
+  DISMISS_LIGHT,
   ACTIVITY_ICON_FALLBACK,
   ACTIVITY_COMPLETE_ANNOTATION,
   ACTIVITY_INSTRUCTIONS,
@@ -49,4 +56,10 @@ export default {
   JOURNEY_MENTEE,
   JOURNEY_CALL_ICON,
   JOURNEY_MESSAGE_ICON,
+
+  NAV_TAB_ACTIVITIES_ACTIVE,
+  NAV_TAB_CHAT_ACTIVE,
+  NAV_TAB_COMMUNITY_ACTIVE,
+  NAV_TAB_JOURNEY_ACTIVE,
+  NAV_TAB_SCHEDULED_CALLS_ACTIVE,
 };

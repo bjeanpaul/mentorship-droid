@@ -2,21 +2,26 @@ import * as routes from 'src/constants/routes';
 import * as sync from 'src/constants/sync';
 import * as landing from 'src/constants/landing';
 import * as entry from 'src/constants/entry';
+import * as navigation from 'src/constants/navigation';
 import * as onboarding from 'src/constants/onboarding';
 
 
 import {
   push,
   pop,
+  replaceAt,
   createStack,
   createRoute,
 } from 'src/navigationHelpers';
 
 
 export default (state = createStack([
-  createRoute(routes.ROUTE_JOURNEY),
+  createRoute(routes.ROUTE_LANDING),
 ]), action) => {
   switch (action.type) {
+    case navigation.SCREEN_DISMISS:
+      return pop(state);
+
     case landing.SHOW_ACTIVATION_REQUEST:
       return push(state, createRoute(routes.ROUTE_AUTH_ACTIVATION));
 
@@ -35,8 +40,15 @@ export default (state = createStack([
     case sync.LOAD_REQUEST:
       return push(state, createRoute(routes.ROUTE_LOADING));
 
-    case sync.LOAD_SUCCESS:
-      return push(state, createRoute(routes.ROUTE_NAVIGATOR));
+    case sync.LOAD_SUCCESS: {
+      const route = createRoute(routes.ROUTE_NAVIGATOR);
+      return replaceAt(state, routes.ROUTE_LOADING, route);
+    }
+
+    case sync.LOAD_FAILURE: {
+      const route = createRoute(routes.ROUTE_LOADING_FAILURE);
+      return replaceAt(state, routes.ROUTE_LOADING, route);
+    }
 
     default:
       return state;

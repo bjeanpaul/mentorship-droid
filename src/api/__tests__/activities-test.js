@@ -6,7 +6,7 @@ import { arrayOf } from 'normalizr';
 import { fakeAuth } from 'app/scripts/helpers';
 import request from 'src/api/request';
 import { Activity } from 'src/api/schemas';
-import { parseResults } from 'src/api/parse';
+import { parseActivity, parseActivityListResults } from 'src/api/parse';
 
 import {
   listActivities,
@@ -26,7 +26,7 @@ describe('api/activities', () => {
         url: '/activity/',
         method: 'GET',
         schema: arrayOf(Activity),
-        parse: parseResults,
+        parse: parseActivityListResults,
         auth: fakeAuth(),
         params: { foo: 23 },
       });
@@ -38,6 +38,7 @@ describe('api/activities', () => {
       expect(getActivity(23, fakeAuth())).toEqual({
         url: '/activity/23/',
         method: 'GET',
+        parse: parseActivity,
         auth: fakeAuth(),
         schema: Activity,
       });

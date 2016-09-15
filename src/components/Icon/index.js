@@ -14,6 +14,7 @@ const Icon = ({
 
 
 Icon.types = {
+  dismissLight: images.DISMISS_LIGHT,
   backLight: images.BACK_LIGHT,
   backOrange: images.BACK_ORANGE,
 };

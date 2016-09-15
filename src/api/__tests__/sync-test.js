@@ -28,10 +28,9 @@ describe('api/sync', () => {
       const res = await load(fakeAuth());
 
       expect(res).toEqual({
-        entities: merge([
+        entities: merge(
           helpers.fakeCategoryListData().entities,
-          helpers.fakeActivityListData().entities,
-        ]),
+          helpers.fakeActivityListData().entities),
       });
     });
 

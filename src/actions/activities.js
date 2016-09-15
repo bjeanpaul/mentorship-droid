@@ -1,4 +1,5 @@
 import * as constants from 'src/constants/activities';
+import { staticAction } from 'src/actionHelpers';
 
 
 const chooseCategory = categoryId => ({
@@ -19,8 +20,12 @@ const scheduleActivityCall = activityId => ({
 });
 
 
+const dismissActivityScreen = staticAction(constants.ACTIVITY_SCREEN_DISMISS);
+
+
 export {
   chooseCategory,
   chooseActivity,
   scheduleActivityCall,
+  dismissActivityScreen,
 };

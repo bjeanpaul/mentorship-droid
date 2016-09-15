@@ -17,7 +17,7 @@ const CategoryAbout = ({
     <View style={styles.imageContainer}>
       {
         image
-          ? <Image source={image} style={styles.image} />
+          ? <Image source={{ uri: image }} style={styles.image} />
           : <View style={styles.imageFallback} />
       }
     </View>
