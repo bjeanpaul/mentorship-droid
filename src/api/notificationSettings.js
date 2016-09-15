@@ -9,3 +9,7 @@ export const patchNotificationSettings = (id, data, auth) => request({
   data,
   auth,
 });
+
+
+export const updateNotificationToken = (id, token, auth) => (
+  patchNotificationSettings(id, { androidRegistrationToken: token }, auth));

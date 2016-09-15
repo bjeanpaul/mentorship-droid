@@ -5,7 +5,10 @@ import { fakeAuth } from 'app/scripts/helpers';
 import request from 'src/api/request';
 import { NotificationSettings } from 'src/api/schemas';
 
-import { patchNotificationSettings } from 'src/api';
+import {
+  updateNotificationToken,
+  patchNotificationSettings,
+} from 'src/api';
 
 
 describe('api/notificationSettings', () => {
@@ -14,12 +17,24 @@ describe('api/notificationSettings', () => {
     request.mockClear();
   });
 
-  describe('updateProfile', () => {
-    it('should construct a request for updating a profile', () => {
+  describe('patchNotificationSettings', () => {
+    it('should construct a request for patching notification settings', () => {
       expect(patchNotificationSettings(23, { fake: 'data' }, fakeAuth())).toEqual({
         url: '/notification-settings/23/',
         method: 'PATCH',
         data: { fake: 'data' },
+        auth: fakeAuth(),
+        schema: NotificationSettings,
+      });
+    });
+  });
+
+  describe('updateNotificationToken', () => {
+    it('should construct a request updating a notification token', () => {
+      expect(updateNotificationToken(23, 21, fakeAuth())).toEqual({
+        url: '/notification-settings/23/',
+        method: 'PATCH',
+        data: { androidRegistrationToken: 21 },
         auth: fakeAuth(),
         schema: NotificationSettings,
       });
