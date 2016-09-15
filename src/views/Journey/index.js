@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { View, Image, TouchableWithoutFeedback } from 'react-native';
+import { View, Image, TouchableWithoutFeedback, ScrollView } from 'react-native';
 import { BaseView, Header, Text, Link, Button } from 'src/components';
 
 import images from 'src/constants/images';
@@ -19,7 +19,7 @@ const EventGreeting = ({
       layout={Button.layouts.inline}
       onPress={onGetStartedPress}
     >
-      GET STARTED
+      LET’S GET STARTED
     </Button>
   </View>
 );
@@ -70,9 +70,11 @@ const Journey = ({
         style={styles.eventsBackground}
         source={images.JOURNEY_BG}
       >
-        <EventGreeting
-          onGetStartedPress={onGetStartedPress}
-        />
+        <ScrollView>
+          <EventGreeting
+            onGetStartedPress={onGetStartedPress}
+          />
+        </ScrollView>
       </Image>
     </View>
 

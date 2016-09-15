@@ -47,7 +47,7 @@ export default StyleSheet.create({
   },
   eventContainer: {
     backgroundColor: colors.EVENT_BG,
-    marginTop: 0,
+    marginTop: 12,
     margin: 24,
     padding: 20,
     paddingLeft: 16,
@@ -63,6 +63,7 @@ export default StyleSheet.create({
   },
   eventGreetingBlurb: {
     marginBottom: 24,
+    fontSize: 18,
     textAlign: 'left',
   },
 });
