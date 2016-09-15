@@ -6,7 +6,7 @@ describe('Journey', () => {
   function createComponent(props = {}) {
     return (
       <Journey
-        nextScheduledCallDate="Tomorrow"
+        nextScheduledCallDate="2016-10-15 17:07"
         onNextScheduledCallPress={noop}
         onCallPress={noop}
         onMessagePress={noop}
