@@ -5,3 +5,4 @@ export * from 'src/api/activities';
 export * from 'src/api/categories';
 export * from 'src/api/errors';
 export * from 'src/api/sync';
+export * from 'src/api/notificationSettings';
