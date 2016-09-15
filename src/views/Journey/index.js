@@ -1,3 +1,4 @@
+import moment from 'moment';
 import React, { PropTypes } from 'react';
 import { View, Image, TouchableWithoutFeedback, ScrollView } from 'react-native';
 import { BaseView, Header, Text, Link, Button } from 'src/components';
@@ -43,7 +44,8 @@ const Journey = ({
         style={[styles.date, nextScheduledCallDate && styles.hasDate]}
         onPress={onNextScheduledCallPress}
       >
-        {nextScheduledCallDate || 'Schedule your first call'}
+        {moment(nextScheduledCallDate).format('dddd Do, MMMM YYYY') ||
+          'Schedule your first call'}
       </Link>
     </Header>
 
