@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { FONT, FONT_WEIGHT } from 'src/constants/styles';
+import colors from 'src/constants/colors';
 
 export default StyleSheet.create({
   header: {
@@ -9,13 +10,13 @@ export default StyleSheet.create({
     fontSize: 12,
     fontFamily: FONT.BOLD,
     fontWeight: FONT_WEIGHT.BOLD,
-    color: '#9fb1b3',
+    color: colors.JOURNEY_NEXT_SCHEDULED_CALL_LINK,
   },
   date: {
     fontSize: 18,
   },
   hasDate: {
-    color: '#003035',
+    color: colors.JOURNEY_NEXT_SCHEDULED_CALL_LINK_HAS_DATE,
   },
   mentee: {
     flex: 0.4,
@@ -26,6 +27,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    backgroundColor: colors.JOURNEY_BG,
   },
   icon: {
     width: 44,
@@ -35,7 +37,9 @@ export default StyleSheet.create({
   },
   eventsContainer: {
     flex: 0.6,
-    backgroundColor: 'pink',
-    marginTop: -12,
+    backgroundColor: colors.JOURNEY_BG,
+  },
+  eventsBg: {
+    resizeMode: 'repeat',
   },
 });

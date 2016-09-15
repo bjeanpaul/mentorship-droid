@@ -4,7 +4,10 @@ import Journey from 'src/views/Journey';
 import noop from 'lodash';
 
 
-export default connect(void 0, {
-  onMessagePress: noop,
-  onCallPress: noop,
+export default connect(() => ({
+  nextScheduledCallDate: void 0, // TODO
+}), {
+  onNextScheduledCallPress: () => noop,  // TODO
+  onCallPress: () => noop,  // TODO
+  onMessagePress: () => noop, // TODO
 })(Journey);
