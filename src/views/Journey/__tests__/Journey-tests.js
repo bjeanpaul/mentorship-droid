@@ -10,6 +10,7 @@ describe('Journey', () => {
         onNextScheduledCallPress={noop}
         onCallPress={noop}
         onMessagePress={noop}
+        onGetStartedPress={noop}
         {...props}
       />
     );
