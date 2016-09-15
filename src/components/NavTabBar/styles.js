@@ -18,11 +18,6 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  tabIcon: {
-  },
-  tabIconIsActive: {
-    tintColor: colors.NAV_TAB_ACTIVE,
-  },
   tabTitle: {
     fontSize: 12,
     fontFamily: FONT.MEDIUM,

@@ -23,6 +23,15 @@ const icons = {
 };
 
 
+const activeIcons = {
+  NAV_TAB_ACTIVITIES: images.NAV_TAB_ACTIVITIES_ACTIVE,
+  NAV_TAB_CHAT: images.NAV_TAB_CHAT_ACTIVE,
+  NAV_TAB_COMMUNITY: images.NAV_TAB_COMMUNITY_ACTIVE,
+  NAV_TAB_JOURNEY: images.NAV_TAB_JOURNEY_ACTIVE,
+  NAV_TAB_SCHEDULED_CALLS: images.NAV_TAB_SCHEDULED_CALLS_ACTIVE,
+};
+
+
 const titles = {
   NAV_TAB_ACTIVITIES: 'Activities',
   NAV_TAB_CHAT: 'Chat',
@@ -69,8 +78,12 @@ export const NavTab = ({
   <TouchableNativeFeedback onPress={() => !active && onPress(type)}>
     <View style={styles.tab}>
       <Image
-        source={icons[type]}
-        style={[styles.tabIcon, active && styles.tabIconIsActive]}
+        source={
+          active
+            ? activeIcons[type]
+            : icons[type]
+        }
+        style={styles.tabIcon}
       />
 
       {
