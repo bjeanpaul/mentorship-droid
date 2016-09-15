@@ -1,5 +1,13 @@
 import { connect } from 'react-redux';
-import NotYetImplemented from 'src/views/NotYetImplemented';
+import Journey from 'src/views/Journey';
+import noop from 'lodash';
 
 
-export default connect()(NotYetImplemented);
+export default connect(() => ({
+  nextScheduledCallDate: void 0, // TODO
+}), {
+  onNextScheduledCallPress: () => noop,  // TODO
+  onCallPress: () => noop,  // TODO
+  onMessagePress: () => noop, // TODO
+  onGetStartedPress: () => noop, // TODO
+})(Journey);
