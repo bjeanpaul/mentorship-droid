@@ -28,7 +28,7 @@ exports[`Header should render 1`] = `
 </View>
 `;
 
-exports[`Header should support a dark theme 1`] = `
+exports[`Header should support dark theme 1`] = `
 <View
   style={
     Array [
@@ -57,7 +57,41 @@ exports[`Header should support a dark theme 1`] = `
         }
       ]
     }>
-    Header with theme
+    Header with dark theme
+  </Text>
+</View>
+`;
+
+exports[`Header should support orange theme 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 72,
+        "justifyContent": "center",
+        "paddingLeft": 16,
+        "paddingRight": 16
+      },
+      Object {
+        "backgroundColor": "rgba(246, 111, 63, 0.95)"
+      }
+    ]
+  }>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        Object {
+          "color": "#fff"
+        }
+      ]
+    }>
+    Header with orange aheme
   </Text>
 </View>
 `;

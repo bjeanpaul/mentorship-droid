@@ -8,6 +8,5 @@ export const load = auth => Promise.resolve()
     listCategories(auth),
     listActivities(auth),
   ]))
-  .then((res) => map(res, 'entities'))
-  .then(merge)
+  .then((res) => merge(...map(res, 'entities')))
   .then(entities => ({ entities }));

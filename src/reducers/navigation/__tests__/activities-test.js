@@ -1,7 +1,7 @@
 import reduce from 'src/reducers/navigation/activities';
 import * as activities from 'src/actions/activities';
 import * as routes from 'src/constants/routes';
-import { createStack, createRoute, push } from 'src/navigationHelpers';
+import { createStack, createRoute, push, pop } from 'src/navigationHelpers';
 
 
 describe('src/reducers/navigation/activities', () => {
@@ -29,6 +29,14 @@ describe('src/reducers/navigation/activities', () => {
         .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
           activityId: 23,
         })));
+    });
+  });
+
+  describe('ACTIVITY_SCREEN_DISMISS', () => {
+    it('should pop the current route', () => {
+      const stack = push(createStack(), createStack(routes.ROUTE_ACTIVITY));
+      expect(reduce(stack, activities.dismissActivityScreen()))
+        .toEqual(pop(stack));
     });
   });
 });
