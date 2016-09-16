@@ -5,3 +5,4 @@ export const Profile = new Schema('profiles');
 export const ScheduledCall = new Schema('scheduledCalls');
 export const Activity = new Schema('activities');
 export const Category = new Schema('categories');
+export const Event = new Schema('events');
