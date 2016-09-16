@@ -1,0 +1,235 @@
+exports[`Journey should map props correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16
+        },
+        Object {
+          "alignItems": "flex-start"
+        }
+      ]
+    }>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "color": "#9fb1b3",
+            "fontFamily": "Brandon Text_bold",
+            "fontSize": 12,
+            "fontWeight": "bold"
+          }
+        ]
+      }>
+      NEXT CALL
+    </Text>
+    <Text
+      onPress={[Function noop]}
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Array [
+            Object {
+              "color": "#f77040",
+              "fontSize": 14
+            },
+            Array [
+              Object {
+                "fontSize": 18
+              },
+              Object {
+                "color": "#003035"
+              }
+            ]
+          ]
+        ]
+      }>
+      Saturday 15th, October 2016
+    </Text>
+  </View>
+  <Image
+    source={1}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#eff2f2",
+        "flex": 0.4,
+        "flexDirection": "row",
+        "height": null,
+        "justifyContent": "space-between",
+        "resizeMode": "cover",
+        "width": null,
+        "zIndex": 3
+      }
+    }>
+    <Image
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function bound touchableHandleResponderGrant]}
+      onResponderMove={[Function bound touchableHandleResponderMove]}
+      onResponderRelease={[Function bound touchableHandleResponderRelease]}
+      onResponderTerminate={[Function bound touchableHandleResponderTerminate]}
+      onResponderTerminationRequest={[Function bound touchableHandleResponderTerminationRequest]}
+      onStartShouldSetResponder={[Function bound touchableHandleStartShouldSetResponder]}
+      source={1}
+      style={
+        Object {
+          "height": 44,
+          "marginLeft": 24,
+          "marginRight": 24,
+          "width": 44
+        }
+      }
+      testID={undefined} />
+    <Image
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hitSlop={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function bound touchableHandleResponderGrant]}
+      onResponderMove={[Function bound touchableHandleResponderMove]}
+      onResponderRelease={[Function bound touchableHandleResponderRelease]}
+      onResponderTerminate={[Function bound touchableHandleResponderTerminate]}
+      onResponderTerminationRequest={[Function bound touchableHandleResponderTerminationRequest]}
+      onStartShouldSetResponder={[Function bound touchableHandleStartShouldSetResponder]}
+      source={1}
+      style={
+        Object {
+          "height": 44,
+          "marginLeft": 24,
+          "marginRight": 24,
+          "width": 44
+        }
+      }
+      testID={undefined} />
+  </Image>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#eff2f2",
+        "flex": 0.6
+      }
+    }>
+    <Image
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+          "height": null,
+          "resizeMode": "cover",
+          "width": null
+        }
+      }>
+      <ScrollView>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "borderRadius": 4,
+              "margin": 24,
+              "marginTop": 12,
+              "padding": 20,
+              "paddingLeft": 16,
+              "paddingRight": 16
+            }
+          }>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                  "fontSize": 13,
+                  "textAlign": "center"
+                },
+                Object {
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 20,
+                  "fontWeight": "bold",
+                  "marginBottom": 16,
+                  "textAlign": "left"
+                }
+              ]
+            }>
+            Hello!
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                  "fontSize": 13,
+                  "textAlign": "center"
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 24,
+                  "textAlign": "left"
+                }
+              ]
+            }>
+            This is the start of something amazing! Your Mentor’s journey will be documented here.
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#ffbcbc",
+                  "borderColor": "red",
+                  "borderWidth": 1,
+                  "height": 100,
+                  "justifyContent": "center",
+                  "margin": 10,
+                  "width": 300
+                },
+                undefined
+              ]
+            }>
+            <Text
+              style={
+                Object {
+                  "color": "#333333",
+                  "margin": 20
+                }
+              }>
+              TouchableNativeFeedback is not supported on this platform!
+            </Text>
+          </View>
+        </View>
+      </ScrollView>
+    </Image>
+  </View>
+</View>
+`;

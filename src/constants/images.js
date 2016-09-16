@@ -24,6 +24,11 @@ import NAV_TAB_COMMUNITY_ACTIVE from 'app/assets/nav-community-active.png';
 import NAV_TAB_JOURNEY_ACTIVE from 'app/assets/nav-journey-active.png';
 import NAV_TAB_SCHEDULED_CALLS_ACTIVE from 'app/assets/nav-calls-active.png';
 
+import JOURNEY_BG from 'app/assets/journey-bg.png';
+import JOURNEY_MENTEE from 'app/assets/journey-mentee.png';
+import JOURNEY_CALL_ICON from 'app/assets/call-icon.png';
+import JOURNEY_MESSAGE_ICON from 'app/assets/message-icon.png';
+
 
 export default {
   ONBOARDING_LANDING,
@@ -46,6 +51,12 @@ export default {
   NAV_TAB_COMMUNITY,
   NAV_TAB_JOURNEY,
   NAV_TAB_SCHEDULED_CALLS,
+
+  JOURNEY_BG,
+  JOURNEY_MENTEE,
+  JOURNEY_CALL_ICON,
+  JOURNEY_MESSAGE_ICON,
+
   NAV_TAB_ACTIVITIES_ACTIVE,
   NAV_TAB_CHAT_ACTIVE,
   NAV_TAB_COMMUNITY_ACTIVE,
