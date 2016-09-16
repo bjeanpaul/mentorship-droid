@@ -83,7 +83,7 @@ export const fakeState = (overrides = {}) => merge({}, {
 }, overrides);
 
 
-export const fakeContext = (overrides = {}) => getContext(fakeState(overrides));
+export const fakeContext = (overrides = {}) => merge(getContext(fakeState()), overrides);
 
 
 export const fakeStore = {
