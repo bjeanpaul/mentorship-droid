@@ -32,6 +32,7 @@ export const setupNotificationsFailure = staticAction(
   constants.NOTIFICATIONS_SETUP_FAILURE);
 
 
+// TODO handle notification failure
 export const setupNotifications = () => (dispatch, {
   auth,
   profile: { id },
