@@ -6,3 +6,4 @@ export * from 'src/api/categories';
 export * from 'src/api/events';
 export * from 'src/api/errors';
 export * from 'src/api/sync';
+export * from 'src/api/notificationSettings';
