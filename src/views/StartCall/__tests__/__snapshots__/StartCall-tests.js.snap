@@ -1,0 +1,443 @@
+exports[`StartCall should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16
+        },
+        Object {}
+      ]
+    }>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400"
+          }
+        ]
+      }>
+      Call Mentee
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1
+      }
+    }>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 3,
+          "paddingBottom": 29,
+          "paddingLeft": 16,
+          "paddingRight": 16
+        }
+      }>
+      <Image
+        source={1}
+        style={
+          Object {
+            "flex": -1,
+            "height": 288,
+            "resizeMode": "contain",
+            "width": 328
+          }
+        } />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "paddingLeft": 24,
+          "paddingRight": 24
+        }
+      } />
+  </View>
+  <View
+    style={
+      Object {
+        "justifyContent": "center",
+        "padding": 24
+      }
+    }>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`StartCall should render with a call time 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16
+        },
+        Object {}
+      ]
+    }>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400"
+          }
+        ]
+      }>
+      Call Mentee
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1
+      }
+    }>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 3,
+          "paddingBottom": 29,
+          "paddingLeft": 16,
+          "paddingRight": 16
+        }
+      }>
+      <Image
+        source={1}
+        style={
+          Object {
+            "flex": -1,
+            "height": 288,
+            "resizeMode": "contain",
+            "width": 328
+          }
+        } />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "paddingLeft": 24,
+          "paddingRight": 24
+        }
+      }>
+      0
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "justifyContent": "center",
+        "padding": 24
+      }
+    }>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`StartCall should render with a call time and activity 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16
+        },
+        Object {}
+      ]
+    }>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400"
+          }
+        ]
+      }>
+      Call Mentee
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1
+      }
+    }>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 3,
+          "paddingBottom": 29,
+          "paddingLeft": 16,
+          "paddingRight": 16
+        }
+      }>
+      <Image
+        source={1}
+        style={
+          Object {
+            "flex": -1,
+            "height": 288,
+            "resizeMode": "contain",
+            "width": 328
+          }
+        } />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "paddingLeft": 24,
+          "paddingRight": 24
+        }
+      }>
+      0
+      <Text
+        numberOfLines={2}
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Object {
+              "fontSize": 20
+            }
+          ]
+        }>
+        Activity 3
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "justifyContent": "center",
+        "padding": 24
+      }
+    }>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+  </View>
+</View>
+`;
