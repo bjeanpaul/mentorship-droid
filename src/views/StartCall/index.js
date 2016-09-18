@@ -39,13 +39,13 @@ const StartCall = ({
 
       <View style={styles.contentContainer}>
         {
-          callTime && <Text style={Text.types.secondaryTitle}>
+          callTime && <Text style={styles.content}>
             {moment(callTime).format('ddd, MMM DD, h:mma')}
           </Text>
         }
 
         {
-          activity && <Text style={Text.types.secondaryTitle} numberOfLines={2}>
+          activity && <Text style={styles.content} numberOfLines={2}>
             {activity.title}
           </Text>
         }
@@ -53,8 +53,12 @@ const StartCall = ({
     </View>
 
     <View style={styles.footer}>
-      <Button uid="activate" layout={Button.layouts.stretch} onPress={onActivatePress}>
-        <Text style={[Text.themes.light, Text.uppercase]}>Activate Call</Text>
+      <Button
+        uid="activate"
+        layout={Button.layouts.stretch}
+        onPress={onActivatePress}
+      >
+        ACTIVATE CALL
       </Button>
     </View>
   </BaseView>

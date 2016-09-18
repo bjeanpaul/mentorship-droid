@@ -23,6 +23,9 @@ export default StyleSheet.create({
     paddingLeft: 24,
     paddingRight: 24,
   },
+  content: {
+    fontSize: 20,
+  },
   footer: {
     padding: 24,
     justifyContent: 'center',

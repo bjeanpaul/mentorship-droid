@@ -21,10 +21,6 @@ export const types = StyleSheet.create({
     fontWeight: FONT_WEIGHT.MEDIUM,
   },
 
-  secondaryTitle: {
-    fontSize: 20,
-  },
-
   paragraph: {
     textAlign: 'left',
     fontSize: 18,
