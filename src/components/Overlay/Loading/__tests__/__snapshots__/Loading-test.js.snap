@@ -1,0 +1,470 @@
+exports[`OverlayLoading should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      Object {
+        "backgroundColor": "rgba(246, 111, 63, 0.95)"
+      }
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16
+        },
+        Object {}
+      ]
+    } />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "paddingTop": 64
+      }
+    }>
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 80,
+          "transform": Array [
+            Object {
+              "rotate": "0deg"
+            }
+          ],
+          "width": 80
+        }
+      } />
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "color": undefined,
+            "fontSize": 20
+          }
+        ]
+      }>
+      Waiting for the 7:18…
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`OverlayLoading should render with a dismiss button 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function buildPredicate],
+    "childrenOfNode": [Function childrenOfNode],
+    "findWhereUnwrapped": [Function findWhereUnwrapped]
+  },
+  "length": 1,
+  "node": Object {
+    "$$typeof": Symbol(react.element),
+    "_owner": null,
+    "_store": Object {},
+    "key": null,
+    "props": Object {
+      "children": Array [
+        Object {
+          "$$typeof": Symbol(react.element),
+          "_owner": null,
+          "_store": Object {},
+          "key": null,
+          "props": Object {
+            "children": Object {
+              "$$typeof": Symbol(react.element),
+              "_owner": null,
+              "_store": Object {},
+              "key": null,
+              "props": Object {
+                "onPress": [Function noop],
+                "type": 1,
+                "uid": "dismiss"
+              },
+              "ref": null,
+              "type": [Function HeaderIcon]
+            },
+            "style": undefined
+          },
+          "ref": null,
+          "type": [Function Header]
+        },
+        Object {
+          "$$typeof": Symbol(react.element),
+          "_owner": null,
+          "_store": Object {},
+          "key": null,
+          "props": Object {
+            "children": Array [
+              Object {
+                "$$typeof": Symbol(react.element),
+                "_owner": null,
+                "_store": Object {},
+                "key": null,
+                "props": Object {},
+                "ref": null,
+                "type": [Function SpinningImage]
+              },
+              Object {
+                "$$typeof": Symbol(react.element),
+                "_owner": null,
+                "_store": Object {},
+                "key": null,
+                "props": Object {
+                  "children": "Waiting for the 7:18…",
+                  "style": Object {
+                    "color": undefined,
+                    "fontSize": 20
+                  }
+                },
+                "ref": null,
+                "type": [Function Text]
+              }
+            ],
+            "style": Object {
+              "alignItems": "center",
+              "flex": 1,
+              "paddingTop": 64
+            }
+          },
+          "ref": null,
+          "type": [Function View]
+        }
+      ],
+      "style": Object {
+        "backgroundColor": "rgba(246, 111, 63, 0.95)"
+      }
+    },
+    "ref": null,
+    "type": [Function BaseView]
+  },
+  "nodes": Array [
+    Object {
+      "$$typeof": Symbol(react.element),
+      "_owner": null,
+      "_store": Object {},
+      "key": null,
+      "props": Object {
+        "children": Array [
+          Object {
+            "$$typeof": Symbol(react.element),
+            "_owner": null,
+            "_store": Object {},
+            "key": null,
+            "props": Object {
+              "children": Object {
+                "$$typeof": Symbol(react.element),
+                "_owner": null,
+                "_store": Object {},
+                "key": null,
+                "props": Object {
+                  "onPress": [Function noop],
+                  "type": 1,
+                  "uid": "dismiss"
+                },
+                "ref": null,
+                "type": [Function HeaderIcon]
+              },
+              "style": undefined
+            },
+            "ref": null,
+            "type": [Function Header]
+          },
+          Object {
+            "$$typeof": Symbol(react.element),
+            "_owner": null,
+            "_store": Object {},
+            "key": null,
+            "props": Object {
+              "children": Array [
+                Object {
+                  "$$typeof": Symbol(react.element),
+                  "_owner": null,
+                  "_store": Object {},
+                  "key": null,
+                  "props": Object {},
+                  "ref": null,
+                  "type": [Function SpinningImage]
+                },
+                Object {
+                  "$$typeof": Symbol(react.element),
+                  "_owner": null,
+                  "_store": Object {},
+                  "key": null,
+                  "props": Object {
+                    "children": "Waiting for the 7:18…",
+                    "style": Object {
+                      "color": undefined,
+                      "fontSize": 20
+                    }
+                  },
+                  "ref": null,
+                  "type": [Function Text]
+                }
+              ],
+              "style": Object {
+                "alignItems": "center",
+                "flex": 1,
+                "paddingTop": 64
+              }
+            },
+            "ref": null,
+            "type": [Function View]
+          }
+        ],
+        "style": Object {
+          "backgroundColor": "rgba(246, 111, 63, 0.95)"
+        }
+      },
+      "ref": null,
+      "type": [Function BaseView]
+    }
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_context": Object {},
+      "_currentElement": Object {
+        "$$typeof": Symbol(react.element),
+        "_owner": null,
+        "_store": Object {},
+        "key": null,
+        "props": Object {
+          "onDismissPress": [Function noop],
+          "title": "Waiting for the 7:18…"
+        },
+        "ref": null,
+        "type": [Function LoadingOverlay]
+      },
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "onDismissPress": [Function noop],
+          "title": "Waiting for the 7:18…"
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function enqueueCallback],
+          "enqueueCallbackInternal": [Function enqueueCallbackInternal],
+          "enqueueElementInternal": [Function enqueueElementInternal],
+          "enqueueForceUpdate": [Function enqueueForceUpdate],
+          "enqueueReplaceState": [Function enqueueReplaceState],
+          "enqueueSetState": [Function enqueueSetState],
+          "isMounted": [Function isMounted],
+          "validateCallback": [Function validateCallback]
+        }
+      },
+      "_mountOrder": 14,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": Object {
+        "_currentElement": Object {
+          "$$typeof": Symbol(react.element),
+          "_owner": null,
+          "_store": Object {},
+          "key": null,
+          "props": Object {
+            "children": Array [
+              Object {
+                "$$typeof": Symbol(react.element),
+                "_owner": null,
+                "_store": Object {},
+                "key": null,
+                "props": Object {
+                  "children": Object {
+                    "$$typeof": Symbol(react.element),
+                    "_owner": null,
+                    "_store": Object {},
+                    "key": null,
+                    "props": Object {
+                      "onPress": [Function noop],
+                      "type": 1,
+                      "uid": "dismiss"
+                    },
+                    "ref": null,
+                    "type": [Function HeaderIcon]
+                  },
+                  "style": undefined
+                },
+                "ref": null,
+                "type": [Function Header]
+              },
+              Object {
+                "$$typeof": Symbol(react.element),
+                "_owner": null,
+                "_store": Object {},
+                "key": null,
+                "props": Object {
+                  "children": Array [
+                    Object {
+                      "$$typeof": Symbol(react.element),
+                      "_owner": null,
+                      "_store": Object {},
+                      "key": null,
+                      "props": Object {},
+                      "ref": null,
+                      "type": [Function SpinningImage]
+                    },
+                    Object {
+                      "$$typeof": Symbol(react.element),
+                      "_owner": null,
+                      "_store": Object {},
+                      "key": null,
+                      "props": Object {
+                        "children": "Waiting for the 7:18…",
+                        "style": Object {
+                          "color": undefined,
+                          "fontSize": 20
+                        }
+                      },
+                      "ref": null,
+                      "type": [Function Text]
+                    }
+                  ],
+                  "style": Object {
+                    "alignItems": "center",
+                    "flex": 1,
+                    "paddingTop": 64
+                  }
+                },
+                "ref": null,
+                "type": [Function View]
+              }
+            ],
+            "style": Object {
+              "backgroundColor": "rgba(246, 111, 63, 0.95)"
+            }
+          },
+          "ref": null,
+          "type": [Function BaseView]
+        },
+        "_debugID": 2,
+        "_renderedOutput": Object {
+          "$$typeof": Symbol(react.element),
+          "_owner": null,
+          "_store": Object {},
+          "key": null,
+          "props": Object {
+            "children": Array [
+              Object {
+                "$$typeof": Symbol(react.element),
+                "_owner": null,
+                "_store": Object {},
+                "key": null,
+                "props": Object {
+                  "children": Object {
+                    "$$typeof": Symbol(react.element),
+                    "_owner": null,
+                    "_store": Object {},
+                    "key": null,
+                    "props": Object {
+                      "onPress": [Function noop],
+                      "type": 1,
+                      "uid": "dismiss"
+                    },
+                    "ref": null,
+                    "type": [Function HeaderIcon]
+                  },
+                  "style": undefined
+                },
+                "ref": null,
+                "type": [Function Header]
+              },
+              Object {
+                "$$typeof": Symbol(react.element),
+                "_owner": null,
+                "_store": Object {},
+                "key": null,
+                "props": Object {
+                  "children": Array [
+                    Object {
+                      "$$typeof": Symbol(react.element),
+                      "_owner": null,
+                      "_store": Object {},
+                      "key": null,
+                      "props": Object {},
+                      "ref": null,
+                      "type": [Function SpinningImage]
+                    },
+                    Object {
+                      "$$typeof": Symbol(react.element),
+                      "_owner": null,
+                      "_store": Object {},
+                      "key": null,
+                      "props": Object {
+                        "children": "Waiting for the 7:18…",
+                        "style": Object {
+                          "color": undefined,
+                          "fontSize": 20
+                        }
+                      },
+                      "ref": null,
+                      "type": [Function Text]
+                    }
+                  ],
+                  "style": Object {
+                    "alignItems": "center",
+                    "flex": 1,
+                    "paddingTop": 64
+                  }
+                },
+                "ref": null,
+                "type": [Function View]
+              }
+            ],
+            "style": Object {
+              "backgroundColor": "rgba(246, 111, 63, 0.95)"
+            }
+          },
+          "ref": null,
+          "type": [Function BaseView]
+        }
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": null,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false
+    },
+    "getRenderOutput": [Function getRenderOutput],
+    "render": [Function render]
+  },
+  "root": [Circular],
+  "unrendered": Object {
+    "$$typeof": Symbol(react.element),
+    "_owner": null,
+    "_store": Object {},
+    "key": null,
+    "props": Object {
+      "onDismissPress": [Function noop],
+      "title": "Waiting for the 7:18…"
+    },
+    "ref": null,
+    "type": [Function LoadingOverlay]
+  }
+}
+`;

@@ -1,38 +1,37 @@
 import React, { PropTypes } from 'react';
-import { BaseView, Text, Image, SpinningImage } from 'src/components';
-import styles from './styles';
-import colors from 'src/constants/colors';
+import { View } from 'react-native';
 
-import IMAGE_DISMISS_ICON from 'app/assets/close-light.png';
+import { BaseView, SpinningImage, Header, HeaderIcon, Text } from 'src/components';
+import styles from 'src/components/Overlay/Loading/styles';
+
 
 const LoadingOverlay = ({
   title,
-  dismiss,
-}) => {
-  let dismissButton;
+  onDismissPress,
+}) => (
+  <BaseView style={styles.base}>
+    <Header style={styles.header}>
+      {
+        onDismissPress && <HeaderIcon
+          uid="dismiss"
+          type={HeaderIcon.types.dismissLight}
+          onPress={onDismissPress}
+        />
+      }
+    </Header>
 
-  if (dismiss) {
-    dismissButton = (
-      <Image
-        style={styles.dismissButton}
-        source={IMAGE_DISMISS_ICON}
-      />
-    );
-  }
-
-  return (
-    <BaseView
-      statusBarBackgroundColor={colors.OVERLAY_STATUS_BG}
-      style={styles.baseView}
-    >
-      {dismissButton}
+    <View style={styles.body}>
       <SpinningImage />
       <Text style={styles.title}>{title}</Text>
-    </BaseView>
-  );
-};
+    </View>
+  </BaseView>
+);
+
+
 LoadingOverlay.propTypes = {
-  dismiss: PropTypes.bool,
   title: PropTypes.string.isRequired,
+  onDismissPress: PropTypes.func,
 };
+
+
 export default LoadingOverlay;
