@@ -37,7 +37,7 @@ describe('ConnectingCall', () => {
 
     const el = shallow(createComponent({
       activity: fakeActivity(),
-      onReviewActivityPress
+      onReviewActivityPress,
     }));
 
     el.findWhere(uidEquals('review'))
