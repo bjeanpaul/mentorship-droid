@@ -14,8 +14,6 @@ export default StyleSheet.create({
   },
   image: {
     flex: -1,
-    width: 328,
-    height: 288,
     resizeMode: 'contain',
   },
   contentContainer: {

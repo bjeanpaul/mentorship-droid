@@ -87,9 +87,7 @@ exports[`StartCall should render 1`] = `
         style={
           Object {
             "flex": -1,
-            "height": 288,
-            "resizeMode": "contain",
-            "width": 328
+            "resizeMode": "contain"
           }
         } />
     </View>
@@ -228,9 +226,7 @@ exports[`StartCall should render with a call time 1`] = `
         style={
           Object {
             "flex": -1,
-            "height": 288,
-            "resizeMode": "contain",
-            "width": 328
+            "resizeMode": "contain"
           }
         } />
     </View>
@@ -371,9 +367,7 @@ exports[`StartCall should render with a call time and activity 1`] = `
         style={
           Object {
             "flex": -1,
-            "height": 288,
-            "resizeMode": "contain",
-            "width": 328
+            "resizeMode": "contain"
           }
         } />
     </View>
