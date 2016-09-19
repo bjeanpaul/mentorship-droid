@@ -1,22 +1,23 @@
+import moment from 'moment';
 import React, { PropTypes } from 'react';
-import { View } from 'react-native';
+import { View, Image } from 'react-native';
+
 
 const Event = ({
-  type,
   date,
   icon,
   title,
   blurb,
-  onPress,
 }) => (
   <View>
+    <Image source={icon} />
+    <Text>{title}</Text>
+    <Text>{blurb || moment(date).format('dddd Do, MMMM YYYY')}</Text>
   </View>
 );
-Event.PropTypes = {
-  type: PropTypes.string.isRequired,
+Event.propTypes = {
   date: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   title: PropTypes.string,
   blurb: PropTypes.string,
-  onPress: PropTypes.func,
-}
+};

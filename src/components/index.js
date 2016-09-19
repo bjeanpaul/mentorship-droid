@@ -18,6 +18,7 @@ import Pagination from './Pagination';
 import Stepper, { Step } from './Stepper';
 import NavTabBar from './NavTabBar';
 import NotFound from './NotFound';
+import Event from './Event';
 
 
 export {
@@ -43,4 +44,5 @@ export {
   Step,
   NavTabBar,
   NotFound,
+  Event,
 };
