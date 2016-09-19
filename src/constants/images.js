@@ -4,6 +4,7 @@ import PROFILE_FACE_ADD from 'app/assets/Profile_Add.png';
 import BACK_LIGHT from 'app/assets/back-light.png';
 import BACK_ORANGE from 'app/assets/back-orange.png';
 import DISMISS_LIGHT from 'app/assets/close-light.png';
+import DISMISS_DARK from 'app/assets/close_gray.png';
 import ACTIVITY_ICON_FALLBACK from 'app/assets/activity-icon-fallback.png';
 import ACTIVITY_COMPLETE_ANNOTATION from 'app/assets/done.png';
 import ACTIVITY_INSTRUCTIONS from 'app/assets/instructions.png';
@@ -30,6 +31,9 @@ import JOURNEY_CALL_ICON from 'app/assets/call-icon.png';
 import JOURNEY_MESSAGE_ICON from 'app/assets/message-icon.png';
 import JOURNEY_EVENT_SCHEDULED_CALL_ICON from 'app/assets/event-icon-calendar.png';
 
+import START_CALL from 'app/assets/mentee-holding-phone.png';
+import OVERLAY_DONE from 'app/assets/done-icon.png';
+
 
 export default {
   ONBOARDING_LANDING,
@@ -38,6 +42,7 @@ export default {
   BACK_LIGHT,
   BACK_ORANGE,
   DISMISS_LIGHT,
+  DISMISS_DARK,
   ACTIVITY_ICON_FALLBACK,
   ACTIVITY_COMPLETE_ANNOTATION,
   ACTIVITY_INSTRUCTIONS,
@@ -64,4 +69,7 @@ export default {
   NAV_TAB_COMMUNITY_ACTIVE,
   NAV_TAB_JOURNEY_ACTIVE,
   NAV_TAB_SCHEDULED_CALLS_ACTIVE,
+
+  START_CALL,
+  OVERLAY_DONE,
 };
