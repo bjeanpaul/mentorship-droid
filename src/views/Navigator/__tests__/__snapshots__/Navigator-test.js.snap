@@ -18,7 +18,8 @@ exports[`Navigator should render the currently active tab 1`] = `
     <View
       style={
         Object {
-          "flex": 1
+          "flex": 1,
+          "flexDirection": "column-reverse"
         }
       }>
       <View
@@ -198,7 +199,8 @@ exports[`Navigator should render the currently active tab 2`] = `
     <View
       style={
         Object {
-          "flex": 1
+          "flex": 1,
+          "flexDirection": "column-reverse"
         }
       }>
       <View

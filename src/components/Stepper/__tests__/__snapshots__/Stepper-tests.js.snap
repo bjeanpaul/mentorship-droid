@@ -48,7 +48,8 @@ exports[`Stepper should map props correctly 1`] = `
     <View
       style={
         Object {
-          "flex": 1
+          "flex": 1,
+          "flexDirection": "column-reverse"
         }
       }>
       <View
@@ -197,7 +198,8 @@ exports[`Stepper should toggle the rendering of the progressBar 1`] = `
     <View
       style={
         Object {
-          "flex": 1
+          "flex": 1,
+          "flexDirection": "column-reverse"
         }
       }>
       <View
