@@ -7,13 +7,19 @@ export default StyleSheet.create({
   },
   body: {
     flex: 1,
-    alignItems: 'center',
-    paddingTop: 64,
+    paddingTop: 14,
     paddingLeft: 24,
     paddingRight: 24,
+  },
+  contentContainer: {
+    alignItems: 'center',
+    paddingBottom: 75,
   },
   title: {
     fontSize: 20,
     color: colors.OVERLAY_TEXT,
+  },
+  hint: {
+    fontSize: 24,
   },
 });
