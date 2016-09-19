@@ -141,11 +141,9 @@ describe('helpers', () => {
   describe('getScheduledCall', () => {
     it('should get the scheduled call for the given id', () => {
       const state = fakeState();
-
       state.entities.scheduledCalls = {
         6: fakeScheduledCall({ id: 6 }),
       };
-
       expect(getScheduledCall(state, 6)).toEqual(fakeScheduledCall({ id: 6 }));
     });
   });
