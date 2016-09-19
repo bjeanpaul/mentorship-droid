@@ -76,7 +76,7 @@ exports[`StartCall should render 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "flex": 3,
+          "flex": 0.75,
           "paddingBottom": 29,
           "paddingLeft": 16,
           "paddingRight": 16
@@ -96,7 +96,7 @@ exports[`StartCall should render 1`] = `
     <View
       style={
         Object {
-          "flex": 1,
+          "flex": 0.25,
           "paddingLeft": 24,
           "paddingRight": 24
         }
@@ -217,7 +217,7 @@ exports[`StartCall should render with a call time 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "flex": 3,
+          "flex": 0.75,
           "paddingBottom": 29,
           "paddingLeft": 16,
           "paddingRight": 16
@@ -237,7 +237,7 @@ exports[`StartCall should render with a call time 1`] = `
     <View
       style={
         Object {
-          "flex": 1,
+          "flex": 0.25,
           "paddingLeft": 24,
           "paddingRight": 24
         }
@@ -360,7 +360,7 @@ exports[`StartCall should render with a call time and activity 1`] = `
       style={
         Object {
           "alignItems": "center",
-          "flex": 3,
+          "flex": 0.75,
           "paddingBottom": 29,
           "paddingLeft": 16,
           "paddingRight": 16
@@ -380,7 +380,7 @@ exports[`StartCall should render with a call time and activity 1`] = `
     <View
       style={
         Object {
-          "flex": 1,
+          "flex": 0.25,
           "paddingLeft": 24,
           "paddingRight": 24
         }
