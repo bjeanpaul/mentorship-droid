@@ -1,61 +1,38 @@
 import React, { PropTypes } from 'react';
-import { View, Image } from 'react-native';
-import { BaseView, Text, Button } from 'src/components';
-import styles from './styles';
-import colors from 'src/constants/colors';
+import { Image, View } from 'react-native';
 
-import IMAGE_DISMISS_ICON from 'app/assets/close-light.png';
-import IMAGE_DONE from 'app/assets/done-icon.png';
+import images from 'src/constants/images';
+import { BaseView, Header, HeaderIcon, Text } from 'src/components';
+import styles from 'src/components/Overlay/Completed/styles';
 
-// TODO: Dismiss Action
+
 const CompletedOverlay = ({
   title,
-  message,
-  buttonLabel,
-  onButtonPress,
-  linkText,
-  onLinkPress,
+  onDismissPress,
 }) => (
-  <BaseView
-    style={styles.baseView}
-    statusBarBackgroundColor={colors.OVERLAY_STATUS_BG}
-  >
-    <View style={styles.content}>
-      <Image
-        style={styles.dismissButton}
-        source={IMAGE_DISMISS_ICON}
-      />
-      <View style={styles.imageContainer}>
-        <Image
-          style={styles.image}
-          source={IMAGE_DONE}
+  <BaseView style={styles.base}>
+    <Header style={styles.header}>
+      {
+        onDismissPress && <HeaderIcon
+          uid="dismiss"
+          type={HeaderIcon.types.dismissLight}
+          onPress={onDismissPress}
         />
-      </View>
-      <Text style={styles.title}>{title}</Text>
-      <Text style={styles.message}>{message}</Text>
-    </View>
-
-    <View style={styles.footer}>
-      <Button
-        theme={Button.themes.white}
-        handlePress={onButtonPress}
-        label={buttonLabel}
-      />
-      {linkText
-        ? <Text style={styles.footerText} onPress={onLinkPress}>
-            {linkText}
-          </Text>
-        : null
       }
+    </Header>
+
+    <View style={styles.body}>
+      <Image source={images.OVERLAY_DONE} />
+      <Text style={styles.title}>{title}</Text>
     </View>
   </BaseView>
 );
+
+
 CompletedOverlay.propTypes = {
   title: PropTypes.string.isRequired,
-  message: PropTypes.string,
-  buttonLabel: PropTypes.string.isRequired,
-  onButtonPress: PropTypes.func.isRequired,
-  linkText: PropTypes.string,
-  onLinkPress: PropTypes.func,
+  onDismissPress: PropTypes.func,
 };
+
+
 export default CompletedOverlay;

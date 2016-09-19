@@ -29,6 +29,8 @@ import JOURNEY_MENTEE from 'app/assets/journey-mentee.png';
 import JOURNEY_CALL_ICON from 'app/assets/call-icon.png';
 import JOURNEY_MESSAGE_ICON from 'app/assets/message-icon.png';
 
+import OVERLAY_DONE from 'app/assets/done-icon.png';
+
 
 export default {
   ONBOARDING_LANDING,
@@ -62,4 +64,6 @@ export default {
   NAV_TAB_COMMUNITY_ACTIVE,
   NAV_TAB_JOURNEY_ACTIVE,
   NAV_TAB_SCHEDULED_CALLS_ACTIVE,
+
+  OVERLAY_DONE,
 };
