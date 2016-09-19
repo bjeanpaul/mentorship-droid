@@ -6,7 +6,7 @@ export default StyleSheet.create({
     flex: 1,
   },
   imageContainer: {
-    flex: 3,
+    flex: 0.75,
     alignItems: 'center',
     paddingLeft: 16,
     paddingRight: 16,
@@ -19,7 +19,7 @@ export default StyleSheet.create({
     resizeMode: 'contain',
   },
   contentContainer: {
-    flex: 1,
+    flex: 0.25,
     paddingLeft: 24,
     paddingRight: 24,
   },
