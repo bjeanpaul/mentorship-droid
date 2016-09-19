@@ -5,25 +5,21 @@ jest.mock('src/actionHelpers', () => ({
 }));
 
 import { isEqual } from 'lodash';
-import * as constants from 'src/constants/entry';
+import * as constants from 'src/constants/sync';
 import { load as apiLoad, ApiResponseError } from 'src/api';
 import { apiAction, staticAction, dataAction } from 'src/actionHelpers';
 import { load } from 'src/actions/sync';
 
 
 describe('actions/sync', () => {
-  beforeEach(() => {
-    load.mockClear();
-  });
-
   describe('load', () => {
-    it('should create actions for entering from the api', () => {
+    it('should create actions for loading from the api', () => {
       expect(isEqual(load, apiAction({
         method: apiLoad,
-        request: staticAction(constants.EXISTING_USER_ENTER_REQUEST),
-        success: dataAction(constants.EXISTING_USER_ENTER_SUCCESS),
+        request: staticAction(constants.LOAD_REQUEST),
+        success: dataAction(constants.LOAD_SUCCESS),
         failures: [
-          [ApiResponseError, staticAction(constants.EXISTING_USER_ENTER_FAILURE)],
+          [ApiResponseError, staticAction(constants.LOAD_FAILURE)],
         ],
       }))).toBe(true);
     });

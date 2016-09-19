@@ -31,6 +31,7 @@ import JOURNEY_CALL_ICON from 'app/assets/call-icon.png';
 import JOURNEY_MESSAGE_ICON from 'app/assets/message-icon.png';
 
 import START_CALL from 'app/assets/mentee-holding-phone.png';
+import OVERLAY_DONE from 'app/assets/done-icon.png';
 
 
 export default {
@@ -68,4 +69,5 @@ export default {
   NAV_TAB_SCHEDULED_CALLS_ACTIVE,
 
   START_CALL,
+  OVERLAY_DONE,
 };

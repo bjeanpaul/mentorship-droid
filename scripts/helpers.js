@@ -1,4 +1,4 @@
-import { merge, extend, uniqueId } from 'lodash';
+import { merge, uniqueId } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
 import { Profile, ScheduledCall, Activity, Category } from 'src/api';
 import { getContext } from 'src/stores/helpers';
@@ -13,9 +13,8 @@ export const capture = async (fn, ...xargs) => {
 
 export const mock = () => {
   const __id = uniqueId();
-  const fn = jest.fn();
 
-  return (...args) => extend(fn, {
+  return (...args) => ({
     __id,
     args,
   });
@@ -84,7 +83,7 @@ export const fakeState = (overrides = {}) => merge({}, {
 }, overrides);
 
 
-export const fakeContext = (overrides = {}) => getContext(fakeState(overrides));
+export const fakeContext = (overrides = {}) => merge(getContext(fakeState()), overrides);
 
 
 export const fakeStore = {
