@@ -28,7 +28,8 @@ global.mock = (...args) => {
 };
 
 // TODO investigate whether this has been fixed (at the time of writing, there
-// no github issues for this could be found. This should be an array:
+// no github issues for this could be found. `oneOf` is called without
+// non-arrays in a few places, e.g::
 // https://github.com/facebook/react-native/blob/master/Libraries/Components/Touchable/TouchableWithoutFeedback.js#L42
 const { oneOf } = PropTypes;
 PropTypes.oneOf = (v, ...args) => oneOf(castArray(v), ...args);
