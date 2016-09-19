@@ -7,43 +7,60 @@ exports[`Loading should render 1`] = `
         "flex": 1
       },
       Object {
-        "alignItems": "center",
-        "backgroundColor": "rgba(246, 111, 63, 0.95)",
-        "justifyContent": "center",
-        "padding": 24
+        "backgroundColor": "rgba(246, 111, 63, 0.95)"
       }
     ]
   }>
-  <Image
-    source={1}
-    style={
-      Object {
-        "height": 80,
-        "transform": Array [
-          Object {
-            "rotate": "0deg"
-          }
-        ],
-        "width": 80
-      }
-    } />
-  <Text
+  <View
     style={
       Array [
         Object {
-          "color": "#003035",
-          "fontFamily": "Brandon Text",
-          "fontSize": 13,
-          "textAlign": "center"
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16
         },
-        Object {
-          "color": undefined,
-          "fontSize": 20,
-          "paddingBottom": 80
-        }
+        Object {}
       ]
+    } />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "paddingTop": 64
+      }
     }>
-    Loading...
-  </Text>
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 80,
+          "transform": Array [
+            Object {
+              "rotate": "0deg"
+            }
+          ],
+          "width": 80
+        }
+      } />
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "color": undefined,
+            "fontSize": 20
+          }
+        ]
+      }>
+      Loading...
+    </Text>
+  </View>
 </View>
 `;
