@@ -1,4 +1,4 @@
-import { mapStateToProps } from 'src/containers/CallScheduledEventContainer';
+import { mapStateToProps } from 'src/containers/ScheduledCallEventContainer';
 import { fakeState, fakeEvent, fakeScheduledCall, fakeActivity } from 'app/scripts/helpers';
 import { JOURNEY_EVENT_SCHEDULED_CALL_ICON } from 'src/constants/images';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/event';
@@ -24,7 +24,7 @@ describe('CallScheduledEventContainer', () => {
         },
       });
       expect(mapStateToProps(state, fakeEvent({
-        type: EVENT_TYPE_SCHEDULED_CALL_CREATED,
+        eventType: EVENT_TYPE_SCHEDULED_CALL_CREATED,
         objectId: 55, // scheduledCall
       }))).toEqual({
         type: EVENT_TYPE_SCHEDULED_CALL_CREATED,

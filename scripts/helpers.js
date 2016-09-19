@@ -3,18 +3,7 @@ import moment from 'moment';
 import { normalize, arrayOf } from 'normalizr';
 import { Profile, ScheduledCall, Activity, Category } from 'src/api';
 import { getContext } from 'src/stores/helpers';
-
-import {
-  EVENT_TYPE_SCHEDULED_CALL_CREATED,
-  EVENT_TYPE_SCHEDULED_CALL_UPDATED,
-  EVENT_TYPE_SCHEDULED_CALL_CANCELLED,
-  EVENT_TYPE_CALL_STARTED,
-  EVENT_TYPE_CALL_ENDED,
-  EVENT_TYPE_MESSAGE_SENT,
-  EVENT_TYPE_MESSAGE_RECEIVED,
-  EVENT_TYPE_ACTIVITIY_CATEGORY_COMPLETED,
-  EVENT_TYPE_CALL_NOTES_CREATED,
-} from 'src/constants/event'
+import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/event'
 
 
 export const capture = async (fn, ...xargs) => {

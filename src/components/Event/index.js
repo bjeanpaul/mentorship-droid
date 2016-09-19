@@ -15,9 +15,14 @@ const Event = ({
     <Text>{blurb || moment(date).format('dddd Do, MMMM YYYY')}</Text>
   </View>
 );
+
+
 Event.propTypes = {
   date: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   title: PropTypes.string,
   blurb: PropTypes.string,
 };
+
+
+export default Event;
