@@ -4,7 +4,6 @@ import {
   fakeAuth,
   fakeActivity,
   fakeCategory,
-  fakeEvent,
   fakeScheduledCall,
 } from 'app/scripts/helpers';
 
@@ -15,14 +14,9 @@ import {
   getCategory,
   getCategoryActivities,
   getActivity,
-  getEvents,
-  mapScheduledCallEvent,
+  getScheduledCall,
+  getScheduledCallActivity,
 } from 'src/stores/helpers';
-
-import {
-  EVENT_TYPE_SCHEDULED_CALL_CREATED,
-} from 'src/constants/event';
-import { JOURNEY_EVENT_SCHEDULED_CALL_ICON } from 'src/constants/images';
 
 
 describe('helpers', () => {
@@ -143,58 +137,41 @@ describe('helpers', () => {
     });
   });
 
-  describe('mapScheduledCallEvent', () => {
 
-    it('should include the activity icon of the scheduled call', () => {
-
+  describe('getScheduledCall', () => {
+    it('should get the scheduled call for the given id', () => {
       const state = fakeState();
-      const event3 = fakeEvent({
-        type: EVENT_TYPE_SCHEDULED_CALL_CREATED,
-        id: 3,
-        objectId: 5, // scheduledCall5
-      });
-      const scheduledCall5 = fakeScheduledCall({
-        id: 5,
-        activity: 1, // activity1
-      });
-      const activity1 = fakeActivity({
-        id: 1,
-        icon: 'http://icons.are.everywhere/',
-        category: 7,
-      });
 
-      state.entities.events = { 3: event3 };
-      state.entities.scheduledCalls = { 5: scheduledCall5 }
-      state.entities.activities = { 1: activity1 };
+      state.entities.scheduledCalls = {
+        6: fakeScheduledCall({ id: 6 }),
+      };
 
-      expect(mapScheduledCallEvent(event3, state)).toEqual({
-        type: EVENT_TYPE_SCHEDULED_CALL_CREATED,
-        date: event3.occuredAt,
-        icon: activity1.icon,
-        title: 'Call Scheduled',
-        blurb: 'Friday 16th, September 2016'
-      });
+      expect(getScheduledCall(state, 6)).toEqual(fakeScheduledCall({ id: 6 }));
     });
-
-    it('should use default icon for unscheduled calls', () => {
-
-      const state = fakeState();
-      const event3 = fakeEvent({
-        type: EVENT_TYPE_SCHEDULED_CALL_CREATED,
-        id: 3,
-        objectId: null,
-      });
-      state.entities.events = { 3: event3 };
-
-      expect(mapScheduledCallEvent(event3, state)).toEqual({
-        type: EVENT_TYPE_SCHEDULED_CALL_CREATED,
-        date: event3.occuredAt,
-        icon: JOURNEY_EVENT_SCHEDULED_CALL_ICON,
-        title: 'Call Scheduled',
-        blurb: 'Friday 16th, September 2016'
-      });
-    });
-
   });
 
+  describe('getScheduledCallActivity', () => {
+    it('should get the activity for scheduled call', () => {
+      const state = fakeState();
+
+      const fakeActivity4 = fakeActivity({ id: 4 });
+      const fakeScheduledCall6 = fakeScheduledCall({
+        id: 6,
+        activity: 4,
+      });
+
+      state.entities.scheduledCalls = {
+        6: fakeScheduledCall6,
+      };
+      state.entities.activities = {
+        4: fakeActivity4,
+      };
+      expect(getScheduledCallActivity(state, 6)).toEqual(fakeActivity4);
+    });
+
+    it('should return undefined if a scheduled call does not have an activity', () => {
+      const state = fakeState();
+      expect(getScheduledCallActivity(state, 6)).toEqual(void 0);
+    });
+  });
 });
