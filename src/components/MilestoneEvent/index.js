@@ -1,4 +1,3 @@
-import moment from 'moment';
 import React, { PropTypes } from 'react';
 import { View, Image } from 'react-native';
 
@@ -8,8 +7,8 @@ const MilestoneEvent = ({
   title,
   color,
 }) => (
-  <View>
-    <Image source={categoryImage} />
+  <View style={[{ backgroundColor: color }]}>
+    <Image source={image} />
     <Text>Milestone Reached</Text>
     <Text>{title} Completed</Text>
   </View>
