@@ -27,9 +27,11 @@ describe('CameraRoll', () => {
     expect(render(createComponent())).toMatchSnapshot();
   });
 
-  it('should be able to tap and fire `onPhotoPress`', () => {
+  it('should be able to tap and fire `onPhotoPress`', async () => {
     const onPhotoPress = jest.fn();
+
     const el = shallow(createComponent({ onPhotoPress }));
+    await el.instance().componentDidMount();
 
     el.findWhere(node => node.prop('photoId') === 1)
       .simulate('press');
