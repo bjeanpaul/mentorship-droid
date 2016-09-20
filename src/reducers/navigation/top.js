@@ -62,6 +62,11 @@ export default (state = createStack([
       return replaceAt(state, routes.ROUTE_START_CALL, route);
     }
 
+    case calls.CALL_CREATE_FAILURE: {
+      const route = createRoute(routes.ROUTE_CONNECTING_CALL_FAILURE);
+      return replaceAt(state, routes.ROUTE_CONNECTING_CALL, route);
+    }
+
     default:
       return state;
   }

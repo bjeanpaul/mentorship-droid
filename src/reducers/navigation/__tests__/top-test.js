@@ -91,4 +91,13 @@ describe('src/reducers/navigation/top', () => {
         .toEqual(replaceAt(state, routes.ROUTE_START_CALL, route));
     });
   });
+
+  describe('CONNECTING_CALL_FAILURE', () => {
+    it('should replace the loading route with the load failure route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_CONNECTING_CALL));
+      const route = createRoute(routes.ROUTE_CONNECTING_CALL_FAILURE);
+      expect(reduce(state, calls.createCallFailure()))
+        .toEqual(replaceAt(state, routes.ROUTE_CONNECTING_CALL, route));
+    });
+  });
 });
