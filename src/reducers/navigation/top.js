@@ -5,6 +5,7 @@ import * as entry from 'src/constants/entry';
 import * as navigation from 'src/constants/navigation';
 import * as onboarding from 'src/constants/onboarding';
 import * as notifications from 'src/constants/notifications';
+import * as calls from 'src/constants/calls';
 
 
 import {
@@ -54,6 +55,11 @@ export default (state = createStack([
     case notifications.CALL_STARTING_1_MIN_NOTIFICATION_RECEIVED: {
       const { payload: { objectId: scheduledCallId } } = action;
       return push(state, createRoute(routes.ROUTE_START_CALL, { scheduledCallId }));
+    }
+
+    case calls.CALL_CREATE_REQUEST: {
+      const route = createRoute(routes.ROUTE_CONNECTING_CALL);
+      return replaceAt(state, routes.ROUTE_START_CALL, route);
     }
 
     default:

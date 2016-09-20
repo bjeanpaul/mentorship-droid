@@ -5,6 +5,7 @@ import * as sync from 'src/actions/sync';
 import * as onboarding from 'src/actions/onboarding';
 import * as notifications from 'src/constants/notifications';
 import * as routes from 'src/constants/routes';
+import * as calls from 'src/actions/calls';
 import { createStack, createRoute, push, pop, replaceAt } from 'src/navigationHelpers';
 
 
@@ -79,6 +80,15 @@ describe('src/reducers/navigation/top', () => {
       .toEqual(push(createStack(), createRoute(routes.ROUTE_START_CALL, {
         scheduledCallId: 23,
       })));
+    });
+  });
+
+  describe('CALL_CREATE_REQUEST', () => {
+    it('should replace the start call route with the call connecting route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_START_CALL));
+      const route = createRoute(routes.ROUTE_CONNECTING_CALL);
+      expect(reduce(state, calls.createCallRequest()))
+        .toEqual(replaceAt(state, routes.ROUTE_START_CALL, route));
     });
   });
 });
