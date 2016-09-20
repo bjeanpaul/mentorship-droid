@@ -24,6 +24,7 @@ import ScheduledCallsContainer from 'src/containers/ScheduledCallsContainer';
 
 import StartCallContainer from 'src/containers/StartCallContainer';
 import ConnectingCallContainer from 'src/containers/ConnectingCallContainer';
+import ConnectingCallFailureContainer from 'src/containers/ConnectingCallFailureContainer';
 
 
 export default fromPairs([
@@ -51,4 +52,5 @@ export default fromPairs([
 
   [constants.ROUTE_START_CALL, StartCallContainer],
   [constants.ROUTE_CONNECTING_CALL, ConnectingCallContainer],
+  [constants.ROUTE_CONNECTING_CALL_FAILURE, ConnectingCallFailureContainer],
 ]);
