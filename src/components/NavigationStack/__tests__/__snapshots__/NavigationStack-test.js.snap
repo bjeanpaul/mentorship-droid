@@ -12,7 +12,8 @@ exports[`NavigationStack should display a not-found view if the route is not fou
   <View
     style={
       Object {
-        "flex": 1
+        "flex": 1,
+        "flexDirection": "column-reverse"
       }
     }>
     <View
@@ -86,7 +87,8 @@ exports[`NavigationStack should display the current route 1`] = `
   <View
     style={
       Object {
-        "flex": 1
+        "flex": 1,
+        "flexDirection": "column-reverse"
       }
     }>
     <View

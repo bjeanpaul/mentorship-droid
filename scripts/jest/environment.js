@@ -1,12 +1,12 @@
+import { castArray } from 'lodash';
+import { PropTypes } from 'react';
+import ReactInjection from 'react/lib/ReactInjection';
+
 import 'isomorphic-fetch';
 import config from 'src/config';
 import FormData from 'react-native/Libraries/Network/FormData';
 
-// order matters here
 import 'react-native';
-import { create as render } from 'react-test-renderer';
-
-global.render = render;
 
 // github.com/facebook/jest/issues/1384
 jest.mock('TextInput', () => 'TextInput');
@@ -27,8 +27,25 @@ global.mock = (...args) => {
   return mock(...args);
 };
 
+// TODO investigate whether this has been fixed (at the time of writing, there
+// no github issues for this could be found. `oneOf` is called without
+// non-arrays in a few places, e.g::
+// https://github.com/facebook/react-native/blob/master/Libraries/Components/Touchable/TouchableWithoutFeedback.js#L42
+const { oneOf } = PropTypes;
+PropTypes.oneOf = (v, ...args) => oneOf(castArray(v), ...args);
+
+
 // https://github.com/facebook/react/issues/7386
+ReactInjection.Component.injectEnvironment = () => null;
+
+
 global.shallow = (...args) => {
   const { shallow } = require('enzyme');
   return shallow(...args);
+};
+
+
+global.render = (...args) => {
+  const { create: render } = require('react-test-renderer');
+  return render(...args);
 };
