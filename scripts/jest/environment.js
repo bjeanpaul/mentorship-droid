@@ -8,7 +8,7 @@ import FormData from 'react-native/Libraries/Network/FormData';
 
 import 'react-native';
 
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 5000;
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 8000;
 
 // github.com/facebook/jest/issues/1384
 jest.mock('TextInput', () => 'TextInput');
