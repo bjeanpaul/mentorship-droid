@@ -57,6 +57,8 @@ export default (state = createStack([
       return push(state, createRoute(routes.ROUTE_START_CALL, { scheduledCallId }));
     }
 
+    // TODO push on start call route on journey show call
+
     case calls.CALL_CREATE_REQUEST: {
       const route = createRoute(routes.ROUTE_CONNECTING_CALL);
       return replaceAt(state, routes.ROUTE_START_CALL, route);
