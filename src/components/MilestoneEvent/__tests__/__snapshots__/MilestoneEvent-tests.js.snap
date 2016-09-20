@@ -1,0 +1,42 @@
+exports[`MilestoneEvent should render the props 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "blue"
+      }
+    ]
+  }>
+  <Image
+    source="image.png" />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        undefined
+      ]
+    }>
+    Milestone Reached
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        undefined
+      ]
+    }>
+    pew pew pew
+     Completed
+  </Text>
+</View>
+`;

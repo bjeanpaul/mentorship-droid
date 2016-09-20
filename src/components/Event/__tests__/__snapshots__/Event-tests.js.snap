@@ -1,0 +1,69 @@
+exports[`Event should render a formatted date if the blurb is undefined 1`] = `
+<View>
+  <Image
+    source="icon.png" />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        undefined
+      ]
+    }>
+    pew pew pew
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        undefined
+      ]
+    }>
+    Friday 16th, September 2016
+  </Text>
+</View>
+`;
+
+exports[`Event should render the props 1`] = `
+<View>
+  <Image
+    source="icon.png" />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        undefined
+      ]
+    }>
+    pew pew pew
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        undefined
+      ]
+    }>
+    i am a blurb
+  </Text>
+</View>
+`;

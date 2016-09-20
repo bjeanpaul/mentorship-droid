@@ -1,6 +1,7 @@
 import moment from 'moment';
 import React, { PropTypes } from 'react';
 import { View, Image } from 'react-native';
+import { Text } from 'src/components';
 
 
 const Event = ({

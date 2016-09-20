@@ -75,11 +75,6 @@ export const fakeProfile = data => ({
 });
 
 
-export const fakeEvents = () => {
-
-}
-
-
 export const fakeEvent = data => ({
   id: 23,
   occuredAt: '2016-09-16T11:19:17.368442Z',
