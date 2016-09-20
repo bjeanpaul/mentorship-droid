@@ -7,7 +7,7 @@ import styles from './styles';
 
 
 const StartCall = ({
-  callTime,
+  scheduledCall,
   activity,
   onDismissPress,
   onActivatePress,
@@ -22,7 +22,7 @@ const StartCall = ({
 
       <Text style={Text.types.title}>
         {
-          callTime
+          scheduledCall
             ? 'Time for your call'
             : 'Call Mentee'
         }
@@ -39,8 +39,8 @@ const StartCall = ({
 
       <View style={styles.contentContainer}>
         {
-          callTime && <Text style={styles.content}>
-            {moment(callTime).format('ddd, MMM DD, h:mma')}
+          scheduledCall && <Text style={styles.content}>
+            {moment(scheduledCall.time).format('ddd, MMM DD, h:mma')}
           </Text>
         }
 
@@ -66,7 +66,7 @@ const StartCall = ({
 
 
 StartCall.propTypes = {
-  callTime: PropTypes.number,
+  scheduledCall: PropTypes.object,
   activity: PropTypes.object,
   onDismissPress: PropTypes.func.isRequired,
   onActivatePress: PropTypes.func.isRequired,
