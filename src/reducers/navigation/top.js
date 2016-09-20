@@ -4,6 +4,7 @@ import * as landing from 'src/constants/landing';
 import * as entry from 'src/constants/entry';
 import * as navigation from 'src/constants/navigation';
 import * as onboarding from 'src/constants/onboarding';
+import * as notifications from 'src/constants/notifications';
 
 
 import {
@@ -48,6 +49,11 @@ export default (state = createStack([
     case sync.LOAD_FAILURE: {
       const route = createRoute(routes.ROUTE_LOADING_FAILURE);
       return replaceAt(state, routes.ROUTE_LOADING, route);
+    }
+
+    case notifications.CALL_STARTING_1_MIN_NOTIFICATION_RECEIVED: {
+      const { payload: { objectId: scheduledCallId } } = action;
+      return push(state, createRoute(routes.ROUTE_START_CALL, { scheduledCallId }));
     }
 
     default:

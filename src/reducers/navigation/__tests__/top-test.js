@@ -3,6 +3,7 @@ import * as entry from 'src/actions/entry';
 import * as landing from 'src/actions/landing';
 import * as sync from 'src/actions/sync';
 import * as onboarding from 'src/actions/onboarding';
+import * as notifications from 'src/constants/notifications';
 import * as routes from 'src/constants/routes';
 import { createStack, createRoute, push, pop, replaceAt } from 'src/navigationHelpers';
 
@@ -66,6 +67,18 @@ describe('src/reducers/navigation/top', () => {
       const route = createRoute(routes.ROUTE_LOADING_FAILURE);
       expect(reduce(state, sync.loadFailure()))
         .toEqual(replaceAt(state, routes.ROUTE_LOADING, route));
+    });
+  });
+
+  describe('CALL_STARTING_1_MIN_NOTIFICATION_RECEIVED', () => {
+    it('should push on the start call view', () => {
+      expect(reduce(createStack(), {
+        type: notifications.CALL_STARTING_1_MIN_NOTIFICATION_RECEIVED,
+        payload: { objectId: 23 },
+      }))
+      .toEqual(push(createStack(), createRoute(routes.ROUTE_START_CALL, {
+        scheduledCallId: 23,
+      })));
     });
   });
 });
