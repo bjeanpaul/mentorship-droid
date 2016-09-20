@@ -40,7 +40,7 @@ const StartCall = ({
       <View style={styles.contentContainer}>
         {
           scheduledCall && <Text style={styles.content}>
-            {moment(scheduledCall.time).format('ddd, MMM DD, h:mma')}
+            {moment(scheduledCall.callTime).format('ddd, MMM DD, h:mma')}
           </Text>
         }
 
