@@ -35,3 +35,12 @@ export const getCategory = ({ entities: { categories } }, id) => categories[id];
 
 
 export const getActivity = ({ entities: { activities } }, id) => activities[id];
+
+
+export const getScheduledCall = ({ entities: { scheduledCalls } }, id) => scheduledCalls[id];
+
+
+export const getScheduledCallActivity = (state, id) => {
+  const scheduledCall = getScheduledCall(state, id);
+  return scheduledCall && scheduledCall.activity && getActivity(state, scheduledCall.activity);
+};
