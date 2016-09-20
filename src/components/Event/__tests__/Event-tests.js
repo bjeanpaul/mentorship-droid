@@ -23,5 +23,4 @@ describe('Event', () => {
       />
     )).toMatchSnapshot();
   });
-
 });
