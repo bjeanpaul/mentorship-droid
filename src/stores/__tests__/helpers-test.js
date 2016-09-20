@@ -4,6 +4,7 @@ import {
   fakeAuth,
   fakeActivity,
   fakeCategory,
+  fakeScheduledCall,
 } from 'app/scripts/helpers';
 
 import {
@@ -13,6 +14,8 @@ import {
   getCategory,
   getCategoryActivities,
   getActivity,
+  getScheduledCall,
+  getScheduledCallActivity,
 } from 'src/stores/helpers';
 
 
@@ -131,6 +134,44 @@ describe('helpers', () => {
         activity1,
         activity2,
       ]);
+    });
+  });
+
+
+  describe('getScheduledCall', () => {
+    it('should get the scheduled call for the given id', () => {
+      const state = fakeState();
+
+      state.entities.scheduledCalls = {
+        6: fakeScheduledCall({ id: 6 }),
+      };
+
+      expect(getScheduledCall(state, 6)).toEqual(fakeScheduledCall({ id: 6 }));
+    });
+  });
+
+  describe('getScheduledCallActivity', () => {
+    it('should get the activity for scheduled call', () => {
+      const state = fakeState();
+
+      const fakeActivity4 = fakeActivity({ id: 4 });
+      const fakeScheduledCall6 = fakeScheduledCall({
+        id: 6,
+        activity: 4,
+      });
+
+      state.entities.scheduledCalls = {
+        6: fakeScheduledCall6,
+      };
+      state.entities.activities = {
+        4: fakeActivity4,
+      };
+      expect(getScheduledCallActivity(state, 6)).toEqual(fakeActivity4);
+    });
+
+    it('should return undefined if a scheduled call does not have an activity', () => {
+      const state = fakeState();
+      expect(getScheduledCallActivity(state, 6)).toEqual(void 0);
     });
   });
 });
