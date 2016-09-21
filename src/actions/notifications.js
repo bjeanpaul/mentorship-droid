@@ -1,8 +1,12 @@
-import { has } from 'lodash';
+import { has, camelCase } from 'lodash';
 import FCM from 'react-native-fcm';
 import { updateNotificationToken } from 'src/api';
 import { staticAction } from 'src/actionHelpers';
 import * as constants from 'src/constants/notifications';
+import deepMapKeys from 'deep-map-keys';
+
+
+const toCamelCase = d => deepMapKeys(d, k => camelCase(k));
 
 
 const notificationAction = ({
@@ -11,7 +15,7 @@ const notificationAction = ({
 }) => has(constants.NOTIFICATION_ACTIONS, type)
   ? {
     type: constants.NOTIFICATION_ACTIONS[type],
-    payload,
+    payload: toCamelCase(payload),
   }
   : {
     type: constants.UNKNOWN_NOTIFICATION_RECEIVED,

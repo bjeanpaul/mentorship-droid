@@ -68,6 +68,34 @@ describe('notifications', () => {
       }]]);
     });
 
+    it('should camelcasify received notification payloads', async () => {
+      const dispatch = jest.fn();
+      await setupNotifications()(dispatch, fakeContext());
+
+      const [[name, onNotification]] = FCM.on.mock.calls;
+      expect(FCM.on.mock.calls.length).toEqual(1);
+      expect(name).toEqual('notification');
+
+      onNotification({
+        type: 'DUMMY',
+        payload: {
+          bar_baz: [{
+            quux_corge_grault: 23,
+          }],
+        },
+      });
+
+
+      expect(dispatch.mock.calls).toEqual([[{
+        type: constants.NOTIFICATION_ACTIONS.DUMMY,
+        payload: {
+          barBaz: [{
+            quuxCorgeGrault: 23,
+          }],
+        },
+      }]]);
+    });
+
     it('should dispatch a fallback action for unknown notifications', async () => {
       const dispatch = jest.fn();
       await setupNotifications()(dispatch, fakeContext());
