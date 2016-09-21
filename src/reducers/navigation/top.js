@@ -6,6 +6,7 @@ import * as navigation from 'src/constants/navigation';
 import * as onboarding from 'src/constants/onboarding';
 import * as notifications from 'src/constants/notifications';
 import * as calls from 'src/constants/calls';
+import * as callNotes from 'src/constants/callNotes';
 
 
 import {
@@ -64,6 +65,15 @@ export default (state = createStack([
 
       return has(state, routes.ROUTE_CONNECTING_CALL)
         ? replaceAt(state, routes.ROUTE_CONNECTING_CALL, route)
+        : push(state, route);
+    }
+
+    case callNotes.CALL_NOTES_CREATE: {
+      const { payload: { callId } } = action;
+      const route = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId });
+
+      return has(state, routes.ROUTE_CALL_COMPLETED)
+        ? replaceAt(state, routes.ROUTE_CALL_COMPLETED, route)
         : push(state, route);
     }
 

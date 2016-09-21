@@ -6,6 +6,7 @@ import * as onboarding from 'src/actions/onboarding';
 import * as notifications from 'src/constants/notifications';
 import * as routes from 'src/constants/routes';
 import * as calls from 'src/actions/calls';
+import * as callNotes from 'src/actions/callNotes';
 import { createStack, createRoute, push, pop, replaceAt } from 'src/navigationHelpers';
 
 
@@ -121,6 +122,23 @@ describe('src/reducers/navigation/top', () => {
       .toEqual(push(createStack(), createRoute(routes.ROUTE_CALL_COMPLETED, {
         callId: 23,
       })));
+    });
+  });
+
+  describe('CALL_NOTES_CREATE', () => {
+    it('should replace the call completed route with create call notes route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_CALL_COMPLETED));
+      const route = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId: 23 });
+
+      expect(reduce(state, callNotes.createCallNotes(23)))
+        .toEqual(replaceAt(state, routes.ROUTE_CALL_COMPLETED, route));
+    });
+
+    it('should push on the create call notes route there is no call completed route', () => {
+      expect(reduce(createStack(), callNotes.createCallNotes(23)))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_CREATE_CALL_NOTES, {
+          callId: 23,
+        })));
     });
   });
 });
