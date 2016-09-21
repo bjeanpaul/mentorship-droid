@@ -1,10 +1,9 @@
-import React from 'react'
 import moment from 'moment';
 import { connect } from 'react-redux';
 import { groupBy, sortBy } from 'lodash';
 import EventList from 'src/views/EventList';
 import { getEvents } from 'src/stores/helpers';
-import { Text } from 'src/components'
+
 
 const groupEventsByDate = events => {
   const groups = groupBy(events,
