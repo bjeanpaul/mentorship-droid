@@ -1,22 +1,31 @@
 import React, { PropTypes } from 'react';
 import { View, Image, ScrollView } from 'react-native';
+import { Text, Event } from 'src/components';
 import images from 'src/constants/images';
-import eventTypeContainers from 'src/containers/events';
+import eventContainers from 'src/containers/events';
+
 
 const EventList = ({
-  events = [],
+  groups = [],
 }) => {
-
-  // eventTypeContainers
-
-  events.map(event => {
-    console.log(event);
-  })
+  const children = groups.map(group => {
+    return (
+      <View>
+        <Text>{group.label}</Text>
+        {
+          group.events.map(event => React.createComponent(
+            eventContainers[event.eventType] || Event, event
+          ));
+        }
+      </View>
+    );
+  });
 
   return (
     <View>
       <Image source={images.JOURNEY_BG}>
         <ScrollView>
+          {children}
         </ScrollView>
       </Image>
     </View>
@@ -25,7 +34,7 @@ const EventList = ({
 
 
 EventList.propTypes = {
-  events: PropTypes.arrayOf(PropTypes.shape({
+  groups: PropTypes.arrayOf(PropTypes.shape({
     date: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     events: PropTypes.arrayOf(PropTypes.shape({
