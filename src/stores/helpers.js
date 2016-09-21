@@ -44,3 +44,6 @@ export const getScheduledCallActivity = (state, id) => {
   const scheduledCall = getScheduledCall(state, id);
   return scheduledCall && scheduledCall.activity && getActivity(state, scheduledCall.activity);
 };
+
+
+export const getEvents = ({ entities: { events } }) => values(events);
