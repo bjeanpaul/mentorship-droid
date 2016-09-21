@@ -56,7 +56,7 @@ const StartCall = ({
       <Button
         uid="activate"
         layout={Button.layouts.stretch}
-        onPress={onActivatePress}
+        onPress={() => onActivatePress(activity)}
       >
         ACTIVATE CALL
       </Button>
