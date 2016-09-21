@@ -4,7 +4,7 @@ import { createCallNotes } from 'src/actions/callNotes';
 
 
 export const mapDispatchToProps = (dispatch, { callId }) => ({
-  onAddCallNotesPressed: () => dispatch(createCallNotes(callId)),
+  onAddCallNotesPress: () => dispatch(createCallNotes(callId)),
 });
 
 
