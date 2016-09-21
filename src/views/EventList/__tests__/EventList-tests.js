@@ -1,12 +1,6 @@
 import React from 'react';
 import EventList from 'src/views/EventList';
-import { Provider } from 'react-redux';
-import { fakeStore, fakeState, fakeEvent } from 'app/scripts/helpers';
-
-import {
-  EVENT_TYPE_SCHEDULED_CALL_CREATED,
-  EVENT_TYPE_ACTIVITIY_CATEGORY_COMPLETED,
-} from 'src/constants/event';
+import { fakeEvent } from 'app/scripts/helpers';
 
 
 describe('EventList', () => {
@@ -31,7 +25,7 @@ describe('EventList', () => {
                 occuredAt: '2008-08-08T10:00Z',
                 eventType: 'fake-event-type',
               }),
-            ]
+            ],
           }],
         }))
         .toJSON()).toMatchSnapshot();

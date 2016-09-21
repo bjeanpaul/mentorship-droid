@@ -20,7 +20,7 @@ const groupEventsByDate = events => {
       events: sortBy(groups[date], event => event.occuredAt).reverse(),
     })
   );
-}
+};
 
 
 const mapStateToProps = (state) => ({

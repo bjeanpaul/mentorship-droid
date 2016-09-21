@@ -13,11 +13,11 @@ const EventList = ({
       <Text>{group.label}</Text>
       {
         group.events.map(event => {
-          const el = eventContainers[event.eventType]
+          const el = eventContainers[event.eventType];
           if (!el) return null;
           return React.createElement(el, {
             ...event,
-            key: event.id
+            key: event.id,
           });
         })
       }

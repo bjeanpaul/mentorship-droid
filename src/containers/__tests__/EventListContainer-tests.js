@@ -59,9 +59,9 @@ describe('EventListContainer', () => {
       };
 
       const events = groupEventsByDate(state.entities.events);
-      expect(events[0].events[0].id).toEqual(25)
-      expect(events[0].events[1].id).toEqual(22)
-      expect(events[0].events[2].id).toEqual(24)
+      expect(events[0].events[0].id).toEqual(25);
+      expect(events[0].events[1].id).toEqual(22);
+      expect(events[0].events[2].id).toEqual(24);
     });
   });
 });
