@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 
 import {
-  BaseView, SpinningImage, Header, HeaderIcon, Text, Button,
+  BaseView, Header, HeaderIcon, Text, Button,
 } from 'src/components';
 
 import styles from 'src/views/ConnectingCall/styles';
@@ -24,8 +24,7 @@ const ConnectingCall = ({
     </Header>
 
     <View style={styles.body}>
-      <SpinningImage />
-      <Text style={styles.title}>Connecting the call…</Text>
+      <Text style={styles.title}>Your call will be connected shortly…</Text>
 
       {
         activity && <Text style={[Text.themes.light, styles.hint]}>
