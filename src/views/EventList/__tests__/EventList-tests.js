@@ -1,6 +1,12 @@
 import React from 'react';
 import EventList from 'src/views/EventList';
-import { fakeEvent } from 'app/scripts/helpers';
+import { Provider } from 'react-redux';
+import { fakeStore, fakeState, fakeEvent } from 'app/scripts/helpers';
+
+import {
+  EVENT_TYPE_SCHEDULED_CALL_CREATED,
+  EVENT_TYPE_ACTIVITIY_CATEGORY_COMPLETED,
+} from 'src/constants/event';
 
 
 describe('EventList', () => {

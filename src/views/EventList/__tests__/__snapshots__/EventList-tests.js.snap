@@ -5,6 +5,9 @@ exports[`EventList should not render unmapped event types 1`] = `
     <ScrollView>
       <View>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Array [
               Object {
