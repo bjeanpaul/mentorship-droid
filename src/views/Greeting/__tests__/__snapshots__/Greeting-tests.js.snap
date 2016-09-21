@@ -37,6 +37,9 @@ exports[`OnboardingStepGreeting should map props correctly 1`] = `
         } />
     </View>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -56,6 +59,9 @@ exports[`OnboardingStepGreeting should map props correctly 1`] = `
       Welcome 
     </Text>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -91,6 +97,9 @@ exports[`OnboardingStepGreeting should map props correctly 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",

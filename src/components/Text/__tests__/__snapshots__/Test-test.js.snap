@@ -1,5 +1,8 @@
 exports[`Text should render 1`] = `
 <Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
   style={
     Array [
       Object {
@@ -17,6 +20,9 @@ exports[`Text should render 1`] = `
 
 exports[`Text should render paragraphs 1`] = `
 <Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
   style={
     Array [
       Object {
@@ -39,6 +45,9 @@ exports[`Text should render paragraphs 1`] = `
 
 exports[`Text should render section titles 1`] = `
 <Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
   style={
     Array [
       Object {
@@ -63,6 +72,9 @@ exports[`Text should render section titles 1`] = `
 
 exports[`Text should render titles 1`] = `
 <Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
   style={
     Array [
       Object {
@@ -90,6 +102,9 @@ exports[`Text should support a light theme 1`] = `
     }
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {

@@ -27,6 +27,9 @@ exports[`NavTabBar should render 1`] = `
       ]
     }>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Object {
           "color": "#333333",
@@ -53,6 +56,9 @@ exports[`NavTabBar should render 1`] = `
       ]
     }>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Object {
           "color": "#333333",
@@ -79,6 +85,9 @@ exports[`NavTabBar should render 1`] = `
       ]
     }>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Object {
           "color": "#333333",

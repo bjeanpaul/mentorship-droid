@@ -40,6 +40,9 @@ exports[`CallCompleted should render 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -69,6 +72,9 @@ exports[`CallCompleted should render 1`] = `
       <Image
         source={1} />
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -86,6 +92,9 @@ exports[`CallCompleted should render 1`] = `
         Call completed
       </Text>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -124,6 +133,9 @@ exports[`CallCompleted should render 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",

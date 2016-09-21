@@ -23,6 +23,9 @@ exports[`Button should be disabled 1`] = `
       ]
     }>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Object {
           "color": "#333333",
@@ -60,6 +63,9 @@ exports[`Button should be disabled 1`] = `
       ]
     }>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -117,6 +123,9 @@ exports[`Button should render props correctly 1`] = `
       ]
     }>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Object {
           "color": "#333333",
@@ -143,6 +152,9 @@ exports[`Button should render props correctly 1`] = `
       ]
     }>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Object {
           "color": "#333333",

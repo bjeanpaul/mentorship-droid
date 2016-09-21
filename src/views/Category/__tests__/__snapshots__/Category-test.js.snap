@@ -45,6 +45,9 @@ exports[`Category should render 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -55,6 +58,9 @@ exports[`Category should render 1`] = `
       </Text>
     </View>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -107,6 +113,9 @@ exports[`Category should render 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -133,6 +142,9 @@ exports[`Category should render 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -176,6 +188,9 @@ exports[`Category should render 1`] = `
           }
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -198,6 +213,9 @@ exports[`Category should render 1`] = `
         </Text>
       </View>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -232,6 +250,9 @@ exports[`Category should render 1`] = `
           }
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -254,6 +275,9 @@ exports[`Category should render 1`] = `
         </Text>
       </View>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -324,6 +348,9 @@ exports[`Category should render the currently active tab 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -334,6 +361,9 @@ exports[`Category should render the currently active tab 1`] = `
       </Text>
     </View>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -386,6 +416,9 @@ exports[`Category should render the currently active tab 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -412,6 +445,9 @@ exports[`Category should render the currently active tab 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -455,6 +491,9 @@ exports[`Category should render the currently active tab 1`] = `
           }
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -477,6 +516,9 @@ exports[`Category should render the currently active tab 1`] = `
         </Text>
       </View>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -511,6 +553,9 @@ exports[`Category should render the currently active tab 1`] = `
           }
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -533,6 +578,9 @@ exports[`Category should render the currently active tab 1`] = `
         </Text>
       </View>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -603,6 +651,9 @@ exports[`Category should render the currently active tab 2`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -613,6 +664,9 @@ exports[`Category should render the currently active tab 2`] = `
       </Text>
     </View>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -665,6 +719,9 @@ exports[`Category should render the currently active tab 2`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -691,6 +748,9 @@ exports[`Category should render the currently active tab 2`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -734,6 +794,9 @@ exports[`Category should render the currently active tab 2`] = `
           }
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -756,6 +819,9 @@ exports[`Category should render the currently active tab 2`] = `
         </Text>
       </View>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -790,6 +856,9 @@ exports[`Category should render the currently active tab 2`] = `
           }
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Array [
               Object {
@@ -812,6 +881,9 @@ exports[`Category should render the currently active tab 2`] = `
         </Text>
       </View>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {

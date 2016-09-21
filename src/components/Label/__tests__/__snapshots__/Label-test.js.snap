@@ -1,5 +1,8 @@
 exports[`Label should render its title 1`] = `
 <Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
   style={
     Array [
       Object {
@@ -27,6 +30,9 @@ exports[`Label should render its title 1`] = `
 
 exports[`Label should support style overriding 1`] = `
 <Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
   style={
     Array [
       Object {

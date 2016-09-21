@@ -108,7 +108,10 @@ exports[`Stepper should map props correctly 1`] = `
                 undefined
               ]
             }>
-            <Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail">
               Step 2
             </Text>
           </View>
@@ -163,7 +166,10 @@ exports[`Stepper should map props correctly 1`] = `
                 undefined
               ]
             }>
-            <Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail">
               Step 2
             </Text>
           </View>
@@ -258,7 +264,10 @@ exports[`Stepper should toggle the rendering of the progressBar 1`] = `
                 undefined
               ]
             }>
-            <Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail">
               Step 2
             </Text>
           </View>
@@ -313,7 +322,10 @@ exports[`Stepper should toggle the rendering of the progressBar 1`] = `
                 undefined
               ]
             }>
-            <Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail">
               Step 2
             </Text>
           </View>
