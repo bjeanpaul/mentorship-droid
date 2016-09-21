@@ -21,6 +21,27 @@ exports[`StartCall should render 1`] = `
         Object {}
       ]
     }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400"
+          }
+        ]
+      }>
+      Call Mentee
+    </Text>
     <View
       style={
         Array [
@@ -50,27 +71,6 @@ exports[`StartCall should render 1`] = `
         TouchableNativeFeedback is not supported on this platform!
       </Text>
     </View>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 13,
-            "textAlign": "center"
-          },
-          Object {
-            "fontFamily": "Brandon Text_medium",
-            "fontSize": 20,
-            "fontWeight": "400"
-          }
-        ]
-      }>
-      Call Mentee
-    </Text>
   </View>
   <View
     style={
@@ -169,6 +169,27 @@ exports[`StartCall should render with a call time 1`] = `
         Object {}
       ]
     }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400"
+          }
+        ]
+      }>
+      Time for your call
+    </Text>
     <View
       style={
         Array [
@@ -198,27 +219,6 @@ exports[`StartCall should render with a call time 1`] = `
         TouchableNativeFeedback is not supported on this platform!
       </Text>
     </View>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 13,
-            "textAlign": "center"
-          },
-          Object {
-            "fontFamily": "Brandon Text_medium",
-            "fontSize": 20,
-            "fontWeight": "400"
-          }
-        ]
-      }>
-      Time for your call
-    </Text>
   </View>
   <View
     style={
@@ -337,6 +337,27 @@ exports[`StartCall should render with a call time and activity 1`] = `
         Object {}
       ]
     }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400"
+          }
+        ]
+      }>
+      Time for your call
+    </Text>
     <View
       style={
         Array [
@@ -366,27 +387,6 @@ exports[`StartCall should render with a call time and activity 1`] = `
         TouchableNativeFeedback is not supported on this platform!
       </Text>
     </View>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 13,
-            "textAlign": "center"
-          },
-          Object {
-            "fontFamily": "Brandon Text_medium",
-            "fontSize": 20,
-            "fontWeight": "400"
-          }
-        ]
-      }>
-      Time for your call
-    </Text>
   </View>
   <View
     style={
