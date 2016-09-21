@@ -13,14 +13,14 @@ describe('EventList', () => {
     );
   }
 
-  it('should render unmapped event types', () => {
+  it('should not render unmapped event types', () => {
     const groups = [{
       date: '2008-08-08',
       label: 'A long time ago',
       events: [
         fakeEvent({
           id: 1,
-          occuredAt: '2008-08-08T10:00Z',
+          occuredAt: Date.parse('2008-08-08T10:00Z'),
           eventType: 'fake-event-type',
         }),
       ],

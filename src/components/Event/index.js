@@ -23,7 +23,7 @@ const Event = ({
 
 
 Event.propTypes = {
-  date: PropTypes.string.isRequired,
+  date: PropTypes.number.isRequired,
   icon: PropTypes.any.isRequired,
   title: PropTypes.string.isRequired,
   blurb: PropTypes.string,

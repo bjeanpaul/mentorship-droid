@@ -49,7 +49,7 @@ EventList.propTypes = {
     label: PropTypes.string.isRequired,
     events: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number,
-      occuredAt: PropTypes.string,
+      occuredAt: PropTypes.number,
       eventType: PropTypes.string.isRequired,
       objectId: PropTypes.number,
     })).isRequired,

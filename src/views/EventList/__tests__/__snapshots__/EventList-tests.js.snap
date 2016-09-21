@@ -1,4 +1,4 @@
-exports[`EventList should render unmapped event types 1`] = `
+exports[`EventList should not render unmapped event types 1`] = `
 <View
   style={
     Object {
