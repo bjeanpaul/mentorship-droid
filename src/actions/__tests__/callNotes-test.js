@@ -3,10 +3,10 @@ import * as constants from 'src/constants/callNotes';
 
 
 describe('actions/callNotes', () => {
-  describe('newCallNotes', () => {
+  describe('createCallNotes', () => {
     it('should create an action for new call notes', () => {
-      expect(actions.newCallNotes(23)).toEqual({
-        type: constants.CALL_NOTES_NEW,
+      expect(actions.createCallNotes(23)).toEqual({
+        type: constants.CALL_NOTES_CREATE,
         payload: { callId: 23 },
       });
     });

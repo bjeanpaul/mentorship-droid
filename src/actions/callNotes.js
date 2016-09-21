@@ -1,7 +1,7 @@
 import * as constants from 'src/constants/callNotes';
 
 
-export const newCallNotes = callId => ({
-  type: constants.CALL_NOTES_NEW,
+export const createCallNotes = callId => ({
+  type: constants.CALL_NOTES_CREATE,
   payload: { callId },
 });
