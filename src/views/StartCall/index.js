@@ -14,12 +14,6 @@ const StartCall = ({
 }) => (
   <BaseView>
     <Header>
-      <HeaderIcon
-        uid="dismiss"
-        type={HeaderIcon.types.dismissDark}
-        onPress={onDismissPress}
-      />
-
       <Text style={Text.types.title}>
         {
           scheduledCall
@@ -27,6 +21,12 @@ const StartCall = ({
             : 'Call Mentee'
         }
       </Text>
+
+      <HeaderIcon
+        uid="dismiss"
+        type={HeaderIcon.types.dismissDark}
+        onPress={onDismissPress}
+      />
     </Header>
 
     <View style={styles.body}>
