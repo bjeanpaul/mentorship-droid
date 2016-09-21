@@ -254,6 +254,9 @@ exports[`StartCall should render with a call time 1`] = `
         }
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -419,6 +422,9 @@ exports[`StartCall should render with a call time and activity 1`] = `
         }
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {
