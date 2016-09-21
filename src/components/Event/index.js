@@ -20,7 +20,7 @@ const Event = ({
 
 Event.propTypes = {
   date: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.any.isRequired,
   title: PropTypes.string,
   blurb: PropTypes.string,
 };

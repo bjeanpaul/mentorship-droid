@@ -10,6 +10,9 @@ exports[`FormStep should render 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -33,7 +36,10 @@ exports[`FormStep should render 1`] = `
     }>
     Test Test Title
   </Text>
-  <Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail">
     I am a child.
   </Text>
   <View
@@ -67,6 +73,9 @@ exports[`FormStep should render 1`] = `
           ]
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
               "color": "#333333",
@@ -93,6 +102,9 @@ exports[`FormStep should render 1`] = `
           ]
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
               "color": "#333333",

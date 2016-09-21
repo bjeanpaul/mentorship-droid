@@ -38,6 +38,9 @@ exports[`StartCall should render 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -48,6 +51,9 @@ exports[`StartCall should render 1`] = `
       </Text>
     </View>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -124,6 +130,9 @@ exports[`StartCall should render 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -177,6 +186,9 @@ exports[`StartCall should render with a call time 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -187,6 +199,9 @@ exports[`StartCall should render with a call time 1`] = `
       </Text>
     </View>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -265,6 +280,9 @@ exports[`StartCall should render with a call time 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -318,6 +336,9 @@ exports[`StartCall should render with a call time and activity 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -328,6 +349,9 @@ exports[`StartCall should render with a call time and activity 1`] = `
       </Text>
     </View>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -381,6 +405,9 @@ exports[`StartCall should render with a call time and activity 1`] = `
       }>
       0
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         numberOfLines={2}
         style={
           Array [
@@ -423,6 +450,9 @@ exports[`StartCall should render with a call time and activity 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
