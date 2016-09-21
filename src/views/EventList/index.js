@@ -2,33 +2,34 @@ import React, { PropTypes } from 'react';
 import { View, Image, ScrollView } from 'react-native';
 import { Text } from 'src/components';
 import images from 'src/constants/images';
-import eventContainers from 'src/containers/events';
+import containers from 'src/containers/events';
+import FirstEventContainer from 'src/containers/FirstEventContainer';
 
 
 const EventList = ({
   groups = [],
 }) => {
-  const children = groups.map((group, index) => (
-    <View key={index}>
-      <Text>{group.label}</Text>
-      {
-        group.events.map(event => {
-          const el = eventContainers[event.eventType];
-          if (!el) return null;
-          return React.createElement(el, {
-            ...event,
-            key: event.id,
-          });
-        })
-      }
-    </View>
-  ));
+  const groupElements = groups.map((group, index) => {
+    const eventElements = group.events
+    .filter(event => containers[event.eventType])
+    .map(event => React.createElement(containers[event.eventType], {
+      ...event,
+      key: event.id,
+    }));
+    if (!eventElements.length) return void 0;
+    return (
+      <View key={index}>
+        <Text>{group.label}</Text>
+        {eventElements}
+      </View>
+    );
+  }).filter(el => typeof(el) !== 'undefined');
 
   return (
     <View>
       <Image source={images.JOURNEY_BG}>
         <ScrollView>
-          {children}
+          {groupElements.length && groupElements || <FirstEventContainer />}
         </ScrollView>
       </Image>
     </View>
