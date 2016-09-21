@@ -24,6 +24,8 @@ import ScheduledCallsContainer from 'src/containers/ScheduledCallsContainer';
 
 import CallCompletedContainer from 'src/containers/CallCompletedContainer';
 
+import NewCallNotesContainer from 'src/containers/NewCallNotesContainer';
+
 
 export default fromPairs([
   [constants.ROUTE_LANDING, LandingContainer],
@@ -49,4 +51,6 @@ export default fromPairs([
   [constants.ROUTE_SCHEDULED_CALLS, ScheduledCallsContainer],
 
   [constants.ROUTE_CALL_COMPLETED, CallCompletedContainer],
+
+  [constants.ROUTE_NEW_CALL_NOTES, NewCallNotesContainer],
 ]);
