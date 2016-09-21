@@ -20,6 +20,7 @@ import NavTabBar from './NavTabBar';
 import NotFound from './NotFound';
 import Event from './Event';
 import MilestoneEvent from './MilestoneEvent';
+import FirstEvent from './FirstEvent';
 
 
 export {
@@ -47,4 +48,5 @@ export {
   NotFound,
   Event,
   MilestoneEvent,
+  FirstEvent,
 };

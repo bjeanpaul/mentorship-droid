@@ -70,6 +70,7 @@ export const fakeScheduledCall = data => ({
 
 export const fakeProfile = data => ({
   id: 23,
+  firstName: 'Yo yo bangles',
   ...data,
 });
 
