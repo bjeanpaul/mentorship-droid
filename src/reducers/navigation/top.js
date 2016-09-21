@@ -52,7 +52,7 @@ export default (state = createStack([
       return replaceAt(state, routes.ROUTE_LOADING, route);
     }
 
-    case notifications.CALL_STARTING_1_MIN_NOTIFICATION_RECEIVED: {
+    case notifications.CALL_STARTING_1_MIN_RECEIVED: {
       const { payload: { objectId: scheduledCallId } } = action;
       return push(state, createRoute(routes.ROUTE_START_CALL, { scheduledCallId }));
     }
