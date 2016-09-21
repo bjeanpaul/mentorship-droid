@@ -3,6 +3,9 @@ import CallCompleted from 'src/views/CallCompleted';
 import { createCallNotes } from 'src/actions/callNotes';
 
 
-export default connect(null, {
-  onAddCallNotesPressed: createCallNotes,
-})(CallCompleted);
+export const mapDispatchToProps = (dispatch, { callId }) => ({
+  onAddCallNotesPressed: () => dispatch(createCallNotes(callId)),
+});
+
+
+export default connect(null, mapDispatchToProps)(CallCompleted);
