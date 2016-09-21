@@ -1,3 +1,5 @@
+import 'moment-timezone';
+import moment from 'moment';
 import { castArray } from 'lodash';
 import { PropTypes } from 'react';
 import ReactInjection from 'react/lib/ReactInjection';
@@ -55,3 +57,6 @@ global.render = (...args) => {
   const { create: render } = require('react-test-renderer');
   return render(...args);
 };
+
+
+moment.tz.setDefault('Africa/Johannesburg');

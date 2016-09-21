@@ -50,17 +50,13 @@ describe('notifications', () => {
       expect(name).toEqual('notification');
 
       onNotification({
-        data: {
-          type: 'DUMMY',
-          payload: { bar: 23 },
-        },
+        type: 'DUMMY',
+        payload: { bar: 23 },
       });
 
       onNotification({
-        data: {
-          type: 'DUMMY',
-          payload: { baz: 21 },
-        },
+        type: 'DUMMY',
+        payload: { baz: 21 },
       });
 
       expect(dispatch.mock.calls).toEqual([[{
@@ -81,10 +77,8 @@ describe('notifications', () => {
       expect(name).toEqual('notification');
 
       onNotification({
-        data: {
-          type: 'UNK',
-          payload: { bar: 23 },
-        },
+        type: 'UNK',
+        payload: { bar: 23 },
       });
 
       expect(dispatch.mock.calls).toEqual([[{

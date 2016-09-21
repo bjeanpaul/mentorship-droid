@@ -22,6 +22,9 @@ import ActivityContainer from 'src/containers/ActivityContainer';
 import ScheduleCallContainer from 'src/containers/ScheduleCallContainer';
 import ScheduledCallsContainer from 'src/containers/ScheduledCallsContainer';
 
+import StartCallContainer from 'src/containers/StartCallContainer';
+import ConnectingCallContainer from 'src/containers/ConnectingCallContainer';
+import ConnectingCallFailureContainer from 'src/containers/ConnectingCallFailureContainer';
 import CallCompletedContainer from 'src/containers/CallCompletedContainer';
 
 import NewCallNotesContainer from 'src/containers/NewCallNotesContainer';
@@ -50,6 +53,9 @@ export default fromPairs([
   [constants.ROUTE_SCHEDULE_CALL, ScheduleCallContainer],
   [constants.ROUTE_SCHEDULED_CALLS, ScheduledCallsContainer],
 
+  [constants.ROUTE_START_CALL, StartCallContainer],
+  [constants.ROUTE_CONNECTING_CALL, ConnectingCallContainer],
+  [constants.ROUTE_CONNECTING_CALL_FAILURE, ConnectingCallFailureContainer],
   [constants.ROUTE_CALL_COMPLETED, CallCompletedContainer],
 
   [constants.ROUTE_NEW_CALL_NOTES, NewCallNotesContainer],

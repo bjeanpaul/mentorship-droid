@@ -2,7 +2,7 @@ import { noop } from 'lodash';
 import React from 'react';
 
 import StartCall from 'src/views/StartCall';
-import { uidEquals, fakeActivity } from 'app/scripts/helpers';
+import { uidEquals, fakeScheduledCall, fakeActivity } from 'app/scripts/helpers';
 
 
 describe('StartCall', () => {
@@ -20,7 +20,7 @@ describe('StartCall', () => {
 
   it('should render with a call time', () => {
     expect(render(createComponent({
-      callTime: +new Date(0),
+      scheduledCall: fakeScheduledCall({ callTime: 0 }),
     }))
     .toJSON())
     .toMatchSnapshot();
@@ -28,7 +28,7 @@ describe('StartCall', () => {
 
   it('should render with a call time and activity', () => {
     expect(render(createComponent({
-      callTime: +new Date(0),
+      scheduledCall: fakeScheduledCall({ callTime: 0 }),
       activity: fakeActivity(),
     }))
     .toJSON())
