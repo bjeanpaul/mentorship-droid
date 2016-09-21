@@ -72,7 +72,7 @@ describe('src/reducers/navigation/top', () => {
   });
 
   describe('CALL_STARTING_1_MIN_NOTIFICATION_RECEIVED', () => {
-    it('should push on the start call view', () => {
+    it('should push on the start call route', () => {
       expect(reduce(createStack(), {
         type: notifications.CALL_STARTING_1_MIN_NOTIFICATION_RECEIVED,
         payload: { objectId: 23 },
@@ -98,6 +98,29 @@ describe('src/reducers/navigation/top', () => {
       const route = createRoute(routes.ROUTE_CONNECTING_CALL_FAILURE);
       expect(reduce(state, calls.createCallFailure()))
         .toEqual(replaceAt(state, routes.ROUTE_CONNECTING_CALL, route));
+    });
+  });
+
+  describe('CALL_ENDED_RECEIVED', () => {
+    it('should replace the connecting route with a call completed route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_CONNECTING_CALL));
+      const route = createRoute(routes.ROUTE_CALL_COMPLETED, { callId: 23 });
+
+      expect(reduce(state, {
+        type: notifications.CALL_ENDED_RECEIVED,
+        payload: { objectId: 23 },
+      }))
+      .toEqual(replaceAt(state, routes.ROUTE_CONNECTING_CALL, route));
+    });
+
+    it('should push on the call completed route there is no connecting route', () => {
+      expect(reduce(createStack(), {
+        type: notifications.CALL_ENDED_RECEIVED,
+        payload: { objectId: 23 },
+      }))
+      .toEqual(push(createStack(), createRoute(routes.ROUTE_CALL_COMPLETED, {
+        callId: 23,
+      })));
     });
   });
 });

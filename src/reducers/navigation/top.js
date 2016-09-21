@@ -9,6 +9,7 @@ import * as calls from 'src/constants/calls';
 
 
 import {
+  has,
   push,
   pop,
   replaceAt,
@@ -55,6 +56,15 @@ export default (state = createStack([
     case notifications.CALL_STARTING_1_MIN_NOTIFICATION_RECEIVED: {
       const { payload: { objectId: scheduledCallId } } = action;
       return push(state, createRoute(routes.ROUTE_START_CALL, { scheduledCallId }));
+    }
+
+    case notifications.CALL_ENDED_RECEIVED: {
+      const { payload: { objectId: callId } } = action;
+      const route = createRoute(routes.ROUTE_CALL_COMPLETED, { callId });
+
+      return has(state, routes.ROUTE_CONNECTING_CALL)
+        ? replaceAt(state, routes.ROUTE_CONNECTING_CALL, route)
+        : push(state, route);
     }
 
     // TODO push on start call route on journey show call
