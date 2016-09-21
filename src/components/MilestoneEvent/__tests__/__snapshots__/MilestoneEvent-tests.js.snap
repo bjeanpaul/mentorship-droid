@@ -8,8 +8,15 @@ exports[`MilestoneEvent should render the props 1`] = `
     ]
   }>
   <Image
-    source="image.png" />
+    source={
+      Object {
+        "uri": "image.png"
+      }
+    } />
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -24,6 +31,9 @@ exports[`MilestoneEvent should render the props 1`] = `
     Milestone Reached
   </Text>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {

@@ -45,6 +45,9 @@ exports[`OverlayLoading should render 1`] = `
         }
       } />
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -73,167 +76,245 @@ ShallowWrapper {
     "findWhereUnwrapped": [Function findWhereUnwrapped]
   },
   "length": 1,
-  "node": Object {
-    "$$typeof": Symbol(react.element),
-    "_owner": null,
-    "_store": Object {},
-    "key": null,
-    "props": Object {
-      "children": Array [
+  "node": <function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}
+    style={
         Object {
-          "$$typeof": Symbol(react.element),
-          "_owner": null,
-          "_store": Object {},
-          "key": null,
-          "props": Object {
-            "children": Object {
-              "$$typeof": Symbol(react.element),
-              "_owner": null,
-              "_store": Object {},
-              "key": null,
-              "props": Object {
-                "onPress": [Function noop],
-                "type": 1,
-                "uid": "dismiss"
-              },
-              "ref": null,
-              "type": [Function HeaderIcon]
-            },
-            "style": undefined
-          },
-          "ref": null,
-          "type": [Function Header]
-        },
-        Object {
-          "$$typeof": Symbol(react.element),
-          "_owner": null,
-          "_store": Object {},
-          "key": null,
-          "props": Object {
-            "children": Array [
-              Object {
-                "$$typeof": Symbol(react.element),
-                "_owner": null,
-                "_store": Object {},
-                "key": null,
-                "props": Object {},
-                "ref": null,
-                "type": [Function SpinningImage]
-              },
-              Object {
-                "$$typeof": Symbol(react.element),
-                "_owner": null,
-                "_store": Object {},
-                "key": null,
-                "props": Object {
-                  "children": "Waiting for the 7:18…",
-                  "style": Object {
-                    "color": undefined,
-                    "fontSize": 20
-                  }
-                },
-                "ref": null,
-                "type": [Function Text]
-              }
-            ],
-            "style": Object {
-              "alignItems": "center",
-              "flex": 1,
-              "paddingTop": 64
-            }
-          },
-          "ref": null,
-          "type": [Function View]
-        }
-      ],
-      "style": Object {
-        "backgroundColor": "rgba(246, 111, 63, 0.95)"
-      }
-    },
-    "ref": null,
-    "type": [Function BaseView]
-  },
-  "nodes": Array [
-    Object {
-      "$$typeof": Symbol(react.element),
-      "_owner": null,
-      "_store": Object {},
-      "key": null,
-      "props": Object {
-        "children": Array [
-          Object {
-            "$$typeof": Symbol(react.element),
-            "_owner": null,
-            "_store": Object {},
-            "key": null,
-            "props": Object {
-              "children": Object {
-                "$$typeof": Symbol(react.element),
-                "_owner": null,
-                "_store": Object {},
-                "key": null,
-                "props": Object {
-                  "onPress": [Function noop],
-                  "type": 1,
-                  "uid": "dismiss"
-                },
-                "ref": null,
-                "type": [Function HeaderIcon]
-              },
-              "style": undefined
-            },
-            "ref": null,
-            "type": [Function Header]
-          },
-          Object {
-            "$$typeof": Symbol(react.element),
-            "_owner": null,
-            "_store": Object {},
-            "key": null,
-            "props": Object {
-              "children": Array [
-                Object {
-                  "$$typeof": Symbol(react.element),
-                  "_owner": null,
-                  "_store": Object {},
-                  "key": null,
-                  "props": Object {},
-                  "ref": null,
-                  "type": [Function SpinningImage]
-                },
-                Object {
-                  "$$typeof": Symbol(react.element),
-                  "_owner": null,
-                  "_store": Object {},
-                  "key": null,
-                  "props": Object {
-                    "children": "Waiting for the 7:18…",
-                    "style": Object {
-                      "color": undefined,
-                      "fontSize": 20
-                    }
-                  },
-                  "ref": null,
-                  "type": [Function Text]
-                }
-              ],
-              "style": Object {
+            "backgroundColor": "rgba(246, 111, 63, 0.95)"
+          }
+    }>
+    <function Header(_ref){var _ref$style=_ref.
+    style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+    children;var children=_ref$children===undefined?[]:_ref$children;return(
+    
+    _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+    children));}
+        style={undefined}>
+        <function HeaderIcon(_ref){var
+        type=_ref.type;var _ref$style=_ref.
+        style;var style=_ref$style===undefined?{}:_ref$style;var _ref$onPress=_ref.
+        onPress;var onPress=_ref$onPress===undefined?_lodash.noop:_ref$onPress;return(
+        
+        _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
+        _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+        _react2.default.createElement(_Icon2.default,{type:type}))));}
+            onPress={[Function noop]}
+            type={1}
+            uid="dismiss" />
+    </function Header(_ref){var _ref$style=_ref.
+    style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+    children;var children=_ref$children===undefined?[]:_ref$children;return(
+    
+    _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+    children));}>
+    <class extends RealComponent {
+          render() {
+            return React.createElement(
+            RealComponent.displayName,
+            this.props,
+            this.props.children);
+    
+          }}
+        style={
+            Object {
                 "alignItems": "center",
                 "flex": 1,
                 "paddingTop": 64
               }
-            },
-            "ref": null,
-            "type": [Function View]
-          }
-        ],
-        "style": Object {
-          "backgroundColor": "rgba(246, 111, 63, 0.95)"
+        }>
+        <function SpinningImage(){_classCallCheck(this,SpinningImage);var _this=_possibleConstructorReturn(this,(SpinningImage.__proto__||Object.getPrototypeOf(SpinningImage)).call(this));
+        
+        _this.state={
+        spinValue:new _reactNative.Animated.Value(0)};return _this;
+        
+        } />
+        <function Text(_ref)
+        
+        
+        
+        {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+        var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+        
+        return(
+        _react2.default.createElement(_reactNative.Text,_extends({},
+        props,{
+        style:[_styles2.default.default,style]}),
+        
+        text));
+        
+        
         }
-      },
-      "ref": null,
-      "type": [Function BaseView]
-    }
+            style={
+                Object {
+                    "color": undefined,
+                    "fontSize": 20
+                  }
+            }>
+            Waiting for the 7:18…
+        </function Text(_ref)
+        
+        
+        
+        {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+        var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+        
+        return(
+        _react2.default.createElement(_reactNative.Text,_extends({},
+        props,{
+        style:[_styles2.default.default,style]}),
+        
+        text));
+        
+        
+        }>
+    </class extends RealComponent {
+          render() {
+            return React.createElement(
+            RealComponent.displayName,
+            this.props,
+            this.props.children);
+    
+          }}>
+</function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}>,
+  "nodes": Array [
+    <function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}
+      style={
+            Object {
+                  "backgroundColor": "rgba(246, 111, 63, 0.95)"
+                }
+      }>
+      <function Header(_ref){var _ref$style=_ref.
+      style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+      children;var children=_ref$children===undefined?[]:_ref$children;return(
+      
+      _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+      children));}
+            style={undefined}>
+            <function HeaderIcon(_ref){var
+            type=_ref.type;var _ref$style=_ref.
+            style;var style=_ref$style===undefined?{}:_ref$style;var _ref$onPress=_ref.
+            onPress;var onPress=_ref$onPress===undefined?_lodash.noop:_ref$onPress;return(
+            
+            _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
+            _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+            _react2.default.createElement(_Icon2.default,{type:type}))));}
+                  onPress={[Function noop]}
+                  type={1}
+                  uid="dismiss" />
+      </function Header(_ref){var _ref$style=_ref.
+      style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+      children;var children=_ref$children===undefined?[]:_ref$children;return(
+      
+      _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+      children));}>
+      <class extends RealComponent {
+            render() {
+              return React.createElement(
+              RealComponent.displayName,
+              this.props,
+              this.props.children);
+      
+            }}
+            style={
+                  Object {
+                        "alignItems": "center",
+                        "flex": 1,
+                        "paddingTop": 64
+                      }
+            }>
+            <function SpinningImage(){_classCallCheck(this,SpinningImage);var _this=_possibleConstructorReturn(this,(SpinningImage.__proto__||Object.getPrototypeOf(SpinningImage)).call(this));
+            
+            _this.state={
+            spinValue:new _reactNative.Animated.Value(0)};return _this;
+            
+            } />
+            <function Text(_ref)
+            
+            
+            
+            {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+            var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+            
+            return(
+            _react2.default.createElement(_reactNative.Text,_extends({},
+            props,{
+            style:[_styles2.default.default,style]}),
+            
+            text));
+            
+            
+            }
+                  style={
+                        Object {
+                              "color": undefined,
+                              "fontSize": 20
+                            }
+                  }>
+                  Waiting for the 7:18…
+            </function Text(_ref)
+            
+            
+            
+            {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+            var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+            
+            return(
+            _react2.default.createElement(_reactNative.Text,_extends({},
+            props,{
+            style:[_styles2.default.default,style]}),
+            
+            text));
+            
+            
+            }>
+      </class extends RealComponent {
+            render() {
+              return React.createElement(
+              RealComponent.displayName,
+              this.props,
+              this.props.children);
+      
+            }}>
+</function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}>
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
@@ -241,18 +322,26 @@ ShallowWrapper {
       "_calledComponentWillUnmount": false,
       "_compositeType": 2,
       "_context": Object {},
-      "_currentElement": Object {
-        "$$typeof": Symbol(react.element),
-        "_owner": null,
-        "_store": Object {},
-        "key": null,
-        "props": Object {
-          "onDismissPress": [Function noop],
-          "title": "Waiting for the 7:18…"
-        },
-        "ref": null,
-        "type": [Function LoadingOverlay]
-      },
+      "_currentElement": <function LoadingOverlay(_ref){var
+title=_ref.title;var
+onDismissPress=_ref.onDismissPress;return(
+
+_react2.default.createElement(_components.BaseView,{style:_styles2.default.base},
+_react2.default.createElement(_components.Header,{style:_styles2.default.header},
+
+onDismissPress&&_react2.default.createElement(_components.HeaderIcon,{
+uid:'dismiss',
+type:_components.HeaderIcon.types.dismissLight,
+onPress:onDismissPress})),
+
+
+
+
+_react2.default.createElement(_reactNative.View,{style:_styles2.default.body},
+_react2.default.createElement(_components.SpinningImage,null),
+_react2.default.createElement(_components.Text,{style:_styles2.default.title},title))));}
+        onDismissPress={[Function noop]}
+        title="Waiting for the 7:18…" />,
       "_debugID": 1,
       "_hostContainerInfo": null,
       "_hostParent": null,
@@ -283,167 +372,245 @@ ShallowWrapper {
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
       "_renderedComponent": Object {
-        "_currentElement": Object {
-          "$$typeof": Symbol(react.element),
-          "_owner": null,
-          "_store": Object {},
-          "key": null,
-          "props": Object {
-            "children": Array [
-              Object {
-                "$$typeof": Symbol(react.element),
-                "_owner": null,
-                "_store": Object {},
-                "key": null,
-                "props": Object {
-                  "children": Object {
-                    "$$typeof": Symbol(react.element),
-                    "_owner": null,
-                    "_store": Object {},
-                    "key": null,
-                    "props": Object {
-                      "onPress": [Function noop],
-                      "type": 1,
-                      "uid": "dismiss"
-                    },
-                    "ref": null,
-                    "type": [Function HeaderIcon]
-                  },
-                  "style": undefined
-                },
-                "ref": null,
-                "type": [Function Header]
-              },
-              Object {
-                "$$typeof": Symbol(react.element),
-                "_owner": null,
-                "_store": Object {},
-                "key": null,
-                "props": Object {
-                  "children": Array [
+        "_currentElement": <function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}
+          style={
                     Object {
-                      "$$typeof": Symbol(react.element),
-                      "_owner": null,
-                      "_store": Object {},
-                      "key": null,
-                      "props": Object {},
-                      "ref": null,
-                      "type": [Function SpinningImage]
-                    },
-                    Object {
-                      "$$typeof": Symbol(react.element),
-                      "_owner": null,
-                      "_store": Object {},
-                      "key": null,
-                      "props": Object {
-                        "children": "Waiting for the 7:18…",
-                        "style": Object {
-                          "color": undefined,
-                          "fontSize": 20
-                        }
-                      },
-                      "ref": null,
-                      "type": [Function Text]
+                              "backgroundColor": "rgba(246, 111, 63, 0.95)"
+                            }
+          }>
+          <function Header(_ref){var _ref$style=_ref.
+          style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+          children;var children=_ref$children===undefined?[]:_ref$children;return(
+          
+          _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+          children));}
+                    style={undefined}>
+                    <function HeaderIcon(_ref){var
+                    type=_ref.type;var _ref$style=_ref.
+                    style;var style=_ref$style===undefined?{}:_ref$style;var _ref$onPress=_ref.
+                    onPress;var onPress=_ref$onPress===undefined?_lodash.noop:_ref$onPress;return(
+                    
+                    _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
+                    _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+                    _react2.default.createElement(_Icon2.default,{type:type}))));}
+                              onPress={[Function noop]}
+                              type={1}
+                              uid="dismiss" />
+          </function Header(_ref){var _ref$style=_ref.
+          style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+          children;var children=_ref$children===undefined?[]:_ref$children;return(
+          
+          _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+          children));}>
+          <class extends RealComponent {
+                render() {
+                  return React.createElement(
+                  RealComponent.displayName,
+                  this.props,
+                  this.props.children);
+          
+                }}
+                    style={
+                              Object {
+                                        "alignItems": "center",
+                                        "flex": 1,
+                                        "paddingTop": 64
+                                      }
+                    }>
+                    <function SpinningImage(){_classCallCheck(this,SpinningImage);var _this=_possibleConstructorReturn(this,(SpinningImage.__proto__||Object.getPrototypeOf(SpinningImage)).call(this));
+                    
+                    _this.state={
+                    spinValue:new _reactNative.Animated.Value(0)};return _this;
+                    
+                    } />
+                    <function Text(_ref)
+                    
+                    
+                    
+                    {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+                    var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+                    
+                    return(
+                    _react2.default.createElement(_reactNative.Text,_extends({},
+                    props,{
+                    style:[_styles2.default.default,style]}),
+                    
+                    text));
+                    
+                    
                     }
-                  ],
-                  "style": Object {
-                    "alignItems": "center",
-                    "flex": 1,
-                    "paddingTop": 64
-                  }
-                },
-                "ref": null,
-                "type": [Function View]
-              }
-            ],
-            "style": Object {
-              "backgroundColor": "rgba(246, 111, 63, 0.95)"
-            }
-          },
-          "ref": null,
-          "type": [Function BaseView]
-        },
+                              style={
+                                        Object {
+                                                  "color": undefined,
+                                                  "fontSize": 20
+                                                }
+                              }>
+                              Waiting for the 7:18…
+                    </function Text(_ref)
+                    
+                    
+                    
+                    {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+                    var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+                    
+                    return(
+                    _react2.default.createElement(_reactNative.Text,_extends({},
+                    props,{
+                    style:[_styles2.default.default,style]}),
+                    
+                    text));
+                    
+                    
+                    }>
+          </class extends RealComponent {
+                render() {
+                  return React.createElement(
+                  RealComponent.displayName,
+                  this.props,
+                  this.props.children);
+          
+                }}>
+</function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}>,
         "_debugID": 2,
-        "_renderedOutput": Object {
-          "$$typeof": Symbol(react.element),
-          "_owner": null,
-          "_store": Object {},
-          "key": null,
-          "props": Object {
-            "children": Array [
-              Object {
-                "$$typeof": Symbol(react.element),
-                "_owner": null,
-                "_store": Object {},
-                "key": null,
-                "props": Object {
-                  "children": Object {
-                    "$$typeof": Symbol(react.element),
-                    "_owner": null,
-                    "_store": Object {},
-                    "key": null,
-                    "props": Object {
-                      "onPress": [Function noop],
-                      "type": 1,
-                      "uid": "dismiss"
-                    },
-                    "ref": null,
-                    "type": [Function HeaderIcon]
-                  },
-                  "style": undefined
-                },
-                "ref": null,
-                "type": [Function Header]
-              },
-              Object {
-                "$$typeof": Symbol(react.element),
-                "_owner": null,
-                "_store": Object {},
-                "key": null,
-                "props": Object {
-                  "children": Array [
+        "_renderedOutput": <function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}
+          style={
                     Object {
-                      "$$typeof": Symbol(react.element),
-                      "_owner": null,
-                      "_store": Object {},
-                      "key": null,
-                      "props": Object {},
-                      "ref": null,
-                      "type": [Function SpinningImage]
-                    },
-                    Object {
-                      "$$typeof": Symbol(react.element),
-                      "_owner": null,
-                      "_store": Object {},
-                      "key": null,
-                      "props": Object {
-                        "children": "Waiting for the 7:18…",
-                        "style": Object {
-                          "color": undefined,
-                          "fontSize": 20
-                        }
-                      },
-                      "ref": null,
-                      "type": [Function Text]
+                              "backgroundColor": "rgba(246, 111, 63, 0.95)"
+                            }
+          }>
+          <function Header(_ref){var _ref$style=_ref.
+          style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+          children;var children=_ref$children===undefined?[]:_ref$children;return(
+          
+          _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+          children));}
+                    style={undefined}>
+                    <function HeaderIcon(_ref){var
+                    type=_ref.type;var _ref$style=_ref.
+                    style;var style=_ref$style===undefined?{}:_ref$style;var _ref$onPress=_ref.
+                    onPress;var onPress=_ref$onPress===undefined?_lodash.noop:_ref$onPress;return(
+                    
+                    _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
+                    _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+                    _react2.default.createElement(_Icon2.default,{type:type}))));}
+                              onPress={[Function noop]}
+                              type={1}
+                              uid="dismiss" />
+          </function Header(_ref){var _ref$style=_ref.
+          style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+          children;var children=_ref$children===undefined?[]:_ref$children;return(
+          
+          _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+          children));}>
+          <class extends RealComponent {
+                render() {
+                  return React.createElement(
+                  RealComponent.displayName,
+                  this.props,
+                  this.props.children);
+          
+                }}
+                    style={
+                              Object {
+                                        "alignItems": "center",
+                                        "flex": 1,
+                                        "paddingTop": 64
+                                      }
+                    }>
+                    <function SpinningImage(){_classCallCheck(this,SpinningImage);var _this=_possibleConstructorReturn(this,(SpinningImage.__proto__||Object.getPrototypeOf(SpinningImage)).call(this));
+                    
+                    _this.state={
+                    spinValue:new _reactNative.Animated.Value(0)};return _this;
+                    
+                    } />
+                    <function Text(_ref)
+                    
+                    
+                    
+                    {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+                    var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+                    
+                    return(
+                    _react2.default.createElement(_reactNative.Text,_extends({},
+                    props,{
+                    style:[_styles2.default.default,style]}),
+                    
+                    text));
+                    
+                    
                     }
-                  ],
-                  "style": Object {
-                    "alignItems": "center",
-                    "flex": 1,
-                    "paddingTop": 64
-                  }
-                },
-                "ref": null,
-                "type": [Function View]
-              }
-            ],
-            "style": Object {
-              "backgroundColor": "rgba(246, 111, 63, 0.95)"
-            }
-          },
-          "ref": null,
-          "type": [Function BaseView]
-        }
+                              style={
+                                        Object {
+                                                  "color": undefined,
+                                                  "fontSize": 20
+                                                }
+                              }>
+                              Waiting for the 7:18…
+                    </function Text(_ref)
+                    
+                    
+                    
+                    {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+                    var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+                    
+                    return(
+                    _react2.default.createElement(_reactNative.Text,_extends({},
+                    props,{
+                    style:[_styles2.default.default,style]}),
+                    
+                    text));
+                    
+                    
+                    }>
+          </class extends RealComponent {
+                render() {
+                  return React.createElement(
+                  RealComponent.displayName,
+                  this.props,
+                  this.props.children);
+          
+                }}>
+</function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}>
       },
       "_renderedNodeType": 1,
       "_rootNodeID": 0,
@@ -455,17 +622,25 @@ ShallowWrapper {
     "render": [Function render]
   },
   "root": [Circular],
-  "unrendered": Object {
-    "$$typeof": Symbol(react.element),
-    "_owner": null,
-    "_store": Object {},
-    "key": null,
-    "props": Object {
-      "onDismissPress": [Function noop],
-      "title": "Waiting for the 7:18…"
-    },
-    "ref": null,
-    "type": [Function LoadingOverlay]
-  }
+  "unrendered": <function LoadingOverlay(_ref){var
+title=_ref.title;var
+onDismissPress=_ref.onDismissPress;return(
+
+_react2.default.createElement(_components.BaseView,{style:_styles2.default.base},
+_react2.default.createElement(_components.Header,{style:_styles2.default.header},
+
+onDismissPress&&_react2.default.createElement(_components.HeaderIcon,{
+uid:'dismiss',
+type:_components.HeaderIcon.types.dismissLight,
+onPress:onDismissPress})),
+
+
+
+
+_react2.default.createElement(_reactNative.View,{style:_styles2.default.body},
+_react2.default.createElement(_components.SpinningImage,null),
+_react2.default.createElement(_components.Text,{style:_styles2.default.title},title))));}
+    onDismissPress={[Function noop]}
+    title="Waiting for the 7:18…" />
 }
 `;

@@ -1,8 +1,11 @@
 exports[`Event should render a formatted date if the blurb is undefined 1`] = `
 <View>
   <Image
-    source="icon.png" />
+    source={1} />
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -17,6 +20,9 @@ exports[`Event should render a formatted date if the blurb is undefined 1`] = `
     pew pew pew
   </Text>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -36,8 +42,11 @@ exports[`Event should render a formatted date if the blurb is undefined 1`] = `
 exports[`Event should render the props 1`] = `
 <View>
   <Image
-    source="icon.png" />
+    source={1} />
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -52,6 +61,9 @@ exports[`Event should render the props 1`] = `
     pew pew pew
   </Text>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
