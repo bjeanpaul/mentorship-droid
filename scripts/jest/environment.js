@@ -14,8 +14,6 @@ require('react-native');
 global.Promise = _Promise;
 global.setTimeout = _setTimeout;
 
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 5000;
-
 // github.com/facebook/jest/issues/1384
 jest.mock('TextInput', () => 'TextInput');
 jest.mock('ScrollView', () => 'ScrollView');
