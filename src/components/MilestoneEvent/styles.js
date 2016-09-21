@@ -4,8 +4,8 @@ import colors from 'src/constants/colors';
 export default StyleSheet.create({
   container: {
     backgroundColor: colors.EVENT_BG,
-    marginTop: 12,
     margin: 24,
+    marginTop: 0,
     padding: 20,
     paddingLeft: 16,
     paddingRight: 16,

@@ -146,9 +146,22 @@ exports[`Journey should map props correctly 1`] = `
         "flex": 0.6
       }
     }>
-    <View>
+    <View
+      style={
+        Object {
+          "flex": 1
+        }
+      }>
       <Image
-        source={1}>
+        source={1}
+        style={
+          Object {
+            "flex": 1,
+            "height": null,
+            "resizeMode": "cover",
+            "width": null
+          }
+        }>
         <ScrollView>
           <View
             style={

@@ -21,7 +21,7 @@ export default StyleSheet.create({
     padding: 10,
     paddingTop: 5,
     paddingBottom: 7,
-    marginTop: 12,
+    marginBottom: 24,
   },
   groupLabelText: {
     color: colors.EVENT_GROUP_LABEL_TEXT,

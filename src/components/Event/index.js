@@ -2,7 +2,7 @@ import moment from 'moment';
 import React, { PropTypes } from 'react';
 import { View, Image } from 'react-native';
 import { Text } from 'src/components';
-
+import styles from './styles';
 
 const Event = ({
   date,
@@ -10,10 +10,14 @@ const Event = ({
   title,
   blurb,
 }) => (
-  <View>
-    <Image source={icon} />
-    <Text>{title}</Text>
-    <Text>{blurb || moment(date).format('dddd Do, MMMM YYYY')}</Text>
+  <View style={styles.container}>
+    <View style={styles.icon}>
+      <Image source={icon} />
+    </View>
+    <View style={styles.textContainer}>
+      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.blurb}>{blurb || moment(date).format('dddd Do, MMMM YYYY')}</Text>
+    </View>
   </View>
 );
 
