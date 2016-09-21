@@ -1,4 +1,5 @@
 import React from 'react';
+import { IMAGE } from 'app/scripts/fixtures';
 import Event from 'src/components/Event';
 
 
@@ -7,7 +8,7 @@ describe('Event', () => {
     expect(render(
       <Event
         date="2016-09-16T11:19:17.368442Z"
-        icon="icon.png"
+        icon={IMAGE}
         title="pew pew pew"
         blurb="i am a blurb"
       />
@@ -18,7 +19,7 @@ describe('Event', () => {
     expect(render(
       <Event
         date="2016-09-16T11:19:17.368442Z"
-        icon="icon.png"
+        icon={IMAGE}
         title="pew pew pew"
       />
     )).toMatchSnapshot();

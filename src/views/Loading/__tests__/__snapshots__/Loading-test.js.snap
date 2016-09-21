@@ -45,6 +45,9 @@ exports[`Loading should render 1`] = `
         }
       } />
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {

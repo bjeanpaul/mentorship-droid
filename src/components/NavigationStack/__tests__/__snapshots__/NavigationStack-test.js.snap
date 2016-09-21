@@ -63,7 +63,10 @@ exports[`NavigationStack should display a not-found view if the route is not fou
           }
         }>
         <View>
-          <Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail">
             You have stumbled into an unknown realm of the application. This is certainly a bug, and something that you should never have seen.
           </Text>
         </View>
@@ -138,6 +141,9 @@ exports[`NavigationStack should display the current route 1`] = `
           }
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Array [
               Object {

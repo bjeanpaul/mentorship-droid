@@ -1,4 +1,5 @@
 import { identity, noop } from 'lodash';
+import immediate from 'immediate-promise';
 import defer from 'promise-defer';
 
 import { mock, capture, fakeContext } from 'app/scripts/helpers';
@@ -152,17 +153,18 @@ describe('actionHelpers', () => {
 
       const seq = sequence([a1, a2, a3]);
 
-      const p = seq(21, 23)((...args) => res.push(...args), 2, 3);
+      seq(21, 23)((...args) => res.push(...args), 2, 3);
 
       expect(res).toEqual([]);
 
       d2.resolve();
-      jest.runAllTimers();
+      await d2.promise;
 
       expect(res).toEqual([]);
 
       d1.resolve();
-      jest.runAllTimers();
+      await d1.promise;
+      await immediate();
 
       expect(res).toEqual([
         ['a1', 21, 23, 2, 3],
@@ -170,15 +172,13 @@ describe('actionHelpers', () => {
       ]);
 
       d3.resolve();
-      jest.runAllTimers();
+      await immediate();
 
       expect(res).toEqual([
         ['a1', 21, 23, 2, 3],
         ['a2', 21, 23, 2, 3],
         ['a3', 21, 23, 2, 3],
       ]);
-
-      await p;
     });
   });
 });

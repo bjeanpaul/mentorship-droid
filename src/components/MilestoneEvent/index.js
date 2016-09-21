@@ -9,7 +9,7 @@ const MilestoneEvent = ({
   color,
 }) => (
   <View style={[{ backgroundColor: color }]}>
-    <Image source={image} />
+    <Image source={{ uri: image }} />
     <Text>Milestone Reached</Text>
     <Text>{title} Completed</Text>
   </View>

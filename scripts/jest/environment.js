@@ -6,9 +6,13 @@ import 'isomorphic-fetch';
 import config from 'src/config';
 import FormData from 'react-native/Libraries/Network/FormData';
 
-import 'react-native';
-
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 5000;
+// github.com/facebook/react-native/issues/6104
+import 'immediate-promise';
+const _Promise = Promise;
+const _setTimeout = setTimeout;
+require('react-native');
+global.Promise = _Promise;
+global.setTimeout = _setTimeout;
 
 // github.com/facebook/jest/issues/1384
 jest.mock('TextInput', () => 'TextInput');

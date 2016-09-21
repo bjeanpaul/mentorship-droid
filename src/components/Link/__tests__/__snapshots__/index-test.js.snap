@@ -1,5 +1,8 @@
 exports[`Link should render its children 1`] = `
 <Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
   onPress={[Function foo]}
   style={
     Array [
@@ -18,7 +21,10 @@ exports[`Link should render its children 1`] = `
       ]
     ]
   }>
-  <Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail">
     Woop, hoop, poop.
   </Text>
 </Text>
@@ -26,6 +32,9 @@ exports[`Link should render its children 1`] = `
 
 exports[`Link should support style overriding 1`] = `
 <Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
   onPress={[Function foo]}
   style={
     Array [
