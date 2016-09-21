@@ -1,0 +1,123 @@
+exports[`ConnectingCallFailure should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16
+        },
+        Object {
+          "backgroundColor": "rgba(246, 111, 63, 0.95)"
+        }
+      ]
+    }>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(246, 111, 63, 0.95)",
+        "flex": 1,
+        "justifyContent": "center",
+        "paddingLeft": 24,
+        "paddingRight": 24
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Array [
+            Object {
+              "color": "#fff"
+            },
+            Object {
+              "fontSize": 20,
+              "marginBottom": 65
+            }
+          ]
+        ]
+      }>
+      Sorry, we seem to have an issue on our side preventing the call from starting.
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+  </View>
+</View>
+`;

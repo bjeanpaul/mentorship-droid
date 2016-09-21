@@ -28,8 +28,13 @@ describe('CallScheduledEventContainer', () => {
         objectId: 55, // scheduledCall
       }))).toEqual({
         type: EVENT_TYPE_SCHEDULED_CALL_CREATED,
+<<<<<<< HEAD
         date: '2016-09-16T11:19:17.368442Z',
         icon: { uri: 'http://icons.are.a.cool.way.to.communicate' },
+=======
+        date: Date.parse('2016-09-16T11:19:17.368442Z'),
+        icon: 'http://icons.are.a.cool.way.to.communicate',
+>>>>>>> develop
         title: 'Call scheduled',
       });
     });
@@ -49,8 +54,13 @@ describe('CallScheduledEventContainer', () => {
         objectId: 55, // scheduledCall
       }))).toEqual({
         type: EVENT_TYPE_SCHEDULED_CALL_CREATED,
+<<<<<<< HEAD
         date: '2016-09-16T11:19:17.368442Z',
         icon: images.JOURNEY_EVENT_SCHEDULED_CALL_ICON,
+=======
+        date: Date.parse('2016-09-16T11:19:17.368442Z'),
+        icon: JOURNEY_EVENT_SCHEDULED_CALL_ICON,
+>>>>>>> develop
         title: 'Call scheduled',
       });
     });

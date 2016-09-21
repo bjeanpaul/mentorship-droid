@@ -4,9 +4,13 @@ import * as landing from 'src/constants/landing';
 import * as entry from 'src/constants/entry';
 import * as navigation from 'src/constants/navigation';
 import * as onboarding from 'src/constants/onboarding';
+import * as notifications from 'src/constants/notifications';
+import * as calls from 'src/constants/calls';
+import * as callNotes from 'src/constants/callNotes';
 
 
 import {
+  has,
   push,
   pop,
   replaceAt,
@@ -48,6 +52,41 @@ export default (state = createStack([
     case sync.LOAD_FAILURE: {
       const route = createRoute(routes.ROUTE_LOADING_FAILURE);
       return replaceAt(state, routes.ROUTE_LOADING, route);
+    }
+
+    case notifications.CALL_STARTING_1_MIN_NOTIFICATION_RECEIVED: {
+      const { payload: { objectId: scheduledCallId } } = action;
+      return push(state, createRoute(routes.ROUTE_START_CALL, { scheduledCallId }));
+    }
+
+    case notifications.CALL_ENDED_RECEIVED: {
+      const { payload: { objectId: callId } } = action;
+      const route = createRoute(routes.ROUTE_CALL_COMPLETED, { callId });
+
+      return has(state, routes.ROUTE_CONNECTING_CALL)
+        ? replaceAt(state, routes.ROUTE_CONNECTING_CALL, route)
+        : push(state, route);
+    }
+
+    case callNotes.CALL_NOTES_CREATE: {
+      const { payload: { callId } } = action;
+      const route = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId });
+
+      return has(state, routes.ROUTE_CALL_COMPLETED)
+        ? replaceAt(state, routes.ROUTE_CALL_COMPLETED, route)
+        : push(state, route);
+    }
+
+    // TODO push on start call route on journey show call
+
+    case calls.CALL_CREATE_REQUEST: {
+      const route = createRoute(routes.ROUTE_CONNECTING_CALL);
+      return replaceAt(state, routes.ROUTE_START_CALL, route);
+    }
+
+    case calls.CALL_CREATE_FAILURE: {
+      const route = createRoute(routes.ROUTE_CONNECTING_CALL_FAILURE);
+      return replaceAt(state, routes.ROUTE_CONNECTING_CALL, route);
     }
 
     default:

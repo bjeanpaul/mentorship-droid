@@ -6,10 +6,8 @@ import * as constants from 'src/constants/notifications';
 
 
 const notificationAction = ({
-  data: {
-    type,
-    payload,
-  },
+  type,
+  payload,
 }) => has(constants.NOTIFICATION_ACTIONS, type)
   ? {
     type: constants.NOTIFICATION_ACTIONS[type],
