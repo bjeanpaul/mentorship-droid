@@ -1,6 +1,8 @@
 import React from 'react';
 import Journey from '../index';
 import { noop } from 'lodash';
+import { fakeStore } from 'app/scripts/helpers';
+import { Provider } from 'react-redux';
 
 describe('Journey', () => {
   function createComponent(props = {}) {
@@ -17,7 +19,11 @@ describe('Journey', () => {
   }
 
   it('should map props correctly', () => {
-    expect(render(createComponent()).toJSON()).toMatchSnapshot();
+    expect(render(
+      <Provider store={fakeStore}>
+        {createComponent()}
+      </Provider>
+    ).toJSON()).toMatchSnapshot();
   });
 
   it('should be able to tap and fire `onPressNextScheduledCall`', () => {

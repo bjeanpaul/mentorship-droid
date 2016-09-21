@@ -1,8 +1,7 @@
-import { merge, extend, uniqueId, range } from 'lodash';
+import { merge, uniqueId } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
 import { Profile, ScheduledCall, Activity, Category } from 'src/api';
 import { getContext } from 'src/stores/helpers';
-import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/event'
 
 
 export const capture = async (fn, ...xargs) => {
@@ -78,9 +77,9 @@ export const fakeProfile = data => ({
 export const fakeEvent = data => ({
   id: 23,
   occuredAt: '2016-09-16T11:19:17.368442Z',
-  eventType: EVENT_TYPE_SCHEDULED_CALL_CREATED,
+  eventType: 'fake-event-type',
   objectId: 23,
-  description: 'First Call Scheduled',
+  description: 'Im a big fake',
   ...data,
 });
 
@@ -116,7 +115,7 @@ export const fakeContext = (overrides = {}) => merge(getContext(fakeState()), ov
 export const fakeStore = {
   subscribe: () => {},
   dispatch: () => {},
-  getState: () => {},
+  getState: () => fakeState(),
 };
 
 

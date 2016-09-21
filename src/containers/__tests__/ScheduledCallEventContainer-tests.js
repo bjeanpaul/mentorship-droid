@@ -45,7 +45,7 @@ describe('CallScheduledEventContainer', () => {
         },
       });
       expect(mapStateToProps(state, fakeEvent({
-        type: EVENT_TYPE_SCHEDULED_CALL_CREATED,
+        eventType: EVENT_TYPE_SCHEDULED_CALL_CREATED,
         objectId: 55, // scheduledCall
       }))).toEqual({
         type: EVENT_TYPE_SCHEDULED_CALL_CREATED,
