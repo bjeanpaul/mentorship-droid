@@ -24,7 +24,7 @@ const groupEventsByDate = events => {
 
 
 const mapStateToProps = (state) => ({
-  events: groupEventsByDate(getEvents(state)),
+  groups: groupEventsByDate(getEvents(state)),
 });
 
 

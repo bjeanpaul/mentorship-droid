@@ -1,0 +1,25 @@
+exports[`EventList should not render unmapped event types 1`] = `
+<View>
+  <Image
+    source={1}>
+    <ScrollView>
+      <View>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center"
+              },
+              undefined
+            ]
+          }>
+          A long time ago
+        </Text>
+      </View>
+    </ScrollView>
+  </Image>
+</View>
+`;

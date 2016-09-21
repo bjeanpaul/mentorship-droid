@@ -80,6 +80,7 @@ export const fakeEvent = data => ({
   occuredAt: '2016-09-16T11:19:17.368442Z',
   eventType: EVENT_TYPE_SCHEDULED_CALL_CREATED,
   objectId: 23,
+  description: 'First Call Scheduled',
   ...data,
 });
 

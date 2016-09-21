@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { View, Image, ScrollView } from 'react-native';
-import { Text, Event } from 'src/components';
+import { Text } from 'src/components';
 import images from 'src/constants/images';
 import eventContainers from 'src/containers/events';
 
@@ -8,18 +8,21 @@ import eventContainers from 'src/containers/events';
 const EventList = ({
   groups = [],
 }) => {
-  const children = groups.map(group => {
-    return (
-      <View>
-        <Text>{group.label}</Text>
-        {
-          group.events.map(event => React.createComponent(
-            eventContainers[event.eventType] || Event, event
-          ));
-        }
-      </View>
-    );
-  });
+  const children = groups.map((group, index) => (
+    <View key={index}>
+      <Text>{group.label}</Text>
+      {
+        group.events.map(event => {
+          const el = eventContainers[event.eventType]
+          if (!el) return null;
+          return React.createElement(el, {
+            ...event,
+            key: event.id
+          });
+        })
+      }
+    </View>
+  ));
 
   return (
     <View>
@@ -38,10 +41,10 @@ EventList.propTypes = {
     date: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     events: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.string,
+      id: PropTypes.number,
       occuredAt: PropTypes.string,
       eventType: PropTypes.string.isRequired,
-      objectId: PropTypes.string,
+      objectId: PropTypes.number,
     })).isRequired,
   })),
 };
