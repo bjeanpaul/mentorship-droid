@@ -41,7 +41,7 @@ describe('EventListContainer', () => {
     });
 
 
-    it('should sort child events with an event group', () => {
+    it('should sort child events within a group', () => {
       const state = fakeState();
       state.entities.events = {
         22: fakeEvent({
