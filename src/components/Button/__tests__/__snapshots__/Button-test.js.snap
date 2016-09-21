@@ -20,6 +20,9 @@ exports[`Button should be disabled 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -69,6 +72,9 @@ exports[`Button should render "inline" layout 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Object {
         "color": "#333333",
@@ -98,6 +104,9 @@ exports[`Button should render "light" theme 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Object {
         "color": "#333333",
@@ -127,6 +136,9 @@ exports[`Button should render "stretch" layout 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Object {
         "color": "#333333",
@@ -156,6 +168,9 @@ exports[`Button should render "transparent" theme 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Object {
         "color": "#333333",
@@ -185,6 +200,9 @@ exports[`Button should render its \`title,\` and map \`onPress\` 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Object {
         "color": "#333333",
@@ -214,6 +232,9 @@ exports[`Button should take any kind of children 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Object {
         "color": "#333333",

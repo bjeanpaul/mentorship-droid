@@ -10,6 +10,9 @@ exports[`OnboardingFormSteps Inspiration 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -75,6 +78,9 @@ exports[`OnboardingFormSteps Inspiration 1`] = `
     </View>
   </View>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -125,6 +131,9 @@ exports[`OnboardingFormSteps Inspiration 1`] = `
           ]
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
               "color": "#333333",
@@ -151,6 +160,9 @@ exports[`OnboardingFormSteps Inspiration 1`] = `
           ]
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
               "color": "#333333",
@@ -177,6 +189,9 @@ exports[`OnboardingFormSteps Motivation 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -242,6 +257,9 @@ exports[`OnboardingFormSteps Motivation 1`] = `
         value="To provide for my family" />
     </View>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -296,6 +314,9 @@ exports[`OnboardingFormSteps Motivation 1`] = `
           ]
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
               "color": "#333333",
@@ -322,6 +343,9 @@ exports[`OnboardingFormSteps Motivation 1`] = `
           ]
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
               "color": "#333333",
@@ -348,6 +372,9 @@ exports[`OnboardingFormSteps Occupation 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -385,6 +412,9 @@ exports[`OnboardingFormSteps Occupation 1`] = `
       ]
     }>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -444,6 +474,9 @@ exports[`OnboardingFormSteps Occupation 1`] = `
       ]
     }>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -520,6 +553,9 @@ exports[`OnboardingFormSteps Occupation 1`] = `
           ]
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
               "color": "#333333",
@@ -546,6 +582,9 @@ exports[`OnboardingFormSteps Occupation 1`] = `
           ]
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
               "color": "#333333",
@@ -572,6 +611,9 @@ exports[`OnboardingFormSteps Skills 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -637,6 +679,9 @@ exports[`OnboardingFormSteps Skills 1`] = `
         value="I had a bunch when I was younger, but now I\'m old and tired." />
     </View>
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -691,6 +736,9 @@ exports[`OnboardingFormSteps Skills 1`] = `
           ]
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
               "color": "#333333",
@@ -717,6 +765,9 @@ exports[`OnboardingFormSteps Skills 1`] = `
           ]
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
               "color": "#333333",
@@ -743,6 +794,9 @@ exports[`OnboardingFormSteps ThreeWords 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -808,6 +862,9 @@ exports[`OnboardingFormSteps ThreeWords 1`] = `
     </View>
   </View>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -858,6 +915,9 @@ exports[`OnboardingFormSteps ThreeWords 1`] = `
           ]
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
               "color": "#333333",
@@ -884,6 +944,9 @@ exports[`OnboardingFormSteps ThreeWords 1`] = `
           ]
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
               "color": "#333333",

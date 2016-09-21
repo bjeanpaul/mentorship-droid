@@ -10,6 +10,9 @@ exports[`ProfilePicture should map props correctly 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -66,6 +69,9 @@ exports[`ProfilePicture should map props correctly 1`] = `
         }
       } />
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -114,6 +120,9 @@ exports[`ProfilePicture should map props correctly 1`] = `
           ]
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
               "color": "#333333",
@@ -140,6 +149,9 @@ exports[`ProfilePicture should map props correctly 1`] = `
           ]
         }>
         <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
           style={
             Object {
               "color": "#333333",

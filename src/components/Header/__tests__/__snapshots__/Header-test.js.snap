@@ -12,6 +12,9 @@ exports[`Header should render 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -44,6 +47,9 @@ exports[`Header should support dark theme 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -78,6 +84,9 @@ exports[`Header should support orange theme 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -112,6 +121,9 @@ exports[`Header should support style overriding 1`] = `
     ]
   }>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {

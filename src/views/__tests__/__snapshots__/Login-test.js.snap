@@ -35,6 +35,9 @@ exports[`auth/Login should draw error statuses 1`] = `
       style={undefined}
       testID={undefined} />
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -69,6 +72,9 @@ exports[`auth/Login should draw error statuses 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -131,6 +137,9 @@ exports[`auth/Login should draw error statuses 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -194,6 +203,9 @@ exports[`auth/Login should draw error statuses 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -205,6 +217,9 @@ exports[`auth/Login should draw error statuses 1`] = `
     </View>
   </View>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
@@ -258,6 +273,9 @@ exports[`auth/Login should draw not found statuses 1`] = `
       style={undefined}
       testID={undefined} />
     <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
@@ -292,6 +310,9 @@ exports[`auth/Login should draw not found statuses 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -354,6 +375,9 @@ exports[`auth/Login should draw not found statuses 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -417,6 +441,9 @@ exports[`auth/Login should draw not found statuses 1`] = `
         ]
       }>
       <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Object {
             "color": "#333333",
@@ -428,6 +455,9 @@ exports[`auth/Login should draw not found statuses 1`] = `
     </View>
   </View>
   <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
     style={
       Array [
         Object {
