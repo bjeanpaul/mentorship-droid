@@ -14,6 +14,7 @@ const {
 
 
 export {
+  has,
   reset,
   pop,
   back,
