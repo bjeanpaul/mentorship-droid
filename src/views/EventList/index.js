@@ -4,6 +4,7 @@ import { Text } from 'src/components';
 import images from 'src/constants/images';
 import containers from 'src/containers/events';
 import FirstEventContainer from 'src/containers/FirstEventContainer';
+import styles from './styles';
 
 
 const EventList = ({
@@ -19,15 +20,20 @@ const EventList = ({
     if (!eventElements.length) return void 0;
     return (
       <View key={index}>
-        <Text>{group.label}</Text>
+        <View style={styles.groupLabel}>
+          <Text style={styles.groupLabelText}>{group.label}</Text>
+        </View>
         {eventElements}
       </View>
     );
   }).filter(el => typeof(el) !== 'undefined');
 
   return (
-    <View>
-      <Image source={images.JOURNEY_BG}>
+    <View style={styles.container}>
+      <Image
+        style={styles.containerBackground}
+        source={images.JOURNEY_BG}
+      >
         <ScrollView>
           {groupElements.length && groupElements || <FirstEventContainer />}
         </ScrollView>
