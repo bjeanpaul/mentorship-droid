@@ -3,7 +3,10 @@ import * as entry from 'src/actions/entry';
 import * as landing from 'src/actions/landing';
 import * as sync from 'src/actions/sync';
 import * as onboarding from 'src/actions/onboarding';
+import * as notifications from 'src/constants/notifications';
 import * as routes from 'src/constants/routes';
+import * as calls from 'src/actions/calls';
+import * as callNotes from 'src/actions/callNotes';
 import { createStack, createRoute, push, pop, replaceAt } from 'src/navigationHelpers';
 
 
@@ -66,6 +69,76 @@ describe('src/reducers/navigation/top', () => {
       const route = createRoute(routes.ROUTE_LOADING_FAILURE);
       expect(reduce(state, sync.loadFailure()))
         .toEqual(replaceAt(state, routes.ROUTE_LOADING, route));
+    });
+  });
+
+  describe('CALL_STARTING_1_MIN_NOTIFICATION_RECEIVED', () => {
+    it('should push on the start call route', () => {
+      expect(reduce(createStack(), {
+        type: notifications.CALL_STARTING_1_MIN_NOTIFICATION_RECEIVED,
+        payload: { objectId: 23 },
+      }))
+      .toEqual(push(createStack(), createRoute(routes.ROUTE_START_CALL, {
+        scheduledCallId: 23,
+      })));
+    });
+  });
+
+  describe('CALL_CREATE_REQUEST', () => {
+    it('should replace the start call route with the call connecting route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_START_CALL));
+      const route = createRoute(routes.ROUTE_CONNECTING_CALL);
+      expect(reduce(state, calls.createCallRequest()))
+        .toEqual(replaceAt(state, routes.ROUTE_START_CALL, route));
+    });
+  });
+
+  describe('CONNECTING_CALL_FAILURE', () => {
+    it('should replace the loading route with the load failure route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_CONNECTING_CALL));
+      const route = createRoute(routes.ROUTE_CONNECTING_CALL_FAILURE);
+      expect(reduce(state, calls.createCallFailure()))
+        .toEqual(replaceAt(state, routes.ROUTE_CONNECTING_CALL, route));
+    });
+  });
+
+  describe('CALL_ENDED_RECEIVED', () => {
+    it('should replace the connecting route with a call completed route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_CONNECTING_CALL));
+      const route = createRoute(routes.ROUTE_CALL_COMPLETED, { callId: 23 });
+
+      expect(reduce(state, {
+        type: notifications.CALL_ENDED_RECEIVED,
+        payload: { objectId: 23 },
+      }))
+      .toEqual(replaceAt(state, routes.ROUTE_CONNECTING_CALL, route));
+    });
+
+    it('should push on the call completed route there is no connecting route', () => {
+      expect(reduce(createStack(), {
+        type: notifications.CALL_ENDED_RECEIVED,
+        payload: { objectId: 23 },
+      }))
+      .toEqual(push(createStack(), createRoute(routes.ROUTE_CALL_COMPLETED, {
+        callId: 23,
+      })));
+    });
+  });
+
+  describe('CALL_NOTES_CREATE', () => {
+    it('should replace the call completed route with create call notes route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_CALL_COMPLETED));
+      const route = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId: 23 });
+
+      expect(reduce(state, callNotes.createCallNotes(23)))
+        .toEqual(replaceAt(state, routes.ROUTE_CALL_COMPLETED, route));
+    });
+
+    it('should push on the create call notes route there is no call completed route', () => {
+      expect(reduce(createStack(), callNotes.createCallNotes(23)))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_CREATE_CALL_NOTES, {
+          callId: 23,
+        })));
     });
   });
 });

@@ -217,7 +217,7 @@ exports[`StartCall should render with a call time 1`] = `
           }
         ]
       }>
-      Call Mentee
+      Time for your call
     </Text>
   </View>
   <View
@@ -253,7 +253,25 @@ exports[`StartCall should render with a call time 1`] = `
           "paddingRight": 24
         }
       }>
-      0
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Object {
+              "fontSize": 20
+            }
+          ]
+        }>
+        Thu, Jan 01, 2:00am
+      </Text>
     </View>
   </View>
   <View
@@ -367,7 +385,7 @@ exports[`StartCall should render with a call time and activity 1`] = `
           }
         ]
       }>
-      Call Mentee
+      Time for your call
     </Text>
   </View>
   <View
@@ -403,7 +421,25 @@ exports[`StartCall should render with a call time and activity 1`] = `
           "paddingRight": 24
         }
       }>
-      0
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center"
+            },
+            Object {
+              "fontSize": 20
+            }
+          ]
+        }>
+        Thu, Jan 01, 2:00am
+      </Text>
       <Text
         accessible={true}
         allowFontScaling={true}
