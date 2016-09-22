@@ -1,4 +1,9 @@
 language: android
+
+node_js:
+  - "6"
+
+
 android:
   components:
     - build-tools-23.0.1
@@ -9,22 +14,25 @@ android:
     - extra-google-m2repository
     - addon-google_apis-google-16
 
-script: cd android && ./gradlew assembleRelease
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+
+install:
+  - npm install
+
+script:
+  - cd android && ./gradlew assembleRelease
 
 
 
-# node_js:
-#   - "6"
 #
 # script:
 #   -npm run ci
 #
-# # https://docs.travis-ci.com/user/languages/javascript-with-nodejs#Node.js-v4-(or-io.js-v3)-compiler-requirements
-# env:
-#   - CXX=g++-4.8
-# addons:
-#   apt:
-#     sources:
-#       - ubuntu-toolchain-r-test
-#     packages:
-#       - g++-4.8
+# https://docs.travis-ci.com/user/languages/javascript-with-nodejs#Node.js-v4-(or-io.js-v3)-compiler-requirements
