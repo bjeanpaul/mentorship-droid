@@ -1,7 +1,7 @@
 import moment from 'moment';
 import { find } from 'lodash';
 import React, { PropTypes } from 'react';
-import { View } from 'react-native';
+import { View, TouchableNativeFeedback } from 'react-native';
 
 import Calendar from 'src/views/ScheduleListCalendar';
 import { BaseView, Label, Text } from 'src/components';
@@ -18,37 +18,55 @@ class ScheduleList extends React.Component {
     };
 
     this.onDateSelect = this.onDateSelect.bind(this);
+    this.onCallInfoPress = this.onCallInfoPress.bind(this);
   }
 
-  onDateSelect(callTime) {
-    this.setState({ selectedDate: callTime });
+  onDateSelect(selectedDate) {
+    this.setState({ selectedDate });
+  }
+
+  onCallInfoPress() {
+    const call = this.getSelectedCall();
+    return call && moment(call.callTime).isAfter() && this.props.onCallChosen(call);
+  }
+
+  getSelectedCall() {
+    const { selectedDate } = this.state;
+    return selectedDate && this.findCall(selectedDate);
+  }
+
+  findCall(date) {
+    const calls = this.props.calls;
+    return find(calls, ({ callTime }) => moment(callTime).isSame(date, 'day'));
+  }
+
+  callIsInFuture(call) {
+    return moment(call.callTime).isAfter();
   }
 
   renderCallInfo() {
-    const { selectedDate } = this.state;
-    const { scheduledCalls } = this.props;
-
-    const call = selectedDate && find(scheduledCalls, ({ callTime }) => (
-      moment(callTime).isSame(selectedDate, 'day')));
+    const call = this.getSelectedCall();
 
     return (
-      <View style={styles.callInfoContainer}>
-        {
-          call && <View>
-            <Label style={styles.callInfoLabel} title="CALL SCHEDULED FOR:" />
+      <TouchableNativeFeedback uid="callInfo" onPress={this.onCallInfoPress}>
+        <View style={styles.callInfoContainer}>
+          {
+            call && <View>
+              <Label style={styles.callInfoLabel} title="CALL SCHEDULED FOR:" />
 
-            <Text style={styles.callInfoText}>
-              {moment(call.callTime).format('ddd, MMM DD, h:mma')}
-            </Text>
-
-            {
-              call.activity && <Text style={styles.callInfoText} numberOfLines={2}>
-                {call.activity.title}
+              <Text style={styles.callInfoText}>
+                {moment(call.callTime).format('ddd, MMM DD, h:mma')}
               </Text>
-            }
-          </View>
-        }
-      </View>
+
+              {
+                call.activity && <Text style={styles.callInfoText} numberOfLines={2}>
+                  {call.activity.title}
+                </Text>
+              }
+            </View>
+          }
+        </View>
+      </TouchableNativeFeedback>
     );
   }
 
@@ -56,7 +74,7 @@ class ScheduleList extends React.Component {
     return (
       <BaseView>
         <Calendar
-          dates={this.props.scheduledCalls.map(call => call.callTime)}
+          dates={this.props.calls.map(call => call.callTime)}
           onDateSelect={this.onDateSelect}
         />
         {this.renderCallInfo()}
@@ -68,7 +86,10 @@ class ScheduleList extends React.Component {
 
 ScheduleList.propTypes = {
   initialSelectedDate: PropTypes.string,
-  scheduledCalls: PropTypes.arrayOf(PropTypes.shape({
+
+  onCallChosen: PropTypes.func.isRequired,
+
+  calls: PropTypes.arrayOf(PropTypes.shape({
     callTime: PropTypes.string.isRequired,
     activity: PropTypes.shape({
       title: PropTypes.string.isRequired,

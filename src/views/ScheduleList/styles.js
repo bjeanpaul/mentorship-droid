@@ -13,8 +13,8 @@ export default StyleSheet.create({
     fontSize: 12,
   },
   callInfoText: {
+    fontSize: 18,
     textAlign: 'left',
     color: colors.SCHEDULE_LIST_CALL_INFO_TEXT,
-    fontSize: 18,
   },
 });
