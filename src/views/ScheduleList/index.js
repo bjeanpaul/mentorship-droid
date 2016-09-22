@@ -1,27 +1,14 @@
 import moment from 'moment';
 import React, { PropTypes } from 'react';
-import { View, StatusBar, StyleSheet } from 'react-native';
+import { View, StatusBar } from 'react-native';
 
-import Calendar from './ScheduleListCalendar';
+import Calendar from 'src/views/ScheduleListCalendar';
 import { BaseView, Label, Text } from 'src/components';
-import colors from 'src/constants/colors';
 
-const styles = StyleSheet.create({
-  callInfoContainer: {
-    flex: 0.25,
-    padding: 24,
-    backgroundColor: colors.SCHEDULE_INFO_CALL_INFO_BG,
-    justifyContent: 'center',
-  },
-  callInfoText: {
-    textAlign: 'left',
-    color: colors.SCHEDULE_LIST_CALL_INFO_TEXT,
-    fontSize: 18,
-  },
-});
+import styles from 'src/views/ScheduleList/styles';
+
 
 class ScheduleList extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -58,7 +45,7 @@ class ScheduleList extends React.Component {
         <StatusBar backgroundColor="#003035" />
         <Calendar
           dates={this.props.calls.map(call => call.date)}
-          handleDateSelected={
+          onDateSelect={
             (date) => this.setState({
               selectedDate: moment(date).format('YYYY-MM-DD'),
             })
@@ -69,10 +56,12 @@ class ScheduleList extends React.Component {
     );
   }
 }
+
+
 ScheduleList.propTypes = {
-  calls: PropTypes.arrayOf(React.PropTypes.shape({
-    date: React.PropTypes.string.isRequired,
-    activityName: React.PropTypes.string.isRequired,
+  calls: PropTypes.arrayOf(PropTypes.shape({
+    date: PropTypes.string.isRequired,
+    activityName: PropTypes.string.isRequired,
   })).isRequired,
 };
 
