@@ -1,7 +1,7 @@
 import React from 'react';
 import Journey from '../index';
 import { noop } from 'lodash';
-import { fakeStore } from 'app/scripts/helpers';
+import { fakeState, fakeStore } from 'app/scripts/helpers';
 import { Provider } from 'react-redux';
 
 describe('Journey', () => {
@@ -19,6 +19,14 @@ describe('Journey', () => {
   }
 
   it('should map props correctly', () => {
+
+    const state = fakeState({
+      entities: { events: [] },
+    });
+    const store = fakeStore;
+    store.getState = () => state;
+
+
     expect(render(
       <Provider store={fakeStore}>
         {createComponent()}

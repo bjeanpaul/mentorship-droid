@@ -6,7 +6,7 @@ import { getEvents } from 'src/stores/helpers';
 
 
 const groupEventsByDate = events => {
-  const groups = groupBy(events,
+  const groups = groupBy(sortBy(events, event => event.occuredAt).reverse(),
     event => moment(event.occuredAt).format('YYYY-MM-DD')
   );
 
@@ -17,7 +17,7 @@ const groupEventsByDate = events => {
     date => ({
       date,
       label: moment(date).fromNow(),
-      events: sortBy(groups[date], event => event.occuredAt).reverse(),
+      events: groups[date],
     })
   );
 };

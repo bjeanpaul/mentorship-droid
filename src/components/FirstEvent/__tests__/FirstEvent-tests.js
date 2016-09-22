@@ -12,7 +12,7 @@ describe('FirstEvent', () => {
     )).toMatchSnapshot();
   });
 
-  it('should be able to tap and fire `onMessagePress`', () => {
+  it('should be able to tap and fire `onGetStartedPress`', () => {
     const onGetStartedPress = jest.fn();
     const el = shallow(
       <FirstEvent
