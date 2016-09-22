@@ -67,7 +67,13 @@ export default StyleSheet.create({
     width: 10,
     borderRadius: 10,
   },
+  currentDayText: {
+    color: colors.CALENDAR_CURRENT_DAY_TEXT,
+  },
   currentDayCircle: {
     backgroundColor: colors.CALENDAR_CURRENT_DAY_BG,
+  },
+  selectedDayCircle: {
+    backgroundColor: colors.CALENDAR_SELECTED_DAY_BG,
   },
 });

@@ -35,14 +35,14 @@ class ScheduleList extends React.Component {
       <View style={styles.callInfoContainer}>
         {
           call && <View>
-            <Label title="CALL SCHEDULED FOR:" />
+            <Label style={styles.callInfoLabel} title="CALL SCHEDULED FOR:" />
 
             <Text style={styles.callInfoText}>
-              {moment(call.callTime).format('dddd Do, MMMM YYYY')}
+              {moment(call.callTime).format('ddd, MMM DD, h:mma')}
             </Text>
 
             {
-              call.activity && <Text style={styles.callInfoText}>
+              call.activity && <Text style={styles.callInfoText} numberOfLines={2}>
                 {call.activity.title}
               </Text>
             }

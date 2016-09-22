@@ -3235,8 +3235,8 @@ exports[`ScheduleList should render 1`] = `
       Object {
         "backgroundColor": "#dfe5e6",
         "flex": 0.25,
-        "justifyContent": "center",
-        "padding": 24
+        "justifyContent": "flex-start",
+        "padding": 20
       }
     } />
 </View>
@@ -6468,8 +6468,8 @@ exports[`ScheduleList should render the selected call activity title 1`] = `
       Object {
         "backgroundColor": "#dfe5e6",
         "flex": 0.25,
-        "justifyContent": "center",
-        "padding": 24
+        "justifyContent": "flex-start",
+        "padding": 20
       }
     }>
     <View>
@@ -6494,7 +6494,9 @@ exports[`ScheduleList should render the selected call activity title 1`] = `
                 "marginBottom": 9,
                 "textAlign": "left"
               },
-              undefined
+              Object {
+                "fontSize": 12
+              }
             ]
           ]
         }>
@@ -6519,12 +6521,13 @@ exports[`ScheduleList should render the selected call activity title 1`] = `
             }
           ]
         }>
-        Thursday 22nd, September 2016
+        Thu, Sep 22, 9:40pm
       </Text>
       <Text
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        numberOfLines={2}
         style={
           Array [
             Object {
@@ -9773,8 +9776,8 @@ exports[`ScheduleList should render the selected call time 1`] = `
       Object {
         "backgroundColor": "#dfe5e6",
         "flex": 0.25,
-        "justifyContent": "center",
-        "padding": 24
+        "justifyContent": "flex-start",
+        "padding": 20
       }
     }>
     <View>
@@ -9799,7 +9802,9 @@ exports[`ScheduleList should render the selected call time 1`] = `
                 "marginBottom": 9,
                 "textAlign": "left"
               },
-              undefined
+              Object {
+                "fontSize": 12
+              }
             ]
           ]
         }>
@@ -9824,7 +9829,7 @@ exports[`ScheduleList should render the selected call time 1`] = `
             }
           ]
         }>
-        Thursday 22nd, September 2016
+        Thu, Sep 22, 9:40pm
       </Text>
     </View>
   </View>
