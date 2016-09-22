@@ -9,10 +9,7 @@ export default StyleSheet.create({
     flex: 1,
   },
   calendarControls: {
-    height: 60,
     backgroundColor: colors.CALENDAR_CONTROLS_BG,
-  },
-  controlButton: {
   },
   controlButtonText: {
     fontFamily: FONT.REGULAR,
@@ -20,6 +17,7 @@ export default StyleSheet.create({
     color: colors.CALENDAR_CONTROLS_TEXT,
   },
   title: {
+    paddingTop: 5,
     fontFamily: FONT.MEDIUM,
     fontWeight: FONT_WEIGHT.MEDIUM,
     fontSize: 20,
