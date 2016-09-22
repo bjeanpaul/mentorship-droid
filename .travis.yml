@@ -9,7 +9,7 @@ android:
     - extra-google-m2repository
     - addon-google_apis-google-16
 
-script: ./android/gradlew build assembleRelease
+script: cd android && ./gradlew assembleRelease
 
 
 
