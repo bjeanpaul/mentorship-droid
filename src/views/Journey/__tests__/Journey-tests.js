@@ -19,7 +19,6 @@ describe('Journey', () => {
   }
 
   it('should map props correctly', () => {
-
     const state = fakeState({
       entities: { events: [] },
     });
