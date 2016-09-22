@@ -107,10 +107,6 @@ android {
             def releaseKeyAlias       = this.hasProperty('MYAPP_RELEASE_KEY_ALIAS') ? MYAPP_RELEASE_KEY_ALIAS : System.getenv('MYAPP_RELEASE_KEY_ALIAS')
             def releaseKeyPassword    = this.hasProperty('MYAPP_RELEASE_KEY_PASSWORD') ? MYAPP_RELEASE_KEY_PASSWORD : System.getenv('MYAPP_RELEASE_KEY_PASSWORD')
 
-            println '-----------------------------------------------------------------------------'
-            println releaseStoreFile
-            println '-----------------------------------------------------------------------------'
-
             storeFile file(releaseStoreFile)
             storePassword releaseStorePassword
             keyAlias releaseKeyAlias
