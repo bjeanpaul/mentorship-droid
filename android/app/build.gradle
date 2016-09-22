@@ -98,12 +98,23 @@ android {
         }
     }
 
+
+
     signingConfigs {
         release {
-            storeFile file(MYAPP_RELEASE_STORE_FILE)
-            storePassword MYAPP_RELEASE_STORE_PASSWORD
-            keyAlias MYAPP_RELEASE_KEY_ALIAS
-            keyPassword MYAPP_RELEASE_KEY_PASSWORD
+            def releaseStoreFile      = this.hasProperty('MYAPP_RELEASE_STORE_FILE') ? MYAPP_RELEASE_STORE_FILE : System.getenv('MYAPP_RELEASE_STORE_FILE')
+            def releaseStorePassword  = this.hasProperty('MYAPP_RELEASE_STORE_PASSWORD') ? MYAPP_RELEASE_STORE_PASSWORD : System.getenv('MYAPP_RELEASE_STORE_PASSWORD')
+            def releaseKeyAlias       = this.hasProperty('MYAPP_RELEASE_KEY_ALIAS') ? MYAPP_RELEASE_KEY_ALIAS : System.getenv('MYAPP_RELEASE_KEY_ALIAS')
+            def releaseKeyPassword    = this.hasProperty('MYAPP_RELEASE_KEY_PASSWORD') ? MYAPP_RELEASE_KEY_PASSWORD : System.getenv('MYAPP_RELEASE_KEY_PASSWORD')
+
+            println '-----------------------------------------------------------------------------'
+            println releaseStoreFile
+            println '-----------------------------------------------------------------------------'
+
+            storeFile file(releaseStoreFile)
+            storePassword releaseStorePassword
+            keyAlias releaseKeyAlias
+            keyPassword releaseKeyPassword
         }
     }
 

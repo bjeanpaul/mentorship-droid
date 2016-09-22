@@ -1,5 +1,8 @@
 language: android
 
+env:
+  - MYAPP_RELEASE_STORE_FILE=travis.keystore MYAPP_RELEASE_KEY_ALIAS=my-key-alias MYAPP_RELEASE_STORE_PASSWORD=123456 MYAPP_RELEASE_KEY_PASSWORD=123456
+
 before_install:
   - nvm install 6
   - node --version
@@ -7,11 +10,6 @@ before_install:
 install:
   - npm install
 
-env:
-  - MYAPP_RELEASE_STORE_FILE=travis.keystore
-  - MYAPP_RELEASE_KEY_ALIAS=my-key-alias
-  - MYAPP_RELEASE_STORE_PASSWORD=123456
-  - MYAPP_RELEASE_KEY_PASSWORD=123456
 
 android:
   components:
@@ -31,6 +29,7 @@ android:
 #       - ubuntu-toolchain-r-test
 #     packages:
 #       - g++-4.8
+
 
 script:
   - cd android && ./gradlew assembleRelease
