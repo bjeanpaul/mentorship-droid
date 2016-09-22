@@ -7,6 +7,7 @@ import * as onboarding from 'src/constants/onboarding';
 import * as notifications from 'src/constants/notifications';
 import * as calls from 'src/constants/calls';
 import * as callNotes from 'src/constants/callNotes';
+import * as journey from 'src/constants/journey';
 
 
 import {
@@ -54,7 +55,7 @@ export default (state = createStack([
       return replaceAt(state, routes.ROUTE_LOADING, route);
     }
 
-    case notifications.CALL_STARTING_1_MIN_NOTIFICATION_RECEIVED: {
+    case notifications.CALL_STARTING_1_MIN_RECEIVED: {
       const { payload: { objectId: scheduledCallId } } = action;
       return push(state, createRoute(routes.ROUTE_START_CALL, { scheduledCallId }));
     }
@@ -68,6 +69,10 @@ export default (state = createStack([
         : push(state, route);
     }
 
+    case journey.CALL_OPEN: {
+      return push(state, createRoute(routes.ROUTE_START_CALL));
+    }
+
     case callNotes.CALL_NOTES_CREATE: {
       const { payload: { callId } } = action;
       const route = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId });
@@ -76,8 +81,6 @@ export default (state = createStack([
         ? replaceAt(state, routes.ROUTE_CALL_COMPLETED, route)
         : push(state, route);
     }
-
-    // TODO push on start call route on journey show call
 
     case calls.CALL_CREATE_REQUEST: {
       const route = createRoute(routes.ROUTE_CONNECTING_CALL);

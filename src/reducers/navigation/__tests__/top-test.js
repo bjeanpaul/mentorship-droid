@@ -7,6 +7,7 @@ import * as notifications from 'src/constants/notifications';
 import * as routes from 'src/constants/routes';
 import * as calls from 'src/actions/calls';
 import * as callNotes from 'src/actions/callNotes';
+import * as journey from 'src/actions/journey';
 import { createStack, createRoute, push, pop, replaceAt } from 'src/navigationHelpers';
 
 
@@ -72,10 +73,17 @@ describe('src/reducers/navigation/top', () => {
     });
   });
 
-  describe('CALL_STARTING_1_MIN_NOTIFICATION_RECEIVED', () => {
+  describe('CALL_OPEN', () => {
+    it('should push on the start call route', () => {
+      expect(reduce(createStack(), journey.openCall()))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_START_CALL)));
+    });
+  });
+
+  describe('CALL_STARTING_1_MIN_RECEIVED', () => {
     it('should push on the start call route', () => {
       expect(reduce(createStack(), {
-        type: notifications.CALL_STARTING_1_MIN_NOTIFICATION_RECEIVED,
+        type: notifications.CALL_STARTING_1_MIN_RECEIVED,
         payload: { objectId: 23 },
       }))
       .toEqual(push(createStack(), createRoute(routes.ROUTE_START_CALL, {

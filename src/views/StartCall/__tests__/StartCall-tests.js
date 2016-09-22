@@ -47,11 +47,15 @@ describe('StartCall', () => {
 
   it('should call onActivatePress when dismiss button is pressed', () => {
     const onActivatePress = jest.fn();
-    const el = shallow(createComponent({ onActivatePress }));
+
+    const el = shallow(createComponent({
+      activity: fakeActivity(),
+      onActivatePress,
+    }));
 
     el.findWhere(uidEquals('activate'))
       .simulate('press');
 
-    expect(onActivatePress.mock.calls).toEqual([[]]);
+    expect(onActivatePress.mock.calls).toEqual([[fakeActivity()]]);
   });
 });

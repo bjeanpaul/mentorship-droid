@@ -1,12 +1,13 @@
+import { bindActionCreators } from 'redux';
 import { omitBy, isUndefined } from 'lodash';
 import { connect } from 'react-redux';
 import StartCall from 'src/views/StartCall';
 import { getScheduledCall, getScheduledCallActivity } from 'src/stores/helpers';
-import { startCall } from 'src/actions/calls';
+import { createCall } from 'src/actions/calls';
 import { dismissScreen } from 'src/actions/navigation';
 
 
-const mapStateToProps = (state, { scheduledCallId }) => {
+export const mapStateToProps = (state, { scheduledCallId }) => {
   const scheduledCall = getScheduledCall(state, scheduledCallId);
   const activity = getScheduledCallActivity(state, scheduledCallId);
 
@@ -17,11 +18,10 @@ const mapStateToProps = (state, { scheduledCallId }) => {
 };
 
 
-const propsToActions = {
+export const mapDispatchToProps = dispatch => bindActionCreators({
   onDismissPress: dismissScreen,
-  onActivatePress: startCall,
-};
+  onActivatePress: activity => createCall(omitBy({ activity }, isUndefined)),
+}, dispatch);
 
 
-export { mapStateToProps };
-export default connect(mapStateToProps, propsToActions)(StartCall);
+export default connect(mapStateToProps, mapDispatchToProps)(StartCall);
