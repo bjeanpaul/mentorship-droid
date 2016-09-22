@@ -17,7 +17,7 @@ export default StyleSheet.create({
     color: colors.CALENDAR_CONTROLS_TEXT,
   },
   title: {
-    paddingTop: 5,
+    paddingTop: 4,
     fontFamily: FONT.MEDIUM,
     fontWeight: FONT_WEIGHT.MEDIUM,
     fontSize: 20,

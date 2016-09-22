@@ -77,7 +77,7 @@ exports[`ScheduleListCalendar should render 1`] = `
             "fontFamily": "Brandon Text_medium",
             "fontSize": 20,
             "fontWeight": "400",
-            "paddingTop": 5,
+            "paddingTop": 4,
             "textAlign": "center"
           }
         ]
