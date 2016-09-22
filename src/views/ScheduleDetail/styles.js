@@ -33,5 +33,5 @@ export default StyleSheet.create({
   },
   footer: {
     flex: 0.3,
-  }
+  },
 });
