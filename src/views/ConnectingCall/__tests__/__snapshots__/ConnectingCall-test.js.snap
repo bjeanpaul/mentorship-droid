@@ -63,19 +63,6 @@ exports[`ConnectingCall should render 1`] = `
         "paddingTop": 64
       }
     }>
-    <Image
-      source={1}
-      style={
-        Object {
-          "height": 80,
-          "transform": Array [
-            Object {
-              "rotate": "0deg"
-            }
-          ],
-          "width": 80
-        }
-      } />
     <Text
       accessible={true}
       allowFontScaling={true}
@@ -94,7 +81,7 @@ exports[`ConnectingCall should render 1`] = `
           }
         ]
       }>
-      Connecting the call…
+      Your call will be connected shortly…
     </Text>
   </View>
   <View
@@ -172,19 +159,6 @@ exports[`ConnectingCall should render with an activity 1`] = `
         "paddingTop": 64
       }
     }>
-    <Image
-      source={1}
-      style={
-        Object {
-          "height": 80,
-          "transform": Array [
-            Object {
-              "rotate": "0deg"
-            }
-          ],
-          "width": 80
-        }
-      } />
     <Text
       accessible={true}
       allowFontScaling={true}
@@ -203,7 +177,7 @@ exports[`ConnectingCall should render with an activity 1`] = `
           }
         ]
       }>
-      Connecting the call…
+      Your call will be connected shortly…
     </Text>
     <Text
       accessible={true}
