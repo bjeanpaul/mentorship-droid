@@ -38,6 +38,14 @@ export const updateScheduledCall = (id, data, auth) => request({
 });
 
 
+export const patchScheduledCall = (id, data, auth) => request({
+  url: `/schedule/${id}/`,
+  method: 'PATCH',
+  data,
+  auth,
+});
+
+
 export const removeScheduledCall = (id, auth) => request({
   url: `/schedule/${id}/`,
   method: 'DELETE',
