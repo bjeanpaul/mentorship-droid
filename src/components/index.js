@@ -20,11 +20,11 @@ import NavTabBar from './NavTabBar';
 import NotFound from './NotFound';
 import Event from './Event';
 import MilestoneEvent from './MilestoneEvent';
+import FirstEvent from './FirstEvent';
 
 
 export {
   BaseView,
-  Toolbar,
   Text,
   Label,
   Link,
@@ -47,4 +47,5 @@ export {
   NotFound,
   Event,
   MilestoneEvent,
+  FirstEvent,
 };

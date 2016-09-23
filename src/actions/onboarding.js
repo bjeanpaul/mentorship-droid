@@ -10,7 +10,7 @@ import {
 const { ApiResponseError } = api;
 
 
-export const chooseProfilePicture = () => ({
+const chooseProfilePicture = () => ({
   type: constants.ONBOARDING_CHOOSE_PROFILE_PICTURE,
 });
 

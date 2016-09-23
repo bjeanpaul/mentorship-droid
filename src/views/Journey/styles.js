@@ -39,31 +39,4 @@ export default StyleSheet.create({
     flex: 0.6,
     backgroundColor: colors.JOURNEY_BG,
   },
-  eventsBackground: {
-    flex: 1,
-    width: null,
-    height: null,
-    resizeMode: 'cover',
-  },
-  eventContainer: {
-    backgroundColor: colors.EVENT_BG,
-    marginTop: 12,
-    margin: 24,
-    padding: 20,
-    paddingLeft: 16,
-    paddingRight: 16,
-    borderRadius: 4,
-  },
-  eventGreetingTitle: {
-    textAlign: 'left',
-    fontFamily: FONT.BOLD,
-    fontWeight: FONT_WEIGHT.BOLD,
-    fontSize: 20,
-    marginBottom: 16,
-  },
-  eventGreetingBlurb: {
-    marginBottom: 24,
-    fontSize: 18,
-    textAlign: 'left',
-  },
 });
