@@ -1,14 +1,31 @@
-language: node_js
-node_js:
-  - 6
-script: npm run ci
-
-# https://docs.travis-ci.com/user/languages/javascript-with-nodejs#Node.js-v4-(or-io.js-v3)-compiler-requirements
+language: android
 env:
-  - CXX=g++-4.8
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
+  global:
+    secure: G1Rb34UBqo6C8wCQYEHUiWfVANEQI+1I4rMerIHhAlLfe8dSD4yIkI3NqcFYlSezF58AQfMMlh4wXp0ABrrNt5mb4QeK0Q8UNkLWNInMCQ3Z+xMinYmjz+VEghYzL96KPv7SCg9ZxRP5rDtmTwa+4gIQ57VpFOZzPgv+O5R/hlErCRqco3WJLa23/PpYLttUZ7qQvzsOn1e/Gs6fMtjIncnJBDtW55rABqI7LKQ5Yx3UaoouDO+j0L7KsRKhwXyx76bV6BAcyMJz1wmfuqvaMfPA5DGMRY1aDP/D4chvAIDwaL7tee0Bupa4i4e6p8jkknOe1YYKSxmv8msaz7JWrNQdJA+eWgBYH5hW/mVMXkZeG6mx96fpyCSlXbzwLjyEwEF4clHn8GD8yuL7XVazB7YCdtw9N7FUITOHVZU3MqWygFWHIxY0zQom4fR9jzzENVaQtxOtGfj/fc7ViROvGKZ1xl046D281wnCVtm2SZjtkny4W3wmyHqN/ghsJ0e6mpduKDxDCfZ/KI+WWSHkvD5z0DTF0XIj29DYUQK3Olezol6ykppTkGUkqi/Dfe/1mV8zQe0mFhQD/1QzqgtHjq1Sn5G/XwOo3hb0UIl0PVCiMDH786ImPkI35mE9x5OPcljGqd5fhz4uNnIOGqBSUHb8dOuJMWkZSKau5zCeRxE=
+before_install:
+- openssl aes-256-cbc -K $encrypted_c3182a2d3bfa_key -iv $encrypted_c3182a2d3bfa_iv
+  -in secrets.tar.enc -out secrets.tar -d
+- tar xvf secrets.tar
+- nvm install 6
+- node --version
+install:
+- npm install
+android:
+  components:
+  - build-tools-23.0.1
+  - android-23
+  - extra-android-m2repository
+  - extra-google-google_play_services
+  - extra-google-m2repository
+  - addon-google_apis-google-16
+script:
+- npm run ci
+- cd android && ./gradlew assembleRelease -PdisablePreDex
+deploy:
+  provider: releases
+  api_key:
+    secure: Fyk/c5dWqX/qzjXRnnJLItYLAfICjY2kvZ1bIHcD7QmGy46w/8779aWcS7j/LhfNZzair6fg1rOz+2c1nnjIOuBNOnxBncduo+IsNX1uh+xSB9ljGDLsAudwLGQZvg0GWJzseFwSSZlyDjPCQvFGXldPNnmQVAwZwRdrd1Q181vTYnOyPx/ujp6m/xHeTMZNUSXjbnSUhLe3GLMQ/kHKDcYH5TR42Nn2R9F0Elz2T+tqGzaMs08jeDoEYvCwaW7gjowCz0U+S+0qyoGmtkiiNYie9nGT6lkT6mI90UcHeWKdYqPMjpXY0WXznOa5qtvXf+gV1r2jWhlP49hnD3RhdkNx2mzMEo3A0d1qwiIjgCVhuaxdwH0mHcB3pHIdTal2MOGQYxKM4DDMggMKdHXBA9d8HlKMx8nFmtoXe8xZYH0E+OeXOPXZ0bt+5VuWXZyIHCwtGMi+kZrEe/ckIDGDFIOlDPQhyVdrup186lIJ02TjSs66yA7Fz3I9sJ5cl/e5rpNFuCUlqKGzCU/BXWTDzYbSuAloKuL9l2QAFsJrl8fGHb91Fhvfb9k7E/xIOGbpt5XtuLq0A0JH5zICWMNvQvXy+Hqr/Z9VKG+QFGzWaY4cIbig7zkEBnMTW1ehJ8h1eHUB6VSvgjKCUujUV69qaA2vgtbb25vsP6aB5aoQ0xk=
+  file: android/app/build/outputs/apk/app-release.apk
+  on:
+    repo: praekeltfoundation/mentorship-droid
+    tags: true
