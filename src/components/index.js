@@ -25,7 +25,6 @@ import FirstEvent from './FirstEvent';
 
 export {
   BaseView,
-  Toolbar,
   Text,
   Label,
   Link,
