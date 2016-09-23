@@ -8,6 +8,7 @@ import * as routes from 'src/constants/routes';
 import * as calls from 'src/actions/calls';
 import * as callNotes from 'src/actions/callNotes';
 import * as journey from 'src/actions/journey';
+import * as schedule from 'src/actions/schedule';
 import { createStack, createRoute, push, pop, replaceAt } from 'src/navigationHelpers';
 
 
@@ -146,6 +147,22 @@ describe('src/reducers/navigation/top', () => {
       expect(reduce(createStack(), callNotes.createCallNotes(23)))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_CREATE_CALL_NOTES, {
           callId: 23,
+        })));
+    });
+  });
+
+  describe('SCHEDULED_CALL_ADD', () => {
+    it('should push on the scheduled route', () => {
+      expect(reduce(createStack(), schedule.addScheduledCall()))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL)));
+    });
+  });
+
+  describe('SCHEDULED_CALL_CHOOSE', () => {
+    it('should push on the scheduled route', () => {
+      expect(reduce(createStack(), schedule.chooseScheduledCall(23)))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
+          scheduledCallId: 23,
         })));
     });
   });

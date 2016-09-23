@@ -8,6 +8,7 @@ import * as notifications from 'src/constants/notifications';
 import * as calls from 'src/constants/calls';
 import * as callNotes from 'src/constants/callNotes';
 import * as journey from 'src/constants/journey';
+import * as schedule from 'src/constants/schedule';
 
 
 import {
@@ -90,6 +91,17 @@ export default (state = createStack([
     case calls.CALL_CREATE_FAILURE: {
       const route = createRoute(routes.ROUTE_CONNECTING_CALL_FAILURE);
       return replaceAt(state, routes.ROUTE_CONNECTING_CALL, route);
+    }
+
+    case schedule.SCHEDULED_CALL_ADD: {
+      const route = createRoute(routes.ROUTE_SCHEDULE_CALL);
+      return push(state, route);
+    }
+
+    case schedule.SCHEDULED_CALL_CHOOSE: {
+      const { payload: { scheduledCallId } } = action;
+      const route = createRoute(routes.ROUTE_SCHEDULE_CALL, { scheduledCallId });
+      return push(state, route);
     }
 
     default:
