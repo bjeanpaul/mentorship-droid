@@ -1,7 +1,7 @@
 import React from 'react';
 import { noop } from 'lodash';
 import CategoryList from 'src/views/CategoryList';
-import { fakeCategory } from 'app/scripts/helpers';
+import { fakeCategory, uidEquals } from 'app/scripts/helpers';
 
 
 describe('CategoryList', () => {
@@ -27,6 +27,10 @@ describe('CategoryList', () => {
     expect(render(createComponent())).toMatchSnapshot();
   });
 
+  it('should render with a back button if onBackPress is given', () => {
+    expect(render(createComponent({ onBackPress: noop }))).toMatchSnapshot();
+  });
+
   it('should call onCategoryPress when a category is pressed', () => {
     const onCategoryPress = jest.fn();
     const el = shallow(createComponent({ onCategoryPress }));
@@ -40,5 +44,15 @@ describe('CategoryList', () => {
       .simulate('press');
 
     expect(onCategoryPress.mock.calls).toEqual([[1], [2]]);
+  });
+
+  it('should call onBackPress when the back button is pressed', () => {
+    const onBackPress = jest.fn();
+    const el = shallow(createComponent({ onBackPress }));
+
+    el.findWhere(uidEquals('back'))
+      .simulate('press');
+
+    expect(onBackPress.mock.calls).toEqual([[]]);
   });
 });
