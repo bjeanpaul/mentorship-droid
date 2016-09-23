@@ -27,3 +27,8 @@ on your _Android Virtual Device._
 ## Tests ##
 
 `> npm test`
+
+
+## Automatic Builds ##
+
+Are added to the GitHub repo whenever a new tag is pushed.
