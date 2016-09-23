@@ -10,7 +10,7 @@ import {
 const { ApiResponseError } = api;
 
 
-const listScheduledCalls = apiAction({
+export const listScheduledCalls = apiAction({
   method: api.listScheduledCalls,
   request: staticAction(constants.SCHEDULED_CALL_LIST_REQUEST),
   success: dataAction(constants.SCHEDULED_CALL_LIST_SUCCESS),
@@ -18,7 +18,7 @@ const listScheduledCalls = apiAction({
 });
 
 
-const fetchScheduledCall = apiAction({
+export const fetchScheduledCall = apiAction({
   method: api.getScheduledCall,
   request: staticAction(constants.SCHEDULED_CALL_FETCH_REQUEST),
   success: dataAction(constants.SCHEDULED_CALL_FETCH_SUCCESS),
@@ -26,7 +26,7 @@ const fetchScheduledCall = apiAction({
 });
 
 
-const createScheduledCall = apiAction({
+export const createScheduledCall = apiAction({
   method: api.createScheduledCall,
   request: staticAction(constants.SCHEDULED_CALL_CREATE_REQUEST),
   success: dataAction(constants.SCHEDULED_CALL_CREATE_SUCCESS),
@@ -34,7 +34,7 @@ const createScheduledCall = apiAction({
 });
 
 
-const updateScheduledCall = apiAction({
+export const updateScheduledCall = apiAction({
   method: api.updateScheduledCall,
   request: staticAction(constants.SCHEDULED_CALL_UPDATE_REQUEST),
   success: staticAction(constants.SCHEDULED_CALL_UPDATE_SUCCESS),
@@ -42,7 +42,7 @@ const updateScheduledCall = apiAction({
 });
 
 
-const removeScheduledCall = apiAction({
+export const removeScheduledCall = apiAction({
   method: api.removeScheduledCall,
   request: staticAction(constants.SCHEDULED_CALL_REMOVE_REQUEST),
   success: staticAction(constants.SCHEDULED_CALL_REMOVE_SUCCESS),
@@ -50,10 +50,10 @@ const removeScheduledCall = apiAction({
 });
 
 
-export {
-  listScheduledCalls,
-  fetchScheduledCall,
-  createScheduledCall,
-  updateScheduledCall,
-  removeScheduledCall,
-};
+export const addScheduledCall = staticAction(constants.SCHEDULED_CALL_ADD);
+
+
+export const chooseScheduledCall = scheduledCallId => ({
+  type: constants.SCHEDULED_CALL_CHOOSE,
+  payload: { scheduledCallId },
+});

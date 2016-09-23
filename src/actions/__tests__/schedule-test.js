@@ -21,6 +21,7 @@ import {
   fetchScheduledCall,
   updateScheduledCall,
   removeScheduledCall,
+  chooseScheduledCall,
 } from 'src/actions/schedule';
 
 const { ApiResponseError } = api;
@@ -79,6 +80,16 @@ describe('schedule/actions', () => {
         success: staticAction(constants.SCHEDULED_CALL_REMOVE_SUCCESS),
         failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_REMOVE_FAILURE)]],
       }))).toBe(true);
+    });
+  });
+
+  describe('chooseScheduledCall', () => {
+    it('should create an action for choosing a scheduled call', () => {
+      expect(chooseScheduledCall(23))
+        .toEqual({
+          type: constants.SCHEDULED_CALL_CHOOSE,
+          payload: { scheduledCallId: 23 },
+        });
     });
   });
 });
