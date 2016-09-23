@@ -19,6 +19,8 @@ import CategoryListContainer from 'src/containers/CategoryListContainer';
 import CategoryContainer from 'src/containers/CategoryContainer';
 import ActivityContainer from 'src/containers/ActivityContainer';
 
+import ChooseCategoryContainer from 'src/containers/ChooseCategoryContainer';
+
 import ScheduleDetailContainer from 'src/containers/ScheduleDetailContainer';
 import ScheduledListContainer from 'src/containers/ScheduledListContainer';
 import SchedulingCallContainer from 'src/container/SchedulingCallContainer';
@@ -51,6 +53,8 @@ export default fromPairs([
   [constants.ROUTE_CATEGORY_LIST, CategoryListContainer],
   [constants.ROUTE_CATEGORY, CategoryContainer],
   [constants.ROUTE_ACTIVITY, ActivityContainer],
+
+  [constants.ROUTE_CHOOSE_CATEGORY, ChooseCategoryContainer],
 
   [constants.ROUTE_SCHEDULE_CALL, ScheduleDetailContainer],
   [constants.ROUTE_SCHEDULED_CALLS, ScheduledListContainer],
