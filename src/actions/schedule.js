@@ -65,3 +65,7 @@ export const chooseScheduledCall = scheduledCallId => ({
   type: constants.SCHEDULED_CALL_CHOOSE,
   payload: { scheduledCallId },
 });
+
+
+export const chooseScheduledCallActivity = (
+  staticAction(constants.SCHEDULED_CALL_ACTIVITY_CHOOSE));
