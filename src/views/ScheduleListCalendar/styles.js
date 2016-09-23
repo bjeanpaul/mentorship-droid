@@ -1,20 +1,15 @@
-import React, { PropTypes } from 'react';
 import { StyleSheet } from 'react-native';
-import Calendar from 'react-native-calendar';
 
-import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 import colors from 'src/constants/colors';
+import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 
 
-const styles = StyleSheet.create({
+export default StyleSheet.create({
   calendarContainer: {
     flex: 1,
   },
   calendarControls: {
-    height: 60,
     backgroundColor: colors.CALENDAR_CONTROLS_BG,
-  },
-  controlButton: {
   },
   controlButtonText: {
     fontFamily: FONT.REGULAR,
@@ -22,6 +17,7 @@ const styles = StyleSheet.create({
     color: colors.CALENDAR_CONTROLS_TEXT,
   },
   title: {
+    paddingTop: 4,
     fontFamily: FONT.MEDIUM,
     fontWeight: FONT_WEIGHT.MEDIUM,
     fontSize: 20,
@@ -71,26 +67,13 @@ const styles = StyleSheet.create({
     width: 10,
     borderRadius: 10,
   },
+  currentDayText: {
+    color: colors.CALENDAR_CURRENT_DAY_TEXT,
+  },
   currentDayCircle: {
     backgroundColor: colors.CALENDAR_CURRENT_DAY_BG,
   },
+  selectedDayCircle: {
+    backgroundColor: colors.CALENDAR_SELECTED_DAY_BG,
+  },
 });
-
-const ScheduleListCalendar = ({
-  dates,
-  handleDateSelected,
-}) => (
-  <Calendar
-    eventDates={dates}
-    showControls
-    prevButtonText="<"
-    nextButtonText=">"
-    onDateSelect={handleDateSelected}
-    customStyle={styles}
-  />
-);
-ScheduleListCalendar.propTypes = {
-  dates: PropTypes.array.isRequired,
-  handleDateSelected: PropTypes.func.isRequired,
-};
-export default ScheduleListCalendar;
