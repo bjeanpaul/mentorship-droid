@@ -1,8 +1,5 @@
 import React, { PropTypes } from 'react';
-import { View } from 'react-native';
-
-import styles from './styles';
-import { BaseView, Text, Button, Header, HeaderIcon } from 'src/components';
+import { Failure } from 'src/components';
 
 
 // TODO: Button for redirecting.
@@ -11,31 +8,10 @@ import { BaseView, Text, Button, Header, HeaderIcon } from 'src/components';
 const LoadingFailure = ({
   onDismissPress,
 }) => (
-  <BaseView>
-    <Header style={Header.themes.orange}>
-      <HeaderIcon
-        uid="dismiss"
-        type={HeaderIcon.types.dismissLight}
-        onPress={onDismissPress}
-      />
-    </Header>
-
-    <View style={styles.container}>
-      <Text style={[Text.themes.light, styles.content]}>
-        Sorry, we seem to have an issue on our side preventing the application
-        from loading correctly.
-      </Text>
-
-      <Button
-        uid="back"
-        onPress={onDismissPress}
-        layout={[Button.layouts.stretch, styles.backButtonLayout]}
-        theme={Button.themes.light}
-      >
-        GO BACK
-      </Button>
-    </View>
-  </BaseView>
+  <Failure onDismissPress={onDismissPress}>
+    Sorry, we seem to have an issue on our side preventing the application
+    from loading correctly.
+  </Failure>
 );
 
 

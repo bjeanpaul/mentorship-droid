@@ -21,6 +21,7 @@ import NotFound from './NotFound';
 import Event from './Event';
 import MilestoneEvent from './MilestoneEvent';
 import FirstEvent from './FirstEvent';
+import Failure from './Failure';
 
 
 export {
@@ -48,4 +49,5 @@ export {
   Event,
   MilestoneEvent,
   FirstEvent,
+  Failure,
 };
