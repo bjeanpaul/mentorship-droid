@@ -3,9 +3,9 @@ env:
 - secure: teBBGzYfdXY+NCuWP+EqY8McBgDUHPKnZmlH/cLTr2doduxHJqCe5NSBBOnlgSCSExLX1K5gj0si0BixpAyE/BKATLnlzhFgP9d3emE2dSLLZtjCe0bt6+JMsnjqUMSo5zW2FepoLVE4UgQ1A9curOu0DooR8y2AJKhsdYluDFV9nfC6a4JgYlRkg+zHl/88vuzy63TawBH14mql5EdJ6FmJJvEqhaoULWUzS+RdYjCv3h/Kwp0ujg5hntnXFi3/JfAv+mkF3zrnh4QrtoFy4ZVshqhrBLRZKXoz3MAGzx/2w8yu6m0n77PBvhQRjZX6lo0fev6fOkWBCY3KiUpZjRmx8Sq4QXSD6Y/vRwQi+VfmCzBIulLGS0HeQkeXPjFBMDSUiOcDRzXRqQbE93MDF5ZfkYTbjIzgvSpeSUKmZj2bAarrODkmgVc31/x70rqK2vKfQ3XCZqXvK+kgdGGYh+WfJvfLQs29tNBr0D9JzlHw7Vva1472WSFK9POFfo9J1MQoOizAYi0z3mCgYicLgtE1cJlS3h0gmk4O/9dikK7l98tA3bm4JeG/UWrIaUirQNRUY9TVIbbZfKh6yc/PdCbJ2gGipnHJDAliiHqTaLOIQzDN/UILH4+/y68wd9YSwyX2+AtgEk4UpCLmLPOUlxSCaK3/EPeIyhGGUWbQcFE=
 before_install:
 - openssl aes-256-cbc -K $encrypted_34dbe72c01ad_key -iv $encrypted_34dbe72c01ad_iv
-  -in android/app/release.keystore.enc -out android/app/release.keystore -d
-- openssl aes-256-cbc -K $encrypted_34dbe72c01ad_key -iv $encrypted_34dbe72c01ad_iv
   -in android/app/google-services.json.enc -out android/app/google-services.json -d
+- openssl aes-256-cbc -K $encrypted_34dbe72c01ad_key -iv $encrypted_34dbe72c01ad_iv
+  -in android/app/release.keystore.enc -out android/app/release.keystore -d
 - nvm install 6
 - node --version
 install:
