@@ -3,6 +3,21 @@ import colors from 'src/constants/colors';
 
 
 export default StyleSheet.create({
+  calendarContainer: {
+    paddingBottom: 18,
+  },
+  addButton: {
+    position: 'absolute',
+    top: -28,
+    right: 16,
+    width: 56,
+    height: 56,
+    borderRadius: 56,
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 2,
+    backgroundColor: colors.BUTTON_BG,
+  },
   callInfoContainer: {
     flex: 0.25,
     padding: 20,

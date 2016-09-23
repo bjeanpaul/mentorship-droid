@@ -11,6 +11,7 @@ describe('ScheduleList', () => {
 
   const createComponent = (props = {}) => (
     <ScheduleList
+      onAddPress={noop}
       onCallChosen={noop}
       calls={[
         fakeScheduledCall({
@@ -66,7 +67,21 @@ describe('ScheduleList', () => {
     expect(el.toJSON()).toMatchSnapshot();
   });
 
-  it('should press onCallChosen if a call is chosen', () => {
+  it('should call onAddPress if the add button is pressed', () => {
+    const onAddPress = jest.fn();
+
+    const el = shallow(createComponent({
+      onAddPress,
+      calls: [],
+    }));
+
+    el.findWhere(uidEquals('add'))
+      .simulate('press');
+
+    expect(onAddPress.mock.calls).toEqual([[]]);
+  });
+
+  it('should call onCallChosen if a call is chosen', () => {
     now = '2016-09-22T12:40:09.880Z';
     const onCallChosen = jest.fn();
 
@@ -86,7 +101,7 @@ describe('ScheduleList', () => {
     expect(onCallChosen.mock.calls).toEqual([[call]]);
   });
 
-  it('should not press onCallChosen if there is no selected call', () => {
+  it('should not call onCallChosen if there is no selected call', () => {
     const onCallChosen = jest.fn();
 
     const el = shallow(createComponent({
@@ -101,7 +116,7 @@ describe('ScheduleList', () => {
     expect(onCallChosen.mock.calls).toEqual([]);
   });
 
-  it('should not press onCallChosen if the selected call time has passed', () => {
+  it('should not call onCallChosen if the selected call time has passed', () => {
     now = '2016-09-24T12:40:09.880Z';
     const onCallChosen = jest.fn();
 

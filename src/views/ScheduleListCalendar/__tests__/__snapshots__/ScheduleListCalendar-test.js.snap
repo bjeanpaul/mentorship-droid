@@ -2356,13 +2356,7 @@ exports[`ScheduleListCalendar should render 1`] = `
                     "justifyContent": "center",
                     "width": 28
                   },
-                  undefined,
-                  Object {
-                    "backgroundColor": "red"
-                  },
-                  Object {
-                    "backgroundColor": "#97c13c"
-                  }
+                  undefined
                 ]
               }>
               <Text
@@ -2378,12 +2372,7 @@ exports[`ScheduleListCalendar should render 1`] = `
                     Object {
                       "fontFamily": "Brandon Text",
                       "fontSize": 15
-                    },
-                    Object {
-                      "color": "white",
-                      "fontWeight": "bold"
-                    },
-                    undefined
+                    }
                   ]
                 }>
                 22
@@ -2452,7 +2441,13 @@ exports[`ScheduleListCalendar should render 1`] = `
                     "justifyContent": "center",
                     "width": 28
                   },
-                  undefined
+                  undefined,
+                  Object {
+                    "backgroundColor": "red"
+                  },
+                  Object {
+                    "backgroundColor": "#97c13c"
+                  }
                 ]
               }>
               <Text
@@ -2468,7 +2463,12 @@ exports[`ScheduleListCalendar should render 1`] = `
                     Object {
                       "fontFamily": "Brandon Text",
                       "fontSize": 15
-                    }
+                    },
+                    Object {
+                      "color": "white",
+                      "fontWeight": "bold"
+                    },
+                    undefined
                   ]
                 }>
                 23

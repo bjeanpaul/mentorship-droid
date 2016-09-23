@@ -1,11 +1,12 @@
 import moment from 'moment';
 import { find } from 'lodash';
 import React, { PropTypes } from 'react';
-import { View, TouchableNativeFeedback } from 'react-native';
+import { View, Image, TouchableNativeFeedback } from 'react-native';
 
 import Calendar from 'src/views/ScheduleListCalendar';
 import { BaseView, Label, Text } from 'src/components';
 
+import images from 'src/constants/images';
 import styles from 'src/views/ScheduleList/styles';
 
 
@@ -73,10 +74,21 @@ class ScheduleList extends React.Component {
   render() {
     return (
       <BaseView>
-        <Calendar
-          dates={this.props.calls.map(call => call.callTime)}
-          onDateSelect={this.onDateSelect}
-        />
+        <View style={styles.calendarContainer}>
+          <Calendar
+            dates={this.props.calls.map(call => call.callTime)}
+            onDateSelect={this.onDateSelect}
+          />
+        </View>
+
+        <View>
+          <TouchableNativeFeedback uid="add" onPress={this.props.onAddPress}>
+            <View style={styles.addButton}>
+              <Image source={images.PLUS_LIGHT} />
+            </View>
+          </TouchableNativeFeedback>
+        </View>
+
         {this.renderCallInfo()}
       </BaseView>
     );
@@ -87,6 +99,7 @@ class ScheduleList extends React.Component {
 ScheduleList.propTypes = {
   initialSelectedDate: PropTypes.string,
 
+  onAddPress: PropTypes.func.isRequired,
   onCallChosen: PropTypes.func.isRequired,
 
   calls: PropTypes.arrayOf(PropTypes.shape({

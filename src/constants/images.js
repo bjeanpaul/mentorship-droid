@@ -1,3 +1,4 @@
+import PLUS_LIGHT from 'app/assets/plus.png';
 import ONBOARDING_LANDING from 'app/assets/Landing.png';
 import PROFILE_FACE from 'app/assets/Profile.png';
 import PROFILE_FACE_ADD from 'app/assets/Profile_Add.png';
@@ -36,6 +37,7 @@ import OVERLAY_DONE from 'app/assets/done-icon.png';
 
 
 export default {
+  PLUS_LIGHT,
   ONBOARDING_LANDING,
   PROFILE_FACE,
   PROFILE_FACE_ADD,
