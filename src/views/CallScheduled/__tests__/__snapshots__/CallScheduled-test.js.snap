@@ -1,0 +1,60 @@
+exports[`CallScheduled should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      Object {
+        "backgroundColor": "rgba(246, 111, 63, 0.95)"
+      }
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16
+        },
+        Object {}
+      ]
+    } />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 64
+      }
+    }>
+    <Image
+      source={1} />
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "color": undefined,
+            "fontSize": 20
+          }
+        ]
+      }>
+      Call Scheduled
+    </Text>
+  </View>
+</View>
+`;
