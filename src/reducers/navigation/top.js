@@ -104,6 +104,29 @@ export default (state = createStack([
       return push(state, route);
     }
 
+    case schedule.SCHEDULED_CALL_ACTIVITY_CHOOSE: {
+      const route = createRoute(routes.ROUTE_CHOOSE_CATEGORY);
+      return push(state, route);
+    }
+
+    case schedule.SCHEDULED_CALL_PATCH_REQUEST:
+    case schedule.SCHEDULED_CALL_CREATE_REQUEST: {
+      const route = createRoute(routes.ROUTE_SCHEDULING_CALL);
+      return push(state, route);
+    }
+
+    case schedule.SCHEDULED_CALL_PATCH_FAILURE:
+    case schedule.SCHEDULED_CALL_CREATE_FAILURE: {
+      const route = createRoute(routes.ROUTE_CALL_SCHEDULE_FAILURE);
+      return replaceAt(state, routes.ROUTE_SCHEDULING_CALL, route);
+    }
+
+    case schedule.SCHEDULED_CALL_PATCH_SUCCESS:
+    case schedule.SCHEDULED_CALL_CREATE_SUCCESS: {
+      const route = createRoute(routes.ROUTE_CALL_SCHEDULED);
+      return replaceAt(state, routes.ROUTE_SCHEDULING_CALL, route);
+    }
+
     default:
       return state;
   }

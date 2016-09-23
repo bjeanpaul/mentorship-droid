@@ -1,4 +1,4 @@
-import { partialRight as partial, isFunction } from 'lodash';
+import { partialRight as partial, isFunction, camelCase } from 'lodash';
 import { switchError } from 'src/helpers';
 
 
@@ -7,12 +7,24 @@ export const apiAction = ({
   request,
   success,
   failures,
-}) => (...args) => (dispatch, { auth }) => Promise.resolve()
-  .then(() => request(...args))
-  .then(dispatch)
-  .then(() => method(...args, auth))
-  .then(partial(success, ...args), partial(switchError(failures), ...args))
-  .then(dispatch);
+}) => {
+  const fn = (...args) => (dispatch, { auth }) => Promise.resolve()
+    .then(() => request(...args))
+    .then(dispatch)
+    .then(() => method(...args, auth))
+    .then(partial(success, ...args), partial(switchError(failures), ...args))
+    .then(dispatch);
+
+  fn.request = request;
+  fn.success = success;
+  fn.failures = {};
+
+  failures.forEach(([type, failure]) => {
+    fn.failures[camelCase(type.name)] = failure;
+  });
+
+  return fn;
+};
 
 
 export const staticAction = type => () => ({
