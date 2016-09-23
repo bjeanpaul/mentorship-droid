@@ -42,6 +42,14 @@ export const updateScheduledCall = apiAction({
 });
 
 
+export const patchScheduledCall = apiAction({
+  method: api.patchScheduledCall,
+  request: staticAction(constants.SCHEDULED_CALL_PATCH_REQUEST),
+  success: staticAction(constants.SCHEDULED_CALL_PATCH_SUCCESS),
+  failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_PATCH_FAILURE)]],
+});
+
+
 export const removeScheduledCall = apiAction({
   method: api.removeScheduledCall,
   request: staticAction(constants.SCHEDULED_CALL_REMOVE_REQUEST),
