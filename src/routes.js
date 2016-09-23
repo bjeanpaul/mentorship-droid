@@ -23,9 +23,9 @@ import ChooseCategoryContainer from 'src/containers/ChooseCategoryContainer';
 
 import ScheduleDetailContainer from 'src/containers/ScheduleDetailContainer';
 import ScheduledListContainer from 'src/containers/ScheduledListContainer';
-import SchedulingCallContainer from 'src/container/SchedulingCallContainer';
-import CallScheduled from 'src/container/CallScheduled';
-import CallScheduleFailure from 'src/container/CallScheduleFailure';
+import SchedulingCallContainer from 'src/containers/SchedulingCallContainer';
+import CallScheduledContainer from 'src/containers/CallScheduledContainer';
+import CallScheduleFailureContainer from 'src/containers/CallScheduleFailureContainer';
 
 import StartCallContainer from 'src/containers/StartCallContainer';
 import ConnectingCallContainer from 'src/containers/ConnectingCallContainer';
@@ -59,8 +59,8 @@ export default fromPairs([
   [constants.ROUTE_SCHEDULE_CALL, ScheduleDetailContainer],
   [constants.ROUTE_SCHEDULED_CALLS, ScheduledListContainer],
   [constants.ROUTE_SCHEDULING_CALL, SchedulingCallContainer],
-  [constants.ROUTE_CALL_SCHEDULED, CallScheduled],
-  [constants.ROUTE_CALL_SCHEDULE_FAILURE, CallScheduleFailure],
+  [constants.ROUTE_CALL_SCHEDULED, CallScheduledContainer],
+  [constants.ROUTE_CALL_SCHEDULE_FAILURE, CallScheduleFailureContainer],
 
   [constants.ROUTE_START_CALL, StartCallContainer],
   [constants.ROUTE_CONNECTING_CALL, ConnectingCallContainer],
