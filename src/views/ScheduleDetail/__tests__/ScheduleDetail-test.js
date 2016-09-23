@@ -40,37 +40,34 @@ describe('ScheduleDetail', () => {
   });
 
   it('should render the done button disabled if the date or time are not given', () => {
-    const el = render(createComponent());
+    const el = shallow(createComponent());
 
-    expect(el.toJSON()).toMatchSnapshot();
+    expect(el.findWhere(uidEquals('done')).prop('disabled')).toBe(true);
 
-    el.getInstance()
-      .setState({
-        date: {
-          year: 1990,
-          month: 2,
-          day: 3,
-        },
-      });
+    el.setState({
+      date: {
+        year: 1990,
+        month: 2,
+        day: 3,
+      },
+    });
 
-    expect(el.toJSON()).toMatchSnapshot();
+    expect(el.findWhere(uidEquals('done')).prop('disabled')).toBe(true);
 
-    el.getInstance()
-      .setState({
-        time: {
-          hour: 13,
-          minute: 23,
-        },
-      });
+    el.setState({
+      time: {
+        hour: 13,
+        minute: 23,
+      },
+    });
 
-    expect(el.toJSON()).toMatchSnapshot();
+    expect(el.findWhere(uidEquals('done')).prop('disabled')).toBe(false);
 
-    el.getInstance()
-      .setState({
-        date: null,
-      });
+    el.setState({
+      date: null,
+    });
 
-    expect(el.toJSON()).toMatchSnapshot();
+    expect(el.findWhere(uidEquals('done')).prop('disabled')).toBe(true);
   });
 
   it('should parse initialCallTime prop into state if given', () => {
