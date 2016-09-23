@@ -1,7 +1,7 @@
 import moment from 'moment';
 import { find } from 'lodash';
 import React, { PropTypes } from 'react';
-import { View, Image, TouchableNativeFeedback } from 'react-native';
+import { View, Image, TouchableNativeFeedback, TouchableWithoutFeedback } from 'react-native';
 
 import Calendar from 'src/views/ScheduleListCalendar';
 import { BaseView, Label, Text } from 'src/components';
@@ -82,11 +82,11 @@ class ScheduleList extends React.Component {
         </View>
 
         <View>
-          <TouchableNativeFeedback uid="add" onPress={this.props.onAddPress}>
+          <TouchableWithoutFeedback uid="add" onPress={this.props.onAddPress}>
             <View style={styles.addButton}>
               <Image source={images.PLUS_LIGHT} />
             </View>
-          </TouchableNativeFeedback>
+          </TouchableWithoutFeedback>
         </View>
 
         {this.renderCallInfo()}
