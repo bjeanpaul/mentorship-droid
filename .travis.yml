@@ -20,8 +20,8 @@ android:
   - extra-google-m2repository
   - addon-google_apis-google-16
 script:
-- npm run ci
-- cd android && ./gradlew assembleRelease
+#- npm run ci
+- cd android && ./gradlew assembleRelease -PdisablePreDex
 deploy:
   provider: releases
   api_key:
