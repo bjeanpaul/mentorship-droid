@@ -1,5 +1,23 @@
 import { connect } from 'react-redux';
-import NotYetImplemented from 'src/views/NotYetImplemented';
+
+import ScheduleList from 'src/views/ScheduleList';
+import { getScheduledCalls, getActivity } from 'src/stores/helpers';
+import { addScheduledCall, chooseScheduledCall } from 'src/actions/schedule';
 
 
-export default connect()(NotYetImplemented);
+export const mapStateToProps = state => ({
+  calls: getScheduledCalls(state)
+    .map(({ activity, ...call }) => ({
+      ...call,
+      activity: activity && getActivity(state, activity),
+    })),
+});
+
+
+const propsToActions = {
+  onAddPress: addScheduledCall,
+  onCallChosen: chooseScheduledCall,
+};
+
+
+export default connect(mapStateToProps, propsToActions)(ScheduleList);
