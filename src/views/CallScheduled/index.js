@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { OverlayCompleted } from 'src/components';
 
 
-const CallScheduled = () => (
-  <OverlayCompleted title="Call Scheduled" />
+const CallScheduled = ({ onDismissPress }) => (
+  <OverlayCompleted title="Call Scheduled" onDismissPress={onDismissPress} />
 );
+
+
+CallScheduled.propTypes = {
+  onDismissPress: PropTypes.func.isRequired,
+};
 
 
 export default CallScheduled;
