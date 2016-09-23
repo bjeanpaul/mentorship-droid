@@ -37,6 +37,9 @@ export const getCategory = ({ entities: { categories } }, id) => categories[id];
 export const getActivity = ({ entities: { activities } }, id) => activities[id];
 
 
+export const getScheduledCalls = ({ entities: { scheduledCalls } }) => values(scheduledCalls);
+
+
 export const getScheduledCall = ({ entities: { scheduledCalls } }, id) => scheduledCalls[id];
 
 
