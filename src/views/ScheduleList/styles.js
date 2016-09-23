@@ -4,6 +4,7 @@ import colors from 'src/constants/colors';
 
 export default StyleSheet.create({
   calendarContainer: {
+    flex: 0.80,
     paddingBottom: 18,
   },
   addButton: {
@@ -19,7 +20,7 @@ export default StyleSheet.create({
     backgroundColor: colors.BUTTON_BG,
   },
   callInfoContainer: {
-    flex: 0.25,
+    flex: 0.20,
     padding: 20,
     backgroundColor: colors.SCHEDULE_INFO_CALL_INFO_BG,
     justifyContent: 'flex-start',
