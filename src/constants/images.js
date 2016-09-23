@@ -3,6 +3,7 @@ import ONBOARDING_LANDING from 'app/assets/Landing.png';
 import PROFILE_FACE from 'app/assets/Profile.png';
 import PROFILE_FACE_ADD from 'app/assets/Profile_Add.png';
 import BACK_LIGHT from 'app/assets/back-light.png';
+import BACK_DARK from 'app/assets/Back_Gray.png';
 import BACK_ORANGE from 'app/assets/back-orange.png';
 import DISMISS_LIGHT from 'app/assets/close-light.png';
 import DISMISS_DARK from 'app/assets/close_gray.png';
@@ -42,6 +43,7 @@ export default {
   PROFILE_FACE,
   PROFILE_FACE_ADD,
   BACK_LIGHT,
+  BACK_DARK,
   BACK_ORANGE,
   DISMISS_LIGHT,
   DISMISS_DARK,
