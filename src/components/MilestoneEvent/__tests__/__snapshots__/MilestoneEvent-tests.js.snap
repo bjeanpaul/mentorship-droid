@@ -3,16 +3,38 @@ exports[`MilestoneEvent should render the props 1`] = `
   style={
     Array [
       Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 4,
+        "margin": 24,
+        "marginTop": 0,
+        "padding": 20,
+        "paddingLeft": 16,
+        "paddingRight": 16
+      },
+      Object {
         "backgroundColor": "blue"
       }
     ]
   }>
-  <Image
-    source={
+  <View
+    style={
       Object {
-        "uri": "image.png"
+        "alignSelf": "center",
+        "backgroundColor": "#fff",
+        "borderRadius": 66,
+        "height": 112,
+        "marginBottom": 20,
+        "overflow": "hidden",
+        "width": 112
       }
-    } />
+    }>
+    <Image
+      source={
+        Object {
+          "uri": "image.png"
+        }
+      } />
+  </View>
   <Text
     accessible={true}
     allowFontScaling={true}
@@ -25,7 +47,10 @@ exports[`MilestoneEvent should render the props 1`] = `
           "fontSize": 13,
           "textAlign": "center"
         },
-        undefined
+        Object {
+          "color": "rgba(0, 0, 0, 0.35)",
+          "fontSize": 16
+        }
       ]
     }>
     Milestone Reached
@@ -42,7 +67,10 @@ exports[`MilestoneEvent should render the props 1`] = `
           "fontSize": 13,
           "textAlign": "center"
         },
-        undefined
+        Object {
+          "color": "#fff",
+          "fontSize": 24
+        }
       ]
     }>
     pew pew pew

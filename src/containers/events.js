@@ -2,7 +2,7 @@ import { fromPairs } from 'lodash';
 import {
   EVENT_TYPE_SCHEDULED_CALL_CREATED,
   EVENT_TYPE_ACTIVITIY_CATEGORY_COMPLETED,
-} from 'src/constants/events';
+} from 'src/constants/event';
 
 
 import ScheduledCallEventContainer from 'src/containers/ScheduledCallEventContainer';
