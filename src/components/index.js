@@ -24,7 +24,6 @@ import MilestoneEvent from './MilestoneEvent';
 
 export {
   BaseView,
-  Toolbar,
   Text,
   Label,
   Link,
