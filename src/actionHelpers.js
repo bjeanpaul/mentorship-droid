@@ -6,7 +6,7 @@ export const apiAction = ({
   method,
   request,
   success,
-  failures,
+  failures = [],
 }) => {
   const fn = (...args) => (dispatch, { auth }) => Promise.resolve()
     .then(() => request(...args))
