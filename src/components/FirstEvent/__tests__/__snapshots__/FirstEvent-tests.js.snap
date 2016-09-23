@@ -1,0 +1,90 @@
+exports[`FirstEvent should render the props 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "borderRadius": 4,
+      "margin": 24,
+      "marginTop": 12,
+      "padding": 20,
+      "paddingLeft": 16,
+      "paddingRight": 16
+    }
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        Object {
+          "fontFamily": "Brandon Text_bold",
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "marginBottom": 16,
+          "textAlign": "left"
+        }
+      ]
+    }>
+    Hello 
+    John Wurst
+    !
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        Object {
+          "fontSize": 18,
+          "marginBottom": 24,
+          "textAlign": "left"
+        }
+      ]
+    }>
+    This is the start of something amazing! Your Mentor’s journey will be documented here.
+  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ffbcbc",
+          "borderColor": "red",
+          "borderWidth": 1,
+          "height": 100,
+          "justifyContent": "center",
+          "margin": 10,
+          "width": 300
+        },
+        undefined
+      ]
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#333333",
+          "margin": 20
+        }
+      }>
+      TouchableNativeFeedback is not supported on this platform!
+    </Text>
+  </View>
+</View>
+`;

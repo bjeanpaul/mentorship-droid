@@ -5,6 +5,7 @@ import {
   fakeActivity,
   fakeCategory,
   fakeScheduledCall,
+  fakeEvent,
 } from 'app/scripts/helpers';
 
 import {
@@ -16,6 +17,7 @@ import {
   getActivity,
   getScheduledCall,
   getScheduledCallActivity,
+  getEvents,
 } from 'src/stores/helpers';
 
 
@@ -137,6 +139,19 @@ describe('helpers', () => {
     });
   });
 
+  describe('getEvents', () => {
+    it('should get a list of events', () => {
+      const state = fakeState();
+      state.entities.events = {
+        1: fakeEvent({ id: 1 }),
+        3: fakeEvent({ id: 3 }),
+      };
+      expect(getEvents(state)).toEqual([
+        fakeEvent({ id: 1 }),
+        fakeEvent({ id: 3 }),
+      ]);
+    });
+  });
 
   describe('getScheduledCall', () => {
     it('should get the scheduled call for the given id', () => {

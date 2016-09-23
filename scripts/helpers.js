@@ -71,6 +71,7 @@ export const fakeScheduledCall = data => ({
 
 export const fakeProfile = data => ({
   id: 23,
+  firstName: 'Rodger',
   ...data,
 });
 
@@ -80,6 +81,7 @@ export const fakeEvent = data => ({
   occuredAt: Date.parse('2016-09-16T11:19:17.368442Z'),
   eventType: EVENT_TYPE_SCHEDULED_CALL_CREATED,
   objectId: 23,
+  description: 'Im a big fake',
   ...data,
 });
 
@@ -115,7 +117,7 @@ export const fakeContext = (overrides = {}) => merge(getContext(fakeState()), ov
 export const fakeStore = {
   subscribe: () => {},
   dispatch: () => {},
-  getState: () => {},
+  getState: () => fakeState(),
 };
 
 
