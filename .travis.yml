@@ -1,12 +1,10 @@
 language: android
 env:
-- MYAPP_RELEASE_STORE_FILE=travis.keystore
-  MYAPP_RELEASE_KEY_ALIAS=my-key-alias
-  MYAPP_RELEASE_STORE_PASSWORD=123456
+- MYAPP_RELEASE_STORE_FILE=travis.keystore MYAPP_RELEASE_KEY_ALIAS=my-key-alias MYAPP_RELEASE_STORE_PASSWORD=123456
   MYAPP_RELEASE_KEY_PASSWORD=123456
 before_install:
-- openssl aes-256-cbc -K $encrypted_34dbe72c01ad_key -iv $encrypted_34dbe72c01ad_iv
-  -in google-services.json.enc -out google-services.json -d
+- openssl aes-256-cbc -K $encrypted_c3182a2d3bfa_key -iv $encrypted_c3182a2d3bfa_iv
+  -in android/app/google-services.json.enc -out android/app/google-services.json -d
 - nvm install 6
 - node --version
 install:
