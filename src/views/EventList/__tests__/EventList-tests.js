@@ -20,7 +20,7 @@ describe('EventList', () => {
       events: [
         fakeEvent({
           id: 1,
-          occuredAt: Date.parse('2008-08-08T10:00Z'),
+          occuredAt: '2008-08-08T10:00Z',
           eventType: 'fake-event-type',
         }),
       ],

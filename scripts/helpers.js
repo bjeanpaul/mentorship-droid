@@ -60,8 +60,8 @@ export const fakeActivity = data => ({
 
 export const fakeScheduledCall = data => ({
   id: 1,
-  createdAt: Date.parse('2016-09-16T11:27:25.454520Z'),
-  callTime: Date.parse('2016-09-16T11:27:14Z'),
+  createdAt: '2016-09-16T11:27:25.454520Z',
+  callTime: '2016-09-16T11:27:14Z',
   caller: 23,
   callee: 1,
   activity: null,
@@ -78,7 +78,7 @@ export const fakeProfile = data => ({
 
 export const fakeEvent = data => ({
   id: 23,
-  occuredAt: Date.parse('2016-09-16T11:19:17.368442Z'),
+  occuredAt: '2016-09-16T11:19:17.368442Z',
   eventType: EVENT_TYPE_SCHEDULED_CALL_CREATED,
   objectId: 23,
   description: 'Im a big fake',
