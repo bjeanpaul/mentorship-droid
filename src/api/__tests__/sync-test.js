@@ -1,7 +1,8 @@
 jest
   .mock('src/api/categories')
   .mock('src/api/activities')
-  .mock('src/api/schedule');
+  .mock('src/api/schedule')
+  .mock('src/api/events');
 
 
 import { merge } from 'lodash';
