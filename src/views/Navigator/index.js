@@ -23,7 +23,7 @@ class Navigator extends Component {
 
   onTabChange(tab) {
     this.setState({ activeTab: tab }, () =>
-      this.props.onChangeTab && this.props.onChangeTab(this.state.activeTab)
+      this.props.onTabChanged && this.props.onTabChanged(this.state.activeTab)
     );
   }
 
@@ -53,7 +53,7 @@ class Navigator extends Component {
 Navigator.propTypes = {
   routes: PropTypes.object.isRequired,
   navigationStates: PropTypes.object.isRequired,
-  onChangeTab: PropTypes.func,
+  onTabChanged: PropTypes.func,
   initialActiveTab: PropTypes.oneOf([
     constants.NAV_TAB_ACTIVITIES,
     constants.NAV_TAB_CHAT,

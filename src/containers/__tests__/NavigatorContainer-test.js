@@ -1,5 +1,5 @@
 import { fromPairs } from 'lodash';
-import { mapStateToProps } from 'src/containers/NavigatorContainer';
+import { mapStateToProps, mapDispatchToProps } from 'src/containers/NavigatorContainer';
 import * as constants from 'src/constants/navigation';
 
 
@@ -20,6 +20,16 @@ describe('NavigatorContainer', () => {
           [constants.NAV_TAB_SCHEDULED_CALLS, 'SCHEDULED_CALLS_STACK'],
         ]),
       }));
+    });
+  });
+
+
+  describe('mapDispatchToProps', () => {
+    it('should dispatch the entered tab when a tab is selected', () => {
+      expect(mapDispatchToProps.onTabChanged(constants.NAV_TAB_JOURNEY))
+      .toEqual({
+        type: constants.NAV_TAB_JOURNEY_ENTERED,
+      });
     });
   });
 });

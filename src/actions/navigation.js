@@ -10,3 +10,8 @@ export const changeNavTab = tab => ({
   type: constants.NAV_TAB_CHANGE,
   payload: { tab },
 });
+
+
+export const navTabEntered = type => ({
+  type,
+});
