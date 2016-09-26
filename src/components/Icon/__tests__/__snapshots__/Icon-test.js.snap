@@ -1,0 +1,29 @@
+exports[`Icon should render its \`backLight\` type 1`] = `
+<Image
+  source={1}
+  style={
+    Array [
+      Object {
+        "height": 24,
+        "width": 24
+      },
+      Object {}
+    ]
+  } />
+`;
+
+exports[`Icon should support style overriding 1`] = `
+<Image
+  source={1}
+  style={
+    Array [
+      Object {
+        "height": 24,
+        "width": 24
+      },
+      Object {
+        "backgroundColor": "#333"
+      }
+    ]
+  } />
+`;

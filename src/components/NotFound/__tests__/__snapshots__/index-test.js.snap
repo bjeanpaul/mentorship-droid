@@ -1,0 +1,10 @@
+exports[`Not Found should render with a warning message 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail">
+    You have stumbled into an unknown realm of the application. This is certainly a bug, and something that you should never have seen.
+  </Text>
+</View>
+`;

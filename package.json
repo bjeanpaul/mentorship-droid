@@ -1,0 +1,67 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "logs": "adb logcat *:S ReactNative:V ReactNativeJS:V",
+    "test": "NODE_ENV=test jest",
+    "test:watch": "NODE_ENV=test jest --watch",
+    "lint": "eslint index.android.js 'src/**/*.js'",
+    "ci": "npm run lint && npm test"
+  },
+  "dependencies": {
+    "axios": "^0.13.1",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "color-convert": "^1.5.0",
+    "deep-map-keys": "^1.2.0",
+    "lodash": "^4.14.0",
+    "moment": "^2.12.0",
+    "normalizr": "^2.2.1",
+    "promise-each-concurrency": "^1.1.0",
+    "react": "^15.3.1",
+    "react-native": "^0.33.0",
+    "react-native-calendar": "https://github.com/peterp/react-native-calendar/tarball/43ef42c6a5819377a4f6fd32f2a3f1cce73ab735",
+    "react-native-fcm": "^2.0.3",
+    "react-redux": "^4.4.5",
+    "redux": "^3.4.0",
+    "redux-thunk": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.7.5",
+    "babel-eslint": "^6.1.2",
+    "babel-polyfill": "^6.7.4",
+    "enzyme": "^2.4.1",
+    "eslint": "^2.3.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-react": "^4.2.1",
+    "immediate-promise": "^1.1.0",
+    "isomorphic-fetch": "^2.2.1",
+    "jest": "^15.1.1",
+    "jest-react-native": "^15.0.0",
+    "moment-timezone": "^0.5.5",
+    "promise-defer": "^1.0.0",
+    "react-addons-test-utils": "~15.2.1",
+    "react-dom": "^15.3.1",
+    "react-test-renderer": "^15.3.1",
+    "redux-logger": "^2.6.1"
+  },
+  "//": [
+    "TODO remove jest-react-native preprocessor ignore once github.com/facebook/jest/issues/1476 is resolved"
+  ],
+  "jest": {
+    "preset": "jest-react-native",
+    "setupTestFrameworkScriptFile": "scripts/jest/environment.js",
+    "globals": {
+      "__DEV__": true
+    },
+    "preprocessorIgnorePatterns": [
+      "node_modules/jest-react-native"
+    ],
+    "moduleNameMapper": {
+      "react-dom": "<rootDir>/scripts/jest/image-stub.js",
+      "react-compat": "<rootDir>/scripts/jest/image-stub.js",
+      "^.*\\.png$": "<rootDir>/scripts/jest/image-stub.js"
+    }
+  }
+}

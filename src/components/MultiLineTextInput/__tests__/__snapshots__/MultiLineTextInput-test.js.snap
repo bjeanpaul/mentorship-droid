@@ -1,0 +1,41 @@
+exports[`MultiLineTextInput should render correctly 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#dfe5e6",
+          "marginBottom": 27,
+          "marginLeft": 24,
+          "marginRight": 24
+        },
+        false
+      ]
+    }>
+    <TextInput
+      multiline={true}
+      onBlur={[Function onBlur]}
+      onChange={[Function onChange]}
+      onChangeText={[Function onChangeText]}
+      onFocus={[Function onFocus]}
+      placeholderTextColor="#c0cbcc"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 18,
+            "lineHeight": 28,
+            "marginBottom": 8,
+            "padding": 0
+          },
+          Object {
+            "height": 32
+          }
+        ]
+      }
+      underlineColorAndroid="transparent" />
+  </View>
+</View>
+`;

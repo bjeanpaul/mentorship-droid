@@ -1,0 +1,385 @@
+exports[`Navigator should render the currently active tab 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1
+    }
+  }>
+  <View
+    onLayout={[Function bound _onLayout]}
+    style={
+      Array [
+        Object {
+          "flex": 1
+        },
+        undefined
+      ]
+    }>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "column-reverse"
+        }
+      }>
+      <View
+        style={
+          Object {
+            "flex": 1
+          }
+        }>
+        <View
+          onMoveShouldSetResponder={[Function onMoveShouldSetResponder]}
+          onMoveShouldSetResponderCapture={[Function onMoveShouldSetResponderCapture]}
+          onResponderEnd={[Function onResponderEnd]}
+          onResponderGrant={[Function onResponderGrant]}
+          onResponderMove={[Function onResponderMove]}
+          onResponderReject={[Function onResponderReject]}
+          onResponderRelease={[Function onResponderRelease]}
+          onResponderStart={[Function onResponderStart]}
+          onResponderTerminate={[Function onResponderTerminate]}
+          onResponderTerminationRequest={[Function onResponderTerminationRequest]}
+          onStartShouldSetResponder={[Function onStartShouldSetResponder]}
+          onStartShouldSetResponderCapture={[Function onStartShouldSetResponderCapture]}
+          pointerEvents="auto"
+          style={
+            Object {
+              "backgroundColor": "#E9E9EF",
+              "bottom": 0,
+              "left": 0,
+              "opacity": 1,
+              "position": "absolute",
+              "right": 0,
+              "shadowColor": "black",
+              "shadowOffset": Object {
+                "height": 0,
+                "width": 0
+              },
+              "shadowOpacity": 0.4,
+              "shadowRadius": 10,
+              "top": 0,
+              "transform": Array [
+                Object {
+                  "translateX": 0
+                },
+                Object {
+                  "translateY": 0
+                }
+              ]
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                  "fontSize": 13,
+                  "textAlign": "center"
+                },
+                undefined
+              ]
+            }>
+            B
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "borderTopColor": "#dfe5e6",
+        "borderTopWidth": 1,
+        "flexDirection": "row",
+        "height": 56,
+        "justifyContent": "space-between"
+      }
+    }>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Navigator should render the currently active tab 2`] = `
+<View
+  style={
+    Object {
+      "flex": 1
+    }
+  }>
+  <View
+    onLayout={[Function bound _onLayout]}
+    style={
+      Array [
+        Object {
+          "flex": 1
+        },
+        undefined
+      ]
+    }>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "column-reverse"
+        }
+      }>
+      <View
+        style={
+          Object {
+            "flex": 1
+          }
+        }>
+        <View
+          onMoveShouldSetResponder={[Function onMoveShouldSetResponder]}
+          onMoveShouldSetResponderCapture={[Function onMoveShouldSetResponderCapture]}
+          onResponderEnd={[Function onResponderEnd]}
+          onResponderGrant={[Function onResponderGrant]}
+          onResponderMove={[Function onResponderMove]}
+          onResponderReject={[Function onResponderReject]}
+          onResponderRelease={[Function onResponderRelease]}
+          onResponderStart={[Function onResponderStart]}
+          onResponderTerminate={[Function onResponderTerminate]}
+          onResponderTerminationRequest={[Function onResponderTerminationRequest]}
+          onStartShouldSetResponder={[Function onStartShouldSetResponder]}
+          onStartShouldSetResponderCapture={[Function onStartShouldSetResponderCapture]}
+          pointerEvents="auto"
+          style={
+            Object {
+              "backgroundColor": "#E9E9EF",
+              "bottom": 0,
+              "left": 0,
+              "opacity": 1,
+              "position": "absolute",
+              "right": 0,
+              "shadowColor": "black",
+              "shadowOffset": Object {
+                "height": 0,
+                "width": 0
+              },
+              "shadowOpacity": 0.4,
+              "shadowRadius": 10,
+              "top": 0,
+              "transform": Array [
+                Object {
+                  "translateX": 0
+                },
+                Object {
+                  "translateY": 0
+                }
+              ]
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                  "fontSize": 13,
+                  "textAlign": "center"
+                },
+                undefined
+              ]
+            }>
+            A
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "borderTopColor": "#dfe5e6",
+        "borderTopWidth": 1,
+        "flexDirection": "row",
+        "height": 56,
+        "justifyContent": "space-between"
+      }
+    }>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+  </View>
+</View>
+`;

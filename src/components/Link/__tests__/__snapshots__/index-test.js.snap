@@ -1,0 +1,58 @@
+exports[`Link should render its children 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  onPress={[Function foo]}
+  style={
+    Array [
+      Object {
+        "color": "#003035",
+        "fontFamily": "Brandon Text",
+        "fontSize": 13,
+        "textAlign": "center"
+      },
+      Array [
+        Object {
+          "color": "#f77040",
+          "fontSize": 14
+        },
+        undefined
+      ]
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail">
+    Woop, hoop, poop.
+  </Text>
+</Text>
+`;
+
+exports[`Link should support style overriding 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  onPress={[Function foo]}
+  style={
+    Array [
+      Object {
+        "color": "#003035",
+        "fontFamily": "Brandon Text",
+        "fontSize": 13,
+        "textAlign": "center"
+      },
+      Array [
+        Object {
+          "color": "#f77040",
+          "fontSize": 14
+        },
+        Object {
+          "fontSize": 23
+        }
+      ]
+    ]
+  } />
+`;
