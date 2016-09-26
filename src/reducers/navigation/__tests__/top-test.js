@@ -9,7 +9,10 @@ import * as calls from 'src/actions/calls';
 import * as callNotes from 'src/actions/callNotes';
 import * as journey from 'src/actions/journey';
 import * as schedule from 'src/actions/schedule';
-import { createStack, createRoute, push, pop, replaceAt } from 'src/navigationHelpers';
+
+import {
+  createDummyRoute, createStack, createRoute, push, pop, replaceAt,
+} from 'src/navigationHelpers';
 
 
 describe('src/reducers/navigation/top', () => {
@@ -206,19 +209,32 @@ describe('src/reducers/navigation/top', () => {
   });
 
   describe('SCHEDULED_CALL_PATCH_SUCCESS', () => {
-    it('should replace the scheduling route with the failure route', () => {
-      const state = push(createStack(), createRoute(routes.ROUTE_SCHEDULING_CALL));
+    it('should replace the schedule and scheduling routes with the success route', () => {
+      const state = createStack([
+        createRoute(routes.ROUTE_SCHEDULE_CALL),
+        createRoute(routes.ROUTE_SCHEDULING_CALL),
+      ]);
 
       expect(reduce(state, schedule.patchScheduledCall.success()))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_CALL_SCHEDULED)));
+        .toEqual(createStack([
+          createDummyRoute(createDummyRoute.index),
+          createRoute(routes.ROUTE_CALL_SCHEDULED),
+        ]));
     });
   });
 
   describe('SCHEDULED_CALL_CREATE_SUCCESS', () => {
-    it('should replace the scheduling route with the failure route', () => {
-      const state = push(createStack(), createRoute(routes.ROUTE_SCHEDULING_CALL));
-      expect(reduce(state, schedule.createScheduledCall.success()))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_CALL_SCHEDULED)));
+    it('should replace the schedule and scheduling routes with the success route', () => {
+      const state = createStack([
+        createRoute(routes.ROUTE_SCHEDULE_CALL),
+        createRoute(routes.ROUTE_SCHEDULING_CALL),
+      ]);
+
+      expect(reduce(state, schedule.patchScheduledCall.success()))
+        .toEqual(createStack([
+          createDummyRoute(createDummyRoute.index),
+          createRoute(routes.ROUTE_CALL_SCHEDULED),
+        ]));
     });
   });
 });

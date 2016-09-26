@@ -16,6 +16,7 @@ import {
   push,
   pop,
   replaceAt,
+  remove,
   createStack,
   createRoute,
 } from 'src/navigationHelpers';
@@ -124,7 +125,8 @@ export default (state = createStack([
     case schedule.SCHEDULED_CALL_PATCH_SUCCESS:
     case schedule.SCHEDULED_CALL_CREATE_SUCCESS: {
       const route = createRoute(routes.ROUTE_CALL_SCHEDULED);
-      return replaceAt(state, routes.ROUTE_SCHEDULING_CALL, route);
+      const newState = remove(state, routes.ROUTE_SCHEDULE_CALL);
+      return replaceAt(newState, routes.ROUTE_SCHEDULING_CALL, route);
     }
 
     default:
