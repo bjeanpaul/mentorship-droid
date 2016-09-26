@@ -27,7 +27,7 @@ const tabToTabEntered = fromPairs([
 ]);
 
 export const mapDispatchToProps = dispatch => ({
-  onTabChanged: tab => tabToTabEntered[tab] &&
+  tabDidChange: tab => tabToTabEntered[tab] &&
     dispatch(navTabEntered(tabToTabEntered[tab])),
 });
 

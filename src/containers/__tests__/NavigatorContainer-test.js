@@ -26,9 +26,9 @@ describe('NavigatorContainer', () => {
   describe('mapDispatchToProps', () => {
     it('should dispatch the entered tab when a tab is selected', () => {
       const dispatch = jest.fn();
-      const { onTabChanged } = mapDispatchToProps(dispatch, {});
+      const { tabDidChange } = mapDispatchToProps(dispatch, {});
       expect(dispatch.mock.calls).toEqual([]);
-      onTabChanged(constants.NAV_TAB_JOURNEY);
+      tabDidChange(constants.NAV_TAB_JOURNEY);
       expect(dispatch.mock.calls).toEqual([
         [{ type: constants.NAV_TAB_JOURNEY_ENTERED }],
       ]);
@@ -36,9 +36,9 @@ describe('NavigatorContainer', () => {
 
     it('should not dispatch if there isnt an associated enter constant', () => {
       const dispatch = jest.fn();
-      const { onTabChanged } = mapDispatchToProps(dispatch, {});
+      const { tabDidChange } = mapDispatchToProps(dispatch, {});
       expect(dispatch.mock.calls).toEqual([]);
-      onTabChanged('PEW');
+      tabDidChange('PEW');
       expect(dispatch.mock.calls).toEqual([]);
     });
   });
