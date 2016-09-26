@@ -1,3 +1,4 @@
+import { reject, uniqueId } from 'lodash';
 import { NavigationExperimental } from 'react-native';
 
 const {
@@ -26,6 +27,9 @@ export const createRoute = (key, context = {}) => ({
   key,
   context,
 });
+
+
+export const createDummyRoute = () => createRoute(uniqueId('DUMMY_ROUTE_'));
 
 
 export const insertAfterCurrent = (state, route) => !has(state, route.key)
@@ -89,3 +93,12 @@ export const createStack = (routes = []) => ({
 export const replaceAt = (state, key, route) => !has(state, route.key)
   ? _replaceAt(state, key, route)
   : state;
+
+
+// We prepend a dummy route to avoid unintentional transitions
+export const remove = (state, key, dummyRoute = createDummyRoute()) => !has(state, key)
+  ? state
+  : {
+    ...state,
+    routes: [dummyRoute].concat(reject(state.routes, { key })),
+  };

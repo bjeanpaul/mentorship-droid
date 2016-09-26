@@ -2,12 +2,14 @@ import { unary } from 'lodash';
 
 import {
   createRoute,
+  createDummyRoute,
   push,
   pushList,
   popCurrent,
   insertAfterCurrent,
   createStack,
   replaceAt,
+  remove,
 } from 'src/navigationHelpers';
 
 
@@ -18,6 +20,14 @@ describe('navigationHelpers', () => {
         key: 'FOO',
         context: { bar: 23 },
       });
+    });
+  });
+
+  describe('createDummyRoute', () => {
+    it('should create a dummy route', () => {
+      const { key, context } = createDummyRoute();
+      expect(key).toMatch(/DUMMY_ROUTE_\d/);
+      expect(context).toEqual({});
     });
   });
 
@@ -164,6 +174,30 @@ describe('navigationHelpers', () => {
           createRoute('BAR'),
         ],
       });
+    });
+  });
+
+  describe('remove', () => {
+    it('should remove the route if it exists', () => {
+      const stack = createStack([
+        createRoute('FOO'),
+        createRoute('BAR'),
+        createRoute('BAZ'),
+      ]);
+
+      expect(remove(stack, 'BAR', createRoute('DUMMY'))).toEqual({
+        index: 2,
+        routes: [
+          createRoute('DUMMY'),
+          createRoute('FOO'),
+          createRoute('BAZ'),
+        ],
+      });
+    });
+
+    it('should simply return the stack if the route does not exist', () => {
+      expect(remove(createStack([createRoute('FOO')]), 'BAR'))
+        .toEqual(createStack([createRoute('FOO')]));
     });
   });
 });
