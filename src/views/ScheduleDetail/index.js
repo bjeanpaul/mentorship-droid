@@ -1,4 +1,3 @@
-import { isUndefined } from 'lodash';
 import moment from 'moment';
 import React, { PropTypes } from 'react';
 import {
@@ -164,7 +163,7 @@ class ScheduleDetail extends React.Component {
           <Button
             uid="done"
             onPress={this.onDonePress}
-            disabled={[this.state.date, this.state.time].some(isUndefined)}
+            disabled={!this.state.date || !this.state.time}
           >
             SCHEDULE CALL
           </Button>

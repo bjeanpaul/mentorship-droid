@@ -28,7 +28,7 @@ class ScheduleList extends React.Component {
 
   onCallInfoPress() {
     const call = this.getSelectedCall();
-    return call && moment(call.callTime).isAfter() && this.props.onCallChosen(call);
+    return call && moment(call.callTime).isAfter() && this.props.onCallChosen(call.id);
   }
 
   getSelectedCall() {

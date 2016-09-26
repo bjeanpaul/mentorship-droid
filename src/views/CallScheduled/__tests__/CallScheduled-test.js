@@ -1,18 +1,18 @@
 import { noop } from 'lodash';
 import React from 'react';
+import CallScheduled from 'src/views/CallScheduled';
 
-import LoadingFailure from 'src/views/LoadingFailure';
 
-
-describe('LoadingFailure', () => {
+describe('CallScheduled', () => {
   const createComponent = (props = {}) => (
-    <LoadingFailure
+    <CallScheduled
       onDismissPress={noop}
       {...props}
     />
   );
 
   it('should render', () => {
-    expect(render(createComponent())).toMatchSnapshot();
+    const el = render(createComponent());
+    expect(el).toMatchSnapshot();
   });
 });

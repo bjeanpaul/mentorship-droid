@@ -1,12 +1,12 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import LoadingFailure from 'src/views/LoadingFailure';
+import CallScheduleFailure from 'src/views/CallScheduleFailure';
 
 
-describe('LoadingFailure', () => {
+describe('CallScheduleFailure', () => {
   const createComponent = (props = {}) => (
-    <LoadingFailure
+    <CallScheduleFailure
       onDismissPress={noop}
       {...props}
     />

@@ -16,6 +16,7 @@ import {
   getCategoryActivities,
   getActivity,
   getScheduledCall,
+  getScheduledCalls,
   getScheduledCallActivity,
   getEvents,
 } from 'src/stores/helpers';
@@ -162,6 +163,22 @@ describe('helpers', () => {
       };
 
       expect(getScheduledCall(state, 6)).toEqual(fakeScheduledCall({ id: 6 }));
+    });
+  });
+
+  describe('getScheduledCalls', () => {
+    it('should get the currently scheduled calls', () => {
+      const state = fakeState();
+
+      state.entities.scheduledCalls = {
+        2: fakeScheduledCall({ id: 2 }),
+        3: fakeScheduledCall({ id: 3 }),
+      };
+
+      expect(getScheduledCalls(state)).toEqual([
+        fakeScheduledCall({ id: 2 }),
+        fakeScheduledCall({ id: 3 }),
+      ]);
     });
   });
 

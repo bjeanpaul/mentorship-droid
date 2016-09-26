@@ -13,6 +13,7 @@ import {
   createScheduledCall,
   getScheduledCall,
   updateScheduledCall,
+  patchScheduledCall,
   removeScheduledCall,
 } from 'src/api';
 
@@ -63,6 +64,17 @@ describe('api/schedule', () => {
       expect(updateScheduledCall(23, { fake: 'schedule' }, fakeAuth())).toEqual({
         url: '/schedule/23/',
         method: 'PUT',
+        data: { fake: 'schedule' },
+        auth: fakeAuth(),
+      });
+    });
+  });
+
+  describe('patchScheduledCall', () => {
+    it('should construct a request for updating a scheduled call', () => {
+      expect(patchScheduledCall(23, { fake: 'schedule' }, fakeAuth())).toEqual({
+        url: '/schedule/23/',
+        method: 'PATCH',
         data: { fake: 'schedule' },
         auth: fakeAuth(),
       });

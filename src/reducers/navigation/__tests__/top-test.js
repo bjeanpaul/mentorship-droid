@@ -8,6 +8,7 @@ import * as routes from 'src/constants/routes';
 import * as calls from 'src/actions/calls';
 import * as callNotes from 'src/actions/callNotes';
 import * as journey from 'src/actions/journey';
+import * as schedule from 'src/actions/schedule';
 import { createStack, createRoute, push, pop, replaceAt } from 'src/navigationHelpers';
 
 
@@ -147,6 +148,77 @@ describe('src/reducers/navigation/top', () => {
         .toEqual(push(createStack(), createRoute(routes.ROUTE_CREATE_CALL_NOTES, {
           callId: 23,
         })));
+    });
+  });
+
+  describe('SCHEDULED_CALL_ADD', () => {
+    it('should push on the scheduled route', () => {
+      expect(reduce(createStack(), schedule.addScheduledCall()))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL)));
+    });
+  });
+
+  describe('SCHEDULED_CALL_CHOOSE', () => {
+    it('should push on the scheduled route', () => {
+      expect(reduce(createStack(), schedule.chooseScheduledCall(23)))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
+          scheduledCallId: 23,
+        })));
+    });
+  });
+
+  describe('SCHEDULED_CALL_ACTIVITY_CHOOSE', () => {
+    it('should push on the choose category route', () => {
+      expect(reduce(createStack(), schedule.chooseScheduledCallActivity()))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_CHOOSE_CATEGORY)));
+    });
+  });
+
+  describe('SCHEDULED_CALL_PATCH_REQUEST', () => {
+    it('should push on the scheduling call route', () => {
+      expect(reduce(createStack(), schedule.patchScheduledCall.request()))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULING_CALL)));
+    });
+  });
+
+  describe('SCHEDULED_CALL_CREATE_REQUEST', () => {
+    it('should push on the scheduling call route', () => {
+      expect(reduce(createStack(), schedule.createScheduledCall.request()))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULING_CALL)));
+    });
+  });
+
+  describe('SCHEDULED_CALL_PATCH_FAILURE', () => {
+    it('should replace the scheduling route with the failure route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_SCHEDULING_CALL));
+
+      expect(reduce(state, schedule.patchScheduledCall.failures.apiResponseError()))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_CALL_SCHEDULE_FAILURE)));
+    });
+  });
+
+  describe('SCHEDULED_CALL_CREATE_FAILURE', () => {
+    it('should replace the scheduling route with the failure route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_SCHEDULING_CALL));
+      expect(reduce(state, schedule.createScheduledCall.failures.apiResponseError()))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_CALL_SCHEDULE_FAILURE)));
+    });
+  });
+
+  describe('SCHEDULED_CALL_PATCH_SUCCESS', () => {
+    it('should replace the scheduling route with the failure route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_SCHEDULING_CALL));
+
+      expect(reduce(state, schedule.patchScheduledCall.success()))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_CALL_SCHEDULED)));
+    });
+  });
+
+  describe('SCHEDULED_CALL_CREATE_SUCCESS', () => {
+    it('should replace the scheduling route with the failure route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_SCHEDULING_CALL));
+      expect(reduce(state, schedule.createScheduledCall.success()))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_CALL_SCHEDULED)));
     });
   });
 });

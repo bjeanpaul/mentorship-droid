@@ -98,7 +98,7 @@ describe('ScheduleList', () => {
     el.findWhere(uidEquals('callInfo'))
       .simulate('press');
 
-    expect(onCallChosen.mock.calls).toEqual([[call]]);
+    expect(onCallChosen.mock.calls).toEqual([[call.id]]);
   });
 
   it('should not call onCallChosen if there is no selected call', () => {
