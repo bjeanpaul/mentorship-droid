@@ -29,5 +29,4 @@ deploy:
   file: $TRAVIS_BUILD_DIR/android/app/build/outputs/apk/app-release.apk
   on:
     repo: praekeltfoundation/mentorship-droid
-    branch: release/0.1.0
-    tags: false
+    tags: true
