@@ -1,6 +1,6 @@
 import { merge, uniqueId } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
-import { Profile, ScheduledCall, Activity, Category } from 'src/api';
+import { Profile, ScheduledCall, Activity, Category, Event } from 'src/api';
 import { getContext } from 'src/stores/helpers';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/event';
 
@@ -143,3 +143,7 @@ export const fakeCategoryListData = (data = [fakeCategory()]) => (
 
 export const fakeActivityListData = (data = [fakeActivity()]) => (
   normalize(data, arrayOf(Activity)));
+
+
+export const fakeListEventsData = (data = [fakeEvent()]) => (
+    normalize(data, arrayOf(Event)));

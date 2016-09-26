@@ -22,12 +22,16 @@ describe('api/sync', () => {
 
     api.listScheduledCalls.mockClear();
     api.listScheduledCalls.mockReturnValue(helpers.fakeScheduledCallListData());
+
+    api.listEvents.mockClear();
+    api.listEvents.mockReturnValue(helpers.fakeListEventsData());
   });
 
   describe('load', () => {
     it('should return all entities retrieved from the api', async () => {
       api.listCategories.mockReturnValue(helpers.fakeCategoryListData());
       api.listActivities.mockReturnValue(helpers.fakeActivityListData());
+      api.listEvents.mockReturnValue(helpers.fakeListEventsData());
 
       const res = await load(fakeAuth());
 
@@ -35,7 +39,9 @@ describe('api/sync', () => {
         entities: merge(
           helpers.fakeCategoryListData().entities,
           helpers.fakeActivityListData().entities,
-          helpers.fakeScheduledCallListData().entities),
+          helpers.fakeScheduledCallListData().entities,
+          helpers.fakeListEventsData().entities,
+        ),
       });
     });
 
@@ -44,6 +50,7 @@ describe('api/sync', () => {
       expect(api.listCategories.mock.calls).toEqual([[fakeAuth()]]);
       expect(api.listActivities.mock.calls).toEqual([[fakeAuth()]]);
       expect(api.listScheduledCalls.mock.calls).toEqual([[fakeAuth()]]);
+      expect(api.listEvents.mock.calls).toEqual([[fakeAuth()]]);
     });
   });
 });
