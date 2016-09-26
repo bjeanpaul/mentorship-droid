@@ -270,7 +270,7 @@ exports[`StartCall should render with a call time 1`] = `
             }
           ]
         }>
-        Thu, Jan 01, 2:00am
+        Thu, Sep 22, 4:31pm
       </Text>
     </View>
   </View>
@@ -438,7 +438,7 @@ exports[`StartCall should render with a call time and activity 1`] = `
             }
           ]
         }>
-        Thu, Jan 01, 2:00am
+        Thu, Sep 22, 4:31pm
       </Text>
       <Text
         accessible={true}

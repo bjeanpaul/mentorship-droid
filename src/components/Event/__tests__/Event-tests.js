@@ -7,7 +7,7 @@ describe('Event', () => {
   it('should render the props', () => {
     expect(render(
       <Event
-        date={Date.parse('2016-09-16T11:19:17.368442Z')}
+        date={'2016-09-16T11:19:17.368442Z'}
         icon={IMAGE}
         title="pew pew pew"
         blurb="i am a blurb"
@@ -18,7 +18,7 @@ describe('Event', () => {
   it('should render a formatted date if the blurb is undefined', () => {
     expect(render(
       <Event
-        date={Date.parse('2016-09-16T11:19:17.368442Z')}
+        date={'2016-09-16T11:19:17.368442Z'}
         icon={IMAGE}
         title="pew pew pew"
       />

@@ -44,3 +44,5 @@ android/keystores/debug.keystore
 
 src/config/development.js
 src/config/production.js
+
+release.keystore

@@ -23,7 +23,7 @@ describe('MilestoneEventContainer', () => {
         objectId: 123, // category
       }))).toEqual({
         type: EVENT_TYPE_ACTIVITIY_CATEGORY_COMPLETED,
-        date: Date.parse('2016-09-16T11:19:17.368442Z'),
+        date: '2016-09-16T11:19:17.368442Z',
         image: 'http://images.are.worth.1000.words',
         title: 'Cut your ribbon',
         color: 'blue',

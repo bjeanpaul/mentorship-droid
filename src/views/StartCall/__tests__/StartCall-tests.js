@@ -20,7 +20,9 @@ describe('StartCall', () => {
 
   it('should render with a call time', () => {
     expect(render(createComponent({
-      scheduledCall: fakeScheduledCall({ callTime: 0 }),
+      scheduledCall: fakeScheduledCall({
+        callTime: '2016-09-22T14:31:23.431Z',
+      }),
     }))
     .toJSON())
     .toMatchSnapshot();
@@ -28,7 +30,9 @@ describe('StartCall', () => {
 
   it('should render with a call time and activity', () => {
     expect(render(createComponent({
-      scheduledCall: fakeScheduledCall({ callTime: 0 }),
+      scheduledCall: fakeScheduledCall({
+        callTime: '2016-09-22T14:31:23.431Z',
+      }),
       activity: fakeActivity(),
     }))
     .toJSON())
