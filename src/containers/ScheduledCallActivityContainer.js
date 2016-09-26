@@ -1,5 +1,19 @@
 import { connect } from 'react-redux';
-import NotYetImplemented from 'src/views/NotYetImplemented';
+import ActivityList from 'src/views/ActivityList';
+import { getCategoryActivities } from 'src/stores/helpers';
+import { chooseScheduledCallActivity } from 'src/actions/schedule';
+import { dismissScreen } from 'src/actions/navigation';
 
 
-export default connect()(NotYetImplemented);
+export const mapStateToProps = (state, { categoryId }) => ({
+  activities: getCategoryActivities(state, categoryId),
+});
+
+
+export const propToActions = {
+  onActivityPress: chooseScheduledCallActivity,
+  onBackPress: dismissScreen,
+};
+
+
+export default connect(mapStateToProps, propToActions)(ActivityList);
