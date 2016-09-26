@@ -6,7 +6,7 @@ import { dismissScreen } from 'src/actions/navigation';
 import { getScheduledCall, getActivity } from 'src/stores/helpers';
 
 import {
-  createScheduledCall, patchScheduledCall, chooseScheduledCallActivity,
+  createScheduledCall, patchScheduledCall, changeScheduledCallActivity,
 } from 'src/actions/schedule';
 
 
@@ -31,7 +31,7 @@ export const mapStateToProps = (state, { scheduledCallId }) => {
 export const mapDispatchToProps = (dispatch, { scheduledCallId }) => bindActionCreators({
   onDismissPress: dismissScreen,
   onDone: done(scheduledCallId),
-  onActivityPress: chooseScheduledCallActivity,
+  onActivityPress: changeScheduledCallActivity,
 }, dispatch);
 
 

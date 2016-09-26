@@ -9,7 +9,7 @@ import { mapStateToProps, mapDispatchToProps } from 'src/containers/ScheduleDeta
 import { fakeState, fakeScheduledCall, fakeActivity } from 'app/scripts/helpers';
 
 import {
-  createScheduledCall, patchScheduledCall, chooseScheduledCallActivity,
+  createScheduledCall, patchScheduledCall, changeScheduledCallActivity,
 } from 'src/actions/schedule';
 
 
@@ -62,13 +62,13 @@ describe('ScheduleDetailContainer', () => {
       expect(dispatch.mock.calls).toEqual([[dismissScreen()]]);
     });
 
-    it('should map onActivityPress to chooseScheduledCallActivity()', () => {
+    it('should map onActivityPress to changeScheduledCallActivity()', () => {
       const dispatch = jest.fn();
       const { onActivityPress } = mapDispatchToProps(dispatch, {});
 
       expect(dispatch.mock.calls).toEqual([]);
       onActivityPress();
-      expect(dispatch.mock.calls).toEqual([[chooseScheduledCallActivity()]]);
+      expect(dispatch.mock.calls).toEqual([[changeScheduledCallActivity()]]);
     });
 
     it('should map onDone to patchScheduledCall() if an id is given', () => {

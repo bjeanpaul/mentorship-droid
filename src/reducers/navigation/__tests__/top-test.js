@@ -170,11 +170,20 @@ describe('src/reducers/navigation/top', () => {
     });
   });
 
-  describe('SCHEDULED_CALL_ACTIVITY_CHOOSE', () => {
+  describe('SCHEDULED_CALL_ACTIVITY_CHANGE', () => {
     it('should push on the choose category route', () => {
-      expect(reduce(createStack(), schedule.chooseScheduledCallActivity()))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_CHOOSE_CATEGORY)));
+      expect(reduce(createStack(), schedule.changeScheduledCallActivity()))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULED_CALL_CATEGORY)));
     });
+  });
+
+  describe('SCHEDULED_CALL_CATEGORY_CHOOSE', () => {
+    it('should push on the choose activity route');
+  });
+
+  describe('SCHEDULED_CALL_ACTIVITY_CHOOSE', () => {
+    it('should pop off the choose activity routes');
+    it('should update the scheduled call route context to include the chosen activity');
   });
 
   describe('SCHEDULED_CALL_PATCH_REQUEST', () => {

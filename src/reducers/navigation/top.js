@@ -105,9 +105,19 @@ export default (state = createStack([
       return push(state, route);
     }
 
-    case schedule.SCHEDULED_CALL_ACTIVITY_CHOOSE: {
-      const route = createRoute(routes.ROUTE_CHOOSE_CATEGORY);
+    case schedule.SCHEDULED_CALL_ACTIVITY_CHANGE: {
+      const route = createRoute(routes.ROUTE_SCHEDULED_CALL_CATEGORY);
       return push(state, route);
+    }
+
+    case schedule.SCHEDULED_CALL_CATEGORY_CHOOSE: {
+      // TODO
+      return state;
+    }
+
+    case schedule.SCHEDULED_CALL_ACTIVITY_CHOOSE: {
+      // TODO
+      return state;
     }
 
     case schedule.SCHEDULED_CALL_PATCH_REQUEST:
