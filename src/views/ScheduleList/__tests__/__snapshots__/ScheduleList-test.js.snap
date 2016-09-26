@@ -2594,10 +2594,12 @@ exports[`ScheduleList should render 1`] = `
                           "fontSize": 15
                         },
                         Object {
-                          "color": "red"
+                          "color": "#cccccc"
                         },
                         Object {
-                          "color": "#f77040"
+                          "color": "#c0cbcc",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 15
                         }
                       ]
                     }>
@@ -2788,6 +2790,12 @@ exports[`ScheduleList should render 1`] = `
                         Object {
                           "fontFamily": "Brandon Text",
                           "fontSize": 15
+                        },
+                        Object {
+                          "color": "red"
+                        },
+                        Object {
+                          "color": "#f77040"
                         }
                       ]
                     }>
@@ -5886,10 +5894,12 @@ exports[`ScheduleList should render the selected call activity title 1`] = `
                           "fontSize": 15
                         },
                         Object {
-                          "color": "red"
+                          "color": "#cccccc"
                         },
                         Object {
-                          "color": "#f77040"
+                          "color": "#c0cbcc",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 15
                         }
                       ]
                     }>
@@ -6080,6 +6090,12 @@ exports[`ScheduleList should render the selected call activity title 1`] = `
                         Object {
                           "fontFamily": "Brandon Text",
                           "fontSize": 15
+                        },
+                        Object {
+                          "color": "red"
+                        },
+                        Object {
+                          "color": "#f77040"
                         }
                       ]
                     }>
@@ -9178,10 +9194,12 @@ exports[`ScheduleList should render the selected call time 1`] = `
                           "fontSize": 15
                         },
                         Object {
-                          "color": "red"
+                          "color": "#cccccc"
                         },
                         Object {
-                          "color": "#f77040"
+                          "color": "#c0cbcc",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 15
                         }
                       ]
                     }>
@@ -9372,6 +9390,12 @@ exports[`ScheduleList should render the selected call time 1`] = `
                         Object {
                           "fontFamily": "Brandon Text",
                           "fontSize": 15
+                        },
+                        Object {
+                          "color": "red"
+                        },
+                        Object {
+                          "color": "#f77040"
                         }
                       ]
                     }>
