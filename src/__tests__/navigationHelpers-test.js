@@ -185,10 +185,10 @@ describe('navigationHelpers', () => {
         createRoute('BAZ'),
       ]);
 
-      expect(remove(stack, 'BAR', createRoute('DUMMY'))).toEqual({
+      expect(remove(stack, 'BAR')).toEqual({
         index: 2,
         routes: [
-          createRoute('DUMMY'),
+          createDummyRoute(createDummyRoute.index),
           createRoute('FOO'),
           createRoute('BAZ'),
         ],
