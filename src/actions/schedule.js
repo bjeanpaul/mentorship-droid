@@ -37,7 +37,7 @@ export const createScheduledCall = apiAction({
 export const updateScheduledCall = apiAction({
   method: api.updateScheduledCall,
   request: staticAction(constants.SCHEDULED_CALL_UPDATE_REQUEST),
-  success: staticAction(constants.SCHEDULED_CALL_UPDATE_SUCCESS),
+  success: dataAction(constants.SCHEDULED_CALL_UPDATE_SUCCESS),
   failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_UPDATE_FAILURE)]],
 });
 
@@ -45,7 +45,7 @@ export const updateScheduledCall = apiAction({
 export const patchScheduledCall = apiAction({
   method: api.patchScheduledCall,
   request: staticAction(constants.SCHEDULED_CALL_PATCH_REQUEST),
-  success: staticAction(constants.SCHEDULED_CALL_PATCH_SUCCESS),
+  success: dataAction(constants.SCHEDULED_CALL_PATCH_SUCCESS),
   failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_PATCH_FAILURE)]],
 });
 
