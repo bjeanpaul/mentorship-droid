@@ -85,7 +85,8 @@ exports[`CallCompleted should render 1`] = `
             },
             Object {
               "color": undefined,
-              "fontSize": 20
+              "fontSize": 20,
+              "paddingBottom": 10
             }
           ]
         }>
