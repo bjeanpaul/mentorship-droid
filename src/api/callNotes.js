@@ -5,7 +5,7 @@ import { parseResults } from 'src/api/parse';
 
 
 export const listCallNotes = (auth, params = {}) => request({
-  url: '/call_notes/',
+  url: '/call_note/',
   method: 'GET',
   schema: arrayOf(CallNote),
   parse: parseResults,
