@@ -8,3 +8,4 @@ export * from 'src/api/errors';
 export * from 'src/api/sync';
 export * from 'src/api/calls';
 export * from 'src/api/notificationSettings';
+export * from 'src/api/callNotes'
