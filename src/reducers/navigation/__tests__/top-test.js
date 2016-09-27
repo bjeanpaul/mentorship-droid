@@ -9,6 +9,7 @@ import * as calls from 'src/actions/calls';
 import * as callNotes from 'src/actions/callNotes';
 import * as journey from 'src/actions/journey';
 import * as schedule from 'src/actions/schedule';
+import * as activities from 'src/actions/activities';
 
 import {
   createDummyRoute, createStack, createRoute, push, pop, replaceAt,
@@ -150,6 +151,15 @@ describe('src/reducers/navigation/top', () => {
       expect(reduce(createStack(), callNotes.createCallNotes(23)))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_CREATE_CALL_NOTES, {
           callId: 23,
+        })));
+    });
+  });
+
+  describe('ACTIVITY_SCHEDULE_CALL', () => {
+    it('should push on the activity route', () => {
+      expect(reduce(createStack(), activities.scheduleActivityCall(23)))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
+          activityId: 23,
         })));
     });
   });
