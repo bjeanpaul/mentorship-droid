@@ -17,6 +17,7 @@ export const listScheduledCalls = (auth, params = {}) => request({
 export const createScheduledCall = (data, auth) => request({
   url: '/schedule/',
   method: 'POST',
+  schema: ScheduledCall,
   data,
   auth,
 });

@@ -44,6 +44,7 @@ describe('api/schedule', () => {
         method: 'POST',
         data: { fake: 'schedule' },
         auth: fakeAuth(),
+        schema: ScheduledCall,
       });
     });
   });
