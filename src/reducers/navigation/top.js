@@ -71,6 +71,18 @@ export default (state = createStack([
         : push(state, route);
     }
 
+    case calls.CALL_CREATE_REQUEST: {
+      const route = createRoute(routes.ROUTE_CONNECTING_CALL);
+      return replaceAt(state, routes.ROUTE_START_CALL, route);
+    }
+
+    case calls.CALL_CREATE_FAILURE: {
+      const route = createRoute(routes.ROUTE_CONNECTING_CALL_FAILURE);
+      return has(state, routes.ROUTE_CONNECTING_CALL)
+        ? replaceAt(state, routes.ROUTE_CONNECTING_CALL, route)
+        : push(state, route);
+    }
+
     case journey.CALL_OPEN: {
       return push(state, createRoute(routes.ROUTE_START_CALL));
     }
@@ -82,16 +94,6 @@ export default (state = createStack([
       return has(state, routes.ROUTE_CALL_COMPLETED)
         ? replaceAt(state, routes.ROUTE_CALL_COMPLETED, route)
         : push(state, route);
-    }
-
-    case calls.CALL_CREATE_REQUEST: {
-      const route = createRoute(routes.ROUTE_CONNECTING_CALL);
-      return replaceAt(state, routes.ROUTE_START_CALL, route);
-    }
-
-    case calls.CALL_CREATE_FAILURE: {
-      const route = createRoute(routes.ROUTE_CONNECTING_CALL_FAILURE);
-      return replaceAt(state, routes.ROUTE_CONNECTING_CALL, route);
     }
 
     case schedule.SCHEDULED_CALL_ADD: {
