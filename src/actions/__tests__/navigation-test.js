@@ -27,4 +27,12 @@ describe('actions/navigation', () => {
       });
     });
   });
+
+  describe('navTabEntered', () => {
+    it('should create an action for when the tab is displayed', () => {
+      expect(actions.navTabEntered(constants.NAV_TAB_JOURNEY_ENTERED)).toEqual({
+        type: constants.NAV_TAB_JOURNEY_ENTERED,
+      });
+    });
+  });
 });
