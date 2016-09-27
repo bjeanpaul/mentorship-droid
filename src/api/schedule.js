@@ -33,6 +33,7 @@ export const getScheduledCall = (id, auth) => request({
 export const updateScheduledCall = (id, data, auth) => request({
   url: `/schedule/${id}/`,
   method: 'PUT',
+  schema: ScheduledCall,
   data,
   auth,
 });
@@ -41,6 +42,7 @@ export const updateScheduledCall = (id, data, auth) => request({
 export const patchScheduledCall = (id, data, auth) => request({
   url: `/schedule/${id}/`,
   method: 'PATCH',
+  schema: ScheduledCall,
   data,
   auth,
 });
