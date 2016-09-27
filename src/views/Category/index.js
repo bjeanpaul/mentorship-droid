@@ -9,6 +9,7 @@ import styles from './styles';
 
 const TAB_ACTIVITIES = 'TAB_ACTIVITIES';
 const TAB_ABOUT = 'TAB_ABOUT';
+const INITIAL_TAB = TAB_ACTIVITIES;
 
 
 class Category extends Component {
@@ -16,7 +17,7 @@ class Category extends Component {
     super(props);
 
     const {
-      initialActiveTab = TAB_ABOUT,
+      initialActiveTab = INITIAL_TAB,
     } = props;
 
     this.state = {
