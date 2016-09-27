@@ -178,12 +178,46 @@ describe('src/reducers/navigation/top', () => {
   });
 
   describe('SCHEDULED_CALL_CATEGORY_CHOOSE', () => {
-    it('should push on the choose activity route');
+    it('should push on the choose activity route', () => {
+      expect(reduce(createStack(), schedule.chooseScheduledCallCategory(23)))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULED_CALL_ACTIVITY, {
+          categoryId: 23,
+        })));
+    });
   });
 
   describe('SCHEDULED_CALL_ACTIVITY_CHOOSE', () => {
-    it('should pop off the choose activity routes');
-    it('should update the scheduled call route context to include the chosen activity');
+    it('should pop off the choose activity routes', () => {
+      const state = createStack([
+        createRoute(routes.ROUTE_SCHEDULE_CALL),
+        createRoute(routes.ROUTE_SCHEDULED_CALL_CATEGORY),
+        createRoute(routes.ROUTE_SCHEDULED_CALL_ACTIVITY),
+      ]);
+
+      const res = reduce(state, schedule.chooseScheduledCallActivity(23));
+
+      expect(res).toEqual({
+        index: 0,
+        routes: [jasmine.objectContaining({ key: routes.ROUTE_SCHEDULE_CALL })],
+      });
+    });
+
+    it('should update the scheduled call route context with the chosen activity', () => {
+      const state = createStack([
+        createRoute(routes.ROUTE_SCHEDULE_CALL, { scheduledCallId: 21 }),
+        createRoute(routes.ROUTE_SCHEDULED_CALL_CATEGORY),
+        createRoute(routes.ROUTE_SCHEDULED_CALL_ACTIVITY),
+      ]);
+
+      const {
+        routes: [{ context }],
+      } = reduce(state, schedule.chooseScheduledCallActivity(23));
+
+      expect(context).toEqual({
+        scheduledCallId: 21,
+        activityId: 23,
+      });
+    });
   });
 
   describe('SCHEDULED_CALL_PATCH_REQUEST', () => {

@@ -15,10 +15,11 @@ import {
   has,
   push,
   pop,
+  inject,
   replaceAt,
-  remove,
   createStack,
   createRoute,
+  remove,
 } from 'src/navigationHelpers';
 
 
@@ -111,13 +112,18 @@ export default (state = createStack([
     }
 
     case schedule.SCHEDULED_CALL_CATEGORY_CHOOSE: {
-      // TODO
-      return state;
+      const { payload: { categoryId } } = action;
+      return push(state, createRoute(routes.ROUTE_SCHEDULED_CALL_ACTIVITY, { categoryId }));
     }
 
     case schedule.SCHEDULED_CALL_ACTIVITY_CHOOSE: {
-      // TODO
-      return state;
+      const { payload: { activityId } } = action;
+
+      let newState = state;
+      newState = pop(pop(newState));
+      newState = inject(newState, routes.ROUTE_SCHEDULE_CALL, { activityId });
+
+      return newState;
     }
 
     case schedule.SCHEDULED_CALL_PATCH_REQUEST:
