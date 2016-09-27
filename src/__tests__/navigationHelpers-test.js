@@ -10,6 +10,7 @@ import {
   createStack,
   replaceAt,
   remove,
+  inject,
 } from 'src/navigationHelpers';
 
 
@@ -198,6 +199,30 @@ describe('navigationHelpers', () => {
     it('should simply return the stack if the route does not exist', () => {
       expect(remove(createStack([createRoute('FOO')]), 'BAR'))
         .toEqual(createStack([createRoute('FOO')]));
+    });
+  });
+
+  describe('inject', () => {
+    it('should inject the given context for the matching route in the stack', () => {
+      const stack = createStack([
+        createRoute('FOO', {
+          baz: 21,
+          quux: 23,
+        }),
+        createRoute('BAR'),
+      ]);
+
+      expect(inject(stack, 'FOO', {
+        baz: 22,
+        corge: 20,
+      })).toEqual(createStack([
+        createRoute('FOO', {
+          baz: 22,
+          quux: 23,
+          corge: 20,
+        }),
+        createRoute('BAR'),
+      ]));
     });
   });
 });
