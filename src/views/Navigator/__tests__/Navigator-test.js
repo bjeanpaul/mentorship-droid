@@ -24,6 +24,7 @@ describe('Navigator', () => {
         [NAV_TAB_ACTIVITIES, createStack([createRoute('A')])],
         [NAV_TAB_JOURNEY, createStack([createRoute('B')])],
       ])}
+      tabDidChange={noop}
       {...props}
     />);
 
@@ -61,5 +62,18 @@ describe('Navigator', () => {
       [NAV_TAB_ACTIVITIES],
       [NAV_TAB_JOURNEY],
     ]);
+  });
+
+  it ('should call tabDidChange when a tab is pressed', () => {
+    const tabDidChange = jest.fn();
+    const el = shallow(createComponent({
+      tabDidChange,
+    }));
+    el.find('NavTabBar')
+      .shallow()
+      .findWhere(uidEquals(NAV_TAB_ACTIVITIES))
+      .shallow()
+      .simulate('press');
+    expect(tabDidChange).toBeCalled();
   });
 });
