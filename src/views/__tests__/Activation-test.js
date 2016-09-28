@@ -1,14 +1,14 @@
 import React from 'react';
 import { noop } from 'lodash';
 
-import Login from 'src/views/Login';
+import Activation from 'src/views/Activation';
 import * as statuses from 'src/statuses/auth';
 import { uidEquals } from 'app/scripts/helpers';
 
 
-describe('Login', () => {
+describe('Activation', () => {
   const createComponent = (props = {}) => (
-    <Login
+    <Activation
       status={statuses.authStatusIdle()}
       onLoginPress={noop}
       onBackPress={noop}
