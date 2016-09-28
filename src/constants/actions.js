@@ -6,8 +6,9 @@ import { LOAD_SUCCESS } from 'src/constants/sync';
 
 import {
   SCHEDULED_CALL_LIST_SUCCESS,
+  SCHEDULED_CALL_PATCH_SUCCESS,
   SCHEDULED_CALL_CREATE_SUCCESS,
-} from 'src/constants/profile';
+} from 'src/constants/schedule';
 
 import { EVENT_LIST_SUCCESS } from 'src/constants/event';
 
@@ -18,6 +19,7 @@ const ACTIONS_WITH_ENTITIES = [
   ONBOARDING_UPDATE_PROFILE_SUCCESS,
   LOAD_SUCCESS,
   SCHEDULED_CALL_LIST_SUCCESS,
+  SCHEDULED_CALL_PATCH_SUCCESS,
   SCHEDULED_CALL_CREATE_SUCCESS,
   EVENT_LIST_SUCCESS,
 ];

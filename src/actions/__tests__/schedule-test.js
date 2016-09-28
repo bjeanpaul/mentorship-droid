@@ -67,7 +67,7 @@ describe('schedule/actions', () => {
       expect(isEqual(updateScheduledCall, apiAction({
         method: api.updateScheduledCall,
         request: staticAction(constants.SCHEDULED_CALL_UPDATE_REQUEST),
-        success: staticAction(constants.SCHEDULED_CALL_UPDATE_SUCCESS),
+        success: dataAction(constants.SCHEDULED_CALL_UPDATE_SUCCESS),
         failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_UPDATE_FAILURE)]],
       }))).toBe(true);
     });
@@ -78,7 +78,7 @@ describe('schedule/actions', () => {
       expect(isEqual(patchScheduledCall, apiAction({
         method: api.patchScheduledCall,
         request: staticAction(constants.SCHEDULED_CALL_PATCH_REQUEST),
-        success: staticAction(constants.SCHEDULED_CALL_PATCH_SUCCESS),
+        success: dataAction(constants.SCHEDULED_CALL_PATCH_SUCCESS),
         failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_PATCH_FAILURE)]],
       }))).toBe(true);
     });
