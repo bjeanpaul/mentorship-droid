@@ -40,6 +40,7 @@ describe('api/callNotes', () => {
       expect(createCallNote({ fake: 'callNote' }, fakeAuth())).toEqual({
         url: '/call_note/',
         method: 'POST',
+        schema: CallNote,
         data: { fake: 'callNote' },
         auth: fakeAuth(),
       });
@@ -51,6 +52,7 @@ describe('api/callNotes', () => {
       expect(updateCallNote(23, { fake: 'callNote' }, fakeAuth())).toEqual({
         url: '/call_note/23/',
         method: 'PUT',
+        schema: CallNote,
         data: { fake: 'callNote' },
         auth: fakeAuth(),
       });
@@ -62,6 +64,7 @@ describe('api/callNotes', () => {
       expect(patchCallNote(23, { fake: 'callNote' }, fakeAuth())).toEqual({
         url: '/call_note/23/',
         method: 'PATCH',
+        schema: CallNote,
         data: { fake: 'callNote' },
         auth: fakeAuth(),
       });

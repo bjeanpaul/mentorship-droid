@@ -17,6 +17,7 @@ export const listCallNotes = (auth, params = {}) => request({
 export const createCallNote = (data, auth) => request({
   url: '/call_note/',
   method: 'POST',
+  schema: CallNote,
   data,
   auth,
 });
@@ -25,6 +26,7 @@ export const createCallNote = (data, auth) => request({
 export const updateCallNote = (id, data, auth) => request({
   url: `/call_note/${id}/`,
   method: 'PUT',
+  schema: CallNote,
   data,
   auth,
 });
@@ -33,6 +35,7 @@ export const updateCallNote = (id, data, auth) => request({
 export const patchCallNote = (id, data, auth) => request({
   url: `/call_note/${id}/`,
   method: 'PATCH',
+  schema: CallNote,
   data,
   auth,
 });
