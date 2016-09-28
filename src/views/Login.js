@@ -35,7 +35,6 @@ const Login = ({
 Login.propTypes = {
   status: PropTypes.object.isRequired,
   onBackPress: PropTypes.func.isRequired,
-  onDismissPress: PropTypes.func.isRequired,
 };
 
 

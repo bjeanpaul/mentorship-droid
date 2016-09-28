@@ -1,0 +1,39 @@
+exports[`LoginStatusMessage should draw error statuses 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Array [
+      Object {
+        "color": "#003035",
+        "fontFamily": "Brandon Text",
+        "fontSize": 13,
+        "textAlign": "center"
+      },
+      undefined
+    ]
+  }>
+  Sorry, we seem to have an issue on our side.
+</Text>
+`;
+
+exports[`LoginStatusMessage should draw not found statuses 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Array [
+      Object {
+        "color": "#003035",
+        "fontFamily": "Brandon Text",
+        "fontSize": 13,
+        "textAlign": "center"
+      },
+      undefined
+    ]
+  }>
+  Sorry, we couldn\'t find an account with that username and password combination.
+</Text>
+`;

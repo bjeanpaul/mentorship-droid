@@ -1,4 +1,4 @@
-exports[`Login should draw 1`] = `
+exports[`Activation should draw 1`] = `
 <View
   style={
     Array [
@@ -40,7 +40,7 @@ exports[`Login should draw 1`] = `
           }
         ]
       }>
-      Log in
+      Activate Account
     </Text>
     <View
       style={
