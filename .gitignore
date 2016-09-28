@@ -46,3 +46,4 @@ src/config/development.js
 src/config/production.js
 
 release.keystore
+secrets.tar
