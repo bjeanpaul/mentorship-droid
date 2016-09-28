@@ -19,12 +19,13 @@ const ActivityList = ({
   return (
     <BaseView>
       <Header style={{ backgroundColor: color }}>
+        <Text style={[Text.types.title, Text.themes.light]}>{title}</Text>
+
         <HeaderIcon
           uid="back"
           type={HeaderIcon.types.backLight}
           onPress={onBackPress}
         />
-        <Text style={[Text.types.title, Text.themes.light]}>{title}</Text>
       </Header>
 
       <ActivityListComponent
