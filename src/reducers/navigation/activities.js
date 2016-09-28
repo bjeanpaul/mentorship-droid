@@ -24,11 +24,6 @@ export default (state = createStack([
       return push(state, createRoute(routes.ROUTE_ACTIVITY, { activityId }));
     }
 
-    case activities.ACTIVITY_SCHEDULE_CALL: {
-      const { payload: { activityId } } = action;
-      return push(state, createRoute(routes.ROUTE_SCHEDULE_CALL, { activityId }));
-    }
-
     case activities.ACTIVITY_SCREEN_DISMISS:
       return pop(state);
 

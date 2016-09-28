@@ -23,6 +23,8 @@ import {
   patchScheduledCall,
   removeScheduledCall,
   chooseScheduledCall,
+  chooseScheduledCallCategory,
+  chooseScheduledCallActivity,
 } from 'src/actions/schedule';
 
 const { ApiResponseError } = api;
@@ -101,6 +103,26 @@ describe('schedule/actions', () => {
         .toEqual({
           type: constants.SCHEDULED_CALL_CHOOSE,
           payload: { scheduledCallId: 23 },
+        });
+    });
+  });
+
+  describe('chooseScheduledCallCategory', () => {
+    it('should create an action for choosing a category', () => {
+      expect(chooseScheduledCallCategory(23))
+        .toEqual({
+          type: constants.SCHEDULED_CALL_CATEGORY_CHOOSE,
+          payload: { categoryId: 23 },
+        });
+    });
+  });
+
+  describe('chooseScheduledCallActivity', () => {
+    it('should create an action for choosing a activity', () => {
+      expect(chooseScheduledCallActivity(23))
+        .toEqual({
+          type: constants.SCHEDULED_CALL_ACTIVITY_CHOOSE,
+          payload: { activityId: 23 },
         });
     });
   });

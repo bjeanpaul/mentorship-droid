@@ -1,88 +1,48 @@
-import React from 'react';
 import { noop } from 'lodash';
+import React from 'react';
 import ActivityList from 'src/views/ActivityList';
-import { fakeCategory, fakeActivity } from 'app/scripts/helpers';
-import { ACTIVITY_ICON } from 'app/scripts/fixtures';
+import { uidEquals, fakeCategory, fakeActivity } from 'app/scripts/helpers';
 
 
 describe('ActivityList', () => {
-  function createComponent(props = {}) {
-    return (
-      <ActivityList
-        onActivityPress={noop}
-        category={fakeCategory()}
-        activities={[{
-          id: 1,
-          title: 'Activity 1',
-        }, {
-          id: 2,
-          title: 'Activity 2',
-        }].map(fakeActivity)}
-        {...props}
-      />
-    );
-  }
+  const createComponent = (props = {}) => (
+    <ActivityList
+      category={fakeCategory({
+        title: 'Level',
+        color: '#97c13c',
+      })}
+      activities={[fakeActivity()]}
+      onBackPress={noop}
+      onActivityPress={noop}
+      {...props}
+    />
+  );
 
   it('should render', () => {
-    expect(render(createComponent())).toMatchSnapshot();
+    const el = render(createComponent());
+    expect(el).toMatchSnapshot();
   });
 
-  it('should render incomplete activities', () => {
-    expect(render(createComponent({
-      activities: [
-        fakeActivity({
-          icon: ACTIVITY_ICON,
-          isComplete: false,
-        }),
-      ],
-    }))).toMatchSnapshot();
-  });
+  it('should call onBackPress when the back button is pressed', () => {
+    const onBackPress = jest.fn();
+    const el = shallow(createComponent({ onBackPress }));
 
-  it('should render complete activities', () => {
-    expect(render(createComponent({
-      activities: [
-        fakeActivity({
-          icon: ACTIVITY_ICON,
-          isComplete: true,
-        }),
-      ],
-    }))).toMatchSnapshot();
-  });
+    el.findWhere(uidEquals('back'))
+      .simulate('press');
 
-  it('should render a fallback for incomplete activities without an icon', () => {
-    expect(render(createComponent({
-      activities: [
-        fakeActivity({
-          icon: null,
-          isComplete: false,
-        }),
-      ],
-    }))).toMatchSnapshot();
-  });
-
-  it('should render a fallback for complete activities without an icon', () => {
-    expect(render(createComponent({
-      activities: [
-        fakeActivity({
-          icon: null,
-          isComplete: true,
-        }),
-      ],
-    }))).toMatchSnapshot();
+    expect(onBackPress.mock.calls).toEqual([[]]);
   });
 
   it('should call onActivityPress when a activity is pressed', () => {
     const onActivityPress = jest.fn();
-    const el = shallow(createComponent({ onActivityPress }));
+
+    const el = shallow(createComponent({ onActivityPress }))
+      .find('ActivityList')
+      .shallow();
 
     el.findWhere(child => child.prop('activityId') === 1)
       .simulate('press');
 
     expect(onActivityPress.mock.calls).toEqual([[1]]);
-
-    el.findWhere(child => child.prop('activityId') === 2)
-      .simulate('press');
-
-    expect(onActivityPress.mock.calls).toEqual([[1], [2]]);
   });
 });

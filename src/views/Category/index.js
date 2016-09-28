@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { View, TouchableNativeFeedback } from 'react-native';
 
-import { BaseView, Header, HeaderIcon, Text } from 'src/components';
-import ActivityList from 'src/views/ActivityList';
+import { BaseView, Header, HeaderIcon, Text, ActivityList } from 'src/components';
 import CategoryAbout from 'src/views/CategoryAbout';
 import styles from './styles';
 

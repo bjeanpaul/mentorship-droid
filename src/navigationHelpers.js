@@ -104,6 +104,20 @@ export const replaceAt = (state, key, route) => !has(state, route.key)
   : state;
 
 
+export const inject = (state, key, context) => ({
+  ...state,
+  routes: state.routes.map(route => route.key !== key
+    ? route
+    : {
+      ...route,
+      context: {
+        ...route.context,
+        ...context,
+      },
+    }),
+});
+
+
 // We prepend a dummy route to avoid unintentional transitions
 export const remove = (state, key) => !has(state, key)
   ? state

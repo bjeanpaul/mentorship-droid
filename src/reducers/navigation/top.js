@@ -9,16 +9,18 @@ import * as calls from 'src/constants/calls';
 import * as callNotes from 'src/constants/callNotes';
 import * as journey from 'src/constants/journey';
 import * as schedule from 'src/constants/schedule';
+import * as activities from 'src/constants/activities';
 
 
 import {
   has,
   push,
   pop,
+  inject,
   replaceAt,
-  remove,
   createStack,
   createRoute,
+  remove,
 } from 'src/navigationHelpers';
 
 
@@ -96,6 +98,11 @@ export default (state = createStack([
         : push(state, route);
     }
 
+    case activities.ACTIVITY_SCHEDULE_CALL: {
+      const { payload: { activityId } } = action;
+      return push(state, createRoute(routes.ROUTE_SCHEDULE_CALL, { activityId }));
+    }
+
     case schedule.SCHEDULED_CALL_ADD: {
       const route = createRoute(routes.ROUTE_SCHEDULE_CALL);
       return push(state, route);
@@ -107,9 +114,24 @@ export default (state = createStack([
       return push(state, route);
     }
 
-    case schedule.SCHEDULED_CALL_ACTIVITY_CHOOSE: {
-      const route = createRoute(routes.ROUTE_CHOOSE_CATEGORY);
+    case schedule.SCHEDULED_CALL_ACTIVITY_CHANGE: {
+      const route = createRoute(routes.ROUTE_SCHEDULED_CALL_CATEGORY);
       return push(state, route);
+    }
+
+    case schedule.SCHEDULED_CALL_CATEGORY_CHOOSE: {
+      const { payload: { categoryId } } = action;
+      return push(state, createRoute(routes.ROUTE_SCHEDULED_CALL_ACTIVITY, { categoryId }));
+    }
+
+    case schedule.SCHEDULED_CALL_ACTIVITY_CHOOSE: {
+      const { payload: { activityId } } = action;
+
+      let newState = state;
+      newState = pop(pop(newState));
+      newState = inject(newState, routes.ROUTE_SCHEDULE_CALL, { activityId });
+
+      return newState;
     }
 
     case schedule.SCHEDULED_CALL_PATCH_REQUEST:
