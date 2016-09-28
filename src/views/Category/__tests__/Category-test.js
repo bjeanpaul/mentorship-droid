@@ -1,7 +1,7 @@
 import { noop } from 'lodash';
 import React from 'react';
 import Category, { TAB_ACTIVITIES, TAB_ABOUT } from 'src/views/Category';
-import { uidEquals, fakeCategory } from 'app/scripts/helpers';
+import { uidEquals, fakeCategory, fakeActivity } from 'app/scripts/helpers';
 
 
 describe('Category', () => {
@@ -12,6 +12,8 @@ describe('Category', () => {
           title: 'Level',
           color: '#97c13c',
         })}
+        activities={[fakeActivity()]}
+        onActivityPress={noop}
         onBackPress={noop}
         {...props}
       />

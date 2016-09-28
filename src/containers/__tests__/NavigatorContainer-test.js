@@ -1,5 +1,5 @@
 import { fromPairs } from 'lodash';
-import { mapStateToProps } from 'src/containers/NavigatorContainer';
+import { mapStateToProps, mapDispatchToProps } from 'src/containers/NavigatorContainer';
 import * as constants from 'src/constants/navigation';
 
 
@@ -20,6 +20,26 @@ describe('NavigatorContainer', () => {
           [constants.NAV_TAB_SCHEDULED_CALLS, 'SCHEDULED_CALLS_STACK'],
         ]),
       }));
+    });
+  });
+
+  describe('mapDispatchToProps', () => {
+    it('should dispatch the entered tab when a tab is selected', () => {
+      const dispatch = jest.fn();
+      const { tabDidChange } = mapDispatchToProps(dispatch, {});
+      expect(dispatch.mock.calls).toEqual([]);
+      tabDidChange(constants.NAV_TAB_JOURNEY);
+      expect(dispatch.mock.calls).toEqual([
+        [{ type: constants.NAV_TAB_JOURNEY_ENTERED }],
+      ]);
+    });
+
+    it('should not dispatch if there isnt an associated enter constant', () => {
+      const dispatch = jest.fn();
+      const { tabDidChange } = mapDispatchToProps(dispatch, {});
+      expect(dispatch.mock.calls).toEqual([]);
+      tabDidChange('PEW');
+      expect(dispatch.mock.calls).toEqual([]);
     });
   });
 });

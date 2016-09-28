@@ -115,24 +115,4 @@ describe('ScheduleList', () => {
 
     expect(onCallChosen.mock.calls).toEqual([]);
   });
-
-  it('should not call onCallChosen if the selected call time has passed', () => {
-    now = '2016-09-24T12:40:09.880Z';
-    const onCallChosen = jest.fn();
-
-    const call = fakeScheduledCall({
-      callTime: '2016-09-23T19:40:09.880Z',
-    });
-
-    const el = shallow(createComponent({
-      onCallChosen,
-      initialSelectedDate: '2016-09-23T19:40:09.880Z',
-      calls: [call],
-    }));
-
-    el.findWhere(uidEquals('callInfo'))
-      .simulate('press');
-
-    expect(onCallChosen.mock.calls).toEqual([]);
-  });
 });

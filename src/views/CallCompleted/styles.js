@@ -18,6 +18,7 @@ export default StyleSheet.create({
   title: {
     fontSize: 20,
     color: colors.OVERLAY_TEXT,
+    paddingBottom: 10,
   },
   hint: {
     fontSize: 24,

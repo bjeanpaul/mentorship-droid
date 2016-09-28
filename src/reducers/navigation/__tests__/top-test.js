@@ -107,11 +107,17 @@ describe('src/reducers/navigation/top', () => {
   });
 
   describe('CONNECTING_CALL_FAILURE', () => {
-    it('should replace the loading route with the load failure route', () => {
+    it('should replace the connecting route with the failure route', () => {
       const state = push(createStack(), createRoute(routes.ROUTE_CONNECTING_CALL));
       const route = createRoute(routes.ROUTE_CONNECTING_CALL_FAILURE);
       expect(reduce(state, calls.createCallFailure()))
         .toEqual(replaceAt(state, routes.ROUTE_CONNECTING_CALL, route));
+    });
+
+    it('should push on the failure route if there is no connecting route', () => {
+      const route = createRoute(routes.ROUTE_CONNECTING_CALL_FAILURE);
+      const state = createStack();
+      expect(reduce(state, calls.createCallFailure())).toEqual(push(state, route));
     });
   });
 
