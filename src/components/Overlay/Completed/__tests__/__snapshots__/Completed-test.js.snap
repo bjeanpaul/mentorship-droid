@@ -1,0 +1,657 @@
+exports[`OverlayCompleted should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      Object {
+        "backgroundColor": "rgba(246, 111, 63, 0.95)"
+      }
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16
+        },
+        Object {}
+      ]
+    } />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 64
+      }
+    }>
+    <Image
+      source={1} />
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "color": undefined,
+            "fontSize": 20
+          }
+        ]
+      }>
+      For Those Of You Who Have Never (And Also Those Who Have)
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`OverlayCompleted should render with a dismiss button 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function buildPredicate],
+    "childrenOfNode": [Function childrenOfNode],
+    "findWhereUnwrapped": [Function findWhereUnwrapped]
+  },
+  "length": 1,
+  "node": <function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}
+    style={
+        Object {
+            "backgroundColor": "rgba(246, 111, 63, 0.95)"
+          }
+    }>
+    <function Header(_ref){var _ref$style=_ref.
+    style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+    children;var children=_ref$children===undefined?[]:_ref$children;return(
+    
+    _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+    children));}
+        style={undefined}>
+        <function HeaderIcon(_ref){var
+        type=_ref.type;var _ref$style=_ref.
+        style;var style=_ref$style===undefined?{}:_ref$style;var _ref$onPress=_ref.
+        onPress;var onPress=_ref$onPress===undefined?_lodash.noop:_ref$onPress;return(
+        
+        _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
+        _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+        _react2.default.createElement(_Icon2.default,{type:type}))));}
+            onPress={[Function noop]}
+            type={1}
+            uid="dismiss" />
+    </function Header(_ref){var _ref$style=_ref.
+    style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+    children;var children=_ref$children===undefined?[]:_ref$children;return(
+    
+    _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+    children));}>
+    <class extends RealComponent {
+          render() {
+            return React.createElement(
+            RealComponent.displayName,
+            this.props,
+            this.props.children);
+    
+          }}
+        style={
+            Object {
+                "alignItems": "center",
+                "flex": 1,
+                "paddingLeft": 24,
+                "paddingRight": 24,
+                "paddingTop": 64
+              }
+        }>
+        <class extends RealComponent {
+              render() {
+                return React.createElement(
+                RealComponent.displayName,
+                this.props,
+                this.props.children);
+        
+              }}
+            source={1} />
+        <function Text(_ref)
+        
+        
+        
+        {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+        var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+        
+        return(
+        _react2.default.createElement(_reactNative.Text,_extends({},
+        props,{
+        style:[_styles2.default.default,style]}),
+        
+        text));
+        
+        
+        }
+            style={
+                Object {
+                    "color": undefined,
+                    "fontSize": 20
+                  }
+            }>
+            For Those Of You Who Have Never (And Also Those Who Have)
+        </function Text(_ref)
+        
+        
+        
+        {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+        var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+        
+        return(
+        _react2.default.createElement(_reactNative.Text,_extends({},
+        props,{
+        style:[_styles2.default.default,style]}),
+        
+        text));
+        
+        
+        }>
+    </class extends RealComponent {
+          render() {
+            return React.createElement(
+            RealComponent.displayName,
+            this.props,
+            this.props.children);
+    
+          }}>
+</function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}>,
+  "nodes": Array [
+    <function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}
+      style={
+            Object {
+                  "backgroundColor": "rgba(246, 111, 63, 0.95)"
+                }
+      }>
+      <function Header(_ref){var _ref$style=_ref.
+      style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+      children;var children=_ref$children===undefined?[]:_ref$children;return(
+      
+      _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+      children));}
+            style={undefined}>
+            <function HeaderIcon(_ref){var
+            type=_ref.type;var _ref$style=_ref.
+            style;var style=_ref$style===undefined?{}:_ref$style;var _ref$onPress=_ref.
+            onPress;var onPress=_ref$onPress===undefined?_lodash.noop:_ref$onPress;return(
+            
+            _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
+            _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+            _react2.default.createElement(_Icon2.default,{type:type}))));}
+                  onPress={[Function noop]}
+                  type={1}
+                  uid="dismiss" />
+      </function Header(_ref){var _ref$style=_ref.
+      style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+      children;var children=_ref$children===undefined?[]:_ref$children;return(
+      
+      _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+      children));}>
+      <class extends RealComponent {
+            render() {
+              return React.createElement(
+              RealComponent.displayName,
+              this.props,
+              this.props.children);
+      
+            }}
+            style={
+                  Object {
+                        "alignItems": "center",
+                        "flex": 1,
+                        "paddingLeft": 24,
+                        "paddingRight": 24,
+                        "paddingTop": 64
+                      }
+            }>
+            <class extends RealComponent {
+                  render() {
+                    return React.createElement(
+                    RealComponent.displayName,
+                    this.props,
+                    this.props.children);
+            
+                  }}
+                  source={1} />
+            <function Text(_ref)
+            
+            
+            
+            {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+            var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+            
+            return(
+            _react2.default.createElement(_reactNative.Text,_extends({},
+            props,{
+            style:[_styles2.default.default,style]}),
+            
+            text));
+            
+            
+            }
+                  style={
+                        Object {
+                              "color": undefined,
+                              "fontSize": 20
+                            }
+                  }>
+                  For Those Of You Who Have Never (And Also Those Who Have)
+            </function Text(_ref)
+            
+            
+            
+            {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+            var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+            
+            return(
+            _react2.default.createElement(_reactNative.Text,_extends({},
+            props,{
+            style:[_styles2.default.default,style]}),
+            
+            text));
+            
+            
+            }>
+      </class extends RealComponent {
+            render() {
+              return React.createElement(
+              RealComponent.displayName,
+              this.props,
+              this.props.children);
+      
+            }}>
+</function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}>
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 2,
+      "_context": Object {},
+      "_currentElement": <function CompletedOverlay(_ref){var
+title=_ref.title;var
+onDismissPress=_ref.onDismissPress;return(
+
+_react2.default.createElement(_components.BaseView,{style:_styles2.default.base},
+_react2.default.createElement(_components.Header,{style:_styles2.default.header},
+
+onDismissPress&&_react2.default.createElement(_components.HeaderIcon,{
+uid:'dismiss',
+type:_components.HeaderIcon.types.dismissLight,
+onPress:onDismissPress})),
+
+
+
+
+_react2.default.createElement(_reactNative.View,{style:_styles2.default.body},
+_react2.default.createElement(_reactNative.Image,{source:_images2.default.OVERLAY_DONE}),
+_react2.default.createElement(_components.Text,{style:_styles2.default.title},title))));}
+        onDismissPress={[Function noop]}
+        title="For Those Of You Who Have Never (And Also Those Who Have)" />,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": StatelessComponent {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "onDismissPress": [Function noop],
+          "title": "For Those Of You Who Have Never (And Also Those Who Have)"
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function enqueueCallback],
+          "enqueueCallbackInternal": [Function enqueueCallbackInternal],
+          "enqueueElementInternal": [Function enqueueElementInternal],
+          "enqueueForceUpdate": [Function enqueueForceUpdate],
+          "enqueueReplaceState": [Function enqueueReplaceState],
+          "enqueueSetState": [Function enqueueSetState],
+          "isMounted": [Function isMounted],
+          "validateCallback": [Function validateCallback]
+        }
+      },
+      "_mountOrder": 12,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": Object {
+        "_currentElement": <function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}
+          style={
+                    Object {
+                              "backgroundColor": "rgba(246, 111, 63, 0.95)"
+                            }
+          }>
+          <function Header(_ref){var _ref$style=_ref.
+          style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+          children;var children=_ref$children===undefined?[]:_ref$children;return(
+          
+          _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+          children));}
+                    style={undefined}>
+                    <function HeaderIcon(_ref){var
+                    type=_ref.type;var _ref$style=_ref.
+                    style;var style=_ref$style===undefined?{}:_ref$style;var _ref$onPress=_ref.
+                    onPress;var onPress=_ref$onPress===undefined?_lodash.noop:_ref$onPress;return(
+                    
+                    _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
+                    _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+                    _react2.default.createElement(_Icon2.default,{type:type}))));}
+                              onPress={[Function noop]}
+                              type={1}
+                              uid="dismiss" />
+          </function Header(_ref){var _ref$style=_ref.
+          style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+          children;var children=_ref$children===undefined?[]:_ref$children;return(
+          
+          _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+          children));}>
+          <class extends RealComponent {
+                render() {
+                  return React.createElement(
+                  RealComponent.displayName,
+                  this.props,
+                  this.props.children);
+          
+                }}
+                    style={
+                              Object {
+                                        "alignItems": "center",
+                                        "flex": 1,
+                                        "paddingLeft": 24,
+                                        "paddingRight": 24,
+                                        "paddingTop": 64
+                                      }
+                    }>
+                    <class extends RealComponent {
+                          render() {
+                            return React.createElement(
+                            RealComponent.displayName,
+                            this.props,
+                            this.props.children);
+                    
+                          }}
+                              source={1} />
+                    <function Text(_ref)
+                    
+                    
+                    
+                    {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+                    var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+                    
+                    return(
+                    _react2.default.createElement(_reactNative.Text,_extends({},
+                    props,{
+                    style:[_styles2.default.default,style]}),
+                    
+                    text));
+                    
+                    
+                    }
+                              style={
+                                        Object {
+                                                  "color": undefined,
+                                                  "fontSize": 20
+                                                }
+                              }>
+                              For Those Of You Who Have Never (And Also Those Who Have)
+                    </function Text(_ref)
+                    
+                    
+                    
+                    {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+                    var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+                    
+                    return(
+                    _react2.default.createElement(_reactNative.Text,_extends({},
+                    props,{
+                    style:[_styles2.default.default,style]}),
+                    
+                    text));
+                    
+                    
+                    }>
+          </class extends RealComponent {
+                render() {
+                  return React.createElement(
+                  RealComponent.displayName,
+                  this.props,
+                  this.props.children);
+          
+                }}>
+</function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}>,
+        "_debugID": 2,
+        "_renderedOutput": <function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}
+          style={
+                    Object {
+                              "backgroundColor": "rgba(246, 111, 63, 0.95)"
+                            }
+          }>
+          <function Header(_ref){var _ref$style=_ref.
+          style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+          children;var children=_ref$children===undefined?[]:_ref$children;return(
+          
+          _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+          children));}
+                    style={undefined}>
+                    <function HeaderIcon(_ref){var
+                    type=_ref.type;var _ref$style=_ref.
+                    style;var style=_ref$style===undefined?{}:_ref$style;var _ref$onPress=_ref.
+                    onPress;var onPress=_ref$onPress===undefined?_lodash.noop:_ref$onPress;return(
+                    
+                    _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
+                    _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+                    _react2.default.createElement(_Icon2.default,{type:type}))));}
+                              onPress={[Function noop]}
+                              type={1}
+                              uid="dismiss" />
+          </function Header(_ref){var _ref$style=_ref.
+          style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
+          children;var children=_ref$children===undefined?[]:_ref$children;return(
+          
+          _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
+          children));}>
+          <class extends RealComponent {
+                render() {
+                  return React.createElement(
+                  RealComponent.displayName,
+                  this.props,
+                  this.props.children);
+          
+                }}
+                    style={
+                              Object {
+                                        "alignItems": "center",
+                                        "flex": 1,
+                                        "paddingLeft": 24,
+                                        "paddingRight": 24,
+                                        "paddingTop": 64
+                                      }
+                    }>
+                    <class extends RealComponent {
+                          render() {
+                            return React.createElement(
+                            RealComponent.displayName,
+                            this.props,
+                            this.props.children);
+                    
+                          }}
+                              source={1} />
+                    <function Text(_ref)
+                    
+                    
+                    
+                    {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+                    var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+                    
+                    return(
+                    _react2.default.createElement(_reactNative.Text,_extends({},
+                    props,{
+                    style:[_styles2.default.default,style]}),
+                    
+                    text));
+                    
+                    
+                    }
+                              style={
+                                        Object {
+                                                  "color": undefined,
+                                                  "fontSize": 20
+                                                }
+                              }>
+                              For Those Of You Who Have Never (And Also Those Who Have)
+                    </function Text(_ref)
+                    
+                    
+                    
+                    {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
+                    var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
+                    
+                    return(
+                    _react2.default.createElement(_reactNative.Text,_extends({},
+                    props,{
+                    style:[_styles2.default.default,style]}),
+                    
+                    text));
+                    
+                    
+                    }>
+          </class extends RealComponent {
+                render() {
+                  return React.createElement(
+                  RealComponent.displayName,
+                  this.props,
+                  this.props.children);
+          
+                }}>
+</function BaseView(_ref){var
+children=_ref.children;var
+style=_ref.style;var _ref$statusBarBackgro=_ref.
+statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+
+_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
+statusBarBackgroundColor?
+_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
+null,
+
+children));}>
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false
+    },
+    "getRenderOutput": [Function getRenderOutput],
+    "render": [Function render]
+  },
+  "root": [Circular],
+  "unrendered": <function CompletedOverlay(_ref){var
+title=_ref.title;var
+onDismissPress=_ref.onDismissPress;return(
+
+_react2.default.createElement(_components.BaseView,{style:_styles2.default.base},
+_react2.default.createElement(_components.Header,{style:_styles2.default.header},
+
+onDismissPress&&_react2.default.createElement(_components.HeaderIcon,{
+uid:'dismiss',
+type:_components.HeaderIcon.types.dismissLight,
+onPress:onDismissPress})),
+
+
+
+
+_react2.default.createElement(_reactNative.View,{style:_styles2.default.body},
+_react2.default.createElement(_reactNative.Image,{source:_images2.default.OVERLAY_DONE}),
+_react2.default.createElement(_components.Text,{style:_styles2.default.title},title))));}
+    onDismissPress={[Function noop]}
+    title="For Those Of You Who Have Never (And Also Those Who Have)" />
+}
+`;

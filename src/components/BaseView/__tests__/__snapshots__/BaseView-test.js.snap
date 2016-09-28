@@ -1,0 +1,41 @@
+exports[`BaseView should render its children 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail">
+    I am children.
+  </Text>
+</View>
+`;
+
+exports[`BaseView should support style overriding 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      Object {
+        "backgroundColor": "red"
+      }
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail">
+    I am children.
+  </Text>
+</View>
+`;

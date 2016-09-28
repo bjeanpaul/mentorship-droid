@@ -1,0 +1,247 @@
+exports[`Button should be disabled 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 5,
+        "justifyContent": "center"
+      },
+      Object {
+        "backgroundColor": "#f77040"
+      },
+      Object {
+        "marginLeft": 16,
+        "marginRight": 16
+      },
+      Object {
+        "backgroundColor": "#dfe5e6"
+      }
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        Array [
+          Object {
+            "fontFamily": "Brandon Text_bold",
+            "fontSize": 13,
+            "fontWeight": "bold",
+            "letterSpacing": 1,
+            "marginBottom": 17,
+            "marginTop": 15
+          },
+          Object {
+            "color": "#ffffff"
+          },
+          Object {
+            "color": "#ffffff"
+          }
+        ]
+      ]
+    }>
+    margle
+  </Text>
+</View>
+`;
+
+exports[`Button should render "inline" layout 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffbcbc",
+        "borderColor": "red",
+        "borderWidth": 1,
+        "height": 100,
+        "justifyContent": "center",
+        "margin": 10,
+        "width": 300
+      },
+      undefined
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#333333",
+        "margin": 20
+      }
+    }>
+    TouchableNativeFeedback is not supported on this platform!
+  </Text>
+</View>
+`;
+
+exports[`Button should render "light" theme 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffbcbc",
+        "borderColor": "red",
+        "borderWidth": 1,
+        "height": 100,
+        "justifyContent": "center",
+        "margin": 10,
+        "width": 300
+      },
+      undefined
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#333333",
+        "margin": 20
+      }
+    }>
+    TouchableNativeFeedback is not supported on this platform!
+  </Text>
+</View>
+`;
+
+exports[`Button should render "stretch" layout 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffbcbc",
+        "borderColor": "red",
+        "borderWidth": 1,
+        "height": 100,
+        "justifyContent": "center",
+        "margin": 10,
+        "width": 300
+      },
+      undefined
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#333333",
+        "margin": 20
+      }
+    }>
+    TouchableNativeFeedback is not supported on this platform!
+  </Text>
+</View>
+`;
+
+exports[`Button should render "transparent" theme 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffbcbc",
+        "borderColor": "red",
+        "borderWidth": 1,
+        "height": 100,
+        "justifyContent": "center",
+        "margin": 10,
+        "width": 300
+      },
+      undefined
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#333333",
+        "margin": 20
+      }
+    }>
+    TouchableNativeFeedback is not supported on this platform!
+  </Text>
+</View>
+`;
+
+exports[`Button should render its \`title,\` and map \`onPress\` 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffbcbc",
+        "borderColor": "red",
+        "borderWidth": 1,
+        "height": 100,
+        "justifyContent": "center",
+        "margin": 10,
+        "width": 300
+      },
+      undefined
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#333333",
+        "margin": 20
+      }
+    }>
+    TouchableNativeFeedback is not supported on this platform!
+  </Text>
+</View>
+`;
+
+exports[`Button should take any kind of children 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffbcbc",
+        "borderColor": "red",
+        "borderWidth": 1,
+        "height": 100,
+        "justifyContent": "center",
+        "margin": 10,
+        "width": 300
+      },
+      undefined
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#333333",
+        "margin": 20
+      }
+    }>
+    TouchableNativeFeedback is not supported on this platform!
+  </Text>
+</View>
+`;

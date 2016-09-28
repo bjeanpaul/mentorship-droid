@@ -1,0 +1,962 @@
+exports[`OnboardingFormSteps Inspiration 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        Array [
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400"
+          },
+          Object {
+            "margin": 25,
+            "marginBottom": 50
+          }
+        ]
+      ]
+    }>
+    Who would you love as your own mentor?
+  </Text>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "borderBottomWidth": 1,
+            "borderColor": "#dfe5e6",
+            "marginBottom": 27,
+            "marginLeft": 24,
+            "marginRight": 24
+          },
+          false
+        ]
+      }>
+      <TextInput
+        multiline={true}
+        onBlur={[Function onBlur]}
+        onChange={[Function onChange]}
+        onChangeText={[Function onChangeText]}
+        onFocus={[Function onFocus]}
+        placeholder="Type your answer here"
+        placeholderTextColor="#c0cbcc"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 18,
+              "lineHeight": 28,
+              "marginBottom": 8,
+              "padding": 0
+            },
+            Object {
+              "height": 32
+            }
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value="Music, of course" />
+    </View>
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        Object {
+          "color": "#9fb1b3",
+          "fontSize": 14,
+          "marginLeft": 24,
+          "marginRight": 24,
+          "textAlign": "left"
+        }
+      ]
+    }>
+    e.g. Malala, Sania Nehwal, Chanda Kocchar
+  </Text>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "flex-end"
+      }
+    }>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "margin": 16
+        }
+      }>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`OnboardingFormSteps Motivation 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        Array [
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400"
+          },
+          Object {
+            "margin": 25,
+            "marginBottom": 50
+          }
+        ]
+      ]
+    }>
+    Why did you become a mentor?
+  </Text>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "borderBottomWidth": 1,
+            "borderColor": "#dfe5e6",
+            "marginBottom": 27,
+            "marginLeft": 24,
+            "marginRight": 24
+          },
+          false
+        ]
+      }>
+      <TextInput
+        maxLength={50}
+        multiline={true}
+        onBlur={[Function onBlur]}
+        onChange={[Function onChange]}
+        onChangeText={[Function onChangeText]}
+        onFocus={[Function onFocus]}
+        placeholder="Type your answer here"
+        placeholderTextColor="#c0cbcc"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 18,
+              "lineHeight": 28,
+              "marginBottom": 8,
+              "padding": 0
+            },
+            Object {
+              "height": 32
+            }
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value="To provide for my family" />
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "color": "#c0cbcc",
+            "fontSize": 14,
+            "margin": 28,
+            "marginBottom": 0,
+            "marginTop": -20,
+            "textAlign": "right"
+          }
+        ]
+      }>
+      24
+      /
+      50
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "flex-end"
+      }
+    }>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "margin": 16
+        }
+      }>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`OnboardingFormSteps Occupation 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        Array [
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400"
+          },
+          Object {
+            "margin": 25,
+            "marginBottom": 50
+          }
+        ]
+      ]
+    }>
+    What do you do?
+  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#dfe5e6",
+          "marginBottom": 27,
+          "marginLeft": 24,
+          "marginRight": 24
+        },
+        false
+      ]
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Array [
+            Object {
+              "color": "#9fb1b3",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 14,
+              "fontWeight": "bold",
+              "marginBottom": 9,
+              "textAlign": "left"
+            },
+            undefined
+          ]
+        ]
+      }>
+      Job Sector
+    </Text>
+    <TextInput
+      label="Job Sector"
+      onBlur={[Function onBlur]}
+      onChangeText={[Function onChangeText]}
+      onFocus={[Function onFocus]}
+      placeholderTextColor="#c0cbcc"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 18,
+            "lineHeight": 28,
+            "marginBottom": 8,
+            "padding": 0
+          },
+          undefined
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="Family" />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#dfe5e6",
+          "marginBottom": 27,
+          "marginLeft": 24,
+          "marginRight": 24
+        },
+        false
+      ]
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Array [
+            Object {
+              "color": "#9fb1b3",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 14,
+              "fontWeight": "bold",
+              "marginBottom": 9,
+              "textAlign": "left"
+            },
+            undefined
+          ]
+        ]
+      }>
+      Job Title
+    </Text>
+    <TextInput
+      label="Job Title"
+      onBlur={[Function onBlur]}
+      onChangeText={[Function onChangeText]}
+      onFocus={[Function onFocus]}
+      placeholderTextColor="#c0cbcc"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 18,
+            "lineHeight": 28,
+            "marginBottom": 8,
+            "padding": 0
+          },
+          undefined
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="Uncle" />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "flex-end"
+      }
+    }>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "margin": 16
+        }
+      }>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`OnboardingFormSteps Skills 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        Array [
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400"
+          },
+          Object {
+            "margin": 25,
+            "marginBottom": 50
+          }
+        ]
+      ]
+    }>
+    What skills and strengths do you have that will help you as a Mentor?
+  </Text>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "borderBottomWidth": 1,
+            "borderColor": "#dfe5e6",
+            "marginBottom": 27,
+            "marginLeft": 24,
+            "marginRight": 24
+          },
+          false
+        ]
+      }>
+      <TextInput
+        maxLength={50}
+        multiline={true}
+        onBlur={[Function onBlur]}
+        onChange={[Function onChange]}
+        onChangeText={[Function onChangeText]}
+        onFocus={[Function onFocus]}
+        placeholder="Type your answer here"
+        placeholderTextColor="#c0cbcc"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 18,
+              "lineHeight": 28,
+              "marginBottom": 8,
+              "padding": 0
+            },
+            Object {
+              "height": 32
+            }
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value="I had a bunch when I was younger, but now I\'m old and tired." />
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "color": "#c0cbcc",
+            "fontSize": 14,
+            "margin": 28,
+            "marginBottom": 0,
+            "marginTop": -20,
+            "textAlign": "right"
+          }
+        ]
+      }>
+      60
+      /
+      50
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "flex-end"
+      }
+    }>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "margin": 16
+        }
+      }>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`OnboardingFormSteps ThreeWords 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        Array [
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400"
+          },
+          Object {
+            "margin": 25,
+            "marginBottom": 50
+          }
+        ]
+      ]
+    }>
+    Describe yourself in three words
+  </Text>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "borderBottomWidth": 1,
+            "borderColor": "#dfe5e6",
+            "marginBottom": 27,
+            "marginLeft": 24,
+            "marginRight": 24
+          },
+          false
+        ]
+      }>
+      <TextInput
+        multiline={true}
+        onBlur={[Function onBlur]}
+        onChange={[Function onChange]}
+        onChangeText={[Function onChangeText]}
+        onFocus={[Function onFocus]}
+        placeholder="Type your answer here"
+        placeholderTextColor="#c0cbcc"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 18,
+              "lineHeight": 28,
+              "marginBottom": 8,
+              "padding": 0
+            },
+            Object {
+              "height": 32
+            }
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value="typing thinking understanding" />
+    </View>
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center"
+        },
+        Object {
+          "color": "#9fb1b3",
+          "fontSize": 14,
+          "marginLeft": 24,
+          "marginRight": 24,
+          "textAlign": "left"
+        }
+      ]
+    }>
+    e.g. curious, savvy, blunt, friendly
+  </Text>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "flex-end"
+      }
+    }>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "margin": 16
+        }
+      }>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

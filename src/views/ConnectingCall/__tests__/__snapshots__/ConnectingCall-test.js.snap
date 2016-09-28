@@ -1,0 +1,245 @@
+exports[`ConnectingCall should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      Object {
+        "backgroundColor": "rgba(246, 111, 63, 0.95)"
+      }
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16
+        },
+        Object {}
+      ]
+    }>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 64
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "color": undefined,
+            "fontSize": 20
+          }
+        ]
+      }>
+      Your call will be connected shortly…
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "justifyContent": "center",
+        "padding": 24
+      }
+    } />
+</View>
+`;
+
+exports[`ConnectingCall should render with an activity 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      Object {
+        "backgroundColor": "rgba(246, 111, 63, 0.95)"
+      }
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16
+        },
+        Object {}
+      ]
+    }>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "paddingLeft": 24,
+        "paddingRight": 24,
+        "paddingTop": 64
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Object {
+            "color": undefined,
+            "fontSize": 20
+          }
+        ]
+      }>
+      Your call will be connected shortly…
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Array [
+            Object {
+              "color": "#fff"
+            },
+            Object {
+              "fontSize": 24
+            }
+          ]
+        ]
+      }>
+      You might want to use your loudspeaker during the call to review the activity
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "justifyContent": "center",
+        "padding": 24
+      }
+    }>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#ffbcbc",
+            "borderColor": "red",
+            "borderWidth": 1,
+            "height": 100,
+            "justifyContent": "center",
+            "margin": 10,
+            "width": 300
+          },
+          undefined
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#333333",
+            "margin": 20
+          }
+        }>
+        TouchableNativeFeedback is not supported on this platform!
+      </Text>
+    </View>
+  </View>
+</View>
+`;
