@@ -95,7 +95,7 @@ export const fakeCallNote = data => ({
   call: 50,
   callQuality: 5,
   callActivity: 3,
-  callStartTime: '2016-09-28T44:44Z',
+  callStartTime: '2016-09-28T17:34Z',
   ...data,
 });
 
