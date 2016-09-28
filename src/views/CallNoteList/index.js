@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { ScrollView } from 'react-native';
 import { BaseView } from 'src/components';
-import styles from './styles';
+//import styles from './styles';
 
 
 const CallNoteList = ({

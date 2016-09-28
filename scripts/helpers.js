@@ -88,12 +88,14 @@ export const fakeEvent = data => ({
 export const fakeCallNote = data => ({
   id: 404,
   mentor: 23,
-  call: 50,
   reflection: "It wen't well",
   menteeState: 'Sad',
   objectiveAchieved: false,
   activityHelpful: true,
+  call: 50,
   callQuality: 5,
+  callActivity: 3,
+  callStartTime: '2016-09-28T44:44Z',
   ...data,
 });
 
