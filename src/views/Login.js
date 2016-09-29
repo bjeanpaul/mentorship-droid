@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { BaseView, Text, Header, HeaderIcon } from 'src/components';
+import { FormView, Text, Header, HeaderIcon } from 'src/components';
 
 import LoginForm from './LoginForm';
 import LoginStatusMessage from './LoginStatusMessage';
@@ -10,7 +10,7 @@ const Login = ({
   onBackPress,
   ...props,
 }) => (
-  <BaseView>
+  <FormView>
     <Header>
       <Text style={Text.types.title}>Log in</Text>
 
@@ -28,7 +28,7 @@ const Login = ({
     />
 
     <LoginStatusMessage {...status} />
-  </BaseView>
+  </FormView>
 );
 
 

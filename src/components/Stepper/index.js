@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { ProgressBar, BaseView } from 'src/components';
+import { ProgressBar, BaseView, FormView } from 'src/components';
 import { NavigationExperimental } from 'react-native';
 const { CardStack: NavigationCardStack } = NavigationExperimental;
 
@@ -28,13 +28,13 @@ const Stepper = ({
   }
 
   return (
-    <BaseView>
+    <FormView>
       {progressBar}
       <NavigationCardStack
         navigationState={navigationState}
         renderScene={() => children[navigationState.index]}
       />
-    </BaseView>
+    </FormView>
   );
 };
 
