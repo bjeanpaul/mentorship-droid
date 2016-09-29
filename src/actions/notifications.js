@@ -7,6 +7,7 @@ import deepMapKeys from 'deep-map-keys';
 
 
 const toCamelCase = d => deepMapKeys(d, k => camelCase(k));
+const parsePayload = payload => toCamelCase(JSON.parse(payload));
 
 
 const notificationAction = ({
@@ -15,13 +16,13 @@ const notificationAction = ({
 }) => has(constants.NOTIFICATION_ACTIONS, type)
   ? {
     type: constants.NOTIFICATION_ACTIONS[type],
-    payload: toCamelCase(payload),
+    payload: parsePayload(payload),
   }
   : {
     type: constants.UNKNOWN_NOTIFICATION_RECEIVED,
     payload: {
       type,
-      payload,
+      payload: parsePayload(payload),
     },
   };
 

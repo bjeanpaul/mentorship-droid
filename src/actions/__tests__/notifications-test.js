@@ -51,12 +51,12 @@ describe('notifications', () => {
 
       onNotification({
         type: 'DUMMY',
-        payload: { bar: 23 },
+        payload: JSON.stringify({ bar: 23 }),
       });
 
       onNotification({
         type: 'DUMMY',
-        payload: { baz: 21 },
+        payload: JSON.stringify({ baz: 21 }),
       });
 
       expect(dispatch.mock.calls).toEqual([[{
@@ -78,13 +78,12 @@ describe('notifications', () => {
 
       onNotification({
         type: 'DUMMY',
-        payload: {
+        payload: JSON.stringify({
           bar_baz: [{
             quux_corge_grault: 23,
           }],
-        },
+        }),
       });
-
 
       expect(dispatch.mock.calls).toEqual([[{
         type: constants.NOTIFICATION_ACTIONS.DUMMY,
@@ -106,7 +105,7 @@ describe('notifications', () => {
 
       onNotification({
         type: 'UNK',
-        payload: { bar: 23 },
+        payload: JSON.stringify({ bar: 23 }),
       });
 
       expect(dispatch.mock.calls).toEqual([[{

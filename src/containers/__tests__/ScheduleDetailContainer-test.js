@@ -130,5 +130,35 @@ describe('ScheduleDetailContainer', () => {
         callTime: '2016-09-22T14:31:23.431Z',
       })]]);
     });
+
+    it('should map onDone to patchScheduledCall() with an activity if given', () => {
+      const dispatch = jest.fn();
+
+      const { onDone } = mapDispatchToProps(dispatch, {
+        scheduledCallId: 23,
+      });
+
+      onDone({
+        callTime: '2016-09-22T14:31:23.431Z',
+      });
+
+      expect(dispatch.mock.calls).toEqual([[patchScheduledCall(23, {
+        callTime: '2016-09-22T14:31:23.431Z',
+      })]]);
+    });
+
+    it('should map onDone to createScheduledCall() with an activity if given', () => {
+      const dispatch = jest.fn();
+
+      const { onDone } = mapDispatchToProps(dispatch, {});
+
+      onDone({
+        callTime: '2016-09-22T14:31:23.431Z',
+      });
+
+      expect(dispatch.mock.calls).toEqual([[createScheduledCall({
+        callTime: '2016-09-22T14:31:23.431Z',
+      })]]);
+    });
   });
 });

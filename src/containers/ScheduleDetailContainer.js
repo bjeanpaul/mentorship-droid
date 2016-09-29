@@ -1,3 +1,4 @@
+import { omitBy, isUndefined } from 'lodash';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -10,9 +11,16 @@ import {
 } from 'src/actions/schedule';
 
 
-const done = scheduledCallId => ({ callTime }) => scheduledCallId
-  ? patchScheduledCall(scheduledCallId, { callTime })
-  : createScheduledCall({ callTime });
+const done = (scheduledCallId, activityId) => ({ callTime }) => {
+  const d = omitBy({
+    callTime,
+    activity: activityId,
+  }, isUndefined);
+
+  return scheduledCallId
+    ? patchScheduledCall(scheduledCallId, d)
+    : createScheduledCall(d);
+};
 
 
 export const mapStateToProps = (state, {
@@ -39,9 +47,12 @@ export const mapStateToProps = (state, {
 };
 
 
-export const mapDispatchToProps = (dispatch, { scheduledCallId }) => bindActionCreators({
+export const mapDispatchToProps = (dispatch, {
+  scheduledCallId,
+  activityId,
+}) => bindActionCreators({
   onDismissPress: dismissScreen,
-  onDone: done(scheduledCallId),
+  onDone: done(scheduledCallId, activityId),
   onActivityPress: changeScheduledCallActivity,
 }, dispatch);
 
