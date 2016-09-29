@@ -20,10 +20,10 @@ const CallNoteList = ({
       />
     </Header>
     <ScrollView>
-      {callNotes.map((callNote, index) =>
+      {callNotes.map(callNote =>
         <TouchableNativeFeedback
           callNoteId={callNote.id}
-          key={index}
+          key={callNote.id}
           onPress={() => onRowPress(callNote)}
         >
           <View style={styles.row}>
