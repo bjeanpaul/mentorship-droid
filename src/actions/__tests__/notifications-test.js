@@ -71,10 +71,7 @@ describe('notifications', () => {
     it('should camelcasify received notification payloads', async () => {
       const dispatch = jest.fn();
       await setupNotifications()(dispatch, fakeContext());
-
-      const [[name, onNotification]] = FCM.on.mock.calls;
-      expect(FCM.on.mock.calls.length).toEqual(1);
-      expect(name).toEqual('notification');
+      const [[, onNotification]] = FCM.on.mock.calls;
 
       onNotification({
         type: 'DUMMY',
@@ -98,10 +95,7 @@ describe('notifications', () => {
     it('should dispatch a fallback action for unknown notifications', async () => {
       const dispatch = jest.fn();
       await setupNotifications()(dispatch, fakeContext());
-
-      const [[name, onNotification]] = FCM.on.mock.calls;
-      expect(FCM.on.mock.calls.length).toEqual(1);
-      expect(name).toEqual('notification');
+      const [[, onNotification]] = FCM.on.mock.calls;
 
       onNotification({
         type: 'UNK',
@@ -115,6 +109,16 @@ describe('notifications', () => {
           payload: { bar: 23 },
         },
       }]]);
+    });
+
+    it('should ignore empty notifications', async () => {
+      const dispatch = jest.fn();
+      await setupNotifications()(dispatch, fakeContext());
+      const [[, onNotification]] = FCM.on.mock.calls;
+
+      onNotification({});
+
+      expect(dispatch.mock.calls).toEqual([]);
     });
   });
 });

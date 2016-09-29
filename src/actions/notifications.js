@@ -1,4 +1,4 @@
-import { has, camelCase } from 'lodash';
+import { has, camelCase, isEmpty } from 'lodash';
 import FCM from 'react-native-fcm';
 import { updateNotificationToken } from 'src/api';
 import { staticAction } from 'src/actionHelpers';
@@ -27,8 +27,13 @@ const notificationAction = ({
   };
 
 
-const handleNotifications = dispatch => (
-  FCM.on('notification', notif => dispatch(notificationAction(notif))));
+const handleNotifications = dispatch => {
+  FCM.on('notification', notif => {
+    if (!isEmpty(notif)) {
+      dispatch(notificationAction(notif));
+    }
+  });
+};
 
 
 export const setupNotificationsFailure = staticAction(
