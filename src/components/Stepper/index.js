@@ -13,7 +13,7 @@ const Step = ({
 );
 
 
-const renderScene = children => ({ scene: { index } }) => (children[index])
+const renderScene = children => ({ scene: { index } }) => (children[index]);
 
 
 const Stepper = ({
@@ -35,7 +35,7 @@ const Stepper = ({
       {progressBar}
       <NavigationCardStack
         navigationState={navigationState}
-        renderScene={renderScene={renderScene(children)}}
+        renderScene={renderScene(children)}
       />
     </FormView>
   );
