@@ -1,6 +1,7 @@
 import { unary } from 'lodash';
 
 import {
+  replaceOrPush,
   createRoute,
   createDummyRoute,
   push,
@@ -223,6 +224,44 @@ describe('navigationHelpers', () => {
         }),
         createRoute('BAR'),
       ]));
+    });
+  });
+
+  describe('replaceOrPush', () => {
+    it('should replace routes using the given key and new route', () => {
+      const stack = {
+        routes: [createRoute('A'), createRoute('B')],
+        index: 1,
+      };
+
+      expect(replaceAt(stack, 'A', createRoute('C'))).toEqual({
+        routes: ['C', 'B'].map(unary(createRoute)),
+        index: 0,
+      });
+    });
+
+    it('should push the new route if the given route key does not exist', () => {
+      const stack = {
+        routes: [createRoute('B')],
+        index: 1,
+      };
+
+      expect(replaceOrPush(stack, 'A', createRoute('C'))).toEqual({
+        routes: ['B', 'C'].map(unary(createRoute)),
+        index: 1,
+      });
+    });
+
+    it('should be a no-op if the route is already on the stack', () => {
+      const stack = {
+        routes: [createRoute('A'), createRoute('B')],
+        index: 1,
+      };
+
+      expect(replaceAt(stack, 'B', createRoute('A'))).toEqual({
+        routes: ['A', 'B'].map(unary(createRoute)),
+        index: 1,
+      });
     });
   });
 });
