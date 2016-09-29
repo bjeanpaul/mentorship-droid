@@ -1,7 +1,9 @@
 import React from 'react';
-import { TouchableWithoutFeedback } from 'react-native';
+import { View, TouchableWithoutFeedback } from 'react-native';
 import dismissKeyboard from 'dismissKeyboard';
 import BaseView from 'src/components/BaseView';
+import styles from './styles';
+
 
 class FormView extends React.Component {
   componentWillUnmount() {
@@ -10,8 +12,10 @@ class FormView extends React.Component {
 
   render() {
     return (
-      <TouchableWithoutFeedback onPress={() => dismissKeyboard()}>
-        <BaseView {...this.props} />
+      <TouchableWithoutFeedback style={styles.container} onPress={dismissKeyboard}>
+        <View style={styles.container}>
+          <BaseView {...this.props} />
+        </View>
       </TouchableWithoutFeedback>
     );
   }
