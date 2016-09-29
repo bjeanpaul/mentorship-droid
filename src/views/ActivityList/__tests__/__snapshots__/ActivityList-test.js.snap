@@ -23,6 +23,32 @@ exports[`ActivityList should render 1`] = `
         }
       ]
     }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
+          },
+          Array [
+            Object {
+              "fontFamily": "Brandon Text_medium",
+              "fontSize": 20,
+              "fontWeight": "400"
+            },
+            Object {
+              "color": "#fff"
+            }
+          ]
+        ]
+      }>
+      Level
+    </Text>
     <View
       style={
         Array [
@@ -52,32 +78,6 @@ exports[`ActivityList should render 1`] = `
         TouchableNativeFeedback is not supported on this platform!
       </Text>
     </View>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 13,
-            "textAlign": "center"
-          },
-          Array [
-            Object {
-              "fontFamily": "Brandon Text_medium",
-              "fontSize": 20,
-              "fontWeight": "400"
-            },
-            Object {
-              "color": "#fff"
-            }
-          ]
-        ]
-      }>
-      Level
-    </Text>
   </View>
   <ScrollView>
     <View

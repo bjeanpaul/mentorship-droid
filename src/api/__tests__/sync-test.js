@@ -2,7 +2,8 @@ jest
   .mock('src/api/categories')
   .mock('src/api/activities')
   .mock('src/api/schedule')
-  .mock('src/api/events');
+  .mock('src/api/events')
+  .mock('src/api/callNotes');
 
 
 import { merge } from 'lodash';
@@ -26,6 +27,9 @@ describe('api/sync', () => {
 
     api.listEvents.mockClear();
     api.listEvents.mockReturnValue(helpers.fakeListEventsData());
+
+    api.listCallNotes.mockClear();
+    api.listCallNotes.mockReturnValue(helpers.fakeListCallNotesData());
   });
 
   describe('load', () => {
@@ -33,6 +37,7 @@ describe('api/sync', () => {
       api.listCategories.mockReturnValue(helpers.fakeCategoryListData());
       api.listActivities.mockReturnValue(helpers.fakeActivityListData());
       api.listEvents.mockReturnValue(helpers.fakeListEventsData());
+      api.listCallNotes.mockReturnValue(helpers.fakeListCallNotesData());
 
       const res = await load(fakeAuth());
 
@@ -42,6 +47,7 @@ describe('api/sync', () => {
           helpers.fakeActivityListData().entities,
           helpers.fakeScheduledCallListData().entities,
           helpers.fakeListEventsData().entities,
+          helpers.fakeListCallNotesData().entities,
         ),
       });
     });
@@ -52,6 +58,7 @@ describe('api/sync', () => {
       expect(api.listActivities.mock.calls).toEqual([[fakeAuth()]]);
       expect(api.listScheduledCalls.mock.calls).toEqual([[fakeAuth()]]);
       expect(api.listEvents.mock.calls).toEqual([[fakeAuth()]]);
+      expect(api.listCallNotes.mock.calls).toEqual([[fakeAuth()]]);
     });
   });
 });
