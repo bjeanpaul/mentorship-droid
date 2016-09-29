@@ -125,3 +125,8 @@ export const remove = (state, key) => !has(state, key)
     ...state,
     routes: [createDummyRoute()].concat(reject(state.routes, { key })),
   };
+
+
+export const replaceOrPush = (state, key, route) => has(state, key)
+  ? replaceAt(state, key, route)
+  : push(state, route);
