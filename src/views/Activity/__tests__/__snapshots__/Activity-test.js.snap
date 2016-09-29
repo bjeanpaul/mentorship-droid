@@ -24,35 +24,6 @@ exports[`Activity should display the poster if one is given 1`] = `
           }
         ]
       }>
-      <View
-        style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#ffbcbc",
-              "borderColor": "red",
-              "borderWidth": 1,
-              "height": 100,
-              "justifyContent": "center",
-              "margin": 10,
-              "width": 300
-            },
-            undefined
-          ]
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "color": "#333333",
-              "margin": 20
-            }
-          }>
-          TouchableNativeFeedback is not supported on this platform!
-        </Text>
-      </View>
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -84,6 +55,35 @@ exports[`Activity should display the poster if one is given 1`] = `
         }>
         Level
       </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
     </View>
     <View
       style={
@@ -830,35 +830,6 @@ exports[`Activity should not try display a poster if none is given 1`] = `
           }
         ]
       }>
-      <View
-        style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#ffbcbc",
-              "borderColor": "red",
-              "borderWidth": 1,
-              "height": 100,
-              "justifyContent": "center",
-              "margin": 10,
-              "width": 300
-            },
-            undefined
-          ]
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "color": "#333333",
-              "margin": 20
-            }
-          }>
-          TouchableNativeFeedback is not supported on this platform!
-        </Text>
-      </View>
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -890,6 +861,35 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         }>
         Level
       </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
     </View>
     <View
       style={
@@ -1636,35 +1636,6 @@ exports[`Activity should render 1`] = `
           }
         ]
       }>
-      <View
-        style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#ffbcbc",
-              "borderColor": "red",
-              "borderWidth": 1,
-              "height": 100,
-              "justifyContent": "center",
-              "margin": 10,
-              "width": 300
-            },
-            undefined
-          ]
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "color": "#333333",
-              "margin": 20
-            }
-          }>
-          TouchableNativeFeedback is not supported on this platform!
-        </Text>
-      </View>
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -1696,6 +1667,35 @@ exports[`Activity should render 1`] = `
         }>
         Level
       </Text>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300
+            },
+            undefined
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
     </View>
     <View
       style={

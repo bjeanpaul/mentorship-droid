@@ -43,13 +43,14 @@ class Category extends Component {
     return (
       <BaseView>
         <Header style={[styles.header, { backgroundColor: color }]}>
+          <Text style={[Text.types.title, Text.themes.light]}>{title}</Text>
+
           <HeaderIcon
             uid="back"
             type={HeaderIcon.types.backLight}
             style={styles.back}
             onPress={onBackPress}
           />
-          <Text style={[Text.types.title, Text.themes.light]}>{title}</Text>
         </Header>
 
         <View style={[styles.tabGroup, { backgroundColor: color }]}>
