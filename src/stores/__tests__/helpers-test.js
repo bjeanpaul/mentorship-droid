@@ -6,6 +6,7 @@ import {
   fakeCategory,
   fakeScheduledCall,
   fakeEvent,
+  fakeCallNote,
 } from 'app/scripts/helpers';
 
 import {
@@ -19,6 +20,7 @@ import {
   getScheduledCalls,
   getScheduledCallActivity,
   getEvents,
+  getActivityCallNotes,
 } from 'src/stores/helpers';
 
 
@@ -204,6 +206,36 @@ describe('helpers', () => {
     it('should return undefined if a scheduled call does not have an activity', () => {
       const state = fakeState();
       expect(getScheduledCallActivity(state, 6)).toEqual(void 0);
+    });
+  });
+
+
+  describe('getActivityCallNotes', () => {
+    it('should filter the call notes for the target activity id', () => {
+      const fakeCallNote2 = fakeCallNote({
+        id: 2,
+        callActivityId: 20,
+      });
+      const fakeCallNote5 = fakeCallNote({
+        id: 5,
+        callActivityId: 20,
+      });
+      const fakeCallNote6 = fakeCallNote({
+        id: 6,
+        callActivityId: 15,
+      });
+
+      const state = fakeState();
+      state.entities.callNotes = {
+        2: fakeCallNote2,
+        5: fakeCallNote5,
+        6: fakeCallNote6,
+      };
+
+      expect(getActivityCallNotes(state, 20)).toEqual([
+        fakeCallNote2,
+        fakeCallNote5,
+      ]);
     });
   });
 });
