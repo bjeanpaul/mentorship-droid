@@ -28,18 +28,18 @@ const Activity = ({
   <BaseView>
     <ScrollView>
       <Header style={{ backgroundColor: color }}>
-        <HeaderIcon
-          uid="back"
-          type={HeaderIcon.types.backLight}
-          onPress={onBackPress}
-        />
-
         <Text
           numberOfLines={1}
           style={[Text.types.title, Text.themes.light, styles.categoryTitle]}
         >
           {categoryTitle}
         </Text>
+
+        <HeaderIcon
+          uid="back"
+          type={HeaderIcon.types.backLight}
+          onPress={onBackPress}
+        />
       </Header>
 
       {

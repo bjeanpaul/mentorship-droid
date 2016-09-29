@@ -23,6 +23,8 @@ import {
   patchScheduledCall,
   removeScheduledCall,
   chooseScheduledCall,
+  chooseScheduledCallCategory,
+  chooseScheduledCallActivity,
 } from 'src/actions/schedule';
 
 const { ApiResponseError } = api;
@@ -67,7 +69,7 @@ describe('schedule/actions', () => {
       expect(isEqual(updateScheduledCall, apiAction({
         method: api.updateScheduledCall,
         request: staticAction(constants.SCHEDULED_CALL_UPDATE_REQUEST),
-        success: staticAction(constants.SCHEDULED_CALL_UPDATE_SUCCESS),
+        success: dataAction(constants.SCHEDULED_CALL_UPDATE_SUCCESS),
         failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_UPDATE_FAILURE)]],
       }))).toBe(true);
     });
@@ -78,7 +80,7 @@ describe('schedule/actions', () => {
       expect(isEqual(patchScheduledCall, apiAction({
         method: api.patchScheduledCall,
         request: staticAction(constants.SCHEDULED_CALL_PATCH_REQUEST),
-        success: staticAction(constants.SCHEDULED_CALL_PATCH_SUCCESS),
+        success: dataAction(constants.SCHEDULED_CALL_PATCH_SUCCESS),
         failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_PATCH_FAILURE)]],
       }))).toBe(true);
     });
@@ -101,6 +103,26 @@ describe('schedule/actions', () => {
         .toEqual({
           type: constants.SCHEDULED_CALL_CHOOSE,
           payload: { scheduledCallId: 23 },
+        });
+    });
+  });
+
+  describe('chooseScheduledCallCategory', () => {
+    it('should create an action for choosing a category', () => {
+      expect(chooseScheduledCallCategory(23))
+        .toEqual({
+          type: constants.SCHEDULED_CALL_CATEGORY_CHOOSE,
+          payload: { categoryId: 23 },
+        });
+    });
+  });
+
+  describe('chooseScheduledCallActivity', () => {
+    it('should create an action for choosing a activity', () => {
+      expect(chooseScheduledCallActivity(23))
+        .toEqual({
+          type: constants.SCHEDULED_CALL_ACTIVITY_CHOOSE,
+          payload: { activityId: 23 },
         });
     });
   });

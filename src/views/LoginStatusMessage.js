@@ -27,7 +27,7 @@ const LoginStatusMessage = ({ type }) => {
 };
 
 LoginStatusMessage.propTypes = {
-  type: PropTypes.string,
+  type: PropTypes.string.isRequired,
 };
 
 export default LoginStatusMessage;

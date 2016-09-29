@@ -2,6 +2,10 @@ import React, { PropTypes } from 'react';
 import { OverlayLoading } from 'src/components';
 
 
+// TODO remove once save race condition is fixed
+let saved = false;
+
+
 class Saving extends React.Component {
   // TODO: Stepper should dispatch an action when it's on the last view
   componentDidMount() {
@@ -10,10 +14,14 @@ class Saving extends React.Component {
       profile,
     } = this.props;
 
-    this.props.save({
-      id,
-      profile,
-    });
+    if (!saved) {
+      saved = true;
+
+      this.props.save({
+        id,
+        profile,
+      });
+    }
   }
 
   render() {

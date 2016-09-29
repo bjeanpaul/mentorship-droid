@@ -1,6 +1,5 @@
-import { noop } from 'lodash';
 import React, { PropTypes } from 'react';
-import { BaseView, Toolbar, Link } from 'src/components';
+import { FormView, Text, Header, HeaderIcon } from 'src/components';
 
 import LoginForm from './LoginForm';
 import LoginStatusMessage from './LoginStatusMessage';
@@ -8,27 +7,35 @@ import LoginStatusMessage from './LoginStatusMessage';
 
 const Activation = ({
   status,
+  onBackPress,
   ...props,
 }) => (
-  <BaseView>
-    <Toolbar title="Activate Account" />
+  <FormView>
+    <Header>
+      <Text style={Text.types.title}>Activate Account</Text>
+
+      <HeaderIcon
+        uid="back"
+        type={HeaderIcon.types.backDark}
+        onPress={onBackPress}
+      />
+    </Header>
+
     <LoginForm
-      initialUsername="admin@example.org"
-      initialPassword="123"
       {...props}
       status={status}
       buttonLabel="ACTIVATE"
     />
 
     <LoginStatusMessage {...status} />
-
-    {/* TODO */}
-    <Link onPress={noop}>Forgot your password?</Link>
-  </BaseView>
+  </FormView>
 );
 
+
 Activation.propTypes = {
-  status: PropTypes.object,
+  status: PropTypes.object.isRequired,
+  onBackPress: PropTypes.func.isRequired,
 };
+
 
 export default Activation;

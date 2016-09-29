@@ -5,6 +5,7 @@ import Button from './Button';
 import TextInput from './TextInput';
 import MultiLineTextInput from './MultiLineTextInput';
 import BaseView from './BaseView';
+import FormView from './FormView';
 import Toolbar from './Toolbar';
 import Header from './Header';
 import Icon from './Icon';
@@ -22,10 +23,12 @@ import Event from './Event';
 import MilestoneEvent from './MilestoneEvent';
 import FirstEvent from './FirstEvent';
 import Failure from './Failure';
+import ActivityList from './ActivityList';
 
 
 export {
   BaseView,
+  FormView,
   Text,
   Label,
   Link,
@@ -50,4 +53,5 @@ export {
   MilestoneEvent,
   FirstEvent,
   Failure,
+  ActivityList,
 };

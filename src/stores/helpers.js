@@ -50,3 +50,8 @@ export const getScheduledCallActivity = (state, id) => {
 
 
 export const getEvents = ({ entities: { events } }) => values(events);
+
+
+export const getActivityCallNotes = ({ entities: { callNotes } }, targetActivityId) =>
+  values(callNotes)
+  .filter(({ callActivityId }) => callActivityId === targetActivityId);

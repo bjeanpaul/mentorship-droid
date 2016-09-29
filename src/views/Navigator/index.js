@@ -22,7 +22,9 @@ class Navigator extends Component {
   }
 
   onTabChange(tab) {
-    this.setState({ activeTab: tab });
+    this.setState({ activeTab: tab }, () =>
+      this.props.tabDidChange && this.props.tabDidChange(this.state.activeTab)
+    );
   }
 
   render() {
@@ -51,6 +53,7 @@ class Navigator extends Component {
 Navigator.propTypes = {
   routes: PropTypes.object.isRequired,
   navigationStates: PropTypes.object.isRequired,
+  tabDidChange: PropTypes.func,
   initialActiveTab: PropTypes.oneOf([
     constants.NAV_TAB_ACTIVITIES,
     constants.NAV_TAB_CHAT,

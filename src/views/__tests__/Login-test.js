@@ -3,24 +3,30 @@ import { noop } from 'lodash';
 
 import Login from 'src/views/Login';
 import * as statuses from 'src/statuses/auth';
+import { uidEquals } from 'app/scripts/helpers';
 
 
-describe('auth/Login', () => {
-  it('should draw not found statuses', () => {
-    expect(render(
-      <Login
-        status={statuses.authStatusNotFound()}
-        onLoginPress={noop}
-      />
-    )).toMatchSnapshot();
+describe('Login', () => {
+  const createComponent = (props = {}) => (
+    <Login
+      status={statuses.authStatusIdle()}
+      onLoginPress={noop}
+      onBackPress={noop}
+      {...props}
+    />
+  );
+
+  it('should draw', () => {
+    expect(render(createComponent())).toMatchSnapshot();
   });
 
-  it('should draw error statuses', () => {
-    expect(render(
-      <Login
-        status={statuses.authStatusError()}
-        onLoginPress={noop}
-      />
-    )).toMatchSnapshot();
+  it('should call onDismissPress when the back button is pressed', () => {
+    const onBackPress = jest.fn();
+    const el = shallow(createComponent({ onBackPress }));
+
+    el.findWhere(uidEquals('back'))
+      .simulate('press');
+
+    expect(onBackPress.mock.calls).toEqual([[]]);
   });
 });

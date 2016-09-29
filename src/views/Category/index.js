@@ -1,14 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 import { View, TouchableNativeFeedback } from 'react-native';
 
-import { BaseView, Header, HeaderIcon, Text } from 'src/components';
-import ActivityList from 'src/views/ActivityList';
+import { BaseView, Header, HeaderIcon, Text, ActivityList } from 'src/components';
 import CategoryAbout from 'src/views/CategoryAbout';
 import styles from './styles';
 
 
 const TAB_ACTIVITIES = 'TAB_ACTIVITIES';
 const TAB_ABOUT = 'TAB_ABOUT';
+const INITIAL_TAB = TAB_ACTIVITIES;
 
 
 class Category extends Component {
@@ -16,7 +16,7 @@ class Category extends Component {
     super(props);
 
     const {
-      initialActiveTab = TAB_ABOUT,
+      initialActiveTab = INITIAL_TAB,
     } = props;
 
     this.state = {
@@ -43,13 +43,14 @@ class Category extends Component {
     return (
       <BaseView>
         <Header style={[styles.header, { backgroundColor: color }]}>
+          <Text style={[Text.types.title, Text.themes.light]}>{title}</Text>
+
           <HeaderIcon
             uid="back"
             type={HeaderIcon.types.backLight}
             style={styles.back}
             onPress={onBackPress}
           />
-          <Text style={[Text.types.title, Text.themes.light]}>{title}</Text>
         </Header>
 
         <View style={[styles.tabGroup, { backgroundColor: color }]}>

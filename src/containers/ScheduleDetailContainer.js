@@ -6,7 +6,7 @@ import { dismissScreen } from 'src/actions/navigation';
 import { getScheduledCall, getActivity } from 'src/stores/helpers';
 
 import {
-  createScheduledCall, patchScheduledCall, chooseScheduledCallActivity,
+  createScheduledCall, patchScheduledCall, changeScheduledCallActivity,
 } from 'src/actions/schedule';
 
 
@@ -15,14 +15,25 @@ const done = scheduledCallId => ({ callTime }) => scheduledCallId
   : createScheduledCall({ callTime });
 
 
-export const mapStateToProps = (state, { scheduledCallId }) => {
+export const mapStateToProps = (state, {
+  scheduledCallId,
+  activityId,
+}) => {
   const {
-    activity,
     callTime,
+    activity: callActivityId,
   } = scheduledCallId && getScheduledCall(state, scheduledCallId) || {};
 
+  let activity;
+
+  if (activityId) {
+    activity = getActivity(state, activityId);
+  } else if (callActivityId) {
+    activity = getActivity(state, callActivityId);
+  }
+
   return {
-    activity: activity && getActivity(state, activity),
+    activity,
     initialCallTime: callTime,
   };
 };
@@ -31,7 +42,7 @@ export const mapStateToProps = (state, { scheduledCallId }) => {
 export const mapDispatchToProps = (dispatch, { scheduledCallId }) => bindActionCreators({
   onDismissPress: dismissScreen,
   onDone: done(scheduledCallId),
-  onActivityPress: chooseScheduledCallActivity,
+  onActivityPress: changeScheduledCallActivity,
 }, dispatch);
 
 

@@ -44,6 +44,7 @@ describe('api/schedule', () => {
         method: 'POST',
         data: { fake: 'schedule' },
         auth: fakeAuth(),
+        schema: ScheduledCall,
       });
     });
   });
@@ -66,6 +67,7 @@ describe('api/schedule', () => {
         method: 'PUT',
         data: { fake: 'schedule' },
         auth: fakeAuth(),
+        schema: ScheduledCall,
       });
     });
   });
@@ -77,6 +79,7 @@ describe('api/schedule', () => {
         method: 'PATCH',
         data: { fake: 'schedule' },
         auth: fakeAuth(),
+        schema: ScheduledCall,
       });
     });
   });

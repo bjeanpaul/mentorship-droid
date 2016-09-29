@@ -1,6 +1,6 @@
 import { merge, uniqueId } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
-import { Profile, ScheduledCall, Activity, Category, Event } from 'src/api';
+import { Profile, ScheduledCall, Activity, Category, Event, CallNote } from 'src/api';
 import { getContext } from 'src/stores/helpers';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/event';
 
@@ -85,6 +85,20 @@ export const fakeEvent = data => ({
   ...data,
 });
 
+export const fakeCallNote = data => ({
+  id: 404,
+  mentor: 23,
+  call: 50,
+  reflection: 'It went well',
+  menteeState: 'Sad',
+  objectiveAchieved: false,
+  activityHelpful: true,
+  callQuality: 5,
+  callActivity: 3,
+  callStartTime: '2016-09-28T17:34Z',
+  ...data,
+});
+
 
 export const fakeState = (overrides = {}) => merge({}, {
   auth: {
@@ -106,6 +120,9 @@ export const fakeState = (overrides = {}) => merge({}, {
     },
     scheduledCalls: {
       23: fakeScheduledCall({ id: 23 }),
+    },
+    callNotes: {
+      100: fakeCallNote({ id: 100 }),
     },
   },
 }, overrides);
@@ -147,3 +164,6 @@ export const fakeActivityListData = (data = [fakeActivity()]) => (
 
 export const fakeListEventsData = (data = [fakeEvent()]) => (
     normalize(data, arrayOf(Event)));
+
+export const fakeListCallNotesData = (data = [fakeCallNote()]) => (
+    normalize(data, arrayOf(CallNote)));

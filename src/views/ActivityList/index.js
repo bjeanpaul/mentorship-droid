@@ -1,79 +1,48 @@
 import React, { PropTypes } from 'react';
-import { View, Image, ScrollView, TouchableNativeFeedback } from 'react-native';
-import { Text } from 'src/components';
-import images from 'src/constants/images';
-import styles from './styles';
+
+import {
+  BaseView, Header, HeaderIcon, Text, ActivityList as ActivityListComponent,
+} from 'src/components';
 
 
 const ActivityList = ({
-  category: { color },
+  category,
   activities,
+  onBackPress,
   onActivityPress,
-}) => (
-  <ScrollView>
-    {activities.map(({ id, title, icon, isComplete }) => (
-    <TouchableNativeFeedback
-      key={id}
-      activityId={id}
-      onPress={() => onActivityPress(id)}
-    >
-      <View style={styles.activity}>
-        <ActivityIcon icon={icon} color={color} isComplete={isComplete} />
-        <Text numberOfLines={3} style={styles.activityTitle}>{title}</Text>
-      </View>
-    </TouchableNativeFeedback>
-    ))}
-  </ScrollView>
-);
+}) => {
+  const {
+    color,
+    title,
+  } = category;
 
+  return (
+    <BaseView>
+      <Header style={{ backgroundColor: color }}>
+        <Text style={[Text.types.title, Text.themes.light]}>{title}</Text>
 
-const ActivityIcon = ({
-  icon,
-  color,
-  isComplete,
-}) => (
-  <View style={styles.activityIconContainer}>
-    <View
-      style={[
-        styles.activityIcon,
-        isComplete
-          ? { backgroundColor: color }
-          : styles.activityIconIsIncomplete,
-      ]}
-    >
-      <Image
-        source={
-          icon
-            ? { uri: icon }
-            : images.ACTIVITY_ICON_FALLBACK
-        }
-        style={styles.activityIconImage}
-      />
-    </View>
-
-    {
-      isComplete
-        ? <Image
-          style={styles.activityCompleteAnnotation}
-          source={images.ACTIVITY_COMPLETE_ANNOTATION}
+        <HeaderIcon
+          uid="back"
+          type={HeaderIcon.types.backLight}
+          onPress={onBackPress}
         />
-        : null
-    }
-  </View>
-);
+      </Header>
+
+      <ActivityListComponent
+        category={category}
+        activities={activities}
+        onActivityPress={onActivityPress}
+      />
+    </BaseView>
+  );
+};
 
 
 ActivityList.propTypes = {
   category: PropTypes.object.isRequired,
   activities: PropTypes.array.isRequired,
+  onBackPress: PropTypes.func.isRequired,
   onActivityPress: PropTypes.func.isRequired,
-};
-
-
-ActivityIcon.propTypes = {
-  icon: PropTypes.string,
-  color: PropTypes.string.isRequired,
-  isComplete: PropTypes.bool.isRequired,
 };
 
 

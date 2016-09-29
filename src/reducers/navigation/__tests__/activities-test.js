@@ -23,15 +23,6 @@ describe('src/reducers/navigation/activities', () => {
     });
   });
 
-  describe('ACTIVITY_SCHEDULE_CALL', () => {
-    it('should push on the activity route', () => {
-      expect(reduce(createStack(), activities.scheduleActivityCall(23)))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
-          activityId: 23,
-        })));
-    });
-  });
-
   describe('ACTIVITY_SCREEN_DISMISS', () => {
     it('should pop the current route', () => {
       const stack = push(createStack(), createStack(routes.ROUTE_ACTIVITY));
