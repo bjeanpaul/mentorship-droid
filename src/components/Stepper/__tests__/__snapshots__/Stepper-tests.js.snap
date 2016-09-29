@@ -131,7 +131,7 @@ exports[`Stepper should map props correctly 1`] = `
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail">
-                Step 2
+                Step 1
               </Text>
             </View>
           </View>
@@ -307,7 +307,7 @@ exports[`Stepper should toggle the rendering of the progressBar 1`] = `
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail">
-                Step 2
+                Step 1
               </Text>
             </View>
           </View>

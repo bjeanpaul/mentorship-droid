@@ -13,7 +13,7 @@ const Step = ({
 );
 
 
-const renderScene = children => ({ scene: { index } }) => (children[index]);
+const renderScene = children => ({ scene: { index } }) => children[index];
 
 
 const Stepper = ({
