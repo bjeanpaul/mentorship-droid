@@ -20,7 +20,7 @@ android:
   - addon-google_apis-google-16
 script:
 - npm run ci
-- '[ -z "$TRAVIS_TAG" ] || cd android && ./gradlew assembleRelease -PdisablePreDex'
+- cd android && ./gradlew assembleRelease -PdisablePreDex
 deploy:
   skip_cleanup: true
   provider: releases
