@@ -11,7 +11,7 @@ import {
   parseActivity,
 } from 'src/api/parse';
 
-const { API_URL } = config;
+const { API_BASE_URL } = config;
 
 
 describe('api/parse', () => {
@@ -61,7 +61,7 @@ describe('api/parse', () => {
   describe('parseCategory', () => {
     it('should prepend the base api url to the image url', () => {
       const { image } = parseCategory(fakeCategory({ image: '/foo.jpg' }));
-      expect(image).toEqual(`${API_URL}/foo.jpg`);
+      expect(image).toEqual(`${API_BASE_URL}/foo.jpg`);
     });
 
     it('should not parse the image url if it is falsy', () => {
@@ -73,12 +73,12 @@ describe('api/parse', () => {
   describe('parseActivity', () => {
     it('should prepend the base api url to the poster url', () => {
       const { poster } = parseActivity(fakeActivity({ poster: '/foo.jpg' }));
-      expect(poster).toEqual(`${API_URL}/foo.jpg`);
+      expect(poster).toEqual(`${API_BASE_URL}/foo.jpg`);
     });
 
     it('should prepend the base api url to the icon url', () => {
       const { icon } = parseActivity(fakeActivity({ icon: '/foo.jpg' }));
-      expect(icon).toEqual(`${API_URL}/foo.jpg`);
+      expect(icon).toEqual(`${API_BASE_URL}/foo.jpg`);
     });
 
     it('should not parse the poster url if it is falsy', () => {
