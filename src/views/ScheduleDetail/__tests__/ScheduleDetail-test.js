@@ -20,6 +20,7 @@ describe('ScheduleDetail', () => {
 
   const createComponent = (props = {}) => (
     <ScheduleDetail
+      callTimes={[]}
       onDismissPress={noop}
       onActivityPress={noop}
       onDone={noop}
@@ -37,6 +38,13 @@ describe('ScheduleDetail', () => {
     }))
     .toJSON())
     .toMatchSnapshot();
+  });
+
+  it('should render date collision error feedback', () => {
+    expect(render(createComponent({
+      initialCallTime: '2016-09-22T14:31:23.431Z',
+      callTimes: ['2016-09-21T10:31:23.431Z', '2016-09-22T11:31:23.431Z'],
+    })).toJSON()).toMatchSnapshot();
   });
 
   it('should render the done button disabled if the date or time are not given', () => {

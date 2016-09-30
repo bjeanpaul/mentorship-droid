@@ -9,6 +9,10 @@ export default StyleSheet.create({
     marginLeft: 24,
     marginRight: 24,
   },
+  fieldError: {
+    fontSize: 13,
+    color: colors.TEXT_ERROR,
+  },
   dateContainer: {
     flex: 0.6,
   },
@@ -19,12 +23,16 @@ export default StyleSheet.create({
     textAlign: 'left',
     color: colors.SCHEDULE_DETAIL_VALUE_TEXT,
     fontSize: 20,
+    marginBottom: 6,
   },
   valueRequired: {
     color: colors.SCHEDULE_DETAIL_VALUE_TEXT_REQUIRED,
   },
   separator: {
-    margin: 24,
+    marginLeft: 24,
+    marginRight: 24,
+    marginTop: 44,
+    marginBottom: 44,
     borderBottomWidth: 1,
     borderBottomColor: colors.SCHEDULE_DETAIL_SEPARATOR,
   },
@@ -33,5 +41,6 @@ export default StyleSheet.create({
   },
   footer: {
     flex: 0.3,
+    justifyContent: 'center',
   },
 });

@@ -159,7 +159,6 @@ const ActionButton = ({
 
 
 const Section = ({
-  color,
   icon,
   title,
   children,
@@ -167,7 +166,7 @@ const Section = ({
   <View style={styles.section}>
     <View style={styles.sectionHeader}>
       {/* TODO something better here once this has been discussed */}
-      <Image source={icon} style={[styles.sectionIcon, { tintColor: color }]} />
+      <Image source={icon} style={styles.sectionIcon} />
       <Text numberOfLines={1} style={[Text.uppercase, styles.sectionTitle]}>
         {title}
       </Text>
