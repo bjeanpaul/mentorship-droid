@@ -115,29 +115,6 @@ exports[`Journey should map props correctly 1`] = `
         }
       }
       testID={undefined} />
-    <Image
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hitSlop={undefined}
-      onLayout={undefined}
-      onResponderGrant={[Function bound touchableHandleResponderGrant]}
-      onResponderMove={[Function bound touchableHandleResponderMove]}
-      onResponderRelease={[Function bound touchableHandleResponderRelease]}
-      onResponderTerminate={[Function bound touchableHandleResponderTerminate]}
-      onResponderTerminationRequest={[Function bound touchableHandleResponderTerminationRequest]}
-      onStartShouldSetResponder={[Function bound touchableHandleStartShouldSetResponder]}
-      source={1}
-      style={
-        Object {
-          "height": 44,
-          "marginLeft": 24,
-          "marginRight": 24,
-          "width": 44
-        }
-      }
-      testID={undefined} />
   </Image>
   <View
     style={
