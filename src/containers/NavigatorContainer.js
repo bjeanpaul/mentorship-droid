@@ -10,10 +10,14 @@ import { navTabEntered } from 'src/actions/navigation';
 export const mapStateToProps = ({
   navigation: {
     journey,
+    navigator: {
+      activeTab,
+    },
     activities,
     scheduledCalls,
   },
 }) => ({
+  activeTab,
   routes,
   navigationStates: fromPairs([
     [constants.NAV_TAB_ACTIVITIES, activities],

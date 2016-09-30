@@ -8,6 +8,9 @@ describe('NavigatorContainer', () => {
     it('should provide navigation state for each tab', () => {
       expect(mapStateToProps({
         navigation: {
+          navigator: {
+            activeTab: constants.NAV_TAB_JOURNEY,
+          },
           activities: 'ACTIVITIES_STACK',
           journey: 'JOURNEY_STACK',
           scheduledCalls: 'SCHEDULED_CALLS_STACK',
@@ -20,6 +23,20 @@ describe('NavigatorContainer', () => {
           [constants.NAV_TAB_SCHEDULED_CALLS, 'SCHEDULED_CALLS_STACK'],
         ]),
       }));
+    });
+
+    it('should provide the active tab', () => {
+      expect(mapStateToProps({
+        navigation: {
+          navigator: {
+            activeTab: constants.NAV_TAB_JOURNEY,
+          },
+          activities: 'ACTIVITIES_STACK',
+          journey: 'JOURNEY_STACK',
+          scheduledCalls: 'SCHEDULED_CALLS_STACK',
+        },
+      }))
+      .toEqual(jasmine.objectContaining({ activeTab: constants.NAV_TAB_JOURNEY }));
     });
   });
 
