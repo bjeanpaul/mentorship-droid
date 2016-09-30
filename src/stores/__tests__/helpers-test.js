@@ -21,6 +21,7 @@ import {
   getScheduledCallActivity,
   getEvents,
   getActivityCallNotes,
+  getNextScheduledCall,
 } from 'src/stores/helpers';
 
 
@@ -181,6 +182,39 @@ describe('helpers', () => {
         fakeScheduledCall({ id: 2 }),
         fakeScheduledCall({ id: 3 }),
       ]);
+    });
+  });
+
+  describe('getNextScheduledCall', () => {
+    it('should get the next scheduled call', () => {
+      const state = fakeState();
+
+      const target = fakeScheduledCall({
+        id: 3,
+        callTime: '2016-09-22T14:31:23.431Z',
+      });
+
+      state.entities.scheduledCalls = {
+        1: fakeScheduledCall({
+          id: 1,
+          callTime: '2016-09-22T14:31:21.431Z',
+        }),
+        2: fakeScheduledCall({
+          id: 2,
+          callTime: '2016-09-22T14:31:22.431Z',
+        }),
+        3: target,
+        4: fakeScheduledCall({
+          id: 4,
+          callTime: '2016-09-22T14:31:24.431Z',
+        }),
+        5: fakeScheduledCall({
+          id: 5,
+          callTime: '2016-09-22T14:31:25.431Z',
+        }),
+      };
+
+      expect(getNextScheduledCall(state, '2016-09-22T14:31:23.531Z')).toEqual(target);
     });
   });
 
