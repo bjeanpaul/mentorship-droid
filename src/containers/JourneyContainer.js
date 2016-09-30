@@ -7,7 +7,7 @@ import { getNextScheduledCall } from 'src/stores/helpers';
 
 
 export default connect(state => ({
-  nextScheduledCallDate: getNextScheduledCall(state),
+  nextScheduledCallDate: (getNextScheduledCall(state) || 0).callTime,
 }), {
   onNextScheduledCallPress: changeNavToScheduledCallsTab,
   onCallPress: openCall,
