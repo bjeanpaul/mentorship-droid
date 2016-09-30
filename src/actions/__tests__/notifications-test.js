@@ -68,6 +68,26 @@ describe('notifications', () => {
       }]]);
     });
 
+    it('should allow notifications to not include a payload', async () => {
+      const dispatch = jest.fn();
+      await setupNotifications()(dispatch, fakeContext());
+      const [[, onNotification]] = FCM.on.mock.calls;
+
+      onNotification({
+        type: 'DUMMY',
+      });
+
+      onNotification({
+        type: 'DUMMY',
+      });
+
+      expect(dispatch.mock.calls).toEqual([[{
+        type: constants.NOTIFICATION_ACTIONS.DUMMY,
+      }], [{
+        type: constants.NOTIFICATION_ACTIONS.DUMMY,
+      }]]);
+    });
+
     it('should camelcasify received notification payloads', async () => {
       const dispatch = jest.fn();
       await setupNotifications()(dispatch, fakeContext());
@@ -99,7 +119,7 @@ describe('notifications', () => {
 
       onNotification({
         type: 'UNK',
-        payload: JSON.stringify({ bar: 23 }),
+        payload: { bar: 23 },
       });
 
       expect(dispatch.mock.calls).toEqual([[{

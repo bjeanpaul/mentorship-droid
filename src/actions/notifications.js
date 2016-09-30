@@ -1,4 +1,4 @@
-import { has, camelCase, isEmpty } from 'lodash';
+import { has, camelCase, isEmpty, omitBy, isUndefined } from 'lodash';
 import FCM from 'react-native-fcm';
 import { updateNotificationToken } from 'src/api';
 import { staticAction } from 'src/actionHelpers';
@@ -7,23 +7,17 @@ import deepMapKeys from 'deep-map-keys';
 
 
 const toCamelCase = d => deepMapKeys(d, k => camelCase(k));
-const parsePayload = payload => toCamelCase(JSON.parse(payload));
+const parsePayload = payload => payload && toCamelCase(JSON.parse(payload));
 
 
-const notificationAction = ({
-  type,
-  payload,
-}) => has(constants.NOTIFICATION_ACTIONS, type)
-  ? {
-    type: constants.NOTIFICATION_ACTIONS[type],
-    payload: parsePayload(payload),
-  }
+const notificationAction = d => has(constants.NOTIFICATION_ACTIONS, d.type)
+  ? omitBy({
+    type: constants.NOTIFICATION_ACTIONS[d.type],
+    payload: parsePayload(d.payload),
+  }, isUndefined)
   : {
     type: constants.UNKNOWN_NOTIFICATION_RECEIVED,
-    payload: {
-      type,
-      payload: parsePayload(payload),
-    },
+    payload: d,
   };
 
 
