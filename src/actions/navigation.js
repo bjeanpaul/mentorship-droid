@@ -9,3 +9,6 @@ export const dismissScreen = staticAction(constants.SCREEN_DISMISS);
 export const changeNavTab = type => ({
   type,
 });
+
+export const changeNavToScheduledCallsTab = () =>
+  changeNavTab(constants.NAV_TAB_SCHEDULED_CALLS);
