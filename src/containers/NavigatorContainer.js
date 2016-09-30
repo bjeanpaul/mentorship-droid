@@ -4,16 +4,20 @@ import { connect } from 'react-redux';
 import Navigator from 'src/views/Navigator';
 import routes from 'src/routes';
 import * as constants from 'src/constants/navigation';
-import { navTabEntered } from 'src/actions/navigation';
+import { changeNavTab } from 'src/actions/navigation';
 
 
 export const mapStateToProps = ({
   navigation: {
     journey,
+    navigator: {
+      activeTab,
+    },
     activities,
     scheduledCalls,
   },
 }) => ({
+  activeTab,
   routes,
   navigationStates: fromPairs([
     [constants.NAV_TAB_ACTIVITIES, activities],
@@ -22,14 +26,7 @@ export const mapStateToProps = ({
   ]),
 });
 
-const tabToTabEntered = fromPairs([
-  [constants.NAV_TAB_JOURNEY, constants.NAV_TAB_JOURNEY_ENTERED],
-]);
 
-export const mapDispatchToProps = dispatch => ({
-  tabDidChange: tab => tabToTabEntered[tab] &&
-    dispatch(navTabEntered(tabToTabEntered[tab])),
-});
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Navigator);
+export default connect(mapStateToProps, {
+  onTabPress: changeNavTab,
+})(Navigator);
