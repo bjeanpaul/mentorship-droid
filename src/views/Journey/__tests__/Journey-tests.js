@@ -47,13 +47,6 @@ describe('Journey', () => {
     expect(onCallPress).toBeCalled();
   });
 
-  it('should be able to tap and fire `onMessagePress`', () => {
-    const onMessagePress = jest.fn();
-    const el = shallow(createComponent({ onMessagePress }));
-    el.find('TouchableWithoutFeedback').at(1).simulate('press');
-    expect(onMessagePress).toBeCalled();
-  });
-
   it('should be able to tap and fire `onPressNextScheduledCall`', () => {
     const onNextScheduledCallPress = jest.fn();
     const el = shallow(createComponent({ onNextScheduledCallPress }));

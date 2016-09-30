@@ -1,14 +1,17 @@
 jest.mock('CameraRoll');
 
+import { noop } from 'lodash';
 import React from 'react';
 import { CameraRoll as RNCameraRoll } from 'react-native';
-import CameraRoll from '../index';
+
+import CameraRoll from 'src/views/CameraRoll';
+import { uidEquals } from 'app/scripts/helpers';
+
 
 describe('CameraRoll', () => {
-  function noop() {}
-
   const createComponent = props => (
     <CameraRoll
+      onBackPress={noop}
       onPhotoPress={noop}
       initialPhotos={[
         'image/photo/1.png',
@@ -65,5 +68,15 @@ describe('CameraRoll', () => {
       'image/photo/5.png',
       'image/photo/6.png',
     ]);
+  });
+
+  it('should call onBackPress when the back button is pressed', () => {
+    const onBackPress = jest.fn();
+    const el = shallow(createComponent({ onBackPress }));
+
+    el.findWhere(uidEquals('back'))
+      .simulate('press');
+
+    expect(onBackPress.mock.calls).toEqual([[]]);
   });
 });
