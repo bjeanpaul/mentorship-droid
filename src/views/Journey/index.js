@@ -12,7 +12,6 @@ const Journey = ({
   nextScheduledCallDate,
   onNextScheduledCallPress,
   onCallPress,
-  onMessagePress,
 }) => (
   <BaseView>
     <Header style={styles.header}>
@@ -33,12 +32,6 @@ const Journey = ({
       <TouchableWithoutFeedback onPress={onCallPress}>
         <Image
           source={images.JOURNEY_CALL_ICON}
-          style={styles.icon}
-        />
-      </TouchableWithoutFeedback>
-      <TouchableWithoutFeedback onPress={onMessagePress}>
-        <Image
-          source={images.JOURNEY_MESSAGE_ICON}
           style={styles.icon}
         />
       </TouchableWithoutFeedback>
