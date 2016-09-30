@@ -16,6 +16,8 @@ require('react-native');
 global.Promise = _Promise;
 global.setTimeout = _setTimeout;
 
+config.API_BASE_URL = '/api';
+
 // github.com/facebook/jest/issues/1384
 jest.mock('TextInput', () => 'TextInput');
 jest.mock('ScrollView', () => 'ScrollView');
@@ -26,8 +28,6 @@ jest.setMock('axios', jest.fn());
 // use react-native's FormData implementation, jsdom's implementation expects
 // form data values to only be strings
 global.FormData = FormData;
-
-config.API_URL = '/mentor-api';
 
 global.mock = (...args) => {
   // TODO invesitage why importing helpers in this module seems to make jest unhappy
