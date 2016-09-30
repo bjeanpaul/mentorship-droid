@@ -19,61 +19,52 @@ describe('Navigator', () => {
         B,
       }}
       activeTab={NAV_TAB_ACTIVITIES}
-      onTabPress={noop}
       navigationStates={fromPairs([
         [NAV_TAB_ACTIVITIES, createStack([createRoute('A')])],
         [NAV_TAB_JOURNEY, createStack([createRoute('B')])],
       ])}
-      tabDidChange={noop}
+      onTabPress={noop}
       {...props}
     />);
 
   it('should render the currently active tab', () => {
-    expect(render(createComponent({ initialActiveTab: NAV_TAB_JOURNEY })))
+    expect(render(createComponent({ activeTab: NAV_TAB_JOURNEY })))
       .toMatchSnapshot();
 
-    expect(render(createComponent({ initialActiveTab: NAV_TAB_ACTIVITIES })))
+    expect(render(createComponent({ activeTab: NAV_TAB_ACTIVITIES })))
       .toMatchSnapshot();
   });
 
-  it('should call onTabChange when a tab is pressed', () => {
-    const el = shallow(createComponent());
-    const onTabChange = jest.fn();
-    el.instance().onTabChange = onTabChange;
+  it('should call onTabPress when a tab is pressed', () => {
+    const onTabPress = jest.fn();
 
-    el.find('NavTabBar')
+    shallow(createComponent({
+      onTabPress,
+      activeTab: NAV_TAB_JOURNEY,
+    }))
+      .find('NavTabBar')
       .shallow()
       .findWhere(uidEquals(NAV_TAB_ACTIVITIES))
       .shallow()
       .simulate('press');
 
-    expect(onTabChange.mock.calls).toEqual([
+    expect(onTabPress.mock.calls).toEqual([
       [NAV_TAB_ACTIVITIES],
     ]);
 
-    el.setState({ activeTab: NAV_TAB_ACTIVITIES })
+    shallow(createComponent({
+      onTabPress,
+      activeTab: NAV_TAB_ACTIVITIES,
+    }))
       .find('NavTabBar')
       .shallow()
       .findWhere(uidEquals(NAV_TAB_JOURNEY))
       .shallow()
       .simulate('press');
 
-    expect(onTabChange.mock.calls).toEqual([
+    expect(onTabPress.mock.calls).toEqual([
       [NAV_TAB_ACTIVITIES],
       [NAV_TAB_JOURNEY],
     ]);
-  });
-
-  it ('should call tabDidChange when a tab is pressed', () => {
-    const tabDidChange = jest.fn();
-    const el = shallow(createComponent({
-      tabDidChange,
-    }));
-    el.find('NavTabBar')
-      .shallow()
-      .findWhere(uidEquals(NAV_TAB_ACTIVITIES))
-      .shallow()
-      .simulate('press');
-    expect(tabDidChange).toBeCalled();
   });
 });
