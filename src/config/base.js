@@ -1,3 +1,4 @@
 export default {
-  API_URL: '',
+  API_PATH: '/mentor',
+  API_BASE_URL: '',
 };

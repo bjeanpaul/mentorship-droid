@@ -7,7 +7,7 @@ import * as errors from './errors';
 import deepMapKeys from 'deep-map-keys';
 
 
-const { API_URL } = config;
+const { API_PATH, API_BASE_URL } = config;
 
 
 const serializeAuth = ({ email, password }) => ({
@@ -56,7 +56,7 @@ const parseConf = ({
   parseFn,
 
   options: omitNulls({
-    url: API_URL + url,
+    url: API_BASE_URL + API_PATH + url,
     params,
     method,
 
