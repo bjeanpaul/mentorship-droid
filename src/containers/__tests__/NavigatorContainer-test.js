@@ -1,5 +1,5 @@
 import { fromPairs } from 'lodash';
-import { mapStateToProps, mapDispatchToProps } from 'src/containers/NavigatorContainer';
+import { mapStateToProps } from 'src/containers/NavigatorContainer';
 import * as constants from 'src/constants/navigation';
 
 

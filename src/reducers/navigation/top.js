@@ -24,7 +24,7 @@ import {
 
 
 export default (state = createStack([
-  createRoute(routes.ROUTE_NAVIGATOR),
+  createRoute(routes.ROUTE_LANDING),
 ]), action) => {
   switch (action.type) {
     case navigation.SCREEN_DISMISS:
