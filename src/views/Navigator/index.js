@@ -10,7 +10,7 @@ import NavigationStack from 'src/components/NavigationStack';
 
 const Navigator = ({
   navigationStates,
-  activeTab,
+  activeTab = constants.NAV_TAB_ACTIVITIES,
   routes,
   onTabPress,
 }) => (
@@ -37,7 +37,6 @@ Navigator.propTypes = {
   routes: PropTypes.object.isRequired,
   navigationStates: PropTypes.object.isRequired,
   onTabPress: PropTypes.func.isRequired,
-  tabDidChange: PropTypes.func,
   activeTab: PropTypes.oneOf([
     constants.NAV_TAB_ACTIVITIES,
     constants.NAV_TAB_CHAT,

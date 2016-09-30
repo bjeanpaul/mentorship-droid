@@ -24,7 +24,6 @@ describe('Navigator', () => {
         [NAV_TAB_JOURNEY, createStack([createRoute('B')])],
       ])}
       onTabPress={noop}
-      tabDidChange={noop}
       {...props}
     />);
 
@@ -38,12 +37,12 @@ describe('Navigator', () => {
 
   it('should call onTabPress when a tab is pressed', () => {
     const onTabPress = jest.fn();
-    const el = shallow(createComponent());
 
-    el.instance().onTabPress = onTabPress;
-
-
-    el.find('NavTabBar')
+    shallow(createComponent({
+      onTabPress,
+      activeTab: NAV_TAB_JOURNEY,
+    }))
+      .find('NavTabBar')
       .shallow()
       .findWhere(uidEquals(NAV_TAB_ACTIVITIES))
       .shallow()
@@ -53,7 +52,10 @@ describe('Navigator', () => {
       [NAV_TAB_ACTIVITIES],
     ]);
 
-    el.setState({ activeTab: NAV_TAB_ACTIVITIES })
+    shallow(createComponent({
+      onTabPress,
+      activeTab: NAV_TAB_ACTIVITIES,
+    }))
       .find('NavTabBar')
       .shallow()
       .findWhere(uidEquals(NAV_TAB_JOURNEY))
