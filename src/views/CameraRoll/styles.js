@@ -2,6 +2,9 @@ import { StyleSheet } from 'react-native';
 
 
 export default StyleSheet.create({
+  body: {
+    alignItems: 'center',
+  },
   imageGrid: {
     flex: 1,
     flexDirection: 'row',

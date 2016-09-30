@@ -3,6 +3,7 @@ import { find, isUndefined, omitBy, isNull } from 'lodash';
 
 
 export const makeGradient = (start, end, length) => {
+  if (length === 1) return [start];
   const s = convert.hex.rgb(start);
   const e = convert.hex.rgb(end);
 
