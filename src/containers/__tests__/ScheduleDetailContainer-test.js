@@ -81,8 +81,30 @@ describe('ScheduleDetailContainer', () => {
       expect(activity).toEqual(fakeActivity({ id: 23 }));
     });
 
-    it('should provide nothing if no props are given', () => {
-      expect(mapStateToProps(fakeState(), {})).toEqual({});
+    it('should provide other scheduled call times', () => {
+      const state = fakeState();
+
+      state.entities.scheduledCalls = {
+        2: fakeScheduledCall({
+          id: 2,
+          callTime: '2016-09-22T14:31:23.431Z',
+        }),
+        3: fakeScheduledCall({
+          id: 3,
+          callTime: '2016-09-23T14:31:23.431Z',
+        }),
+        4: fakeScheduledCall({
+          id: 4,
+          callTime: '2016-09-24T14:31:23.431Z',
+        }),
+      };
+
+      const { callTimes } = mapStateToProps(state, { scheduledCallId: 3 });
+
+      expect(callTimes).toEqual([
+        '2016-09-22T14:31:23.431Z',
+        '2016-09-24T14:31:23.431Z',
+      ]);
     });
   });
 

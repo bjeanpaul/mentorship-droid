@@ -1,10 +1,10 @@
-import { omitBy, isUndefined } from 'lodash';
+import { omitBy, isUndefined, reject, map } from 'lodash';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import ScheduleDetail from 'src/views/ScheduleDetail';
 import { dismissScreen } from 'src/actions/navigation';
-import { getScheduledCall, getActivity } from 'src/stores/helpers';
+import { getScheduledCall, getScheduledCalls, getActivity } from 'src/stores/helpers';
 
 import {
   createScheduledCall, patchScheduledCall, changeScheduledCallActivity,
@@ -40,8 +40,11 @@ export const mapStateToProps = (state, {
     activity = getActivity(state, callActivityId);
   }
 
+  const calls = reject(getScheduledCalls(state), { id: scheduledCallId });
+
   return {
     activity,
+    callTimes: map(calls, 'callTime'),
     initialCallTime: callTime,
   };
 };
