@@ -434,7 +434,7 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
           },
           Object {
             "color": "#864a47",
-            "fontSize": 14
+            "fontSize": 13
           }
         ]
       }>
