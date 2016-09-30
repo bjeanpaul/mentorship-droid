@@ -19,27 +19,29 @@ describe('Navigator', () => {
         B,
       }}
       activeTab={NAV_TAB_ACTIVITIES}
-      onTabPress={noop}
       navigationStates={fromPairs([
         [NAV_TAB_ACTIVITIES, createStack([createRoute('A')])],
         [NAV_TAB_JOURNEY, createStack([createRoute('B')])],
       ])}
+      onTabPress={noop}
       tabDidChange={noop}
       {...props}
     />);
 
   it('should render the currently active tab', () => {
-    expect(render(createComponent({ initialActiveTab: NAV_TAB_JOURNEY })))
+    expect(render(createComponent({ activeTab: NAV_TAB_JOURNEY })))
       .toMatchSnapshot();
 
-    expect(render(createComponent({ initialActiveTab: NAV_TAB_ACTIVITIES })))
+    expect(render(createComponent({ activeTab: NAV_TAB_ACTIVITIES })))
       .toMatchSnapshot();
   });
 
-  it('should call onTabChange when a tab is pressed', () => {
+  it('should call onTabPress when a tab is pressed', () => {
+    const onTabPress = jest.fn();
     const el = shallow(createComponent());
-    const onTabChange = jest.fn();
-    el.instance().onTabChange = onTabChange;
+
+    el.instance().onTabPress = onTabPress;
+
 
     el.find('NavTabBar')
       .shallow()
@@ -47,7 +49,7 @@ describe('Navigator', () => {
       .shallow()
       .simulate('press');
 
-    expect(onTabChange.mock.calls).toEqual([
+    expect(onTabPress.mock.calls).toEqual([
       [NAV_TAB_ACTIVITIES],
     ]);
 
@@ -58,22 +60,9 @@ describe('Navigator', () => {
       .shallow()
       .simulate('press');
 
-    expect(onTabChange.mock.calls).toEqual([
+    expect(onTabPress.mock.calls).toEqual([
       [NAV_TAB_ACTIVITIES],
       [NAV_TAB_JOURNEY],
     ]);
-  });
-
-  it ('should call tabDidChange when a tab is pressed', () => {
-    const tabDidChange = jest.fn();
-    const el = shallow(createComponent({
-      tabDidChange,
-    }));
-    el.find('NavTabBar')
-      .shallow()
-      .findWhere(uidEquals(NAV_TAB_ACTIVITIES))
-      .shallow()
-      .simulate('press');
-    expect(tabDidChange).toBeCalled();
   });
 });

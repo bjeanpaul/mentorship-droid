@@ -39,24 +39,4 @@ describe('NavigatorContainer', () => {
       .toEqual(jasmine.objectContaining({ activeTab: constants.NAV_TAB_JOURNEY }));
     });
   });
-
-  describe('mapDispatchToProps', () => {
-    it('should dispatch the entered tab when a tab is selected', () => {
-      const dispatch = jest.fn();
-      const { tabDidChange } = mapDispatchToProps(dispatch, {});
-      expect(dispatch.mock.calls).toEqual([]);
-      tabDidChange(constants.NAV_TAB_JOURNEY);
-      expect(dispatch.mock.calls).toEqual([
-        [{ type: constants.NAV_TAB_JOURNEY_ENTERED }],
-      ]);
-    });
-
-    it('should not dispatch if there isnt an associated enter constant', () => {
-      const dispatch = jest.fn();
-      const { tabDidChange } = mapDispatchToProps(dispatch, {});
-      expect(dispatch.mock.calls).toEqual([]);
-      tabDidChange('PEW');
-      expect(dispatch.mock.calls).toEqual([]);
-    });
-  });
 });

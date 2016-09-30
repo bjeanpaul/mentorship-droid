@@ -1,5 +1,5 @@
 import { map } from 'lodash';
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 
 import styles from './styles';
@@ -8,53 +8,37 @@ import * as constants from 'src/constants/navigation';
 import NavigationStack from 'src/components/NavigationStack';
 
 
-const INITIAL_ACTIVE_TAB = constants.NAV_TAB_JOURNEY;
-
-
-class Navigator extends Component {
-  constructor(props) {
-    super(props);
-    const { initialActiveTab = INITIAL_ACTIVE_TAB } = props;
-
-    this.state = {
-      activeTab: initialActiveTab,
-    };
-  }
-
-  onTabChange(tab) {
-    this.setState({ activeTab: tab }, () =>
-      this.props.tabDidChange && this.props.tabDidChange(this.state.activeTab)
-    );
-  }
-
-  render() {
-    return (
-      <View style={styles.default}>
-        {map(this.props.navigationStates, (navigationState, tab) => (
-          this.state.activeTab === tab
-            ? <NavigationStack
-              key={tab}
-              routes={this.props.routes}
-              navigationState={this.props.navigationStates[tab]}
-            />
-            : null
-        ))}
-
-        <NavTabBar
-          activeTab={this.state.activeTab}
-          onTabPress={tab => this.onTabChange(tab)}
+const Navigator = ({
+  navigationStates,
+  activeTab,
+  routes,
+  onTabPress,
+}) => (
+  <View style={styles.default}>
+    {map(navigationStates, (navigationState, tab) => (
+      activeTab === tab
+        ? <NavigationStack
+          key={tab}
+          routes={routes}
+          navigationState={navigationStates[tab]}
         />
-      </View>
-    );
-  }
-}
+        : null
+    ))}
+
+    <NavTabBar
+      activeTab={activeTab}
+      onTabPress={onTabPress}
+    />
+  </View>
+);
 
 
 Navigator.propTypes = {
   routes: PropTypes.object.isRequired,
   navigationStates: PropTypes.object.isRequired,
+  onTabPress: PropTypes.func.isRequired,
   tabDidChange: PropTypes.func,
-  initialActiveTab: PropTypes.oneOf([
+  activeTab: PropTypes.oneOf([
     constants.NAV_TAB_ACTIVITIES,
     constants.NAV_TAB_CHAT,
     constants.NAV_TAB_COMMUNITY,
