@@ -205,18 +205,13 @@ exports[`Activity should display the poster if one is given 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -296,18 +291,13 @@ exports[`Activity should display the poster if one is given 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -387,18 +377,13 @@ exports[`Activity should display the poster if one is given 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -478,18 +463,13 @@ exports[`Activity should display the poster if one is given 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -569,18 +549,13 @@ exports[`Activity should display the poster if one is given 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -660,18 +635,13 @@ exports[`Activity should display the poster if one is given 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -1011,18 +981,13 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -1102,18 +1067,13 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -1193,18 +1153,13 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -1284,18 +1239,13 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -1375,18 +1325,13 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -1466,18 +1411,13 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -1817,18 +1757,13 @@ exports[`Activity should render 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -1908,18 +1843,13 @@ exports[`Activity should render 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -1999,18 +1929,13 @@ exports[`Activity should render 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -2090,18 +2015,13 @@ exports[`Activity should render 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -2181,18 +2101,13 @@ exports[`Activity should render 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
@@ -2272,18 +2187,13 @@ exports[`Activity should render 1`] = `
         <Image
           source={1}
           style={
-            Array [
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40
-              },
-              Object {
-                "tintColor": "#97c13c"
-              }
-            ]
+            Object {
+              "height": 40,
+              "position": "absolute",
+              "resizeMode": "contain",
+              "top": 16,
+              "width": 40
+            }
           } />
         <Text
           accessible={true}
