@@ -59,7 +59,6 @@ export const getActivityCallNotes = ({ entities: { callNotes } }, targetActivity
 
 
 export const getNextScheduledCall = (state, time = Date.now()) => {
-  console.log(state)
   let calls = getScheduledCalls(state);
   calls = sortBy(calls, ({ callTime }) => +moment(callTime));
   calls = takeWhile(calls, ({ callTime }) => moment(callTime).isBefore(time));
