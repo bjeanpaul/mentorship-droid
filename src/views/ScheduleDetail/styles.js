@@ -10,7 +10,7 @@ export default StyleSheet.create({
     marginRight: 24,
   },
   fieldError: {
-    fontSize: 14,
+    fontSize: 13,
     color: colors.TEXT_ERROR,
   },
   dateContainer: {
