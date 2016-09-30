@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import { View, Image, CameraRoll, ScrollView, TouchableNativeFeedback } from 'react-native';
-import styles from './styles';
+
+import { BaseView, Header, HeaderIcon, Text } from 'src/components';
+import styles from 'src/views/CameraRoll/styles';
 
 
 class CameraRollPicker extends React.Component {
@@ -29,29 +31,43 @@ class CameraRollPicker extends React.Component {
 
   render() {
     return (
-        <ScrollView style={{ flex: 1 }}>
-          <View style={styles.imageGrid}>
-            {this.state.photos.map((photoPath, index) =>
-                <TouchableNativeFeedback
-                  key={index}
-                  photoId={index}
-                  onPress={() => this.props.onPhotoPress(photoPath)}
-                >
-                  <View style={styles.imageContainer}>
-                    <Image
-                      source={{ uri: photoPath }}
-                      style={styles.image}
-                    />
-                  </View>
-                </TouchableNativeFeedback>
-            )}
-          </View>
-        </ScrollView>
+      <BaseView>
+        <Header>
+          <Text style={Text.types.title}>Choose a photo</Text>
+
+          <HeaderIcon
+            uid="back"
+            type={HeaderIcon.types.backDark}
+            onPress={this.props.onBackPress}
+          />
+        </Header>
+        <View style={styles.body}>
+          <ScrollView >
+            <View style={styles.imageGrid}>
+              {this.state.photos.map((photoPath, index) =>
+                  <TouchableNativeFeedback
+                    key={index}
+                    photoId={index}
+                    onPress={() => this.props.onPhotoPress(photoPath)}
+                  >
+                    <View style={styles.imageContainer}>
+                      <Image
+                        source={{ uri: photoPath }}
+                        style={styles.image}
+                      />
+                    </View>
+                  </TouchableNativeFeedback>
+              )}
+            </View>
+          </ScrollView>
+        </View>
+      </BaseView>
     );
   }
 }
 
 CameraRollPicker.propTypes = {
+  onBackPress: PropTypes.func.isRequired,
   onPhotoPress: PropTypes.func.isRequired,
   initialPhotos: PropTypes.array,
 };

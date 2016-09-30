@@ -1,76 +1,47 @@
 exports[`CameraRoll should map props correctly 1`] = `
-<ScrollView
+<View
   style={
-    Object {
-      "flex": 1
-    }
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1
+      },
+      undefined
+    ]
   }>
   <View
     style={
-      Object {
-        "flex": 1,
-        "flexDirection": "row",
-        "flexWrap": "wrap"
-      }
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16
+        },
+        Object {}
+      ]
     }>
-    <View
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center"
           },
-          undefined
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400"
+          }
         ]
       }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "color": "#333333",
-            "margin": 20
-          }
-        }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300
-          },
-          undefined
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "color": "#333333",
-            "margin": 20
-          }
-        }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+      Choose a photo
+    </Text>
     <View
       style={
         Array [
@@ -101,5 +72,110 @@ exports[`CameraRoll should map props correctly 1`] = `
       </Text>
     </View>
   </View>
-</ScrollView>
+  <View
+    style={
+      Object {
+        "alignItems": "center"
+      }
+    }>
+    <ScrollView>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+            "flexWrap": "wrap"
+          }
+        }>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#ffbcbc",
+                "borderColor": "red",
+                "borderWidth": 1,
+                "height": 100,
+                "justifyContent": "center",
+                "margin": 10,
+                "width": 300
+              },
+              undefined
+            ]
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#333333",
+                "margin": 20
+              }
+            }>
+            TouchableNativeFeedback is not supported on this platform!
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#ffbcbc",
+                "borderColor": "red",
+                "borderWidth": 1,
+                "height": 100,
+                "justifyContent": "center",
+                "margin": 10,
+                "width": 300
+              },
+              undefined
+            ]
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#333333",
+                "margin": 20
+              }
+            }>
+            TouchableNativeFeedback is not supported on this platform!
+          </Text>
+        </View>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#ffbcbc",
+                "borderColor": "red",
+                "borderWidth": 1,
+                "height": 100,
+                "justifyContent": "center",
+                "margin": 10,
+                "width": 300
+              },
+              undefined
+            ]
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#333333",
+                "margin": 20
+              }
+            }>
+            TouchableNativeFeedback is not supported on this platform!
+          </Text>
+        </View>
+      </View>
+    </ScrollView>
+  </View>
+</View>
 `;
