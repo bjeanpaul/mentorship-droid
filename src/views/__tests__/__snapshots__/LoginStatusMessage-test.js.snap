@@ -20,7 +20,7 @@ exports[`LoginStatusMessage should draw error statuses 1`] = `
       }
     ]
   }>
-  Sorry, we seem to have an issue on our side.
+  Sorry, we seem to have an issue on our side
 </Text>
 `;
 
@@ -46,6 +46,6 @@ exports[`LoginStatusMessage should draw not found statuses 1`] = `
       }
     ]
   }>
-  Sorry, we couldn\'t find an account with that username and password combination.
+  Sorry, we couldn\'t find an account with that username and password combination
 </Text>
 `;

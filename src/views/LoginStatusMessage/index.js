@@ -11,7 +11,7 @@ const LoginStatusMessage = ({ type }) => {
     case constants.AUTH_STATUS_NOT_FOUND:
       return (
         <Text style={styles.error}>
-          Sorry, we couldn't find an account with that username and password combination.
+          Sorry, we couldn't find an account with that username and password combination
         </Text>
       );
 
@@ -19,7 +19,7 @@ const LoginStatusMessage = ({ type }) => {
       return (
         <Text style={styles.error}>
           {/* TODO Figure out if we can log this */}
-          Sorry, we seem to have an issue on our side.
+          Sorry, we seem to have an issue on our side
         </Text>
       );
 
