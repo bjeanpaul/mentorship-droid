@@ -6,6 +6,7 @@ export default {
 
   DEFAULT_TEXT: '#003035',
   TEXT_LIGHT: '#fff',
+  TEXT_ERROR: '#864a47',
 
   LABEL_TEXT: '#9fb1b3',
   LINK_TEXT: '#f77040',

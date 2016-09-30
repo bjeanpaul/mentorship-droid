@@ -9,6 +9,10 @@ export default StyleSheet.create({
     marginLeft: 24,
     marginRight: 24,
   },
+  fieldError: {
+    fontSize: 14,
+    color: colors.TEXT_ERROR,
+  },
   dateContainer: {
     flex: 0.6,
   },

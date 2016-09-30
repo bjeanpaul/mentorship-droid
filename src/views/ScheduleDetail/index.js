@@ -40,18 +40,21 @@ class ScheduleDetail extends React.Component {
   }
 
   async onDatePress() {
-    const { action, year, month, day: date } = await DatePickerAndroid.open({
+    const { action, year, month, day } = await DatePickerAndroid.open({
       date: this.state.date ? moment(this.state.date).toDate() : new Date(),
       minDate: new Date(),
     });
 
+    const date = {
+      year,
+      month,
+      date: day,
+    };
+
     if (action === DatePickerAndroid.dateSetAction) {
       this.setState({
-        date: {
-          year,
-          month,
-          date,
-        },
+        date,
+        dateIsColliding: this.dateCollides(date),
       });
     }
   }
@@ -79,6 +82,11 @@ class ScheduleDetail extends React.Component {
       })
       .toISOString(),
     });
+  }
+
+  dateCollides(date) {
+    return this.props.callTimes
+      .some(callTime => moment(date).isSame(callTime, 'day'));
   }
 
   parseCallTime(callTime) {
@@ -114,6 +122,7 @@ class ScheduleDetail extends React.Component {
   render() {
     const date = this.state.date && moment(this.state.date).format('ddd, DD MMM YY');
     const time = this.state.time && moment(this.state.time).format('HH:mm a');
+    const isColliding = this.dateCollides(this.state.date);
 
     return (
       <BaseView>
@@ -143,6 +152,13 @@ class ScheduleDetail extends React.Component {
               </View>
             </TouchableNativeFeedback>
           </View>
+
+          {
+            isColliding && <Text style={styles.fieldError}>
+              You already have a call scheduled for this day
+            </Text>
+          }
+
           <Separator />
 
           <View style={styles.fieldset}>
@@ -163,7 +179,7 @@ class ScheduleDetail extends React.Component {
           <Button
             uid="done"
             onPress={this.onDonePress}
-            disabled={!this.state.date || !this.state.time}
+            disabled={!this.state.date || !this.state.time || isColliding}
           >
             SCHEDULE CALL
           </Button>
@@ -175,6 +191,7 @@ class ScheduleDetail extends React.Component {
 
 
 ScheduleDetail.propTypes = {
+  callTimes: PropTypes.arrayOf(PropTypes.string).isRequired,
   onDismissPress: PropTypes.func.isRequired,
   onActivityPress: PropTypes.func.isRequired,
   onDone: PropTypes.func.isRequired,
