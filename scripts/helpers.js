@@ -89,11 +89,13 @@ export const fakeCallNote = data => ({
   id: 404,
   mentor: 23,
   call: 50,
-  reflection: "It wen't well",
+  reflection: 'It went well',
   menteeState: 'Sad',
   objectiveAchieved: false,
   activityHelpful: true,
   callQuality: 5,
+  callActivity: 3,
+  callStartTime: '2016-09-28T17:34Z',
   ...data,
 });
 

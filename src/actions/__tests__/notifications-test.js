@@ -51,12 +51,12 @@ describe('notifications', () => {
 
       onNotification({
         type: 'DUMMY',
-        payload: { bar: 23 },
+        payload: JSON.stringify({ bar: 23 }),
       });
 
       onNotification({
         type: 'DUMMY',
-        payload: { baz: 21 },
+        payload: JSON.stringify({ baz: 21 }),
       });
 
       expect(dispatch.mock.calls).toEqual([[{
@@ -68,23 +68,39 @@ describe('notifications', () => {
       }]]);
     });
 
-    it('should camelcasify received notification payloads', async () => {
+    it('should allow notifications to not include a payload', async () => {
       const dispatch = jest.fn();
       await setupNotifications()(dispatch, fakeContext());
-
-      const [[name, onNotification]] = FCM.on.mock.calls;
-      expect(FCM.on.mock.calls.length).toEqual(1);
-      expect(name).toEqual('notification');
+      const [[, onNotification]] = FCM.on.mock.calls;
 
       onNotification({
         type: 'DUMMY',
-        payload: {
+      });
+
+      onNotification({
+        type: 'DUMMY',
+      });
+
+      expect(dispatch.mock.calls).toEqual([[{
+        type: constants.NOTIFICATION_ACTIONS.DUMMY,
+      }], [{
+        type: constants.NOTIFICATION_ACTIONS.DUMMY,
+      }]]);
+    });
+
+    it('should camelcasify received notification payloads', async () => {
+      const dispatch = jest.fn();
+      await setupNotifications()(dispatch, fakeContext());
+      const [[, onNotification]] = FCM.on.mock.calls;
+
+      onNotification({
+        type: 'DUMMY',
+        payload: JSON.stringify({
           bar_baz: [{
             quux_corge_grault: 23,
           }],
-        },
+        }),
       });
-
 
       expect(dispatch.mock.calls).toEqual([[{
         type: constants.NOTIFICATION_ACTIONS.DUMMY,
@@ -99,10 +115,7 @@ describe('notifications', () => {
     it('should dispatch a fallback action for unknown notifications', async () => {
       const dispatch = jest.fn();
       await setupNotifications()(dispatch, fakeContext());
-
-      const [[name, onNotification]] = FCM.on.mock.calls;
-      expect(FCM.on.mock.calls.length).toEqual(1);
-      expect(name).toEqual('notification');
+      const [[, onNotification]] = FCM.on.mock.calls;
 
       onNotification({
         type: 'UNK',
@@ -116,6 +129,16 @@ describe('notifications', () => {
           payload: { bar: 23 },
         },
       }]]);
+    });
+
+    it('should ignore empty notifications', async () => {
+      const dispatch = jest.fn();
+      await setupNotifications()(dispatch, fakeContext());
+      const [[, onNotification]] = FCM.on.mock.calls;
+
+      onNotification({});
+
+      expect(dispatch.mock.calls).toEqual([]);
     });
   });
 });

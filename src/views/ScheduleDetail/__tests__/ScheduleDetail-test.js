@@ -138,7 +138,7 @@ describe('ScheduleDetail', () => {
     await immediate();
 
     expect(TimePickerAndroid.open.mock.calls).toEqual([[{
-      is24Hour: true,
+      is24Hour: false,
     }]]);
 
     expect(el.state('time')).toEqual({

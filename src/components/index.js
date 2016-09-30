@@ -5,6 +5,7 @@ import Button from './Button';
 import TextInput from './TextInput';
 import MultiLineTextInput from './MultiLineTextInput';
 import BaseView from './BaseView';
+import FormView from './FormView';
 import Toolbar from './Toolbar';
 import Header from './Header';
 import Icon from './Icon';
@@ -27,6 +28,7 @@ import ActivityList from './ActivityList';
 
 export {
   BaseView,
+  FormView,
   Text,
   Label,
   Link,

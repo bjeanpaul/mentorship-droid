@@ -1,45 +1,28 @@
 exports[`Stepper should map props correctly 1`] = `
 <View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hitSlop={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function bound touchableHandleResponderGrant]}
+  onResponderMove={[Function bound touchableHandleResponderMove]}
+  onResponderRelease={[Function bound touchableHandleResponderRelease]}
+  onResponderTerminate={[Function bound touchableHandleResponderTerminate]}
+  onResponderTerminationRequest={[Function bound touchableHandleResponderTerminationRequest]}
+  onStartShouldSetResponder={[Function bound touchableHandleStartShouldSetResponder]}
   style={
-    Array [
-      Object {
-        "backgroundColor": "#fff",
-        "flex": 1
-      },
-      undefined
-    ]
-  }>
+    Object {
+      "flex": 1
+    }
+  }
+  testID={undefined}>
   <View
-    style={
-      Object {
-        "backgroundColor": "#e5e5e5",
-        "flexDirection": "row",
-        "height": 6
-      }
-    }>
-    <View
-      style={
-        Array [
-          Object {
-            "backgroundColor": "#f77040"
-          },
-          Object {
-            "flex": 1
-          }
-        ]
-      } />
-    <View
-      style={
-        Object {
-          "flex": 0
-        }
-      } />
-  </View>
-  <View
-    onLayout={[Function bound _onLayout]}
     style={
       Array [
         Object {
+          "backgroundColor": "#fff",
           "flex": 1
         },
         undefined
@@ -48,130 +31,167 @@ exports[`Stepper should map props correctly 1`] = `
     <View
       style={
         Object {
-          "flex": 1,
-          "flexDirection": "column-reverse"
+          "backgroundColor": "#e5e5e5",
+          "flexDirection": "row",
+          "height": 6
         }
       }>
       <View
         style={
+          Array [
+            Object {
+              "backgroundColor": "#f77040"
+            },
+            Object {
+              "flex": 1
+            }
+          ]
+        } />
+      <View
+        style={
+          Object {
+            "flex": 0
+          }
+        } />
+    </View>
+    <View
+      onLayout={[Function bound _onLayout]}
+      style={
+        Array [
           Object {
             "flex": 1
+          },
+          undefined
+        ]
+      }>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "column-reverse"
           }
         }>
         <View
-          onMoveShouldSetResponder={[Function onMoveShouldSetResponder]}
-          onMoveShouldSetResponderCapture={[Function onMoveShouldSetResponderCapture]}
-          onResponderEnd={[Function onResponderEnd]}
-          onResponderGrant={[Function onResponderGrant]}
-          onResponderMove={[Function onResponderMove]}
-          onResponderReject={[Function onResponderReject]}
-          onResponderRelease={[Function onResponderRelease]}
-          onResponderStart={[Function onResponderStart]}
-          onResponderTerminate={[Function onResponderTerminate]}
-          onResponderTerminationRequest={[Function onResponderTerminationRequest]}
-          onStartShouldSetResponder={[Function onStartShouldSetResponder]}
-          onStartShouldSetResponderCapture={[Function onStartShouldSetResponderCapture]}
-          pointerEvents="none"
           style={
             Object {
-              "backgroundColor": "#E9E9EF",
-              "bottom": 0,
-              "left": 0,
-              "opacity": 0,
-              "position": "absolute",
-              "right": 0,
-              "shadowColor": "black",
-              "shadowOffset": Object {
-                "height": 0,
-                "width": 0
-              },
-              "shadowOpacity": 0.4,
-              "shadowRadius": 10,
-              "top": 0,
-              "transform": Array [
-                Object {
-                  "translateX": 1000000
-                },
-                Object {
-                  "translateY": 1000000
-                }
-              ]
+              "flex": 1
             }
           }>
           <View
+            onMoveShouldSetResponder={[Function onMoveShouldSetResponder]}
+            onMoveShouldSetResponderCapture={[Function onMoveShouldSetResponderCapture]}
+            onResponderEnd={[Function onResponderEnd]}
+            onResponderGrant={[Function onResponderGrant]}
+            onResponderMove={[Function onResponderMove]}
+            onResponderReject={[Function onResponderReject]}
+            onResponderRelease={[Function onResponderRelease]}
+            onResponderStart={[Function onResponderStart]}
+            onResponderTerminate={[Function onResponderTerminate]}
+            onResponderTerminationRequest={[Function onResponderTerminationRequest]}
+            onStartShouldSetResponder={[Function onStartShouldSetResponder]}
+            onStartShouldSetResponderCapture={[Function onStartShouldSetResponderCapture]}
+            pointerEvents="none"
             style={
-              Array [
-                Object {
-                  "backgroundColor": "#fff",
-                  "flex": 1
+              Object {
+                "backgroundColor": "#E9E9EF",
+                "bottom": 0,
+                "left": 0,
+                "opacity": 0,
+                "position": "absolute",
+                "right": 0,
+                "shadowColor": "black",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 0
                 },
-                undefined
-              ]
+                "shadowOpacity": 0.4,
+                "shadowRadius": 10,
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "translateX": 1000000
+                  },
+                  Object {
+                    "translateY": 1000000
+                  }
+                ]
+              }
             }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail">
-              Step 2
-            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#fff",
+                    "flex": 1
+                  },
+                  undefined
+                ]
+              }>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail">
+                Step 1
+              </Text>
+            </View>
           </View>
-        </View>
-        <View
-          onMoveShouldSetResponder={[Function onMoveShouldSetResponder]}
-          onMoveShouldSetResponderCapture={[Function onMoveShouldSetResponderCapture]}
-          onResponderEnd={[Function onResponderEnd]}
-          onResponderGrant={[Function onResponderGrant]}
-          onResponderMove={[Function onResponderMove]}
-          onResponderReject={[Function onResponderReject]}
-          onResponderRelease={[Function onResponderRelease]}
-          onResponderStart={[Function onResponderStart]}
-          onResponderTerminate={[Function onResponderTerminate]}
-          onResponderTerminationRequest={[Function onResponderTerminationRequest]}
-          onStartShouldSetResponder={[Function onStartShouldSetResponder]}
-          onStartShouldSetResponderCapture={[Function onStartShouldSetResponderCapture]}
-          pointerEvents="auto"
-          style={
-            Object {
-              "backgroundColor": "#E9E9EF",
-              "bottom": 0,
-              "left": 0,
-              "opacity": 1,
-              "position": "absolute",
-              "right": 0,
-              "shadowColor": "black",
-              "shadowOffset": Object {
-                "height": 0,
-                "width": 0
-              },
-              "shadowOpacity": 0.4,
-              "shadowRadius": 10,
-              "top": 0,
-              "transform": Array [
-                Object {
-                  "translateX": 0
-                },
-                Object {
-                  "translateY": 0
-                }
-              ]
-            }
-          }>
           <View
+            onMoveShouldSetResponder={[Function onMoveShouldSetResponder]}
+            onMoveShouldSetResponderCapture={[Function onMoveShouldSetResponderCapture]}
+            onResponderEnd={[Function onResponderEnd]}
+            onResponderGrant={[Function onResponderGrant]}
+            onResponderMove={[Function onResponderMove]}
+            onResponderReject={[Function onResponderReject]}
+            onResponderRelease={[Function onResponderRelease]}
+            onResponderStart={[Function onResponderStart]}
+            onResponderTerminate={[Function onResponderTerminate]}
+            onResponderTerminationRequest={[Function onResponderTerminationRequest]}
+            onStartShouldSetResponder={[Function onStartShouldSetResponder]}
+            onStartShouldSetResponderCapture={[Function onStartShouldSetResponderCapture]}
+            pointerEvents="auto"
             style={
-              Array [
-                Object {
-                  "backgroundColor": "#fff",
-                  "flex": 1
+              Object {
+                "backgroundColor": "#E9E9EF",
+                "bottom": 0,
+                "left": 0,
+                "opacity": 1,
+                "position": "absolute",
+                "right": 0,
+                "shadowColor": "black",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 0
                 },
-                undefined
-              ]
+                "shadowOpacity": 0.4,
+                "shadowRadius": 10,
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "translateX": 0
+                  },
+                  Object {
+                    "translateY": 0
+                  }
+                ]
+              }
             }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail">
-              Step 2
-            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#fff",
+                    "flex": 1
+                  },
+                  undefined
+                ]
+              }>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail">
+                Step 2
+              </Text>
+            </View>
           </View>
         </View>
       </View>
@@ -182,152 +202,172 @@ exports[`Stepper should map props correctly 1`] = `
 
 exports[`Stepper should toggle the rendering of the progressBar 1`] = `
 <View
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hitSlop={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function bound touchableHandleResponderGrant]}
+  onResponderMove={[Function bound touchableHandleResponderMove]}
+  onResponderRelease={[Function bound touchableHandleResponderRelease]}
+  onResponderTerminate={[Function bound touchableHandleResponderTerminate]}
+  onResponderTerminationRequest={[Function bound touchableHandleResponderTerminationRequest]}
+  onStartShouldSetResponder={[Function bound touchableHandleStartShouldSetResponder]}
   style={
-    Array [
-      Object {
-        "backgroundColor": "#fff",
-        "flex": 1
-      },
-      undefined
-    ]
-  }>
+    Object {
+      "flex": 1
+    }
+  }
+  testID={undefined}>
   <View
-    onLayout={[Function bound _onLayout]}
     style={
       Array [
         Object {
+          "backgroundColor": "#fff",
           "flex": 1
         },
         undefined
       ]
     }>
     <View
+      onLayout={[Function bound _onLayout]}
       style={
-        Object {
-          "flex": 1,
-          "flexDirection": "column-reverse"
-        }
+        Array [
+          Object {
+            "flex": 1
+          },
+          undefined
+        ]
       }>
       <View
         style={
           Object {
-            "flex": 1
+            "flex": 1,
+            "flexDirection": "column-reverse"
           }
         }>
         <View
-          onMoveShouldSetResponder={[Function onMoveShouldSetResponder]}
-          onMoveShouldSetResponderCapture={[Function onMoveShouldSetResponderCapture]}
-          onResponderEnd={[Function onResponderEnd]}
-          onResponderGrant={[Function onResponderGrant]}
-          onResponderMove={[Function onResponderMove]}
-          onResponderReject={[Function onResponderReject]}
-          onResponderRelease={[Function onResponderRelease]}
-          onResponderStart={[Function onResponderStart]}
-          onResponderTerminate={[Function onResponderTerminate]}
-          onResponderTerminationRequest={[Function onResponderTerminationRequest]}
-          onStartShouldSetResponder={[Function onStartShouldSetResponder]}
-          onStartShouldSetResponderCapture={[Function onStartShouldSetResponderCapture]}
-          pointerEvents="none"
           style={
             Object {
-              "backgroundColor": "#E9E9EF",
-              "bottom": 0,
-              "left": 0,
-              "opacity": 0,
-              "position": "absolute",
-              "right": 0,
-              "shadowColor": "black",
-              "shadowOffset": Object {
-                "height": 0,
-                "width": 0
-              },
-              "shadowOpacity": 0.4,
-              "shadowRadius": 10,
-              "top": 0,
-              "transform": Array [
-                Object {
-                  "translateX": 1000000
-                },
-                Object {
-                  "translateY": 1000000
-                }
-              ]
+              "flex": 1
             }
           }>
           <View
+            onMoveShouldSetResponder={[Function onMoveShouldSetResponder]}
+            onMoveShouldSetResponderCapture={[Function onMoveShouldSetResponderCapture]}
+            onResponderEnd={[Function onResponderEnd]}
+            onResponderGrant={[Function onResponderGrant]}
+            onResponderMove={[Function onResponderMove]}
+            onResponderReject={[Function onResponderReject]}
+            onResponderRelease={[Function onResponderRelease]}
+            onResponderStart={[Function onResponderStart]}
+            onResponderTerminate={[Function onResponderTerminate]}
+            onResponderTerminationRequest={[Function onResponderTerminationRequest]}
+            onStartShouldSetResponder={[Function onStartShouldSetResponder]}
+            onStartShouldSetResponderCapture={[Function onStartShouldSetResponderCapture]}
+            pointerEvents="none"
             style={
-              Array [
-                Object {
-                  "backgroundColor": "#fff",
-                  "flex": 1
+              Object {
+                "backgroundColor": "#E9E9EF",
+                "bottom": 0,
+                "left": 0,
+                "opacity": 0,
+                "position": "absolute",
+                "right": 0,
+                "shadowColor": "black",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 0
                 },
-                undefined
-              ]
+                "shadowOpacity": 0.4,
+                "shadowRadius": 10,
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "translateX": 1000000
+                  },
+                  Object {
+                    "translateY": 1000000
+                  }
+                ]
+              }
             }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail">
-              Step 2
-            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#fff",
+                    "flex": 1
+                  },
+                  undefined
+                ]
+              }>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail">
+                Step 1
+              </Text>
+            </View>
           </View>
-        </View>
-        <View
-          onMoveShouldSetResponder={[Function onMoveShouldSetResponder]}
-          onMoveShouldSetResponderCapture={[Function onMoveShouldSetResponderCapture]}
-          onResponderEnd={[Function onResponderEnd]}
-          onResponderGrant={[Function onResponderGrant]}
-          onResponderMove={[Function onResponderMove]}
-          onResponderReject={[Function onResponderReject]}
-          onResponderRelease={[Function onResponderRelease]}
-          onResponderStart={[Function onResponderStart]}
-          onResponderTerminate={[Function onResponderTerminate]}
-          onResponderTerminationRequest={[Function onResponderTerminationRequest]}
-          onStartShouldSetResponder={[Function onStartShouldSetResponder]}
-          onStartShouldSetResponderCapture={[Function onStartShouldSetResponderCapture]}
-          pointerEvents="auto"
-          style={
-            Object {
-              "backgroundColor": "#E9E9EF",
-              "bottom": 0,
-              "left": 0,
-              "opacity": 1,
-              "position": "absolute",
-              "right": 0,
-              "shadowColor": "black",
-              "shadowOffset": Object {
-                "height": 0,
-                "width": 0
-              },
-              "shadowOpacity": 0.4,
-              "shadowRadius": 10,
-              "top": 0,
-              "transform": Array [
-                Object {
-                  "translateX": 0
-                },
-                Object {
-                  "translateY": 0
-                }
-              ]
-            }
-          }>
           <View
+            onMoveShouldSetResponder={[Function onMoveShouldSetResponder]}
+            onMoveShouldSetResponderCapture={[Function onMoveShouldSetResponderCapture]}
+            onResponderEnd={[Function onResponderEnd]}
+            onResponderGrant={[Function onResponderGrant]}
+            onResponderMove={[Function onResponderMove]}
+            onResponderReject={[Function onResponderReject]}
+            onResponderRelease={[Function onResponderRelease]}
+            onResponderStart={[Function onResponderStart]}
+            onResponderTerminate={[Function onResponderTerminate]}
+            onResponderTerminationRequest={[Function onResponderTerminationRequest]}
+            onStartShouldSetResponder={[Function onStartShouldSetResponder]}
+            onStartShouldSetResponderCapture={[Function onStartShouldSetResponderCapture]}
+            pointerEvents="auto"
             style={
-              Array [
-                Object {
-                  "backgroundColor": "#fff",
-                  "flex": 1
+              Object {
+                "backgroundColor": "#E9E9EF",
+                "bottom": 0,
+                "left": 0,
+                "opacity": 1,
+                "position": "absolute",
+                "right": 0,
+                "shadowColor": "black",
+                "shadowOffset": Object {
+                  "height": 0,
+                  "width": 0
                 },
-                undefined
-              ]
+                "shadowOpacity": 0.4,
+                "shadowRadius": 10,
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "translateX": 0
+                  },
+                  Object {
+                    "translateY": 0
+                  }
+                ]
+              }
             }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail">
-              Step 2
-            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#fff",
+                    "flex": 1
+                  },
+                  undefined
+                ]
+              }>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail">
+                Step 2
+              </Text>
+            </View>
           </View>
         </View>
       </View>

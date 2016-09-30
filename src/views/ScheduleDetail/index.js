@@ -58,7 +58,7 @@ class ScheduleDetail extends React.Component {
 
   async onTimePress() {
     const { action, hour, minute } = await TimePickerAndroid.open({
-      is24Hour: true,
+      is24Hour: false,
     });
 
     if (action === TimePickerAndroid.timeSetAction) {
@@ -113,7 +113,7 @@ class ScheduleDetail extends React.Component {
 
   render() {
     const date = this.state.date && moment(this.state.date).format('ddd, DD MMM YY');
-    const time = this.state.time && moment(this.state.time).format('HH:mm');
+    const time = this.state.time && moment(this.state.time).format('HH:mm a');
 
     return (
       <BaseView>
