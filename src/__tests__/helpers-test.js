@@ -32,6 +32,10 @@ describe('helpers', () => {
       expect(g[0]).toEqual('#C4CD39');
       expect(g[9]).toEqual('#00AA9F');
     });
+
+    it('should use the start color only if n === 1', () => {
+      expect(makeGradient('#C4CD39', '#00AA9F', 1)).toEqual(['#C4CD39']);
+    });
   });
 
   describe('switchError', () => {
