@@ -61,6 +61,3 @@ global.render = (...args) => {
 
 Date.now = () => 1474966266635;
 moment.tz.setDefault('Africa/Johannesburg');
-
-// guaranteed to have been now at some point in time
-Date.now = () => 1474966266635;
