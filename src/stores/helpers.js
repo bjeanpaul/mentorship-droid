@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { values, isUndefined, sortBy, takeWhile, last } from 'lodash';
+import { values, isUndefined, sortBy, first } from 'lodash';
 
 
 export const getAuthUserProfile = ({
@@ -58,9 +58,7 @@ export const getActivityCallNotes = ({ entities: { callNotes } }, targetActivity
   .filter(({ callActivityId }) => callActivityId === targetActivityId);
 
 
-export const getNextScheduledCall = (state, time = Date.now()) => {
-  let calls = getScheduledCalls(state);
-  calls = sortBy(calls, ({ callTime }) => +moment(callTime));
-  calls = takeWhile(calls, ({ callTime }) => moment(callTime).isBefore(time));
-  return last(calls);
-};
+export const getNextScheduledCall = (state, time = Date.now()) => first(
+  sortBy(getScheduledCalls(state), ({ callTime }) => callTime)
+  .filter(({ callTime }) => moment(callTime).isSameOrAfter(time))
+);
