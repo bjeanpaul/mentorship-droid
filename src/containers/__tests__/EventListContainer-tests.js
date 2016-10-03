@@ -1,8 +1,32 @@
-import { groupEventsByDate } from 'src/containers/EventListContainer';
+import moment from 'moment';
+import { groupEventsByDate, formatDateLabel } from 'src/containers/EventListContainer';
 import { fakeState, fakeEvent } from 'app/scripts/helpers';
 
 
 describe('EventListContainer', () => {
+  describe('formatDateLabel', () => {
+    it('should format the dates nicely', () => {
+      const date = Date.now();
+      expect(formatDateLabel(date)).toEqual('Today');
+
+      expect(formatDateLabel(
+        moment(date).subtract(1, 'day')
+      )).toEqual('Yesterday');
+
+      expect(formatDateLabel(
+        moment(date).subtract(2, 'day')
+      )).toEqual('Last Sunday');
+
+      expect(formatDateLabel(
+        moment(date).subtract(6, 'day')
+      )).toEqual('Last Wednesday');
+
+      expect(formatDateLabel(
+        moment(date).subtract(30, 'day')
+      )).toEqual('2016-08-28');
+    });
+  });
+
   describe('groupEventsByDate', () => {
     it('should group and sort events by "day"', () => {
       const state = fakeState();

@@ -1,3 +1,4 @@
+import { some } from 'lodash';
 import moment from 'moment';
 import React, { PropTypes } from 'react';
 import {
@@ -33,7 +34,15 @@ class ScheduleDetail extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = this.parseCallTime(this.props.initialCallTime);
+    const {
+      initialCallTimeHasChanged = false,
+    } = props;
+
+    this.state = {
+      ...this.parseCallTime(this.props.initialCallTime),
+      timeHasChanged: initialCallTimeHasChanged,
+    };
+
     this.onDonePress = this.onDonePress.bind(this);
     this.onDatePress = this.onDatePress.bind(this);
     this.onTimePress = this.onTimePress.bind(this);
@@ -54,7 +63,6 @@ class ScheduleDetail extends React.Component {
     if (action === DatePickerAndroid.dateSetAction) {
       this.setState({
         date,
-        dateIsColliding: this.dateCollides(date),
       });
     }
   }
@@ -70,6 +78,7 @@ class ScheduleDetail extends React.Component {
           hour,
           minute,
         },
+        timeHasChanged: true,
       });
     }
   }
@@ -84,9 +93,18 @@ class ScheduleDetail extends React.Component {
     });
   }
 
-  dateCollides(date) {
+  dateIsColliding() {
+    const date = this.state.date;
     return this.props.callTimes
       .some(callTime => moment(date).isSame(callTime, 'day'));
+  }
+
+  timeIsInPast() {
+    return moment({
+      ...this.state.date,
+      ...this.state.time,
+    })
+    .isBefore();
   }
 
   parseCallTime(callTime) {
@@ -118,11 +136,11 @@ class ScheduleDetail extends React.Component {
     }
   }
 
-
   render() {
     const date = this.state.date && moment(this.state.date).format('ddd, DD MMM YY');
-    const time = this.state.time && moment(this.state.time).format('hh:mm a');
-    const isColliding = this.dateCollides(this.state.date);
+    const time = this.state.time && moment(this.state.time).format('h:mm a');
+    const isInPast = this.state.timeHasChanged && this.timeIsInPast();
+    const isColliding = this.dateIsColliding();
 
     return (
       <BaseView>
@@ -142,6 +160,7 @@ class ScheduleDetail extends React.Component {
               <View style={styles.dateContainer}>
                 <Label title="DATE" />
                 <Value value={date} placeholder="Add date" />
+
               </View>
             </TouchableNativeFeedback>
 
@@ -155,7 +174,13 @@ class ScheduleDetail extends React.Component {
 
           {
             isColliding && <Text style={styles.fieldError}>
-              You already have a call scheduled for this day
+              You already have a call on this day
+            </Text>
+          }
+
+          {
+            !isColliding && isInPast && <Text style={styles.fieldError}>
+              This date and time have already passed
             </Text>
           }
 
@@ -179,7 +204,7 @@ class ScheduleDetail extends React.Component {
           <Button
             uid="done"
             onPress={this.onDonePress}
-            disabled={!this.state.date || !this.state.time || isColliding}
+            disabled={some([!this.state.date, !this.state.time, isColliding, isInPast])}
           >
             SCHEDULE CALL
           </Button>
@@ -196,6 +221,7 @@ ScheduleDetail.propTypes = {
   onActivityPress: PropTypes.func.isRequired,
   onDone: PropTypes.func.isRequired,
   initialCallTime: PropTypes.string,
+  initialCallTimeHasChanged: PropTypes.bool,
   activity: PropTypes.object,
 };
 

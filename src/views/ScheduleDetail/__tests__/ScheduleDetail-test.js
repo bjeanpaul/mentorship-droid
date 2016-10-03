@@ -47,6 +47,13 @@ describe('ScheduleDetail', () => {
     })).toJSON()).toMatchSnapshot();
   });
 
+  it('should render past time error feedback', () => {
+    expect(render(createComponent({
+      initialCallTime: moment().subtract(1, 'minute').toISOString(),
+      initialCallTimeHasChanged: true,
+    })).toJSON()).toMatchSnapshot();
+  });
+
   it('should render the done button disabled if the date or time are not given', () => {
     const el = shallow(createComponent());
 

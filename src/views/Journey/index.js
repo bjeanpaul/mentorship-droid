@@ -22,7 +22,7 @@ const Journey = ({
       >
         {nextScheduledCallDate ?
           moment(nextScheduledCallDate).format('dddd Do, MMMM YYYY') :
-          'Schedule your first call'
+          'Schedule a call'
         }
       </Link>
     </Header>
