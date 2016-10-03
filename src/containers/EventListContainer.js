@@ -5,7 +5,7 @@ import EventList from 'src/views/EventList';
 import { getEvents } from 'src/stores/helpers';
 
 
-const formatDateLabel = date => moment(date).calendar(new Date(), {
+const formatDateLabel = date => moment(date).calendar(Date.now(), {
   sameDay: '[Today]',
   nextDay: '[Tomorrow]',
   nextWeek: 'dddd',
