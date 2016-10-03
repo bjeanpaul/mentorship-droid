@@ -214,7 +214,22 @@ describe('helpers', () => {
         }),
       };
 
-      expect(getNextScheduledCall(state, '2016-09-22T14:31:23.531Z')).toEqual(target);
+      expect(getNextScheduledCall(state, '2016-09-22T14:31:23.431Z')).toEqual(target);
+    });
+
+    it('should return the next scheduled call when none are in the past', () => {
+      const state = fakeState();
+      state.entities.scheduledCalls = {
+        4: fakeScheduledCall({
+          id: 4,
+          callTime: '2016-09-25',
+        }),
+        5: fakeScheduledCall({
+          id: 5,
+          callTime: '2016-09-30',
+        }),
+      };
+      expect(getNextScheduledCall(state, '2016-09-20').callTime).toEqual('2016-09-25');
     });
   });
 
