@@ -217,7 +217,7 @@ describe('helpers', () => {
       expect(getNextScheduledCall(state, '2016-09-22T14:31:23.431Z')).toEqual(target);
     });
 
-    it('should get the next scheduled call', () => {
+    it('should return the next scheduled call when none are in the past', () => {
       const state = fakeState();
       state.entities.scheduledCalls = {
         4: fakeScheduledCall({
