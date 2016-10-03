@@ -6,23 +6,24 @@ import { fakeState, fakeEvent } from 'app/scripts/helpers';
 describe('EventListContainer', () => {
   describe('formatDateLabel', () => {
     it('should format the dates nicely', () => {
-      expect(formatDateLabel(new Date())).toEqual('Today');
+      const date = Date.now();
+      expect(formatDateLabel(date)).toEqual('Today');
 
       expect(formatDateLabel(
-        moment(new Date()).subtract(1, 'day')
+        moment(date).subtract(1, 'day')
       )).toEqual('Yesterday');
 
       expect(formatDateLabel(
-        moment(new Date()).subtract(2, 'day')
-      )).toEqual('Last Friday');
+        moment(date).subtract(2, 'day')
+      )).toEqual('Last Sunday');
 
       expect(formatDateLabel(
-        moment(new Date()).subtract(6, 'day')
-      )).toEqual('Last Monday');
+        moment(date).subtract(6, 'day')
+      )).toEqual('Last Wednesday');
 
       expect(formatDateLabel(
-        moment(new Date()).subtract(30, 'day')
-      )).toEqual('2016-09-02');
+        moment(date).subtract(30, 'day')
+      )).toEqual('2016-08-28');
     });
   });
 
