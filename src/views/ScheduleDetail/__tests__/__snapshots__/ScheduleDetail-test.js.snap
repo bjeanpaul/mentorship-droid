@@ -732,7 +732,7 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
           }
         ]
       }>
-      This time has already passed
+      This date and time have already passed
     </Text>
     <View
       style={

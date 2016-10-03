@@ -180,7 +180,7 @@ class ScheduleDetail extends React.Component {
 
           {
             !isColliding && isInPast && <Text style={styles.fieldError}>
-              This time has already passed
+              This date and time have already passed
             </Text>
           }
 
