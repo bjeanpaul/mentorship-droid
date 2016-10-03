@@ -121,7 +121,7 @@ class ScheduleDetail extends React.Component {
 
   render() {
     const date = this.state.date && moment(this.state.date).format('ddd, DD MMM YY');
-    const time = this.state.time && moment(this.state.time).format('hh:mm a');
+    const time = this.state.time && moment(this.state.time).format('h:mm a');
     const isColliding = this.dateCollides(this.state.date);
 
     return (
