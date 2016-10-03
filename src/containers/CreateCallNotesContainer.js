@@ -1,5 +1,2 @@
-import { connect } from 'react-redux';
-import NotYetImplemented from 'src/views/NotYetImplemented';
-
-
-export default connect()(NotYetImplemented);
+import NotYetImplementedContainer from 'src/views/NotYetImplementedContainer';
+export default NotYetImplementedContainer;
