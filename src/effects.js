@@ -7,6 +7,7 @@ import { load } from 'src/actions/sync';
 import { sequence } from 'src/actionHelpers';
 import { setupNotifications } from 'src/actions/notifications';
 
+import { SCHEDULED_CALL_CREATE_SUCCESS } from 'src/constants/schedule';
 import { NAV_TAB_JOURNEY } from 'src/constants/navigation';
 import { listEvents } from 'src/actions/event';
 
@@ -16,4 +17,5 @@ export default fromPairs([
   [EXISTING_USER_ENTER, load],
   [ONBOARDING_UPDATE_PROFILE_SUCCESS, load],
   [NAV_TAB_JOURNEY, listEvents],
+  [SCHEDULED_CALL_CREATE_SUCCESS, listEvents],
 ]);

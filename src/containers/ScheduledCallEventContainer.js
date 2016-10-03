@@ -1,7 +1,8 @@
+import moment from 'moment';
 import { connect } from 'react-redux';
 import { Event } from 'src/components';
 import images from 'src/constants/images';
-import { getScheduledCallActivity } from 'src/stores/helpers';
+import { getScheduledCall, getScheduledCallActivity } from 'src/stores/helpers';
 
 
 const mapStateToProps = (state, {
@@ -9,6 +10,7 @@ const mapStateToProps = (state, {
   eventType: type,
   occuredAt: date,
 }) => {
+  const scheduledCall = getScheduledCall(state, scheduledCallId);
   const activity = getScheduledCallActivity(state, scheduledCallId);
   let icon = images.JOURNEY_EVENT_SCHEDULED_CALL_ICON;
   if (activity && activity.icon) {
@@ -20,6 +22,7 @@ const mapStateToProps = (state, {
     date,
     icon,
     title: 'Call scheduled',
+    blurb: moment(scheduledCall.callTime).format('dddd Do, MMMM YYYY h:mm a'),
   };
 };
 

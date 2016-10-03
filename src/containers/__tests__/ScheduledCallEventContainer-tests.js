@@ -19,6 +19,7 @@ describe('CallScheduledEventContainer', () => {
             55: fakeScheduledCall({
               id: 55,
               activity: 110,
+              callTime: '2016-11-11T12:00Z',
             }),
           },
         },
@@ -31,6 +32,7 @@ describe('CallScheduledEventContainer', () => {
         date: '2016-09-16T11:19:17.368442Z',
         icon: { uri: 'http://icons.are.a.cool.way.to.communicate' },
         title: 'Call scheduled',
+        blurb: 'Friday 11th, November 2016 2:00 pm',
       });
     });
 
@@ -40,6 +42,7 @@ describe('CallScheduledEventContainer', () => {
           scheduledCalls: {
             55: fakeScheduledCall({
               id: 55,
+              callTime: '2016-11-11T12:00Z',
             }),
           },
         },
@@ -52,6 +55,7 @@ describe('CallScheduledEventContainer', () => {
         date: '2016-09-16T11:19:17.368442Z',
         icon: images.JOURNEY_EVENT_SCHEDULED_CALL_ICON,
         title: 'Call scheduled',
+        blurb: 'Friday 11th, November 2016 2:00 pm',
       });
     });
   });
