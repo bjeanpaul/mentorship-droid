@@ -78,14 +78,9 @@ ShallowWrapper {
   "length": 1,
   "node": <function BaseView(_ref){var
 children=_ref.children;var
-style=_ref.style;var _ref$statusBarBackgro=_ref.
-statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+style=_ref.style;return(
 
 _react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-statusBarBackgroundColor?
-_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
-null,
-
 children));}
     style={
         Object {
@@ -186,26 +181,16 @@ children));}
           }}>
 </function BaseView(_ref){var
 children=_ref.children;var
-style=_ref.style;var _ref$statusBarBackgro=_ref.
-statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+style=_ref.style;return(
 
 _react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-statusBarBackgroundColor?
-_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
-null,
-
 children));}>,
   "nodes": Array [
     <function BaseView(_ref){var
 children=_ref.children;var
-style=_ref.style;var _ref$statusBarBackgro=_ref.
-statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+style=_ref.style;return(
 
 _react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-statusBarBackgroundColor?
-_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
-null,
-
 children));}
       style={
             Object {
@@ -306,14 +291,9 @@ children));}
             }}>
 </function BaseView(_ref){var
 children=_ref.children;var
-style=_ref.style;var _ref$statusBarBackgro=_ref.
-statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+style=_ref.style;return(
 
 _react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-statusBarBackgroundColor?
-_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
-null,
-
 children));}>
   ],
   "options": Object {},
@@ -365,7 +345,7 @@ _react2.default.createElement(_components.Text,{style:_styles2.default.title},ti
           "validateCallback": [Function validateCallback]
         }
       },
-      "_mountOrder": 14,
+      "_mountOrder": 13,
       "_pendingCallbacks": null,
       "_pendingElement": null,
       "_pendingForceUpdate": false,
@@ -374,14 +354,9 @@ _react2.default.createElement(_components.Text,{style:_styles2.default.title},ti
       "_renderedComponent": Object {
         "_currentElement": <function BaseView(_ref){var
 children=_ref.children;var
-style=_ref.style;var _ref$statusBarBackgro=_ref.
-statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+style=_ref.style;return(
 
 _react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-statusBarBackgroundColor?
-_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
-null,
-
 children));}
           style={
                     Object {
@@ -482,26 +457,16 @@ children));}
                 }}>
 </function BaseView(_ref){var
 children=_ref.children;var
-style=_ref.style;var _ref$statusBarBackgro=_ref.
-statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+style=_ref.style;return(
 
 _react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-statusBarBackgroundColor?
-_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
-null,
-
 children));}>,
         "_debugID": 2,
         "_renderedOutput": <function BaseView(_ref){var
 children=_ref.children;var
-style=_ref.style;var _ref$statusBarBackgro=_ref.
-statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+style=_ref.style;return(
 
 _react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-statusBarBackgroundColor?
-_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
-null,
-
 children));}
           style={
                     Object {
@@ -602,14 +567,9 @@ children));}
                 }}>
 </function BaseView(_ref){var
 children=_ref.children;var
-style=_ref.style;var _ref$statusBarBackgro=_ref.
-statusBarBackgroundColor;var statusBarBackgroundColor=_ref$statusBarBackgro===undefined?_colors2.default.DEFAULT_STATUS_BG:_ref$statusBarBackgro;return(
+style=_ref.style;return(
 
 _react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-statusBarBackgroundColor?
-_react2.default.createElement(_reactNative.StatusBar,{backgroundColor:statusBarBackgroundColor}):
-null,
-
 children));}>
       },
       "_renderedNodeType": 1,
