@@ -13,7 +13,7 @@ exports[`ScheduleList should render 1`] = `
     style={
       Object {
         "flex": 0.8,
-        "paddingBottom": 18
+        "paddingBottom": 10
       }
     }>
     <View
@@ -3324,7 +3324,7 @@ exports[`ScheduleList should render the selected call activity title 1`] = `
     style={
       Object {
         "flex": 0.8,
-        "paddingBottom": 18
+        "paddingBottom": 10
       }
     }>
     <View
@@ -6624,7 +6624,7 @@ exports[`ScheduleList should render the selected call time 1`] = `
     style={
       Object {
         "flex": 0.8,
-        "paddingBottom": 18
+        "paddingBottom": 10
       }
     }>
     <View
