@@ -21,6 +21,7 @@ import {
   getScheduledCallActivity,
   getEvents,
   getActivityCallNotes,
+  getCallNote,
   getNextScheduledCall,
 } from 'src/stores/helpers';
 
@@ -285,6 +286,22 @@ describe('helpers', () => {
         fakeCallNote2,
         fakeCallNote5,
       ]);
+    });
+  });
+
+  describe('getCallNote', () => {
+    it('should get the call notes for the id', () => {
+      const fakeCallNote2 = fakeCallNote({
+        id: 2,
+        callActivityId: 20,
+      });
+
+      const state = fakeState();
+      state.entities.callNotes = {
+        2: fakeCallNote2,
+      };
+
+      expect(getCallNote(state, 2)).toEqual([ fakeCallNote2 ]);
     });
   });
 });
