@@ -43,12 +43,12 @@ const Activity = ({
       </Header>
 
       {
-        poster
-          ? <Image
+        poster && <View style={[styles.posterContainer, { backgroundColor: color }]}>
+          <Image
             source={{ uri: poster }}
-            style={[styles.poster, { backgroundColor: color }]}
+            style={styles.poster}
           />
-          : null
+        </View>
       }
 
       <View style={[styles.about, { backgroundColor: color }]}>

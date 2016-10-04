@@ -9,6 +9,9 @@ export default StyleSheet.create({
     marginLeft: 48,
     marginRight: 48,
   },
+  posterContainer: {
+    alignItems: 'center',
+  },
   poster: {
     width: 360,
     height: 248,
