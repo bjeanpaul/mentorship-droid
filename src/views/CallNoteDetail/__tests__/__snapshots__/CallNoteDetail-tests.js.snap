@@ -100,16 +100,14 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "color": "#9fb1b3",
-                "fontFamily": "Brandon Text_bold",
-                "fontSize": 12,
-                "fontWeight": "bold",
-                "letterSpacing": 1,
-                "textAlign": "left"
-              }
-            ]
+            Object {
+              "color": "#9fb1b3",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 12,
+              "fontWeight": "bold",
+              "letterSpacing": 1,
+              "textAlign": "left"
+            }
           ]
         }>
         YOUR REFLECTIONS
@@ -164,16 +162,14 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "color": "#9fb1b3",
-                "fontFamily": "Brandon Text_bold",
-                "fontSize": 12,
-                "fontWeight": "bold",
-                "letterSpacing": 1,
-                "textAlign": "left"
-              }
-            ]
+            Object {
+              "color": "#9fb1b3",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 12,
+              "fontWeight": "bold",
+              "letterSpacing": 1,
+              "textAlign": "left"
+            }
           ]
         }>
         YOUR MENTEE’S MOOD
@@ -213,16 +209,14 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "color": "#9fb1b3",
-                "fontFamily": "Brandon Text_bold",
-                "fontSize": 12,
-                "fontWeight": "bold",
-                "letterSpacing": 1,
-                "textAlign": "left"
-              }
-            ]
+            Object {
+              "color": "#9fb1b3",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 12,
+              "fontWeight": "bold",
+              "letterSpacing": 1,
+              "textAlign": "left"
+            }
           ]
         }>
         HELPFULNESS OF ACTIVITY
@@ -240,11 +234,9 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
             "fontSize": 13,
             "textAlign": "center"
           },
-          Array [
-            Object {
-              "marginBottom": 45
-            }
-          ]
+          Object {
+            "marginBottom": 45
+          }
         ]
       }>
       T\'was OK
@@ -356,16 +348,14 @@ exports[`CallNoteDetail should render 1`] = `
                 "fontSize": 13,
                 "textAlign": "center"
               },
-              Array [
-                Object {
-                  "color": "#9fb1b3",
-                  "fontFamily": "Brandon Text_bold",
-                  "fontSize": 12,
-                  "fontWeight": "bold",
-                  "letterSpacing": 1,
-                  "textAlign": "left"
-                }
-              ]
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              }
             ]
           }>
           DISCUSSION WITH ACTIVITY
@@ -444,16 +434,14 @@ exports[`CallNoteDetail should render 1`] = `
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "color": "#9fb1b3",
-                "fontFamily": "Brandon Text_bold",
-                "fontSize": 12,
-                "fontWeight": "bold",
-                "letterSpacing": 1,
-                "textAlign": "left"
-              }
-            ]
+            Object {
+              "color": "#9fb1b3",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 12,
+              "fontWeight": "bold",
+              "letterSpacing": 1,
+              "textAlign": "left"
+            }
           ]
         }>
         YOUR REFLECTIONS
@@ -508,16 +496,14 @@ exports[`CallNoteDetail should render 1`] = `
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "color": "#9fb1b3",
-                "fontFamily": "Brandon Text_bold",
-                "fontSize": 12,
-                "fontWeight": "bold",
-                "letterSpacing": 1,
-                "textAlign": "left"
-              }
-            ]
+            Object {
+              "color": "#9fb1b3",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 12,
+              "fontWeight": "bold",
+              "letterSpacing": 1,
+              "textAlign": "left"
+            }
           ]
         }>
         YOUR MENTEE’S MOOD
@@ -558,16 +544,14 @@ exports[`CallNoteDetail should render 1`] = `
                 "fontSize": 13,
                 "textAlign": "center"
               },
-              Array [
-                Object {
-                  "color": "#9fb1b3",
-                  "fontFamily": "Brandon Text_bold",
-                  "fontSize": 12,
-                  "fontWeight": "bold",
-                  "letterSpacing": 1,
-                  "textAlign": "left"
-                }
-              ]
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left"
+              }
             ]
           }>
           OBJECTIVE ACHIEVED
@@ -608,16 +592,14 @@ exports[`CallNoteDetail should render 1`] = `
               "fontSize": 13,
               "textAlign": "center"
             },
-            Array [
-              Object {
-                "color": "#9fb1b3",
-                "fontFamily": "Brandon Text_bold",
-                "fontSize": 12,
-                "fontWeight": "bold",
-                "letterSpacing": 1,
-                "textAlign": "left"
-              }
-            ]
+            Object {
+              "color": "#9fb1b3",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 12,
+              "fontWeight": "bold",
+              "letterSpacing": 1,
+              "textAlign": "left"
+            }
           ]
         }>
         HELPFULNESS OF ACTIVITY
@@ -635,11 +617,9 @@ exports[`CallNoteDetail should render 1`] = `
             "fontSize": 13,
             "textAlign": "center"
           },
-          Array [
-            Object {
-              "marginBottom": 45
-            }
-          ]
+          Object {
+            "marginBottom": 45
+          }
         ]
       }>
       T\'was OK
