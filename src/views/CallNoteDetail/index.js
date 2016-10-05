@@ -20,7 +20,7 @@ const mentee = fromPairs([
 
 const Title = ({ children }) => (
   <View style={styles.titleContainer}>
-    <Text style={[Text.types.sectionTitle]}>{children}</Text>
+    <Text style={Text.types.sectionTitle}>{children}</Text>
   </View>
 );
 Title.propTypes = {
@@ -85,7 +85,7 @@ const CallNoteDetail = ({
       )}
 
       <Title>Helpfulness of Activity</Title>
-      <Text style={[styles.sectionBottomMargin]}>
+      <Text style={styles.sectionBottomMargin}>
         {rating}
       </Text>
     </ScrollView>
