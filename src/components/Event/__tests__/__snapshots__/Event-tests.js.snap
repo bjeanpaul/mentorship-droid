@@ -10,7 +10,7 @@ exports[`Event should render a formatted date if the blurb is undefined 1`] = `
       "marginTop": 0,
       "padding": 20,
       "paddingLeft": 16,
-      "paddingRight": 16
+      "paddingRight": 16,
     }
   }>
   <View
@@ -20,7 +20,7 @@ exports[`Event should render a formatted date if the blurb is undefined 1`] = `
         "borderRadius": 28,
         "height": 56,
         "marginRight": 16,
-        "width": 56
+        "width": 56,
       }
     }>
     <Image
@@ -30,7 +30,7 @@ exports[`Event should render a formatted date if the blurb is undefined 1`] = `
     style={
       Object {
         "flex": 1,
-        "flexDirection": "column"
+        "flexDirection": "column",
       }
     }>
     <Text
@@ -43,15 +43,15 @@ exports[`Event should render a formatted date if the blurb is undefined 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text_bold",
             "fontSize": 16,
             "fontWeight": "bold",
-            "textAlign": "left"
-          }
+            "textAlign": "left",
+          },
         ]
       }>
       pew pew pew
@@ -66,13 +66,13 @@ exports[`Event should render a formatted date if the blurb is undefined 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "color": "#80979a",
             "fontSize": 15,
-            "textAlign": "left"
-          }
+            "textAlign": "left",
+          },
         ]
       }>
       Friday 16th, September 2016
@@ -93,7 +93,7 @@ exports[`Event should render the props 1`] = `
       "marginTop": 0,
       "padding": 20,
       "paddingLeft": 16,
-      "paddingRight": 16
+      "paddingRight": 16,
     }
   }>
   <View
@@ -103,7 +103,7 @@ exports[`Event should render the props 1`] = `
         "borderRadius": 28,
         "height": 56,
         "marginRight": 16,
-        "width": 56
+        "width": 56,
       }
     }>
     <Image
@@ -113,7 +113,7 @@ exports[`Event should render the props 1`] = `
     style={
       Object {
         "flex": 1,
-        "flexDirection": "column"
+        "flexDirection": "column",
       }
     }>
     <Text
@@ -126,15 +126,15 @@ exports[`Event should render the props 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text_bold",
             "fontSize": 16,
             "fontWeight": "bold",
-            "textAlign": "left"
-          }
+            "textAlign": "left",
+          },
         ]
       }>
       pew pew pew
@@ -149,13 +149,13 @@ exports[`Event should render the props 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "color": "#80979a",
             "fontSize": 15,
-            "textAlign": "left"
-          }
+            "textAlign": "left",
+          },
         ]
       }>
       i am a blurb

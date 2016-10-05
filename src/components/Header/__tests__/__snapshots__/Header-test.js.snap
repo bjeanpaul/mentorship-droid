@@ -6,9 +6,9 @@ exports[`Header should render 1`] = `
         "height": 72,
         "justifyContent": "center",
         "paddingLeft": 16,
-        "paddingRight": 16
+        "paddingRight": 16,
       },
-      Object {}
+      Object {},
     ]
   }>
   <Text
@@ -21,9 +21,9 @@ exports[`Header should render 1`] = `
           "color": "#003035",
           "fontFamily": "Brandon Text",
           "fontSize": 13,
-          "textAlign": "center"
+          "textAlign": "center",
         },
-        undefined
+        undefined,
       ]
     }>
     Header
@@ -39,11 +39,11 @@ exports[`Header should support dark theme 1`] = `
         "height": 72,
         "justifyContent": "center",
         "paddingLeft": 16,
-        "paddingRight": 16
+        "paddingRight": 16,
       },
       Object {
-        "backgroundColor": "#003035"
-      }
+        "backgroundColor": "#003035",
+      },
     ]
   }>
   <Text
@@ -56,11 +56,11 @@ exports[`Header should support dark theme 1`] = `
           "color": "#003035",
           "fontFamily": "Brandon Text",
           "fontSize": 13,
-          "textAlign": "center"
+          "textAlign": "center",
         },
         Object {
-          "color": "#fff"
-        }
+          "color": "#fff",
+        },
       ]
     }>
     Header with dark theme
@@ -76,11 +76,11 @@ exports[`Header should support orange theme 1`] = `
         "height": 72,
         "justifyContent": "center",
         "paddingLeft": 16,
-        "paddingRight": 16
+        "paddingRight": 16,
       },
       Object {
-        "backgroundColor": "rgba(246, 111, 63, 0.95)"
-      }
+        "backgroundColor": "rgba(246, 111, 63, 0.95)",
+      },
     ]
   }>
   <Text
@@ -93,11 +93,11 @@ exports[`Header should support orange theme 1`] = `
           "color": "#003035",
           "fontFamily": "Brandon Text",
           "fontSize": 13,
-          "textAlign": "center"
+          "textAlign": "center",
         },
         Object {
-          "color": "#fff"
-        }
+          "color": "#fff",
+        },
       ]
     }>
     Header with orange aheme
@@ -113,11 +113,11 @@ exports[`Header should support style overriding 1`] = `
         "height": 72,
         "justifyContent": "center",
         "paddingLeft": 16,
-        "paddingRight": 16
+        "paddingRight": 16,
       },
       Object {
-        "backgroundColor": "#cc3333"
-      }
+        "backgroundColor": "#cc3333",
+      },
     ]
   }>
   <Text
@@ -130,9 +130,9 @@ exports[`Header should support style overriding 1`] = `
           "color": "#003035",
           "fontFamily": "Brandon Text",
           "fontSize": 13,
-          "textAlign": "center"
+          "textAlign": "center",
         },
-        undefined
+        undefined,
       ]
     }>
     Header with style

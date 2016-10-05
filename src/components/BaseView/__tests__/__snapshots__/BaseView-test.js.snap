@@ -4,9 +4,9 @@ exports[`BaseView should render its children 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
-      undefined
+      undefined,
     ]
   }>
   <Text
@@ -24,11 +24,11 @@ exports[`BaseView should support style overriding 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
       Object {
-        "backgroundColor": "red"
-      }
+        "backgroundColor": "red",
+      },
     ]
   }>
   <Text

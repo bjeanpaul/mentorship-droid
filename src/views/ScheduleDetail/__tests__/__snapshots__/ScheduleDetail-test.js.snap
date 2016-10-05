@@ -4,9 +4,9 @@ exports[`ScheduleDetail should render 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
-      undefined
+      undefined,
     ]
   }>
   <View
@@ -16,9 +16,9 @@ exports[`ScheduleDetail should render 1`] = `
           "height": 72,
           "justifyContent": "center",
           "paddingLeft": 16,
-          "paddingRight": 16
+          "paddingRight": 16,
         },
-        Object {}
+        Object {},
       ]
     }>
     <Text
@@ -31,13 +31,13 @@ exports[`ScheduleDetail should render 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "fontFamily": "Brandon Text_medium",
             "fontSize": 20,
-            "fontWeight": "400"
-          }
+            "fontWeight": "400",
+          },
         ]
       }>
       Schedule Call
@@ -53,9 +53,9 @@ exports[`ScheduleDetail should render 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -65,7 +65,7 @@ exports[`ScheduleDetail should render 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -75,7 +75,7 @@ exports[`ScheduleDetail should render 1`] = `
   <View
     style={
       Object {
-        "flex": 0.7
+        "flex": 0.7,
       }
     }>
     <View
@@ -84,7 +84,7 @@ exports[`ScheduleDetail should render 1`] = `
           "flexDirection": "row",
           "justifyContent": "space-between",
           "marginLeft": 24,
-          "marginRight": 24
+          "marginRight": 24,
         }
       }>
       <View
@@ -98,9 +98,9 @@ exports[`ScheduleDetail should render 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -110,7 +110,7 @@ exports[`ScheduleDetail should render 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -127,9 +127,9 @@ exports[`ScheduleDetail should render 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -139,7 +139,7 @@ exports[`ScheduleDetail should render 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -154,7 +154,7 @@ exports[`ScheduleDetail should render 1`] = `
           "marginBottom": 44,
           "marginLeft": 24,
           "marginRight": 24,
-          "marginTop": 44
+          "marginTop": 44,
         }
       } />
     <View
@@ -163,7 +163,7 @@ exports[`ScheduleDetail should render 1`] = `
           "flexDirection": "row",
           "justifyContent": "space-between",
           "marginLeft": 24,
-          "marginRight": 24
+          "marginRight": 24,
         }
       }>
       <View
@@ -177,9 +177,9 @@ exports[`ScheduleDetail should render 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -189,7 +189,7 @@ exports[`ScheduleDetail should render 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -204,7 +204,7 @@ exports[`ScheduleDetail should render 1`] = `
           "marginBottom": 44,
           "marginLeft": 24,
           "marginRight": 24,
-          "marginTop": 44
+          "marginTop": 44,
         }
       } />
   </View>
@@ -212,7 +212,7 @@ exports[`ScheduleDetail should render 1`] = `
     style={
       Object {
         "flex": 0.3,
-        "justifyContent": "center"
+        "justifyContent": "center",
       }
     }>
     <View
@@ -221,18 +221,18 @@ exports[`ScheduleDetail should render 1`] = `
           Object {
             "alignItems": "center",
             "borderRadius": 5,
-            "justifyContent": "center"
+            "justifyContent": "center",
           },
           Object {
-            "backgroundColor": "#f77040"
+            "backgroundColor": "#f77040",
           },
           Object {
             "marginLeft": 16,
-            "marginRight": 16
+            "marginRight": 16,
           },
           Object {
-            "backgroundColor": "#dfe5e6"
-          }
+            "backgroundColor": "#dfe5e6",
+          },
         ]
       }>
       <Text
@@ -245,7 +245,7 @@ exports[`ScheduleDetail should render 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
@@ -254,15 +254,15 @@ exports[`ScheduleDetail should render 1`] = `
                 "fontWeight": "bold",
                 "letterSpacing": 1,
                 "marginBottom": 17,
-                "marginTop": 15
+                "marginTop": 15,
               },
               Object {
-                "color": "#ffffff"
+                "color": "#ffffff",
               },
               Object {
-                "color": "#ffffff"
-              }
-            ]
+                "color": "#ffffff",
+              },
+            ],
           ]
         }>
         SCHEDULE CALL
@@ -278,9 +278,9 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
-      undefined
+      undefined,
     ]
   }>
   <View
@@ -290,9 +290,9 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
           "height": 72,
           "justifyContent": "center",
           "paddingLeft": 16,
-          "paddingRight": 16
+          "paddingRight": 16,
         },
-        Object {}
+        Object {},
       ]
     }>
     <Text
@@ -305,13 +305,13 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "fontFamily": "Brandon Text_medium",
             "fontSize": 20,
-            "fontWeight": "400"
-          }
+            "fontWeight": "400",
+          },
         ]
       }>
       Schedule Call
@@ -327,9 +327,9 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -339,7 +339,7 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -349,7 +349,7 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
   <View
     style={
       Object {
-        "flex": 0.7
+        "flex": 0.7,
       }
     }>
     <View
@@ -358,7 +358,7 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
           "flexDirection": "row",
           "justifyContent": "space-between",
           "marginLeft": 24,
-          "marginRight": 24
+          "marginRight": 24,
         }
       }>
       <View
@@ -372,9 +372,9 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -384,7 +384,7 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -401,9 +401,9 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -413,7 +413,7 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -430,12 +430,12 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "color": "#864a47",
-            "fontSize": 13
-          }
+            "fontSize": 13,
+          },
         ]
       }>
       You already have a call on this day
@@ -448,7 +448,7 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
           "marginBottom": 44,
           "marginLeft": 24,
           "marginRight": 24,
-          "marginTop": 44
+          "marginTop": 44,
         }
       } />
     <View
@@ -457,7 +457,7 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
           "flexDirection": "row",
           "justifyContent": "space-between",
           "marginLeft": 24,
-          "marginRight": 24
+          "marginRight": 24,
         }
       }>
       <View
@@ -471,9 +471,9 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -483,7 +483,7 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -498,7 +498,7 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
           "marginBottom": 44,
           "marginLeft": 24,
           "marginRight": 24,
-          "marginTop": 44
+          "marginTop": 44,
         }
       } />
   </View>
@@ -506,7 +506,7 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
     style={
       Object {
         "flex": 0.3,
-        "justifyContent": "center"
+        "justifyContent": "center",
       }
     }>
     <View
@@ -515,18 +515,18 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
           Object {
             "alignItems": "center",
             "borderRadius": 5,
-            "justifyContent": "center"
+            "justifyContent": "center",
           },
           Object {
-            "backgroundColor": "#f77040"
+            "backgroundColor": "#f77040",
           },
           Object {
             "marginLeft": 16,
-            "marginRight": 16
+            "marginRight": 16,
           },
           Object {
-            "backgroundColor": "#dfe5e6"
-          }
+            "backgroundColor": "#dfe5e6",
+          },
         ]
       }>
       <Text
@@ -539,7 +539,7 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
@@ -548,15 +548,15 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
                 "fontWeight": "bold",
                 "letterSpacing": 1,
                 "marginBottom": 17,
-                "marginTop": 15
+                "marginTop": 15,
               },
               Object {
-                "color": "#ffffff"
+                "color": "#ffffff",
               },
               Object {
-                "color": "#ffffff"
-              }
-            ]
+                "color": "#ffffff",
+              },
+            ],
           ]
         }>
         SCHEDULE CALL
@@ -572,9 +572,9 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
-      undefined
+      undefined,
     ]
   }>
   <View
@@ -584,9 +584,9 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
           "height": 72,
           "justifyContent": "center",
           "paddingLeft": 16,
-          "paddingRight": 16
+          "paddingRight": 16,
         },
-        Object {}
+        Object {},
       ]
     }>
     <Text
@@ -599,13 +599,13 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "fontFamily": "Brandon Text_medium",
             "fontSize": 20,
-            "fontWeight": "400"
-          }
+            "fontWeight": "400",
+          },
         ]
       }>
       Schedule Call
@@ -621,9 +621,9 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -633,7 +633,7 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -643,7 +643,7 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
   <View
     style={
       Object {
-        "flex": 0.7
+        "flex": 0.7,
       }
     }>
     <View
@@ -652,7 +652,7 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
           "flexDirection": "row",
           "justifyContent": "space-between",
           "marginLeft": 24,
-          "marginRight": 24
+          "marginRight": 24,
         }
       }>
       <View
@@ -666,9 +666,9 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -678,7 +678,7 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -695,9 +695,9 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -707,7 +707,7 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -724,12 +724,12 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "color": "#864a47",
-            "fontSize": 13
-          }
+            "fontSize": 13,
+          },
         ]
       }>
       This date and time have already passed
@@ -742,7 +742,7 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
           "marginBottom": 44,
           "marginLeft": 24,
           "marginRight": 24,
-          "marginTop": 44
+          "marginTop": 44,
         }
       } />
     <View
@@ -751,7 +751,7 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
           "flexDirection": "row",
           "justifyContent": "space-between",
           "marginLeft": 24,
-          "marginRight": 24
+          "marginRight": 24,
         }
       }>
       <View
@@ -765,9 +765,9 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -777,7 +777,7 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -792,7 +792,7 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
           "marginBottom": 44,
           "marginLeft": 24,
           "marginRight": 24,
-          "marginTop": 44
+          "marginTop": 44,
         }
       } />
   </View>
@@ -800,7 +800,7 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
     style={
       Object {
         "flex": 0.3,
-        "justifyContent": "center"
+        "justifyContent": "center",
       }
     }>
     <View
@@ -809,18 +809,18 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
           Object {
             "alignItems": "center",
             "borderRadius": 5,
-            "justifyContent": "center"
+            "justifyContent": "center",
           },
           Object {
-            "backgroundColor": "#f77040"
+            "backgroundColor": "#f77040",
           },
           Object {
             "marginLeft": 16,
-            "marginRight": 16
+            "marginRight": 16,
           },
           Object {
-            "backgroundColor": "#dfe5e6"
-          }
+            "backgroundColor": "#dfe5e6",
+          },
         ]
       }>
       <Text
@@ -833,7 +833,7 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
@@ -842,15 +842,15 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
                 "fontWeight": "bold",
                 "letterSpacing": 1,
                 "marginBottom": 17,
-                "marginTop": 15
+                "marginTop": 15,
               },
               Object {
-                "color": "#ffffff"
+                "color": "#ffffff",
               },
               Object {
-                "color": "#ffffff"
-              }
-            ]
+                "color": "#ffffff",
+              },
+            ],
           ]
         }>
         SCHEDULE CALL
@@ -866,9 +866,9 @@ exports[`ScheduleDetail should render the activity title if an activity is given
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
-      undefined
+      undefined,
     ]
   }>
   <View
@@ -878,9 +878,9 @@ exports[`ScheduleDetail should render the activity title if an activity is given
           "height": 72,
           "justifyContent": "center",
           "paddingLeft": 16,
-          "paddingRight": 16
+          "paddingRight": 16,
         },
-        Object {}
+        Object {},
       ]
     }>
     <Text
@@ -893,13 +893,13 @@ exports[`ScheduleDetail should render the activity title if an activity is given
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "fontFamily": "Brandon Text_medium",
             "fontSize": 20,
-            "fontWeight": "400"
-          }
+            "fontWeight": "400",
+          },
         ]
       }>
       Schedule Call
@@ -915,9 +915,9 @@ exports[`ScheduleDetail should render the activity title if an activity is given
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -927,7 +927,7 @@ exports[`ScheduleDetail should render the activity title if an activity is given
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -937,7 +937,7 @@ exports[`ScheduleDetail should render the activity title if an activity is given
   <View
     style={
       Object {
-        "flex": 0.7
+        "flex": 0.7,
       }
     }>
     <View
@@ -946,7 +946,7 @@ exports[`ScheduleDetail should render the activity title if an activity is given
           "flexDirection": "row",
           "justifyContent": "space-between",
           "marginLeft": 24,
-          "marginRight": 24
+          "marginRight": 24,
         }
       }>
       <View
@@ -960,9 +960,9 @@ exports[`ScheduleDetail should render the activity title if an activity is given
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -972,7 +972,7 @@ exports[`ScheduleDetail should render the activity title if an activity is given
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -989,9 +989,9 @@ exports[`ScheduleDetail should render the activity title if an activity is given
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -1001,7 +1001,7 @@ exports[`ScheduleDetail should render the activity title if an activity is given
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -1016,7 +1016,7 @@ exports[`ScheduleDetail should render the activity title if an activity is given
           "marginBottom": 44,
           "marginLeft": 24,
           "marginRight": 24,
-          "marginTop": 44
+          "marginTop": 44,
         }
       } />
     <View
@@ -1025,7 +1025,7 @@ exports[`ScheduleDetail should render the activity title if an activity is given
           "flexDirection": "row",
           "justifyContent": "space-between",
           "marginLeft": 24,
-          "marginRight": 24
+          "marginRight": 24,
         }
       }>
       <View
@@ -1039,9 +1039,9 @@ exports[`ScheduleDetail should render the activity title if an activity is given
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -1051,7 +1051,7 @@ exports[`ScheduleDetail should render the activity title if an activity is given
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -1066,7 +1066,7 @@ exports[`ScheduleDetail should render the activity title if an activity is given
           "marginBottom": 44,
           "marginLeft": 24,
           "marginRight": 24,
-          "marginTop": 44
+          "marginTop": 44,
         }
       } />
   </View>
@@ -1074,7 +1074,7 @@ exports[`ScheduleDetail should render the activity title if an activity is given
     style={
       Object {
         "flex": 0.3,
-        "justifyContent": "center"
+        "justifyContent": "center",
       }
     }>
     <View
@@ -1083,18 +1083,18 @@ exports[`ScheduleDetail should render the activity title if an activity is given
           Object {
             "alignItems": "center",
             "borderRadius": 5,
-            "justifyContent": "center"
+            "justifyContent": "center",
           },
           Object {
-            "backgroundColor": "#f77040"
+            "backgroundColor": "#f77040",
           },
           Object {
             "marginLeft": 16,
-            "marginRight": 16
+            "marginRight": 16,
           },
           Object {
-            "backgroundColor": "#dfe5e6"
-          }
+            "backgroundColor": "#dfe5e6",
+          },
         ]
       }>
       <Text
@@ -1107,7 +1107,7 @@ exports[`ScheduleDetail should render the activity title if an activity is given
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
@@ -1116,15 +1116,15 @@ exports[`ScheduleDetail should render the activity title if an activity is given
                 "fontWeight": "bold",
                 "letterSpacing": 1,
                 "marginBottom": 17,
-                "marginTop": 15
+                "marginTop": 15,
               },
               Object {
-                "color": "#ffffff"
+                "color": "#ffffff",
               },
               Object {
-                "color": "#ffffff"
-              }
-            ]
+                "color": "#ffffff",
+              },
+            ],
           ]
         }>
         SCHEDULE CALL

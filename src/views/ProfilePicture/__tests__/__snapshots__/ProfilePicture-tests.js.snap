@@ -4,9 +4,9 @@ exports[`ProfilePicture should map props correctly 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
-      undefined
+      undefined,
     ]
   }>
   <Text
@@ -19,19 +19,19 @@ exports[`ProfilePicture should map props correctly 1`] = `
           "color": "#003035",
           "fontFamily": "Brandon Text",
           "fontSize": 13,
-          "textAlign": "center"
+          "textAlign": "center",
         },
         Array [
           Object {
             "fontFamily": "Brandon Text_medium",
             "fontSize": 20,
-            "fontWeight": "400"
+            "fontWeight": "400",
           },
           Object {
             "margin": 25,
-            "marginBottom": 50
-          }
-        ]
+            "marginBottom": 50,
+          },
+        ],
       ]
     }>
     Add a profile picture
@@ -43,29 +43,29 @@ exports[`ProfilePicture should map props correctly 1`] = `
     accessible={true}
     hitSlop={undefined}
     onLayout={undefined}
-    onResponderGrant={[Function bound touchableHandleResponderGrant]}
-    onResponderMove={[Function bound touchableHandleResponderMove]}
-    onResponderRelease={[Function bound touchableHandleResponderRelease]}
-    onResponderTerminate={[Function bound touchableHandleResponderTerminate]}
-    onResponderTerminationRequest={[Function bound touchableHandleResponderTerminationRequest]}
-    onStartShouldSetResponder={[Function bound touchableHandleStartShouldSetResponder]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "alignItems": "center"
+        "alignItems": "center",
       }
     }
     testID={undefined}>
     <Image
       source={
         Object {
-          "uri": "path/to/image.png"
+          "uri": "path/to/image.png",
         }
       }
       style={
         Object {
           "height": 120,
           "marginBottom": 19,
-          "width": 120
+          "width": 120,
         }
       } />
     <Text
@@ -78,12 +78,12 @@ exports[`ProfilePicture should map props correctly 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "color": "#9fb1b3",
-            "fontSize": 18
-          }
+            "fontSize": 18,
+          },
         ]
       }>
       Choose Photo
@@ -93,14 +93,14 @@ exports[`ProfilePicture should map props correctly 1`] = `
     style={
       Object {
         "flex": 1,
-        "justifyContent": "flex-end"
+        "justifyContent": "flex-end",
       }
     }>
     <View
       style={
         Object {
           "flexDirection": "row",
-          "margin": 16
+          "margin": 16,
         }
       }>
       <View
@@ -114,9 +114,9 @@ exports[`ProfilePicture should map props correctly 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -126,7 +126,7 @@ exports[`ProfilePicture should map props correctly 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -143,9 +143,9 @@ exports[`ProfilePicture should map props correctly 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -155,7 +155,7 @@ exports[`ProfilePicture should map props correctly 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!

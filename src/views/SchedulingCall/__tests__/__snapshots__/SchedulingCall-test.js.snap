@@ -4,11 +4,11 @@ exports[`SchedulingCall should render 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
       Object {
-        "backgroundColor": "rgba(246, 111, 63, 0.95)"
-      }
+        "backgroundColor": "rgba(246, 111, 63, 0.95)",
+      },
     ]
   }>
   <View
@@ -18,9 +18,9 @@ exports[`SchedulingCall should render 1`] = `
           "height": 72,
           "justifyContent": "center",
           "paddingLeft": 16,
-          "paddingRight": 16
+          "paddingRight": 16,
         },
-        Object {}
+        Object {},
       ]
     } />
   <View
@@ -28,7 +28,7 @@ exports[`SchedulingCall should render 1`] = `
       Object {
         "alignItems": "center",
         "flex": 1,
-        "paddingTop": 64
+        "paddingTop": 64,
       }
     }>
     <Image
@@ -38,10 +38,10 @@ exports[`SchedulingCall should render 1`] = `
           "height": 80,
           "transform": Array [
             Object {
-              "rotate": "0deg"
-            }
+              "rotate": "0deg",
+            },
           ],
-          "width": 80
+          "width": 80,
         }
       } />
     <Text
@@ -54,12 +54,12 @@ exports[`SchedulingCall should render 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "color": undefined,
-            "fontSize": 20
-          }
+            "fontSize": 20,
+          },
         ]
       }>
       Saving...
