@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import CallNoteDetail from 'src/views/CallNoteDetail';
 import { getCallNote, getActivity } from 'src/stores/helpers';
+import { dismissScreen } from 'src/actions/navigation';
 
 const mapStateToProps = (state, { callNoteId }) => {
   const {
@@ -29,4 +30,6 @@ const mapStateToProps = (state, { callNoteId }) => {
 };
 
 export { mapStateToProps };
-export default connect(mapStateToProps)(CallNoteDetail);
+export default connect(mapStateToProps, {
+  onBackPress: dismissScreen,
+})(CallNoteDetail);
