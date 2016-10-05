@@ -103,5 +103,6 @@ export default {
 
   CALL_NOTE_LIST_ROW_BORDER: '#dfe5e6',
   CALL_NOTE_LIST_TEXT: '#003035',
+  CALL_NOTE_DETAIL_TITLE_BORDER: '#dfe5e6',
 
 };

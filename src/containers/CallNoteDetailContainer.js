@@ -18,13 +18,13 @@ const mapStateToProps = (state, { callNoteId }) => {
   } = getActivity(state, activityId);
 
   return {
+    time,
+    objective,
+    icon,
     reflection,
     mood,
     completed,
     rating,
-    time,
-    objective,
-    icon,
   };
 };
 

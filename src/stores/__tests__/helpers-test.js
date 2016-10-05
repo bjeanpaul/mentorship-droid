@@ -301,7 +301,7 @@ describe('helpers', () => {
         2: fakeCallNote2,
       };
 
-      expect(getCallNote(state, 2)).toEqual([ fakeCallNote2 ]);
+      expect(getCallNote(state, 2)).toEqual([fakeCallNote2]);
     });
   });
 });
