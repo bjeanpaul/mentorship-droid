@@ -32,6 +32,7 @@ export default StyleSheet.create({
   day: {
     fontFamily: FONT.REGULAR,
     fontSize: 15,
+    color: colors.CALENDAR_WEEKEND_DAY_TEXT,
   },
   weekendDayText: {
     fontFamily: FONT.REGULAR,
