@@ -1,6 +1,9 @@
 import * as constants from 'src/constants/errors';
 import { staticAction } from 'src/actionHelpers';
+import { ApiResponseError, NetworkError } from 'src/api';
 
 
-export const networkError = staticAction(constants.NETWORK_ERROR);
-export const apiResponseError = staticAction(constants.API_RESPONSE_ERROR);
+export default [
+  [ApiResponseError, staticAction(constants.NETWORK_ERROR)],
+  [NetworkError, staticAction(constants.API_RESPONSE_ERROR)],
+];
