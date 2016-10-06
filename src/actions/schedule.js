@@ -58,7 +58,10 @@ export const removeScheduledCall = apiAction({
 });
 
 
-export const addScheduledCall = staticAction(constants.SCHEDULED_CALL_ADD);
+export const addScheduledCall = date => ({
+  type: constants.SCHEDULED_CALL_ADD,
+  payload: { date },
+});
 
 
 export const chooseScheduledCall = scheduledCallId => ({

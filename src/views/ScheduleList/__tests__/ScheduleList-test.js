@@ -71,6 +71,7 @@ describe('ScheduleList', () => {
     const onAddPress = jest.fn();
 
     const el = shallow(createComponent({
+      initialSelectedDate: '2016-09-22T19:40:09.880Z',
       onAddPress,
       calls: [],
     }));
@@ -78,7 +79,7 @@ describe('ScheduleList', () => {
     el.findWhere(uidEquals('add'))
       .simulate('press');
 
-    expect(onAddPress.mock.calls).toEqual([[]]);
+    expect(onAddPress.mock.calls).toEqual([['2016-09-22T19:40:09.880Z']]);
   });
 
   it('should call onCallChosen if a call is chosen', () => {

@@ -172,8 +172,10 @@ describe('src/reducers/navigation/top', () => {
 
   describe('SCHEDULED_CALL_ADD', () => {
     it('should push on the scheduled route', () => {
-      expect(reduce(createStack(), schedule.addScheduledCall()))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL)));
+      expect(reduce(createStack(), schedule.addScheduledCall('2016-09-16T11:27:14Z')))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
+          date: '2016-09-16T11:27:14Z',
+        })));
     });
   });
 

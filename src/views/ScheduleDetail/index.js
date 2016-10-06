@@ -10,6 +10,54 @@ import { Header, HeaderIcon, BaseView, Text, Label, Button } from 'src/component
 import styles from 'src/views/ScheduleDetail/styles';
 
 
+const dateFromMoment = m => {
+  const {
+    years: year,
+    months: month,
+    date,
+  } = moment(m).toObject();
+
+  return {
+    year,
+    month,
+    date,
+  };
+};
+
+
+const timeFromMoment = m => {
+  const {
+    hours: hour,
+    minutes: minute,
+  } = moment(m).toObject();
+
+  return {
+    hour,
+    minute,
+  };
+};
+
+
+const parseDateProps = (initialDate, initialCallTime) => {
+  let date = null;
+  let time = null;
+
+  if (initialDate) {
+    date = dateFromMoment(initialDate);
+  }
+
+  if (initialCallTime) {
+    date = dateFromMoment(initialCallTime);
+    time = timeFromMoment(initialCallTime);
+  }
+
+  return {
+    date,
+    time,
+  };
+};
+
+
 const Separator = () => <View style={styles.separator} />;
 
 
@@ -30,16 +78,16 @@ Value.propTypes = {
 
 
 class ScheduleDetail extends React.Component {
-
   constructor(props) {
     super(props);
 
     const {
+      initialDate = null,
       initialCallTimeHasChanged = false,
     } = props;
 
     this.state = {
-      ...this.parseCallTime(this.props.initialCallTime),
+      ...parseDateProps(initialDate, this.props.initialCallTime),
       timeHasChanged: initialCallTimeHasChanged,
     };
 
@@ -105,35 +153,6 @@ class ScheduleDetail extends React.Component {
       ...this.state.time,
     })
     .isBefore();
-  }
-
-  parseCallTime(callTime) {
-    if (!callTime) {
-      return {
-        date: null,
-        time: null,
-      };
-    } else {
-      const {
-        years: year,
-        months: month,
-        date,
-        hours: hour,
-        minutes: minute,
-      } = moment(callTime).toObject();
-
-      return {
-        date: {
-          year,
-          month,
-          date,
-        },
-        time: {
-          hour,
-          minute,
-        },
-      };
-    }
   }
 
   render() {
@@ -220,6 +239,7 @@ ScheduleDetail.propTypes = {
   onDismissPress: PropTypes.func.isRequired,
   onActivityPress: PropTypes.func.isRequired,
   onDone: PropTypes.func.isRequired,
+  initialDate: PropTypes.string,
   initialCallTime: PropTypes.string,
   initialCallTimeHasChanged: PropTypes.bool,
   activity: PropTypes.object,
