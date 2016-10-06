@@ -23,7 +23,7 @@ const Text = ({
 
 
 Text.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.any,
   style: PropTypes.any,
 };
 
