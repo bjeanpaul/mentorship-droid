@@ -15,9 +15,10 @@ class ScheduleList extends React.Component {
     super(props);
 
     this.state = {
-      selectedDate: this.props.initialSelectedDate,
+      selectedDate: this.props.initialSelectedDate || moment().toISOString(),
     };
 
+    this.onAddPress = this.onAddPress.bind(this);
     this.onDateSelect = this.onDateSelect.bind(this);
     this.onCallInfoPress = this.onCallInfoPress.bind(this);
   }
@@ -29,6 +30,10 @@ class ScheduleList extends React.Component {
   onCallInfoPress() {
     const call = this.getSelectedCall();
     return call && this.props.onCallChosen(call.id);
+  }
+
+  onAddPress() {
+    this.props.onAddPress(this.state.selectedDate);
   }
 
   getSelectedCall() {
@@ -82,7 +87,7 @@ class ScheduleList extends React.Component {
         </View>
 
         <View>
-          <TouchableWithoutFeedback uid="add" onPress={this.props.onAddPress}>
+          <TouchableWithoutFeedback uid="add" onPress={this.onAddPress}>
             <View style={styles.addButton}>
               <Image source={images.PLUS_LIGHT} />
             </View>
