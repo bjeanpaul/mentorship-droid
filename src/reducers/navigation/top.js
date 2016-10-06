@@ -10,6 +10,7 @@ import * as callNotes from 'src/constants/callNotes';
 import * as journey from 'src/constants/journey';
 import * as schedule from 'src/constants/schedule';
 import * as activities from 'src/constants/activities';
+import * as errors from 'src/constants/errors';
 
 
 import {
@@ -29,6 +30,12 @@ export default (state = createStack([
   switch (action.type) {
     case navigation.SCREEN_DISMISS:
       return pop(state);
+
+    case errors.API_ERROR:
+      return push(state, createRoute(routes.ROUTE_API_ERROR));
+
+    case errors.NETWORK_ERROR:
+      return push(state, createRoute(routes.ROUTE_NETWORK_ERROR));
 
     case landing.SHOW_ACTIVATION_REQUEST:
       return push(state, createRoute(routes.ROUTE_AUTH_ACTIVATION));
