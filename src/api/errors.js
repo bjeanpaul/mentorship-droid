@@ -1,3 +1,6 @@
+export class NetworkError {}
+
+
 export class ApiResponseError {
   constructor(message, response = null) {
     this.message = message;
