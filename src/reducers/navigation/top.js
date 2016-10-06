@@ -1,3 +1,4 @@
+import { includes } from 'lodash';
 import * as routes from 'src/constants/routes';
 import * as sync from 'src/constants/sync';
 import * as landing from 'src/constants/landing';
@@ -21,7 +22,13 @@ import {
   createStack,
   createRoute,
   remove,
+  topOf,
 } from 'src/navigationHelpers';
+
+
+const popEphemeral = state => includes(routes.EPHEMERAL_ROUTES, topOf(state).key)
+  ? pop(state)
+  : state;
 
 
 export default (state = createStack([
@@ -32,10 +39,10 @@ export default (state = createStack([
       return pop(state);
 
     case errors.API_ERROR:
-      return push(state, createRoute(routes.ROUTE_API_ERROR));
+      return push(popEphemeral(state), createRoute(routes.ROUTE_API_ERROR));
 
     case errors.NETWORK_ERROR:
-      return push(state, createRoute(routes.ROUTE_NETWORK_ERROR));
+      return push(popEphemeral(state), createRoute(routes.ROUTE_NETWORK_ERROR));
 
     case landing.SHOW_ACTIVATION_REQUEST:
       return push(state, createRoute(routes.ROUTE_AUTH_ACTIVATION));

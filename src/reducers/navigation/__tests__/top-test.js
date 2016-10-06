@@ -20,15 +20,17 @@ import {
 describe('src/reducers/navigation/top', () => {
   describe('API_ERROR', () => {
     it('should push on the api error route', () => {
-      expect(reduce(createStack(), { type: errors.API_ERROR }))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_API_ERROR)));
+      const state = createStack([createRoute('FOO')]);
+      expect(reduce(state, { type: errors.API_ERROR }))
+        .toEqual(push(state, createRoute(routes.ROUTE_API_ERROR)));
     });
   });
 
   describe('NETWORK_ERROR', () => {
     it('should push on the network error route', () => {
-      expect(reduce(createStack(), { type: errors.NETWORK_ERROR }))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_NETWORK_ERROR)));
+      const state = createStack([createRoute('FOO')]);
+      expect(reduce(state, { type: errors.NETWORK_ERROR }))
+        .toEqual(push(state, createRoute(routes.ROUTE_NETWORK_ERROR)));
     });
   });
 
