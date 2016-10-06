@@ -87,7 +87,7 @@ exports[`NetworkError should render 1`] = `
           ]
         ]
       }>
-      Sorry, we don\'t seem to be able to connect to our side. Please check your device\'s internet connection.
+      Sorry, we don\'t seem to be able to connect to our servers. Please check your device\'s internet connection.
     </Text>
     <View
       style={

@@ -12,7 +12,7 @@ const NetworkError = ({
   onDismissPress,
 }) => (
   <Failure onDismissPress={onDismissPress}>
-    Sorry, we don't seem to be able to connect to our side. Please check
+    Sorry, we don't seem to be able to connect to our servers. Please check
     your device's internet connection.
   </Failure>
 );
