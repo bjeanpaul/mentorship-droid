@@ -8,17 +8,17 @@ exports[`MultiLineTextInput should render correctly 1`] = `
           "borderColor": "#dfe5e6",
           "marginBottom": 27,
           "marginLeft": 24,
-          "marginRight": 24
+          "marginRight": 24,
         },
-        false
+        false,
       ]
     }>
     <TextInput
       multiline={true}
-      onBlur={[Function onBlur]}
-      onChange={[Function onChange]}
-      onChangeText={[Function onChangeText]}
-      onFocus={[Function onFocus]}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
       placeholderTextColor="#c0cbcc"
       style={
         Array [
@@ -28,11 +28,11 @@ exports[`MultiLineTextInput should render correctly 1`] = `
             "fontSize": 18,
             "lineHeight": 28,
             "marginBottom": 8,
-            "padding": 0
+            "padding": 0,
           },
           Object {
-            "height": 32
-          }
+            "height": 32,
+          },
         ]
       }
       underlineColorAndroid="transparent" />

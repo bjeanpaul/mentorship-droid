@@ -67,6 +67,29 @@ describe('ScheduleList', () => {
     expect(el.toJSON()).toMatchSnapshot();
   });
 
+  it('should disable the add button if the selected date is in the past', () => {
+    const el = render(createComponent({
+      initialSelectedDate: '2016-09-21T19:40:09.880Z',
+      calls: [],
+    }));
+
+    expect(el.toJSON()).toMatchSnapshot();
+  });
+
+  it('should disabble the add button if the selected date has a call on it', () => {
+    const el = render(createComponent({
+      initialSelectedDate: '2016-09-22T19:40:09.880Z',
+      calls: [
+        fakeScheduledCall({
+          callTime: '2016-09-22T19:40:09.880Z',
+          activity: fakeActivity(),
+        }),
+      ],
+    }));
+
+    expect(el.toJSON()).toMatchSnapshot();
+  });
+
   it('should call onAddPress if the add button is pressed', () => {
     const onAddPress = jest.fn();
 

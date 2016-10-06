@@ -41,6 +41,11 @@ class ScheduleList extends React.Component {
     return selectedDate && this.findCall(selectedDate);
   }
 
+  selectedDateIsInPast() {
+    const { selectedDate } = this.state;
+    return selectedDate && moment().isAfter(selectedDate, 'day');
+  }
+
   findCall(date) {
     const calls = this.props.calls;
     return find(calls, ({ callTime }) => moment(callTime).isSame(date, 'day'));
@@ -48,6 +53,10 @@ class ScheduleList extends React.Component {
 
   callIsInFuture(call) {
     return moment(call.callTime).isAfter();
+  }
+
+  canAdd() {
+    return !this.selectedDateIsInPast() && !this.getSelectedCall();
   }
 
   renderCallInfo() {
@@ -77,6 +86,8 @@ class ScheduleList extends React.Component {
   }
 
   render() {
+    const canAdd = this.canAdd();
+
     return (
       <BaseView>
         <View style={styles.calendarContainer}>
@@ -87,8 +98,8 @@ class ScheduleList extends React.Component {
         </View>
 
         <View>
-          <TouchableWithoutFeedback uid="add" onPress={this.onAddPress}>
-            <View style={styles.addButton}>
+          <TouchableWithoutFeedback uid="add" onPress={() => canAdd && this.onAddPress()}>
+            <View style={[styles.addButton, !canAdd && styles.addButtonIsDisabled]}>
               <Image source={images.PLUS_LIGHT} />
             </View>
           </TouchableWithoutFeedback>

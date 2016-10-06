@@ -5,9 +5,9 @@ exports[`Icon should render its \`backLight\` type 1`] = `
     Array [
       Object {
         "height": 24,
-        "width": 24
+        "width": 24,
       },
-      Object {}
+      Object {},
     ]
   } />
 `;
@@ -19,11 +19,11 @@ exports[`Icon should support style overriding 1`] = `
     Array [
       Object {
         "height": 24,
-        "width": 24
+        "width": 24,
       },
       Object {
-        "backgroundColor": "#333"
-      }
+        "backgroundColor": "#333",
+      },
     ]
   } />
 `;

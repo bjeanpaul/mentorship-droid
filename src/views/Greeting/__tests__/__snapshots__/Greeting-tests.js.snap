@@ -4,9 +4,9 @@ exports[`OnboardingStepGreeting should map props correctly 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
-      undefined
+      undefined,
     ]
   }>
   <View
@@ -14,17 +14,17 @@ exports[`OnboardingStepGreeting should map props correctly 1`] = `
       Array [
         Object {
           "backgroundColor": "#fff",
-          "flex": 1
+          "flex": 1,
         },
         Object {
-          "justifyContent": "space-around"
-        }
+          "justifyContent": "space-around",
+        },
       ]
     }>
     <View
       style={
         Object {
-          "alignItems": "center"
+          "alignItems": "center",
         }
       }>
       <Image
@@ -32,7 +32,7 @@ exports[`OnboardingStepGreeting should map props correctly 1`] = `
         style={
           Object {
             "height": 120,
-            "width": 120
+            "width": 120,
           }
         } />
     </View>
@@ -46,14 +46,14 @@ exports[`OnboardingStepGreeting should map props correctly 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "color": "#022428",
             "fontFamily": "Brandon Text_medium",
             "fontSize": 32,
-            "fontWeight": "400"
-          }
+            "fontWeight": "400",
+          },
         ]
       }>
       Welcome 
@@ -68,14 +68,14 @@ exports[`OnboardingStepGreeting should map props correctly 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "color": "#80979a",
             "fontSize": 18,
             "paddingLeft": 24,
-            "paddingRight": 24
-          }
+            "paddingRight": 24,
+          },
         ]
       }>
       Help build a vibrant mentor community. Complete your profile to allow others learn more about you.
@@ -91,9 +91,9 @@ exports[`OnboardingStepGreeting should map props correctly 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -103,7 +103,7 @@ exports[`OnboardingStepGreeting should map props correctly 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!

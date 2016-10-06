@@ -19,6 +19,9 @@ export default StyleSheet.create({
     zIndex: 2,
     backgroundColor: colors.BUTTON_BG,
   },
+  addButtonIsDisabled: {
+    backgroundColor: colors.SCHEDULE_ADD_BUTTON_DISABLED_BG,
+  },
   callInfoContainer: {
     flex: 0.20,
     paddingTop: 12,
