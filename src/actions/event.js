@@ -7,14 +7,17 @@ import {
   staticAction,
 } from 'src/actionHelpers';
 
-const { ApiResponseError } = api;
+const { NetworkError, ApiResponseError } = api;
 
 
 const listEvents = apiAction({
   method: api.listEvents,
   request: staticAction(constants.EVENT_LIST_REQUEST),
   success: dataAction(constants.EVENT_LIST_SUCCESS),
-  failures: [[ApiResponseError, staticAction(constants.EVENT_LIST_FAILURE)]],
+  failures: [
+    [ApiResponseError, staticAction(constants.EVENT_LIST_FAILURE)],
+    [NetworkError, staticAction(constants.EVENT_LIST_NETWORK_FAILURE)],
+  ],
 });
 
 
