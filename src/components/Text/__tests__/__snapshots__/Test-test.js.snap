@@ -9,9 +9,9 @@ exports[`Text should render 1`] = `
         "color": "#003035",
         "fontFamily": "Brandon Text",
         "fontSize": 13,
-        "textAlign": "center"
+        "textAlign": "center",
       },
-      undefined
+      undefined,
     ]
   }>
   This is normal text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -29,14 +29,14 @@ exports[`Text should render paragraphs 1`] = `
         "color": "#003035",
         "fontFamily": "Brandon Text",
         "fontSize": 13,
-        "textAlign": "center"
+        "textAlign": "center",
       },
       Object {
         "fontSize": 18,
         "paddingBottom": 12,
         "paddingTop": 18,
-        "textAlign": "left"
-      }
+        "textAlign": "left",
+      },
     ]
   }>
   This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -54,7 +54,7 @@ exports[`Text should render section titles 1`] = `
         "color": "#003035",
         "fontFamily": "Brandon Text",
         "fontSize": 13,
-        "textAlign": "center"
+        "textAlign": "center",
       },
       Object {
         "color": "#9fb1b3",
@@ -62,8 +62,8 @@ exports[`Text should render section titles 1`] = `
         "fontSize": 12,
         "fontWeight": "bold",
         "letterSpacing": 1,
-        "textAlign": "left"
-      }
+        "textAlign": "left",
+      },
     ]
   }>
   THIS IS A SECTION TITLE. LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNTUT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA COMMODO CONSEQUAT.
@@ -81,13 +81,13 @@ exports[`Text should render titles 1`] = `
         "color": "#003035",
         "fontFamily": "Brandon Text",
         "fontSize": 13,
-        "textAlign": "center"
+        "textAlign": "center",
       },
       Object {
         "fontFamily": "Brandon Text_medium",
         "fontSize": 20,
-        "fontWeight": "400"
-      }
+        "fontWeight": "400",
+      },
     ]
   }>
   This is a section title. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -98,7 +98,7 @@ exports[`Text should support a light theme 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "#000"
+      "backgroundColor": "#000",
     }
   }>
   <Text
@@ -111,11 +111,11 @@ exports[`Text should support a light theme 1`] = `
           "color": "#003035",
           "fontFamily": "Brandon Text",
           "fontSize": 13,
-          "textAlign": "center"
+          "textAlign": "center",
         },
         Object {
-          "color": "#fff"
-        }
+          "color": "#fff",
+        },
       ]
     }>
     Title with theme

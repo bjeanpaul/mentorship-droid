@@ -6,15 +6,15 @@ exports[`Login should draw 1`] = `
   accessible={true}
   hitSlop={undefined}
   onLayout={undefined}
-  onResponderGrant={[Function bound touchableHandleResponderGrant]}
-  onResponderMove={[Function bound touchableHandleResponderMove]}
-  onResponderRelease={[Function bound touchableHandleResponderRelease]}
-  onResponderTerminate={[Function bound touchableHandleResponderTerminate]}
-  onResponderTerminationRequest={[Function bound touchableHandleResponderTerminationRequest]}
-  onStartShouldSetResponder={[Function bound touchableHandleStartShouldSetResponder]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "flex": 1
+      "flex": 1,
     }
   }
   testID={undefined}>
@@ -23,9 +23,9 @@ exports[`Login should draw 1`] = `
       Array [
         Object {
           "backgroundColor": "#fff",
-          "flex": 1
+          "flex": 1,
         },
-        undefined
+        undefined,
       ]
     }>
     <View
@@ -35,9 +35,9 @@ exports[`Login should draw 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 16,
-            "paddingRight": 16
+            "paddingRight": 16,
           },
-          Object {}
+          Object {},
         ]
       }>
       <Text
@@ -50,13 +50,13 @@ exports[`Login should draw 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Object {
               "fontFamily": "Brandon Text_medium",
               "fontSize": 20,
-              "fontWeight": "400"
-            }
+              "fontWeight": "400",
+            },
           ]
         }>
         Log in
@@ -72,9 +72,9 @@ exports[`Login should draw 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -84,7 +84,7 @@ exports[`Login should draw 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -100,9 +100,9 @@ exports[`Login should draw 1`] = `
               "borderColor": "#dfe5e6",
               "marginBottom": 27,
               "marginLeft": 24,
-              "marginRight": 24
+              "marginRight": 24,
             },
-            false
+            false,
           ]
         }>
         <Text
@@ -115,7 +115,7 @@ exports[`Login should draw 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {
@@ -124,10 +124,10 @@ exports[`Login should draw 1`] = `
                   "fontSize": 14,
                   "fontWeight": "bold",
                   "marginBottom": 9,
-                  "textAlign": "left"
+                  "textAlign": "left",
                 },
-                undefined
-              ]
+                undefined,
+              ],
             ]
           }>
           Email
@@ -137,9 +137,9 @@ exports[`Login should draw 1`] = `
           autoCorrect={false}
           keyboardType="email-address"
           label="Email"
-          onBlur={[Function onBlur]}
-          onChangeText={[Function onChangeText]}
-          onFocus={[Function onFocus]}
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          onFocus={[Function]}
           placeholderTextColor="#c0cbcc"
           style={
             Array [
@@ -149,9 +149,9 @@ exports[`Login should draw 1`] = `
                 "fontSize": 18,
                 "lineHeight": 28,
                 "marginBottom": 8,
-                "padding": 0
+                "padding": 0,
               },
-              undefined
+              undefined,
             ]
           }
           underlineColorAndroid="transparent"
@@ -165,9 +165,9 @@ exports[`Login should draw 1`] = `
               "borderColor": "#dfe5e6",
               "marginBottom": 27,
               "marginLeft": 24,
-              "marginRight": 24
+              "marginRight": 24,
             },
-            false
+            false,
           ]
         }>
         <Text
@@ -180,7 +180,7 @@ exports[`Login should draw 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {
@@ -189,19 +189,19 @@ exports[`Login should draw 1`] = `
                   "fontSize": 14,
                   "fontWeight": "bold",
                   "marginBottom": 9,
-                  "textAlign": "left"
+                  "textAlign": "left",
                 },
-                undefined
-              ]
+                undefined,
+              ],
             ]
           }>
           Password
         </Text>
         <TextInput
           label="Password"
-          onBlur={[Function onBlur]}
-          onChangeText={[Function onChangeText]}
-          onFocus={[Function onFocus]}
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          onFocus={[Function]}
           placeholderTextColor="#c0cbcc"
           secureTextEntry={true}
           style={
@@ -212,9 +212,9 @@ exports[`Login should draw 1`] = `
                 "fontSize": 18,
                 "lineHeight": 28,
                 "marginBottom": 8,
-                "padding": 0
+                "padding": 0,
               },
-              undefined
+              undefined,
             ]
           }
           underlineColorAndroid="transparent"
@@ -231,9 +231,9 @@ exports[`Login should draw 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -243,7 +243,7 @@ exports[`Login should draw 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!

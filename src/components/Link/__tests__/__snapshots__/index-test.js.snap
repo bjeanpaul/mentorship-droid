@@ -3,22 +3,22 @@ exports[`Link should render its children 1`] = `
   accessible={true}
   allowFontScaling={true}
   ellipsizeMode="tail"
-  onPress={[Function foo]}
+  onPress={[Function]}
   style={
     Array [
       Object {
         "color": "#003035",
         "fontFamily": "Brandon Text",
         "fontSize": 13,
-        "textAlign": "center"
+        "textAlign": "center",
       },
       Array [
         Object {
           "color": "#f77040",
-          "fontSize": 14
+          "fontSize": 14,
         },
-        undefined
-      ]
+        undefined,
+      ],
     ]
   }>
   <Text
@@ -35,24 +35,24 @@ exports[`Link should support style overriding 1`] = `
   accessible={true}
   allowFontScaling={true}
   ellipsizeMode="tail"
-  onPress={[Function foo]}
+  onPress={[Function]}
   style={
     Array [
       Object {
         "color": "#003035",
         "fontFamily": "Brandon Text",
         "fontSize": 13,
-        "textAlign": "center"
+        "textAlign": "center",
       },
       Array [
         Object {
           "color": "#f77040",
-          "fontSize": 14
+          "fontSize": 14,
         },
         Object {
-          "fontSize": 23
-        }
-      ]
+          "fontSize": 23,
+        },
+      ],
     ]
   } />
 `;

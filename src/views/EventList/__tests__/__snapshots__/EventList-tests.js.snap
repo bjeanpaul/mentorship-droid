@@ -2,7 +2,7 @@ exports[`EventList should not render unmapped event types 1`] = `
 <View
   style={
     Object {
-      "flex": 1
+      "flex": 1,
     }
   }>
   <Image
@@ -12,7 +12,7 @@ exports[`EventList should not render unmapped event types 1`] = `
         "flex": 1,
         "height": null,
         "resizeMode": "cover",
-        "width": null
+        "width": null,
       }
     }>
     <ScrollView>
@@ -25,7 +25,7 @@ exports[`EventList should not render unmapped event types 1`] = `
             "marginTop": 12,
             "padding": 20,
             "paddingLeft": 16,
-            "paddingRight": 16
+            "paddingRight": 16,
           }
         }>
         <Text
@@ -38,15 +38,15 @@ exports[`EventList should not render unmapped event types 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontFamily": "Brandon Text_bold",
                 "fontSize": 20,
                 "fontWeight": "bold",
                 "marginBottom": 16,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           Hello 
@@ -63,13 +63,13 @@ exports[`EventList should not render unmapped event types 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "marginBottom": 24,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           This is the start of something amazing! Your Mentor’s journey will be documented here.
@@ -85,9 +85,9 @@ exports[`EventList should not render unmapped event types 1`] = `
                 "height": 100,
                 "justifyContent": "center",
                 "margin": 10,
-                "width": 300
+                "width": 300,
               },
-              undefined
+              undefined,
             ]
           }>
           <Text
@@ -97,7 +97,7 @@ exports[`EventList should not render unmapped event types 1`] = `
             style={
               Object {
                 "color": "#333333",
-                "margin": 20
+                "margin": 20,
               }
             }>
             TouchableNativeFeedback is not supported on this platform!
