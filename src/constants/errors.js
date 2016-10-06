@@ -1,0 +1,6 @@
+const NETWORK_ERROR = 'NETWORK_ERROR';
+
+
+export {
+  NETWORK_ERROR,
+};
