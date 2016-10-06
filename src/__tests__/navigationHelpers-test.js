@@ -12,6 +12,7 @@ import {
   replaceAt,
   remove,
   inject,
+  topOf,
 } from 'src/navigationHelpers';
 
 
@@ -262,6 +263,16 @@ describe('navigationHelpers', () => {
         routes: ['A', 'B'].map(unary(createRoute)),
         index: 1,
       });
+    });
+  });
+
+  describe('topOf', () => {
+    it('should get the top of the stack', () => {
+      expect(topOf({
+        routes: ['A', 'B', 'D', 'E'].map(unary(createRoute)),
+        index: 1,
+      }))
+      .toEqual(createRoute('E'));
     });
   });
 });
