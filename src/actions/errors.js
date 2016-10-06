@@ -4,6 +4,6 @@ import { ApiResponseError, NetworkError } from 'src/api';
 
 
 export default [
-  [ApiResponseError, staticAction(constants.NETWORK_ERROR)],
-  [NetworkError, staticAction(constants.API_ERROR)],
+  [ApiResponseError, staticAction(constants.API_ERROR)],
+  [NetworkError, staticAction(constants.NETWORK_ERROR)],
 ];
