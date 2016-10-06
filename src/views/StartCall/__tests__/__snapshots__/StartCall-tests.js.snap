@@ -4,9 +4,9 @@ exports[`StartCall should render 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
-      undefined
+      undefined,
     ]
   }>
   <View
@@ -16,9 +16,9 @@ exports[`StartCall should render 1`] = `
           "height": 72,
           "justifyContent": "center",
           "paddingLeft": 16,
-          "paddingRight": 16
+          "paddingRight": 16,
         },
-        Object {}
+        Object {},
       ]
     }>
     <Text
@@ -31,13 +31,13 @@ exports[`StartCall should render 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "fontFamily": "Brandon Text_medium",
             "fontSize": 20,
-            "fontWeight": "400"
-          }
+            "fontWeight": "400",
+          },
         ]
       }>
       Call Mentee
@@ -53,9 +53,9 @@ exports[`StartCall should render 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -65,7 +65,7 @@ exports[`StartCall should render 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -75,7 +75,7 @@ exports[`StartCall should render 1`] = `
   <View
     style={
       Object {
-        "flex": 1
+        "flex": 1,
       }
     }>
     <View
@@ -85,7 +85,7 @@ exports[`StartCall should render 1`] = `
           "flex": 0.75,
           "paddingBottom": 29,
           "paddingLeft": 16,
-          "paddingRight": 16
+          "paddingRight": 16,
         }
       }>
       <Image
@@ -93,7 +93,7 @@ exports[`StartCall should render 1`] = `
         style={
           Object {
             "flex": -1,
-            "resizeMode": "contain"
+            "resizeMode": "contain",
           }
         } />
     </View>
@@ -102,7 +102,7 @@ exports[`StartCall should render 1`] = `
         Object {
           "flex": 0.25,
           "paddingLeft": 24,
-          "paddingRight": 24
+          "paddingRight": 24,
         }
       } />
   </View>
@@ -110,7 +110,7 @@ exports[`StartCall should render 1`] = `
     style={
       Object {
         "justifyContent": "center",
-        "padding": 24
+        "padding": 24,
       }
     }>
     <View
@@ -124,9 +124,9 @@ exports[`StartCall should render 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -136,7 +136,7 @@ exports[`StartCall should render 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -152,9 +152,9 @@ exports[`StartCall should render with a call time 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
-      undefined
+      undefined,
     ]
   }>
   <View
@@ -164,9 +164,9 @@ exports[`StartCall should render with a call time 1`] = `
           "height": 72,
           "justifyContent": "center",
           "paddingLeft": 16,
-          "paddingRight": 16
+          "paddingRight": 16,
         },
-        Object {}
+        Object {},
       ]
     }>
     <Text
@@ -179,13 +179,13 @@ exports[`StartCall should render with a call time 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "fontFamily": "Brandon Text_medium",
             "fontSize": 20,
-            "fontWeight": "400"
-          }
+            "fontWeight": "400",
+          },
         ]
       }>
       Time for your call
@@ -201,9 +201,9 @@ exports[`StartCall should render with a call time 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -213,7 +213,7 @@ exports[`StartCall should render with a call time 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -223,7 +223,7 @@ exports[`StartCall should render with a call time 1`] = `
   <View
     style={
       Object {
-        "flex": 1
+        "flex": 1,
       }
     }>
     <View
@@ -233,7 +233,7 @@ exports[`StartCall should render with a call time 1`] = `
           "flex": 0.75,
           "paddingBottom": 29,
           "paddingLeft": 16,
-          "paddingRight": 16
+          "paddingRight": 16,
         }
       }>
       <Image
@@ -241,7 +241,7 @@ exports[`StartCall should render with a call time 1`] = `
         style={
           Object {
             "flex": -1,
-            "resizeMode": "contain"
+            "resizeMode": "contain",
           }
         } />
     </View>
@@ -250,7 +250,7 @@ exports[`StartCall should render with a call time 1`] = `
         Object {
           "flex": 0.25,
           "paddingLeft": 24,
-          "paddingRight": 24
+          "paddingRight": 24,
         }
       }>
       <Text
@@ -263,11 +263,11 @@ exports[`StartCall should render with a call time 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Object {
-              "fontSize": 20
-            }
+              "fontSize": 20,
+            },
           ]
         }>
         Thu, Sep 22, 4:31pm
@@ -278,7 +278,7 @@ exports[`StartCall should render with a call time 1`] = `
     style={
       Object {
         "justifyContent": "center",
-        "padding": 24
+        "padding": 24,
       }
     }>
     <View
@@ -292,9 +292,9 @@ exports[`StartCall should render with a call time 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -304,7 +304,7 @@ exports[`StartCall should render with a call time 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -320,9 +320,9 @@ exports[`StartCall should render with a call time and activity 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
-      undefined
+      undefined,
     ]
   }>
   <View
@@ -332,9 +332,9 @@ exports[`StartCall should render with a call time and activity 1`] = `
           "height": 72,
           "justifyContent": "center",
           "paddingLeft": 16,
-          "paddingRight": 16
+          "paddingRight": 16,
         },
-        Object {}
+        Object {},
       ]
     }>
     <Text
@@ -347,13 +347,13 @@ exports[`StartCall should render with a call time and activity 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "fontFamily": "Brandon Text_medium",
             "fontSize": 20,
-            "fontWeight": "400"
-          }
+            "fontWeight": "400",
+          },
         ]
       }>
       Time for your call
@@ -369,9 +369,9 @@ exports[`StartCall should render with a call time and activity 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -381,7 +381,7 @@ exports[`StartCall should render with a call time and activity 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -391,7 +391,7 @@ exports[`StartCall should render with a call time and activity 1`] = `
   <View
     style={
       Object {
-        "flex": 1
+        "flex": 1,
       }
     }>
     <View
@@ -401,7 +401,7 @@ exports[`StartCall should render with a call time and activity 1`] = `
           "flex": 0.75,
           "paddingBottom": 29,
           "paddingLeft": 16,
-          "paddingRight": 16
+          "paddingRight": 16,
         }
       }>
       <Image
@@ -409,7 +409,7 @@ exports[`StartCall should render with a call time and activity 1`] = `
         style={
           Object {
             "flex": -1,
-            "resizeMode": "contain"
+            "resizeMode": "contain",
           }
         } />
     </View>
@@ -418,7 +418,7 @@ exports[`StartCall should render with a call time and activity 1`] = `
         Object {
           "flex": 0.25,
           "paddingLeft": 24,
-          "paddingRight": 24
+          "paddingRight": 24,
         }
       }>
       <Text
@@ -431,11 +431,11 @@ exports[`StartCall should render with a call time and activity 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Object {
-              "fontSize": 20
-            }
+              "fontSize": 20,
+            },
           ]
         }>
         Thu, Sep 22, 4:31pm
@@ -451,11 +451,11 @@ exports[`StartCall should render with a call time and activity 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Object {
-              "fontSize": 20
-            }
+              "fontSize": 20,
+            },
           ]
         }>
         Activity 3
@@ -466,7 +466,7 @@ exports[`StartCall should render with a call time and activity 1`] = `
     style={
       Object {
         "justifyContent": "center",
-        "padding": 24
+        "padding": 24,
       }
     }>
     <View
@@ -480,9 +480,9 @@ exports[`StartCall should render with a call time and activity 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -492,7 +492,7 @@ exports[`StartCall should render with a call time and activity 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!

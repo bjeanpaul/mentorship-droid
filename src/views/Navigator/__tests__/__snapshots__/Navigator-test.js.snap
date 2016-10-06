@@ -2,45 +2,45 @@ exports[`Navigator should render the currently active tab 1`] = `
 <View
   style={
     Object {
-      "flex": 1
+      "flex": 1,
     }
   }>
   <View
-    onLayout={[Function bound _onLayout]}
+    onLayout={[Function]}
     style={
       Array [
         Object {
-          "flex": 1
+          "flex": 1,
         },
-        undefined
+        undefined,
       ]
     }>
     <View
       style={
         Object {
           "flex": 1,
-          "flexDirection": "column-reverse"
+          "flexDirection": "column-reverse",
         }
       }>
       <View
         style={
           Object {
-            "flex": 1
+            "flex": 1,
           }
         }>
         <View
-          onMoveShouldSetResponder={[Function onMoveShouldSetResponder]}
-          onMoveShouldSetResponderCapture={[Function onMoveShouldSetResponderCapture]}
-          onResponderEnd={[Function onResponderEnd]}
-          onResponderGrant={[Function onResponderGrant]}
-          onResponderMove={[Function onResponderMove]}
-          onResponderReject={[Function onResponderReject]}
-          onResponderRelease={[Function onResponderRelease]}
-          onResponderStart={[Function onResponderStart]}
-          onResponderTerminate={[Function onResponderTerminate]}
-          onResponderTerminationRequest={[Function onResponderTerminationRequest]}
-          onStartShouldSetResponder={[Function onStartShouldSetResponder]}
-          onStartShouldSetResponderCapture={[Function onStartShouldSetResponderCapture]}
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
           pointerEvents="auto"
           style={
             Object {
@@ -53,19 +53,19 @@ exports[`Navigator should render the currently active tab 1`] = `
               "shadowColor": "black",
               "shadowOffset": Object {
                 "height": 0,
-                "width": 0
+                "width": 0,
               },
               "shadowOpacity": 0.4,
               "shadowRadius": 10,
               "top": 0,
               "transform": Array [
                 Object {
-                  "translateX": 0
+                  "translateX": 0,
                 },
                 Object {
-                  "translateY": 0
-                }
-              ]
+                  "translateY": 0,
+                },
+              ],
             }
           }>
           <Text
@@ -78,9 +78,9 @@ exports[`Navigator should render the currently active tab 1`] = `
                   "color": "#003035",
                   "fontFamily": "Brandon Text",
                   "fontSize": 13,
-                  "textAlign": "center"
+                  "textAlign": "center",
                 },
-                undefined
+                undefined,
               ]
             }>
             B
@@ -97,7 +97,7 @@ exports[`Navigator should render the currently active tab 1`] = `
         "borderTopWidth": 1,
         "flexDirection": "row",
         "height": 56,
-        "justifyContent": "space-between"
+        "justifyContent": "space-between",
       }
     }>
     <View
@@ -111,9 +111,9 @@ exports[`Navigator should render the currently active tab 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -123,7 +123,7 @@ exports[`Navigator should render the currently active tab 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -140,9 +140,9 @@ exports[`Navigator should render the currently active tab 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -152,7 +152,7 @@ exports[`Navigator should render the currently active tab 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -169,9 +169,9 @@ exports[`Navigator should render the currently active tab 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -181,7 +181,7 @@ exports[`Navigator should render the currently active tab 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -195,45 +195,45 @@ exports[`Navigator should render the currently active tab 2`] = `
 <View
   style={
     Object {
-      "flex": 1
+      "flex": 1,
     }
   }>
   <View
-    onLayout={[Function bound _onLayout]}
+    onLayout={[Function]}
     style={
       Array [
         Object {
-          "flex": 1
+          "flex": 1,
         },
-        undefined
+        undefined,
       ]
     }>
     <View
       style={
         Object {
           "flex": 1,
-          "flexDirection": "column-reverse"
+          "flexDirection": "column-reverse",
         }
       }>
       <View
         style={
           Object {
-            "flex": 1
+            "flex": 1,
           }
         }>
         <View
-          onMoveShouldSetResponder={[Function onMoveShouldSetResponder]}
-          onMoveShouldSetResponderCapture={[Function onMoveShouldSetResponderCapture]}
-          onResponderEnd={[Function onResponderEnd]}
-          onResponderGrant={[Function onResponderGrant]}
-          onResponderMove={[Function onResponderMove]}
-          onResponderReject={[Function onResponderReject]}
-          onResponderRelease={[Function onResponderRelease]}
-          onResponderStart={[Function onResponderStart]}
-          onResponderTerminate={[Function onResponderTerminate]}
-          onResponderTerminationRequest={[Function onResponderTerminationRequest]}
-          onStartShouldSetResponder={[Function onStartShouldSetResponder]}
-          onStartShouldSetResponderCapture={[Function onStartShouldSetResponderCapture]}
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
           pointerEvents="auto"
           style={
             Object {
@@ -246,19 +246,19 @@ exports[`Navigator should render the currently active tab 2`] = `
               "shadowColor": "black",
               "shadowOffset": Object {
                 "height": 0,
-                "width": 0
+                "width": 0,
               },
               "shadowOpacity": 0.4,
               "shadowRadius": 10,
               "top": 0,
               "transform": Array [
                 Object {
-                  "translateX": 0
+                  "translateX": 0,
                 },
                 Object {
-                  "translateY": 0
-                }
-              ]
+                  "translateY": 0,
+                },
+              ],
             }
           }>
           <Text
@@ -271,9 +271,9 @@ exports[`Navigator should render the currently active tab 2`] = `
                   "color": "#003035",
                   "fontFamily": "Brandon Text",
                   "fontSize": 13,
-                  "textAlign": "center"
+                  "textAlign": "center",
                 },
-                undefined
+                undefined,
               ]
             }>
             A
@@ -290,7 +290,7 @@ exports[`Navigator should render the currently active tab 2`] = `
         "borderTopWidth": 1,
         "flexDirection": "row",
         "height": 56,
-        "justifyContent": "space-between"
+        "justifyContent": "space-between",
       }
     }>
     <View
@@ -304,9 +304,9 @@ exports[`Navigator should render the currently active tab 2`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -316,7 +316,7 @@ exports[`Navigator should render the currently active tab 2`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -333,9 +333,9 @@ exports[`Navigator should render the currently active tab 2`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -345,7 +345,7 @@ exports[`Navigator should render the currently active tab 2`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -362,9 +362,9 @@ exports[`Navigator should render the currently active tab 2`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -374,7 +374,7 @@ exports[`Navigator should render the currently active tab 2`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!

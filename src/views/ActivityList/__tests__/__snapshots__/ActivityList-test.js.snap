@@ -4,9 +4,9 @@ exports[`ActivityList should render 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
-      undefined
+      undefined,
     ]
   }>
   <View
@@ -16,11 +16,11 @@ exports[`ActivityList should render 1`] = `
           "height": 72,
           "justifyContent": "center",
           "paddingLeft": 16,
-          "paddingRight": 16
+          "paddingRight": 16,
         },
         Object {
-          "backgroundColor": "#97c13c"
-        }
+          "backgroundColor": "#97c13c",
+        },
       ]
     }>
     <Text
@@ -33,18 +33,18 @@ exports[`ActivityList should render 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Array [
             Object {
               "fontFamily": "Brandon Text_medium",
               "fontSize": 20,
-              "fontWeight": "400"
+              "fontWeight": "400",
             },
             Object {
-              "color": "#fff"
-            }
-          ]
+              "color": "#fff",
+            },
+          ],
         ]
       }>
       Level
@@ -60,9 +60,9 @@ exports[`ActivityList should render 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -72,7 +72,7 @@ exports[`ActivityList should render 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -91,9 +91,9 @@ exports[`ActivityList should render 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -103,7 +103,7 @@ exports[`ActivityList should render 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!

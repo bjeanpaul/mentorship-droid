@@ -4,11 +4,11 @@ exports[`OverlayCompleted should render 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
       Object {
-        "backgroundColor": "rgba(246, 111, 63, 0.95)"
-      }
+        "backgroundColor": "rgba(246, 111, 63, 0.95)",
+      },
     ]
   }>
   <View
@@ -18,9 +18,9 @@ exports[`OverlayCompleted should render 1`] = `
           "height": 72,
           "justifyContent": "center",
           "paddingLeft": 16,
-          "paddingRight": 16
+          "paddingRight": 16,
         },
-        Object {}
+        Object {},
       ]
     } />
   <View
@@ -30,7 +30,7 @@ exports[`OverlayCompleted should render 1`] = `
         "flex": 1,
         "paddingLeft": 24,
         "paddingRight": 24,
-        "paddingTop": 64
+        "paddingTop": 64,
       }
     }>
     <Image
@@ -45,12 +45,12 @@ exports[`OverlayCompleted should render 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "color": undefined,
-            "fontSize": 20
-          }
+            "fontSize": 20,
+          },
         ]
       }>
       For Those Of You Who Have Never (And Also Those Who Have)
@@ -62,9 +62,9 @@ exports[`OverlayCompleted should render 1`] = `
 exports[`OverlayCompleted should render with a dismiss button 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
-    "buildPredicate": [Function buildPredicate],
-    "childrenOfNode": [Function childrenOfNode],
-    "findWhereUnwrapped": [Function findWhereUnwrapped]
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
   },
   "length": 1,
   "node": <function BaseView(_ref){var
@@ -75,7 +75,7 @@ _react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,st
 children));}
     style={
         Object {
-            "backgroundColor": "rgba(246, 111, 63, 0.95)"
+            "backgroundColor": "rgba(246, 111, 63, 0.95)",
           }
     }>
     <function Header(_ref){var _ref$style=_ref.
@@ -93,7 +93,7 @@ children));}
         _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
         _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
         _react2.default.createElement(_Icon2.default,{type:type}))));}
-            onPress={[Function noop]}
+            onPress={[Function]}
             type={1}
             uid="dismiss" />
     </function Header(_ref){var _ref$style=_ref.
@@ -116,7 +116,7 @@ children));}
                 "flex": 1,
                 "paddingLeft": 24,
                 "paddingRight": 24,
-                "paddingTop": 64
+                "paddingTop": 64,
               }
         }>
         <class extends RealComponent {
@@ -147,7 +147,7 @@ children));}
             style={
                 Object {
                     "color": undefined,
-                    "fontSize": 20
+                    "fontSize": 20,
                   }
             }>
             For Those Of You Who Have Never (And Also Those Who Have)
@@ -190,7 +190,7 @@ _react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,st
 children));}
       style={
             Object {
-                  "backgroundColor": "rgba(246, 111, 63, 0.95)"
+                  "backgroundColor": "rgba(246, 111, 63, 0.95)",
                 }
       }>
       <function Header(_ref){var _ref$style=_ref.
@@ -208,7 +208,7 @@ children));}
             _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
             _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
             _react2.default.createElement(_Icon2.default,{type:type}))));}
-                  onPress={[Function noop]}
+                  onPress={[Function]}
                   type={1}
                   uid="dismiss" />
       </function Header(_ref){var _ref$style=_ref.
@@ -231,7 +231,7 @@ children));}
                         "flex": 1,
                         "paddingLeft": 24,
                         "paddingRight": 24,
-                        "paddingTop": 64
+                        "paddingTop": 64,
                       }
             }>
             <class extends RealComponent {
@@ -262,7 +262,7 @@ children));}
                   style={
                         Object {
                               "color": undefined,
-                              "fontSize": 20
+                              "fontSize": 20,
                             }
                   }>
                   For Those Of You Who Have Never (And Also Those Who Have)
@@ -295,7 +295,7 @@ children=_ref.children;var
 style=_ref.style;return(
 
 _react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-children));}>
+children));}>,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
@@ -321,7 +321,7 @@ onPress:onDismissPress})),
 _react2.default.createElement(_reactNative.View,{style:_styles2.default.body},
 _react2.default.createElement(_reactNative.Image,{source:_images2.default.OVERLAY_DONE}),
 _react2.default.createElement(_components.Text,{style:_styles2.default.title},title))));}
-        onDismissPress={[Function noop]}
+        onDismissPress={[Function]}
         title="For Those Of You Who Have Never (And Also Those Who Have)" />,
       "_debugID": 1,
       "_hostContainerInfo": null,
@@ -330,21 +330,21 @@ _react2.default.createElement(_components.Text,{style:_styles2.default.title},ti
         "_reactInternalInstance": [Circular],
         "context": Object {},
         "props": Object {
-          "onDismissPress": [Function noop],
-          "title": "For Those Of You Who Have Never (And Also Those Who Have)"
+          "onDismissPress": [Function],
+          "title": "For Those Of You Who Have Never (And Also Those Who Have)",
         },
         "refs": Object {},
         "state": null,
         "updater": Object {
-          "enqueueCallback": [Function enqueueCallback],
-          "enqueueCallbackInternal": [Function enqueueCallbackInternal],
-          "enqueueElementInternal": [Function enqueueElementInternal],
-          "enqueueForceUpdate": [Function enqueueForceUpdate],
-          "enqueueReplaceState": [Function enqueueReplaceState],
-          "enqueueSetState": [Function enqueueSetState],
-          "isMounted": [Function isMounted],
-          "validateCallback": [Function validateCallback]
-        }
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
       },
       "_mountOrder": 11,
       "_pendingCallbacks": null,
@@ -361,7 +361,7 @@ _react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,st
 children));}
           style={
                     Object {
-                              "backgroundColor": "rgba(246, 111, 63, 0.95)"
+                              "backgroundColor": "rgba(246, 111, 63, 0.95)",
                             }
           }>
           <function Header(_ref){var _ref$style=_ref.
@@ -379,7 +379,7 @@ children));}
                     _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
                     _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
                     _react2.default.createElement(_Icon2.default,{type:type}))));}
-                              onPress={[Function noop]}
+                              onPress={[Function]}
                               type={1}
                               uid="dismiss" />
           </function Header(_ref){var _ref$style=_ref.
@@ -402,7 +402,7 @@ children));}
                                         "flex": 1,
                                         "paddingLeft": 24,
                                         "paddingRight": 24,
-                                        "paddingTop": 64
+                                        "paddingTop": 64,
                                       }
                     }>
                     <class extends RealComponent {
@@ -433,7 +433,7 @@ children));}
                               style={
                                         Object {
                                                   "color": undefined,
-                                                  "fontSize": 20
+                                                  "fontSize": 20,
                                                 }
                               }>
                               For Those Of You Who Have Never (And Also Those Who Have)
@@ -476,7 +476,7 @@ _react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,st
 children));}
           style={
                     Object {
-                              "backgroundColor": "rgba(246, 111, 63, 0.95)"
+                              "backgroundColor": "rgba(246, 111, 63, 0.95)",
                             }
           }>
           <function Header(_ref){var _ref$style=_ref.
@@ -494,7 +494,7 @@ children));}
                     _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
                     _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
                     _react2.default.createElement(_Icon2.default,{type:type}))));}
-                              onPress={[Function noop]}
+                              onPress={[Function]}
                               type={1}
                               uid="dismiss" />
           </function Header(_ref){var _ref$style=_ref.
@@ -517,7 +517,7 @@ children));}
                                         "flex": 1,
                                         "paddingLeft": 24,
                                         "paddingRight": 24,
-                                        "paddingTop": 64
+                                        "paddingTop": 64,
                                       }
                     }>
                     <class extends RealComponent {
@@ -548,7 +548,7 @@ children));}
                               style={
                                         Object {
                                                   "color": undefined,
-                                                  "fontSize": 20
+                                                  "fontSize": 20,
                                                 }
                               }>
                               For Those Of You Who Have Never (And Also Those Who Have)
@@ -581,16 +581,16 @@ children=_ref.children;var
 style=_ref.style;return(
 
 _react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-children));}>
+children));}>,
       },
       "_renderedNodeType": 1,
       "_rootNodeID": 0,
       "_topLevelWrapper": null,
       "_updateBatchNumber": null,
-      "_warnedAboutRefsInRender": false
+      "_warnedAboutRefsInRender": false,
     },
-    "getRenderOutput": [Function getRenderOutput],
-    "render": [Function render]
+    "getRenderOutput": [Function],
+    "render": [Function],
   },
   "root": [Circular],
   "unrendered": <function CompletedOverlay(_ref){var
@@ -611,7 +611,7 @@ onPress:onDismissPress})),
 _react2.default.createElement(_reactNative.View,{style:_styles2.default.body},
 _react2.default.createElement(_reactNative.Image,{source:_images2.default.OVERLAY_DONE}),
 _react2.default.createElement(_components.Text,{style:_styles2.default.title},title))));}
-    onDismissPress={[Function noop]}
-    title="For Those Of You Who Have Never (And Also Those Who Have)" />
+    onDismissPress={[Function]}
+    title="For Those Of You Who Have Never (And Also Those Who Have)" />,
 }
 `;
