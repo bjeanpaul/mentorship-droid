@@ -20,6 +20,7 @@ import {
   createCallNote,
   updateCallNote,
   patchCallNote,
+  createCallNotes,
 } from 'src/actions/callNote';
 
 const { ApiResponseError } = api;
@@ -67,6 +68,15 @@ describe('actions/callNote', () => {
         success: dataAction(constants.CALL_NOTE_PATCH_SUCCESS),
         failures: [[ApiResponseError, staticAction(constants.CALL_NOTE_PATCH_FAILURE)]],
       }))).toBe(true);
+    });
+  });
+
+  describe('createCallNotes', () => {
+    it('should create an action for new call notes', () => {
+      expect(createCallNotes(23)).toEqual({
+        type: constants.CALL_NOTES_CREATE,
+        payload: { callId: 23 },
+      });
     });
   });
 });

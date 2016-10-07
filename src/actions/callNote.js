@@ -40,3 +40,9 @@ export const patchCallNote = apiAction({
   success: dataAction(constants.CALL_NOTE_PATCH_SUCCESS),
   failures: [[ApiResponseError, staticAction(constants.CALL_NOTE_PATCH_FAILURE)]],
 });
+
+
+export const createCallNotes = callId => ({
+  type: constants.CALL_NOTES_CREATE,
+  payload: { callId },
+});
