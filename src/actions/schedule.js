@@ -74,6 +74,10 @@ export const changeScheduledCallActivity = (
   staticAction(constants.SCHEDULED_CALL_ACTIVITY_CHANGE));
 
 
+export const removeScheduledCallActivity = (
+  staticAction(constants.SCHEDULED_CALL_ACTIVITY_REMOVE));
+
+
 export const chooseScheduledCallCategory = categoryId => ({
   type: constants.SCHEDULED_CALL_CATEGORY_CHOOSE,
   payload: { categoryId },
