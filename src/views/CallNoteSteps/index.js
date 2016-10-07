@@ -25,5 +25,5 @@ Reflections.propTypes = {
 };
 
 export {
-  Reflections
+  Reflections,
 };
