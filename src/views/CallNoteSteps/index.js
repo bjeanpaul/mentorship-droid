@@ -24,6 +24,7 @@ Reflections.propTypes = {
   onChangeText: PropTypes.func.isRequired,
 };
 
+
 export {
   Reflections,
 };

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { changeCallNote } from 'src/actions/callNote';
 import {
   Reflections,
-} from 'src/views/CallNoteFormSteps';
+} from 'src/views/CallNoteSteps';
 
 
 const callNoteContainer = ({

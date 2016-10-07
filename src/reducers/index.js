@@ -4,9 +4,11 @@ import auth from 'src/reducers/auth';
 import navigation from 'src/reducers/navigation';
 import profile from 'src/reducers/profile';
 import onboarding from 'src/reducers/onboarding';
+import callNote from 'src/reducers/callNote';
 
 
 const rootReducer = combineReducers({
+  callNote,
   onboarding,
   entities,
   auth,
