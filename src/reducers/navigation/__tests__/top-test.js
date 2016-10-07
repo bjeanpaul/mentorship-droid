@@ -267,9 +267,9 @@ describe('src/reducers/navigation/top', () => {
         routes: [{ context }],
       } = reduce(state, schedule.removeScheduledCallActivity());
 
-      expect(context).toEqual({
+      expect(context).toEqual(jasmine.objectContaining({
         activityId: null,
-      });
+      }));
     });
   });
 
