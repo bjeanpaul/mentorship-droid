@@ -95,7 +95,7 @@ describe('ScheduleDetail', () => {
 
     el.setState({
       date: {
-        year: 1990,
+        year: 2017,
         month: 2,
         day: 3,
       },

@@ -186,7 +186,7 @@ class ScheduleDetail extends React.Component {
   render() {
     const date = this.state.date && moment(this.state.date).format('ddd, DD MMM YY');
     const time = this.state.time && moment(this.state.time).format('h:mm a');
-    const isInPast = this.state.timeHasChanged && this.timeIsInPast();
+    const isInPast = this.timeIsInPast();
     const isColliding = this.dateIsColliding();
 
     return (
@@ -233,9 +233,11 @@ class ScheduleDetail extends React.Component {
           }
 
           {
-            !isColliding && isInPast && <Text style={styles.fieldError}>
-              This date and time have already passed
-            </Text>
+            !isColliding && isInPast && this.state.timeHasChanged && (
+              <Text style={styles.fieldError}>
+                This date and time have already passed
+              </Text>
+            )
           }
 
           <Separator />
