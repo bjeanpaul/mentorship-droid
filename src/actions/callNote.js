@@ -46,3 +46,13 @@ export const createCallNotes = callId => ({
   type: constants.CALL_NOTES_CREATE,
   payload: { callId },
 });
+
+
+export const stepForward = ({
+  type: constants.CALL_NOTES_STEP_FORWARD,
+});
+
+
+export const stepBack = ({
+  type: constants.CALL_NOTES_STEP_BACK,
+});

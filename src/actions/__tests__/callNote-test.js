@@ -21,6 +21,8 @@ import {
   updateCallNote,
   patchCallNote,
   createCallNotes,
+  stepBack,
+  stepForward,
 } from 'src/actions/callNote';
 
 const { ApiResponseError } = api;
@@ -79,4 +81,22 @@ describe('actions/callNote', () => {
       });
     });
   });
+
+  describe('stepBack', () => {
+    it('should create an action for stepping back', () => {
+      expect(actions.stepBack()).toEqual({
+        type: constants.CALL_NOTES_STEP_BACK,
+      });
+    });
+  });
+
+  describe('stepForward', () => {
+    it('should create an action for stepping forward', () => {
+      expect(actions.stepForward()).toEqual({
+        type: constants.CALL_NOTES_STEP_FORWARD,
+      });
+    });
+  });
+});
+
 });
