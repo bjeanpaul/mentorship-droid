@@ -13,7 +13,8 @@ export const apiAction = ({
     .then(dispatch)
     .then(() => method(...args, auth))
     .then(partial(success, ...args), partial(switchError(failures), ...args))
-    .then(dispatch);
+    .then(dispatch)
+    .done();
 
   fn.request = request;
   fn.success = success;

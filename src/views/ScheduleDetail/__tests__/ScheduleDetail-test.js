@@ -54,6 +54,39 @@ describe('ScheduleDetail', () => {
     })).toJSON()).toMatchSnapshot();
   });
 
+  it('should use an initial date if given', () => {
+    const el = shallow(createComponent({
+      initialDate: '2016-09-22T14:31:23.431Z',
+    }));
+
+    expect(el.state()).toEqual(jasmine.objectContaining({
+      date: {
+        year: 2016,
+        month: 8,
+        date: 22,
+      },
+    }));
+  });
+
+  it('should use an initial call time as date and time if given', () => {
+    const el = shallow(createComponent({
+      initialDate: '2016-09-22T14:31:23.431Z',
+      initialCallTime: '2016-09-23T14:31:23.431Z',
+    }));
+
+    expect(el.state()).toEqual(jasmine.objectContaining({
+      date: {
+        year: 2016,
+        month: 8,
+        date: 23,
+      },
+      time: {
+        hour: 16,
+        minute: 31,
+      },
+    }));
+  });
+
   it('should render the done button disabled if the date or time are not given', () => {
     const el = shallow(createComponent());
 

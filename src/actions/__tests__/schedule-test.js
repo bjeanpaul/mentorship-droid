@@ -22,6 +22,7 @@ import {
   updateScheduledCall,
   patchScheduledCall,
   removeScheduledCall,
+  addScheduledCall,
   chooseScheduledCall,
   chooseScheduledCallCategory,
   chooseScheduledCallActivity,
@@ -94,6 +95,15 @@ describe('schedule/actions', () => {
         success: staticAction(constants.SCHEDULED_CALL_REMOVE_SUCCESS),
         failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_REMOVE_FAILURE)]],
       }))).toBe(true);
+    });
+  });
+
+  describe('addScheduledCall', () => {
+    it('should create an action for adding a scheduled call', () => {
+      expect(addScheduledCall('2016-09-16T11:27:14Z')).toEqual({
+        type: constants.SCHEDULED_CALL_ADD,
+        payload: { date: '2016-09-16T11:27:14Z' },
+      });
     });
   });
 

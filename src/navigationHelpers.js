@@ -1,4 +1,4 @@
-import { reject, isNull } from 'lodash';
+import { reject, isNull, last } from 'lodash';
 import { NavigationExperimental } from 'react-native';
 
 const {
@@ -130,3 +130,6 @@ export const remove = (state, key) => !has(state, key)
 export const replaceOrPush = (state, key, route) => has(state, key)
   ? replaceAt(state, key, route)
   : push(state, route);
+
+
+export const topOf = ({ routes }) => last(routes);

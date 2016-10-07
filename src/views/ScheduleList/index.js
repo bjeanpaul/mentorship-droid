@@ -15,9 +15,10 @@ class ScheduleList extends React.Component {
     super(props);
 
     this.state = {
-      selectedDate: this.props.initialSelectedDate,
+      selectedDate: this.props.initialSelectedDate || moment().toISOString(),
     };
 
+    this.onAddPress = this.onAddPress.bind(this);
     this.onDateSelect = this.onDateSelect.bind(this);
     this.onCallInfoPress = this.onCallInfoPress.bind(this);
   }
@@ -31,9 +32,18 @@ class ScheduleList extends React.Component {
     return call && this.props.onCallChosen(call.id);
   }
 
+  onAddPress() {
+    this.props.onAddPress(this.state.selectedDate);
+  }
+
   getSelectedCall() {
     const { selectedDate } = this.state;
     return selectedDate && this.findCall(selectedDate);
+  }
+
+  selectedDateIsInPast() {
+    const { selectedDate } = this.state;
+    return selectedDate && moment().isAfter(selectedDate, 'day');
   }
 
   findCall(date) {
@@ -43,6 +53,10 @@ class ScheduleList extends React.Component {
 
   callIsInFuture(call) {
     return moment(call.callTime).isAfter();
+  }
+
+  canAdd() {
+    return !this.selectedDateIsInPast() && !this.getSelectedCall();
   }
 
   renderCallInfo() {
@@ -72,6 +86,8 @@ class ScheduleList extends React.Component {
   }
 
   render() {
+    const canAdd = this.canAdd();
+
     return (
       <BaseView>
         <View style={styles.calendarContainer}>
@@ -82,8 +98,8 @@ class ScheduleList extends React.Component {
         </View>
 
         <View>
-          <TouchableWithoutFeedback uid="add" onPress={this.props.onAddPress}>
-            <View style={styles.addButton}>
+          <TouchableWithoutFeedback uid="add" onPress={() => canAdd && this.onAddPress()}>
+            <View style={[styles.addButton, !canAdd && styles.addButtonIsDisabled]}>
               <Image source={images.PLUS_LIGHT} />
             </View>
           </TouchableWithoutFeedback>

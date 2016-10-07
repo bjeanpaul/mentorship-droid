@@ -6,6 +6,7 @@ import {
   staticStatus,
   switchError,
   makeGradient,
+  errorSink,
 } from 'src/helpers';
 
 
@@ -60,6 +61,54 @@ describe('helpers', () => {
       const e = new B();
       const fn = switchError([[A, noop]]);
       expect(await fn(e).then(noop, identity)).toEqual(e);
+    });
+  });
+
+  describe('errorSink', () => {
+    it('should dispatch errors with action mappings', async () => {
+      class A {}
+      class B {}
+      const a = new A();
+      const b = new B();
+      a.message = 'o_O';
+
+      const dispatch = jest.fn();
+      const sink = errorSink({ dispatch }, [[A, e => `${e.message}!`]], noop);
+
+      await sink(b);
+      expect(dispatch.mock.calls).toEqual([]);
+
+      await sink(a);
+      expect(dispatch.mock.calls).toEqual([['o_O!']]);
+    });
+
+    it('should call the fallback handler for unmapped errors', async () => {
+      class A {}
+      class B {}
+      const a = new A();
+      const b = new B();
+
+      const fallback = jest.fn();
+      const sink = errorSink({ dispatch: noop }, [[A, noop]], fallback);
+
+      await sink(a);
+      expect(fallback.mock.calls).toEqual([]);
+
+      await sink(b);
+      expect(fallback.mock.calls).toEqual([[a]]);
+    });
+
+    it('should call the fallback handler for errors occuring while dispatching', async () => {
+      class A {}
+      const e = new Error();
+
+      const fallback = jest.fn();
+      const badAction = () => Promise.reject(e);
+      const dispatch = action => action();
+      const sink = errorSink({ dispatch }, [[A, badAction]], fallback);
+
+      await sink(new A());
+      expect(fallback.mock.calls).toEqual([[e]]);
     });
   });
 });

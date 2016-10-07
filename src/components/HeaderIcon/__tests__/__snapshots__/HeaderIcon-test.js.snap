@@ -6,11 +6,11 @@ exports[`HeaderIcon should render 1`] = `
         "height": 72,
         "justifyContent": "center",
         "paddingLeft": 16,
-        "paddingRight": 16
+        "paddingRight": 16,
       },
       Object {
-        "backgroundColor": "#003035"
-      }
+        "backgroundColor": "#003035",
+      },
     ]
   }>
   <View
@@ -24,9 +24,9 @@ exports[`HeaderIcon should render 1`] = `
           "height": 100,
           "justifyContent": "center",
           "margin": 10,
-          "width": 300
+          "width": 300,
         },
-        undefined
+        undefined,
       ]
     }>
     <Text
@@ -36,7 +36,7 @@ exports[`HeaderIcon should render 1`] = `
       style={
         Object {
           "color": "#333333",
-          "margin": 20
+          "margin": 20,
         }
       }>
       TouchableNativeFeedback is not supported on this platform!
@@ -53,11 +53,11 @@ exports[`HeaderIcon should support style overriding 1`] = `
         "height": 72,
         "justifyContent": "center",
         "paddingLeft": 16,
-        "paddingRight": 16
+        "paddingRight": 16,
       },
       Object {
-        "backgroundColor": "#003035"
-      }
+        "backgroundColor": "#003035",
+      },
     ]
   }>
   <View
@@ -71,9 +71,9 @@ exports[`HeaderIcon should support style overriding 1`] = `
           "height": 100,
           "justifyContent": "center",
           "margin": 10,
-          "width": 300
+          "width": 300,
         },
-        undefined
+        undefined,
       ]
     }>
     <Text
@@ -83,7 +83,7 @@ exports[`HeaderIcon should support style overriding 1`] = `
       style={
         Object {
           "color": "#333333",
-          "margin": 20
+          "margin": 20,
         }
       }>
       TouchableNativeFeedback is not supported on this platform!

@@ -4,11 +4,11 @@ exports[`ConnectingCall should render 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
       Object {
-        "backgroundColor": "rgba(246, 111, 63, 0.95)"
-      }
+        "backgroundColor": "rgba(246, 111, 63, 0.95)",
+      },
     ]
   }>
   <View
@@ -18,9 +18,9 @@ exports[`ConnectingCall should render 1`] = `
           "height": 72,
           "justifyContent": "center",
           "paddingLeft": 16,
-          "paddingRight": 16
+          "paddingRight": 16,
         },
-        Object {}
+        Object {},
       ]
     }>
     <View
@@ -34,9 +34,9 @@ exports[`ConnectingCall should render 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -46,7 +46,7 @@ exports[`ConnectingCall should render 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -60,7 +60,7 @@ exports[`ConnectingCall should render 1`] = `
         "flex": 1,
         "paddingLeft": 24,
         "paddingRight": 24,
-        "paddingTop": 64
+        "paddingTop": 64,
       }
     }>
     <Text
@@ -73,12 +73,12 @@ exports[`ConnectingCall should render 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "color": undefined,
-            "fontSize": 20
-          }
+            "fontSize": 20,
+          },
         ]
       }>
       Your call will be connected shortly…
@@ -88,7 +88,7 @@ exports[`ConnectingCall should render 1`] = `
     style={
       Object {
         "justifyContent": "center",
-        "padding": 24
+        "padding": 24,
       }
     } />
 </View>
@@ -100,11 +100,11 @@ exports[`ConnectingCall should render with an activity 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
       Object {
-        "backgroundColor": "rgba(246, 111, 63, 0.95)"
-      }
+        "backgroundColor": "rgba(246, 111, 63, 0.95)",
+      },
     ]
   }>
   <View
@@ -114,9 +114,9 @@ exports[`ConnectingCall should render with an activity 1`] = `
           "height": 72,
           "justifyContent": "center",
           "paddingLeft": 16,
-          "paddingRight": 16
+          "paddingRight": 16,
         },
-        Object {}
+        Object {},
       ]
     }>
     <View
@@ -130,9 +130,9 @@ exports[`ConnectingCall should render with an activity 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -142,7 +142,7 @@ exports[`ConnectingCall should render with an activity 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!
@@ -156,7 +156,7 @@ exports[`ConnectingCall should render with an activity 1`] = `
         "flex": 1,
         "paddingLeft": 24,
         "paddingRight": 24,
-        "paddingTop": 64
+        "paddingTop": 64,
       }
     }>
     <Text
@@ -169,12 +169,12 @@ exports[`ConnectingCall should render with an activity 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Object {
             "color": undefined,
-            "fontSize": 20
-          }
+            "fontSize": 20,
+          },
         ]
       }>
       Your call will be connected shortly…
@@ -189,16 +189,16 @@ exports[`ConnectingCall should render with an activity 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 13,
-            "textAlign": "center"
+            "textAlign": "center",
           },
           Array [
             Object {
-              "color": "#fff"
+              "color": "#fff",
             },
             Object {
-              "fontSize": 24
-            }
-          ]
+              "fontSize": 24,
+            },
+          ],
         ]
       }>
       You might want to use your loudspeaker during the call to review the activity
@@ -208,7 +208,7 @@ exports[`ConnectingCall should render with an activity 1`] = `
     style={
       Object {
         "justifyContent": "center",
-        "padding": 24
+        "padding": 24,
       }
     }>
     <View
@@ -222,9 +222,9 @@ exports[`ConnectingCall should render with an activity 1`] = `
             "height": 100,
             "justifyContent": "center",
             "margin": 10,
-            "width": 300
+            "width": 300,
           },
-          undefined
+          undefined,
         ]
       }>
       <Text
@@ -234,7 +234,7 @@ exports[`ConnectingCall should render with an activity 1`] = `
         style={
           Object {
             "color": "#333333",
-            "margin": 20
+            "margin": 20,
           }
         }>
         TouchableNativeFeedback is not supported on this platform!

@@ -36,6 +36,18 @@ import JOURNEY_EVENT_SCHEDULED_CALL_ICON from 'app/assets/event-icon-calendar.pn
 import START_CALL from 'app/assets/mentee-holding-phone.png';
 import OVERLAY_DONE from 'app/assets/done-icon.png';
 
+import CALL_NOTES_COMPLETED_YES from 'app/assets/Yes.png';
+import CALL_NOTES_COMPLETED_YES_SELECTED from 'app/assets/Yes-Selected.png';
+import CALL_NOTES_COMPLETED_NO from 'app/assets/No.png';
+import CALL_NOTES_COMPLETED_NO_SELECTED from 'app/assets/No-Selected.png';
+
+import CALL_NOTES_MENTEE_HAPPY from 'app/assets/Happy.png';
+import CALL_NOTES_MENTEE_SAD from 'app/assets/Sad.png';
+import CALL_NOTES_MENTEE_BORED from 'app/assets/Bored.png';
+import CALL_NOTES_MENTEE_CONFUSED from 'app/assets/Confused.png';
+import CALL_NOTES_MENTEE_UPSET from 'app/assets/Upset.png';
+import CALL_NOTES_MENTEE_WITHDRAWN from 'app/assets/Withdrawn.png';
+
 
 export default {
   PLUS_LIGHT,
@@ -76,4 +88,17 @@ export default {
 
   START_CALL,
   OVERLAY_DONE,
+
+  CALL_NOTES_COMPLETED_YES,
+  CALL_NOTES_COMPLETED_YES_SELECTED,
+  CALL_NOTES_COMPLETED_NO,
+  CALL_NOTES_COMPLETED_NO_SELECTED,
+
+  CALL_NOTES_MENTEE_HAPPY,
+  CALL_NOTES_MENTEE_SAD,
+  CALL_NOTES_MENTEE_BORED,
+  CALL_NOTES_MENTEE_CONFUSED,
+  CALL_NOTES_MENTEE_UPSET,
+  CALL_NOTES_MENTEE_WITHDRAWN,
+
 };

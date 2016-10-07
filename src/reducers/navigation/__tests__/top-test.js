@@ -10,6 +10,7 @@ import * as callNotes from 'src/actions/callNotes';
 import * as journey from 'src/actions/journey';
 import * as schedule from 'src/actions/schedule';
 import * as activities from 'src/actions/activities';
+import * as errors from 'src/constants/errors';
 
 import {
   createDummyRoute, createStack, createRoute, push, pop, replaceAt,
@@ -17,6 +18,22 @@ import {
 
 
 describe('src/reducers/navigation/top', () => {
+  describe('API_ERROR', () => {
+    it('should push on the api error route', () => {
+      const state = createStack([createRoute('FOO')]);
+      expect(reduce(state, { type: errors.API_ERROR }))
+        .toEqual(push(state, createRoute(routes.ROUTE_API_ERROR)));
+    });
+  });
+
+  describe('NETWORK_ERROR', () => {
+    it('should push on the network error route', () => {
+      const state = createStack([createRoute('FOO')]);
+      expect(reduce(state, { type: errors.NETWORK_ERROR }))
+        .toEqual(push(state, createRoute(routes.ROUTE_NETWORK_ERROR)));
+    });
+  });
+
   describe('SHOW_ACTIVATION_REQUEST', () => {
     it('should push the activation route', () => {
       expect(reduce(createStack(), landing.showActivation()))
@@ -172,8 +189,10 @@ describe('src/reducers/navigation/top', () => {
 
   describe('SCHEDULED_CALL_ADD', () => {
     it('should push on the scheduled route', () => {
-      expect(reduce(createStack(), schedule.addScheduledCall()))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL)));
+      expect(reduce(createStack(), schedule.addScheduledCall('2016-09-16T11:27:14Z')))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
+          date: '2016-09-16T11:27:14Z',
+        })));
     });
   });
 

@@ -42,4 +42,5 @@ export const setupNotifications = () => (dispatch, {
   .then(() => FCM.getFCMToken())
   .then(token => updateNotificationToken(id, token, auth))
   .then(() => handleNotifications(dispatch))
-  .catch(() => dispatch(setupNotificationsFailure()));
+  .catch(() => dispatch(setupNotificationsFailure()))
+  .done();

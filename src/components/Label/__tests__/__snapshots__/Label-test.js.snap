@@ -9,7 +9,7 @@ exports[`Label should render its title 1`] = `
         "color": "#003035",
         "fontFamily": "Brandon Text",
         "fontSize": 13,
-        "textAlign": "center"
+        "textAlign": "center",
       },
       Array [
         Object {
@@ -18,10 +18,10 @@ exports[`Label should render its title 1`] = `
           "fontSize": 14,
           "fontWeight": "bold",
           "marginBottom": 9,
-          "textAlign": "left"
+          "textAlign": "left",
         },
-        undefined
-      ]
+        undefined,
+      ],
     ]
   }>
   foo
@@ -39,7 +39,7 @@ exports[`Label should support style overriding 1`] = `
         "color": "#003035",
         "fontFamily": "Brandon Text",
         "fontSize": 13,
-        "textAlign": "center"
+        "textAlign": "center",
       },
       Array [
         Object {
@@ -48,12 +48,12 @@ exports[`Label should support style overriding 1`] = `
           "fontSize": 14,
           "fontWeight": "bold",
           "marginBottom": 9,
-          "textAlign": "left"
+          "textAlign": "left",
         },
         Object {
-          "fontSize": 23
-        }
-      ]
+          "fontSize": 23,
+        },
+      ],
     ]
   }>
   foo

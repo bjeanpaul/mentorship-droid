@@ -59,5 +59,9 @@ global.render = (...args) => {
 };
 
 
+// react-native uses .done() but es6 Promise spec doesn't have it
+// eslint-disable-next-line no-extend-native
+Promise.prototype.done = Promise.prototype.then;
+
 Date.now = () => 1474966266635;
 moment.tz.setDefault('Africa/Johannesburg');

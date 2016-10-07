@@ -9,15 +9,15 @@ exports[`LoginStatusMessage should draw error statuses 1`] = `
         "color": "#003035",
         "fontFamily": "Brandon Text",
         "fontSize": 13,
-        "textAlign": "center"
+        "textAlign": "center",
       },
       Object {
         "color": "#864a47",
         "fontSize": 13,
         "paddingLeft": 24,
         "paddingRight": 24,
-        "paddingTop": 16
-      }
+        "paddingTop": 16,
+      },
     ]
   }>
   Sorry, we seem to have an issue on our side
@@ -35,15 +35,15 @@ exports[`LoginStatusMessage should draw not found statuses 1`] = `
         "color": "#003035",
         "fontFamily": "Brandon Text",
         "fontSize": 13,
-        "textAlign": "center"
+        "textAlign": "center",
       },
       Object {
         "color": "#864a47",
         "fontSize": 13,
         "paddingLeft": 24,
         "paddingRight": 24,
-        "paddingTop": 16
-      }
+        "paddingTop": 16,
+      },
     ]
   }>
   Sorry, we couldn\'t find an account with that username and password combination

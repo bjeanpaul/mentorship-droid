@@ -108,9 +108,17 @@ const requestFailureErrorResponse = e => {
 };
 
 
-const requestFailure = e => Promise.reject(!isUndefined(e.response)
-  ? requestFailureErrorResponse(e)
-  : e);
+const requestFailure = e => {
+  let res = e;
+
+  if (!isUndefined(e.response)) {
+    res = requestFailureErrorResponse(e);
+  } else if (e.message === 'Network Error') {
+    res = new errors.NetworkError();
+  }
+
+  return Promise.reject(res);
+};
 
 
 const request = rawConf => {

@@ -4,9 +4,9 @@ exports[`Activity should display the poster if one is given 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
-      undefined
+      undefined,
     ]
   }>
   <ScrollView>
@@ -17,11 +17,11 @@ exports[`Activity should display the poster if one is given 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 16,
-            "paddingRight": 16
+            "paddingRight": 16,
           },
           Object {
-            "backgroundColor": "#97c13c"
-          }
+            "backgroundColor": "#97c13c",
+          },
         ]
       }>
       <Text
@@ -35,22 +35,22 @@ exports[`Activity should display the poster if one is given 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
                 "fontFamily": "Brandon Text_medium",
                 "fontSize": 20,
-                "fontWeight": "400"
+                "fontWeight": "400",
               },
               Object {
-                "color": "#fff"
+                "color": "#fff",
               },
               Object {
                 "marginLeft": 48,
-                "marginRight": 48
-              }
-            ]
+                "marginRight": 48,
+              },
+            ],
           ]
         }>
         Level
@@ -66,9 +66,9 @@ exports[`Activity should display the poster if one is given 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -78,7 +78,7 @@ exports[`Activity should display the poster if one is given 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -90,11 +90,11 @@ exports[`Activity should display the poster if one is given 1`] = `
         Array [
           Object {
             "paddingBottom": 24,
-            "paddingTop": 10
+            "paddingTop": 10,
           },
           Object {
-            "backgroundColor": "#97c13c"
-          }
+            "backgroundColor": "#97c13c",
+          },
         ]
       }>
       <Text
@@ -108,11 +108,11 @@ exports[`Activity should display the poster if one is given 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
-                "color": "#fff"
+                "color": "#fff",
               },
               Object {
                 "fontFamily": "Brandon Text_medium",
@@ -121,9 +121,9 @@ exports[`Activity should display the poster if one is given 1`] = `
                 "marginLeft": 24,
                 "marginRight": 24,
                 "paddingBottom": 9,
-                "paddingTop": 9
-              }
-            ]
+                "paddingTop": 9,
+              },
+            ],
           ]
         }>
         Activity 1
@@ -138,19 +138,19 @@ exports[`Activity should display the poster if one is given 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
                 "color": "rgba(0, 0, 0, 0.35)",
                 "fontSize": 16,
                 "marginLeft": 24,
-                "marginRight": 24
+                "marginRight": 24,
               },
               Object {
-                "paddingBottom": 27
-              }
-            ]
+                "paddingBottom": 27,
+              },
+            ],
           ]
         }>
         Discuss this activity with your Mentee
@@ -166,9 +166,9 @@ exports[`Activity should display the poster if one is given 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -178,7 +178,7 @@ exports[`Activity should display the poster if one is given 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -188,7 +188,7 @@ exports[`Activity should display the poster if one is given 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -199,7 +199,7 @@ exports[`Activity should display the poster if one is given 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -210,7 +210,7 @@ exports[`Activity should display the poster if one is given 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -224,7 +224,7 @@ exports[`Activity should display the poster if one is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -232,9 +232,9 @@ exports[`Activity should display the poster if one is given 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           OBJECTIVE
@@ -244,7 +244,7 @@ exports[`Activity should display the poster if one is given 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -257,14 +257,14 @@ exports[`Activity should display the poster if one is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           raaar
@@ -274,7 +274,7 @@ exports[`Activity should display the poster if one is given 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -285,7 +285,7 @@ exports[`Activity should display the poster if one is given 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -296,7 +296,7 @@ exports[`Activity should display the poster if one is given 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -310,7 +310,7 @@ exports[`Activity should display the poster if one is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -318,9 +318,9 @@ exports[`Activity should display the poster if one is given 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           LESSON RATIONALE
@@ -330,7 +330,7 @@ exports[`Activity should display the poster if one is given 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -343,14 +343,14 @@ exports[`Activity should display the poster if one is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           elanoitar
@@ -360,7 +360,7 @@ exports[`Activity should display the poster if one is given 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -371,7 +371,7 @@ exports[`Activity should display the poster if one is given 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -382,7 +382,7 @@ exports[`Activity should display the poster if one is given 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -396,7 +396,7 @@ exports[`Activity should display the poster if one is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -404,9 +404,9 @@ exports[`Activity should display the poster if one is given 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           INSTRUCTIONS
@@ -416,7 +416,7 @@ exports[`Activity should display the poster if one is given 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -429,14 +429,14 @@ exports[`Activity should display the poster if one is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           snoitcrutsni
@@ -446,7 +446,7 @@ exports[`Activity should display the poster if one is given 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -457,7 +457,7 @@ exports[`Activity should display the poster if one is given 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -468,7 +468,7 @@ exports[`Activity should display the poster if one is given 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -482,7 +482,7 @@ exports[`Activity should display the poster if one is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -490,9 +490,9 @@ exports[`Activity should display the poster if one is given 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           PROMPTS
@@ -502,7 +502,7 @@ exports[`Activity should display the poster if one is given 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -515,14 +515,14 @@ exports[`Activity should display the poster if one is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           tspmorp
@@ -532,7 +532,7 @@ exports[`Activity should display the poster if one is given 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -543,7 +543,7 @@ exports[`Activity should display the poster if one is given 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -554,7 +554,7 @@ exports[`Activity should display the poster if one is given 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -568,7 +568,7 @@ exports[`Activity should display the poster if one is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -576,9 +576,9 @@ exports[`Activity should display the poster if one is given 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           REFLECTION POINTS
@@ -588,7 +588,7 @@ exports[`Activity should display the poster if one is given 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -601,14 +601,14 @@ exports[`Activity should display the poster if one is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           tsnoip
@@ -618,7 +618,7 @@ exports[`Activity should display the poster if one is given 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -629,7 +629,7 @@ exports[`Activity should display the poster if one is given 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -640,7 +640,7 @@ exports[`Activity should display the poster if one is given 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -654,7 +654,7 @@ exports[`Activity should display the poster if one is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -662,9 +662,9 @@ exports[`Activity should display the poster if one is given 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           SKILLS DEVELOPED
@@ -674,7 +674,7 @@ exports[`Activity should display the poster if one is given 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -687,14 +687,14 @@ exports[`Activity should display the poster if one is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           depoleved
@@ -706,11 +706,11 @@ exports[`Activity should display the poster if one is given 1`] = `
         Array [
           Object {
             "paddingBottom": 24,
-            "paddingTop": 23
+            "paddingTop": 23,
           },
           Object {
-            "backgroundColor": "#97c13c"
-          }
+            "backgroundColor": "#97c13c",
+          },
         ]
       }>
       <Text
@@ -723,19 +723,19 @@ exports[`Activity should display the poster if one is given 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
                 "color": "rgba(0, 0, 0, 0.35)",
                 "fontSize": 16,
                 "marginLeft": 24,
-                "marginRight": 24
+                "marginRight": 24,
               },
               Object {
-                "paddingBottom": 19
-              }
-            ]
+                "paddingBottom": 19,
+              },
+            ],
           ]
         }>
         Discuss this activity with your Mentee
@@ -751,9 +751,9 @@ exports[`Activity should display the poster if one is given 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -763,7 +763,7 @@ exports[`Activity should display the poster if one is given 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -780,9 +780,9 @@ exports[`Activity should not try display a poster if none is given 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
-      undefined
+      undefined,
     ]
   }>
   <ScrollView>
@@ -793,11 +793,11 @@ exports[`Activity should not try display a poster if none is given 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 16,
-            "paddingRight": 16
+            "paddingRight": 16,
           },
           Object {
-            "backgroundColor": "#97c13c"
-          }
+            "backgroundColor": "#97c13c",
+          },
         ]
       }>
       <Text
@@ -811,22 +811,22 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
                 "fontFamily": "Brandon Text_medium",
                 "fontSize": 20,
-                "fontWeight": "400"
+                "fontWeight": "400",
               },
               Object {
-                "color": "#fff"
+                "color": "#fff",
               },
               Object {
                 "marginLeft": 48,
-                "marginRight": 48
-              }
-            ]
+                "marginRight": 48,
+              },
+            ],
           ]
         }>
         Level
@@ -842,9 +842,9 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -854,7 +854,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -866,11 +866,11 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         Array [
           Object {
             "paddingBottom": 24,
-            "paddingTop": 10
+            "paddingTop": 10,
           },
           Object {
-            "backgroundColor": "#97c13c"
-          }
+            "backgroundColor": "#97c13c",
+          },
         ]
       }>
       <Text
@@ -884,11 +884,11 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
-                "color": "#fff"
+                "color": "#fff",
               },
               Object {
                 "fontFamily": "Brandon Text_medium",
@@ -897,9 +897,9 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                 "marginLeft": 24,
                 "marginRight": 24,
                 "paddingBottom": 9,
-                "paddingTop": 9
-              }
-            ]
+                "paddingTop": 9,
+              },
+            ],
           ]
         }>
         Activity 1
@@ -914,19 +914,19 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
                 "color": "rgba(0, 0, 0, 0.35)",
                 "fontSize": 16,
                 "marginLeft": 24,
-                "marginRight": 24
+                "marginRight": 24,
               },
               Object {
-                "paddingBottom": 27
-              }
-            ]
+                "paddingBottom": 27,
+              },
+            ],
           ]
         }>
         Discuss this activity with your Mentee
@@ -942,9 +942,9 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -954,7 +954,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -964,7 +964,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -975,7 +975,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -986,7 +986,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -1000,7 +1000,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -1008,9 +1008,9 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           OBJECTIVE
@@ -1020,7 +1020,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -1033,14 +1033,14 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           raaar
@@ -1050,7 +1050,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -1061,7 +1061,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -1072,7 +1072,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -1086,7 +1086,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -1094,9 +1094,9 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           LESSON RATIONALE
@@ -1106,7 +1106,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -1119,14 +1119,14 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           elanoitar
@@ -1136,7 +1136,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -1147,7 +1147,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -1158,7 +1158,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -1172,7 +1172,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -1180,9 +1180,9 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           INSTRUCTIONS
@@ -1192,7 +1192,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -1205,14 +1205,14 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           snoitcrutsni
@@ -1222,7 +1222,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -1233,7 +1233,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -1244,7 +1244,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -1258,7 +1258,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -1266,9 +1266,9 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           PROMPTS
@@ -1278,7 +1278,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -1291,14 +1291,14 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           tspmorp
@@ -1308,7 +1308,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -1319,7 +1319,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -1330,7 +1330,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -1344,7 +1344,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -1352,9 +1352,9 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           REFLECTION POINTS
@@ -1364,7 +1364,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -1377,14 +1377,14 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           tsnoip
@@ -1394,7 +1394,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -1405,7 +1405,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -1416,7 +1416,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -1430,7 +1430,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -1438,9 +1438,9 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           SKILLS DEVELOPED
@@ -1450,7 +1450,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -1463,14 +1463,14 @@ exports[`Activity should not try display a poster if none is given 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           depoleved
@@ -1482,11 +1482,11 @@ exports[`Activity should not try display a poster if none is given 1`] = `
         Array [
           Object {
             "paddingBottom": 24,
-            "paddingTop": 23
+            "paddingTop": 23,
           },
           Object {
-            "backgroundColor": "#97c13c"
-          }
+            "backgroundColor": "#97c13c",
+          },
         ]
       }>
       <Text
@@ -1499,19 +1499,19 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
                 "color": "rgba(0, 0, 0, 0.35)",
                 "fontSize": 16,
                 "marginLeft": 24,
-                "marginRight": 24
+                "marginRight": 24,
               },
               Object {
-                "paddingBottom": 19
-              }
-            ]
+                "paddingBottom": 19,
+              },
+            ],
           ]
         }>
         Discuss this activity with your Mentee
@@ -1527,9 +1527,9 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -1539,7 +1539,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -1556,9 +1556,9 @@ exports[`Activity should render 1`] = `
     Array [
       Object {
         "backgroundColor": "#fff",
-        "flex": 1
+        "flex": 1,
       },
-      undefined
+      undefined,
     ]
   }>
   <ScrollView>
@@ -1569,11 +1569,11 @@ exports[`Activity should render 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 16,
-            "paddingRight": 16
+            "paddingRight": 16,
           },
           Object {
-            "backgroundColor": "#97c13c"
-          }
+            "backgroundColor": "#97c13c",
+          },
         ]
       }>
       <Text
@@ -1587,22 +1587,22 @@ exports[`Activity should render 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
                 "fontFamily": "Brandon Text_medium",
                 "fontSize": 20,
-                "fontWeight": "400"
+                "fontWeight": "400",
               },
               Object {
-                "color": "#fff"
+                "color": "#fff",
               },
               Object {
                 "marginLeft": 48,
-                "marginRight": 48
-              }
-            ]
+                "marginRight": 48,
+              },
+            ],
           ]
         }>
         Level
@@ -1618,9 +1618,9 @@ exports[`Activity should render 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -1630,7 +1630,7 @@ exports[`Activity should render 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -1642,11 +1642,11 @@ exports[`Activity should render 1`] = `
         Array [
           Object {
             "paddingBottom": 24,
-            "paddingTop": 10
+            "paddingTop": 10,
           },
           Object {
-            "backgroundColor": "#97c13c"
-          }
+            "backgroundColor": "#97c13c",
+          },
         ]
       }>
       <Text
@@ -1660,11 +1660,11 @@ exports[`Activity should render 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
-                "color": "#fff"
+                "color": "#fff",
               },
               Object {
                 "fontFamily": "Brandon Text_medium",
@@ -1673,9 +1673,9 @@ exports[`Activity should render 1`] = `
                 "marginLeft": 24,
                 "marginRight": 24,
                 "paddingBottom": 9,
-                "paddingTop": 9
-              }
-            ]
+                "paddingTop": 9,
+              },
+            ],
           ]
         }>
         Activity 1
@@ -1690,19 +1690,19 @@ exports[`Activity should render 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
                 "color": "rgba(0, 0, 0, 0.35)",
                 "fontSize": 16,
                 "marginLeft": 24,
-                "marginRight": 24
+                "marginRight": 24,
               },
               Object {
-                "paddingBottom": 27
-              }
-            ]
+                "paddingBottom": 27,
+              },
+            ],
           ]
         }>
         Discuss this activity with your Mentee
@@ -1718,9 +1718,9 @@ exports[`Activity should render 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -1730,7 +1730,7 @@ exports[`Activity should render 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!
@@ -1740,7 +1740,7 @@ exports[`Activity should render 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -1751,7 +1751,7 @@ exports[`Activity should render 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -1762,7 +1762,7 @@ exports[`Activity should render 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -1776,7 +1776,7 @@ exports[`Activity should render 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -1784,9 +1784,9 @@ exports[`Activity should render 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           OBJECTIVE
@@ -1796,7 +1796,7 @@ exports[`Activity should render 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -1809,14 +1809,14 @@ exports[`Activity should render 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           raaar
@@ -1826,7 +1826,7 @@ exports[`Activity should render 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -1837,7 +1837,7 @@ exports[`Activity should render 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -1848,7 +1848,7 @@ exports[`Activity should render 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -1862,7 +1862,7 @@ exports[`Activity should render 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -1870,9 +1870,9 @@ exports[`Activity should render 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           LESSON RATIONALE
@@ -1882,7 +1882,7 @@ exports[`Activity should render 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -1895,14 +1895,14 @@ exports[`Activity should render 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           elanoitar
@@ -1912,7 +1912,7 @@ exports[`Activity should render 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -1923,7 +1923,7 @@ exports[`Activity should render 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -1934,7 +1934,7 @@ exports[`Activity should render 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -1948,7 +1948,7 @@ exports[`Activity should render 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -1956,9 +1956,9 @@ exports[`Activity should render 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           INSTRUCTIONS
@@ -1968,7 +1968,7 @@ exports[`Activity should render 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -1981,14 +1981,14 @@ exports[`Activity should render 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           snoitcrutsni
@@ -1998,7 +1998,7 @@ exports[`Activity should render 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -2009,7 +2009,7 @@ exports[`Activity should render 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -2020,7 +2020,7 @@ exports[`Activity should render 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -2034,7 +2034,7 @@ exports[`Activity should render 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -2042,9 +2042,9 @@ exports[`Activity should render 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           PROMPTS
@@ -2054,7 +2054,7 @@ exports[`Activity should render 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -2067,14 +2067,14 @@ exports[`Activity should render 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           tspmorp
@@ -2084,7 +2084,7 @@ exports[`Activity should render 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -2095,7 +2095,7 @@ exports[`Activity should render 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -2106,7 +2106,7 @@ exports[`Activity should render 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -2120,7 +2120,7 @@ exports[`Activity should render 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -2128,9 +2128,9 @@ exports[`Activity should render 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           REFLECTION POINTS
@@ -2140,7 +2140,7 @@ exports[`Activity should render 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -2153,14 +2153,14 @@ exports[`Activity should render 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           tsnoip
@@ -2170,7 +2170,7 @@ exports[`Activity should render 1`] = `
     <View
       style={
         Object {
-          "paddingBottom": 29
+          "paddingBottom": 29,
         }
       }>
       <View
@@ -2181,7 +2181,7 @@ exports[`Activity should render 1`] = `
             "height": 72,
             "justifyContent": "center",
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Image
@@ -2192,7 +2192,7 @@ exports[`Activity should render 1`] = `
               "position": "absolute",
               "resizeMode": "contain",
               "top": 16,
-              "width": 40
+              "width": 40,
             }
           } />
         <Text
@@ -2206,7 +2206,7 @@ exports[`Activity should render 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Array [
                 Object {},
@@ -2214,9 +2214,9 @@ exports[`Activity should render 1`] = `
                   "color": "#80979a",
                   "fontFamily": "Brandon Text_bold",
                   "fontSize": 12,
-                  "fontWeight": "bold"
-                }
-              ]
+                  "fontWeight": "bold",
+                },
+              ],
             ]
           }>
           SKILLS DEVELOPED
@@ -2226,7 +2226,7 @@ exports[`Activity should render 1`] = `
         style={
           Object {
             "paddingLeft": 24,
-            "paddingRight": 24
+            "paddingRight": 24,
           }
         }>
         <Text
@@ -2239,14 +2239,14 @@ exports[`Activity should render 1`] = `
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
                 "fontSize": 13,
-                "textAlign": "center"
+                "textAlign": "center",
               },
               Object {
                 "fontSize": 18,
                 "paddingBottom": 12,
                 "paddingTop": 18,
-                "textAlign": "left"
-              }
+                "textAlign": "left",
+              },
             ]
           }>
           depoleved
@@ -2258,11 +2258,11 @@ exports[`Activity should render 1`] = `
         Array [
           Object {
             "paddingBottom": 24,
-            "paddingTop": 23
+            "paddingTop": 23,
           },
           Object {
-            "backgroundColor": "#97c13c"
-          }
+            "backgroundColor": "#97c13c",
+          },
         ]
       }>
       <Text
@@ -2275,19 +2275,19 @@ exports[`Activity should render 1`] = `
               "color": "#003035",
               "fontFamily": "Brandon Text",
               "fontSize": 13,
-              "textAlign": "center"
+              "textAlign": "center",
             },
             Array [
               Object {
                 "color": "rgba(0, 0, 0, 0.35)",
                 "fontSize": 16,
                 "marginLeft": 24,
-                "marginRight": 24
+                "marginRight": 24,
               },
               Object {
-                "paddingBottom": 19
-              }
-            ]
+                "paddingBottom": 19,
+              },
+            ],
           ]
         }>
         Discuss this activity with your Mentee
@@ -2303,9 +2303,9 @@ exports[`Activity should render 1`] = `
               "height": 100,
               "justifyContent": "center",
               "margin": 10,
-              "width": 300
+              "width": 300,
             },
-            undefined
+            undefined,
           ]
         }>
         <Text
@@ -2315,7 +2315,7 @@ exports[`Activity should render 1`] = `
           style={
             Object {
               "color": "#333333",
-              "margin": 20
+              "margin": 20,
             }
           }>
           TouchableNativeFeedback is not supported on this platform!

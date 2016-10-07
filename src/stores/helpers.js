@@ -58,6 +58,9 @@ export const getActivityCallNotes = ({ entities: { callNotes } }, targetActivity
   .filter(({ callActivityId }) => callActivityId === targetActivityId);
 
 
+export const getCallNote = ({ entities: { callNotes } }, id) => callNotes[id];
+
+
 export const getNextScheduledCall = (state, time = Date.now()) => first(
   sortBy(getScheduledCalls(state), ({ callTime }) => callTime)
   .filter(({ callTime }) => moment(callTime).isSameOrAfter(time))

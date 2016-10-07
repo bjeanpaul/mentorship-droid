@@ -1,0 +1,8 @@
+const NETWORK_ERROR = 'NETWORK_ERROR';
+const API_ERROR = 'API_RESPONSE_ERROR';
+
+
+export {
+  NETWORK_ERROR,
+  API_ERROR,
+};
