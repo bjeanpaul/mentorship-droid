@@ -9,11 +9,18 @@ const navigation = makeStepperNavigationReducer({
 });
 
 
-// TODO: add methods for updating a callNote.
 const callNote = (state = {}, action) => {
-  return state;
-};
+  switch (action.type) {
+    case constants.CALL_NOTES_CHANGE_CALL_NOTE:
+      return {
+        ...state,
+        ...action.payload,
+      };
 
+    default:
+      return state;
+  }
+};
 
 export default combineReducers({
   navigation,

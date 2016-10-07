@@ -7,7 +7,7 @@ import * as navigation from 'src/constants/navigation';
 import * as onboarding from 'src/constants/onboarding';
 import * as notifications from 'src/constants/notifications';
 import * as calls from 'src/constants/calls';
-import * as callNotes from 'src/constants/callNotes';
+import * as callNotes from 'src/constants/callNote';
 import * as journey from 'src/constants/journey';
 import * as schedule from 'src/constants/schedule';
 import * as activities from 'src/constants/activities';

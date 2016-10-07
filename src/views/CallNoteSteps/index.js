@@ -25,9 +25,5 @@ Reflections.propTypes = {
 };
 
 export {
-  Reflections,
-  Motivation,
-  Inspiration,
-  Skills,
-  ThreeWords,
+  Reflections
 };
