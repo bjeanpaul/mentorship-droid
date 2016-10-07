@@ -100,6 +100,20 @@ describe('api/request', () => {
       expect(err.response).toEqual(httpErr.response);
     });
 
+    it('should reject a network error as a NetworkError', async () => {
+      const httpErr = new Error();
+      httpErr.message = 'Network Error';
+      axios.mockReturnValue(Promise.reject(httpErr));
+
+      const err = await request({
+        url: '/foo',
+        method: 'GET',
+      })
+      .catch(identity);
+
+      expect(err instanceof errors.NetworkError).toBe(true);
+    });
+
     it('should support requests with json bodies', () => {
       request({
         url: '/foo',

@@ -30,4 +30,4 @@ export const login = (email, password) => dispatch => Promise.resolve()
     [ApiAuthenticationError, loginNotFound],
     [ApiResponseError, loginFailure],
   ]))
-  .then(dispatch);
+  .done(dispatch);

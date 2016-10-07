@@ -17,7 +17,7 @@ import {
 
 import { listEvents } from 'src/actions/event';
 
-const { ApiResponseError } = api;
+const { NetworkError, ApiResponseError } = api;
 
 
 describe('actions/events', () => {
@@ -27,7 +27,10 @@ describe('actions/events', () => {
         method: api.listEvents,
         request: staticAction(constants.EVENT_LIST_REQUEST),
         success: dataAction(constants.EVENT_LIST_SUCCESS),
-        failures: [[ApiResponseError, staticAction(constants.EVENT_LIST_FAILURE)]],
+        failures: [
+          [ApiResponseError, staticAction(constants.EVENT_LIST_FAILURE)],
+          [NetworkError, staticAction(constants.EVENT_LIST_NETWORK_FAILURE)],
+        ],
       }))).toBe(true);
     });
   });

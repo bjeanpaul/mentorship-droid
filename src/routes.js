@@ -1,6 +1,9 @@
 import { fromPairs } from 'lodash';
 import * as constants from 'src/constants/routes';
 
+import ApiErrorContainer from 'src/containers/ApiErrorContainer';
+import NetworkErrorContainer from 'src/containers/NetworkErrorContainer';
+
 import LandingContainer from 'src/containers/LandingContainer';
 import LoginContainer from 'src/containers/LoginContainer';
 import ActivationContainer from 'src/containers/ActivationContainer';
@@ -36,6 +39,9 @@ import CreateCallNotesContainer from 'src/containers/CreateCallNotesContainer';
 
 
 export default fromPairs([
+  [constants.ROUTE_API_ERROR, ApiErrorContainer],
+  [constants.ROUTE_NETWORK_ERROR, NetworkErrorContainer],
+
   [constants.ROUTE_LANDING, LandingContainer],
 
   [constants.ROUTE_AUTH_ACTIVATION, ActivationContainer],

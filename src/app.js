@@ -1,11 +1,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 
-
+import errors from 'src/errors';
 import configureStore from 'src/stores/configureStore';
-const store = configureStore();
-
 import TopNavigationContainer from 'src/containers/TopNavigationContainer';
+
+
+const store = configureStore();
+errors(store);
+
 
 const App = function App() {
   return (
@@ -14,4 +17,6 @@ const App = function App() {
     </Provider>
   );
 };
+
+
 export default App;
