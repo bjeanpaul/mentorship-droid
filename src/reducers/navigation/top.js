@@ -140,6 +140,10 @@ export default (state = createStack([
       return newState;
     }
 
+    case schedule.SCHEDULED_CALL_ACTIVITY_REMOVE: {
+      return inject(state, routes.ROUTE_SCHEDULE_CALL, { activityId: null });
+    }
+
     case schedule.SCHEDULED_CALL_PATCH_REQUEST:
     case schedule.SCHEDULED_CALL_CREATE_REQUEST: {
       const route = createRoute(routes.ROUTE_SCHEDULING_CALL);
