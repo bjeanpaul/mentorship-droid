@@ -6,7 +6,7 @@ const CallNoteStepper = ({
   navigationState,
 }) => (
   <Stepper navigationState={navigationState}>
-    <containers.Reflections />
+    <containers.Mood />
     <containers.Reflections />
   </Stepper>
 );
