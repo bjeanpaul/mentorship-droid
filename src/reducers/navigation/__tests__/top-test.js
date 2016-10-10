@@ -196,9 +196,9 @@ describe('src/reducers/navigation/top', () => {
     });
   });
 
-  describe('SCHEDULED_CALL_CHOOSE', () => {
+  describe('SCHEDULED_CALL_OPEN', () => {
     it('should push on the scheduled route', () => {
-      expect(reduce(createStack(), schedule.chooseScheduledCall(23)))
+      expect(reduce(createStack(), schedule.openScheduledCall(23)))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
           scheduledCallId: 23,
         })));

@@ -23,7 +23,7 @@ import {
   patchScheduledCall,
   removeScheduledCall,
   addScheduledCall,
-  chooseScheduledCall,
+  openScheduledCall,
   chooseScheduledCallCategory,
   chooseScheduledCallActivity,
 } from 'src/actions/schedule';
@@ -107,11 +107,11 @@ describe('schedule/actions', () => {
     });
   });
 
-  describe('chooseScheduledCall', () => {
+  describe('openScheduledCall', () => {
     it('should create an action for choosing a scheduled call', () => {
-      expect(chooseScheduledCall(23))
+      expect(openScheduledCall(23))
         .toEqual({
-          type: constants.SCHEDULED_CALL_CHOOSE,
+          type: constants.SCHEDULED_CALL_OPEN,
           payload: { scheduledCallId: 23 },
         });
     });
