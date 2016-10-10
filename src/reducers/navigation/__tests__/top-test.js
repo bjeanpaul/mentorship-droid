@@ -6,7 +6,7 @@ import * as onboarding from 'src/actions/onboarding';
 import * as notifications from 'src/constants/notifications';
 import * as routes from 'src/constants/routes';
 import * as calls from 'src/actions/calls';
-import * as callNotes from 'src/actions/callNotes';
+import * as callNotes from 'src/actions/callNote';
 import * as schedule from 'src/actions/schedule';
 import * as activities from 'src/actions/activities';
 import * as errors from 'src/constants/errors';

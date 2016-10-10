@@ -24,6 +24,7 @@ import MilestoneEvent from './MilestoneEvent';
 import FirstEvent from './FirstEvent';
 import Failure from './Failure';
 import ActivityList from './ActivityList';
+import RadioList from './RadioList';
 
 
 export {
@@ -54,4 +55,5 @@ export {
   FirstEvent,
   Failure,
   ActivityList,
+  RadioList,
 };

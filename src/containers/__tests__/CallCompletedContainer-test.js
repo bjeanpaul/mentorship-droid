@@ -1,5 +1,5 @@
 import { mapDispatchToProps } from 'src/containers/CallCompletedContainer';
-import { createCallNotes } from 'src/actions/callNotes';
+import { createCallNotes } from 'src/actions/callNote';
 import { dismissScreen } from 'src/actions/navigation';
 
 
