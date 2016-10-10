@@ -48,4 +48,13 @@ export default StyleSheet.create({
   ratingContainer: {
     flex: 2,
   },
+  callQualityContainer: {
+    flex: 2,
+  },
+  callQualityHintText: {
+    color: '#9fb1b3',
+    fontSize: 14,
+    marginLeft: 24,
+    marginRight: 24,
+  },
 });

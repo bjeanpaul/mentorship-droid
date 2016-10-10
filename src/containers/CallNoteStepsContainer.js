@@ -8,6 +8,7 @@ import {
   Mood,
   Completed,
   Rating,
+  CallQuality,
 } from 'src/views/CallNoteSteps';
 
 const callNoteContainer = ({
@@ -61,4 +62,8 @@ export default {
     callNoteProps: ['rating'],
   }),
 
+  CallQuality: callNoteContainer({
+    component: CallQuality,
+    callNoteProps: ['callQuality'],
+  }),
 };

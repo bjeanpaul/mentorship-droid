@@ -157,9 +157,51 @@ Rating.propTypes = {
 };
 
 
+const CallQuality = ({
+  callQuality = '',
+  onChangeText,
+}) => {
+  const items = [
+    'Excellent',
+    'Ok',
+    'Couldn\'t hear',
+    'Call dropped',
+    'Delays',
+  ];
+  const initialSelectedIndex = items.indexOf(callQuality);
+
+  return (
+    <FormStep
+      paginationDisabled={callQuality.length === 0}
+      title="Rate the call quality"
+    >
+      <View style={styles.callQualityContainer}>
+        <Text style={styles.callQualityHintText}>
+          Please help us improve our service by letting us know what the call quality was like.
+        </Text>
+        <ScrollView>
+          <View>
+            <RadioList
+              items={items}
+              onIndexChanged={(item) => onChangeText({ callQuality: item.item })}
+              initialSelectedIndex={initialSelectedIndex === -1 ? initialSelectedIndex : void 0}
+            />
+          </View>
+        </ScrollView>
+      </View>
+    </FormStep>
+  );
+};
+CallQuality.propTypes = {
+  callQuality: PropTypes.string,
+  onChangeText: PropTypes.func.isRequired,
+};
+
+
 export {
   Reflections,
   Mood,
   Completed,
   Rating,
+  CallQuality,
 };
