@@ -15,12 +15,7 @@ import {
   dataAction,
 } from 'src/actionHelpers';
 
-import {
-  listCallNotes,
-  createCallNote,
-  updateCallNote,
-  patchCallNote,
-} from 'src/actions/callNote';
+import * as actions from 'src/actions/callNote';
 
 const { ApiResponseError } = api;
 
@@ -28,7 +23,7 @@ const { ApiResponseError } = api;
 describe('actions/callNote', () => {
   describe('listCallNotes', () => {
     it('should create actions for call note api lists', () => {
-      expect(isEqual(listCallNotes, apiAction({
+      expect(isEqual(actions.listCallNotes, apiAction({
         method: api.listCallNotes,
         request: staticAction(constants.CALL_NOTE_LIST_REQUEST),
         success: dataAction(constants.CALL_NOTE_LIST_SUCCESS),
@@ -39,7 +34,7 @@ describe('actions/callNote', () => {
 
   describe('createCallNote', () => {
     it('should create actions for call notes api creates', () => {
-      expect(isEqual(createCallNote, apiAction({
+      expect(isEqual(actions.createCallNote, apiAction({
         method: api.createCallNote,
         request: staticAction(constants.CALL_NOTE_CREATE_REQUEST),
         success: dataAction(constants.CALL_NOTE_CREATE_SUCCESS),
@@ -50,7 +45,7 @@ describe('actions/callNote', () => {
 
   describe('updateCallNote', () => {
     it('should create actions for call notes api updates', () => {
-      expect(isEqual(updateCallNote, apiAction({
+      expect(isEqual(actions.updateCallNote, apiAction({
         method: api.updateCallNote,
         request: staticAction(constants.CALL_NOTE_UPDATE_REQUEST),
         success: dataAction(constants.CALL_NOTE_UPDATE_SUCCESS),
@@ -61,12 +56,52 @@ describe('actions/callNote', () => {
 
   describe('patchCallNote', () => {
     it('should create actions for call notes api patchs', () => {
-      expect(isEqual(patchCallNote, apiAction({
+      expect(isEqual(actions.patchCallNote, apiAction({
         method: api.patchCallNote,
         request: staticAction(constants.CALL_NOTE_PATCH_REQUEST),
         success: dataAction(constants.CALL_NOTE_PATCH_SUCCESS),
         failures: [[ApiResponseError, staticAction(constants.CALL_NOTE_PATCH_FAILURE)]],
       }))).toBe(true);
+    });
+  });
+
+  describe('createCallNotes', () => {
+    it('should create an action for new call notes', () => {
+      expect(actions.createCallNotes(23)).toEqual({
+        type: constants.CALL_NOTES_CREATE,
+        payload: { callId: 23 },
+      });
+    });
+  });
+
+  describe('stepBack', () => {
+    it('should create an action for stepping back', () => {
+      expect(actions.stepBack()).toEqual({
+        type: constants.CALL_NOTES_STEP_BACK,
+      });
+    });
+  });
+
+  describe('stepForward', () => {
+    it('should create an action for stepping forward', () => {
+      expect(actions.stepForward()).toEqual({
+        type: constants.CALL_NOTES_STEP_FORWARD,
+      });
+    });
+  });
+
+  describe('changeCallNote', () => {
+    it('should create an action for updating a call note', () => {
+      expect(actions.changeCallNote({
+        reflections: 'In the water...',
+        mood: 'dispair',
+      })).toEqual({
+        type: constants.CALL_NOTES_CHANGE_CALL_NOTE,
+        payload: {
+          reflections: 'In the water...',
+          mood: 'dispair',
+        },
+      });
     });
   });
 });

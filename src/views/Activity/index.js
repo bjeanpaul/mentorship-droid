@@ -212,5 +212,5 @@ Section.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
-
+export { Section };
 export default Activity;
