@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import colors from 'src/constants/colors'
 
 export default StyleSheet.create({
   list: {
@@ -17,19 +18,19 @@ export default StyleSheet.create({
     height: 88,
   },
   imageHighlight: {
-    backgroundColor: 'rgba(0, 0, 0, 0.2)',
+    backgroundColor: colors.CALL_NOTE_MOOD_IMAGE_DARKEN,
     width: 88,
     height: 88,
     borderRadius: 88,
   },
   imageIsSelected: {
     borderWidth: 4,
-    borderColor: '#f77040',
+    borderColor: colors.CALL_NOTE_MOOD_IMAGE_SELECTED_BORDER,
     backgroundColor: 'transparent',
   },
   label: {
     fontSize: 18,
-    color: '#003035',
+    color: colors.CALL_NOTE_MOOD_LABEL,
   },
   completedContainer: {
     flex: 3,
@@ -42,7 +43,7 @@ export default StyleSheet.create({
   objectiveContainer: {
     flex: 1,
     margin: 24,
-    borderColor: '#dfe5e6',
+    borderColor: colors.CALL_NOTE_OBJECTIVE_CONTAINER,
     borderWidth: 1,
   },
   ratingContainer: {
@@ -52,7 +53,7 @@ export default StyleSheet.create({
     flex: 2,
   },
   callQualityHintText: {
-    color: '#9fb1b3',
+    color: colors.CALL_NOTE_QUALITY_TEXT,
     fontSize: 14,
     marginLeft: 24,
     marginRight: 24,
