@@ -45,4 +45,7 @@ export default StyleSheet.create({
     borderColor: '#dfe5e6',
     borderWidth: 1,
   },
+  ratingContainer: {
+    flex: 2,
+  },
 });

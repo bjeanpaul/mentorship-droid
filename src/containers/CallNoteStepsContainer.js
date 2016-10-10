@@ -7,8 +7,8 @@ import {
   Reflections,
   Mood,
   Completed,
+  Rating,
 } from 'src/views/CallNoteSteps';
-
 
 const callNoteContainer = ({
   component,
@@ -40,6 +40,7 @@ export default {
     component: Reflections,
     callNoteProps: ['reflections'],
   }),
+
   Mood: callNoteContainer({
     component: Mood,
     callNoteProps: ['mood'],
@@ -47,11 +48,17 @@ export default {
       onSelectImage: changeCallNote,
     },
   }),
+
   Completed: connect(
     completedMapDispatchToProps, {
       onSelectImage: changeCallNote,
     }
   )
   (Completed),
+
+  Rating: callNoteContainer({
+    component: Rating,
+    callNoteProps: ['rating'],
+  }),
 
 };

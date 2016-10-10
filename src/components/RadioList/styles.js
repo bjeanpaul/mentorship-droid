@@ -9,15 +9,16 @@ export default StyleSheet.create({
   row: {
     paddingTop: 18,
     paddingBottom: 18,
-    borderWidth: 1,
+    borderBottomWidth: 1,
     borderColor: '#dfe5e6',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   itemLabel: {
     color: '#003035',
     fontSize: 18,
   },
   itemImage: {
-    alignSelf: 'flex-end',
     height: 32,
     width: 32,
   },

@@ -1,7 +1,7 @@
 import { upperFirst } from 'lodash';
 import React, { PropTypes } from 'react';
 import { View, Image, TouchableWithoutFeedback, ScrollView } from 'react-native';
-import { Text, MultiLineTextInput } from 'src/components';
+import { Text, MultiLineTextInput, RadioList } from 'src/components';
 
 import { Section } from 'src/views/Activity';
 import FormStep from 'src/containers/CallNoteFormStepContainer';
@@ -119,8 +119,47 @@ Completed.propTypes = {
 };
 
 
+const Rating = ({
+  rating = '',
+  onChangeText,
+}) => {
+  const items = [
+    'Not at all',
+    'A little',
+    'Somewhat',
+    'Quite a bit',
+    'A lot',
+  ];
+  const initialSelectedIndex = items.indexOf(rating);
+
+  return (
+    <FormStep
+      paginationDisabled={rating.length === 0}
+      title="Was the activity helpful in facilitating your discussion?"
+    >
+      <View style={styles.ratingContainer}>
+        <ScrollView>
+          <View>
+            <RadioList
+              items={items}
+              onIndexChanged={(item) => onChangeText({ rating: item.item })}
+              initialSelectedIndex={initialSelectedIndex === -1 ? initialSelectedIndex : void 0}
+            />
+          </View>
+        </ScrollView>
+      </View>
+    </FormStep>
+  );
+};
+Rating.propTypes = {
+  rating: PropTypes.string,
+  onChangeText: PropTypes.func.isRequired,
+};
+
+
 export {
   Reflections,
   Mood,
   Completed,
+  Rating,
 };
