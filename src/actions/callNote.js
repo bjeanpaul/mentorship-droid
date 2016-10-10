@@ -62,3 +62,15 @@ export const changeCallNote = (payload) => ({
   type: constants.CALL_NOTES_CHANGE_CALL_NOTE,
   payload,
 });
+
+export const save = ({ callId, callNote }) => dispatch => Promise.resolve()
+  .then(() => createCallNote({
+    mentor: 2,
+    call: callId,
+    call_quality: callNote.callQuality,
+    activity_helpful: callNote.rating,
+    reflection: callNote.reflection,
+    mentee_state: callNote.mood,
+    objective_achieved: callNote.completed,
+  }))
+  .then(dispatch);

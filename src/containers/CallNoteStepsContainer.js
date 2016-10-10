@@ -1,6 +1,6 @@
 import { pick } from 'lodash';
 import { connect } from 'react-redux';
-import { changeCallNote } from 'src/actions/callNote';
+import { changeCallNote, save } from 'src/actions/callNote';
 import { getActivity, getCategory } from 'src/stores/helpers';
 
 import {
@@ -10,6 +10,7 @@ import {
   Rating,
   CallQuality,
 } from 'src/views/CallNoteSteps';
+import Saving from 'src/views/CallNoteSaving';
 
 const callNoteContainer = ({
   component,
@@ -66,4 +67,12 @@ export default {
     component: CallQuality,
     callNoteProps: ['callQuality'],
   }),
+
+  Saving: connect(
+    (state, ownProps) => ({
+      callId: ownProps.callId,
+      callNote: state.callNote.callNote,
+    }),
+    { save }
+  )(Saving),
 };

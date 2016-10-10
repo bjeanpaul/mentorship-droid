@@ -6,22 +6,35 @@ const CallNoteStepper = ({
   navigationState,
   callId,
   activityId,
-}) => (
-  <Stepper navigationState={navigationState}>
-    <containers.Reflections />
-    <containers.Mood />
+}) => {
+  if (activityId) {
+    return (
+      <Stepper navigationState={navigationState}>
+        <containers.Reflections />
+        <containers.Mood />
+        <containers.Completed activityId={activityId} />
+        <containers.Rating />
+        <containers.CallQuality />
+        <containers.Saving callId={callId} />
+      </Stepper>
+    );
+  }
 
-    { activityId ? <containers.Completed activityId={23} /> : null }
-    { activityId ? <containers.Rating /> : null }
-    <containers.CallQuality />
-  </Stepper>
-);
+  return (
+    <Stepper navigationState={navigationState}>
+      <containers.Reflections />
+      <containers.Mood />
+      <containers.CallQuality />
+      <containers.Saving callId={callId} />
+    </Stepper>
+  );
+};
 
 
 CallNoteStepper.propTypes = {
   navigationState: PropTypes.object.isRequired,
-  callId: PropTypes.number,
-  activityId: PropTypes.number,
+  callId: PropTypes.any,
+  activityId: PropTypes.any,
 };
 
 
