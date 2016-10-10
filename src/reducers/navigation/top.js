@@ -114,7 +114,7 @@ export default (state = createStack([
       return push(state, route);
     }
 
-    case schedule.SCHEDULED_CALL_CHOOSE: {
+    case schedule.SCHEDULED_CALL_OPEN: {
       const { payload: { scheduledCallId } } = action;
       const route = createRoute(routes.ROUTE_SCHEDULE_CALL, { scheduledCallId });
       return push(state, route);
