@@ -36,6 +36,9 @@ import JOURNEY_EVENT_SCHEDULED_CALL_ICON from 'app/assets/event-icon-calendar.pn
 import START_CALL from 'app/assets/mentee-holding-phone.png';
 import OVERLAY_DONE from 'app/assets/done-icon.png';
 
+import YES from 'app/assets/Yes.png';
+import YES_SELECTED from 'app/assets/Yes-Selected.png';
+
 import CALL_NOTES_COMPLETED_YES from 'app/assets/Yes.png';
 import CALL_NOTES_COMPLETED_YES_SELECTED from 'app/assets/Yes-Selected.png';
 import CALL_NOTES_COMPLETED_NO from 'app/assets/No.png';
@@ -93,7 +96,6 @@ export default {
   CALL_NOTES_COMPLETED_YES_SELECTED,
   CALL_NOTES_COMPLETED_NO,
   CALL_NOTES_COMPLETED_NO_SELECTED,
-
   CALL_NOTES_MENTEE_HAPPY,
   CALL_NOTES_MENTEE_SAD,
   CALL_NOTES_MENTEE_BORED,
@@ -101,4 +103,6 @@ export default {
   CALL_NOTES_MENTEE_UPSET,
   CALL_NOTES_MENTEE_WITHDRAWN,
 
+  YES,
+  YES_SELECTED,
 };

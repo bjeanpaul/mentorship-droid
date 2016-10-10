@@ -1,0 +1,335 @@
+exports[`RadioList should render props correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "marginLeft": 40,
+      "marginRight": 40,
+    }
+  }>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hitSlop={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "borderColor": "#dfe5e6",
+        "borderWidth": 1,
+        "paddingBottom": 18,
+        "paddingTop": 18,
+      }
+    }
+    testID={undefined}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#003035",
+            "fontSize": 18,
+          },
+        ]
+      }>
+      Dog
+    </Text>
+    <Image
+      source={1}
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "height": 32,
+          "width": 32,
+        }
+      } />
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hitSlop={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "borderColor": "#dfe5e6",
+        "borderWidth": 1,
+        "paddingBottom": 18,
+        "paddingTop": 18,
+      }
+    }
+    testID={undefined}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#003035",
+            "fontSize": 18,
+          },
+        ]
+      }>
+      Cat
+    </Text>
+    <Image
+      source={1}
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "height": 32,
+          "width": 32,
+        }
+      } />
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hitSlop={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "borderColor": "#dfe5e6",
+        "borderWidth": 1,
+        "paddingBottom": 18,
+        "paddingTop": 18,
+      }
+    }
+    testID={undefined}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#003035",
+            "fontSize": 18,
+          },
+        ]
+      }>
+      Monkey
+    </Text>
+    <Image
+      source={1}
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "height": 32,
+          "width": 32,
+        }
+      } />
+  </View>
+</View>
+`;
+
+exports[`RadioList should select an initial index 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "marginLeft": 40,
+      "marginRight": 40,
+    }
+  }>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hitSlop={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "borderColor": "#dfe5e6",
+        "borderWidth": 1,
+        "paddingBottom": 18,
+        "paddingTop": 18,
+      }
+    }
+    testID={undefined}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#003035",
+            "fontSize": 18,
+          },
+        ]
+      }>
+      Dog
+    </Text>
+    <Image
+      source={1}
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "height": 32,
+          "width": 32,
+        }
+      } />
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hitSlop={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "borderColor": "#dfe5e6",
+        "borderWidth": 1,
+        "paddingBottom": 18,
+        "paddingTop": 18,
+      }
+    }
+    testID={undefined}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#003035",
+            "fontSize": 18,
+          },
+        ]
+      }>
+      Cat
+    </Text>
+    <Image
+      source={1}
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "height": 32,
+          "width": 32,
+        }
+      } />
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hitSlop={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "borderColor": "#dfe5e6",
+        "borderWidth": 1,
+        "paddingBottom": 18,
+        "paddingTop": 18,
+      }
+    }
+    testID={undefined}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#003035",
+            "fontSize": 18,
+          },
+        ]
+      }>
+      Monkey
+    </Text>
+    <Image
+      source={1}
+      style={
+        Object {
+          "alignSelf": "flex-end",
+          "height": 32,
+          "width": 32,
+        }
+      } />
+  </View>
+</View>
+`;
