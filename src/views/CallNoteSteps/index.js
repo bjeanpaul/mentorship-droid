@@ -164,7 +164,7 @@ const CallQuality = ({
   const items = [
     'Excellent',
     'Ok',
-    'Couldn\'t hear',
+    "Couldn't hear",
     'Call dropped',
     'Delays',
   ];
