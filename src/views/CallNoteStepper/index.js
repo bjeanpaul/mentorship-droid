@@ -8,11 +8,12 @@ const CallNoteStepper = ({
   activityId,
 }) => (
   <Stepper navigationState={navigationState}>
-    <containers.CallQuality />
-    <containers.Rating />
-    <containers.Completed activityId={23} />
-    <containers.Mood />
     <containers.Reflections />
+    <containers.Mood />
+
+    { activityId ? <containers.Completed activityId={23} /> : null }
+    { activityId ? <containers.Rating /> : null }
+    <containers.CallQuality />
   </Stepper>
 );
 
