@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import Journey from 'src/views/Journey';
 import { getNextScheduledCall } from 'src/stores/helpers';
 import { openNextScheduledCall } from 'src/actions/schedule';
-import { openCall } from 'src/actions/journey';
+import { openCall } from 'src/actions/calls';
 import noop from 'lodash';
 
 

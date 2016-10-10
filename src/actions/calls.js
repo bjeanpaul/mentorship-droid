@@ -16,3 +16,6 @@ export const createCall = apiAction({
   success: createCallSuccess,
   failures: [[ApiResponseError, createCallFailure]],
 });
+
+
+export const openCall = staticAction(constants.CALL_OPEN);

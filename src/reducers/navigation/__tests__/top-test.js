@@ -7,7 +7,6 @@ import * as notifications from 'src/constants/notifications';
 import * as routes from 'src/constants/routes';
 import * as calls from 'src/actions/calls';
 import * as callNotes from 'src/actions/callNotes';
-import * as journey from 'src/actions/journey';
 import * as schedule from 'src/actions/schedule';
 import * as activities from 'src/actions/activities';
 import * as errors from 'src/constants/errors';
@@ -97,7 +96,7 @@ describe('src/reducers/navigation/top', () => {
 
   describe('CALL_OPEN', () => {
     it('should push on the start call route', () => {
-      expect(reduce(createStack(), journey.openCall()))
+      expect(reduce(createStack(), calls.openCall()))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_START_CALL)));
     });
   });
