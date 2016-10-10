@@ -1,3 +1,4 @@
+import { isUndefined } from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { View, Image, TouchableWithoutFeedback } from 'react-native';
 import { Text } from 'src/components';
@@ -9,7 +10,9 @@ class RadioList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedIndex: this.props.initialSelectedIndex || void 0,
+      selectedIndex: !isUndefined(this.props.initialSelectedIndex) ?
+        this.props.initialSelectedIndex :
+        void 0,
     };
 
     this.handlePressRow = this.handlePressRow.bind(this);
