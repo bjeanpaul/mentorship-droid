@@ -4,8 +4,11 @@ import containers from 'src/containers/CallNoteStepsContainer';
 
 const CallNoteStepper = ({
   navigationState,
+  callId,
+  activityId,
 }) => (
   <Stepper navigationState={navigationState}>
+    <containers.Completed activityId={23} />
     <containers.Mood />
     <containers.Reflections />
   </Stepper>
@@ -14,6 +17,8 @@ const CallNoteStepper = ({
 
 CallNoteStepper.propTypes = {
   navigationState: PropTypes.object.isRequired,
+  callId: PropTypes.number,
+  activityId: PropTypes.number,
 };
 
 
