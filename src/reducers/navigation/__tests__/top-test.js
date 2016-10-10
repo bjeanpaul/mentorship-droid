@@ -255,6 +255,24 @@ describe('src/reducers/navigation/top', () => {
     });
   });
 
+  describe('SCHEDULED_CALL_ACTIVITY_REMOVE', () => {
+    it('should nullify the activity on the scheduled call route context', () => {
+      const state = createStack([
+        createRoute(routes.ROUTE_SCHEDULE_CALL, { scheduledCallId: 21 }),
+        createRoute(routes.ROUTE_SCHEDULED_CALL_CATEGORY),
+        createRoute(routes.ROUTE_SCHEDULED_CALL_ACTIVITY),
+      ]);
+
+      const {
+        routes: [{ context }],
+      } = reduce(state, schedule.removeScheduledCallActivity());
+
+      expect(context).toEqual(jasmine.objectContaining({
+        activityId: null,
+      }));
+    });
+  });
+
   describe('SCHEDULED_CALL_PATCH_REQUEST', () => {
     it('should push on the scheduling call route', () => {
       expect(reduce(createStack(), schedule.patchScheduledCall.request()))

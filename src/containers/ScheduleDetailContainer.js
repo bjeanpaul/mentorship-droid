@@ -7,7 +7,10 @@ import { dismissScreen } from 'src/actions/navigation';
 import { getScheduledCall, getScheduledCalls, getActivity } from 'src/stores/helpers';
 
 import {
-  createScheduledCall, patchScheduledCall, changeScheduledCallActivity,
+  createScheduledCall,
+  patchScheduledCall,
+  changeScheduledCallActivity,
+  removeScheduledCallActivity,
 } from 'src/actions/schedule';
 
 
@@ -35,7 +38,11 @@ export const mapStateToProps = (state, {
 
   let activity;
 
-  if (activityId) {
+  // null means the activity has been unset, undefined means no activity has
+  // been given
+  if (activityId === null) {
+    activity = null;
+  } else if (activityId) {
     activity = getActivity(state, activityId);
   } else if (callActivityId) {
     activity = getActivity(state, callActivityId);
@@ -59,6 +66,7 @@ export const mapDispatchToProps = (dispatch, {
   onDismissPress: dismissScreen,
   onDone: done(scheduledCallId, activityId),
   onActivityPress: changeScheduledCallActivity,
+  onActivityRemovePress: removeScheduledCallActivity,
 }, dispatch);
 
 
