@@ -1,7 +1,7 @@
 import { pick } from 'lodash';
 import { connect } from 'react-redux';
 import { changeCallNote } from 'src/actions/callNote';
-import { getActivity } from 'src/stores/helpers';
+import { getActivity, getCategory } from 'src/stores/helpers';
 
 import {
   Reflections,
@@ -23,11 +23,12 @@ const callNoteContainer = ({
 
 
 const completedMapDispatchToProps = (state, { activityId }) => {
-
-  const { objective } = getActivity(state, activityId);
+  const { objective, category } = getActivity(state, activityId);
+  const { color } = getCategory(state, category);
   return {
     completed: state.callNote.callNote.completed,
     objective,
+    color,
   };
 };
 

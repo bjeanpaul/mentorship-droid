@@ -31,4 +31,18 @@ export default StyleSheet.create({
     fontSize: 18,
     color: '#003035',
   },
+  completedContainer: {
+    flex: 3,
+  },
+  yesNoContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    height: 64,
+  },
+  objectiveContainer: {
+    flex: 1,
+    margin: 24,
+    borderColor: '#dfe5e6',
+    borderWidth: 1,
+  },
 });

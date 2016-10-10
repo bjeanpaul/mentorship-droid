@@ -1,6 +1,6 @@
 import { upperFirst } from 'lodash';
 import React, { PropTypes } from 'react';
-import { View, Image, TouchableWithoutFeedback } from 'react-native';
+import { View, Image, TouchableWithoutFeedback, ScrollView } from 'react-native';
 import { Text, MultiLineTextInput } from 'src/components';
 
 import { Section } from 'src/views/Activity';
@@ -67,48 +67,52 @@ Mood.propTypes = {
 
 
 const Completed = ({
-  completed = false,
+  completed,
   objective,
   color,
   onSelectImage,
 }) => (
   <FormStep
-    paginationDisabled={typeof(completed) === 'boolean'}
+    paginationDisabled={typeof(completed) !== 'boolean'}
     title="Did you achieve the objective?"
   >
     <View style={styles.completedContainer}>
-      <TouchableWithoutFeedback onPress={() => onSelectImage({ completed: true })}>
-        <Image
-          source={
-            completed ?
-            images.CALL_NOTES_COMPLETED_YES_SELECTED :
-            images.CALL_NOTES_COMPLETED_YES
-          }
-        />
-      </TouchableWithoutFeedback>
-      <TouchableWithoutFeedback onPress={() => onSelectImage({ completed: true })}>
-        <Image
-          source={
-            !completed ?
-            images.CALL_NOTES_COMPLETED_NO_SELECTED :
-            images.CALL_NOTES_COMPLETED_NO
-          }
-        />
-      </TouchableWithoutFeedback>
-    </View>
-    <View style={styles.objectiveContainer}>
-      <Section
-        color={color}
-        icon={images.ACTIVITY_OBJECTIVE}
-        title="Objective"
-      >
-        {objective}
-      </Section>
+      <View style={styles.yesNoContainer}>
+        <TouchableWithoutFeedback onPress={() => onSelectImage({ completed: true })}>
+          <Image
+            source={
+              completed ?
+              images.CALL_NOTES_COMPLETED_YES_SELECTED :
+              images.CALL_NOTES_COMPLETED_YES
+            }
+          />
+        </TouchableWithoutFeedback>
+        <TouchableWithoutFeedback onPress={() => onSelectImage({ completed: false })}>
+          <Image
+            source={
+              completed === false ?
+              images.CALL_NOTES_COMPLETED_NO_SELECTED :
+              images.CALL_NOTES_COMPLETED_NO
+            }
+          />
+        </TouchableWithoutFeedback>
+      </View>
+      <View style={styles.objectiveContainer}>
+        <ScrollView>
+          <Section
+            color={color}
+            icon={images.ACTIVITY_OBJECTIVE}
+            title="Objective"
+          >
+            {objective}
+          </Section>
+        </ScrollView>
+      </View>
     </View>
   </FormStep>
 );
 Completed.propTypes = {
-  completed: PropTypes.boolean,
+  completed: PropTypes.any,
   onSelectImage: PropTypes.func.isRequired,
   objective: PropTypes.string,
   color: PropTypes.string,

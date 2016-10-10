@@ -1,5 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
+import { AsyncStorage } from 'react-native';
 
 import { getContext } from 'src/stores/helpers';
 import contextMiddleware from 'src/stores/contextMiddleware';
@@ -9,8 +10,13 @@ import effects from 'src/effects';
 
 
 export default function configureStore(initialState = {}) {
-  return createStore(
-    rootReducer,
+  const reduce = (state, action) => (
+    action.type === 'hydrate'
+      ? action.payload.state
+      : rootReducer(state, action));
+
+  const store = createStore(
+    reduce,
     initialState,
     applyMiddleware(
       chainMiddleware(effects),
@@ -18,4 +24,34 @@ export default function configureStore(initialState = {}) {
       thunkMiddleware,
     )
   );
+
+  store.subscribe(() => {
+    AsyncStorage.setItem('debug:mentorship', JSON.stringify(store.getState()));
+  });
+
+  // AsyncStorage.setItem('debug:mentorship', '');
+
+  AsyncStorage.getItem('debug:mentorship')
+    .then(v => {
+      if (v) {
+        const state = JSON.parse(v);
+
+        // (state.navigation.top = {
+        //   index: 0,
+        //   routes: [
+        //     {
+        //       key: 'ROUTE_CREATE_CALL_NOTES',
+        //     },
+        //   ],
+        // });
+        store.dispatch({
+          type: 'hydrate',
+          payload: {
+            state,
+          },
+        });
+      }
+    });
+
+  return store;
 }

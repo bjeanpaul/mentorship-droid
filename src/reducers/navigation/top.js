@@ -32,7 +32,7 @@ const popEphemeral = state => includes(routes.EPHEMERAL_ROUTES, topOf(state).key
 
 
 export default (state = createStack([
-  createRoute(routes.ROUTE_CREATE_CALL_NOTES),
+  createRoute(routes.ROUTE_LANDING),
 ]), action) => {
   switch (action.type) {
     case navigation.SCREEN_DISMISS:
