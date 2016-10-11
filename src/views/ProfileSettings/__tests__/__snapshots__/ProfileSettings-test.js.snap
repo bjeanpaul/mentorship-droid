@@ -73,6 +73,41 @@ exports[`ProfileSettings should render 1`] = `
     </View>
   </View>
   <View
-    style={undefined} />
+    style={
+      Object {
+        "paddingLeft": 24,
+        "paddingRight": 24,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Array [
+            Object {
+              "fontFamily": "Brandon Text_medium",
+              "fontSize": 20,
+              "fontWeight": "400",
+            },
+            Object {
+              "fontSize": 18,
+              "textAlign": "left",
+            },
+          ],
+        ]
+      }
+      uid="logout">
+      Sign Out
+    </Text>
+  </View>
 </View>
 `;

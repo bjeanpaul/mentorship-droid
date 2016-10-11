@@ -7,6 +7,7 @@ import { BaseView, Text, Header, HeaderIcon } from 'src/components';
 
 const Profile = ({
   onBackPress,
+  onLogoutPress,
 }) => (
   <BaseView>
     <Header>
@@ -19,13 +20,22 @@ const Profile = ({
       />
     </Header>
 
-    <View style={styles.container} />
+    <View style={styles.container}>
+      <Text
+        uid="logout"
+        style={[Text.types.title, styles.menuItem]}
+        onPress={onLogoutPress}
+      >
+        Sign Out
+      </Text>
+    </View>
   </BaseView>
 );
 
 
 Profile.propTypes = {
   onBackPress: PropTypes.func.isRequired,
+  onLogoutPress: PropTypes.func.isRequired,
 };
 
 
