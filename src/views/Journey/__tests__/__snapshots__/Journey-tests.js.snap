@@ -19,63 +19,98 @@ exports[`Journey should map props correctly 1`] = `
           "paddingRight": 16,
         },
         Object {
-          "alignItems": "flex-start",
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
         },
       ]
     }>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+    <View
       style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 13,
-            "textAlign": "center",
-          },
-          Object {
-            "color": "#9fb1b3",
-            "fontFamily": "Brandon Text_bold",
-            "fontSize": 12,
-            "fontWeight": "bold",
-          },
-        ]
+        Object {
+          "alignItems": "flex-start",
+        }
       }>
-      NEXT CALL
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      onPress={[Function]}
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 13,
-            "textAlign": "center",
-          },
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
           Array [
             Object {
-              "color": "#f77040",
-              "fontSize": 14,
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#9fb1b3",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 12,
+              "fontWeight": "bold",
+            },
+          ]
+        }>
+        NEXT CALL
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center",
             },
             Array [
               Object {
-                "fontSize": 18,
+                "color": "#f77040",
+                "fontSize": 14,
               },
-              Object {
-                "color": "#003035",
-              },
+              Array [
+                Object {
+                  "fontSize": 18,
+                },
+                Object {
+                  "color": "#003035",
+                },
+              ],
             ],
-          ],
-        ]
-      }>
-      Sat, Oct 15, 5:07pm
-    </Text>
+          ]
+        }>
+        Sat, Oct 15, 5:07pm
+      </Text>
+    </View>
+    <View>
+      <View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#eff2f2",
+              "borderRadius": 40,
+              "height": 40,
+              "width": 40,
+            }
+          }
+          testID={undefined} />
+      </View>
+    </View>
   </View>
   <Image
     source={1}

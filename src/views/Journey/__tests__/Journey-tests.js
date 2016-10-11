@@ -1,7 +1,7 @@
 import React from 'react';
 import Journey from '../index';
 import { noop } from 'lodash';
-import { fakeState, fakeStore } from 'app/scripts/helpers';
+import { fakeState, fakeStore, uidEquals } from 'app/scripts/helpers';
 import { Provider } from 'react-redux';
 
 describe('Journey', () => {
@@ -13,6 +13,7 @@ describe('Journey', () => {
         onCallPress={noop}
         onMessagePress={noop}
         onGetStartedPress={noop}
+        onProfilePress={noop}
         {...props}
       />
     );
@@ -52,5 +53,15 @@ describe('Journey', () => {
     const el = shallow(createComponent({ onNextScheduledCallPress }));
     el.find('Link').simulate('press');
     expect(onNextScheduledCallPress).toBeCalled();
+  });
+
+  it('should call onProfilePress when the profile icon is pressed', () => {
+    const onProfilePress = jest.fn();
+
+    shallow(createComponent({ onProfilePress }))
+      .findWhere(uidEquals('profile'))
+      .simulate('press');
+
+    expect(onProfilePress).toBeCalled();
   });
 });
