@@ -1,4 +1,5 @@
-import reduce from 'src/reducers/navigation/top';
+import reduce, { createInitialState } from 'src/reducers/navigation/top';
+import * as auth from 'src/actions/auth';
 import * as entry from 'src/actions/entry';
 import * as landing from 'src/actions/landing';
 import * as sync from 'src/actions/sync';
@@ -338,6 +339,13 @@ describe('src/reducers/navigation/top', () => {
     it('should push on the profile settings route', () => {
       expect(reduce(createStack(), profile.openProfileSettings()))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_PROFILE_SETTINGS)));
+    });
+  });
+
+  describe('AUTH_LOGOUT', () => {
+    it('should reset the stack to its initial state', () => {
+      expect(reduce(createStack([createRoute('FOO')]), auth.logout()))
+        .toEqual(createInitialState());
     });
   });
 });
