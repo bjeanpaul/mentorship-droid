@@ -6,7 +6,7 @@ import { dismissScreen } from 'src/actions/navigation';
 
 export const mapDispatchToProps = (dispatch, { callId }) => ({
   onDismissPress: () => dispatch(dismissScreen()),
-  onAddCallNotesPress: () => dispatch(createCallNotes(callId)),
+  onAddCallNotesPress: () => dispatch(createCallNotes(callId)), // TODO: requires activityId,
 });
 
 
