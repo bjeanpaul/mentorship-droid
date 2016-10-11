@@ -23,6 +23,7 @@ describe('ScheduleDetail', () => {
       callTimes={[]}
       onDismissPress={noop}
       onActivityPress={noop}
+      onActivityRemovePress={noop}
       onDone={noop}
       {...props}
     />
@@ -94,7 +95,7 @@ describe('ScheduleDetail', () => {
 
     el.setState({
       date: {
-        year: 1990,
+        year: 2017,
         month: 2,
         day: 3,
       },
@@ -199,8 +200,25 @@ describe('ScheduleDetail', () => {
     const onActivityPress = jest.fn();
 
     shallow(createComponent({ onActivityPress }))
-      .findWhere(uidEquals('time'))
+      .findWhere(uidEquals('activity'))
       .simulate('press');
+
+    expect(onActivityPress.mock.calls).toEqual([[]]);
+  });
+
+  it('should call onActivityRemovePress when activity remove is pressed', () => {
+    const onActivityRemovePress = jest.fn();
+
+    shallow(createComponent({
+      activity: fakeActivity(),
+      onActivityRemovePress,
+    }))
+      .findWhere(uidEquals('activity'))
+      .shallow()
+      .findWhere(uidEquals('removeActivity'))
+      .simulate('press');
+
+    expect(onActivityRemovePress.mock.calls).toEqual([[]]);
   });
 
   it('should call onDone with the chosen values', () => {

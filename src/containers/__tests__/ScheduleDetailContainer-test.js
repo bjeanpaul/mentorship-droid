@@ -58,6 +58,12 @@ describe('ScheduleDetailContainer', () => {
       expect(activity).toEqual(fakeActivity({ id: 23 }));
     });
 
+    it('should not provide an activity if the given id is null', () => {
+      const state = fakeState();
+      const { activity } = mapStateToProps(state, { activityId: null });
+      expect(activity).toEqual(null);
+    });
+
     it('should override the scheduled activity if an activity id is given', () => {
       const state = fakeState();
 

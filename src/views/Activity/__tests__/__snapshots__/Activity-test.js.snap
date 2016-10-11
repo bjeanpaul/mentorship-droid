@@ -495,7 +495,7 @@ exports[`Activity should display the poster if one is given 1`] = `
               ],
             ]
           }>
-          PROMPTS
+          TIPS
         </Text>
       </View>
       <View
@@ -1271,7 +1271,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               ],
             ]
           }>
-          PROMPTS
+          TIPS
         </Text>
       </View>
       <View
@@ -2047,7 +2047,7 @@ exports[`Activity should render 1`] = `
               ],
             ]
           }>
-          PROMPTS
+          TIPS
         </Text>
       </View>
       <View

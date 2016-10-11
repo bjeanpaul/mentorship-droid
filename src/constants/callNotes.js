@@ -1,1 +1,0 @@
-export const CALL_NOTES_CREATE = 'CALL_NOTES_CREATE';

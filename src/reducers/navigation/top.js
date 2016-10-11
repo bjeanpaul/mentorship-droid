@@ -7,8 +7,7 @@ import * as navigation from 'src/constants/navigation';
 import * as onboarding from 'src/constants/onboarding';
 import * as notifications from 'src/constants/notifications';
 import * as calls from 'src/constants/calls';
-import * as callNotes from 'src/constants/callNotes';
-import * as journey from 'src/constants/journey';
+import * as callNotes from 'src/constants/callNote';
 import * as schedule from 'src/constants/schedule';
 import * as activities from 'src/constants/activities';
 import * as errors from 'src/constants/errors';
@@ -93,7 +92,7 @@ export default (state = createStack([
       return replaceOrPush(state, routes.ROUTE_CONNECTING_CALL, route);
     }
 
-    case journey.CALL_OPEN: {
+    case calls.CALL_OPEN: {
       return push(state, createRoute(routes.ROUTE_START_CALL));
     }
 
@@ -114,7 +113,7 @@ export default (state = createStack([
       return push(state, route);
     }
 
-    case schedule.SCHEDULED_CALL_CHOOSE: {
+    case schedule.SCHEDULED_CALL_OPEN: {
       const { payload: { scheduledCallId } } = action;
       const route = createRoute(routes.ROUTE_SCHEDULE_CALL, { scheduledCallId });
       return push(state, route);
@@ -138,6 +137,10 @@ export default (state = createStack([
       newState = inject(newState, routes.ROUTE_SCHEDULE_CALL, { activityId });
 
       return newState;
+    }
+
+    case schedule.SCHEDULED_CALL_ACTIVITY_REMOVE: {
+      return inject(state, routes.ROUTE_SCHEDULE_CALL, { activityId: null });
     }
 
     case schedule.SCHEDULED_CALL_PATCH_REQUEST:

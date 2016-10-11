@@ -89,7 +89,7 @@ const Activity = ({
       <Section
         color={color}
         icon={images.ACTIVITY_PROMPTS}
-        title="Prompts"
+        title="Tips"
       >
         {prompts}
       </Section>
@@ -212,5 +212,5 @@ Section.propTypes = {
   children: PropTypes.string.isRequired,
 };
 
-
+export { Section };
 export default Activity;

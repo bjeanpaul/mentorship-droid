@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import ScheduleList from 'src/views/ScheduleList';
 import { getScheduledCalls, getActivity } from 'src/stores/helpers';
-import { addScheduledCall, chooseScheduledCall } from 'src/actions/schedule';
+import { addScheduledCall, openScheduledCall } from 'src/actions/schedule';
 
 
 export const mapStateToProps = state => ({
@@ -16,7 +16,7 @@ export const mapStateToProps = state => ({
 
 const propsToActions = {
   onAddPress: addScheduledCall,
-  onCallChosen: chooseScheduledCall,
+  onCallChosen: openScheduledCall,
 };
 
 

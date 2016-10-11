@@ -5,7 +5,7 @@ import {
   View, DatePickerAndroid, TimePickerAndroid, TouchableNativeFeedback,
 } from 'react-native';
 
-import { Header, HeaderIcon, BaseView, Text, Label, Button } from 'src/components';
+import { Header, Icon, HeaderIcon, BaseView, Text, Label, Button } from 'src/components';
 
 import styles from 'src/views/ScheduleDetail/styles';
 
@@ -62,18 +62,42 @@ const Separator = () => <View style={styles.separator} />;
 
 
 const Value = ({
+  uid,
   value,
+  removeUid,
   placeholder,
+  onPress,
+  onRemovePress,
 }) => (
-  <Text style={[styles.value, !value && styles.valueRequired]}>
-    {value || placeholder}
-  </Text>
+  <View style={styles.valueContainer}>
+    <TouchableNativeFeedback uid={uid} onPress={onPress}>
+      <View style={styles.value}>
+        <Text style={[styles.valueText, !value && styles.valueTextRequired]}>
+          {value || placeholder}
+        </Text>
+      </View>
+    </TouchableNativeFeedback>
+
+    {
+      onRemovePress && !!value && (
+        <TouchableNativeFeedback uid={removeUid} onPress={onRemovePress}>
+          <View style={styles.valueRemove}>
+            <Icon style={styles.valueRemoveIcon} type={Icon.types.dismissDark} />
+          </View>
+        </TouchableNativeFeedback>
+      )
+    }
+  </View>
 );
 
 
 Value.propTypes = {
+  uid: PropTypes.string,
   value: PropTypes.string,
+  removeUid: PropTypes.string,
   placeholder: PropTypes.string,
+  onPress: PropTypes.func,
+  onRemovePress: PropTypes.func,
 };
 
 
@@ -141,6 +165,10 @@ class ScheduleDetail extends React.Component {
     });
   }
 
+  onActivityRemovePress() {
+    this.setState({ activity: null });
+  }
+
   dateIsColliding() {
     const date = this.state.date;
     return this.props.callTimes
@@ -158,7 +186,7 @@ class ScheduleDetail extends React.Component {
   render() {
     const date = this.state.date && moment(this.state.date).format('ddd, DD MMM YY');
     const time = this.state.time && moment(this.state.time).format('h:mm a');
-    const isInPast = this.state.timeHasChanged && this.timeIsInPast();
+    const isInPast = this.timeIsInPast();
     const isColliding = this.dateIsColliding();
 
     return (
@@ -175,20 +203,27 @@ class ScheduleDetail extends React.Component {
 
         <View style={styles.body}>
           <View style={styles.fieldset}>
-            <TouchableNativeFeedback uid="date" onPress={this.onDatePress}>
-              <View style={styles.dateContainer}>
-                <Label title="DATE" />
-                <Value value={date} placeholder="Add date" />
+            <View style={styles.dateContainer}>
+              <Label title="DATE" />
 
-              </View>
-            </TouchableNativeFeedback>
+              <Value
+                uid="date"
+                onPress={this.onDatePress}
+                value={date}
+                placeholder="Add date"
+              />
+            </View>
 
-            <TouchableNativeFeedback uid="time" onPress={this.onTimePress}>
-              <View style={styles.timeContainer}>
-                <Label title="TIME" />
-                <Value value={time} placeholder="Add time" />
-              </View>
-            </TouchableNativeFeedback>
+            <View style={styles.timeContainer}>
+              <Label title="TIME" />
+
+              <Value
+                uid="time"
+                value={time}
+                onPress={this.onTimePress}
+                placeholder="Add time"
+              />
+            </View>
           </View>
 
           {
@@ -198,24 +233,30 @@ class ScheduleDetail extends React.Component {
           }
 
           {
-            !isColliding && isInPast && <Text style={styles.fieldError}>
-              This date and time have already passed
-            </Text>
+            !isColliding && isInPast && this.state.timeHasChanged && (
+              <Text style={styles.fieldError}>
+                This date and time have already passed
+              </Text>
+            )
           }
 
           <Separator />
 
           <View style={styles.fieldset}>
-            <TouchableNativeFeedback uid="activity" onPress={this.props.onActivityPress}>
-              <View>
-                <Label title="ACTIVITY" />
-                <Value
-                  value={this.props.activity && this.props.activity.title}
-                  placeholder="Add Activity (Optional)"
-                />
-              </View>
-            </TouchableNativeFeedback>
+            <View style={styles.activityContainer}>
+              <Label title="ACTIVITY" />
+
+              <Value
+                uid="activity"
+                removeUid="removeActivity"
+                value={this.props.activity && this.props.activity.title}
+                placeholder="Add Activity (Optional)"
+                onPress={this.props.onActivityPress}
+                onRemovePress={this.props.onActivityRemovePress}
+              />
+            </View>
           </View>
+
           <Separator />
         </View>
 
@@ -238,6 +279,7 @@ ScheduleDetail.propTypes = {
   callTimes: PropTypes.arrayOf(PropTypes.string).isRequired,
   onDismissPress: PropTypes.func.isRequired,
   onActivityPress: PropTypes.func.isRequired,
+  onActivityRemovePress: PropTypes.func.isRequired,
   onDone: PropTypes.func.isRequired,
   initialDate: PropTypes.string,
   initialCallTime: PropTypes.string,
