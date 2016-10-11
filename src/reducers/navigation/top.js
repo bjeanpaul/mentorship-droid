@@ -1,5 +1,6 @@
 import { includes } from 'lodash';
 import * as routes from 'src/constants/routes';
+import * as auth from 'src/constants/auth';
 import * as sync from 'src/constants/sync';
 import * as landing from 'src/constants/landing';
 import * as entry from 'src/constants/entry';
@@ -30,10 +31,16 @@ const popEphemeral = state => includes(routes.EPHEMERAL_ROUTES, topOf(state).key
   : state;
 
 
-export default (state = createStack([
+export const createInitialState = () => createStack([
   createRoute(routes.ROUTE_LANDING),
-]), action) => {
+]);
+
+
+export default (state = createInitialState(), action) => {
   switch (action.type) {
+    case auth.AUTH_LOGOUT:
+      return createInitialState();
+
     case navigation.SCREEN_DISMISS:
       return pop(state);
 
