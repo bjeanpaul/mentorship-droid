@@ -9,6 +9,8 @@ import { isEqual } from 'lodash';
 import * as constants from 'src/constants/schedule';
 import * as api from 'src/api';
 
+import { fakeContext, fakeState, fakeScheduledCall } from 'app/scripts/helpers';
+
 import {
   apiAction,
   staticAction,
@@ -23,7 +25,8 @@ import {
   patchScheduledCall,
   removeScheduledCall,
   addScheduledCall,
-  chooseScheduledCall,
+  openScheduledCall,
+  openNextScheduledCall,
   chooseScheduledCallCategory,
   chooseScheduledCallActivity,
 } from 'src/actions/schedule';
@@ -107,13 +110,43 @@ describe('schedule/actions', () => {
     });
   });
 
-  describe('chooseScheduledCall', () => {
-    it('should create an action for choosing a scheduled call', () => {
-      expect(chooseScheduledCall(23))
+  describe('openScheduledCall', () => {
+    it('should create an action for opening a scheduled call', () => {
+      expect(openScheduledCall(23))
         .toEqual({
-          type: constants.SCHEDULED_CALL_CHOOSE,
+          type: constants.SCHEDULED_CALL_OPEN,
           payload: { scheduledCallId: 23 },
         });
+    });
+  });
+
+  describe('openNextScheduledCall', () => {
+    it('should create an action for adding a scheduled call if there is no next call', () => {
+      const dispatch = jest.fn();
+      const state = fakeState();
+
+      state.entities.scheduledCalls = {};
+      openNextScheduledCall()(dispatch, fakeContext(), () => state);
+
+      expect(dispatch.mock.calls)
+        .toEqual([[addScheduledCall()]]);
+    });
+
+    it('should create an action for opening a scheduled call if there is a next call', () => {
+      const dispatch = jest.fn();
+      const state = fakeState();
+
+      state.entities.scheduledCalls = {
+        23: fakeScheduledCall({
+          id: 23,
+          callTime: '2017-09-16T11:27:14Z',
+        }),
+      };
+
+      openNextScheduledCall()(dispatch, fakeContext(), () => state);
+
+      expect(dispatch.mock.calls)
+        .toEqual([[openScheduledCall(23)]]);
     });
   });
 
