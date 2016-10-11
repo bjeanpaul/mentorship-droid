@@ -1,13 +1,13 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import Profile from 'src/views/Profile';
+import ProfileSettings from 'src/views/ProfileSettings';
 import { uidEquals } from 'app/scripts/helpers';
 
 
-describe('Profile', () => {
+describe('ProfileSettings', () => {
   const createComponent = (props = {}) => (
-    <Profile
+    <ProfileSettings
       onBackPress={noop}
       {...props}
     />

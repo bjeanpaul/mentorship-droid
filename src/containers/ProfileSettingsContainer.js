@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 
 import { dismissScreen } from 'src/actions/navigation';
-import Profile from 'src/views/Profile';
+import ProfileSettings from 'src/views/ProfileSettings';
 
 
 export default connect(state => state.auth, {
   onBackPress: dismissScreen,
-})(Profile);
+})(ProfileSettings);

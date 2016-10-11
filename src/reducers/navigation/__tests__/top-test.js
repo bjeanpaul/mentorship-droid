@@ -334,10 +334,10 @@ describe('src/reducers/navigation/top', () => {
     });
   });
 
-  describe('PROFILE_OPEN', () => {
-    it('should push on the profile route', () => {
-      expect(reduce(createStack(), profile.openProfile()))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_PROFILE)));
+  describe('PROFILE_SETTINGS_OPEN', () => {
+    it('should push on the profile settings route', () => {
+      expect(reduce(createStack(), profile.openProfileSettings()))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_PROFILE_SETTINGS)));
     });
   });
 });

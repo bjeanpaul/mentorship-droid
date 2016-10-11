@@ -1,4 +1,4 @@
-exports[`Profile should render 1`] = `
+exports[`ProfileSettings should render 1`] = `
 <View
   style={
     Array [

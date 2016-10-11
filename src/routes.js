@@ -37,7 +37,7 @@ import ConnectingCallFailureContainer from 'src/containers/ConnectingCallFailure
 import CallCompletedContainer from 'src/containers/CallCompletedContainer';
 import CallNoteStepperContainer from 'src/containers/CallNoteStepperContainer';
 
-import ProfileContainer from 'src/containers/ProfileContainer';
+import ProfileSettingsContainer from 'src/containers/ProfileSettingsContainer';
 
 
 export default fromPairs([
@@ -78,5 +78,5 @@ export default fromPairs([
 
   [constants.ROUTE_CREATE_CALL_NOTES, CallNoteStepperContainer],
 
-  [constants.ROUTE_PROFILE, ProfileContainer],
+  [constants.ROUTE_PROFILE_SETTINGS, ProfileSettingsContainer],
 ]);

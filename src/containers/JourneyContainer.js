@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import Journey from 'src/views/Journey';
 import { getNextScheduledCall } from 'src/stores/helpers';
 import { openNextScheduledCall } from 'src/actions/schedule';
-import { openProfile } from 'src/actions/profile';
+import { openProfileSettings } from 'src/actions/profile';
 import { openCall } from 'src/actions/calls';
 import noop from 'lodash';
 
@@ -17,6 +17,6 @@ export { mapStateToProps };
 export default connect(mapStateToProps, {
   onNextScheduledCallPress: openNextScheduledCall,
   onCallPress: openCall,
-  onProfilePress: openProfile,
+  onProfilePress: openProfileSettings,
   onMessagePress: noop, // TODO
 })(Journey);

@@ -163,8 +163,8 @@ export default (state = createStack([
       return replaceOrPush(newState, routes.ROUTE_SCHEDULING_CALL, route);
     }
 
-    case profile.PROFILE_OPEN:
-      return push(state, createRoute(routes.ROUTE_PROFILE));
+    case profile.PROFILE_SETTINGS_OPEN:
+      return push(state, createRoute(routes.ROUTE_PROFILE_SETTINGS));
 
     default:
       return state;
