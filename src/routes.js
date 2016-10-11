@@ -37,6 +37,8 @@ import ConnectingCallFailureContainer from 'src/containers/ConnectingCallFailure
 import CallCompletedContainer from 'src/containers/CallCompletedContainer';
 import CallNoteStepperContainer from 'src/containers/CallNoteStepperContainer';
 
+import ProfileContainer from 'src/containers/ProfileContainer';
+
 
 export default fromPairs([
   [constants.ROUTE_API_ERROR, ApiErrorContainer],
@@ -75,4 +77,6 @@ export default fromPairs([
   [constants.ROUTE_CALL_COMPLETED, CallCompletedContainer],
 
   [constants.ROUTE_CREATE_CALL_NOTES, CallNoteStepperContainer],
+
+  [constants.ROUTE_PROFILE, ProfileContainer],
 ]);

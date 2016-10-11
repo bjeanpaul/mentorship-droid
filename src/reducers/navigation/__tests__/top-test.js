@@ -9,6 +9,7 @@ import * as calls from 'src/actions/calls';
 import * as callNotes from 'src/actions/callNote';
 import * as schedule from 'src/actions/schedule';
 import * as activities from 'src/actions/activities';
+import * as profile from 'src/actions/profile';
 import * as errors from 'src/constants/errors';
 
 import {
@@ -330,6 +331,13 @@ describe('src/reducers/navigation/top', () => {
           createDummyRoute(createDummyRoute.index),
           createRoute(routes.ROUTE_CALL_SCHEDULED),
         ]));
+    });
+  });
+
+  describe('PROFILE_OPEN', () => {
+    it('should push on the profile route', () => {
+      expect(reduce(createStack(), profile.openProfile()))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_PROFILE)));
     });
   });
 });
