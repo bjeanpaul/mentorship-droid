@@ -20,10 +20,11 @@ const Journey = ({
         style={[styles.date, nextScheduledCallDate && styles.hasDate]}
         onPress={onNextScheduledCallPress}
       >
-        {nextScheduledCallDate ?
-          moment(nextScheduledCallDate).format('dddd Do, MMMM YYYY') :
-          'Schedule a call'
-        }
+      {
+        nextScheduledCallDate
+          ? moment(nextScheduledCallDate).format('ddd, MMM DD, h:mma')
+          : 'Schedule a call'
+      }
       </Link>
     </Header>
 
