@@ -1,17 +1,23 @@
 import { mapDispatchToProps } from 'src/containers/CallCompletedContainer';
-import { createCallNotes } from 'src/actions/callNote';
+import { openCreateCallNote } from 'src/actions/callNote';
 import { dismissScreen } from 'src/actions/navigation';
 
 
 describe('CallCompletedContainer', () => {
   describe('mapDispatchToProps', () => {
-    it('should map onAddCallNotesPress to dispatch CALL_NOTES_CREATE', () => {
+    it('should map onAddCallNotesPress to dispatch OPEN_CALL_NOTE_CREATE', () => {
       const dispatch = jest.fn();
-      const { onAddCallNotesPress } = mapDispatchToProps(dispatch, { callId: 23 });
+      const { onAddCallNotesPress } = mapDispatchToProps(dispatch, {
+        callId: 23,
+        activityId: 22,
+      });
 
       expect(dispatch.mock.calls).toEqual([]);
       onAddCallNotesPress();
-      expect(dispatch.mock.calls).toEqual([[createCallNotes(23)]]);
+      expect(dispatch.mock.calls).toEqual([[openCreateCallNote({
+        callId: 23,
+        activityId: 22,
+      })]]);
     });
 
     it('should map onDismissPress to dispatch SCREEN_DISMISS', () => {

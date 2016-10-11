@@ -160,20 +160,32 @@ describe('src/reducers/navigation/top', () => {
     });
   });
 
-  describe('CALL_NOTES_CREATE', () => {
+  describe('OPEN_CALL_NOTE_CREATE', () => {
     it('should replace the call completed route with create call notes route', () => {
       const state = push(createStack(), createRoute(routes.ROUTE_CALL_COMPLETED));
-      const route = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId: 23 });
+      const route = createRoute(routes.ROUTE_CREATE_CALL_NOTES, {
+        callId: 23,
+        activityId: 22,
+      });
 
-      expect(reduce(state, callNotes.createCallNotes(23)))
-        .toEqual(replaceAt(state, routes.ROUTE_CALL_COMPLETED, route));
+      expect(reduce(state, callNotes.openCreateCallNote({
+        callId: 23,
+        activityId: 22,
+      })))
+      .toEqual(replaceAt(state, routes.ROUTE_CALL_COMPLETED, route));
     });
 
     it('should push on the create call notes route there is no call completed route', () => {
-      expect(reduce(createStack(), callNotes.createCallNotes(23)))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_CREATE_CALL_NOTES, {
+      expect(reduce(createStack(),
+        callNotes.openCreateCallNote({
           callId: 23,
-        })));
+          activityId: 22,
+        })
+      ))
+      .toEqual(push(createStack(), createRoute(routes.ROUTE_CREATE_CALL_NOTES, {
+        callId: 23,
+        activityId: 22,
+      })));
     });
   });
 
