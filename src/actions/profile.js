@@ -34,8 +34,12 @@ const updateProfilePicture = apiAction({
 });
 
 
+const openProfile = staticAction(constants.PROFILE_OPEN);
+
+
 export {
   fetchProfile,
+  openProfile,
   updateProfile,
   updateProfilePicture,
 };
