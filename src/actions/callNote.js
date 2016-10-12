@@ -26,6 +26,13 @@ export const createCallNote = apiAction({
 });
 
 
+// TODO remove once api doesn't need client side to figure out mentor id
+export const createCallNoteWithMentor = (data, fn = createCallNote) => (dispatch, ctx) => fn({
+  ...data,
+  mentor: ctx.profile.id,
+})(dispatch, ctx);
+
+
 export const updateCallNote = apiAction({
   method: api.updateCallNote,
   request: staticAction(constants.CALL_NOTE_UPDATE_REQUEST),

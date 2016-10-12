@@ -1,6 +1,6 @@
 import { pick } from 'lodash';
 import { connect } from 'react-redux';
-import { createCallNote, changeCallNote } from 'src/actions/callNote';
+import { createCallNoteWithMentor, changeCallNote } from 'src/actions/callNote';
 import { getActivity, getCategory } from 'src/stores/helpers';
 
 import {
@@ -74,6 +74,6 @@ export default {
   }),
 
   Saving: connect(savingMapStateToProps, {
-    save: createCallNote,
+    save: createCallNoteWithMentor,
   })(Saving),
 };
