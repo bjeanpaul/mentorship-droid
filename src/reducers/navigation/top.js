@@ -103,7 +103,7 @@ export default (state = createStack([
     }
 
     case callNotes.CALL_NOTE_CREATE_SUCCESS: {
-      const route = createRoute(routes.ROUTE_CALL_NOTES_SAVED);
+      const route = createRoute(routes.ROUTE_CALL_NOTE_SAVED);
       return replaceOrPush(state, routes.ROUTE_CREATE_CALL_NOTES, route);
     }
 

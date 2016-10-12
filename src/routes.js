@@ -78,5 +78,5 @@ export default fromPairs([
 
   [constants.ROUTE_CREATE_CALL_NOTES, CallNoteStepperContainer],
 
-  [constants.ROUTE_CALL_NOTES_SAVED, CallNoteSavedContainer],
+  [constants.ROUTE_CALL_NOTE_SAVED, CallNoteSavedContainer],
 ]);

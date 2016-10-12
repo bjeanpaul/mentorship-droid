@@ -185,7 +185,7 @@ describe('src/reducers/navigation/top', () => {
     it('should replace the call note create route with the saved route', () => {
       const action = callNotes.createCallNote.success(fakeCallNoteData());
       const oldRoute = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId: 23 });
-      const newRoute = createRoute(routes.ROUTE_CALL_NOTES_SAVED);
+      const newRoute = createRoute(routes.ROUTE_CALL_NOTE_SAVED);
       const state = push(createStack(), oldRoute);
 
       expect(reduce(state, action))
@@ -194,7 +194,7 @@ describe('src/reducers/navigation/top', () => {
 
     it('should push on the call note saved route if there is no create route', () => {
       const action = callNotes.createCallNote.success(fakeCallNoteData());
-      const route = createRoute(routes.ROUTE_CALL_NOTES_SAVED);
+      const route = createRoute(routes.ROUTE_CALL_NOTE_SAVED);
 
       expect(reduce(createStack(), action))
         .toEqual(push(createStack(), route));
