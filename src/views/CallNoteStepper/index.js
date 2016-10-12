@@ -9,18 +9,27 @@ const CallNoteStepper = ({
   steps,
   navigationState,
 }) => {
-  const hasActivity = !isUndefined(call.activity);
-
-  return (
-    <Stepper navigationState={navigationState}>
-      <steps.Reflections />
-      <steps.Mood />
-      {hasActivity && <steps.Completed call={call} />}
-      {hasActivity && <steps.Rating />}
-      <steps.CallQuality />
-      <steps.Saving call={call} />
-    </Stepper>
-  );
+  if (isUndefined(call.activity)) {
+    return (
+      <Stepper navigationState={navigationState}>
+        <steps.Reflections />
+        <steps.Mood />
+        <steps.CallQuality />
+        <steps.Saving call={call} />
+      </Stepper>
+    );
+  } else {
+    return (
+      <Stepper navigationState={navigationState}>
+        <steps.Reflections />
+        <steps.Mood />
+        <steps.Completed call={call} />
+        <steps.Rating />
+        <steps.CallQuality />
+        <steps.Saving call={call} />
+      </Stepper>
+    );
+  }
 };
 
 
