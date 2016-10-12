@@ -10,7 +10,7 @@ describe('CallNoteStepperContainer', () => {
       const state = fakeState({
         entities: {
           calls: {
-            20: call
+            20: call,
           },
         },
       });
@@ -25,7 +25,7 @@ describe('CallNoteStepperContainer', () => {
       const state = fakeState({
         entities: {
           calls: {
-            20: call
+            20: call,
           },
         },
       });
