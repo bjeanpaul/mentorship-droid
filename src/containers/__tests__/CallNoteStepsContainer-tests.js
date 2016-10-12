@@ -1,12 +1,22 @@
 import { completedMapDispatchToProps } from 'src/containers/CallNoteStepsContainer';
-import { fakeState, fakeActivity, fakeCategory } from 'app/scripts/helpers';
+import { fakeState, fakeCall, fakeActivity, fakeCategory } from 'app/scripts/helpers';
 
 
 describe('CallNoteStepsContainer', () => {
   describe('completedMapDispatchToProps', () => {
     it('should provide the activity objective and category color', () => {
-      expect(completedMapDispatchToProps(fakeState({
-        callNote: { callNote: {} },
+      const call = fakeCall({
+        id: 20,
+        activity: 11,
+      });
+
+      const state = fakeState({
+        callNote: {
+          callNote: {},
+        },
+        calls: {
+          20: call,
+        },
         entities: {
           categories: {
             23: fakeCategory({
@@ -22,13 +32,14 @@ describe('CallNoteStepsContainer', () => {
             }),
           },
         },
-      }), {
-        activityId: 11,
-      })).toEqual({
-        color: 'orange',
-        objective: 'to eat ice-cream',
-        completed: void 0,
       });
+
+      expect(completedMapDispatchToProps(state, { call }))
+        .toEqual({
+          color: 'orange',
+          objective: 'to eat ice-cream',
+          completed: void 0,
+        });
     });
   });
 });

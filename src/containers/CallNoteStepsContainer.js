@@ -12,6 +12,7 @@ import {
 } from 'src/views/CallNoteSteps';
 import Saving from 'src/views/CallNoteSaving';
 
+
 const callNoteContainer = ({
   component,
   callNoteProps,
@@ -24,9 +25,10 @@ const callNoteContainer = ({
 )(component);
 
 
-const completedMapDispatchToProps = (state, { activityId }) => {
-  const { objective, category } = getActivity(state, activityId);
+const completedMapDispatchToProps = (state, { call }) => {
+  const { objective, category } = getActivity(state, call.activity);
   const { color } = getCategory(state, category);
+
   return {
     completed: state.callNote.callNote.completed,
     objective,
@@ -34,9 +36,11 @@ const completedMapDispatchToProps = (state, { activityId }) => {
   };
 };
 
+
 export {
   completedMapDispatchToProps,
 };
+
 export default {
   Reflections: callNoteContainer({
     component: Reflections,
@@ -69,8 +73,8 @@ export default {
   }),
 
   Saving: connect(
-    (state, ownProps) => ({
-      callId: ownProps.callId,
+    (state, { call }) => ({
+      callId: call.id,
       callNote: state.callNote.callNote,
     }),
     { save }
