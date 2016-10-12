@@ -177,8 +177,13 @@ export const fakeActivityListData = (data = [fakeActivity()]) => (
   normalize(data, arrayOf(Activity)));
 
 
+export const fakeCallNoteData = (data = fakeCallNote()) => (
+  normalize(data, CallNote));
+
+
 export const fakeListEventsData = (data = [fakeEvent()]) => (
     normalize(data, arrayOf(Event)));
+
 
 export const fakeListCallNotesData = (data = [fakeCallNote()]) => (
     normalize(data, arrayOf(CallNote)));

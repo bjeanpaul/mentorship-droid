@@ -15,6 +15,8 @@ import {
   createDummyRoute, createStack, createRoute, push, pop, replaceAt,
 } from 'src/navigationHelpers';
 
+import { fakeCallNoteData } from 'app/scripts/helpers';
+
 
 describe('src/reducers/navigation/top', () => {
   describe('API_ERROR', () => {
@@ -170,16 +172,32 @@ describe('src/reducers/navigation/top', () => {
     });
 
     it('should push on the create call notes route there is no call completed route', () => {
-      expect(reduce(createStack(),
-        callNotes.openCreateCallNote({
-          callId: 23,
-          activityId: 22,
-        })
-      ))
+      expect(reduce(createStack(), callNotes.openCreateCallNote({
+        callId: 23,
+      })))
       .toEqual(push(createStack(), createRoute(routes.ROUTE_CREATE_CALL_NOTES, {
         callId: 23,
-        activityId: 22,
       })));
+    });
+  });
+
+  describe('CALL_NOTE_CREATE_SUCCESS', () => {
+    it('should replace the call note create route with the saved route', () => {
+      const action = callNotes.createCallNote.success(fakeCallNoteData());
+      const oldRoute = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId: 23 });
+      const newRoute = createRoute(routes.ROUTE_CALL_NOTES_SAVED);
+      const state = push(createStack(), oldRoute);
+
+      expect(reduce(state, action))
+        .toEqual(replaceAt(state, routes.ROUTE_CREATE_CALL_NOTES, newRoute));
+    });
+
+    it('should push on the call note saved route if there is no create route', () => {
+      const action = callNotes.createCallNote.success(fakeCallNoteData());
+      const route = createRoute(routes.ROUTE_CALL_NOTES_SAVED);
+
+      expect(reduce(createStack(), action))
+        .toEqual(push(createStack(), route));
     });
   });
 

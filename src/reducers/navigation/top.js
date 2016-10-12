@@ -102,6 +102,11 @@ export default (state = createStack([
       return replaceOrPush(state, routes.ROUTE_CALL_COMPLETED, route);
     }
 
+    case callNotes.CALL_NOTE_CREATE_SUCCESS: {
+      const route = createRoute(routes.ROUTE_CALL_NOTES_SAVED);
+      return replaceOrPush(state, routes.ROUTE_CREATE_CALL_NOTES, route);
+    }
+
     case activities.ACTIVITY_SCHEDULE_CALL: {
       const { payload: { activityId } } = action;
       return push(state, createRoute(routes.ROUTE_SCHEDULE_CALL, { activityId }));
