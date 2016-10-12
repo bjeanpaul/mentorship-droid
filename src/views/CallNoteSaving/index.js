@@ -16,8 +16,7 @@ class Saving extends React.Component {
 
 
 Saving.propTypes = {
-  callNote: PropTypes.any.isRequired,
-  callId: PropTypes.any.isRequired,
+  callNote: PropTypes.object.isRequired,
   save: PropTypes.func.isRequired,
 };
 
