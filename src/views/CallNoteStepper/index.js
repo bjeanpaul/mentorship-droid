@@ -1,31 +1,24 @@
+import { isUndefined } from 'lodash';
 import React, { PropTypes } from 'react';
+
 import { Stepper } from 'src/components';
-import containers from 'src/containers/CallNoteStepsContainer';
+
 
 const CallNoteStepper = ({
+  call,
+  steps,
   navigationState,
-  callId,
-  activityId,
 }) => {
-  if (activityId) {
-    return (
-      <Stepper navigationState={navigationState}>
-        <containers.Reflections />
-        <containers.Mood />
-        <containers.Completed activityId={activityId} />
-        <containers.Rating />
-        <containers.CallQuality />
-        <containers.Saving callId={callId} />
-      </Stepper>
-    );
-  }
+  const hasActivity = !isUndefined(call.activity);
 
   return (
     <Stepper navigationState={navigationState}>
-      <containers.Reflections />
-      <containers.Mood />
-      <containers.CallQuality />
-      <containers.Saving callId={callId} />
+      <steps.Reflections />
+      <steps.Mood />
+      {hasActivity && <steps.Completed call={call} />}
+      {hasActivity && <steps.Rating />}
+      <steps.CallQuality />
+      <steps.Saving call={call} />
     </Stepper>
   );
 };
@@ -33,8 +26,8 @@ const CallNoteStepper = ({
 
 CallNoteStepper.propTypes = {
   navigationState: PropTypes.object.isRequired,
-  callId: PropTypes.any,
-  activityId: PropTypes.any,
+  call: PropTypes.object,
+  steps: PropTypes.object,
 };
 
 
