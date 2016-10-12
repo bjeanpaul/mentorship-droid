@@ -81,15 +81,9 @@ describe('actions/callNote', () => {
 
   describe('openCreateCallNote', () => {
     it('should create an action for new call notes', () => {
-      expect(actions.openCreateCallNote({
-        callId: 23,
-        activityId: 22,
-      })).toEqual({
+      expect(actions.openCreateCallNote({ callId: 23 })).toEqual({
         type: constants.CALL_NOTE_CREATE_OPEN,
-        payload: {
-          callId: 23,
-          activityId: 22,
-        },
+        payload: { callId: 23 },
       });
     });
   });

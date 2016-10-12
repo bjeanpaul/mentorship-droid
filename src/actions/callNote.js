@@ -48,12 +48,9 @@ export const patchCallNote = apiAction({
 });
 
 
-export const openCreateCallNote = ({ callId, activityId }) => ({
+export const openCreateCallNote = ({ callId }) => ({
   type: constants.CALL_NOTE_CREATE_OPEN,
-  payload: {
-    callId,
-    activityId,
-  },
+  payload: { callId },
 });
 
 
@@ -67,7 +64,7 @@ export const stepBack = () => ({
 });
 
 
-export const changeCallNote = (payload) => ({
+export const changeCallNote = payload => ({
   type: constants.CALL_NOTES_CHANGE_CALL_NOTE,
   payload,
 });
