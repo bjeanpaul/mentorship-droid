@@ -7,6 +7,8 @@ const entitiesReducer = (state = {
   activities: {},
   categories: {},
   scheduledCalls: {},
+  callNotes: {},
+  calls: {},
 }, action) => includes(ACTIONS_WITH_ENTITIES, action.type)
   ? merge(state, action.payload.entities)
   : state;
