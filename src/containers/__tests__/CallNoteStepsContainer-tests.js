@@ -1,5 +1,15 @@
-import { completedMapDispatchToProps } from 'src/containers/CallNoteStepsContainer';
-import { fakeState, fakeCall, fakeActivity, fakeCategory } from 'app/scripts/helpers';
+import {
+  completedMapDispatchToProps,
+  savingMapStateToProps,
+} from 'src/containers/CallNoteStepsContainer';
+
+import {
+  fakeState,
+  fakeCall,
+  fakeActivity,
+  fakeCategory,
+  fakeCallNote,
+} from 'app/scripts/helpers';
 
 
 describe('CallNoteStepsContainer', () => {
@@ -40,6 +50,20 @@ describe('CallNoteStepsContainer', () => {
           objective: 'to eat ice-cream',
           completed: void 0,
         });
+    });
+  });
+
+  describe('savingMapStateToProps', () => {
+    it('should provide the call note data', () => {
+      const call = fakeCall({ id: 20 });
+      const callNote = fakeCallNote({ call: 20 });
+
+      const state = fakeState({
+        callNote: { callNote },
+      });
+
+      expect(savingMapStateToProps(state, { call }))
+        .toEqual(jasmine.objectContaining({ callNote }));
     });
   });
 });

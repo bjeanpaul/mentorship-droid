@@ -5,15 +5,8 @@ import { OverlayLoading } from 'src/components';
 class Saving extends React.Component {
   // TODO: Stepper should dispatch an action when it's on the last view
   componentDidMount() {
-    const {
-      callId,
-      callNote,
-    } = this.props;
-
-    this.props.save({
-      callId,
-      callNote,
-    });
+    const { callNote } = this.props;
+    this.props.save(callNote);
   }
 
   render() {

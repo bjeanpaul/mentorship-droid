@@ -1,6 +1,6 @@
 import { pick } from 'lodash';
 import { connect } from 'react-redux';
-import { changeCallNote, save } from 'src/actions/callNote';
+import { createCallNote, changeCallNote } from 'src/actions/callNote';
 import { getActivity, getCategory } from 'src/stores/helpers';
 
 import {
@@ -25,7 +25,7 @@ const callNoteContainer = ({
 )(component);
 
 
-const completedMapDispatchToProps = (state, { call }) => {
+export const completedMapDispatchToProps = (state, { call }) => {
   const { objective, category } = getActivity(state, call.activity);
   const { color } = getCategory(state, category);
 
@@ -37,9 +37,13 @@ const completedMapDispatchToProps = (state, { call }) => {
 };
 
 
-export {
-  completedMapDispatchToProps,
-};
+export const savingMapStateToProps = (state, { call }) => ({
+  callNote: {
+    call: call.id,
+    ...state.callNote.callNote,
+  },
+});
+
 
 export default {
   Reflections: callNoteContainer({
@@ -55,12 +59,9 @@ export default {
     },
   }),
 
-  Completed: connect(
-    completedMapDispatchToProps, {
-      onSelectImage: changeCallNote,
-    }
-  )
-  (Completed),
+  Completed: connect(completedMapDispatchToProps, {
+    onSelectImage: changeCallNote,
+  })(Completed),
 
   Rating: callNoteContainer({
     component: Rating,
@@ -72,11 +73,7 @@ export default {
     callNoteProps: ['callQuality'],
   }),
 
-  Saving: connect(
-    (state, { call }) => ({
-      callId: call.id,
-      callNote: state.callNote.callNote,
-    }),
-    { save }
-  )(Saving),
+  Saving: connect(savingMapStateToProps, {
+    save: createCallNote,
+  })(Saving),
 };
