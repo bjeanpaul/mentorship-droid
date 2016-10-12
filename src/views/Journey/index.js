@@ -8,23 +8,6 @@ import images from 'src/constants/images';
 import styles from './styles';
 
 
-// TODO add icon images once we have these
-const JourneyHeaderIcon = ({
-  onPress,
-}) => (
-  <View>
-    <TouchableWithoutFeedback onPress={onPress}>
-      <View style={styles.headerIconPlaceholder} />
-    </TouchableWithoutFeedback>
-  </View>
-);
-
-
-JourneyHeaderIcon.propTypes = {
-  onPress: PropTypes.func.isRequired,
-};
-
-
 const Journey = ({
   nextScheduledCallDate,
   onNextScheduledCallPress,
@@ -49,10 +32,10 @@ const Journey = ({
       </View>
 
       <View>
-        <JourneyHeaderIcon
-          uid="profile"
-          onPress={onProfilePress}
-        />
+        {/* TODO use profile image once we can get this from the api */}
+        <TouchableWithoutFeedback uid="profile" onPress={onProfilePress}>
+          <Image source={images.PROFILE_PLACEHOLDER_AVATAR} />
+        </TouchableWithoutFeedback>
       </View>
     </Header>
 
@@ -60,7 +43,7 @@ const Journey = ({
       source={images.JOURNEY_MENTEE}
       style={styles.mentee}
     >
-      <TouchableWithoutFeedback onPress={onCallPress}>
+      <TouchableWithoutFeedback uid="call" onPress={onCallPress}>
         <Image
           source={images.JOURNEY_CALL_ICON}
           style={styles.icon}

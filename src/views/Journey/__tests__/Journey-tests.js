@@ -44,15 +44,8 @@ describe('Journey', () => {
   it('should be able to tap and fire `onCallPress`', () => {
     const onCallPress = jest.fn();
     const el = shallow(createComponent({ onCallPress }));
-    el.find('TouchableWithoutFeedback').at(0).simulate('press');
+    el.findWhere(uidEquals('call')).simulate('press');
     expect(onCallPress).toBeCalled();
-  });
-
-  it('should be able to tap and fire `onPressNextScheduledCall`', () => {
-    const onNextScheduledCallPress = jest.fn();
-    const el = shallow(createComponent({ onNextScheduledCallPress }));
-    el.find('Link').simulate('press');
-    expect(onNextScheduledCallPress).toBeCalled();
   });
 
   it('should call onProfilePress when the profile icon is pressed', () => {
