@@ -2,6 +2,7 @@ import { merge, uniqueId } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
 import { Profile, ScheduledCall, Activity, Category, Event, CallNote } from 'src/api';
 import { getContext } from 'src/stores/helpers';
+import { createStack } from 'src/navigationHelpers';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/event';
 
 
@@ -113,6 +114,7 @@ export const fakeState = (overrides = {}) => merge({}, {
     auth: fakeAuth(),
   },
   callNote: {
+    navigation: createStack(),
     callNote: {},
   },
   entities: {
@@ -132,7 +134,7 @@ export const fakeState = (overrides = {}) => merge({}, {
       23: fakeScheduledCall({ id: 23 }),
     },
     calls: {
-      20: fakeCallNote({ id: 20 }),
+      20: fakeCall({ id: 20 }),
     },
     callNotes: {
       100: fakeCallNote({ id: 100 }),
