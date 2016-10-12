@@ -9,14 +9,14 @@ describe('CallCompletedContainer', () => {
       const dispatch = jest.fn();
       const { onAddCallNotesPress } = mapDispatchToProps(dispatch, {
         callId: 23,
-        activityId: 22,
       });
 
       expect(dispatch.mock.calls).toEqual([]);
+
       onAddCallNotesPress();
+
       expect(dispatch.mock.calls).toEqual([[openCreateCallNote({
         callId: 23,
-        activityId: 22,
       })]]);
     });
 
