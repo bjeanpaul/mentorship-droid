@@ -160,7 +160,7 @@ describe('src/reducers/navigation/top', () => {
     });
   });
 
-  describe('OPEN_CALL_NOTE_CREATE', () => {
+  describe('CALL_NOTE_CREATE_OPEN', () => {
     it('should replace the call completed route with create call notes route', () => {
       const state = push(createStack(), createRoute(routes.ROUTE_CALL_COMPLETED));
       const route = createRoute(routes.ROUTE_CREATE_CALL_NOTES, {

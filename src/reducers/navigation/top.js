@@ -96,7 +96,7 @@ export default (state = createStack([
       return push(state, createRoute(routes.ROUTE_START_CALL));
     }
 
-    case callNotes.OPEN_CALL_NOTE_CREATE: {
+    case callNotes.CALL_NOTE_CREATE_OPEN: {
       const { payload: { callId, activityId } } = action;
       const route = createRoute(routes.ROUTE_CREATE_CALL_NOTES, {
         callId,

@@ -49,7 +49,7 @@ export const patchCallNote = apiAction({
 
 
 export const openCreateCallNote = ({ callId, activityId }) => ({
-  type: constants.OPEN_CALL_NOTE_CREATE,
+  type: constants.CALL_NOTE_CREATE_OPEN,
   payload: {
     callId,
     activityId,

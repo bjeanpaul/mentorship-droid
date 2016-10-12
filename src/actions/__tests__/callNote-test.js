@@ -85,7 +85,7 @@ describe('actions/callNote', () => {
         callId: 23,
         activityId: 22,
       })).toEqual({
-        type: constants.OPEN_CALL_NOTE_CREATE,
+        type: constants.CALL_NOTE_CREATE_OPEN,
         payload: {
           callId: 23,
           activityId: 22,
