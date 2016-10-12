@@ -13,6 +13,10 @@ import {
 import { EVENT_LIST_SUCCESS } from 'src/constants/event';
 
 import {
+  CALL_CREATE_SUCCESS,
+} from 'src/constants/calls';
+
+import {
   CALL_NOTE_LIST_SUCCESS,
   CALL_NOTE_PATCH_SUCCESS,
   CALL_NOTE_CREATE_SUCCESS,
