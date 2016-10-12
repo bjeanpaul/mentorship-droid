@@ -76,6 +76,13 @@ export const fakeProfile = data => ({
 });
 
 
+export const fakeCall = data => ({
+  id: 20,
+  activity: null,
+  ...data,
+});
+
+
 export const fakeEvent = data => ({
   id: 23,
   occuredAt: '2016-09-16T11:19:17.368442Z',
@@ -105,6 +112,9 @@ export const fakeState = (overrides = {}) => merge({}, {
     profileId: 23,
     auth: fakeAuth(),
   },
+  callNote: {
+    callNote: {},
+  },
   entities: {
     profiles: {
       23: fakeProfile({ id: 23 }),
@@ -120,6 +130,9 @@ export const fakeState = (overrides = {}) => merge({}, {
     },
     scheduledCalls: {
       23: fakeScheduledCall({ id: 23 }),
+    },
+    calls: {
+      20: fakeCallNote({ id: 20 }),
     },
     callNotes: {
       100: fakeCallNote({ id: 100 }),
