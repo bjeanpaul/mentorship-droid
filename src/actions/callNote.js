@@ -22,7 +22,6 @@ export const createCallNote = apiAction({
   method: api.createCallNote,
   request: staticAction(constants.CALL_NOTE_CREATE_REQUEST),
   success: dataAction(constants.CALL_NOTE_CREATE_SUCCESS),
-  failures: [[ApiResponseError, staticAction(constants.CALL_NOTE_CREATE_FAILURE)]],
 });
 
 
