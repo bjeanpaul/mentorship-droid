@@ -229,11 +229,13 @@ describe('helpers', () => {
         }),
       };
 
-      expect(getNextScheduledCall(state, '2016-09-22T14:31:23.431Z')).toEqual(target);
+      expect(getNextScheduledCall(state, null, '2016-09-22T14:31:23.431Z'))
+        .toEqual(target);
     });
 
     it('should return the next scheduled call when none are in the past', () => {
       const state = fakeState();
+
       state.entities.scheduledCalls = {
         4: fakeScheduledCall({
           id: 4,
@@ -244,7 +246,29 @@ describe('helpers', () => {
           callTime: '2016-09-30',
         }),
       };
-      expect(getNextScheduledCall(state, '2016-09-20').callTime).toEqual('2016-09-25');
+
+      expect(getNextScheduledCall(state, null, '2016-09-20').callTime)
+        .toEqual('2016-09-25');
+    });
+
+    it('should support a predicate', () => {
+      const state = fakeState();
+
+      state.entities.scheduledCalls = {
+        4: fakeScheduledCall({
+          id: 4,
+          callTime: '2016-09-24',
+          activity: 21,
+        }),
+        5: fakeScheduledCall({
+          id: 5,
+          callTime: '2016-09-25',
+          activity: 23,
+        }),
+      };
+
+      expect(getNextScheduledCall(state, { activity: 23 }, '2016-09-20').callTime)
+        .toEqual('2016-09-25');
     });
   });
 
@@ -278,18 +302,19 @@ describe('helpers', () => {
     it('should filter the call notes for the target activity id', () => {
       const fakeCallNote2 = fakeCallNote({
         id: 2,
-        callActivityId: 20,
+        callActivity: 20,
       });
       const fakeCallNote5 = fakeCallNote({
         id: 5,
-        callActivityId: 20,
+        callActivity: 20,
       });
       const fakeCallNote6 = fakeCallNote({
         id: 6,
-        callActivityId: 15,
+        callActivity: 15,
       });
 
       const state = fakeState();
+
       state.entities.callNotes = {
         2: fakeCallNote2,
         5: fakeCallNote5,
