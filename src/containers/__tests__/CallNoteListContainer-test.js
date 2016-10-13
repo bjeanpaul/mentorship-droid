@@ -5,20 +5,20 @@ import { fakeState, fakeCallNote } from 'app/scripts/helpers';
 describe('CallNoteListContainer', () => {
   describe('mapStateToProps', () => {
     it('should provide all call notes', () => {
-      const fakeCallNote21 = fakeCallNote({
+      const callNote1 = fakeCallNote({
         id: 21,
-        callActivityId: 50,
+        callActivity: 50,
       });
-      const fakeCallNote100 = fakeCallNote({
+      const callNote2 = fakeCallNote({
         id: 100,
-        callActivityId: 50,
+        callActivity: 50,
       });
 
       const state = fakeState({
         entities: {
           callNotes: {
-            21: fakeCallNote21,
-            100: fakeCallNote100,
+            21: callNote1,
+            100: callNote2,
           },
         },
       });
@@ -26,8 +26,8 @@ describe('CallNoteListContainer', () => {
       expect(mapStateToProps(state, { activityId: 50 }))
       .toEqual(jasmine.objectContaining({
         callNotes: [
-          fakeCallNote21,
-          fakeCallNote100,
+          callNote1,
+          callNote2,
         ],
       }));
     });
