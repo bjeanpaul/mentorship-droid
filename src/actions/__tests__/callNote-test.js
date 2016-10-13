@@ -16,6 +16,7 @@ import {
 } from 'src/actionHelpers';
 
 import * as actions from 'src/actions/callNote';
+import { capture, fakeContext, fakeCallNote } from 'app/scripts/helpers';
 
 const { ApiResponseError } = api;
 
@@ -38,8 +39,21 @@ describe('actions/callNote', () => {
         method: api.createCallNote,
         request: staticAction(constants.CALL_NOTE_CREATE_REQUEST),
         success: dataAction(constants.CALL_NOTE_CREATE_SUCCESS),
-        failures: [[ApiResponseError, staticAction(constants.CALL_NOTE_CREATE_FAILURE)]],
       }))).toBe(true);
+    });
+  });
+
+  describe('createCallNoteWithMentor', () => {
+    it('should create a call note with the authed user as the mentor', async () => {
+      const ctx = fakeContext({
+        profile: { id: 23 },
+      });
+
+      const callNote = fakeCallNote({ mentor: null });
+      const fn = d => dispatch => dispatch(d);
+
+      const res = await capture(actions.createCallNoteWithMentor(callNote, fn), ctx);
+      expect(res).toEqual([fakeCallNote({ mentor: 23 })]);
     });
   });
 
@@ -65,10 +79,10 @@ describe('actions/callNote', () => {
     });
   });
 
-  describe('createCallNotes', () => {
+  describe('openCreateCallNote', () => {
     it('should create an action for new call notes', () => {
-      expect(actions.createCallNotes(23)).toEqual({
-        type: constants.CALL_NOTES_CREATE,
+      expect(actions.openCreateCallNote({ callId: 23 })).toEqual({
+        type: constants.CALL_NOTE_CREATE_OPEN,
         payload: { callId: 23 },
       });
     });

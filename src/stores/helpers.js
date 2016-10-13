@@ -58,6 +58,9 @@ export const getActivityCallNotes = ({ entities: { callNotes } }, targetActivity
   .filter(({ callActivityId }) => callActivityId === targetActivityId);
 
 
+export const getCall = ({ entities: { calls } }, id) => calls[id];
+
+
 export const getCallNote = ({ entities: { callNotes } }, id) => callNotes[id];
 
 
