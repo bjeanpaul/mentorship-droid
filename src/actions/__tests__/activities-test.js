@@ -29,4 +29,13 @@ describe('actions/activities', () => {
       });
     });
   });
+
+  describe('viewActivityCallNotes', () => {
+    it('should create for viewing call notes', () => {
+      expect(actions.viewActivityCallNotes(21)).toEqual({
+        type: constants.ACTIVITY_CALL_NOTES_VIEW,
+        payload: { activityId: 21 },
+      });
+    });
+  });
 });
