@@ -356,4 +356,24 @@ describe('src/reducers/navigation/top', () => {
         ]));
     });
   });
+
+  describe('CALL_NOTE_CHOOSE', () => {
+    it('should push on the call note detail route', () => {
+      const state = createStack();
+      const route = createRoute(routes.ROUTE_CALL_NOTE_DETAIL, { callNoteId: 21 });
+
+      expect(reduce(state, callNotes.chooseCallNote(21)))
+        .toEqual(push(state, route));
+    });
+  });
+
+  describe('ACTIVITY_CALL_NOTES_VIEW', () => {
+    it('should push on call note list route', () => {
+      const state = createStack();
+      const route = createRoute(routes.ROUTE_CALL_NOTE_LIST, { activityId: 21 });
+
+      expect(reduce(state, activities.viewActivityCallNotes(21)))
+        .toEqual(push(state, route));
+    });
+  });
 });
