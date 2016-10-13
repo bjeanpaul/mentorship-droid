@@ -10,26 +10,35 @@ export default StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderStyle: 'solid',
     paddingBottom: 19,
-    marginBottom: 19,
   },
-  activityContainer: {
+  section: {
+    marginBottom: 45,
+  },
+  sectionBody: {
+    marginTop: 18,
+  },
+  sectionBodyActivity: {
     flexDirection: 'row',
-    marginBottom: 19,
   },
   activityImage: {
     width: 72,
     height: 72,
     marginRight: 16,
   },
+  menteeStateImage: {
+    alignSelf: 'center',
+  },
+  objectiveAchievedImage: {
+    alignSelf: 'center',
+  },
   activityObjective: {
     paddingTop: 0,
     paddingBottom: 0,
     alignSelf: 'center',
   },
-  sectionBottomMargin: {
-    marginBottom: 45,
+  activityHelpfulText: {
+    textAlign: 'center',
   },
   alignCenter: {
-    alignSelf: 'center',
   },
 });

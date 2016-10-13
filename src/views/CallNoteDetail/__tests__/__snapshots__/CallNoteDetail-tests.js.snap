@@ -40,7 +40,7 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
           },
         ]
       }>
-      Sun, Oct 10, 12:10 pm
+      Wed, Sep 28, 7:09 pm
     </Text>
     <View
       style={
@@ -81,13 +81,43 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
     <View
       style={
         Object {
-          "borderBottomWidth": 0.5,
-          "borderColor": "#dfe5e6",
-          "borderStyle": "solid",
-          "marginBottom": 19,
-          "paddingBottom": 19,
+          "marginBottom": 45,
         }
       }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          YOUR REFLECTIONS
+        </Text>
+      </View>
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -100,56 +130,112 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
               "fontSize": 13,
               "textAlign": "center",
             },
-            Object {
-              "color": "#9fb1b3",
-              "fontFamily": "Brandon Text_bold",
-              "fontSize": 12,
-              "fontWeight": "bold",
-              "letterSpacing": 1,
-              "textAlign": "left",
-            },
-          ]
-        }>
-        YOUR REFLECTIONS
-      </Text>
-    </View>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 13,
-            "textAlign": "center",
-          },
-          Array [
             Object {
               "fontSize": 18,
               "paddingBottom": 12,
               "paddingTop": 18,
               "textAlign": "left",
             },
-            Object {
-              "marginBottom": 45,
-            },
-          ],
-        ]
-      }>
-      When deadbolts awake you from dejavu dreams
-    </Text>
+          ]
+        }>
+        It went well
+      </Text>
+    </View>
     <View
       style={
         Object {
-          "borderBottomWidth": 0.5,
-          "borderColor": "#dfe5e6",
-          "borderStyle": "solid",
-          "marginBottom": 19,
-          "paddingBottom": 19,
+          "marginBottom": 45,
         }
       }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          YOUR MENTEE’S MOOD
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginTop": 18,
+          }
+        }>
+        <Image
+          source={undefined}
+          style={
+            Object {
+              "alignSelf": "center",
+            }
+          } />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          HELPFULNESS OF ACTIVITY
+        </Text>
+      </View>
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -162,85 +248,20 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
               "fontSize": 13,
               "textAlign": "center",
             },
-            Object {
-              "color": "#9fb1b3",
-              "fontFamily": "Brandon Text_bold",
-              "fontSize": 12,
-              "fontWeight": "bold",
-              "letterSpacing": 1,
-              "textAlign": "left",
-            },
+            Array [
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left",
+              },
+              Object {
+                "textAlign": "center",
+              },
+            ],
           ]
-        }>
-        YOUR MENTEE’S MOOD
-      </Text>
+        } />
     </View>
-    <Image
-      source={1}
-      style={
-        Array [
-          Object {
-            "marginBottom": 45,
-          },
-          Object {
-            "alignSelf": "center",
-          },
-        ]
-      } />
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 0.5,
-          "borderColor": "#dfe5e6",
-          "borderStyle": "solid",
-          "marginBottom": 19,
-          "paddingBottom": 19,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#003035",
-              "fontFamily": "Brandon Text",
-              "fontSize": 13,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#9fb1b3",
-              "fontFamily": "Brandon Text_bold",
-              "fontSize": 12,
-              "fontWeight": "bold",
-              "letterSpacing": 1,
-              "textAlign": "left",
-            },
-          ]
-        }>
-        HELPFULNESS OF ACTIVITY
-      </Text>
-    </View>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 13,
-            "textAlign": "center",
-          },
-          Object {
-            "marginBottom": 45,
-          },
-        ]
-      }>
-      T\'was OK
-    </Text>
   </ScrollView>
 </View>
 `;
@@ -287,7 +308,7 @@ exports[`CallNoteDetail should render 1`] = `
           },
         ]
       }>
-      Sun, Oct 10, 12:10 pm
+      Wed, Sep 28, 7:09 pm
     </Text>
     <View
       style={
@@ -325,14 +346,18 @@ exports[`CallNoteDetail should render 1`] = `
         "padding": 24,
       }
     }>
-    <View>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
       <View
         style={
           Object {
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
-            "marginBottom": 19,
             "paddingBottom": 19,
           }
         }>
@@ -363,15 +388,19 @@ exports[`CallNoteDetail should render 1`] = `
       </View>
       <View
         style={
-          Object {
-            "flexDirection": "row",
-            "marginBottom": 19,
-          }
+          Array [
+            Object {
+              "marginTop": 18,
+            },
+            Object {
+              "flexDirection": "row",
+            },
+          ]
         }>
         <Image
           source={
             Object {
-              "uri": "http://h.t.t.p.org",
+              "uri": null,
             }
           }
           style={
@@ -408,127 +437,140 @@ exports[`CallNoteDetail should render 1`] = `
               ],
             ]
           }>
-          Deadbolt
+          raaar
         </Text>
       </View>
     </View>
     <View
       style={
         Object {
-          "borderBottomWidth": 0.5,
-          "borderColor": "#dfe5e6",
-          "borderStyle": "solid",
-          "marginBottom": 19,
-          "paddingBottom": 19,
+          "marginBottom": 45,
         }
       }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#003035",
-              "fontFamily": "Brandon Text",
-              "fontSize": 13,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#9fb1b3",
-              "fontFamily": "Brandon Text_bold",
-              "fontSize": 12,
-              "fontWeight": "bold",
-              "letterSpacing": 1,
-              "textAlign": "left",
-            },
-          ]
-        }>
-        YOUR REFLECTIONS
-      </Text>
-    </View>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 13,
-            "textAlign": "center",
-          },
-          Array [
-            Object {
-              "fontSize": 18,
-              "paddingBottom": 12,
-              "paddingTop": 18,
-              "textAlign": "left",
-            },
-            Object {
-              "marginBottom": 45,
-            },
-          ],
-        ]
-      }>
-      When deadbolts awake you from dejavu dreams
-    </Text>
-    <View
-      style={
-        Object {
-          "borderBottomWidth": 0.5,
-          "borderColor": "#dfe5e6",
-          "borderStyle": "solid",
-          "marginBottom": 19,
-          "paddingBottom": 19,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#003035",
-              "fontFamily": "Brandon Text",
-              "fontSize": 13,
-              "textAlign": "center",
-            },
-            Object {
-              "color": "#9fb1b3",
-              "fontFamily": "Brandon Text_bold",
-              "fontSize": 12,
-              "fontWeight": "bold",
-              "letterSpacing": 1,
-              "textAlign": "left",
-            },
-          ]
-        }>
-        YOUR MENTEE’S MOOD
-      </Text>
-    </View>
-    <Image
-      source={1}
-      style={
-        Array [
-          Object {
-            "marginBottom": 45,
-          },
-          Object {
-            "alignSelf": "center",
-          },
-        ]
-      } />
-    <View>
       <View
         style={
           Object {
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
-            "marginBottom": 19,
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          YOUR REFLECTIONS
+        </Text>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Object {
+              "fontSize": 18,
+              "paddingBottom": 12,
+              "paddingTop": 18,
+              "textAlign": "left",
+            },
+          ]
+        }>
+        It went well
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          YOUR MENTEE’S MOOD
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginTop": 18,
+          }
+        }>
+        <Image
+          source={undefined}
+          style={
+            Object {
+              "alignSelf": "center",
+            }
+          } />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
             "paddingBottom": 19,
           }
         }>
@@ -557,29 +599,61 @@ exports[`CallNoteDetail should render 1`] = `
           OBJECTIVE ACHIEVED
         </Text>
       </View>
-      <Image
-        source={1}
+      <View
         style={
-          Array [
-            Object {
-              "marginBottom": 45,
-            },
+          Object {
+            "marginTop": 18,
+          }
+        }>
+        <Image
+          source={1}
+          style={
             Object {
               "alignSelf": "center",
-            },
-          ]
-        } />
+            }
+          } />
+      </View>
     </View>
     <View
       style={
         Object {
-          "borderBottomWidth": 0.5,
-          "borderColor": "#dfe5e6",
-          "borderStyle": "solid",
-          "marginBottom": 19,
-          "paddingBottom": 19,
+          "marginBottom": 45,
         }
       }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          HELPFULNESS OF ACTIVITY
+        </Text>
+      </View>
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -592,38 +666,20 @@ exports[`CallNoteDetail should render 1`] = `
               "fontSize": 13,
               "textAlign": "center",
             },
-            Object {
-              "color": "#9fb1b3",
-              "fontFamily": "Brandon Text_bold",
-              "fontSize": 12,
-              "fontWeight": "bold",
-              "letterSpacing": 1,
-              "textAlign": "left",
-            },
+            Array [
+              Object {
+                "fontSize": 18,
+                "paddingBottom": 12,
+                "paddingTop": 18,
+                "textAlign": "left",
+              },
+              Object {
+                "textAlign": "center",
+              },
+            ],
           ]
-        }>
-        HELPFULNESS OF ACTIVITY
-      </Text>
+        } />
     </View>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 13,
-            "textAlign": "center",
-          },
-          Object {
-            "marginBottom": 45,
-          },
-        ]
-      }>
-      T\'was OK
-    </Text>
   </ScrollView>
 </View>
 `;
