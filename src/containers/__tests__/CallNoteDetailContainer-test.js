@@ -4,17 +4,23 @@ import { fakeState, fakeCallNote, fakeActivity } from 'app/scripts/helpers';
 
 describe('CallNoteDetailContainer', () => {
   describe('mapStateToProps', () => {
-    it('should provide all call notes', () => {
-      const fakeCallNote21 = fakeCallNote({
-        id: 21,
-        callActivity: 50,
-        reflection: 'It was B-O-R-I-N-G',
-        menteeState: 'fine',
-        objectiveAchieved: false,
-        activityHelpful: 'Somewhat',
-        callStartTime: '2010-10-10T10:10Z',
+    it('should provide the call note', () => {
+      const callNote = fakeCallNote({ id: 21 });
+
+      const state = fakeState({
+        entities: {
+          callNotes: {
+            21: callNote,
+          },
+        },
       });
-      const fakeActivity50 = fakeActivity({
+
+      expect(mapStateToProps(state, { callNoteId: 21 }))
+        .toEqual(jasmine.objectContaining({ callNote }));
+    });
+
+    it('should provide the activity', () => {
+      const activity = fakeActivity({
         id: 50,
         objective: 'Let us make a Snowflake',
         icon: 'http://icon.of.snowflake.com',
@@ -23,24 +29,19 @@ describe('CallNoteDetailContainer', () => {
       const state = fakeState({
         entities: {
           callNotes: {
-            21: fakeCallNote21,
+            21: fakeCallNote({
+              id: 21,
+              callActivity: 50,
+            }),
           },
           activities: {
-            50: fakeActivity50,
+            50: activity,
           },
         },
       });
 
       expect(mapStateToProps(state, { callNoteId: 21 }))
-      .toEqual({
-        reflection: 'It was B-O-R-I-N-G',
-        mood: 'fine',
-        completed: false,
-        rating: 'Somewhat',
-        time: '2010-10-10T10:10Z',
-        objective: 'Let us make a Snowflake',
-        icon: 'http://icon.of.snowflake.com',
-      });
+        .toEqual(jasmine.objectContaining({ activity }));
     });
   });
 });
