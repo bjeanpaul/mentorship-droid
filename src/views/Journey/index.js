@@ -8,23 +8,52 @@ import images from 'src/constants/images';
 import styles from './styles';
 
 
+// TODO add icon images once we have these
+const JourneyHeaderIcon = ({
+  onPress,
+}) => (
+  <View>
+    <TouchableWithoutFeedback onPress={onPress}>
+      <View style={styles.headerIconPlaceholder} />
+    </TouchableWithoutFeedback>
+  </View>
+);
+
+
+JourneyHeaderIcon.propTypes = {
+  onPress: PropTypes.func.isRequired,
+};
+
+
 const Journey = ({
   nextScheduledCallDate,
   onNextScheduledCallPress,
   onCallPress,
+  onProfilePress,
 }) => (
   <BaseView>
     <Header style={styles.header}>
-      <Text style={styles.nextCall}>NEXT CALL</Text>
-      <Link
-        style={[styles.date, nextScheduledCallDate && styles.hasDate]}
-        onPress={onNextScheduledCallPress}
-      >
-        {nextScheduledCallDate ?
-          moment(nextScheduledCallDate).format('dddd Do, MMMM YYYY') :
-          'Schedule a call'
+      <View style={styles.headerLeft}>
+        <Text style={styles.nextCall}>NEXT CALL</Text>
+
+        <Link
+          style={[styles.date, nextScheduledCallDate && styles.hasDate]}
+          onPress={onNextScheduledCallPress}
+        >
+        {
+          nextScheduledCallDate
+            ? moment(nextScheduledCallDate).format('ddd, MMM DD, h:mma')
+            : 'Schedule a call'
         }
-      </Link>
+        </Link>
+      </View>
+
+      <View>
+        <JourneyHeaderIcon
+          uid="profile"
+          onPress={onProfilePress}
+        />
+      </View>
     </Header>
 
     <Image
@@ -50,6 +79,7 @@ Journey.propTypes = {
   onNextScheduledCallPress: PropTypes.func.isRequired,
   onCallPress: PropTypes.func.isRequired,
   onMessagePress: PropTypes.func.isRequired,
+  onProfilePress: PropTypes.func.isRequired,
 };
 
 

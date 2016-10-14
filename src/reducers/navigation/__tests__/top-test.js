@@ -1,4 +1,5 @@
-import reduce from 'src/reducers/navigation/top';
+import reduce, { createInitialState } from 'src/reducers/navigation/top';
+import * as auth from 'src/actions/auth';
 import * as entry from 'src/actions/entry';
 import * as landing from 'src/actions/landing';
 import * as sync from 'src/actions/sync';
@@ -9,6 +10,7 @@ import * as calls from 'src/actions/calls';
 import * as callNotes from 'src/actions/callNote';
 import * as schedule from 'src/actions/schedule';
 import * as activities from 'src/actions/activities';
+import * as profile from 'src/actions/profile';
 import * as errors from 'src/constants/errors';
 
 import {
@@ -374,6 +376,20 @@ describe('src/reducers/navigation/top', () => {
 
       expect(reduce(state, activities.viewActivityCallNotes(21)))
         .toEqual(push(state, route));
+    });
+  });
+
+  describe('PROFILE_SETTINGS_OPEN', () => {
+    it('should push on the profile settings route', () => {
+      expect(reduce(createStack(), profile.openProfileSettings()))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_PROFILE_SETTINGS)));
+    });
+  });
+
+  describe('AUTH_LOGOUT', () => {
+    it('should reset the stack to its initial state', () => {
+      expect(reduce(createStack([createRoute('FOO')]), auth.logout()))
+        .toEqual(createInitialState());
     });
   });
 });
