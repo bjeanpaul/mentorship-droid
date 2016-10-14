@@ -43,6 +43,7 @@ Section.propTypes = {
 
 const ProfileSettings = ({
   onBackPress,
+  onCallNotesPress,
   onLogoutPress,
 }) => (
   <BaseView>
@@ -57,6 +58,15 @@ const ProfileSettings = ({
     </Header>
 
     <View style={styles.container}>
+      <Section title="Your Profile">
+        <TextSectionItem
+          uid="callNotes"
+          onPress={onCallNotesPress}
+        >
+          View call notes
+        </TextSectionItem>
+      </Section>
+
       <Section title="Your account">
         <TextSectionItem
           uid="logout"
@@ -72,6 +82,7 @@ const ProfileSettings = ({
 
 ProfileSettings.propTypes = {
   onBackPress: PropTypes.func.isRequired,
+  onCallNotesPress: PropTypes.func.isRequired,
   onLogoutPress: PropTypes.func.isRequired,
 };
 
