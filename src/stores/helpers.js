@@ -53,10 +53,13 @@ export const getScheduledCallActivity = (state, id) => {
 export const getEvents = ({ entities: { events } }) => values(events);
 
 
-export const getActivityCallNotes = ({
+export const getCallNotes = ({
   entities: { callNotes },
-}, activityId) => (
-  filter(callNotes, { callActivity: activityId }));
+}) => sortBy(callNotes, ({ callStartTime }) => +moment(callStartTime));
+
+
+export const getActivityCallNotes = (state, activityId) => (
+  filter(getCallNotes(state), { callActivity: activityId }));
 
 
 export const getCall = ({ entities: { calls } }, id) => calls[id];
@@ -66,7 +69,7 @@ export const getCallNote = ({ entities: { callNotes } }, id) => callNotes[id];
 
 
 export const getNextScheduledCall = (state, predicate = {}, time = Date.now()) => {
-  let res = sortBy(getScheduledCalls(state), ({ callTime }) => callTime);
+  let res = sortBy(getScheduledCalls(state), ({ callTime }) => +moment(callTime));
   res = res.filter(({ callTime }) => moment(callTime).isSameOrAfter(time));
   res = filter(res, predicate);
   return first(res);

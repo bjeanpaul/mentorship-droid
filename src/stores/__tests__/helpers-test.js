@@ -21,6 +21,7 @@ import {
   getScheduledCalls,
   getScheduledCallActivity,
   getEvents,
+  getCallNotes,
   getActivityCallNotes,
   getCall,
   getCallNote,
@@ -297,50 +298,82 @@ describe('helpers', () => {
     });
   });
 
+  describe('getCallNotes', () => {
+    it('should get all call notes in order of their start time', () => {
+      const callNote1 = fakeCallNote({
+        id: 1,
+        callStartTime: '2016-05-21',
+      });
+
+      const callNote2 = fakeCallNote({
+        id: 2,
+        callStartTime: '2016-05-20',
+      });
+
+      const callNote3 = fakeCallNote({
+        id: 3,
+        callStartTime: '2016-05-22',
+      });
+
+      const state = fakeState();
+
+      state.entities.callNotes = {
+        1: callNote1,
+        2: callNote2,
+        3: callNote3,
+      };
+
+      expect(getCallNotes(state)).toEqual([
+        callNote2,
+        callNote1,
+        callNote3,
+      ]);
+    });
+  });
 
   describe('getActivityCallNotes', () => {
     it('should filter the call notes for the target activity id', () => {
-      const fakeCallNote2 = fakeCallNote({
+      const callNote1 = fakeCallNote({
+        id: 1,
+        callActivity: 20,
+      });
+      const callNote2 = fakeCallNote({
         id: 2,
         callActivity: 20,
       });
-      const fakeCallNote5 = fakeCallNote({
-        id: 5,
-        callActivity: 20,
-      });
-      const fakeCallNote6 = fakeCallNote({
-        id: 6,
+      const callNote3 = fakeCallNote({
+        id: 3,
         callActivity: 15,
       });
 
       const state = fakeState();
 
       state.entities.callNotes = {
-        2: fakeCallNote2,
-        5: fakeCallNote5,
-        6: fakeCallNote6,
+        1: callNote1,
+        2: callNote2,
+        3: callNote3,
       };
 
       expect(getActivityCallNotes(state, 20)).toEqual([
-        fakeCallNote2,
-        fakeCallNote5,
+        callNote1,
+        callNote2,
       ]);
     });
   });
 
   describe('getCallNote', () => {
     it('should get the call notes for the id', () => {
-      const fakeCallNote2 = fakeCallNote({
+      const callNote1 = fakeCallNote({
         id: 2,
         callActivityId: 20,
       });
 
       const state = fakeState();
       state.entities.callNotes = {
-        2: fakeCallNote2,
+        2: callNote1,
       };
 
-      expect(getCallNote(state, 2)).toEqual(fakeCallNote2);
+      expect(getCallNote(state, 2)).toEqual(callNote1);
     });
   });
 });
