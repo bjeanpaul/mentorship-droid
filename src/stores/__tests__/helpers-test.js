@@ -331,36 +331,6 @@ describe('helpers', () => {
     });
   });
 
-  describe('getActivityCallNotes', () => {
-    it('should filter the call notes for the target activity id', () => {
-      const callNote1 = fakeCallNote({
-        id: 1,
-        callActivity: 20,
-      });
-      const callNote2 = fakeCallNote({
-        id: 2,
-        callActivity: 20,
-      });
-      const callNote3 = fakeCallNote({
-        id: 3,
-        callActivity: 15,
-      });
-
-      const state = fakeState();
-
-      state.entities.callNotes = {
-        1: callNote1,
-        2: callNote2,
-        3: callNote3,
-      };
-
-      expect(getActivityCallNotes(state, 20)).toEqual([
-        callNote1,
-        callNote2,
-      ]);
-    });
-  });
-
   describe('getCallNote', () => {
     it('should get the call notes for the id', () => {
       const callNote1 = fakeCallNote({

@@ -58,10 +58,6 @@ export const getCallNotes = ({
 }) => sortBy(callNotes, ({ callStartTime }) => +moment(callStartTime));
 
 
-export const getActivityCallNotes = (state, activityId) => (
-  filter(getCallNotes(state), { callActivity: activityId }));
-
-
 export const getCall = ({ entities: { calls } }, id) => calls[id];
 
 
