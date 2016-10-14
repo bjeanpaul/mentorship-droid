@@ -22,7 +22,6 @@ import {
   getScheduledCallActivity,
   getEvents,
   getCallNotes,
-  getActivityCallNotes,
   getCall,
   getCallNote,
   getNextScheduledCall,
