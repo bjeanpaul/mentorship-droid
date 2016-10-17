@@ -117,6 +117,15 @@ describe('src/reducers/navigation/top', () => {
     });
   });
 
+  describe('SCHEDULED_CALL_START', () => {
+    it('should push on the start call route', () => {
+      expect(reduce(createStack(), schedule.startScheduledCall(23)))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_START_CALL, {
+          scheduledCallId: 23,
+        })));
+    });
+  });
+
   describe('CALL_CREATE_REQUEST', () => {
     it('should replace the start call route with the call connecting route', () => {
       const state = push(createStack(), createRoute(routes.ROUTE_START_CALL));

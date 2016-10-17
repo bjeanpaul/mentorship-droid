@@ -84,6 +84,11 @@ export default (state = createInitialState(), action) => {
       return push(state, createRoute(routes.ROUTE_START_CALL, { scheduledCallId }));
     }
 
+    case schedule.SCHEDULED_CALL_START: {
+      const { payload: { scheduledCallId } } = action;
+      return push(state, createRoute(routes.ROUTE_START_CALL, { scheduledCallId }));
+    }
+
     case notifications.CALL_ENDED_RECEIVED: {
       const { payload: { objectId: callId } } = action;
       const route = createRoute(routes.ROUTE_CALL_COMPLETED, { callId });
