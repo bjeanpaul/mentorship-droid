@@ -14,6 +14,8 @@ describe('EventList', () => {
   }
 
   it('should not render unmapped event types', () => {
+    const store = fakeStore(state);
+
     const groups = [{
       date: '2008-08-08',
       label: 'A long time ago',
@@ -40,7 +42,6 @@ describe('EventList', () => {
       },
     });
 
-    fakeStore.getState = () => state;
     expect(render(
       <Provider store={fakeStore}>
         {createComponent({ groups })}
