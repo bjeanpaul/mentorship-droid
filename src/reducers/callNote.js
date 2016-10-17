@@ -22,7 +22,18 @@ const callNote = (state = {}, action) => {
   }
 };
 
-export default combineReducers({
+const reduce = combineReducers({
   navigation,
   callNote,
 });
+
+
+export default (state = {}, action) => {
+  switch (action.type) {
+    case constants.OPEN_CALL_NOTE_CREATE:
+      return reduce({}, action);
+
+    default:
+      return reduce(state, action);
+  }
+};
