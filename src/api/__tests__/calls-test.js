@@ -4,7 +4,7 @@ jest.mock('src/api/request');
 import { identity } from 'lodash';
 import { fakeAuth } from 'app/scripts/helpers';
 import request from 'src/api/request';
-import { createCall } from 'src/api';
+import { createCall, Call } from 'src/api';
 
 
 describe('api/calls', () => {
@@ -18,6 +18,7 @@ describe('api/calls', () => {
       expect(createCall({ fake: 'call' }, fakeAuth())).toEqual({
         url: '/call/',
         method: 'POST',
+        schema: Call,
         data: { fake: 'call' },
         auth: fakeAuth(),
       });

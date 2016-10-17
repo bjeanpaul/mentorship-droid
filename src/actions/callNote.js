@@ -22,8 +22,14 @@ export const createCallNote = apiAction({
   method: api.createCallNote,
   request: staticAction(constants.CALL_NOTE_CREATE_REQUEST),
   success: dataAction(constants.CALL_NOTE_CREATE_SUCCESS),
-  failures: [[ApiResponseError, staticAction(constants.CALL_NOTE_CREATE_FAILURE)]],
 });
+
+
+// TODO remove once api doesn't need client side to figure out mentor id
+export const createCallNoteWithMentor = (data, fn = createCallNote) => (dispatch, ctx) => fn({
+  ...data,
+  mentor: ctx.profile.id,
+})(dispatch, ctx);
 
 
 export const updateCallNote = apiAction({
@@ -42,8 +48,8 @@ export const patchCallNote = apiAction({
 });
 
 
-export const createCallNotes = callId => ({
-  type: constants.CALL_NOTES_CREATE,
+export const openCreateCallNote = ({ callId }) => ({
+  type: constants.CALL_NOTE_CREATE_OPEN,
   payload: { callId },
 });
 
@@ -58,19 +64,7 @@ export const stepBack = () => ({
 });
 
 
-export const changeCallNote = (payload) => ({
+export const changeCallNote = payload => ({
   type: constants.CALL_NOTES_CHANGE_CALL_NOTE,
   payload,
 });
-
-export const save = ({ callId, callNote }) => dispatch => Promise.resolve()
-  .then(() => createCallNote({
-    mentor: 2,
-    call: callId,
-    call_quality: callNote.callQuality,
-    activity_helpful: callNote.rating,
-    reflection: callNote.reflection,
-    mentee_state: callNote.mood,
-    objective_achieved: callNote.completed,
-  }))
-  .then(dispatch);
