@@ -1,6 +1,5 @@
 import * as api from 'src/api';
 import * as constants from 'src/constants/schedule';
-import { getNextScheduledCall } from 'src/stores/helpers';
 
 import {
   apiAction,
@@ -71,15 +70,6 @@ export const openScheduledCall = scheduledCallId => ({
 });
 
 
-export const openNextScheduledCall = () => (dispatch, ctx, getState) => {
-  const scheduledCall = getNextScheduledCall(getState());
-
-  return scheduledCall
-    ? dispatch(openScheduledCall(scheduledCall.id))
-    : dispatch(addScheduledCall());
-};
-
-
 export const changeScheduledCallActivity = (
   staticAction(constants.SCHEDULED_CALL_ACTIVITY_CHANGE));
 
@@ -97,4 +87,10 @@ export const chooseScheduledCallCategory = categoryId => ({
 export const chooseScheduledCallActivity = activityId => ({
   type: constants.SCHEDULED_CALL_ACTIVITY_CHOOSE,
   payload: { activityId },
+});
+
+
+export const startScheduledCall = scheduledCallId => ({
+  type: constants.SCHEDULED_CALL_START,
+  payload: { scheduledCallId },
 });
