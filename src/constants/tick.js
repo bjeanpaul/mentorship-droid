@@ -1,4 +1,4 @@
-const TICK_INTERVAL = 1000;
+const TICK_INTERVAL = 1000 * 60;
 const TICK = 'TICK';
 
 
