@@ -43,6 +43,31 @@ exports[`Text should render paragraphs 1`] = `
 </Text>
 `;
 
+exports[`Text should render secondary titles 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Array [
+      Object {
+        "color": "#003035",
+        "fontFamily": "Brandon Text",
+        "fontSize": 13,
+        "textAlign": "center",
+      },
+      Object {
+        "fontFamily": "Brandon Text_medium",
+        "fontSize": 18,
+        "fontWeight": "400",
+        "textAlign": "left",
+      },
+    ]
+  }>
+  This is a section title. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</Text>
+`;
+
 exports[`Text should render section titles 1`] = `
 <Text
   accessible={true}

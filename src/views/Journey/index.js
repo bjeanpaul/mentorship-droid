@@ -12,26 +12,38 @@ const Journey = ({
   nextScheduledCallDate,
   onNextScheduledCallPress,
   onCallPress,
+  onProfilePress,
 }) => (
   <BaseView>
     <Header style={styles.header}>
-      <Text style={styles.nextCall}>NEXT CALL</Text>
-      <Link
-        style={[styles.date, nextScheduledCallDate && styles.hasDate]}
-        onPress={onNextScheduledCallPress}
-      >
-        {nextScheduledCallDate ?
-          moment(nextScheduledCallDate).format('dddd Do, MMMM YYYY') :
-          'Schedule a call'
+      <View style={styles.headerLeft}>
+        <Text style={styles.nextCall}>NEXT CALL</Text>
+
+        <Link
+          style={[styles.date, nextScheduledCallDate && styles.hasDate]}
+          onPress={onNextScheduledCallPress}
+        >
+        {
+          nextScheduledCallDate
+            ? moment(nextScheduledCallDate).format('ddd, MMM DD, h:mma')
+            : 'Schedule a call'
         }
-      </Link>
+        </Link>
+      </View>
+
+      <View>
+        {/* TODO use profile image once we can get this from the api */}
+        <TouchableWithoutFeedback uid="profile" onPress={onProfilePress}>
+          <Image source={images.PROFILE_PLACEHOLDER_AVATAR} />
+        </TouchableWithoutFeedback>
+      </View>
     </Header>
 
     <Image
       source={images.JOURNEY_MENTEE}
       style={styles.mentee}
     >
-      <TouchableWithoutFeedback onPress={onCallPress}>
+      <TouchableWithoutFeedback uid="call" onPress={onCallPress}>
         <Image
           source={images.JOURNEY_CALL_ICON}
           style={styles.icon}
@@ -50,6 +62,7 @@ Journey.propTypes = {
   onNextScheduledCallPress: PropTypes.func.isRequired,
   onCallPress: PropTypes.func.isRequired,
   onMessagePress: PropTypes.func.isRequired,
+  onProfilePress: PropTypes.func.isRequired,
 };
 
 

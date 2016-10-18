@@ -4,6 +4,11 @@ import colors from 'src/constants/colors';
 
 export default StyleSheet.create({
   header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  headerLeft: {
     alignItems: 'flex-start',
   },
   nextCall: {
