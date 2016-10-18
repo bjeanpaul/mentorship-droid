@@ -4,28 +4,12 @@ import { getCallNote, getActivity } from 'src/stores/helpers';
 import { dismissScreen } from 'src/actions/navigation';
 
 const mapStateToProps = (state, { callNoteId }) => {
-  const {
-    reflection,
-    menteeState: mood,
-    objectiveAchieved: completed,
-    activityHelpful: rating,
-    callActivity: activityId,
-    callStartTime: time,
-  } = getCallNote(state, callNoteId);
-
-  const {
-    objective,
-    icon,
-  } = getActivity(state, activityId);
+  const callNote = getCallNote(state, callNoteId);
+  const activity = callNote.callActivity && getActivity(state, callNote.callActivity);
 
   return {
-    time,
-    objective,
-    icon,
-    reflection,
-    mood,
-    completed,
-    rating,
+    callNote,
+    activity,
   };
 };
 

@@ -30,7 +30,7 @@ const reduce = combineReducers({
 
 export default (state = {}, action) => {
   switch (action.type) {
-    case constants.OPEN_CALL_NOTE_CREATE:
+    case constants.CALL_NOTE_CREATE_OPEN:
       return reduce({}, action);
 
     default:

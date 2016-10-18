@@ -1,4 +1,4 @@
-import { upperFirst } from 'lodash';
+import { upperFirst, isUndefined } from 'lodash';
 import React, { PropTypes } from 'react';
 import { View, Image, TouchableWithoutFeedback, ScrollView } from 'react-native';
 import { Text, MultiLineTextInput, RadioList } from 'src/components';
@@ -11,47 +11,52 @@ import styles from './styles';
 
 
 const Reflections = ({
-  reflections = '',
+  reflection = '',
   onChangeText,
 }) => (
   <FormStep
-    paginationDisabled={reflections.length === 0}
+    paginationDisabled={reflection.length === 0}
     title="Please share your reflections of the discussion"
   >
     <MultiLineTextInput
-      value={reflections}
+      value={reflection}
       placeholder="Type your answer here"
-      onChangeText={text => onChangeText({ reflections: text })}
+      onChangeText={text => onChangeText({ reflection: text })}
     />
 
   </FormStep>
 );
 Reflections.propTypes = {
-  reflections: PropTypes.string,
+  reflection: PropTypes.string,
   onChangeText: PropTypes.func.isRequired,
 };
 
 
 const Mood = ({
-  mood = '',
+  menteeState = '',
   onSelectImage,
 }) => (
   <FormStep
-    paginationDisabled={mood.length === 0}
+    paginationDisabled={menteeState.length === 0}
     title="How was your Mentee today?"
   >
     <View style={styles.list}>
       {Object.keys(moods).map(key => (
         <TouchableWithoutFeedback
           key={key}
-          onPress={() => onSelectImage({ mood: key })}
+          onPress={() => onSelectImage({ menteeState: key })}
         >
           <View style={styles.item}>
             <Image
               style={styles.image}
               source={moods[key]}
             >
-              <View style={[styles.imageHighlight, mood === key && styles.imageIsSelected]} />
+            <View
+              style={[
+                styles.imageHighlight,
+                menteeState === key && styles.imageIsSelected,
+              ]}
+            />
             </Image>
             <Text style={styles.label}>{upperFirst(key)}</Text>
           </View>
@@ -61,36 +66,36 @@ const Mood = ({
   </FormStep>
 );
 Mood.propTypes = {
-  mood: PropTypes.string,
+  menteeState: PropTypes.string,
   onSelectImage: PropTypes.func.isRequired,
 };
 
 
 const Completed = ({
-  completed,
+  objectiveAchieved,
   objective,
   color,
   onSelectImage,
 }) => (
   <FormStep
-    paginationDisabled={typeof(completed) !== 'boolean'}
+    paginationDisabled={isUndefined(objectiveAchieved)}
     title="Did you achieve the objective?"
   >
     <View style={styles.completedContainer}>
       <View style={styles.yesNoContainer}>
-        <TouchableWithoutFeedback onPress={() => onSelectImage({ completed: true })}>
+        <TouchableWithoutFeedback onPress={() => onSelectImage({ objectiveAchieved: true })}>
           <Image
             source={
-              completed ?
+              objectiveAchieved ?
               images.CALL_NOTES_COMPLETED_YES_SELECTED :
               images.CALL_NOTES_COMPLETED_YES
             }
           />
         </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback onPress={() => onSelectImage({ completed: false })}>
+        <TouchableWithoutFeedback onPress={() => onSelectImage({ objectiveAchieved: false })}>
           <Image
             source={
-              completed === false ?
+              objectiveAchieved === false ?
               images.CALL_NOTES_COMPLETED_NO_SELECTED :
               images.CALL_NOTES_COMPLETED_NO
             }
@@ -112,7 +117,7 @@ const Completed = ({
   </FormStep>
 );
 Completed.propTypes = {
-  completed: PropTypes.any,
+  objectiveAchieved: PropTypes.any,
   onSelectImage: PropTypes.func.isRequired,
   objective: PropTypes.string,
   color: PropTypes.string,
@@ -120,7 +125,7 @@ Completed.propTypes = {
 
 
 const Rating = ({
-  rating = '',
+  activityHelpful = '',
   onChangeText,
 }) => {
   const items = [
@@ -130,11 +135,11 @@ const Rating = ({
     'Quite a bit',
     'A lot',
   ];
-  const initialSelectedIndex = items.indexOf(rating);
+  const initialSelectedIndex = items.indexOf(activityHelpful);
 
   return (
     <FormStep
-      paginationDisabled={rating.length === 0}
+      paginationDisabled={activityHelpful.length === 0}
       title="Was the activity helpful in facilitating your discussion?"
     >
       <View style={styles.ratingContainer}>
@@ -142,7 +147,7 @@ const Rating = ({
           <View>
             <RadioList
               items={items}
-              onIndexChanged={(item) => onChangeText({ rating: item.item })}
+              onIndexChanged={(item) => onChangeText({ activityHelpful: item.item })}
               initialSelectedIndex={initialSelectedIndex === -1 ? initialSelectedIndex : void 0}
             />
           </View>
@@ -152,7 +157,7 @@ const Rating = ({
   );
 };
 Rating.propTypes = {
-  rating: PropTypes.string,
+  activityHelpful: PropTypes.string,
   onChangeText: PropTypes.func.isRequired,
 };
 

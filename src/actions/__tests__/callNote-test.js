@@ -118,4 +118,14 @@ describe('actions/callNote', () => {
       });
     });
   });
+
+  describe('chooseCallNote', () => {
+    it('should create an actions for choosing a call note', () => {
+      expect(actions.chooseCallNote(21))
+        .toEqual({
+          type: constants.CALL_NOTE_CHOOSE,
+          payload: { callNoteId: 21 },
+        });
+    });
+  });
 });

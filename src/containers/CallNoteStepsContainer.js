@@ -30,7 +30,7 @@ export const completedMapDispatchToProps = (state, { call }) => {
   const { color } = getCategory(state, category);
 
   return {
-    completed: state.callNote.callNote.completed,
+    objectiveAchieved: state.callNote.callNote.objectiveAchieved,
     objective,
     color,
   };
@@ -48,12 +48,12 @@ export const savingMapStateToProps = (state, { call }) => ({
 export default {
   Reflections: callNoteContainer({
     component: Reflections,
-    callNoteProps: ['reflections'],
+    callNoteProps: ['reflection'],
   }),
 
   Mood: callNoteContainer({
     component: Mood,
-    callNoteProps: ['mood'],
+    callNoteProps: ['menteeState'],
     actions: {
       onSelectImage: changeCallNote,
     },
@@ -65,7 +65,7 @@ export default {
 
   Rating: callNoteContainer({
     component: Rating,
-    callNoteProps: ['rating'],
+    callNoteProps: ['activityHelpful'],
   }),
 
   CallQuality: callNoteContainer({

@@ -37,7 +37,7 @@ export default StyleSheet.create({
   },
   status: {
     color: colors.ACTIVITY_STATUS,
-    fontSize: 16,
+    fontSize: 14,
     marginLeft: 24,
     marginRight: 24,
   },

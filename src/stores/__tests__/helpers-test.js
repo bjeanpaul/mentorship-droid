@@ -21,7 +21,7 @@ import {
   getScheduledCalls,
   getScheduledCallActivity,
   getEvents,
-  getActivityCallNotes,
+  getCallNotes,
   getCall,
   getCallNote,
   getNextScheduledCall,
@@ -229,11 +229,13 @@ describe('helpers', () => {
         }),
       };
 
-      expect(getNextScheduledCall(state, '2016-09-22T14:31:23.431Z')).toEqual(target);
+      expect(getNextScheduledCall(state, null, '2016-09-22T14:31:23.431Z'))
+        .toEqual(target);
     });
 
     it('should return the next scheduled call when none are in the past', () => {
       const state = fakeState();
+
       state.entities.scheduledCalls = {
         4: fakeScheduledCall({
           id: 4,
@@ -244,7 +246,29 @@ describe('helpers', () => {
           callTime: '2016-09-30',
         }),
       };
-      expect(getNextScheduledCall(state, '2016-09-20').callTime).toEqual('2016-09-25');
+
+      expect(getNextScheduledCall(state, null, '2016-09-20').callTime)
+        .toEqual('2016-09-25');
+    });
+
+    it('should support a predicate', () => {
+      const state = fakeState();
+
+      state.entities.scheduledCalls = {
+        4: fakeScheduledCall({
+          id: 4,
+          callTime: '2016-09-24',
+          activity: 21,
+        }),
+        5: fakeScheduledCall({
+          id: 5,
+          callTime: '2016-09-25',
+          activity: 23,
+        }),
+      };
+
+      expect(getNextScheduledCall(state, { activity: 23 }, '2016-09-20').callTime)
+        .toEqual('2016-09-25');
     });
   });
 
@@ -273,49 +297,52 @@ describe('helpers', () => {
     });
   });
 
+  describe('getCallNotes', () => {
+    it('should get all call notes in order of their start time', () => {
+      const callNote1 = fakeCallNote({
+        id: 1,
+        callStartTime: '2016-05-21',
+      });
 
-  describe('getActivityCallNotes', () => {
-    it('should filter the call notes for the target activity id', () => {
-      const fakeCallNote2 = fakeCallNote({
+      const callNote2 = fakeCallNote({
         id: 2,
-        callActivityId: 20,
+        callStartTime: '2016-05-20',
       });
-      const fakeCallNote5 = fakeCallNote({
-        id: 5,
-        callActivityId: 20,
-      });
-      const fakeCallNote6 = fakeCallNote({
-        id: 6,
-        callActivityId: 15,
+
+      const callNote3 = fakeCallNote({
+        id: 3,
+        callStartTime: '2016-05-22',
       });
 
       const state = fakeState();
+
       state.entities.callNotes = {
-        2: fakeCallNote2,
-        5: fakeCallNote5,
-        6: fakeCallNote6,
+        1: callNote1,
+        2: callNote2,
+        3: callNote3,
       };
 
-      expect(getActivityCallNotes(state, 20)).toEqual([
-        fakeCallNote2,
-        fakeCallNote5,
+      expect(getCallNotes(state)).toEqual([
+        callNote2,
+        callNote1,
+        callNote3,
       ]);
     });
   });
 
   describe('getCallNote', () => {
     it('should get the call notes for the id', () => {
-      const fakeCallNote2 = fakeCallNote({
+      const callNote1 = fakeCallNote({
         id: 2,
         callActivityId: 20,
       });
 
       const state = fakeState();
       state.entities.callNotes = {
-        2: fakeCallNote2,
+        2: callNote1,
       };
 
-      expect(getCallNote(state, 2)).toEqual(fakeCallNote2);
+      expect(getCallNote(state, 2)).toEqual(callNote1);
     });
   });
 });

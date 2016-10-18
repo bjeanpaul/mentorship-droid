@@ -16,7 +16,7 @@ describe('CallNoteList', () => {
 
   it('should render', () => {
     const el = render(createComponent());
-    expect(el).toMatchSnapshot();
+    expect(el.toJSON()).toMatchSnapshot();
   });
 
   it('should render call notes as rows', () => {
@@ -26,7 +26,7 @@ describe('CallNoteList', () => {
         fakeCallNote({ id: 2 }),
       ],
     }));
-    expect(el).toMatchSnapshot();
+    expect(el.toJSON()).toMatchSnapshot();
   });
 
   it('should call onDismissPress', () => {
@@ -34,12 +34,14 @@ describe('CallNoteList', () => {
     const el = shallow(createComponent({ onDismissPress }));
 
     el.findWhere(uidEquals('dismiss'))
-    .simulate('press');
+      .simulate('press');
+
     expect(onDismissPress).toBeCalled();
   });
 
   it('should call onRowPress when a row is tapped', () => {
     const onRowPress = jest.fn();
+
     const el = shallow(createComponent({
       onRowPress,
       callNotes: [
