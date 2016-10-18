@@ -120,9 +120,24 @@ export default (state = createInitialState(), action) => {
       return replaceOrPush(state, routes.ROUTE_CREATE_CALL_NOTES, route);
     }
 
+    case callNotes.CALL_NOTE_CHOOSE: {
+      const { payload: { callNoteId } } = action;
+      const route = createRoute(routes.ROUTE_CALL_NOTE_DETAIL, { callNoteId });
+      return push(state, route);
+    }
+
+    case callNotes.CALL_NOTES_VIEW_ALL: {
+      return push(state, createRoute(routes.ROUTE_CALL_NOTE_LIST));
+    }
+
     case activities.ACTIVITY_SCHEDULE_CALL: {
       const { payload: { activityId } } = action;
       return push(state, createRoute(routes.ROUTE_SCHEDULE_CALL, { activityId }));
+    }
+
+    case activities.ACTIVITY_CALL_NOTES_VIEW: {
+      const { payload: { activityId } } = action;
+      return push(state, createRoute(routes.ROUTE_CALL_NOTE_LIST, { activityId }));
     }
 
     case schedule.SCHEDULED_CALL_ADD: {

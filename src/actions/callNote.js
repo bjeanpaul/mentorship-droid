@@ -68,3 +68,12 @@ export const changeCallNote = payload => ({
   type: constants.CALL_NOTES_CHANGE_CALL_NOTE,
   payload,
 });
+
+
+export const chooseCallNote = callNoteId => ({
+  type: constants.CALL_NOTE_CHOOSE,
+  payload: { callNoteId },
+});
+
+
+export const viewAllCallNotes = staticAction(constants.CALL_NOTES_VIEW_ALL);

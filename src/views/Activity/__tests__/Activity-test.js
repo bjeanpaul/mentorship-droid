@@ -2,8 +2,15 @@ import { noop } from 'lodash';
 import React from 'react';
 
 import Activity from 'src/views/Activity';
-import { fakeCategory, fakeActivity, uidEquals } from 'app/scripts/helpers';
 import { ACTIVITY_POSTER } from 'app/scripts/fixtures';
+
+import {
+  fakeCallNote,
+  fakeCategory,
+  fakeActivity,
+  fakeScheduledCall,
+  uidEquals,
+} from 'app/scripts/helpers';
 
 
 describe('Activity', () => {
@@ -13,23 +20,35 @@ describe('Activity', () => {
       activity={fakeActivity({ title: 'Activity 1' })}
       onBackPress={noop}
       onSchedulePress={noop}
+      onReschedulePress={noop}
+      onViewCallNotesPress={noop}
       {...props}
     />
   );
 
   it('should render', () => {
     const el = render(createComponent());
-    expect(el).toMatchSnapshot();
+    expect(el.toJSON()).toMatchSnapshot();
   });
 
   it('should not try display a poster if none is given', () => {
     const el = render(createComponent({ poster: null }));
-    expect(el).toMatchSnapshot();
+    expect(el.toJSON()).toMatchSnapshot();
   });
 
   it('should display the poster if one is given', () => {
     const el = render(createComponent({ poster: ACTIVITY_POSTER }));
-    expect(el).toMatchSnapshot();
+    expect(el.toJSON()).toMatchSnapshot();
+  });
+
+  it('should display the relevant context for the latest call note', () => {
+    const el = render(createComponent({ latestCallNotes: fakeCallNote() }));
+    expect(el.toJSON()).toMatchSnapshot();
+  });
+
+  it('should display the relevant context for the next scheduled call', () => {
+    const el = render(createComponent({ nextScheduledCall: fakeScheduledCall() }));
+    expect(el.toJSON()).toMatchSnapshot();
   });
 
   it('should call onBackPress when the back button is pressed', () => {
@@ -50,11 +69,9 @@ describe('Activity', () => {
       onSchedulePress,
     }));
 
-    el.find('Action')
-      .at(0)
+    el.findWhere(uidEquals('topAction'))
       .shallow()
       .find('ActionButton')
-      .shallow()
       .simulate('press');
 
     expect(onSchedulePress).toBeCalled();
@@ -68,13 +85,79 @@ describe('Activity', () => {
       onSchedulePress,
     }));
 
-    el.find('Action')
-      .at(1)
+    el.findWhere(uidEquals('bottomAction'))
       .shallow()
       .find('ActionButton')
-      .shallow()
       .simulate('press');
 
     expect(onSchedulePress).toBeCalled();
+  });
+
+  it('should call onReschedulePress when the top schedule button is pressed', () => {
+    const onReschedulePress = jest.fn();
+
+    const el = shallow(createComponent({
+      id: 23,
+      nextScheduledCall: fakeScheduledCall(),
+      onReschedulePress,
+    }));
+
+    el.findWhere(uidEquals('topAction'))
+      .shallow()
+      .find('ActionButton')
+      .simulate('press');
+
+    expect(onReschedulePress).toBeCalled();
+  });
+
+  it('should call onReschedulePress when the bottom schedule button is pressed', () => {
+    const onReschedulePress = jest.fn();
+
+    const el = shallow(createComponent({
+      id: 23,
+      nextScheduledCall: fakeScheduledCall(),
+      onReschedulePress,
+    }));
+
+    el.findWhere(uidEquals('bottomAction'))
+      .shallow()
+      .find('ActionButton')
+      .simulate('press');
+
+    expect(onReschedulePress).toBeCalled();
+  });
+
+  it('should call onViewCallNotesPress when the top schedule button is pressed', () => {
+    const onViewCallNotesPress = jest.fn();
+
+    const el = shallow(createComponent({
+      id: 23,
+      latestCallNotes: fakeCallNote(),
+      onViewCallNotesPress,
+    }));
+
+    el.findWhere(uidEquals('topAction'))
+      .shallow()
+      .find('ActionButton')
+      .simulate('press');
+
+    expect(onViewCallNotesPress).toBeCalled();
+  });
+
+  it('should call onViewCallNotesPress when the bottom schedule button is pressed', () => {
+    const onViewCallNotesPress = jest.fn();
+
+    const el = shallow(createComponent({
+      id: 23,
+      latestCallNotes: fakeCallNote(),
+      onViewCallNotesPress,
+    }));
+
+    el.findWhere(uidEquals('bottomAction'))
+      .shallow()
+      .find('ActionButton')
+      .simulate('press');
+
+    expect(onViewCallNotesPress).toBeCalled();
   });
 });

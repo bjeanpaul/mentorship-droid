@@ -24,11 +24,11 @@ const CallNoteList = ({
         <TouchableNativeFeedback
           callNoteId={callNote.id}
           key={callNote.id}
-          onPress={() => onRowPress(callNote)}
+          onPress={() => onRowPress(callNote.id)}
         >
           <View style={styles.row}>
             <Text style={styles.rowText}>
-              {moment(callNote.callStartTime).format('dddd Do, MMMM YYYY')}
+              {moment(callNote.callStartTime).format('ddd, MMM D, h:mm a')}
             </Text>
           </View>
         </TouchableNativeFeedback>

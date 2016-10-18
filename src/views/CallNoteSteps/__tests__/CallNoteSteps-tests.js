@@ -22,43 +22,43 @@ describe('CallNoteSteps', () => {
   it('Reflections', () => {
     const el = render(createComponent(
       <Reflections
-        reflections="Walk in silence"
+        reflection="Walk in silence"
         onChangeText={noop}
       />
     ));
-    expect(el).toMatchSnapshot();
+    expect(el.toJSON()).toMatchSnapshot();
   });
 
   it('Mood', () => {
     const el = render(createComponent(
       <Mood
-        mood="Sad"
+        menteeState="Sad"
         onSelectImage={noop}
       />
     ));
-    expect(el).toMatchSnapshot();
+    expect(el.toJSON()).toMatchSnapshot();
   });
 
   it('Completed', () => {
     const el = render(createComponent(
       <Completed
-        completed={void 0}
+        objectiveAchieved={void 0}
         objective="None"
         color="pink"
         onSelectImage={noop}
       />
     ));
-    expect(el).toMatchSnapshot();
+    expect(el.toJSON()).toMatchSnapshot();
   });
 
-  it('CallQuality', () => {
+  it('Rating', () => {
     const el = render(createComponent(
       <Rating
-        rating="A lot"
+        activityHelpful="A lot"
         onChangeText={noop}
       />
     ));
-    expect(el).toMatchSnapshot();
+    expect(el.toJSON()).toMatchSnapshot();
   });
 
   it('CallQuality', () => {
@@ -68,6 +68,6 @@ describe('CallNoteSteps', () => {
         onChangeText={noop}
       />
     ));
-    expect(el).toMatchSnapshot();
+    expect(el.toJSON()).toMatchSnapshot();
   });
 });

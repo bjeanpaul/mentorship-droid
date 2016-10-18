@@ -9,6 +9,7 @@ describe('ProfileSettings', () => {
   const createComponent = (props = {}) => (
     <ProfileSettings
       onBackPress={noop}
+      onCallNotesPress={noop}
       onLogoutPress={noop}
       {...props}
     />
@@ -26,6 +27,16 @@ describe('ProfileSettings', () => {
       .simulate('press');
 
     expect(onBackPress.mock.calls).toEqual([[]]);
+  });
+
+  it('should call onCallNotesPress when the logout is pressed', () => {
+    const onCallNotesPress = jest.fn();
+    const el = shallow(createComponent({ onCallNotesPress }));
+
+    el.findWhere(uidEquals('callNotes'))
+      .simulate('press');
+
+    expect(onCallNotesPress.mock.calls).toEqual([[]]);
   });
 
   it('should call onLogoutPress when the logout is pressed', () => {

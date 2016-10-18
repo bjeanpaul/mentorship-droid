@@ -48,7 +48,7 @@ describe('CallNoteStepsContainer', () => {
         .toEqual({
           color: 'orange',
           objective: 'to eat ice-cream',
-          completed: void 0,
+          objectiveAchieved: void 0,
         });
     });
   });

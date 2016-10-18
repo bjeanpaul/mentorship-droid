@@ -15,7 +15,7 @@ describe('reducers/callNote', () => {
     });
   });
 
-  describe('OPEN_CALL_NOTE_CREATE', () => {
+  describe('CALL_NOTE_CREATE_OPEN', () => {
     it('should reset the state to the initial state', () => {
       expect(reduce(void 0, openCreateCallNote(23)))
         .toEqual(reduce(void 0, { type: 'FAKE' }));
