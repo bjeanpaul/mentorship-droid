@@ -4,7 +4,19 @@ import colors from 'src/constants/colors';
 
 export default StyleSheet.create({
   header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  headerLeft: {
     alignItems: 'flex-start',
+  },
+  // TODO remove once we have image icons
+  headerIconPlaceholder: {
+    backgroundColor: colors.JOURNEY_BG,
+    width: 40,
+    height: 40,
+    borderRadius: 40,
   },
   nextCall: {
     fontSize: 12,

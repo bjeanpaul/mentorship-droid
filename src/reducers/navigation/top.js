@@ -11,6 +11,7 @@ import * as calls from 'src/constants/calls';
 import * as callNotes from 'src/constants/callNote';
 import * as schedule from 'src/constants/schedule';
 import * as activities from 'src/constants/activities';
+import * as profile from 'src/constants/profile';
 import * as errors from 'src/constants/errors';
 
 
@@ -173,6 +174,9 @@ export default (state = createInitialState(), action) => {
       const newState = remove(state, routes.ROUTE_SCHEDULE_CALL);
       return replaceOrPush(newState, routes.ROUTE_SCHEDULING_CALL, route);
     }
+
+    case profile.PROFILE_SETTINGS_OPEN:
+      return push(state, createRoute(routes.ROUTE_PROFILE_SETTINGS));
 
     default:
       return state;
