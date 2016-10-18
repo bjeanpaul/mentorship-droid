@@ -2,6 +2,7 @@ import { merge, uniqueId } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
 import { Profile, ScheduledCall, Activity, Category, Event, CallNote } from 'src/api';
 import { getContext } from 'src/stores/helpers';
+import { createStack } from 'src/navigationHelpers';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/event';
 
 
@@ -76,6 +77,13 @@ export const fakeProfile = data => ({
 });
 
 
+export const fakeCall = data => ({
+  id: 20,
+  activity: null,
+  ...data,
+});
+
+
 export const fakeEvent = data => ({
   id: 23,
   occuredAt: '2016-09-16T11:19:17.368442Z',
@@ -105,6 +113,10 @@ export const fakeState = (overrides = {}) => merge({}, {
     profileId: 23,
     auth: fakeAuth(),
   },
+  callNote: {
+    navigation: createStack(),
+    callNote: {},
+  },
   entities: {
     profiles: {
       23: fakeProfile({ id: 23 }),
@@ -120,6 +132,9 @@ export const fakeState = (overrides = {}) => merge({}, {
     },
     scheduledCalls: {
       23: fakeScheduledCall({ id: 23 }),
+    },
+    calls: {
+      20: fakeCall({ id: 20 }),
     },
     callNotes: {
       100: fakeCallNote({ id: 100 }),
@@ -162,8 +177,13 @@ export const fakeActivityListData = (data = [fakeActivity()]) => (
   normalize(data, arrayOf(Activity)));
 
 
+export const fakeCallNoteData = (data = fakeCallNote()) => (
+  normalize(data, CallNote));
+
+
 export const fakeListEventsData = (data = [fakeEvent()]) => (
     normalize(data, arrayOf(Event)));
+
 
 export const fakeListCallNotesData = (data = [fakeCallNote()]) => (
     normalize(data, arrayOf(CallNote)));

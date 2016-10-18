@@ -104,10 +104,15 @@ export default (state = createInitialState(), action) => {
       return push(state, createRoute(routes.ROUTE_START_CALL));
     }
 
-    case callNotes.CALL_NOTES_CREATE: {
+    case callNotes.CALL_NOTE_CREATE_OPEN: {
       const { payload: { callId } } = action;
       const route = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId });
       return replaceOrPush(state, routes.ROUTE_CALL_COMPLETED, route);
+    }
+
+    case callNotes.CALL_NOTE_CREATE_SUCCESS: {
+      const route = createRoute(routes.ROUTE_CALL_NOTE_SAVED);
+      return replaceOrPush(state, routes.ROUTE_CREATE_CALL_NOTES, route);
     }
 
     case activities.ACTIVITY_SCHEDULE_CALL: {
