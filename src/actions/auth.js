@@ -31,3 +31,6 @@ export const login = (email, password) => dispatch => Promise.resolve()
     [ApiResponseError, loginFailure],
   ]))
   .done(dispatch);
+
+
+export const logout = staticAction(constants.AUTH_LOGOUT);

@@ -1,17 +1,22 @@
+import { isUndefined, filter } from 'lodash';
 import { connect } from 'react-redux';
 import CallNoteList from 'src/views/CallNoteList';
-import { getActivityCallNotes } from 'src/stores/helpers';
-import { noop } from 'lodash';
+import { getCallNotes } from 'src/stores/helpers';
+import { dismissScreen } from 'src/actions/navigation';
+import { chooseCallNote } from 'src/actions/callNote';
 
 
-export const mapStateToProps = (state, { activityId }) => ({
-  callNotes: getActivityCallNotes(state, activityId),
-});
+// TODO handle call notes without activities once we have designs for this
+export const mapStateToProps = (state, { activityId } = {}) => {
+  let callNotes = getCallNotes(state);
+  if (!isUndefined(activityId)) callNotes = filter(callNotes, { callActivity: activityId });
+  return { callNotes };
+};
 
 
 export const mapDispatchToProps = {
-  onRowPress: () => noop, // TODO
-  onDismissPress: () => noop, // TODO
+  onRowPress: chooseCallNote,
+  onDismissPress: dismissScreen,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CallNoteList);

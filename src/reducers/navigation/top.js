@@ -1,5 +1,6 @@
 import { includes } from 'lodash';
 import * as routes from 'src/constants/routes';
+import * as auth from 'src/constants/auth';
 import * as sync from 'src/constants/sync';
 import * as landing from 'src/constants/landing';
 import * as entry from 'src/constants/entry';
@@ -10,6 +11,7 @@ import * as calls from 'src/constants/calls';
 import * as callNotes from 'src/constants/callNote';
 import * as schedule from 'src/constants/schedule';
 import * as activities from 'src/constants/activities';
+import * as profile from 'src/constants/profile';
 import * as errors from 'src/constants/errors';
 
 
@@ -30,10 +32,16 @@ const popEphemeral = state => includes(routes.EPHEMERAL_ROUTES, topOf(state).key
   : state;
 
 
-export default (state = createStack([
+export const createInitialState = () => createStack([
   createRoute(routes.ROUTE_LANDING),
-]), action) => {
+]);
+
+
+export default (state = createInitialState(), action) => {
   switch (action.type) {
+    case auth.AUTH_LOGOUT:
+      return createInitialState();
+
     case navigation.SCREEN_DISMISS:
       return pop(state);
 
@@ -96,15 +104,35 @@ export default (state = createStack([
       return push(state, createRoute(routes.ROUTE_START_CALL));
     }
 
-    case callNotes.CALL_NOTES_CREATE: {
+    case callNotes.CALL_NOTE_CREATE_OPEN: {
       const { payload: { callId } } = action;
       const route = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId });
       return replaceOrPush(state, routes.ROUTE_CALL_COMPLETED, route);
     }
 
+    case callNotes.CALL_NOTE_CREATE_SUCCESS: {
+      const route = createRoute(routes.ROUTE_CALL_NOTE_SAVED);
+      return replaceOrPush(state, routes.ROUTE_CREATE_CALL_NOTES, route);
+    }
+
+    case callNotes.CALL_NOTE_CHOOSE: {
+      const { payload: { callNoteId } } = action;
+      const route = createRoute(routes.ROUTE_CALL_NOTE_DETAIL, { callNoteId });
+      return push(state, route);
+    }
+
+    case callNotes.CALL_NOTES_VIEW_ALL: {
+      return push(state, createRoute(routes.ROUTE_CALL_NOTE_LIST));
+    }
+
     case activities.ACTIVITY_SCHEDULE_CALL: {
       const { payload: { activityId } } = action;
       return push(state, createRoute(routes.ROUTE_SCHEDULE_CALL, { activityId }));
+    }
+
+    case activities.ACTIVITY_CALL_NOTES_VIEW: {
+      const { payload: { activityId } } = action;
+      return push(state, createRoute(routes.ROUTE_CALL_NOTE_LIST, { activityId }));
     }
 
     case schedule.SCHEDULED_CALL_ADD: {
@@ -161,6 +189,9 @@ export default (state = createStack([
       const newState = remove(state, routes.ROUTE_SCHEDULE_CALL);
       return replaceOrPush(newState, routes.ROUTE_SCHEDULING_CALL, route);
     }
+
+    case profile.PROFILE_SETTINGS_OPEN:
+      return push(state, createRoute(routes.ROUTE_PROFILE_SETTINGS));
 
     default:
       return state;

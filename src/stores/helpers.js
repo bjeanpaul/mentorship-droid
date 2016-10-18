@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { values, isUndefined, sortBy, first } from 'lodash';
+import { values, isUndefined, sortBy, filter, first } from 'lodash';
 
 
 export const getAuthUserProfile = ({
@@ -53,15 +53,20 @@ export const getScheduledCallActivity = (state, id) => {
 export const getEvents = ({ entities: { events } }) => values(events);
 
 
-export const getActivityCallNotes = ({ entities: { callNotes } }, targetActivityId) =>
-  values(callNotes)
-  .filter(({ callActivityId }) => callActivityId === targetActivityId);
+export const getCallNotes = ({
+  entities: { callNotes },
+}) => sortBy(callNotes, ({ callStartTime }) => +moment(callStartTime));
+
+
+export const getCall = ({ entities: { calls } }, id) => calls[id];
 
 
 export const getCallNote = ({ entities: { callNotes } }, id) => callNotes[id];
 
 
-export const getNextScheduledCall = (state, time = Date.now()) => first(
-  sortBy(getScheduledCalls(state), ({ callTime }) => callTime)
-  .filter(({ callTime }) => moment(callTime).isSameOrAfter(time))
-);
+export const getNextScheduledCall = (state, predicate = {}, time = Date.now()) => {
+  let res = sortBy(getScheduledCalls(state), ({ callTime }) => +moment(callTime));
+  res = res.filter(({ callTime }) => moment(callTime).isSameOrAfter(time));
+  res = filter(res, predicate);
+  return first(res);
+};

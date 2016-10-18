@@ -33,6 +33,8 @@ import JOURNEY_CALL_ICON from 'app/assets/call-icon.png';
 import JOURNEY_MESSAGE_ICON from 'app/assets/message-icon.png';
 import JOURNEY_EVENT_SCHEDULED_CALL_ICON from 'app/assets/event-icon-calendar.png';
 
+import PROFILE_PLACEHOLDER_AVATAR from 'app/assets/profile-placeholder-avatar.png';
+
 import START_CALL from 'app/assets/mentee-holding-phone.png';
 import OVERLAY_DONE from 'app/assets/done-icon.png';
 
@@ -82,6 +84,8 @@ export default {
   JOURNEY_CALL_ICON,
   JOURNEY_MESSAGE_ICON,
   JOURNEY_EVENT_SCHEDULED_CALL_ICON,
+
+  PROFILE_PLACEHOLDER_AVATAR,
 
   NAV_TAB_ACTIVITIES_ACTIVE,
   NAV_TAB_CHAT_ACTIVE,

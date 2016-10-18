@@ -29,18 +29,19 @@ Title.propTypes = {
 
 const CallNoteDetail = ({
   onBackPress,
-  time,
-  objective,
-  icon,
-  reflection,
-  mood,
-  completed,
-  rating,
+  callNote: {
+    activityHelpful,
+    objectiveAchieved,
+    menteeState,
+    reflection,
+    callStartTime,
+  },
+  activity,
 }) => (
   <BaseView>
     <Header>
       <Text style={Text.types.title}>
-        {moment(time).format('ddd, MMM D, h:MM a')}
+        {moment(callStartTime).format('ddd, MMM D, h:MM a')}
       </Text>
       <HeaderIcon
         uid="back"
@@ -50,44 +51,60 @@ const CallNoteDetail = ({
     </Header>
 
     <ScrollView style={styles.scrollView}>
-      {objective && icon && (
-        <View>
+      {activity && (
+        <View style={styles.section}>
           <Title>Discussion With Activity</Title>
-          <View style={styles.activityContainer}>
-            <Image source={{ uri: icon }} style={styles.activityImage} />
+
+          <View style={[styles.sectionBody, styles.sectionBodyActivity]}>
+            <Image source={{ uri: activity.icon }} style={styles.activityImage} />
+
             <Text style={[Text.types.paragraph, styles.activityObjective]}>
-              {objective}
+              {activity.objective}
             </Text>
           </View>
         </View>
       )}
 
-      <Title>Your Reflections</Title>
-      <Text style={[Text.types.paragraph, styles.sectionBottomMargin]}>
-        {reflection}
-      </Text>
+      <View style={styles.section}>
+        <Title>Your Reflections</Title>
+        <Text style={Text.types.paragraph}>
+          {reflection}
+        </Text>
+      </View>
 
-      <Title>Your Mentee’s Mood</Title>
-      <Image style={[styles.sectionBottomMargin, styles.alignCenter]}
-        source={mentee[mood]}
-      />
+      <View style={styles.section}>
+        <Title>Your Mentee’s Mood</Title>
 
-      {objective && icon && (
-        <View>
-          <Title>Objective Achieved</Title>
-          <Image style={[styles.sectionBottomMargin, styles.alignCenter]}
-            source={completed ?
-              images.CALL_NOTES_COMPLETED_YES_SELECTED :
-              images.CALL_NOTES_COMPLETED_NO_SELECTED
-            }
+        <View style={styles.sectionBody}>
+          <Image
+            style={styles.menteeStateImage}
+            source={mentee[menteeState]}
           />
+        </View>
+      </View>
+
+      {activity && (
+        <View style={styles.section}>
+          <Title>Objective Achieved</Title>
+
+          <View style={styles.sectionBody}>
+            <Image
+              style={styles.objectiveAchievedImage}
+              source={objectiveAchieved ?
+                images.CALL_NOTES_COMPLETED_YES_SELECTED :
+                images.CALL_NOTES_COMPLETED_NO_SELECTED
+              }
+            />
+          </View>
         </View>
       )}
 
-      <Title>Helpfulness of Activity</Title>
-      <Text style={styles.sectionBottomMargin}>
-        {rating}
-      </Text>
+      <View style={styles.section}>
+        <Title>Helpfulness of Activity</Title>
+        <Text style={[Text.types.paragraph, styles.activityHelpfulText]}>
+          {activityHelpful}
+        </Text>
+      </View>
     </ScrollView>
   </BaseView>
 );
@@ -95,13 +112,8 @@ const CallNoteDetail = ({
 
 CallNoteDetail.propTypes = {
   onBackPress: PropTypes.func.isRequired,
-  time: PropTypes.string.isRequired,
-  objective: PropTypes.string,
-  icon: PropTypes.string,
-  reflection: PropTypes.string.isRequired,
-  mood: PropTypes.string.isRequired,
-  completed: PropTypes.bool,
-  rating: PropTypes.string.isRequired,
+  callNote: PropTypes.object,
+  activity: PropTypes.object,
 };
 
 

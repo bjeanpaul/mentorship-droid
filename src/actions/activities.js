@@ -20,6 +20,12 @@ const scheduleActivityCall = activityId => ({
 });
 
 
+const viewActivityCallNotes = activityId => ({
+  type: constants.ACTIVITY_CALL_NOTES_VIEW,
+  payload: { activityId },
+});
+
+
 const dismissActivityScreen = staticAction(constants.ACTIVITY_SCREEN_DISMISS);
 
 
@@ -27,5 +33,6 @@ export {
   chooseCategory,
   chooseActivity,
   scheduleActivityCall,
+  viewActivityCallNotes,
   dismissActivityScreen,
 };

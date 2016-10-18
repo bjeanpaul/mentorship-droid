@@ -1,4 +1,5 @@
-import reduce from 'src/reducers/navigation/top';
+import reduce, { createInitialState } from 'src/reducers/navigation/top';
+import * as auth from 'src/actions/auth';
 import * as entry from 'src/actions/entry';
 import * as landing from 'src/actions/landing';
 import * as sync from 'src/actions/sync';
@@ -9,11 +10,14 @@ import * as calls from 'src/actions/calls';
 import * as callNotes from 'src/actions/callNote';
 import * as schedule from 'src/actions/schedule';
 import * as activities from 'src/actions/activities';
+import * as profile from 'src/actions/profile';
 import * as errors from 'src/constants/errors';
 
 import {
   createDummyRoute, createStack, createRoute, push, pop, replaceAt,
 } from 'src/navigationHelpers';
+
+import { fakeCallNoteData } from 'app/scripts/helpers';
 
 
 describe('src/reducers/navigation/top', () => {
@@ -160,20 +164,42 @@ describe('src/reducers/navigation/top', () => {
     });
   });
 
-  describe('CALL_NOTES_CREATE', () => {
+  describe('CALL_NOTE_CREATE_OPEN', () => {
     it('should replace the call completed route with create call notes route', () => {
       const state = push(createStack(), createRoute(routes.ROUTE_CALL_COMPLETED));
       const route = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId: 23 });
 
-      expect(reduce(state, callNotes.createCallNotes(23)))
+      expect(reduce(state, callNotes.openCreateCallNote({ callId: 23 })))
         .toEqual(replaceAt(state, routes.ROUTE_CALL_COMPLETED, route));
     });
 
     it('should push on the create call notes route there is no call completed route', () => {
-      expect(reduce(createStack(), callNotes.createCallNotes(23)))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_CREATE_CALL_NOTES, {
-          callId: 23,
-        })));
+      expect(reduce(createStack(), callNotes.openCreateCallNote({
+        callId: 23,
+      })))
+      .toEqual(push(createStack(), createRoute(routes.ROUTE_CREATE_CALL_NOTES, {
+        callId: 23,
+      })));
+    });
+  });
+
+  describe('CALL_NOTE_CREATE_SUCCESS', () => {
+    it('should replace the call note create route with the saved route', () => {
+      const action = callNotes.createCallNote.success(fakeCallNoteData());
+      const oldRoute = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId: 23 });
+      const newRoute = createRoute(routes.ROUTE_CALL_NOTE_SAVED);
+      const state = push(createStack(), oldRoute);
+
+      expect(reduce(state, action))
+        .toEqual(replaceAt(state, routes.ROUTE_CREATE_CALL_NOTES, newRoute));
+    });
+
+    it('should push on the call note saved route if there is no create route', () => {
+      const action = callNotes.createCallNote.success(fakeCallNoteData());
+      const route = createRoute(routes.ROUTE_CALL_NOTE_SAVED);
+
+      expect(reduce(createStack(), action))
+        .toEqual(push(createStack(), route));
     });
   });
 
@@ -330,6 +356,40 @@ describe('src/reducers/navigation/top', () => {
           createDummyRoute(createDummyRoute.index),
           createRoute(routes.ROUTE_CALL_SCHEDULED),
         ]));
+    });
+  });
+
+  describe('CALL_NOTE_CHOOSE', () => {
+    it('should push on the call note detail route', () => {
+      const state = createStack();
+      const route = createRoute(routes.ROUTE_CALL_NOTE_DETAIL, { callNoteId: 21 });
+
+      expect(reduce(state, callNotes.chooseCallNote(21)))
+        .toEqual(push(state, route));
+    });
+  });
+
+  describe('ACTIVITY_CALL_NOTES_VIEW', () => {
+    it('should push on call note list route', () => {
+      const state = createStack();
+      const route = createRoute(routes.ROUTE_CALL_NOTE_LIST, { activityId: 21 });
+
+      expect(reduce(state, activities.viewActivityCallNotes(21)))
+        .toEqual(push(state, route));
+    });
+  });
+
+  describe('PROFILE_SETTINGS_OPEN', () => {
+    it('should push on the profile settings route', () => {
+      expect(reduce(createStack(), profile.openProfileSettings()))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_PROFILE_SETTINGS)));
+    });
+  });
+
+  describe('AUTH_LOGOUT', () => {
+    it('should reset the stack to its initial state', () => {
+      expect(reduce(createStack([createRoute('FOO')]), auth.logout()))
+        .toEqual(createInitialState());
     });
   });
 });
