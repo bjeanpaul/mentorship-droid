@@ -121,6 +121,10 @@ export default (state = createInitialState(), action) => {
       return push(state, route);
     }
 
+    case callNotes.CALL_NOTES_VIEW_ALL: {
+      return push(state, createRoute(routes.ROUTE_CALL_NOTE_LIST));
+    }
+
     case activities.ACTIVITY_SCHEDULE_CALL: {
       const { payload: { activityId } } = action;
       return push(state, createRoute(routes.ROUTE_SCHEDULE_CALL, { activityId }));

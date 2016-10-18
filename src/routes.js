@@ -81,9 +81,9 @@ export default fromPairs([
   [constants.ROUTE_CALL_COMPLETED, CallCompletedContainer],
 
   [constants.ROUTE_CREATE_CALL_NOTES, CallNoteStepperContainer],
-
-  [constants.ROUTE_PROFILE_SETTINGS, ProfileSettingsContainer],
   [constants.ROUTE_CALL_NOTE_SAVED, CallNoteSavedContainer],
   [constants.ROUTE_CALL_NOTE_LIST, CallNoteListContainer],
   [constants.ROUTE_CALL_NOTE_DETAIL, CallNoteDetailContainer],
+
+  [constants.ROUTE_PROFILE_SETTINGS, ProfileSettingsContainer],
 ]);

@@ -74,3 +74,6 @@ export const chooseCallNote = callNoteId => ({
   type: constants.CALL_NOTE_CHOOSE,
   payload: { callNoteId },
 });
+
+
+export const viewAllCallNotes = staticAction(constants.CALL_NOTES_VIEW_ALL);
