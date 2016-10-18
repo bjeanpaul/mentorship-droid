@@ -11,13 +11,6 @@ export default StyleSheet.create({
   headerLeft: {
     alignItems: 'flex-start',
   },
-  // TODO remove once we have image icons
-  headerIconPlaceholder: {
-    backgroundColor: colors.JOURNEY_BG,
-    width: 40,
-    height: 40,
-    borderRadius: 40,
-  },
   nextCall: {
     fontSize: 12,
     fontFamily: FONT.BOLD,
