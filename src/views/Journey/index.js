@@ -96,7 +96,6 @@ const Journey = ({
 
 Journey.propTypes = {
   onCallPress: PropTypes.func.isRequired,
-  onMessagePress: PropTypes.func.isRequired,
   onProfilePress: PropTypes.func.isRequired,
 };
 
