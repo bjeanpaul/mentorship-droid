@@ -79,6 +79,7 @@ export const fakeProfile = data => ({
 
 export const fakeCall = data => ({
   id: 20,
+  scheduledCall: null,
   activity: null,
   ...data,
 });
