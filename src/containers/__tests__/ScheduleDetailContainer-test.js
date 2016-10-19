@@ -116,10 +116,18 @@ describe('ScheduleDetailContainer', () => {
     it('should map the given date as the initial date', () => {
       const { initialDate } = mapStateToProps(fakeState(), {
         scheduledCallId: 23,
-        date: '2016-09-22T14:31:23.431Z',
+        initialDate: '2016-09-22T14:31:23.431Z',
       });
 
       expect(initialDate).toEqual('2016-09-22T14:31:23.431Z');
+    });
+
+    it('should map the given call time as the initial call time', () => {
+      const { initialCallTime } = mapStateToProps(fakeState(), {
+        initialCallTime: '2016-09-22T14:31:23.431Z',
+      });
+
+      expect(initialCallTime).toEqual('2016-09-22T14:31:23.431Z');
     });
   });
 

@@ -29,7 +29,8 @@ const done = (scheduledCallId, activityId) => ({ callTime }) => {
 export const mapStateToProps = (state, {
   scheduledCallId,
   activityId,
-  date,
+  initialDate,
+  initialCallTime,
 }) => {
   const {
     callTime,
@@ -53,8 +54,8 @@ export const mapStateToProps = (state, {
   return {
     activity,
     callTimes: map(calls, 'callTime'),
-    initialDate: date,
-    initialCallTime: callTime,
+    initialDate,
+    initialCallTime: callTime || initialCallTime,
   };
 };
 
