@@ -116,7 +116,12 @@ export default (state = createInitialState(), action) => {
     }
 
     case callNotes.CALL_NOTE_CREATE_SUCCESS: {
-      const route = createRoute(routes.ROUTE_CALL_NOTE_SAVED);
+      const {
+        payload: {
+          result: callNoteId,
+        },
+      } = action;
+      const route = createRoute(routes.ROUTE_CALL_NOTE_SAVED, { callNoteId });
       return replaceOrPush(state, routes.ROUTE_CREATE_CALL_NOTES, route);
     }
 
