@@ -148,19 +148,21 @@ export default (state = createInitialState(), action) => {
 
     case schedule.SCHEDULED_CALL_ADD: {
       const { payload: { date } } = action;
-      const route = createRoute(routes.ROUTE_SCHEDULE_CALL, { date });
+      const route = createRoute(routes.ROUTE_SCHEDULE_CALL, { initialDate: date });
       return push(state, route);
     }
 
     case schedule.SCHEDULED_CALL_ADD_NEXT: {
       const { payload: { date } } = action;
 
-      const nextDate = moment(date)
+      const initialCallTime = moment(date)
         .add(1, 'week')
         .round(30, 'minutes')
         .toISOString();
 
-      const route = createRoute(routes.ROUTE_SCHEDULE_CALL, { date: nextDate });
+      const route = createRoute(routes.ROUTE_SCHEDULE_CALL, {
+        initialCallTime,
+      });
       return push(state, route);
     }
 

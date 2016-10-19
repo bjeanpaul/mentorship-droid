@@ -230,7 +230,7 @@ describe('src/reducers/navigation/top', () => {
     it('should push on the scheduled call route', () => {
       expect(reduce(createStack(), schedule.addScheduledCall('2016-09-16T11:27:14Z')))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
-          date: '2016-09-16T11:27:14Z',
+          initialDate: '2016-09-16T11:27:14Z',
         })));
     });
   });
@@ -239,7 +239,7 @@ describe('src/reducers/navigation/top', () => {
     it('should push on the scheduled call route with the next call date', () => {
       expect(reduce(createStack(), schedule.addNextScheduledCall('2016-09-16T11:27:14Z')))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
-          date: moment('2016-09-23T11:30:00Z').toISOString(),
+          initialCallTime: moment('2016-09-23T11:30:00Z').toISOString(),
         })));
     });
   });
