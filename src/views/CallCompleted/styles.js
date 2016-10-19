@@ -13,14 +13,18 @@ export default StyleSheet.create({
   },
   contentContainer: {
     alignItems: 'center',
-    paddingBottom: 75,
+    flex: 0.6,
+  },
+  actionContainer: {
+    flex: 0.4,
   },
   title: {
     fontSize: 20,
     color: colors.OVERLAY_TEXT,
     paddingBottom: 10,
   },
-  hint: {
+  message: {
     fontSize: 24,
+    paddingBottom: 14,
   },
 });

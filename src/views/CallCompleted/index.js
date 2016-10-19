@@ -24,19 +24,21 @@ const CallCompleted = ({
         <Image source={images.OVERLAY_DONE} />
         <Text style={styles.title}>Call completed</Text>
 
-        <Text style={[Text.themes.light, styles.hint]}>
+        <Text style={[Text.themes.light, styles.message]}>
           Nice going! Time to add some notes to that call.
         </Text>
       </View>
 
-      <Button
-        uid="addCallNotes"
-        theme={Button.themes.light}
-        layout={Button.layouts.stretch}
-        onPress={onAddCallNotesPress}
-      >
-        ADD CALL NOTES
-      </Button>
+      <View style={styles.actionContainer}>
+        <Button
+          uid="addCallNotes"
+          theme={Button.themes.light}
+          layout={Button.layouts.stretch}
+          onPress={onAddCallNotesPress}
+        >
+          ADD CALL NOTES
+        </Button>
+      </View>
     </View>
   </BaseView>
 );
