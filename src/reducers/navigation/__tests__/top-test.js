@@ -1,3 +1,4 @@
+import moment from 'moment';
 import reduce, { createInitialState } from 'src/reducers/navigation/top';
 import * as auth from 'src/actions/auth';
 import * as entry from 'src/actions/entry';
@@ -226,7 +227,7 @@ describe('src/reducers/navigation/top', () => {
   });
 
   describe('SCHEDULED_CALL_ADD', () => {
-    it('should push on the scheduled route', () => {
+    it('should push on the scheduled call route', () => {
       expect(reduce(createStack(), schedule.addScheduledCall('2016-09-16T11:27:14Z')))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
           date: '2016-09-16T11:27:14Z',
@@ -234,8 +235,17 @@ describe('src/reducers/navigation/top', () => {
     });
   });
 
+  describe('SCHEDULED_CALL_ADD_NEXT', () => {
+    it('should push on the scheduled call route with the next call date', () => {
+      expect(reduce(createStack(), schedule.addNextScheduledCall('2016-09-16T11:27:14Z')))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
+          date: moment('2016-09-23T11:30:00Z').toISOString(),
+        })));
+    });
+  });
+
   describe('SCHEDULED_CALL_OPEN', () => {
-    it('should push on the scheduled route', () => {
+    it('should push on the scheduled call route', () => {
       expect(reduce(createStack(), schedule.openScheduledCall(23)))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
           scheduledCallId: 23,

@@ -1,3 +1,4 @@
+import moment from 'moment';
 import { includes } from 'lodash';
 import * as routes from 'src/constants/routes';
 import * as auth from 'src/constants/auth';
@@ -148,6 +149,18 @@ export default (state = createInitialState(), action) => {
     case schedule.SCHEDULED_CALL_ADD: {
       const { payload: { date } } = action;
       const route = createRoute(routes.ROUTE_SCHEDULE_CALL, { date });
+      return push(state, route);
+    }
+
+    case schedule.SCHEDULED_CALL_ADD_NEXT: {
+      const { payload: { date } } = action;
+
+      const nextDate = moment(date)
+        .add(1, 'week')
+        .round(30, 'minutes')
+        .toISOString();
+
+      const route = createRoute(routes.ROUTE_SCHEDULE_CALL, { date: nextDate });
       return push(state, route);
     }
 
