@@ -15,6 +15,7 @@ const Reflections = ({
   onChangeText,
 }) => (
   <FormStep
+    paginationBackDisabled
     paginationDisabled={reflection.length === 0}
     title="Please share your reflections of the discussion"
   >

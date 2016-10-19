@@ -5,6 +5,7 @@ import navigation from 'src/reducers/navigation';
 import profile from 'src/reducers/profile';
 import onboarding from 'src/reducers/onboarding';
 import callNote from 'src/reducers/callNote';
+import tick from 'src/reducers/tick';
 
 
 const rootReducer = combineReducers({
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   auth,
   profile,
   navigation,
+  tick,
 });
 
 
