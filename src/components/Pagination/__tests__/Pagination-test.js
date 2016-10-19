@@ -15,6 +15,16 @@ describe('Button', () => {
     )).toMatchSnapshot();
   });
 
+  it('should support disabling its back button', () => {
+    expect(render(
+      <Pagination
+        onBackPress={foo}
+        onNextPress={bar}
+        backDisabled
+      />
+    )).toMatchSnapshot();
+  });
+
   it('should be disabled', () => {
     expect(render(
       <Pagination

@@ -6,6 +6,7 @@ import styles from './styles';
 const FormStep = ({
   title,
   paginationDisabled,
+  paginationBackDisabled,
   children,
   onBackPress,
   onNextPress,
@@ -21,6 +22,7 @@ const FormStep = ({
       <Pagination
         onBackPress={onBackPress}
         onNextPress={onNextPress}
+        backDisabled={paginationBackDisabled}
         disabled={paginationDisabled}
       />
     </View>
@@ -31,6 +33,7 @@ FormStep.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.any.isRequired,
   paginationDisabled: PropTypes.bool,
+  paginationBackDisabled: PropTypes.bool,
   onBackPress: PropTypes.func.isRequired,
   onNextPress: PropTypes.func.isRequired,
 };
