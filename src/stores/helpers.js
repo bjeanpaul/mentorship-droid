@@ -53,6 +53,10 @@ export const getScheduledCallActivity = (state, id) => {
 export const getEvents = ({ entities: { events } }) => values(events);
 
 
+export const getActivityCallNotes = ({ entities: { callNotes } }, targetActivityId) => (
+  values(callNotes).filter(({ callActivityId }) => callActivityId === targetActivityId));
+
+
 export const getCallNotes = ({
   entities: { callNotes },
 }) => sortBy(callNotes, ({ callStartTime }) => +moment(callStartTime));
@@ -69,4 +73,18 @@ export const getNextScheduledCall = (state, predicate = {}, time = Date.now()) =
   res = res.filter(({ callTime }) => moment(callTime).isSameOrAfter(time));
   res = filter(res, predicate);
   return first(res);
+};
+
+
+export const getScheduledCallsBetween = (state, start, end, time = Date.now()) => {
+  // for some reason, moment durations are behaving inconsistently in tests,
+  // thus the lack of moment usage here
+  const startTime = +moment(time) - start;
+  const endTime = +moment(time) + end;
+
+  return getScheduledCalls(state)
+    .filter(({ callTime }) => {
+      const t = +moment(callTime);
+      return startTime <= t && t <= endTime;
+    });
 };

@@ -14,7 +14,7 @@ import {
 
 describe('CallNoteSteps', () => {
   const createComponent = (children) => (
-    <Provider store={fakeStore}>
+    <Provider store={fakeStore()}>
       {children}
     </Provider>
   );

@@ -40,9 +40,8 @@ describe('EventList', () => {
       },
     });
 
-    fakeStore.getState = () => state;
     expect(render(
-      <Provider store={fakeStore}>
+      <Provider store={fakeStore(state)}>
         {createComponent({ groups })}
       </Provider>
     ).toJSON()).toMatchSnapshot();

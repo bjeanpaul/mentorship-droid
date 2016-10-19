@@ -1,34 +1,71 @@
 import moment from 'moment';
 import React, { PropTypes } from 'react';
-import { View, Image, TouchableWithoutFeedback } from 'react-native';
-import { BaseView, Header, Text, Link } from 'src/components';
+import { View, Image, TouchableNativeFeedback, TouchableWithoutFeedback } from 'react-native';
+import { BaseView, Header, Text } from 'src/components';
 import EventListContainer from 'src/containers/EventListContainer';
 
 import images from 'src/constants/images';
 import styles from './styles';
 
 
+const HeaderContent = ({
+  shouldStartCall,
+  scheduledCall,
+  onScheduleCallPress,
+  onViewScheduledCallPress,
+  onStartScheduledCallPress,
+}) => {
+  if (!scheduledCall) {
+    return (
+      <TouchableNativeFeedback onPress={onScheduleCallPress}>
+        <View>
+          <Text style={Text.types.sectionTitle}>Next call</Text>
+          <Text style={styles.headerTitle}>Schedule a call</Text>
+        </View>
+      </TouchableNativeFeedback>
+    );
+  } else if (shouldStartCall) {
+    return (
+      <TouchableNativeFeedback onPress={() => onStartScheduledCallPress(scheduledCall.id)}>
+        <View>
+          <Text style={Text.types.sectionTitle}>Next call</Text>
+          <Text style={styles.headerTitle}>Call your mentee</Text>
+        </View>
+      </TouchableNativeFeedback>
+    );
+  } else {
+    return (
+      <TouchableNativeFeedback onPress={() => onViewScheduledCallPress(scheduledCall.id)}>
+        <View>
+          <Text style={Text.types.sectionTitle}>Next call</Text>
+          <Text style={[styles.headerTitle, styles.headerTitleIsDate]}>
+            {moment(scheduledCall.callTime).format('ddd, MMM DD, h:mma')}
+          </Text>
+        </View>
+      </TouchableNativeFeedback>
+    );
+  }
+};
+
+
+HeaderContent.propTypes = {
+  scheduledCall: PropTypes.object,
+  shouldStartCall: PropTypes.bool.isRequired,
+  onScheduleCallPress: PropTypes.func.isRequired,
+  onViewScheduledCallPress: PropTypes.func.isRequired,
+  onStartScheduledCallPress: PropTypes.func.isRequired,
+};
+
+
 const Journey = ({
-  nextScheduledCallDate,
-  onNextScheduledCallPress,
   onCallPress,
   onProfilePress,
+  ...props,
 }) => (
   <BaseView>
     <Header style={styles.header}>
       <View style={styles.headerLeft}>
-        <Text style={styles.nextCall}>NEXT CALL</Text>
-
-        <Link
-          style={[styles.date, nextScheduledCallDate && styles.hasDate]}
-          onPress={onNextScheduledCallPress}
-        >
-        {
-          nextScheduledCallDate
-            ? moment(nextScheduledCallDate).format('ddd, MMM DD, h:mma')
-            : 'Schedule a call'
-        }
-        </Link>
+        <HeaderContent uid="headerContent" {...props} />
       </View>
 
       <View>
@@ -58,10 +95,7 @@ const Journey = ({
 
 
 Journey.propTypes = {
-  nextScheduledCallDate: PropTypes.string,
-  onNextScheduledCallPress: PropTypes.func.isRequired,
   onCallPress: PropTypes.func.isRequired,
-  onMessagePress: PropTypes.func.isRequired,
   onProfilePress: PropTypes.func.isRequired,
 };
 
