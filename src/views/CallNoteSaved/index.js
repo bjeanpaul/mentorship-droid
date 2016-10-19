@@ -11,7 +11,7 @@ const CallNoteSaved = ({
   callNote: { callStartTime },
   activity,
   onDismissPress,
-  onScheduleAgainPress,
+  onScheduleNextPress,
 }) => (
   <BaseView style={styles.base}>
     <Header>
@@ -42,10 +42,10 @@ const CallNoteSaved = ({
 
       <View style={styles.actionContainer}>
         <Button
-          uid="scheduleAgain"
+          uid="scheduleNext"
           theme={Button.themes.light}
           layout={Button.layouts.stretch}
-          onPress={() => onScheduleAgainPress(callStartTime)}
+          onPress={() => onScheduleNextPress(callStartTime)}
         >
           CALL SAME TIME NEXT WEEK?
         </Button>
@@ -59,7 +59,7 @@ CallNoteSaved.propTypes = {
   callNote: PropTypes.object.isRequired,
   activity: PropTypes.object,
   onDismissPress: PropTypes.func.isRequired,
-  onScheduleAgainPress: PropTypes.func.isRequired,
+  onScheduleNextPress: PropTypes.func.isRequired,
 };
 
 

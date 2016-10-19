@@ -10,7 +10,7 @@ describe('CallNoteSaved', () => {
     <CallNoteSaved
       callNote={fakeCallNote()}
       onDismissPress={noop}
-      onScheduleAgainPress={noop}
+      onScheduleNextPress={noop}
       {...props}
     />
   );
@@ -39,18 +39,18 @@ describe('CallNoteSaved', () => {
     expect(onDismissPress.mock.calls).toEqual([[]]);
   });
 
-  it('should call onScheduleAgainPress when the schedule button is pressed', () => {
-    const onScheduleAgainPress = jest.fn();
+  it('should call onScheduleNextPress when the schedule button is pressed', () => {
+    const onScheduleNextPress = jest.fn();
     const callNote = fakeCallNote();
 
     const el = shallow(createComponent({
       callNote,
-      onScheduleAgainPress,
+      onScheduleNextPress,
     }));
 
-    el.findWhere(uidEquals('scheduleAgain'))
+    el.findWhere(uidEquals('scheduleNext'))
       .simulate('press');
 
-    expect(onScheduleAgainPress.mock.calls).toEqual([[callNote.callStartTime]]);
+    expect(onScheduleNextPress.mock.calls).toEqual([[callNote.callStartTime]]);
   });
 });
