@@ -22,7 +22,7 @@ export {
 };
 
 
-export default connect(null, {
+export default connect(mapStateToProps, {
   onDismissPress: dismissScreen,
   onScheduleNextPress: addNextScheduledCall,
 })(CallNoteSaved);
