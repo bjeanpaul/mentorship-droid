@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 import {
   fakeState,
   fakeProfile,
@@ -25,6 +27,7 @@ import {
   getCall,
   getCallNote,
   getNextScheduledCall,
+  getScheduledCallsBetween,
 } from 'src/stores/helpers';
 
 
@@ -269,6 +272,38 @@ describe('helpers', () => {
 
       expect(getNextScheduledCall(state, { activity: 23 }, '2016-09-20').callTime)
         .toEqual('2016-09-25');
+    });
+  });
+
+  describe('getScheduledCallsBetween', () => {
+    it('should get scheduled calls in the given window', () => {
+      const state = fakeState();
+      const t = +moment();
+
+      const a = fakeScheduledCall({
+        id: 2,
+        callTime: t - 500,
+      });
+
+      const b = fakeScheduledCall({
+        id: 3,
+        callTime: t + 300,
+      });
+
+      state.entities.scheduledCalls = {
+        1: fakeScheduledCall({
+          id: 1,
+          callTime: t - 1000,
+        }),
+        2: a,
+        3: b,
+        4: fakeScheduledCall({
+          id: 4,
+          callTime: t + 500,
+        }),
+      };
+
+      expect(getScheduledCallsBetween(state, 600, 400, t)).toEqual([a, b]);
     });
   });
 

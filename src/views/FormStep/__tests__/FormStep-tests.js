@@ -20,4 +20,12 @@ describe('FormStep', () => {
     const el = render(createComponent());
     expect(el).toMatchSnapshot();
   });
+
+  it('should support disabling its back button', () => {
+    const el = render(createComponent({
+      paginationBackDisabled: true,
+    }));
+
+    expect(el).toMatchSnapshot();
+  });
 });

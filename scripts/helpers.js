@@ -146,11 +146,11 @@ export const fakeState = (overrides = {}) => merge({}, {
 export const fakeContext = (overrides = {}) => merge(getContext(fakeState()), overrides);
 
 
-export const fakeStore = {
+export const fakeStore = (state = fakeState()) => ({
   subscribe: () => {},
   dispatch: () => {},
-  getState: () => fakeState(),
-};
+  getState: () => state,
+});
 
 
 export const fakeProfileData = (data = { id: 23 }) => (

@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 import colors from 'src/constants/colors';
 
 export default StyleSheet.create({
@@ -11,17 +10,12 @@ export default StyleSheet.create({
   headerLeft: {
     alignItems: 'flex-start',
   },
-  nextCall: {
-    fontSize: 12,
-    fontFamily: FONT.BOLD,
-    fontWeight: FONT_WEIGHT.BOLD,
-    color: colors.JOURNEY_NEXT_SCHEDULED_CALL_LINK,
-  },
-  date: {
+  headerTitle: {
     fontSize: 18,
+    color: colors.JOURNEY_HEADER_TITLE,
   },
-  hasDate: {
-    color: colors.JOURNEY_NEXT_SCHEDULED_CALL_LINK_HAS_DATE,
+  headerTitleIsDate: {
+    color: colors.JOURNEY_HEADER_TITLE_IS_DATE,
   },
   mentee: {
     flex: 0.4,

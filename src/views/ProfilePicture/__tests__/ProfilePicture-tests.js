@@ -6,7 +6,7 @@ import ProfilePicture from 'src/views/ProfilePicture';
 
 describe('ProfilePicture', () => {
   const createComponent = (props = {}) => (
-    <Provider store={fakeStore}>
+    <Provider store={fakeStore()}>
       <ProfilePicture
         profilePicture="path/to/image.png"
         onChoosePhotoPress={noop}

@@ -8,6 +8,7 @@ import styles from './styles';
 const Pagination = ({
   onBackPress,
   onNextPress,
+  backDisabled,
   disabled,
 }) => (
   <View style={styles.container}>
@@ -15,6 +16,7 @@ const Pagination = ({
       theme={Button.themes.transparent}
       layout={[Button.layouts.inline, styles.backButtonLayout]}
       onPress={onBackPress}
+      disabled={backDisabled}
     >
       <Icon type={Icon.types.backOrange} />
     </Button>
@@ -33,6 +35,7 @@ const Pagination = ({
 Pagination.propTypes = {
   onBackPress: PropTypes.func.isRequired,
   onNextPress: PropTypes.func.isRequired,
+  backDisabled: PropTypes.bool,
   disabled: PropTypes.bool,
 };
 
