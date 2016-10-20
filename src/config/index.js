@@ -1,5 +1,5 @@
 import base from 'src/config/base';
-import prdOrQa from 'react-native-config';
+
 
 let dev;
 
@@ -9,9 +9,10 @@ try {
   dev = {};
 }
 
-const config = global.__DEV__
-  ? dev
-  : prdOrQa;
+
+const config = !global.__DEV__
+  ? require('react-native-config')
+  : dev;
 
 
 export default {
