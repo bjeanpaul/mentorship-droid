@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "run": "ENVFILE=.env.dev react-native run-android",
     "logs": "adb logcat *:S ReactNative:V ReactNativeJS:V",
     "test": "NODE_ENV=test jest",
     "test:watch": "NODE_ENV=test jest --watch",
