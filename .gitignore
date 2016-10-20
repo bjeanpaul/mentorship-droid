@@ -42,8 +42,9 @@ android/app/libs
 android/app/google-services.json
 android/keystores/debug.keystore
 
-src/config/development.js
-src/config/production.js
+.env.qa
+.env.prd
+src/config/dev.js
 
 release.keystore
 secrets.tar

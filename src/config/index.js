@@ -1,27 +1,20 @@
 import base from 'src/config/base';
-import test from 'src/config/test';
+import prdOrQa from 'react-native-config';
 
-
-let production;
-let development;
+let dev;
 
 try {
-  production = require('src/config/production').default;
+  dev = require('src/config/dev').default;
 } catch (e) {
-  production = {};
+  dev = {};
 }
 
-try {
-  development = require('src/config/development').default;
-} catch (e) {
-  development = {};
-}
+const config = global.__DEV__
+  ? dev
+  : prdOrQa;
+
 
 export default {
   ...base,
-  ...{
-    production,
-    development,
-    test,
-  }[process.env.NODE_ENV || 'production'],
+  ...config,
 };
