@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -17,6 +17,7 @@
     "deep-map-keys": "^1.2.0",
     "lodash": "^4.14.0",
     "moment": "^2.12.0",
+    "moment-round": "^1.0.1",
     "normalizr": "^2.2.1",
     "promise-each-concurrency": "^1.1.0",
     "react": "^15.3.1",

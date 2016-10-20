@@ -1,3 +1,4 @@
+import moment from 'moment';
 import { includes } from 'lodash';
 import * as routes from 'src/constants/routes';
 import * as auth from 'src/constants/auth';
@@ -116,7 +117,12 @@ export default (state = createInitialState(), action) => {
     }
 
     case callNotes.CALL_NOTE_CREATE_SUCCESS: {
-      const route = createRoute(routes.ROUTE_CALL_NOTE_SAVED);
+      const {
+        payload: {
+          result: callNoteId,
+        },
+      } = action;
+      const route = createRoute(routes.ROUTE_CALL_NOTE_SAVED, { callNoteId });
       return replaceOrPush(state, routes.ROUTE_CREATE_CALL_NOTES, route);
     }
 
@@ -142,7 +148,21 @@ export default (state = createInitialState(), action) => {
 
     case schedule.SCHEDULED_CALL_ADD: {
       const { payload: { date } } = action;
-      const route = createRoute(routes.ROUTE_SCHEDULE_CALL, { date });
+      const route = createRoute(routes.ROUTE_SCHEDULE_CALL, { initialDate: date });
+      return push(state, route);
+    }
+
+    case schedule.SCHEDULED_CALL_ADD_NEXT: {
+      const { payload: { date } } = action;
+
+      const initialCallTime = moment(date)
+        .add(1, 'week')
+        .round(30, 'minutes')
+        .toISOString();
+
+      const route = createRoute(routes.ROUTE_SCHEDULE_CALL, {
+        initialCallTime,
+      });
       return push(state, route);
     }
 

@@ -1,3 +1,4 @@
+import moment from 'moment';
 import reduce, { createInitialState } from 'src/reducers/navigation/top';
 import * as auth from 'src/actions/auth';
 import * as entry from 'src/actions/entry';
@@ -17,7 +18,7 @@ import {
   createDummyRoute, createStack, createRoute, push, pop, replaceAt,
 } from 'src/navigationHelpers';
 
-import { fakeCallNoteData } from 'app/scripts/helpers';
+import { fakeCallNote, fakeCallNoteData } from 'app/scripts/helpers';
 
 
 describe('src/reducers/navigation/top', () => {
@@ -194,9 +195,12 @@ describe('src/reducers/navigation/top', () => {
 
   describe('CALL_NOTE_CREATE_SUCCESS', () => {
     it('should replace the call note create route with the saved route', () => {
-      const action = callNotes.createCallNote.success(fakeCallNoteData());
+      const callNote = fakeCallNote({ id: 23 });
+      const action = callNotes.createCallNote.success(fakeCallNoteData(callNote));
+
       const oldRoute = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId: 23 });
-      const newRoute = createRoute(routes.ROUTE_CALL_NOTE_SAVED);
+      const newRoute = createRoute(routes.ROUTE_CALL_NOTE_SAVED, { callNoteId: 23 });
+
       const state = push(createStack(), oldRoute);
 
       expect(reduce(state, action))
@@ -204,8 +208,9 @@ describe('src/reducers/navigation/top', () => {
     });
 
     it('should push on the call note saved route if there is no create route', () => {
-      const action = callNotes.createCallNote.success(fakeCallNoteData());
-      const route = createRoute(routes.ROUTE_CALL_NOTE_SAVED);
+      const callNote = fakeCallNote({ id: 23 });
+      const action = callNotes.createCallNote.success(fakeCallNoteData(callNote));
+      const route = createRoute(routes.ROUTE_CALL_NOTE_SAVED, { callNoteId: 23 });
 
       expect(reduce(createStack(), action))
         .toEqual(push(createStack(), route));
@@ -222,16 +227,25 @@ describe('src/reducers/navigation/top', () => {
   });
 
   describe('SCHEDULED_CALL_ADD', () => {
-    it('should push on the scheduled route', () => {
+    it('should push on the scheduled call route', () => {
       expect(reduce(createStack(), schedule.addScheduledCall('2016-09-16T11:27:14Z')))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
-          date: '2016-09-16T11:27:14Z',
+          initialDate: '2016-09-16T11:27:14Z',
+        })));
+    });
+  });
+
+  describe('SCHEDULED_CALL_ADD_NEXT', () => {
+    it('should push on the scheduled call route with the next call date', () => {
+      expect(reduce(createStack(), schedule.addNextScheduledCall('2016-09-16T11:27:14Z')))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
+          initialCallTime: moment('2016-09-23T11:30:00Z').toISOString(),
         })));
     });
   });
 
   describe('SCHEDULED_CALL_OPEN', () => {
-    it('should push on the scheduled route', () => {
+    it('should push on the scheduled call route', () => {
       expect(reduce(createStack(), schedule.openScheduledCall(23)))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
           scheduledCallId: 23,

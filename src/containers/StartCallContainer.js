@@ -18,9 +18,11 @@ export const mapStateToProps = (state, { scheduledCallId }) => {
 };
 
 
-export const mapDispatchToProps = dispatch => bindActionCreators({
+export const mapDispatchToProps = (dispatch, { scheduledCallId } = {}) => bindActionCreators({
   onDismissPress: dismissScreen,
-  onActivatePress: activity => createCall(omitBy({ activity }, isUndefined)),
+  onActivatePress: () => createCall(omitBy({
+    scheduledCall: scheduledCallId,
+  }, isUndefined)),
 }, dispatch);
 
 

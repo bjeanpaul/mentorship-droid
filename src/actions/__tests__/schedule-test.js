@@ -23,6 +23,7 @@ import {
   patchScheduledCall,
   removeScheduledCall,
   addScheduledCall,
+  addNextScheduledCall,
   openScheduledCall,
   chooseScheduledCallCategory,
   chooseScheduledCallActivity,
@@ -103,6 +104,15 @@ describe('schedule/actions', () => {
     it('should create an action for adding a scheduled call', () => {
       expect(addScheduledCall('2016-09-16T11:27:14Z')).toEqual({
         type: constants.SCHEDULED_CALL_ADD,
+        payload: { date: '2016-09-16T11:27:14Z' },
+      });
+    });
+  });
+
+  describe('addNextScheduledCall', () => {
+    it('should create an action for adding scheduling the next scheduled call', () => {
+      expect(addNextScheduledCall('2016-09-16T11:27:14Z')).toEqual({
+        type: constants.SCHEDULED_CALL_ADD_NEXT,
         payload: { date: '2016-09-16T11:27:14Z' },
       });
     });

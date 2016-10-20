@@ -64,6 +64,12 @@ export const addScheduledCall = date => ({
 });
 
 
+export const addNextScheduledCall = date => ({
+  type: constants.SCHEDULED_CALL_ADD_NEXT,
+  payload: { date },
+});
+
+
 export const openScheduledCall = scheduledCallId => ({
   type: constants.SCHEDULED_CALL_OPEN,
   payload: { scheduledCallId },
