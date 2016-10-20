@@ -11,7 +11,6 @@ const defaultHandler = ErrorUtils.getGlobalHandler && ErrorUtils.getGlobalHandle
 
 
 const fallback = e => {
-  // TODO error reporting
   defaultHandler(e);
 };
 
