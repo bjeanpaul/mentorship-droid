@@ -60,29 +60,31 @@ describe('StartCallContainer', () => {
   describe('mapDispatchToProps', () => {
     it('should map onActivatePress to createCall()', () => {
       const dispatch = jest.fn();
-      const { onActivatePress } = mapDispatchToProps(dispatch);
+      const { onActivatePress } = mapDispatchToProps(dispatch, { scheduledCallId: 23 });
 
       expect(dispatch.mock.calls).toEqual([]);
 
       onActivatePress(fakeActivity());
 
       expect(dispatch.mock.calls).toEqual([[
-        createCall({ activity: fakeActivity() }),
+        createCall({ scheduledCall: 23 }),
       ]]);
     });
 
-    it('should not pass an activity to createCall() if there is no relevant activity', () => {
+    it('should not pass a scheduled call to createCall() if none was given', () => {
       const dispatch = jest.fn();
       const { onActivatePress } = mapDispatchToProps(dispatch);
 
       expect(dispatch.mock.calls).toEqual([]);
-      onActivatePress(void 0);
+
+      onActivatePress();
+
       expect(dispatch.mock.calls).toEqual([[createCall({})]]);
     });
 
     it('should map onDismissPress to dismissScreen()', () => {
       const dispatch = jest.fn();
-      const { onDismissPress } = mapDispatchToProps(dispatch, { callId: 23 });
+      const { onDismissPress } = mapDispatchToProps(dispatch);
 
       expect(dispatch.mock.calls).toEqual([]);
       onDismissPress();

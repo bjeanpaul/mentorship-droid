@@ -1,4 +1,5 @@
 import 'moment-timezone';
+import 'moment-round';
 import moment from 'moment';
 import { castArray } from 'lodash';
 import { PropTypes } from 'react';
