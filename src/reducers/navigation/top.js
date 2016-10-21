@@ -218,6 +218,19 @@ export default (state = createInitialState(), action) => {
     case profile.PROFILE_SETTINGS_OPEN:
       return push(state, createRoute(routes.ROUTE_PROFILE_SETTINGS));
 
+    case activities.CATEGORY_CHOOSE: {
+      const { payload: { categoryId } } = action;
+      return push(state, createRoute(routes.ROUTE_CATEGORY, { categoryId }));
+    }
+
+    case activities.ACTIVITY_CHOOSE: {
+      const { payload: { activityId } } = action;
+      return push(state, createRoute(routes.ROUTE_ACTIVITY, { activityId }));
+    }
+
+    case activities.ACTIVITY_SCREEN_DISMISS:
+      return pop(state);
+
     default:
       return state;
   }
