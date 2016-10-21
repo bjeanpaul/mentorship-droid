@@ -8,7 +8,7 @@ import { AppRegistry } from 'react-native';
 
 
 if (config.SENTRY_URL) {
-  ravenRN(Raven);
+  Raven.addPlugin(ravenRN);
 
   Raven
     .config(config.SENTRY_URL, {
