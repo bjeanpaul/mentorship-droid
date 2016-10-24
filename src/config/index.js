@@ -11,7 +11,7 @@ try {
 
 
 const config = !global.__DEV__
-  ? require('react-native-config')
+  ? require('react-native-config').default
   : dev;
 
 
