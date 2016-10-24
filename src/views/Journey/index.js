@@ -71,7 +71,7 @@ const Journey = ({
       <View>
         {/* TODO use profile image once we can get this from the api */}
         <TouchableWithoutFeedback uid="profile" onPress={onProfilePress}>
-          <Image source={images.PROFILE_PLACEHOLDER_AVATAR} />
+          <Image source={images.SETTINGS_ICON} />
         </TouchableWithoutFeedback>
       </View>
     </Header>
