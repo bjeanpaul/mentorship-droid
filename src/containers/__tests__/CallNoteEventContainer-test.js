@@ -27,7 +27,7 @@ describe('CallNoteEventContainer', () => {
       const state = fakeState({
         entities: {
           callNotes: {
-            23: fakeCallNote({ id: 23 })
+            23: fakeCallNote({ id: 23 }),
           },
         },
       });
