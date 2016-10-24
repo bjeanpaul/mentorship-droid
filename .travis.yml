@@ -1,10 +1,7 @@
 language: android
 env:
   global:
-  - DEFAULT_APK=$TRAVIS_BUILD_DIR/android/app/build/outputs/apk/app-release.apk
-  - PRD_APK=$TRAVIS_BUILD_DIR/$TRAVIS_TAG.apk
-  - QA_APK=$TRAVIS_BUILD_DIR/$TRAVIS_TAG.qa.apk
-  - secure: G1Rb34UBqo6C8wCQYEHUiWfVANEQI+1I4rMerIHhAlLfe8dSD4yIkI3NqcFYlSezF58AQfMMlh4wXp0ABrrNt5mb4QeK0Q8UNkLWNInMCQ3Z+xMinYmjz+VEghYzL96KPv7SCg9ZxRP5rDtmTwa+4gIQ57VpFOZzPgv+O5R/hlErCRqco3WJLa23/PpYLttUZ7qQvzsOn1e/Gs6fMtjIncnJBDtW55rABqI7LKQ5Yx3UaoouDO+j0L7KsRKhwXyx76bV6BAcyMJz1wmfuqvaMfPA5DGMRY1aDP/D4chvAIDwaL7tee0Bupa4i4e6p8jkknOe1YYKSxmv8msaz7JWrNQdJA+eWgBYH5hW/mVMXkZeG6mx96fpyCSlXbzwLjyEwEF4clHn8GD8yuL7XVazB7YCdtw9N7FUITOHVZU3MqWygFWHIxY0zQom4fR9jzzENVaQtxOtGfj/fc7ViROvGKZ1xl046D281wnCVtm2SZjtkny4W3wmyHqN/ghsJ0e6mpduKDxDCfZ/KI+WWSHkvD5z0DTF0XIj29DYUQK3Olezol6ykppTkGUkqi/Dfe/1mV8zQe0mFhQD/1QzqgtHjq1Sn5G/XwOo3hb0UIl0PVCiMDH786ImPkI35mE9x5OPcljGqd5fhz4uNnIOGqBSUHb8dOuJMWkZSKau5zCeRxE=
+    secure: b9QYFLrBMuEtRt1WMretxwYUofA1qPoFCa6Ckd2I+Fxgbr/ozQKzYS76iGicYzV5pOblQVo1Kx3HpUcxY5R/+Str68ejLgAVinQ+RQPwC+8KFKBf9UI8WUMPMEECx+WcVFRzZz9sUivRyqP5cIzxoP9GsqpaXDsWjueHnveqsd1q2yeLrZSEizDWfRsnYlkRKapIRN55Tyq2V3MB1nilYc9Z3DcdiiLt4UkPOiNsjHKhdKgHkkjKviMbAUwMuFfBSt055ABS8BNAvbit4Jp7QhZsRVszP+byboOv1FYK6pFc7et0KgP8bUBbV1nQP6LAPRoWpTmtceM4Q+efYKp/Rw5pxPv9yx/Uc6oztJihKTSt7gPr8eDJeyU2pnUZMobqJJMBW1gfeCGHdRZc6SrHU8poTTSh61KMfhfUZO60th0HRClkR57CWBnXyevzXtH5dTqVItSukMOjJPe0SleriEtmMEvqM8FA+4wSCO92M1rCWx/CgTtYh4HqS7YVuMzC0c6gnhTYdhwcP1xhhb2ou6Q11iJBmImOJZ14e34KJ6KQpMbtwvLyFmuZZzpcNrzTaFwxZZcIX6LOAj3f0yq1QT2DufXb93ADahsosyFazZtYnBjgufLNoUW3+HFCYb9DcujP2KlRq95DMGDdjfrWwyu+bxtdOfrhKSajrY03fSs=
 before_cache:
 - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
 - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -31,15 +28,12 @@ android:
   - addon-google_apis-google-16
 script:
 - npm run ci
-- '[ -z "$TRAVIS_TAG" ] || (cd android && ENVFILE=.env.prd ./gradlew assembleRelease
-  -PdisablePreDex && mv $DEFAULT_APK $PRD_APK)'
-- '[ -z "$TRAVIS_TAG" ] || (cd android && ENVFILE=.env.qa ./gradlew assembleRelease
-  -PdisablePreDex && mv $DEFAULT_APK $QA_APK)'
+- '[ -z "$TRAVIS_TAG" ] || ./utils/travis-release.sh'
 deploy:
   skip_cleanup: true
   provider: releases
   api_key:
-    secure: Fyk/c5dWqX/qzjXRnnJLItYLAfICjY2kvZ1bIHcD7QmGy46w/8779aWcS7j/LhfNZzair6fg1rOz+2c1nnjIOuBNOnxBncduo+IsNX1uh+xSB9ljGDLsAudwLGQZvg0GWJzseFwSSZlyDjPCQvFGXldPNnmQVAwZwRdrd1Q181vTYnOyPx/ujp6m/xHeTMZNUSXjbnSUhLe3GLMQ/kHKDcYH5TR42Nn2R9F0Elz2T+tqGzaMs08jeDoEYvCwaW7gjowCz0U+S+0qyoGmtkiiNYie9nGT6lkT6mI90UcHeWKdYqPMjpXY0WXznOa5qtvXf+gV1r2jWhlP49hnD3RhdkNx2mzMEo3A0d1qwiIjgCVhuaxdwH0mHcB3pHIdTal2MOGQYxKM4DDMggMKdHXBA9d8HlKMx8nFmtoXe8xZYH0E+OeXOPXZ0bt+5VuWXZyIHCwtGMi+kZrEe/ckIDGDFIOlDPQhyVdrup186lIJ02TjSs66yA7Fz3I9sJ5cl/e5rpNFuCUlqKGzCU/BXWTDzYbSuAloKuL9l2QAFsJrl8fGHb91Fhvfb9k7E/xIOGbpt5XtuLq0A0JH5zICWMNvQvXy+Hqr/Z9VKG+QFGzWaY4cIbig7zkEBnMTW1ehJ8h1eHUB6VSvgjKCUujUV69qaA2vgtbb25vsP6aB5aoQ0xk=
+    secure: K8QH/FSzPwOpv80XqVyn74XJ/e81qAc16KQfNl28KRqDdRVCQd4IXA8K0JwMbw7H2Tn72U3MgUdErVsjV4ORziBUhsbLQ9fkMTHvhNZrwQj9xnyFNHVKY5sBAUGrKEmu8qd1l8pXX2dr0yPSM+gfyxeXGeEMsQg1dDO7e+EL3nqUNHYI6kiNWqMNNHMIGpZEynLsKMnPyC3fc47D/KL0dxesaE6nrAD+CHu0wmehxvqqmk1QFjnrzyWbSTPsg4jKA83JHWfJ28F+G3qqZmAhUxYW7A9sQ97iI4RbZBjX4vr47+93Z0dJtF/Q1/AE7CqvUbo1PKX+WwUn+0r5oOaewp1hrRBwCdrQn42fLweugYxYW2Es3IAsD1cgF/hjX6nr+NzuTwaNvTyTrPgAYAM4C6aspCgGBzQ8f9LxFDoPvVKVOoIgt2pT1LLb0biJd8ooesuB4N2S8U/goVu7jcHYeLkUfmibopf03brmtmclLAZMCrlyQKIbR1dMhQ0TE57w1JNyTE26mqAa3ZXRBD6dkcPvB1MZaW3LFX+mPvv8aC6Ew5n660dlYnjvKykKjJtoRmubc1OMxLuOk3HiiA3Vf/XvrZTKQ3UXK9rluE3TRcRZc+VUNa4nNNY2NiV8wnsQsPIlDj6Wdn1GCNESRfjO8AC3ElHa0jIZnJ0kspw/SD8=
   file:
   - $TRAVIS_BUILD_DIR/$TRAVIS_TAG.apk
   - $TRAVIS_BUILD_DIR/$TRAVIS_TAG.qa.apk
