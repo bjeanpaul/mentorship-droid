@@ -6,7 +6,7 @@ import moodImages from 'src/constants/callNoteMoods';
 
 const CallNoteEvent = ({
   event: {
-    date,
+    occuredAt,
   },
   callNote: {
     menteeState,
@@ -14,7 +14,7 @@ const CallNoteEvent = ({
   },
 }) => (
   <Event
-    date={date}
+    date={occuredAt}
     icon={moodImages[menteeState]}
     blurb={reflection}
     title="Call completed"
@@ -24,7 +24,7 @@ const CallNoteEvent = ({
 
 CallNoteEvent.propTypes = {
   event: PropTypes.shape({
-    date: PropTypes.string.isRequired,
+    occuredAt: PropTypes.string.isRequired,
   }).isRequired,
 
   callNote: PropTypes.shape({

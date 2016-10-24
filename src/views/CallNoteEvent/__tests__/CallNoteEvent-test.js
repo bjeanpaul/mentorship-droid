@@ -17,7 +17,7 @@ describe('CallNoteEvent', () => {
   it('should render an event with the correct props', () => {
     const props = shallow(createComponent({
       event: fakeEvent({
-        date: '2016-09-16T11:19:17.368442Z',
+        occuredAt: '2016-09-16T11:19:17.368442Z',
       }),
       callNote: fakeCallNote({
         menteeState: constants.CALL_NOTES_MENTEE_HAPPY,
