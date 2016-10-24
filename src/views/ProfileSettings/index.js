@@ -48,7 +48,7 @@ const ProfileSettings = ({
 }) => (
   <BaseView>
     <Header>
-      <Text style={Text.types.title}>Profile</Text>
+      <Text style={Text.types.title}>Settings</Text>
 
       <HeaderIcon
         uid="back"
@@ -58,16 +58,14 @@ const ProfileSettings = ({
     </Header>
 
     <View style={styles.container}>
-      <Section title="Your Profile">
+      <Section title="Your account">
         <TextSectionItem
           uid="callNotes"
           onPress={onCallNotesPress}
         >
           View call notes
         </TextSectionItem>
-      </Section>
 
-      <Section title="Your account">
         <TextSectionItem
           uid="logout"
           onPress={onLogoutPress}
