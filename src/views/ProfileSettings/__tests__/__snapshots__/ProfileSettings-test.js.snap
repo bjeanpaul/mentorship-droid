@@ -40,7 +40,7 @@ exports[`ProfileSettings should render 1`] = `
           },
         ]
       }>
-      Profile
+      Settings
     </Text>
     <View
       style={
@@ -110,7 +110,7 @@ exports[`ProfileSettings should render 1`] = `
             ],
           ]
         }>
-        YOUR PROFILE
+        YOUR ACCOUNT
       </Text>
       <View
         style={
@@ -141,39 +141,6 @@ exports[`ProfileSettings should render 1`] = `
           TouchableNativeFeedback is not supported on this platform!
         </Text>
       </View>
-    </View>
-    <View
-      style={
-        Object {
-          "paddingBottom": 46,
-        }
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#003035",
-              "fontFamily": "Brandon Text",
-              "fontSize": 13,
-              "textAlign": "center",
-            },
-            Array [
-              Object {
-                "color": "#9fb1b3",
-                "fontFamily": "Brandon Text_bold",
-                "fontSize": 12,
-                "fontWeight": "bold",
-                "letterSpacing": 1,
-                "textAlign": "left",
-              },
-            ],
-          ]
-        }>
-        YOUR ACCOUNT
-      </Text>
       <View
         style={
           Array [
