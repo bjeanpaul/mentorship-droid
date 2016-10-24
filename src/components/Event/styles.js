@@ -17,9 +17,14 @@ export default StyleSheet.create({
   icon: {
     width: 56,
     height: 56,
-    borderRadius: 28,
-    backgroundColor: colors.EVENT_ICON_BG,
+    borderRadius: 56,
     marginRight: 16,
+    backgroundColor: colors.EVENT_ICON_BG,
+  },
+  iconImage: {
+    width: 56,
+    height: 56,
+    borderRadius: 56,
   },
   textContainer: {
     flex: 1,

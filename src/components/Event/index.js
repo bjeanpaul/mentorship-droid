@@ -12,11 +12,14 @@ const Event = ({
 }) => (
   <View style={styles.container}>
     <View style={styles.icon}>
-      <Image source={icon} />
+      <Image style={styles.iconImage} source={icon} />
     </View>
     <View style={styles.textContainer}>
       <Text style={styles.title}>{title}</Text>
-      <Text style={styles.blurb}>{blurb || moment(date).format('dddd Do, MMMM YYYY')}</Text>
+
+      <Text numberOfLines={1} style={styles.blurb}>
+        {blurb || moment(date).format('dddd Do, MMMM YYYY')}
+      </Text>
     </View>
   </View>
 );
