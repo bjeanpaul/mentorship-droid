@@ -2,7 +2,7 @@
 set -e
 
 release() {
-  ./utils/build.sh $APK
+  ENVFILE=$ENVFILE ./utils/build.sh $APK
   ./utils/bundle.sh
   TAG=$TRAVIS_TAG SENTRY_URL=$SENTRY_URL SENTRY_TOKEN=$SENTRY_TOKEN ./utils/sentry-upload-artefacts.sh
 }
