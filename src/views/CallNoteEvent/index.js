@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 import { Event } from 'src/components';
-import { MOOD_IMAGES } from 'src/constants/callNote';
+import { EVENT_MOOD_IMAGES } from 'src/constants/callNote';
 
 
 const CallNoteEvent = ({
@@ -15,7 +15,7 @@ const CallNoteEvent = ({
 }) => (
   <Event
     date={occuredAt}
-    icon={MOOD_IMAGES[menteeState]}
+    icon={EVENT_MOOD_IMAGES[menteeState]}
     blurb={reflection}
     title="Call completed"
   />

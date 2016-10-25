@@ -2,7 +2,7 @@ import React from 'react';
 import CallNoteEvent from 'src/views/CallNoteEvent';
 import { fakeEvent, fakeCallNote } from 'app/scripts/helpers';
 import * as constants from 'src/constants/callNote';
-import { MOOD_IMAGES } from 'src/constants/callNote';
+import { EVENT_MOOD_IMAGES } from 'src/constants/callNote';
 
 
 describe('CallNoteEvent', () => {
@@ -31,7 +31,7 @@ describe('CallNoteEvent', () => {
       date: '2016-09-16T11:19:17.368442Z',
       title: 'Call completed',
       blurb: 'noitcefler',
-      icon: MOOD_IMAGES[constants.CALL_NOTES_MENTEE_HAPPY],
+      icon: EVENT_MOOD_IMAGES[constants.CALL_NOTES_MENTEE_HAPPY],
     });
   });
 });
