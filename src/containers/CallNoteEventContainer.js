@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import CallNoteEvent from 'src/views/CallNoteEvent';
+import { chooseCallNote } from 'src/actions/callNote';
 import { getCallNote } from 'src/stores/helpers';
 
 
@@ -13,5 +14,10 @@ const mapStateToProps = (state, event) => {
 };
 
 
+const propsToActions = {
+  onPress: chooseCallNote,
+};
+
+
 export { mapStateToProps };
-export default connect(mapStateToProps)(CallNoteEvent);
+export default connect(mapStateToProps, propsToActions)(CallNoteEvent);
