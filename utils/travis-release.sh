@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-function release() {
+release() {
   ./utils/build.sh $APK
   ./utils/bundle.sh
   TAG=$TRAVIS_TAG ./utils/sentry-upload-artefacts.sh
