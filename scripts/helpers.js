@@ -99,7 +99,7 @@ export const fakeCallNote = data => ({
   mentor: 23,
   call: 50,
   reflection: 'It went well',
-  menteeState: 'Sad',
+  menteeState: 'sad',
   objectiveAchieved: false,
   activityHelpful: true,
   callQuality: 5,
