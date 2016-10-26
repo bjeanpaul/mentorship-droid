@@ -16,15 +16,18 @@ export default StyleSheet.create({
     justifyContent: 'flex-end',
   },
   getStarted: {
-    padding: 15,
+    paddingHorizontal: 15,
+    paddingTop: 8,
+    paddingBottom: 14,
     backgroundColor: colors.ONBOARDING_LANDING_GET_STARTED_TEXT,
   },
   getStartedHeading: {
+    paddingBottom: 8,
     fontSize: 20,
-    marginBottom: 15,
   },
   login: {
-    padding: 15,
+    paddingHorizontal: 15,
+    paddingBottom: 8,
     backgroundColor: colors.ONBOARDING_LANDING_LOGIN_BG,
     justifyContent: 'center',
   },
