@@ -281,6 +281,7 @@ exports[`CallNoteSaved should render with an activity 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        numberOfLines={1}
         style={
           Array [
             Object {
