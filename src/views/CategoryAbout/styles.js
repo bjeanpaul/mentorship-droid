@@ -1,8 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { DEVICE_WIDTH } from 'src/constants/styles';
 
-import colors from 'src/constants/colors';
-
 
 const IMAGE_WIDTH = 300;
 const IMAGE_HEIGHT = 160;
