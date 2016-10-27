@@ -188,7 +188,7 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
           }
         }>
         <Image
-          source={undefined}
+          source={1}
           style={
             Object {
               "alignSelf": "center",
@@ -551,7 +551,7 @@ exports[`CallNoteDetail should render 1`] = `
           }
         }>
         <Image
-          source={undefined}
+          source={1}
           style={
             Object {
               "alignSelf": "center",
