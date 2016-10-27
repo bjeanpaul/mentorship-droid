@@ -776,7 +776,7 @@ exports[`CallNoteSteps Mood 1`] = `
         Object {
           "alignItems": "center",
           "justifyContent": "center",
-          "margin": 9,
+          "margin": 10,
         }
       }
       testID={undefined}>
@@ -784,8 +784,8 @@ exports[`CallNoteSteps Mood 1`] = `
         source={1}
         style={
           Object {
-            "height": 88,
-            "width": 88,
+            "height": 77,
+            "width": 77,
           }
         }>
         <View
@@ -793,9 +793,9 @@ exports[`CallNoteSteps Mood 1`] = `
             Array [
               Object {
                 "backgroundColor": "rgba(0, 0, 0, 0.2)",
-                "borderRadius": 88,
-                "height": 88,
-                "width": 88,
+                "borderRadius": 77,
+                "height": 77,
+                "width": 77,
               },
               false,
             ]
@@ -839,7 +839,7 @@ exports[`CallNoteSteps Mood 1`] = `
         Object {
           "alignItems": "center",
           "justifyContent": "center",
-          "margin": 9,
+          "margin": 10,
         }
       }
       testID={undefined}>
@@ -847,8 +847,8 @@ exports[`CallNoteSteps Mood 1`] = `
         source={1}
         style={
           Object {
-            "height": 88,
-            "width": 88,
+            "height": 77,
+            "width": 77,
           }
         }>
         <View
@@ -856,9 +856,9 @@ exports[`CallNoteSteps Mood 1`] = `
             Array [
               Object {
                 "backgroundColor": "rgba(0, 0, 0, 0.2)",
-                "borderRadius": 88,
-                "height": 88,
-                "width": 88,
+                "borderRadius": 77,
+                "height": 77,
+                "width": 77,
               },
               false,
             ]
@@ -902,7 +902,7 @@ exports[`CallNoteSteps Mood 1`] = `
         Object {
           "alignItems": "center",
           "justifyContent": "center",
-          "margin": 9,
+          "margin": 10,
         }
       }
       testID={undefined}>
@@ -910,8 +910,8 @@ exports[`CallNoteSteps Mood 1`] = `
         source={1}
         style={
           Object {
-            "height": 88,
-            "width": 88,
+            "height": 77,
+            "width": 77,
           }
         }>
         <View
@@ -919,9 +919,9 @@ exports[`CallNoteSteps Mood 1`] = `
             Array [
               Object {
                 "backgroundColor": "rgba(0, 0, 0, 0.2)",
-                "borderRadius": 88,
-                "height": 88,
-                "width": 88,
+                "borderRadius": 77,
+                "height": 77,
+                "width": 77,
               },
               false,
             ]
@@ -965,7 +965,7 @@ exports[`CallNoteSteps Mood 1`] = `
         Object {
           "alignItems": "center",
           "justifyContent": "center",
-          "margin": 9,
+          "margin": 10,
         }
       }
       testID={undefined}>
@@ -973,8 +973,8 @@ exports[`CallNoteSteps Mood 1`] = `
         source={1}
         style={
           Object {
-            "height": 88,
-            "width": 88,
+            "height": 77,
+            "width": 77,
           }
         }>
         <View
@@ -982,9 +982,9 @@ exports[`CallNoteSteps Mood 1`] = `
             Array [
               Object {
                 "backgroundColor": "rgba(0, 0, 0, 0.2)",
-                "borderRadius": 88,
-                "height": 88,
-                "width": 88,
+                "borderRadius": 77,
+                "height": 77,
+                "width": 77,
               },
               false,
             ]
@@ -1028,7 +1028,7 @@ exports[`CallNoteSteps Mood 1`] = `
         Object {
           "alignItems": "center",
           "justifyContent": "center",
-          "margin": 9,
+          "margin": 10,
         }
       }
       testID={undefined}>
@@ -1036,8 +1036,8 @@ exports[`CallNoteSteps Mood 1`] = `
         source={1}
         style={
           Object {
-            "height": 88,
-            "width": 88,
+            "height": 77,
+            "width": 77,
           }
         }>
         <View
@@ -1045,9 +1045,9 @@ exports[`CallNoteSteps Mood 1`] = `
             Array [
               Object {
                 "backgroundColor": "rgba(0, 0, 0, 0.2)",
-                "borderRadius": 88,
-                "height": 88,
-                "width": 88,
+                "borderRadius": 77,
+                "height": 77,
+                "width": 77,
               },
               false,
             ]
@@ -1091,7 +1091,7 @@ exports[`CallNoteSteps Mood 1`] = `
         Object {
           "alignItems": "center",
           "justifyContent": "center",
-          "margin": 9,
+          "margin": 10,
         }
       }
       testID={undefined}>
@@ -1099,8 +1099,8 @@ exports[`CallNoteSteps Mood 1`] = `
         source={1}
         style={
           Object {
-            "height": 88,
-            "width": 88,
+            "height": 77,
+            "width": 77,
           }
         }>
         <View
@@ -1108,9 +1108,9 @@ exports[`CallNoteSteps Mood 1`] = `
             Array [
               Object {
                 "backgroundColor": "rgba(0, 0, 0, 0.2)",
-                "borderRadius": 88,
-                "height": 88,
-                "width": 88,
+                "borderRadius": 77,
+                "height": 77,
+                "width": 77,
               },
               false,
             ]
