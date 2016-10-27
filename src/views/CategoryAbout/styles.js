@@ -17,9 +17,4 @@ export default StyleSheet.create({
     width: IMAGE_WIDTH,
     height: IMAGE_HEIGHT,
   },
-  imageFallback: {
-    width: IMAGE_WIDTH,
-    height: IMAGE_HEIGHT,
-    backgroundColor: colors.CATEGORY_ABOUT_IMAGE_FALLBACK_BG,
-  },
 });

@@ -24,9 +24,4 @@ describe('CategoryAbout', () => {
     const el = render(createComponent());
     expect(el).toMatchSnapshot();
   });
-
-  it('should render a fallback if the category does not have an image', () => {
-    const el = render(createComponent({ image: null }));
-    expect(el).toMatchSnapshot();
-  });
 });
