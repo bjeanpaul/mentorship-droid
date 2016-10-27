@@ -1,4 +1,6 @@
+import { noop } from 'lodash';
 import React from 'react';
+
 import CallNoteEvent from 'src/views/CallNoteEvent';
 import { fakeEvent, fakeCallNote } from 'app/scripts/helpers';
 import * as constants from 'src/constants/callNote';
@@ -10,6 +12,7 @@ describe('CallNoteEvent', () => {
     <CallNoteEvent
       event={fakeEvent()}
       callNote={fakeCallNote()}
+      onPress={noop}
       {...props}
     />
   );
@@ -27,11 +30,25 @@ describe('CallNoteEvent', () => {
       .find('Event')
       .props();
 
-    expect(props).toEqual({
+    expect(props).toEqual(jasmine.objectContaining({
       date: '2016-09-16T11:19:17.368442Z',
       title: 'Call completed',
       blurb: 'noitcefler',
       icon: EVENT_MOOD_IMAGES[constants.CALL_NOTES_MENTEE_HAPPY],
-    });
+    }));
+  });
+
+  it('should call onPress with the call note id', () => {
+    const onPress = jest.fn();
+
+    shallow(createComponent({
+      event: fakeEvent(),
+      callNote: fakeCallNote({ id: 23 }),
+      onPress,
+    }))
+      .props()
+      .onPress();
+
+    expect(onPress.mock.calls).toEqual([[23]]);
   });
 });

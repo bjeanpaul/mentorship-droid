@@ -9,15 +9,18 @@ const CallNoteEvent = ({
     occuredAt,
   },
   callNote: {
+    id,
     menteeState,
     reflection,
   },
+  onPress,
 }) => (
   <Event
     date={occuredAt}
     icon={EVENT_MOOD_IMAGES[menteeState]}
     blurb={reflection}
     title="Call completed"
+    onPress={() => onPress(id)}
   />
 );
 
@@ -31,6 +34,8 @@ CallNoteEvent.propTypes = {
     menteeState: PropTypes.string.isRequired,
     reflection: PropTypes.string.isRequired,
   }).isRequired,
+
+  onPress: PropTypes.func,
 };
 
 

@@ -35,6 +35,7 @@ import JOURNEY_EVENT_SCHEDULED_CALL_ICON from 'app/assets/event-icon-calendar.pn
 
 import SETTINGS_ICON from 'app/assets/settings.png';
 import PROFILE_PLACEHOLDER_AVATAR from 'app/assets/profile-placeholder-avatar.png';
+import EVENT_MORE from 'app/assets/action-more.png';
 
 import START_CALL from 'app/assets/mentee-holding-phone.png';
 import OVERLAY_DONE from 'app/assets/done-icon.png';
@@ -95,6 +96,7 @@ export default {
 
   SETTINGS_ICON,
   PROFILE_PLACEHOLDER_AVATAR,
+  EVENT_MORE,
 
   NAV_TAB_ACTIVITIES_ACTIVE,
   NAV_TAB_CHAT_ACTIVE,

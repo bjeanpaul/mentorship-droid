@@ -6,12 +6,14 @@ export default StyleSheet.create({
   container: {
     backgroundColor: colors.EVENT_BG,
     margin: 24,
-    marginTop: 0,
-    padding: 20,
+    marginTop: 23,
+    paddingTop: 20,
+    paddingBottom: 20,
     paddingLeft: 16,
-    paddingRight: 16,
+    paddingRight: 8,
     borderRadius: 4,
-    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     flexDirection: 'row',
   },
   icon: {
@@ -28,7 +30,9 @@ export default StyleSheet.create({
   },
   textContainer: {
     flex: 1,
+    paddingTop: 3,
     flexDirection: 'column',
+    alignSelf: 'flex-start',
   },
   title: {
     fontSize: 16,
@@ -41,5 +45,11 @@ export default StyleSheet.create({
     fontSize: 15,
     color: colors.EVENT_BLURB,
     textAlign: 'left',
+  },
+  moreContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  more: {
   },
 });
