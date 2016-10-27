@@ -13,6 +13,8 @@ exports[`Landing should map \`onGetStartedPress\` and \`onLoginPress\` 1`] = `
     style={
       Object {
         "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
         "overflow": "hidden",
       }
     }>
@@ -37,9 +39,9 @@ exports[`Landing should map \`onGetStartedPress\` and \`onLoginPress\` 1`] = `
       style={
         Object {
           "backgroundColor": "rgba(255, 255, 255, 0.5)",
-          "paddingBottom": 14,
-          "paddingHorizontal": 15,
-          "paddingTop": 8,
+          "paddingBottom": 17,
+          "paddingHorizontal": 24,
+          "paddingTop": 20,
         }
       }>
       <Text
@@ -55,8 +57,8 @@ exports[`Landing should map \`onGetStartedPress\` and \`onLoginPress\` 1`] = `
               "textAlign": "center",
             },
             Object {
-              "fontSize": 20,
-              "paddingBottom": 8,
+              "fontSize": 16,
+              "paddingBottom": 17,
             },
           ]
         }>
@@ -95,10 +97,11 @@ exports[`Landing should map \`onGetStartedPress\` and \`onLoginPress\` 1`] = `
     <View
       style={
         Object {
+          "alignItems": "center",
           "backgroundColor": "rgba(42, 45, 48, 0.05)",
           "justifyContent": "center",
-          "paddingBottom": 8,
-          "paddingHorizontal": 15,
+          "paddingBottom": 17,
+          "paddingTop": 15,
         }
       }>
       <Text
