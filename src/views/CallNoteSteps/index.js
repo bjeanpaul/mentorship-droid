@@ -5,7 +5,7 @@ import { Text, MultiLineTextInput, RadioList } from 'src/components';
 
 import { Section } from 'src/views/Activity';
 import FormStep from 'src/containers/CallNoteFormStepContainer';
-import moods from 'src/constants/callNoteMoods';
+import { MOOD_IMAGES } from 'src/constants/callNote';
 import images from 'src/constants/images';
 import styles from './styles';
 
@@ -42,7 +42,7 @@ const Mood = ({
     title="How was your Mentee today?"
   >
     <View style={styles.list}>
-      {Object.keys(moods).map(key => (
+      {Object.keys(MOOD_IMAGES).map(key => (
         <TouchableWithoutFeedback
           key={key}
           onPress={() => onSelectImage({ menteeState: key })}
@@ -50,7 +50,7 @@ const Mood = ({
           <View style={styles.item}>
             <Image
               style={styles.image}
-              source={moods[key]}
+              source={MOOD_IMAGES[key]}
             >
             <View
               style={[

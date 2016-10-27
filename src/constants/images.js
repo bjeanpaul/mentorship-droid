@@ -54,6 +54,13 @@ import CALL_NOTES_MENTEE_CONFUSED from 'app/assets/Confused.png';
 import CALL_NOTES_MENTEE_UPSET from 'app/assets/Upset.png';
 import CALL_NOTES_MENTEE_WITHDRAWN from 'app/assets/Withdrawn.png';
 
+import EVENT_MENTEE_HAPPY from 'app/assets/happy-journey.png';
+import EVENT_MENTEE_SAD from 'app/assets/sad-journey.png';
+import EVENT_MENTEE_BORED from 'app/assets/bored-journey.png';
+import EVENT_MENTEE_CONFUSED from 'app/assets/confused-journey.png';
+import EVENT_MENTEE_UPSET from 'app/assets/upset-journey.png';
+import EVENT_MENTEE_WITHDRAWN from 'app/assets/withdrawn-journey.png';
+
 
 export default {
   PLUS_LIGHT,
@@ -108,6 +115,13 @@ export default {
   CALL_NOTES_MENTEE_CONFUSED,
   CALL_NOTES_MENTEE_UPSET,
   CALL_NOTES_MENTEE_WITHDRAWN,
+
+  EVENT_MENTEE_HAPPY,
+  EVENT_MENTEE_SAD,
+  EVENT_MENTEE_BORED,
+  EVENT_MENTEE_CONFUSED,
+  EVENT_MENTEE_UPSET,
+  EVENT_MENTEE_WITHDRAWN,
 
   YES,
   YES_SELECTED,
