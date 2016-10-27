@@ -40,7 +40,6 @@ const Mood = ({
   <FormStep
     paginationDisabled={menteeState.length === 0}
     title="How was your Mentee today?"
-    styles={{title: styles.titleMoodStep}}
   >
     <View style={styles.list}>
       {Object.keys(MOOD_IMAGES).map(key => (
