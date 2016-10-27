@@ -5,6 +5,7 @@ exports[`CategoryAbout should render 1`] = `
       Object {
         "alignItems": "center",
         "paddingBottom": 19,
+        "paddingHorizontal": 30,
         "paddingTop": 24,
       }
     }>
@@ -17,7 +18,8 @@ exports[`CategoryAbout should render 1`] = `
       style={
         Object {
           "height": 160,
-          "width": 160,
+          "maxWidth": 315,
+          "width": 300,
         }
       } />
   </View>
