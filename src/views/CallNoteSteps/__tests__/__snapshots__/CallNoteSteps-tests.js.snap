@@ -776,29 +776,31 @@ exports[`CallNoteSteps Mood 1`] = `
         Object {
           "alignItems": "center",
           "justifyContent": "center",
-          "margin": 9,
+          "marginVertical": 10,
+          "width": 120,
         }
       }
       testID={undefined}>
       <Image
         source={1}
         style={
-          Object {
-            "height": 88,
-            "width": 88,
-          }
+          Array [
+            Object {
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            },
+            false,
+          ]
         }>
         <View
           style={
-            Array [
-              Object {
-                "backgroundColor": "rgba(0, 0, 0, 0.2)",
-                "borderRadius": 88,
-                "height": 88,
-                "width": 88,
-              },
-              false,
-            ]
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.2)",
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            }
           } />
       </Image>
       <Text
@@ -839,29 +841,31 @@ exports[`CallNoteSteps Mood 1`] = `
         Object {
           "alignItems": "center",
           "justifyContent": "center",
-          "margin": 9,
+          "marginVertical": 10,
+          "width": 120,
         }
       }
       testID={undefined}>
       <Image
         source={1}
         style={
-          Object {
-            "height": 88,
-            "width": 88,
-          }
+          Array [
+            Object {
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            },
+            false,
+          ]
         }>
         <View
           style={
-            Array [
-              Object {
-                "backgroundColor": "rgba(0, 0, 0, 0.2)",
-                "borderRadius": 88,
-                "height": 88,
-                "width": 88,
-              },
-              false,
-            ]
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.2)",
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            }
           } />
       </Image>
       <Text
@@ -902,29 +906,31 @@ exports[`CallNoteSteps Mood 1`] = `
         Object {
           "alignItems": "center",
           "justifyContent": "center",
-          "margin": 9,
+          "marginVertical": 10,
+          "width": 120,
         }
       }
       testID={undefined}>
       <Image
         source={1}
         style={
-          Object {
-            "height": 88,
-            "width": 88,
-          }
+          Array [
+            Object {
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            },
+            false,
+          ]
         }>
         <View
           style={
-            Array [
-              Object {
-                "backgroundColor": "rgba(0, 0, 0, 0.2)",
-                "borderRadius": 88,
-                "height": 88,
-                "width": 88,
-              },
-              false,
-            ]
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.2)",
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            }
           } />
       </Image>
       <Text
@@ -965,29 +971,31 @@ exports[`CallNoteSteps Mood 1`] = `
         Object {
           "alignItems": "center",
           "justifyContent": "center",
-          "margin": 9,
+          "marginVertical": 10,
+          "width": 120,
         }
       }
       testID={undefined}>
       <Image
         source={1}
         style={
-          Object {
-            "height": 88,
-            "width": 88,
-          }
+          Array [
+            Object {
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            },
+            false,
+          ]
         }>
         <View
           style={
-            Array [
-              Object {
-                "backgroundColor": "rgba(0, 0, 0, 0.2)",
-                "borderRadius": 88,
-                "height": 88,
-                "width": 88,
-              },
-              false,
-            ]
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.2)",
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            }
           } />
       </Image>
       <Text
@@ -1028,29 +1036,31 @@ exports[`CallNoteSteps Mood 1`] = `
         Object {
           "alignItems": "center",
           "justifyContent": "center",
-          "margin": 9,
+          "marginVertical": 10,
+          "width": 120,
         }
       }
       testID={undefined}>
       <Image
         source={1}
         style={
-          Object {
-            "height": 88,
-            "width": 88,
-          }
+          Array [
+            Object {
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            },
+            false,
+          ]
         }>
         <View
           style={
-            Array [
-              Object {
-                "backgroundColor": "rgba(0, 0, 0, 0.2)",
-                "borderRadius": 88,
-                "height": 88,
-                "width": 88,
-              },
-              false,
-            ]
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.2)",
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            }
           } />
       </Image>
       <Text
@@ -1091,29 +1101,31 @@ exports[`CallNoteSteps Mood 1`] = `
         Object {
           "alignItems": "center",
           "justifyContent": "center",
-          "margin": 9,
+          "marginVertical": 10,
+          "width": 120,
         }
       }
       testID={undefined}>
       <Image
         source={1}
         style={
-          Object {
-            "height": 88,
-            "width": 88,
-          }
+          Array [
+            Object {
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            },
+            false,
+          ]
         }>
         <View
           style={
-            Array [
-              Object {
-                "backgroundColor": "rgba(0, 0, 0, 0.2)",
-                "borderRadius": 88,
-                "height": 88,
-                "width": 88,
-              },
-              false,
-            ]
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.2)",
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            }
           } />
       </Image>
       <Text
