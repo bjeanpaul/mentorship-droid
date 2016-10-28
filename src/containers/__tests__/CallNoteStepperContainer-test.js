@@ -1,5 +1,5 @@
 import { mapStateToProps } from 'src/containers/CallNoteStepperContainer';
-import { fakeState, fakeCall } from 'app/scripts/helpers';
+import { fakeState, fakeCall, fakeActivity } from 'app/scripts/helpers';
 
 
 describe('CallNoteStepperContainer', () => {
@@ -17,6 +17,45 @@ describe('CallNoteStepperContainer', () => {
 
       expect(mapStateToProps(state, { callId: 20 }))
         .toEqual(jasmine.objectContaining({ call }));
+    });
+
+    it('should provide the activity', () => {
+      const activity = fakeActivity({ id: 23 });
+
+      const state = fakeState({
+        entities: {
+          calls: {
+            20: fakeCall({
+              id: 20,
+              activity: 23,
+            }),
+          },
+          activities: {
+            23: activity,
+          },
+        },
+      });
+
+      expect(mapStateToProps(state, { callId: 20 }))
+        .toEqual(jasmine.objectContaining({ activity }));
+    });
+
+    it('should handle non-existent activities gracefully', () => {
+      const state = fakeState({
+        entities: {
+          calls: {
+            20: fakeCall({
+              id: 20,
+              activity: 23,
+            }),
+          },
+        },
+      });
+
+      state.entities.activities = {};
+
+      expect(mapStateToProps(state, { callId: 20 }))
+        .toEqual(jasmine.objectContaining({ activity: void 0 }));
     });
 
     it('should provide navigation state', () => {
