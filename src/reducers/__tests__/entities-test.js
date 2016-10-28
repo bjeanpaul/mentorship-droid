@@ -1,4 +1,4 @@
-jest.mock('src/constants/actions', () => ({
+jest.mock('src/constants/entities', () => ({
   __esModule: true,
   ACTIONS_WITH_ENTITIES: ['ACTION_WITH_ENTITIES'],
 }));
