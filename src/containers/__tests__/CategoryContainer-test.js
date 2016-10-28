@@ -18,7 +18,7 @@ describe('CategoryContainer', () => {
       }));
     });
 
-    it('should provide the relevant activities', () => {
+    it('should provide the relevant visible activities', () => {
       const activity1 = fakeActivity({
         id: 1,
         category: 21,
@@ -34,6 +34,11 @@ describe('CategoryContainer', () => {
           activities: {
             1: activity1,
             2: activity2,
+            3: fakeActivity({
+              id: 3,
+              category: 21,
+              isHidden: true,
+            }),
           },
           categories: {
             21: fakeCategory({ id: 21 }),
