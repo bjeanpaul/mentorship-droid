@@ -1,6 +1,6 @@
 import { includes } from 'lodash';
 import merge from 'lodash/merge';
-import { ACTIONS_WITH_ENTITIES } from 'src/constants/actions';
+import { ACTIONS_WITH_ENTITIES } from 'src/constants/entities';
 
 
 const entitiesReducer = (state = {
