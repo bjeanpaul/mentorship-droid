@@ -1,6 +1,11 @@
 import moment from 'moment';
 
 import {
+  EVENT_TYPE_CALL_NOTES_CREATED,
+  EVENT_TYPE_SCHEDULED_CALL_CREATED,
+} from 'src/constants/event';
+
+import {
   fakeState,
   fakeProfile,
   fakeAuth,
@@ -152,6 +157,7 @@ describe('helpers', () => {
   describe('getEvents', () => {
     it('should get a list of events', () => {
       const state = fakeState();
+
       state.entities.events = {
         1: fakeEvent({ id: 1 }),
         3: fakeEvent({ id: 3 }),
@@ -160,6 +166,35 @@ describe('helpers', () => {
         fakeEvent({ id: 1 }),
         fakeEvent({ id: 3 }),
       ]);
+    });
+
+    it('should omit events without their required entities', () => {
+      const state = fakeState();
+
+      const event1 = fakeEvent({
+        id: 21,
+        objectId: 2,
+        eventType: EVENT_TYPE_CALL_NOTES_CREATED,
+      });
+
+      const event2 = fakeEvent({
+        id: 23,
+        objectId: 3,
+        eventType: EVENT_TYPE_SCHEDULED_CALL_CREATED,
+      });
+
+      state.entities.events = {
+        21: event1,
+        23: event2,
+      };
+
+      state.entities.scheduledCalls = {};
+
+      state.entities.callNotes = {
+        2: fakeCallNote({ id: 2 }),
+      };
+
+      expect(getEvents(state)).toEqual([event1]);
     });
   });
 
