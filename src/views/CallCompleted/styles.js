@@ -13,10 +13,10 @@ export default StyleSheet.create({
   },
   contentContainer: {
     alignItems: 'center',
-    flex: 0.6,
+    flex: 0.7,
   },
   actionContainer: {
-    flex: 0.4,
+    flex: 0.3,
   },
   title: {
     fontSize: 20,

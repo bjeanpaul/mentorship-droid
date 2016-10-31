@@ -34,7 +34,10 @@ const CallNoteSaved = ({
         </Text>
 
         {
-          activity && <Text style={[Text.themes.light, styles.message]}>
+          activity && <Text
+            numberOfLines={1}
+            style={[Text.themes.light, styles.message]}
+          >
             {activity.title}
           </Text>
         }
