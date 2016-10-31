@@ -4,7 +4,7 @@ import React from 'react';
 import { Text } from 'src/components';
 import CallNoteStepper from 'src/views/CallNoteStepper';
 import { createStack } from 'src/navigationHelpers';
-import { fakeCall } from 'app/scripts/helpers';
+import { fakeCall, fakeActivity } from 'app/scripts/helpers';
 
 
 describe('CallNoteStepper', () => {
@@ -33,7 +33,8 @@ describe('CallNoteStepper', () => {
     const steps = createSteps();
 
     const el = shallow(createComponent({
-      call: fakeCall({ activity: 23 }),
+      call: fakeCall(),
+      activity: fakeActivity(),
       steps,
     }));
 
@@ -44,7 +45,8 @@ describe('CallNoteStepper', () => {
     const steps = createSteps();
 
     const el = shallow(createComponent({
-      call: fakeCall({ activity: void 0 }),
+      call: fakeCall(),
+      activity: void 0,
       steps,
     }));
 

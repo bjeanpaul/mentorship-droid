@@ -1,6 +1,8 @@
 import moment from 'moment';
 import { values, isUndefined, sortBy, filter, first } from 'lodash';
 
+import { TYPES_TO_COLLECTIONS } from 'src/constants/event';
+
 
 export const getAuthUserProfile = ({
   auth: { profileId },
@@ -50,11 +52,12 @@ export const getScheduledCallActivity = (state, id) => {
 };
 
 
-export const getEvents = ({ entities: { events } }) => values(events);
-
-
-export const getActivityCallNotes = ({ entities: { callNotes } }, targetActivityId) => (
-  values(callNotes).filter(({ callActivityId }) => callActivityId === targetActivityId));
+export const getActivityCallNotes = ({
+  entities: { callNotes },
+}, activityId) => {
+  return values(callNotes)
+    .filter(({ callActivityId }) => callActivityId === activityId);
+};
 
 
 export const getCallNotes = ({
@@ -88,3 +91,14 @@ export const getScheduledCallsBetween = (state, start, end, time = Date.now()) =
       return startTime <= t && t <= endTime;
     });
 };
+
+
+const getEventObject = (state, event) => {
+  const collection = state.entities[TYPES_TO_COLLECTIONS[event.eventType]];
+  return collection && collection[event.objectId];
+};
+
+
+// TODO return the associated entitites to make the containers' jobs easier
+export const getEvents = state => values(state.entities.events)
+  .filter(event => getEventObject(state, event));

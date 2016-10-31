@@ -49,15 +49,10 @@ const Mood = ({
         >
           <View style={styles.item}>
             <Image
-              style={styles.image}
+              style={[styles.image, menteeState === key && styles.imageIsSelected]}
               source={MOOD_IMAGES[key]}
             >
-            <View
-              style={[
-                styles.imageHighlight,
-                menteeState === key && styles.imageIsSelected,
-              ]}
-            />
+            { menteeState !== key && <View style={styles.imageHighlight} /> }
             </Image>
             <Text style={styles.label}>{upperFirst(key)}</Text>
           </View>
