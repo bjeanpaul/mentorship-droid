@@ -1,5 +1,16 @@
 import { StyleSheet } from 'react-native';
+import { DEVICE_WIDTH } from 'src/constants/styles';
 import colors from 'src/constants/colors';
+
+
+const MENTOR_IMAGE_WIDTH = 360;
+const MENTOR_IMAGE_HEIGHT = 173;
+
+
+const SCALED_MENTOR_IMAGE_HEIGHT = MENTOR_IMAGE_WIDTH > DEVICE_WIDTH
+  ? MENTOR_IMAGE_HEIGHT * (DEVICE_WIDTH / MENTOR_IMAGE_WIDTH)
+  : MENTOR_IMAGE_HEIGHT;
+
 
 export default StyleSheet.create({
   header: {
@@ -18,10 +29,9 @@ export default StyleSheet.create({
     color: colors.JOURNEY_HEADER_TITLE_IS_DATE,
   },
   mentee: {
-    flex: 0.4,
-    width: null,
-    height: null,
-    resizeMode: 'cover',
+    width: DEVICE_WIDTH,
+    height: SCALED_MENTOR_IMAGE_HEIGHT,
+    resizeMode: 'contain',
     zIndex: 3,
     alignItems: 'center',
     flexDirection: 'row',
@@ -35,7 +45,7 @@ export default StyleSheet.create({
     marginRight: 24,
   },
   eventsContainer: {
-    flex: 0.6,
+    flex: -1,
     backgroundColor: colors.JOURNEY_BG,
   },
 });

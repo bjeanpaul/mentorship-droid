@@ -86,12 +86,11 @@ exports[`Journey should render 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "#eff2f2",
-        "flex": 0.4,
         "flexDirection": "row",
-        "height": null,
+        "height": 173,
         "justifyContent": "space-between",
-        "resizeMode": "cover",
-        "width": null,
+        "resizeMode": "contain",
+        "width": 375,
         "zIndex": 3,
       }
     }>
@@ -123,7 +122,7 @@ exports[`Journey should render 1`] = `
     style={
       Object {
         "backgroundColor": "#eff2f2",
-        "flex": 0.6,
+        "flex": -1,
       }
     }>
     <View
@@ -326,12 +325,11 @@ exports[`Journey should render the current scheduled call to be started 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "#eff2f2",
-        "flex": 0.4,
         "flexDirection": "row",
-        "height": null,
+        "height": 173,
         "justifyContent": "space-between",
-        "resizeMode": "cover",
-        "width": null,
+        "resizeMode": "contain",
+        "width": 375,
         "zIndex": 3,
       }
     }>
@@ -363,7 +361,7 @@ exports[`Journey should render the current scheduled call to be started 1`] = `
     style={
       Object {
         "backgroundColor": "#eff2f2",
-        "flex": 0.6,
+        "flex": -1,
       }
     }>
     <View
@@ -566,12 +564,11 @@ exports[`Journey should render the next scheduled call 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "#eff2f2",
-        "flex": 0.4,
         "flexDirection": "row",
-        "height": null,
+        "height": 173,
         "justifyContent": "space-between",
-        "resizeMode": "cover",
-        "width": null,
+        "resizeMode": "contain",
+        "width": 375,
         "zIndex": 3,
       }
     }>
@@ -603,7 +600,7 @@ exports[`Journey should render the next scheduled call 1`] = `
     style={
       Object {
         "backgroundColor": "#eff2f2",
-        "flex": 0.6,
+        "flex": -1,
       }
     }>
     <View

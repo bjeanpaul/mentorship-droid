@@ -87,6 +87,7 @@ const Journey = ({
         />
       </TouchableWithoutFeedback>
     </Image>
+
     <View style={styles.eventsContainer}>
       <EventListContainer />
     </View>
