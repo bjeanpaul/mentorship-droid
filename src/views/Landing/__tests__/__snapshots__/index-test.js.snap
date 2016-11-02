@@ -62,7 +62,10 @@ exports[`Landing should map \`onGetStartedPress\` and \`onLoginPress\` 1`] = `
             },
           ]
         }>
-        This is a short, but sweet, description of the application.
+        Hello, welcome to your
+        
+        
+        mentorship journey!
       </Text>
       <View
         style={
