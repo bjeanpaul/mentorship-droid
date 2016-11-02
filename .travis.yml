@@ -36,8 +36,8 @@ deploy:
   api_key:
     secure: K8QH/FSzPwOpv80XqVyn74XJ/e81qAc16KQfNl28KRqDdRVCQd4IXA8K0JwMbw7H2Tn72U3MgUdErVsjV4ORziBUhsbLQ9fkMTHvhNZrwQj9xnyFNHVKY5sBAUGrKEmu8qd1l8pXX2dr0yPSM+gfyxeXGeEMsQg1dDO7e+EL3nqUNHYI6kiNWqMNNHMIGpZEynLsKMnPyC3fc47D/KL0dxesaE6nrAD+CHu0wmehxvqqmk1QFjnrzyWbSTPsg4jKA83JHWfJ28F+G3qqZmAhUxYW7A9sQ97iI4RbZBjX4vr47+93Z0dJtF/Q1/AE7CqvUbo1PKX+WwUn+0r5oOaewp1hrRBwCdrQn42fLweugYxYW2Es3IAsD1cgF/hjX6nr+NzuTwaNvTyTrPgAYAM4C6aspCgGBzQ8f9LxFDoPvVKVOoIgt2pT1LLb0biJd8ooesuB4N2S8U/goVu7jcHYeLkUfmibopf03brmtmclLAZMCrlyQKIbR1dMhQ0TE57w1JNyTE26mqAa3ZXRBD6dkcPvB1MZaW3LFX+mPvv8aC6Ew5n660dlYnjvKykKjJtoRmubc1OMxLuOk3HiiA3Vf/XvrZTKQ3UXK9rluE3TRcRZc+VUNa4nNNY2NiV8wnsQsPIlDj6Wdn1GCNESRfjO8AC3ElHa0jIZnJ0kspw/SD8=
   file:
-  - $TRAVIS_BUILD_DIR/$TRAVIS_TAG.apk
-  - $TRAVIS_BUILD_DIR/$TRAVIS_TAG.qa.apk
+  - $TRAVIS_BUILD_DIR/mentorship-$TRAVIS_TAG.apk
+  - $TRAVIS_BUILD_DIR/mentorship-$TRAVIS_TAG.qa.apk
   on:
     repo: praekeltfoundation/mentorship-droid
     tags: true
