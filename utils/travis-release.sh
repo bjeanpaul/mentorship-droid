@@ -11,7 +11,8 @@ APK=mentorship-$TRAVIS_TAG.apk \
   ENVFILE=.env.prd \
   GOOGLE_SERVICES=google-services.prd.json \
   SENTRY_URL=$SENTRY_PRD_URL \
-  SENTRY_TOKEN=$SENTRY_PRD_TOKEN release
+  SENTRY_TOKEN=$SENTRY_PRD_TOKEN \
+  release
 
 APK=mentorship-$TRAVIS_TAG.qa.apk \
   ENVFILE=.env.qa \
