@@ -1,4 +1,4 @@
-package com.app;
+package org.praekelt.mentorship;
 
 import android.app.Application;
 import android.util.Log;
