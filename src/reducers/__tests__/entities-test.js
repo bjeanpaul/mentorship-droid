@@ -4,6 +4,8 @@ jest.mock('src/constants/entities', () => ({
 }));
 
 import reduce from 'src/reducers/entities';
+import { logout } from 'src/actions/auth';
+import { fakeCategory, fakeActivity } from 'app/scripts/helpers';
 
 
 describe('reducers/entities', () => {
@@ -40,6 +42,30 @@ describe('reducers/entities', () => {
         21: { id: 21 },
         23: { id: 23 },
       },
+    });
+  });
+
+  describe('AUTH_LOGOUT', () => {
+    it('should clear category entitites', () => {
+      const state = {
+        categories: {
+          23: fakeCategory(),
+        },
+      };
+
+      expect(reduce(state, logout()))
+        .toEqual(jasmine.objectContaining({ categories: {} }));
+    });
+
+    it('should clear activity entitites', () => {
+      const state = {
+        activities: {
+          23: fakeActivity(),
+        },
+      };
+
+      expect(reduce(state, logout()))
+        .toEqual(jasmine.objectContaining({ activities: {} }));
     });
   });
 });
