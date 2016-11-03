@@ -9,7 +9,8 @@ import { openCall } from 'src/actions/calls';
 
 
 const mapStateToProps = state => {
-  throw new Error('Testing sentry');
+  const foo = true;
+  if (foo) throw new Error('Testing sentry');
   const [start, end] = [START_CALL_RANGE_START, START_CALL_RANGE_END];
   const scheduledCall = first(getScheduledCallsBetween(state, start, end));
 
