@@ -1,4 +1,4 @@
-package com.app;
+package com.praekelt.mentorship;
 
 import com.facebook.react.ReactActivity;
 
