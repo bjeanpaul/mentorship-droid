@@ -19,7 +19,8 @@ const Landing = ({
     <View style={styles.bottom}>
       <View style={styles.getStarted}>
         <Text style={styles.getStartedHeading}>
-          This is a short, but sweet, description of the application.
+          Hello, welcome to your{'\n'}
+          mentorship journey!
         </Text>
         <Button onPress={onGetStartedPress}>
           GET STARTED
