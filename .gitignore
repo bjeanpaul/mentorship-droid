@@ -40,11 +40,10 @@ buck-out/
 
 android/app/libs
 android/app/google-services.json
-android/keystores/debug.keystore
 
 .env.qa
 .env.prd
 src/config/dev.js
 
-release.keystore
+*.keystore
 secrets.tar
