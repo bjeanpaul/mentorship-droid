@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { View, Image, ScrollView } from 'react-native';
+import { View, Image } from 'react-native';
 import { Text } from 'src/components';
 import images from 'src/constants/images';
 import containers from 'src/containers/events';
@@ -34,9 +34,7 @@ const EventList = ({
         style={styles.containerBackground}
         source={images.JOURNEY_BG}
       >
-        <ScrollView>
-          {groupElements.length && groupElements || <FirstEventContainer />}
-        </ScrollView>
+        {groupElements.length && groupElements || <FirstEventContainer />}
       </Image>
     </View>
   );
