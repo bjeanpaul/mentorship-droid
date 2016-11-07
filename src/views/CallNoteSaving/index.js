@@ -3,10 +3,23 @@ import { OverlayLoading } from 'src/components';
 
 
 class Saving extends React.Component {
-  // TODO: Stepper should dispatch an action when it's on the last view
+  constructor(props) {
+    super(props);
+    this.saved = false;
+  }
+
+  // TODO fix Stepper to not need componentDidMount() as a way of dispatching
+  // save actions
   componentDidMount() {
     const { callNote } = this.props;
-    this.props.save(callNote);
+
+    // workaround for when componentDidMount() is called more than once (e.g.
+    // if the component is instantiated multiple times because of
+    // NavigationCardStack being set up incorrectly)
+    if (!this.saved) {
+      this.saved = true;
+      this.props.save(callNote);
+    }
   }
 
   render() {
