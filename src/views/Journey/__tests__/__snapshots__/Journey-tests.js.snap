@@ -98,7 +98,8 @@ exports[`Journey should render 1`] = `
           style={Object {}} />
       </View>
       <View
-        onLayout={[Function]}>
+        onLayout={[Function]}
+        uid="container">
         <Image
           source={1}
           style={
@@ -344,7 +345,8 @@ exports[`Journey should render the current scheduled call to be started 1`] = `
           style={Object {}} />
       </View>
       <View
-        onLayout={[Function]}>
+        onLayout={[Function]}
+        uid="container">
         <Image
           source={1}
           style={
@@ -590,7 +592,8 @@ exports[`Journey should render the next scheduled call 1`] = `
           style={Object {}} />
       </View>
       <View
-        onLayout={[Function]}>
+        onLayout={[Function]}
+        uid="container">
         <Image
           source={1}
           style={
