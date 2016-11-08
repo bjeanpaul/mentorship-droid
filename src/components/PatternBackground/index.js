@@ -60,6 +60,7 @@ PatternBackground.propTypes = {
   children: PropTypes.any,
   pattern: PropTypes.number,
   patternHeight: PropTypes.number,
+  initialHeight: PropTypes.number,
 };
 
 
