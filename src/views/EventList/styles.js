@@ -6,12 +6,6 @@ export default StyleSheet.create({
   container: {
     flex: 1,
   },
-  containerBackground: {
-    flex: 1,
-    width: null,
-    height: null,
-    resizeMode: 'cover',
-  },
   groupLabel: {
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: colors.EVENT_GROUP_LABEL_BORDER,

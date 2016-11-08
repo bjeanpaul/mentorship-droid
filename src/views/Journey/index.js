@@ -1,6 +1,6 @@
 import moment from 'moment';
 import React, { PropTypes } from 'react';
-import { BaseView, Header, Text } from 'src/components';
+import { BaseView, Header, Text, PatternBackground } from 'src/components';
 import EventListContainer from 'src/containers/EventListContainer';
 
 import {
@@ -84,21 +84,23 @@ const Journey = ({
     </Header>
 
     <ScrollView>
-      <Image
-        source={images.JOURNEY_MENTEE}
-        style={styles.mentee}
-      >
-        <TouchableWithoutFeedback uid="call" onPress={onCallPress}>
-          <Image
-            source={images.JOURNEY_CALL_ICON}
-            style={styles.icon}
-          />
-        </TouchableWithoutFeedback>
-      </Image>
+      <PatternBackground>
+        <Image
+          source={images.JOURNEY_MENTEE}
+          style={styles.mentee}
+        >
+          <TouchableWithoutFeedback uid="call" onPress={onCallPress}>
+            <Image
+              source={images.JOURNEY_CALL_ICON}
+              style={styles.icon}
+            />
+          </TouchableWithoutFeedback>
+        </Image>
 
-      <View style={styles.eventsContainer}>
-        <EventListContainer />
-      </View>
+        <View style={styles.eventsContainer}>
+          <EventListContainer />
+        </View>
+      </PatternBackground>
     </ScrollView>
   </BaseView>
 );
