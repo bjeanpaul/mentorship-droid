@@ -47,7 +47,7 @@ class PatternBackground extends Component {
         }
         </View>
 
-        <View onLayout={event => this.onLayout(event)}>
+        <View uid="container" onLayout={event => this.onLayout(event)}>
           {this.props.children}
         </View>
       </View>
