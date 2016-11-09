@@ -1,3 +1,5 @@
+import PATTERN_BG from 'app/assets/pattern-bg.png';
+
 import PLUS_LIGHT from 'app/assets/plus.png';
 import ONBOARDING_LANDING from 'app/assets/Landing.png';
 import PROFILE_FACE from 'app/assets/Profile.png';
@@ -27,7 +29,6 @@ import NAV_TAB_COMMUNITY_ACTIVE from 'app/assets/nav-community-active.png';
 import NAV_TAB_JOURNEY_ACTIVE from 'app/assets/nav-journey-active.png';
 import NAV_TAB_SCHEDULED_CALLS_ACTIVE from 'app/assets/nav-calls-active.png';
 
-import JOURNEY_BG from 'app/assets/journey-bg.png';
 import JOURNEY_MENTEE from 'app/assets/journey-mentee.png';
 import JOURNEY_CALL_ICON from 'app/assets/call-icon.png';
 import JOURNEY_MESSAGE_ICON from 'app/assets/message-icon.png';
@@ -64,6 +65,8 @@ import EVENT_MENTEE_WITHDRAWN from 'app/assets/withdrawn-journey.png';
 
 
 export default {
+  PATTERN_BG,
+
   PLUS_LIGHT,
   ONBOARDING_LANDING,
   PROFILE_FACE,
@@ -88,7 +91,6 @@ export default {
   NAV_TAB_JOURNEY,
   NAV_TAB_SCHEDULED_CALLS,
 
-  JOURNEY_BG,
   JOURNEY_MENTEE,
   JOURNEY_CALL_ICON,
   JOURNEY_MESSAGE_ICON,

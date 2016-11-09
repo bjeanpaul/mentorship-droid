@@ -25,6 +25,7 @@ import FirstEvent from './FirstEvent';
 import Failure from './Failure';
 import ActivityList from './ActivityList';
 import RadioList from './RadioList';
+import PatternBackground from './PatternBackground';
 
 
 export {
@@ -56,4 +57,5 @@ export {
   Failure,
   ActivityList,
   RadioList,
+  PatternBackground,
 };

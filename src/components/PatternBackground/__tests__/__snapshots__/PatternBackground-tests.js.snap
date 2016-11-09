@@ -1,0 +1,40 @@
+exports[`PatternBackground should render 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#eff2f2",
+        "position": "absolute",
+      }
+    }
+    uid="patterns">
+    <Image
+      source={1}
+      style={Object {}} />
+    <Image
+      source={1}
+      style={Object {}} />
+  </View>
+  <View
+    onLayout={[Function]}
+    uid="container">
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          undefined,
+        ]
+      }>
+      Foo
+    </Text>
+  </View>
+</View>
+`;
