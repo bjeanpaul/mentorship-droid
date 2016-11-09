@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
-import { View, Image, ScrollView } from 'react-native';
+import { View } from 'react-native';
 import { Text } from 'src/components';
-import images from 'src/constants/images';
 import containers from 'src/containers/events';
 import FirstEventContainer from 'src/containers/FirstEventContainer';
 import styles from './styles';
@@ -30,14 +29,7 @@ const EventList = ({
 
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.containerBackground}
-        source={images.JOURNEY_BG}
-      >
-        <ScrollView>
-          {groupElements.length && groupElements || <FirstEventContainer />}
-        </ScrollView>
-      </Image>
+      {groupElements.length && groupElements || <FirstEventContainer />}
     </View>
   );
 };

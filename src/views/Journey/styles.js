@@ -36,7 +36,6 @@ export default StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    backgroundColor: colors.JOURNEY_BG,
   },
   icon: {
     width: 44,
@@ -46,6 +45,5 @@ export default StyleSheet.create({
   },
   eventsContainer: {
     flex: -1,
-    backgroundColor: colors.JOURNEY_BG,
   },
 });

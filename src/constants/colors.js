@@ -3,6 +3,7 @@ export default {
   DEFAULT_STATUS_BG: '#99acae',
   BG_DARK: '#003035',
   BG_ORANGE: 'rgba(246, 111, 63, 0.95)',
+  BG_PATTERN: '#eff2f2',
 
   DEFAULT_TEXT: '#003035',
   TEXT_LIGHT: '#fff',
