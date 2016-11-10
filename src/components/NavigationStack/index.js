@@ -39,9 +39,6 @@ const getDirection = (prev, curr) => {
   // if active route hasn't changed
   if (prevRoute.key === currRoute.key) return null;
 
-  // a pop or backward navigation happened (rightward), otherwise a push or
-  // forward navigation happened, or the state should be considered a reset (in
-  // which case we animated in leftward anyways)
   // pop or backward navigation: rightward
   // push, forward navigation or some other change: leftward
   return prev.routes.length > 1 && currRoute === prev.routes[prev.index - 1]
