@@ -12,62 +12,79 @@ import {
   CallQuality,
 } from 'src/views/CallNoteSteps';
 
+
 describe('CallNoteSteps', () => {
-  const createComponent = (children) => (
-    <Provider store={fakeStore()}>
-      {children}
-    </Provider>
-  );
-
-  it('Reflections', () => {
-    const el = render(createComponent(
-      <Reflections
-        reflection="Walk in silence"
-        onChangeText={noop}
-      />
-    ));
-    expect(el.toJSON()).toMatchSnapshot();
+  describe('Reflections', () => {
+    it('should render', () => {
+      const el = render(
+        <Reflections
+          reflection="Walk in silence"
+          onChangeText={noop}
+          onBackPress={noop}
+          onNextPress={noop}
+        />
+      );
+      expect(el.toJSON()).toMatchSnapshot();
+    });
   });
 
-  it('Mood', () => {
-    const el = render(createComponent(
-      <Mood
-        menteeState="Sad"
-        onSelectImage={noop}
-      />
-    ));
-    expect(el.toJSON()).toMatchSnapshot();
+  describe('Mood', () => {
+    it('should render', () => {
+      const el = render(
+        <Mood
+          menteeState="Sad"
+          onSelectImage={noop}
+          onBackPress={noop}
+          onNextPress={noop}
+        />
+      );
+      expect(el.toJSON()).toMatchSnapshot();
+    });
   });
 
-  it('Completed', () => {
-    const el = render(createComponent(
-      <Completed
-        objectiveAchieved={void 0}
-        objective="None"
-        color="pink"
-        onSelectImage={noop}
-      />
-    ));
-    expect(el.toJSON()).toMatchSnapshot();
+  describe('Completed', () => {
+    it('should render', () => {
+      const el = render(
+        <Completed
+          objectiveAchieved={void 0}
+          objective="None"
+          color="pink"
+          onSelectImage={noop}
+          onBackPress={noop}
+          onNextPress={noop}
+        />
+      );
+      expect(el.toJSON()).toMatchSnapshot();
+    });
   });
 
-  it('Rating', () => {
-    const el = render(createComponent(
-      <Rating
-        activityHelpful="A lot"
-        onChangeText={noop}
-      />
-    ));
-    expect(el.toJSON()).toMatchSnapshot();
+  describe('Rating', () => {
+    it('should render', () => {
+      const el = render(
+        <Rating
+          activityHelpful="A lot"
+          onChangeText={noop}
+          onBackPress={noop}
+          onNextPress={noop}
+        />
+      );
+
+      expect(el.toJSON()).toMatchSnapshot();
+    });
   });
 
-  it('CallQuality', () => {
-    const el = render(createComponent(
-      <CallQuality
-        callQuality="Delays"
-        onChangeText={noop}
-      />
-    ));
-    expect(el.toJSON()).toMatchSnapshot();
+  describe('CallQuality', () => {
+    it('should render', () => {
+      const el = render(
+        <CallQuality
+          callQuality="Delays"
+          onChangeText={noop}
+          onBackPress={noop}
+          onNextPress={noop}
+        />
+      );
+
+      expect(el.toJSON()).toMatchSnapshot();
+    });
   });
 });

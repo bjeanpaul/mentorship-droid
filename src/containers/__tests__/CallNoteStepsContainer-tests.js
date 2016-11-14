@@ -1,6 +1,7 @@
 import {
-  completedMapDispatchToProps,
+  mapStateToProps,
   savingMapStateToProps,
+  completedMapDispatchToProps,
 } from 'src/containers/CallNoteStepsContainer';
 
 import {
@@ -13,6 +14,20 @@ import {
 
 
 describe('CallNoteStepsContainer', () => {
+  describe('mapStateToProps', () => {
+    it('should provide props for the given prop names', () => {
+      const callNote = fakeCallNote({ reflection: 'foo' });
+
+      const state = fakeState({
+        callNote: { callNote },
+      });
+
+      expect(mapStateToProps('reflection')(state)).toEqual({
+        reflection: 'foo',
+      });
+    });
+  });
+
   describe('completedMapDispatchToProps', () => {
     it('should provide the activity objective and category color', () => {
       const call = fakeCall({

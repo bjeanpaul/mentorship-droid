@@ -1,4 +1,4 @@
-exports[`CallNoteSteps CallQuality 1`] = `
+exports[`CallNoteSteps CallQuality should render 1`] = `
 <View
   style={
     Array [
@@ -420,7 +420,7 @@ exports[`CallNoteSteps CallQuality 1`] = `
 </View>
 `;
 
-exports[`CallNoteSteps Completed 1`] = `
+exports[`CallNoteSteps Completed should render 1`] = `
 <View
   style={
     Array [
@@ -712,7 +712,7 @@ exports[`CallNoteSteps Completed 1`] = `
 </View>
 `;
 
-exports[`CallNoteSteps Mood 1`] = `
+exports[`CallNoteSteps Mood should render 1`] = `
 <View
   style={
     Array [
@@ -1227,7 +1227,7 @@ exports[`CallNoteSteps Mood 1`] = `
 </View>
 `;
 
-exports[`CallNoteSteps Rating 1`] = `
+exports[`CallNoteSteps Rating should render 1`] = `
 <View
   style={
     Array [
@@ -1627,7 +1627,7 @@ exports[`CallNoteSteps Rating 1`] = `
 </View>
 `;
 
-exports[`CallNoteSteps Reflections 1`] = `
+exports[`CallNoteSteps Reflections should render 1`] = `
 <View
   style={
     Array [

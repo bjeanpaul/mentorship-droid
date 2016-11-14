@@ -1,28 +1,21 @@
 import { pick } from 'lodash';
 import { connect } from 'react-redux';
 import { createCallNoteWithMentor, changeCallNote } from 'src/actions/callNote';
+import { stepBack, stepForward } from 'src/actions/callNote';
 import { getActivity, getCategory } from 'src/stores/helpers';
-
-import {
-  Reflections,
-  Mood,
-  Completed,
-  Rating,
-  CallQuality,
-} from 'src/views/CallNoteSteps';
-import Saving from 'src/views/CallNoteSaving';
+import * as steps from 'src/views/CallNoteSteps';
+import SavingStep from 'src/views/CallNoteSaving';
 
 
-const callNoteContainer = ({
-  component,
-  callNoteProps,
-  actions = {
-    onChangeText: changeCallNote,
-  },
-}) => connect(
-  state => pick(state.callNote.callNote, callNoteProps),
-  actions,
-)(component);
+export const propsToActions = {
+  onChangeText: changeCallNote,
+  onBackPress: stepBack,
+  onNextPress: stepForward,
+};
+
+
+export const mapStateToProps = (...propNames) => state => (
+  pick(state.callNote.callNote, propNames));
 
 
 export const completedMapDispatchToProps = (state, { call }) => {
@@ -45,35 +38,36 @@ export const savingMapStateToProps = (state, { call }) => ({
 });
 
 
-export default {
-  Reflections: callNoteContainer({
-    component: Reflections,
-    callNoteProps: ['reflection'],
-  }),
+export const Reflections = connect(
+  mapStateToProps('reflection'),
+  propsToActions
+)(steps.Reflections);
 
-  Mood: callNoteContainer({
-    component: Mood,
-    callNoteProps: ['menteeState'],
-    actions: {
-      onSelectImage: changeCallNote,
-    },
-  }),
 
-  Completed: connect(completedMapDispatchToProps, {
-    onSelectImage: changeCallNote,
-  })(Completed),
+export const Mood = connect(mapStateToProps('menteeState'), {
+  onSelectImage: changeCallNote,
+  ...propsToActions,
+})(steps.Mood);
 
-  Rating: callNoteContainer({
-    component: Rating,
-    callNoteProps: ['activityHelpful'],
-  }),
 
-  CallQuality: callNoteContainer({
-    component: CallQuality,
-    callNoteProps: ['callQuality'],
-  }),
+export const Completed = connect(
+  completedMapDispatchToProps,
+  propsToActions
+)(steps.Completed);
 
-  Saving: connect(savingMapStateToProps, {
-    save: createCallNoteWithMentor,
-  })(Saving),
-};
+
+export const Rating = connect(
+  mapStateToProps('activityHelpful'),
+  propsToActions
+)(steps.Rating);
+
+
+export const CallQuality = connect(
+  mapStateToProps('callQuality'),
+  propsToActions
+)(steps.CallQuality);
+
+
+export const Saving = connect(savingMapStateToProps, {
+  save: createCallNoteWithMentor,
+})(SavingStep);

@@ -4,7 +4,7 @@ import { View, Image, TouchableWithoutFeedback, ScrollView } from 'react-native'
 import { Text, MultiLineTextInput, RadioList } from 'src/components';
 
 import { Section } from 'src/views/Activity';
-import FormStep from 'src/containers/CallNoteFormStepContainer';
+import { FormStep } from 'src/components';
 import { MOOD_IMAGES } from 'src/constants/callNote';
 import images from 'src/constants/images';
 import styles from './styles';
@@ -13,20 +13,22 @@ import styles from './styles';
 const Reflections = ({
   reflection = '',
   onChangeText,
+  ...props,
 }) => (
   <FormStep
     paginationBackDisabled
     paginationDisabled={reflection.length === 0}
     title="Please share your reflections of the discussion"
+    {...props}
   >
     <MultiLineTextInput
       value={reflection}
       placeholder="Type your answer here"
       onChangeText={text => onChangeText({ reflection: text })}
     />
-
   </FormStep>
 );
+
 Reflections.propTypes = {
   reflection: PropTypes.string,
   onChangeText: PropTypes.func.isRequired,
@@ -36,10 +38,12 @@ Reflections.propTypes = {
 const Mood = ({
   menteeState = '',
   onSelectImage,
+  ...props,
 }) => (
   <FormStep
     paginationDisabled={menteeState.length === 0}
     title="How was your Mentee today?"
+    {...props}
   >
     <View style={styles.list}>
       {Object.keys(MOOD_IMAGES).map(key => (
@@ -61,6 +65,7 @@ const Mood = ({
     </View>
   </FormStep>
 );
+
 Mood.propTypes = {
   menteeState: PropTypes.string,
   onSelectImage: PropTypes.func.isRequired,
@@ -72,10 +77,12 @@ const Completed = ({
   objective,
   color,
   onSelectImage,
+  ...props,
 }) => (
   <FormStep
     paginationDisabled={isUndefined(objectiveAchieved)}
     title="Did you achieve the objective?"
+    {...props}
   >
     <View style={styles.completedContainer}>
       <View style={styles.yesNoContainer}>
@@ -91,9 +98,9 @@ const Completed = ({
         <TouchableWithoutFeedback onPress={() => onSelectImage({ objectiveAchieved: false })}>
           <Image
             source={
-              objectiveAchieved === false ?
-              images.CALL_NOTES_COMPLETED_NO_SELECTED :
-              images.CALL_NOTES_COMPLETED_NO
+              objectiveAchieved === false
+                ? images.CALL_NOTES_COMPLETED_NO_SELECTED
+                : images.CALL_NOTES_COMPLETED_NO
             }
           />
         </TouchableWithoutFeedback>
@@ -112,6 +119,7 @@ const Completed = ({
     </View>
   </FormStep>
 );
+
 Completed.propTypes = {
   objectiveAchieved: PropTypes.any,
   onSelectImage: PropTypes.func.isRequired,
@@ -123,6 +131,7 @@ Completed.propTypes = {
 const Rating = ({
   activityHelpful = '',
   onChangeText,
+  ...props,
 }) => {
   const items = [
     'Not at all',
@@ -137,6 +146,7 @@ const Rating = ({
     <FormStep
       paginationDisabled={activityHelpful.length === 0}
       title="Was the activity helpful in facilitating your discussion?"
+      {...props}
     >
       <View style={styles.ratingContainer}>
         <ScrollView>
@@ -152,6 +162,7 @@ const Rating = ({
     </FormStep>
   );
 };
+
 Rating.propTypes = {
   activityHelpful: PropTypes.string,
   onChangeText: PropTypes.func.isRequired,
@@ -161,6 +172,7 @@ Rating.propTypes = {
 const CallQuality = ({
   callQuality = '',
   onChangeText,
+  ...props,
 }) => {
   const items = [
     'Excellent',
@@ -175,6 +187,7 @@ const CallQuality = ({
     <FormStep
       paginationDisabled={callQuality.length === 0}
       title="Rate the call quality"
+      {...props}
     >
       <View style={styles.callQualityContainer}>
         <Text style={styles.callQualityHintText}>
@@ -193,6 +206,7 @@ const CallQuality = ({
     </FormStep>
   );
 };
+
 CallQuality.propTypes = {
   callQuality: PropTypes.string,
   onChangeText: PropTypes.func.isRequired,
