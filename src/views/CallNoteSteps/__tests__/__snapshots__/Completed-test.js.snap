@@ -1,0 +1,274 @@
+exports[`CallNoteSteps Completed should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center",
+        },
+        Array [
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400",
+          },
+          Object {
+            "margin": 25,
+            "marginBottom": 50,
+          },
+        ],
+      ]
+    }>
+    Did you achieve the objective?
+  </Text>
+  <View
+    style={undefined}>
+    <View
+      style={undefined}>
+      <Image
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hitSlop={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        source={1}
+        style={undefined}
+        testID={undefined} />
+      <Image
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hitSlop={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        source={1}
+        style={undefined}
+        testID={undefined} />
+    </View>
+    <View
+      style={undefined}>
+      <ScrollView>
+        <View
+          style={
+            Object {
+              "paddingBottom": 29,
+            }
+          }>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#f9fafa",
+                "borderColor": "#dfe5e6",
+                "height": 72,
+                "justifyContent": "center",
+                "paddingLeft": 24,
+                "paddingRight": 24,
+              }
+            }>
+            <Image
+              source={1}
+              style={
+                Object {
+                  "height": 40,
+                  "position": "absolute",
+                  "resizeMode": "contain",
+                  "top": 16,
+                  "width": 40,
+                }
+              } />
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                    "fontSize": 13,
+                    "textAlign": "center",
+                  },
+                  Array [
+                    Object {},
+                    Object {
+                      "color": "#80979a",
+                      "fontFamily": "Brandon Text_bold",
+                      "fontSize": 12,
+                      "fontWeight": "bold",
+                    },
+                  ],
+                ]
+              }>
+              OBJECTIVE
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "paddingLeft": 24,
+                "paddingRight": 24,
+              }
+            }>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                    "fontSize": 13,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "fontSize": 18,
+                    "paddingBottom": 12,
+                    "paddingTop": 18,
+                    "textAlign": "left",
+                  },
+                ]
+              }>
+              None
+            </Text>
+          </View>
+        </View>
+      </ScrollView>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "flex-end",
+      }
+    }>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "margin": 16,
+        }
+      }>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300,
+            },
+            undefined,
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20,
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "justifyContent": "center",
+            },
+            Object {
+              "backgroundColor": "transparent",
+              "borderColor": "#f77040",
+              "borderWidth": 1,
+            },
+            Array [
+              Object {
+                "marginLeft": 0,
+                "marginRight": 0,
+              },
+              Object {
+                "flex": 1,
+              },
+            ],
+            Object {
+              "borderColor": "#dfe5e6",
+            },
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Array [
+                Object {
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 13,
+                  "fontWeight": "bold",
+                  "letterSpacing": 1,
+                  "marginBottom": 17,
+                  "marginTop": 15,
+                },
+                Object {
+                  "color": "#f77040",
+                },
+                Object {
+                  "color": "#dfe5e6",
+                },
+              ],
+            ]
+          }>
+          NEXT
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
