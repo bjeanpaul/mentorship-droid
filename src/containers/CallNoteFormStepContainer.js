@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import FormStep from 'src/views/FormStep';
+import { FormStep } from 'src/components';
 import * as actions from 'src/actions/callNote';
 
 

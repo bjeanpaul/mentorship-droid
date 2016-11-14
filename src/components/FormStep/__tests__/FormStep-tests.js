@@ -2,7 +2,7 @@ import { noop } from 'lodash';
 import React from 'react';
 import { Text } from 'react-native';
 
-import FormStep from 'src/views/FormStep';
+import { FormStep } from 'src/components';
 
 describe('FormStep', () => {
   const createComponent = (props = {}) => (
