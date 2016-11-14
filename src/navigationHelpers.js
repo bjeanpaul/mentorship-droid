@@ -133,3 +133,6 @@ export const replaceOrPush = (state, key, route) => has(state, key)
 
 
 export const topOf = ({ routes }) => last(routes);
+
+
+export const getCurrent = stack => stack.routes[stack.index];

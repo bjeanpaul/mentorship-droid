@@ -76,49 +76,20 @@ ShallowWrapper {
     "findWhereUnwrapped": [Function],
   },
   "length": 1,
-  "node": <function BaseView(_ref){var
-children=_ref.children;var
-style=_ref.style;return(
-
-_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-children));}
+  "node": <BaseView
     style={
         Object {
             "backgroundColor": "rgba(246, 111, 63, 0.95)",
           }
     }>
-    <function Header(_ref){var _ref$style=_ref.
-    style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
-    children;var children=_ref$children===undefined?[]:_ref$children;return(
-    
-    _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
-    children));}
+    <Header
         style={undefined}>
-        <function HeaderIcon(_ref){var
-        type=_ref.type;var _ref$style=_ref.
-        style;var style=_ref$style===undefined?{}:_ref$style;var _ref$onPress=_ref.
-        onPress;var onPress=_ref$onPress===undefined?_lodash.noop:_ref$onPress;return(
-        
-        _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
-        _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
-        _react2.default.createElement(_Icon2.default,{type:type}))));}
+        <HeaderIcon
             onPress={[Function]}
             type={1}
             uid="dismiss" />
-    </function Header(_ref){var _ref$style=_ref.
-    style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
-    children;var children=_ref$children===undefined?[]:_ref$children;return(
-    
-    _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
-    children));}>
-    <class extends RealComponent {
-          render() {
-            return React.createElement(
-            RealComponent.displayName,
-            this.props,
-            this.props.children);
-    
-          }}
+    </Header>
+    <View
         style={
             Object {
                 "alignItems": "center",
@@ -126,28 +97,8 @@ children));}
                 "paddingTop": 64,
               }
         }>
-        <function SpinningImage(){_classCallCheck(this,SpinningImage);var _this=_possibleConstructorReturn(this,(SpinningImage.__proto__||Object.getPrototypeOf(SpinningImage)).call(this));
-        
-        _this.state={
-        spinValue:new _reactNative.Animated.Value(0)};return _this;
-        
-        } />
-        <function Text(_ref)
-        
-        
-        
-        {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
-        var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
-        
-        return(
-        _react2.default.createElement(_reactNative.Text,_extends({},
-        props,{
-        style:[_styles2.default.default,style]}),
-        
-        text));
-        
-        
-        }
+        <SpinningImage />
+        <Text
             style={
                 Object {
                     "color": undefined,
@@ -155,80 +106,24 @@ children));}
                   }
             }>
             Waiting for the 7:18…
-        </function Text(_ref)
-        
-        
-        
-        {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
-        var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
-        
-        return(
-        _react2.default.createElement(_reactNative.Text,_extends({},
-        props,{
-        style:[_styles2.default.default,style]}),
-        
-        text));
-        
-        
-        }>
-    </class extends RealComponent {
-          render() {
-            return React.createElement(
-            RealComponent.displayName,
-            this.props,
-            this.props.children);
-    
-          }}>
-</function BaseView(_ref){var
-children=_ref.children;var
-style=_ref.style;return(
-
-_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-children));}>,
+        </Text>
+    </View>
+</BaseView>,
   "nodes": Array [
-    <function BaseView(_ref){var
-children=_ref.children;var
-style=_ref.style;return(
-
-_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-children));}
+    <BaseView
       style={
             Object {
                   "backgroundColor": "rgba(246, 111, 63, 0.95)",
                 }
       }>
-      <function Header(_ref){var _ref$style=_ref.
-      style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
-      children;var children=_ref$children===undefined?[]:_ref$children;return(
-      
-      _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
-      children));}
+      <Header
             style={undefined}>
-            <function HeaderIcon(_ref){var
-            type=_ref.type;var _ref$style=_ref.
-            style;var style=_ref$style===undefined?{}:_ref$style;var _ref$onPress=_ref.
-            onPress;var onPress=_ref$onPress===undefined?_lodash.noop:_ref$onPress;return(
-            
-            _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
-            _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
-            _react2.default.createElement(_Icon2.default,{type:type}))));}
+            <HeaderIcon
                   onPress={[Function]}
                   type={1}
                   uid="dismiss" />
-      </function Header(_ref){var _ref$style=_ref.
-      style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
-      children;var children=_ref$children===undefined?[]:_ref$children;return(
-      
-      _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
-      children));}>
-      <class extends RealComponent {
-            render() {
-              return React.createElement(
-              RealComponent.displayName,
-              this.props,
-              this.props.children);
-      
-            }}
+      </Header>
+      <View
             style={
                   Object {
                         "alignItems": "center",
@@ -236,28 +131,8 @@ children));}
                         "paddingTop": 64,
                       }
             }>
-            <function SpinningImage(){_classCallCheck(this,SpinningImage);var _this=_possibleConstructorReturn(this,(SpinningImage.__proto__||Object.getPrototypeOf(SpinningImage)).call(this));
-            
-            _this.state={
-            spinValue:new _reactNative.Animated.Value(0)};return _this;
-            
-            } />
-            <function Text(_ref)
-            
-            
-            
-            {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
-            var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
-            
-            return(
-            _react2.default.createElement(_reactNative.Text,_extends({},
-            props,{
-            style:[_styles2.default.default,style]}),
-            
-            text));
-            
-            
-            }
+            <SpinningImage />
+            <Text
                   style={
                         Object {
                               "color": undefined,
@@ -265,36 +140,9 @@ children));}
                             }
                   }>
                   Waiting for the 7:18…
-            </function Text(_ref)
-            
-            
-            
-            {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
-            var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
-            
-            return(
-            _react2.default.createElement(_reactNative.Text,_extends({},
-            props,{
-            style:[_styles2.default.default,style]}),
-            
-            text));
-            
-            
-            }>
-      </class extends RealComponent {
-            render() {
-              return React.createElement(
-              RealComponent.displayName,
-              this.props,
-              this.props.children);
-      
-            }}>
-</function BaseView(_ref){var
-children=_ref.children;var
-style=_ref.style;return(
-
-_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-children));}>,
+            </Text>
+      </View>
+</BaseView>,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
@@ -302,24 +150,7 @@ children));}>,
       "_calledComponentWillUnmount": false,
       "_compositeType": 2,
       "_context": Object {},
-      "_currentElement": <function LoadingOverlay(_ref){var
-title=_ref.title;var
-onDismissPress=_ref.onDismissPress;return(
-
-_react2.default.createElement(_components.BaseView,{style:_styles2.default.base},
-_react2.default.createElement(_components.Header,{style:_styles2.default.header},
-
-onDismissPress&&_react2.default.createElement(_components.HeaderIcon,{
-uid:'dismiss',
-type:_components.HeaderIcon.types.dismissLight,
-onPress:onDismissPress})),
-
-
-
-
-_react2.default.createElement(_reactNative.View,{style:_styles2.default.body},
-_react2.default.createElement(_components.SpinningImage,null),
-_react2.default.createElement(_components.Text,{style:_styles2.default.title},title))));}
+      "_currentElement": <LoadingOverlay
         onDismissPress={[Function]}
         title="Waiting for the 7:18…" />,
       "_debugID": 1,
@@ -352,49 +183,20 @@ _react2.default.createElement(_components.Text,{style:_styles2.default.title},ti
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
       "_renderedComponent": Object {
-        "_currentElement": <function BaseView(_ref){var
-children=_ref.children;var
-style=_ref.style;return(
-
-_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-children));}
+        "_currentElement": <BaseView
           style={
                     Object {
                               "backgroundColor": "rgba(246, 111, 63, 0.95)",
                             }
           }>
-          <function Header(_ref){var _ref$style=_ref.
-          style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
-          children;var children=_ref$children===undefined?[]:_ref$children;return(
-          
-          _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
-          children));}
+          <Header
                     style={undefined}>
-                    <function HeaderIcon(_ref){var
-                    type=_ref.type;var _ref$style=_ref.
-                    style;var style=_ref$style===undefined?{}:_ref$style;var _ref$onPress=_ref.
-                    onPress;var onPress=_ref$onPress===undefined?_lodash.noop:_ref$onPress;return(
-                    
-                    _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
-                    _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
-                    _react2.default.createElement(_Icon2.default,{type:type}))));}
+                    <HeaderIcon
                               onPress={[Function]}
                               type={1}
                               uid="dismiss" />
-          </function Header(_ref){var _ref$style=_ref.
-          style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
-          children;var children=_ref$children===undefined?[]:_ref$children;return(
-          
-          _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
-          children));}>
-          <class extends RealComponent {
-                render() {
-                  return React.createElement(
-                  RealComponent.displayName,
-                  this.props,
-                  this.props.children);
-          
-                }}
+          </Header>
+          <View
                     style={
                               Object {
                                         "alignItems": "center",
@@ -402,28 +204,8 @@ children));}
                                         "paddingTop": 64,
                                       }
                     }>
-                    <function SpinningImage(){_classCallCheck(this,SpinningImage);var _this=_possibleConstructorReturn(this,(SpinningImage.__proto__||Object.getPrototypeOf(SpinningImage)).call(this));
-                    
-                    _this.state={
-                    spinValue:new _reactNative.Animated.Value(0)};return _this;
-                    
-                    } />
-                    <function Text(_ref)
-                    
-                    
-                    
-                    {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
-                    var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
-                    
-                    return(
-                    _react2.default.createElement(_reactNative.Text,_extends({},
-                    props,{
-                    style:[_styles2.default.default,style]}),
-                    
-                    text));
-                    
-                    
-                    }
+                    <SpinningImage />
+                    <Text
                               style={
                                         Object {
                                                   "color": undefined,
@@ -431,80 +213,24 @@ children));}
                                                 }
                               }>
                               Waiting for the 7:18…
-                    </function Text(_ref)
-                    
-                    
-                    
-                    {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
-                    var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
-                    
-                    return(
-                    _react2.default.createElement(_reactNative.Text,_extends({},
-                    props,{
-                    style:[_styles2.default.default,style]}),
-                    
-                    text));
-                    
-                    
-                    }>
-          </class extends RealComponent {
-                render() {
-                  return React.createElement(
-                  RealComponent.displayName,
-                  this.props,
-                  this.props.children);
-          
-                }}>
-</function BaseView(_ref){var
-children=_ref.children;var
-style=_ref.style;return(
-
-_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-children));}>,
+                    </Text>
+          </View>
+</BaseView>,
         "_debugID": 2,
-        "_renderedOutput": <function BaseView(_ref){var
-children=_ref.children;var
-style=_ref.style;return(
-
-_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-children));}
+        "_renderedOutput": <BaseView
           style={
                     Object {
                               "backgroundColor": "rgba(246, 111, 63, 0.95)",
                             }
           }>
-          <function Header(_ref){var _ref$style=_ref.
-          style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
-          children;var children=_ref$children===undefined?[]:_ref$children;return(
-          
-          _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
-          children));}
+          <Header
                     style={undefined}>
-                    <function HeaderIcon(_ref){var
-                    type=_ref.type;var _ref$style=_ref.
-                    style;var style=_ref$style===undefined?{}:_ref$style;var _ref$onPress=_ref.
-                    onPress;var onPress=_ref$onPress===undefined?_lodash.noop:_ref$onPress;return(
-                    
-                    _react2.default.createElement(_reactNative.TouchableNativeFeedback,{onPress:onPress},
-                    _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
-                    _react2.default.createElement(_Icon2.default,{type:type}))));}
+                    <HeaderIcon
                               onPress={[Function]}
                               type={1}
                               uid="dismiss" />
-          </function Header(_ref){var _ref$style=_ref.
-          style;var style=_ref$style===undefined?{}:_ref$style;var _ref$children=_ref.
-          children;var children=_ref$children===undefined?[]:_ref$children;return(
-          
-          _react2.default.createElement(_reactNative.View,{style:[_styles2.default.default,style]},
-          children));}>
-          <class extends RealComponent {
-                render() {
-                  return React.createElement(
-                  RealComponent.displayName,
-                  this.props,
-                  this.props.children);
-          
-                }}
+          </Header>
+          <View
                     style={
                               Object {
                                         "alignItems": "center",
@@ -512,28 +238,8 @@ children));}
                                         "paddingTop": 64,
                                       }
                     }>
-                    <function SpinningImage(){_classCallCheck(this,SpinningImage);var _this=_possibleConstructorReturn(this,(SpinningImage.__proto__||Object.getPrototypeOf(SpinningImage)).call(this));
-                    
-                    _this.state={
-                    spinValue:new _reactNative.Animated.Value(0)};return _this;
-                    
-                    } />
-                    <function Text(_ref)
-                    
-                    
-                    
-                    {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
-                    var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
-                    
-                    return(
-                    _react2.default.createElement(_reactNative.Text,_extends({},
-                    props,{
-                    style:[_styles2.default.default,style]}),
-                    
-                    text));
-                    
-                    
-                    }
+                    <SpinningImage />
+                    <Text
                               style={
                                         Object {
                                                   "color": undefined,
@@ -541,36 +247,9 @@ children));}
                                                 }
                               }>
                               Waiting for the 7:18…
-                    </function Text(_ref)
-                    
-                    
-                    
-                    {var children=_ref.children;var style=_ref.style;var props=_objectWithoutProperties(_ref,['children','style']);
-                    var text=(0,_transform2.default)(children,style,_styles.STYLE_TRANSFORMS);
-                    
-                    return(
-                    _react2.default.createElement(_reactNative.Text,_extends({},
-                    props,{
-                    style:[_styles2.default.default,style]}),
-                    
-                    text));
-                    
-                    
-                    }>
-          </class extends RealComponent {
-                render() {
-                  return React.createElement(
-                  RealComponent.displayName,
-                  this.props,
-                  this.props.children);
-          
-                }}>
-</function BaseView(_ref){var
-children=_ref.children;var
-style=_ref.style;return(
-
-_react2.default.createElement(_reactNative.View,{style:[_styles2.default.view,style]},
-children));}>,
+                    </Text>
+          </View>
+</BaseView>,
       },
       "_renderedNodeType": 1,
       "_rootNodeID": 0,
@@ -582,24 +261,7 @@ children));}>,
     "render": [Function],
   },
   "root": [Circular],
-  "unrendered": <function LoadingOverlay(_ref){var
-title=_ref.title;var
-onDismissPress=_ref.onDismissPress;return(
-
-_react2.default.createElement(_components.BaseView,{style:_styles2.default.base},
-_react2.default.createElement(_components.Header,{style:_styles2.default.header},
-
-onDismissPress&&_react2.default.createElement(_components.HeaderIcon,{
-uid:'dismiss',
-type:_components.HeaderIcon.types.dismissLight,
-onPress:onDismissPress})),
-
-
-
-
-_react2.default.createElement(_reactNative.View,{style:_styles2.default.body},
-_react2.default.createElement(_components.SpinningImage,null),
-_react2.default.createElement(_components.Text,{style:_styles2.default.title},title))));}
+  "unrendered": <LoadingOverlay
     onDismissPress={[Function]}
     title="Waiting for the 7:18…" />,
 }
