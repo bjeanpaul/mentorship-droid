@@ -12,7 +12,7 @@ const Completed = ({
   objectiveAchieved,
   objective,
   color,
-  onSelectImage,
+  onChange,
   ...props,
 }) => (
   <FormStep
@@ -22,7 +22,10 @@ const Completed = ({
   >
     <View style={styles.completedContainer}>
       <View style={styles.yesNoContainer}>
-        <TouchableWithoutFeedback onPress={() => onSelectImage({ objectiveAchieved: true })}>
+        <TouchableWithoutFeedback
+          uid="objectiveAchieved"
+          onPress={() => onChange({ objectiveAchieved: true })}
+        >
           <Image
             source={
               objectiveAchieved ?
@@ -31,7 +34,10 @@ const Completed = ({
             }
           />
         </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback onPress={() => onSelectImage({ objectiveAchieved: false })}>
+        <TouchableWithoutFeedback
+          uid="objectiveNotAchieved"
+          onPress={() => onChange({ objectiveAchieved: false })}
+        >
           <Image
             source={
               objectiveAchieved === false
@@ -58,7 +64,7 @@ const Completed = ({
 
 Completed.propTypes = {
   objectiveAchieved: PropTypes.any,
-  onSelectImage: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   objective: PropTypes.string,
   color: PropTypes.string,
 };
