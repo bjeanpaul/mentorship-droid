@@ -33,9 +33,14 @@ const CallQuality = ({
         <ScrollView>
           <View>
             <RadioList
+              uid="callQualities"
               items={items}
               onIndexChanged={(item) => onChange({ callQuality: item.item })}
-              initialSelectedIndex={initialSelectedIndex === -1 ? initialSelectedIndex : void 0}
+              initialSelectedIndex={
+                initialSelectedIndex < 0
+                  ? initialSelectedIndex
+                  : void 0
+              }
             />
           </View>
         </ScrollView>
@@ -43,7 +48,6 @@ const CallQuality = ({
     </FormStep>
   );
 };
-
 
 CallQuality.propTypes = {
   callQuality: PropTypes.string,
