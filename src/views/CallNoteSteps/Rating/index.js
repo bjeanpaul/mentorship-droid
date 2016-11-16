@@ -30,9 +30,14 @@ const Rating = ({
         <ScrollView>
           <View>
             <RadioList
+              uid="ratings"
               items={items}
               onIndexChanged={(item) => onChange({ activityHelpful: item.item })}
-              initialSelectedIndex={initialSelectedIndex === -1 ? initialSelectedIndex : void 0}
+              initialSelectedIndex={
+                initialSelectedIndex < 0
+                  ? initialSelectedIndex
+                  : void 0
+              }
             />
           </View>
         </ScrollView>
