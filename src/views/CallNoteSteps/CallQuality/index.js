@@ -8,7 +8,7 @@ import styles from './styles';
 
 const CallQuality = ({
   callQuality = '',
-  onChangeText,
+  onChange,
   ...props,
 }) => {
   const items = [
@@ -34,7 +34,7 @@ const CallQuality = ({
           <View>
             <RadioList
               items={items}
-              onIndexChanged={(item) => onChangeText({ callQuality: item.item })}
+              onIndexChanged={(item) => onChange({ callQuality: item.item })}
               initialSelectedIndex={initialSelectedIndex === -1 ? initialSelectedIndex : void 0}
             />
           </View>
@@ -47,7 +47,7 @@ const CallQuality = ({
 
 CallQuality.propTypes = {
   callQuality: PropTypes.string,
-  onChangeText: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 

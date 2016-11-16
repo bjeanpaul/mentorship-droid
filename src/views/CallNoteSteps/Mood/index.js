@@ -10,7 +10,7 @@ import styles from './styles';
 
 const Mood = ({
   menteeState = '',
-  onSelectImage,
+  onChange,
   ...props,
 }) => (
   <FormStep
@@ -22,7 +22,7 @@ const Mood = ({
       {Object.keys(MOOD_IMAGES).map(key => (
         <TouchableWithoutFeedback
           key={key}
-          onPress={() => onSelectImage({ menteeState: key })}
+          onPress={() => onChange({ menteeState: key })}
         >
           <View style={styles.item}>
             <Image
@@ -42,7 +42,7 @@ const Mood = ({
 
 Mood.propTypes = {
   menteeState: PropTypes.string,
-  onSelectImage: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 

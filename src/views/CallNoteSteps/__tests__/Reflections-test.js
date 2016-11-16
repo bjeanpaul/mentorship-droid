@@ -10,7 +10,7 @@ describe('CallNoteSteps', () => {
       const el = render(
         <Reflections
           reflection="Walk in silence"
-          onChangeText={noop}
+          onChange={noop}
           onBackPress={noop}
           onNextPress={noop}
         />

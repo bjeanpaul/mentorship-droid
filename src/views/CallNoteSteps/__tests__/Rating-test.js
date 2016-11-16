@@ -10,7 +10,7 @@ describe('CallNoteSteps', () => {
       const el = render(
         <Rating
           activityHelpful="A lot"
-          onChangeText={noop}
+          onChange={noop}
           onBackPress={noop}
           onNextPress={noop}
         />

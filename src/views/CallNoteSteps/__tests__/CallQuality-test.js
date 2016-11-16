@@ -10,7 +10,7 @@ describe('CallNoteSteps', () => {
       const el = render(
         <CallQuality
           callQuality="Delays"
-          onChangeText={noop}
+          onChange={noop}
           onBackPress={noop}
           onNextPress={noop}
         />

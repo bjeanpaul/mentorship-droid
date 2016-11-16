@@ -8,7 +8,7 @@ import SavingStep from 'src/views/CallNoteSaving';
 
 
 export const propsToActions = {
-  onChangeText: changeCallNote,
+  onChange: changeCallNote,
   onBackPress: stepBack,
   onNextPress: stepForward,
 };
@@ -44,10 +44,10 @@ export const Reflections = connect(
 )(steps.Reflections);
 
 
-export const Mood = connect(mapStateToProps('menteeState'), {
-  onSelectImage: changeCallNote,
-  ...propsToActions,
-})(steps.Mood);
+export const Mood = connect(
+  mapStateToProps('menteeState'),
+  propsToActions
+)(steps.Mood);
 
 
 export const Completed = connect(

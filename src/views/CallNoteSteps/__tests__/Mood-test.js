@@ -10,7 +10,7 @@ describe('CallNoteSteps', () => {
       const el = render(
         <Mood
           menteeState="Sad"
-          onSelectImage={noop}
+          onChange={noop}
           onBackPress={noop}
           onNextPress={noop}
         />

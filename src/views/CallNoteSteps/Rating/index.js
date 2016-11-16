@@ -8,7 +8,7 @@ import styles from './styles';
 
 const Rating = ({
   activityHelpful = '',
-  onChangeText,
+  onChange,
   ...props,
 }) => {
   const items = [
@@ -31,7 +31,7 @@ const Rating = ({
           <View>
             <RadioList
               items={items}
-              onIndexChanged={(item) => onChangeText({ activityHelpful: item.item })}
+              onIndexChanged={(item) => onChange({ activityHelpful: item.item })}
               initialSelectedIndex={initialSelectedIndex === -1 ? initialSelectedIndex : void 0}
             />
           </View>
@@ -43,7 +43,7 @@ const Rating = ({
 
 Rating.propTypes = {
   activityHelpful: PropTypes.string,
-  onChangeText: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 

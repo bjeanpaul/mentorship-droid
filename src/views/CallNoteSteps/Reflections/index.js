@@ -6,7 +6,7 @@ import { FormStep } from 'src/components';
 
 const Reflections = ({
   reflection = '',
-  onChangeText,
+  onChange,
   ...props,
 }) => (
   <FormStep
@@ -18,14 +18,14 @@ const Reflections = ({
     <MultiLineTextInput
       value={reflection}
       placeholder="Type your answer here"
-      onChangeText={text => onChangeText({ reflection: text })}
+      onChange={text => onChange({ reflection: text })}
     />
   </FormStep>
 );
 
 Reflections.propTypes = {
   reflection: PropTypes.string,
-  onChangeText: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 
