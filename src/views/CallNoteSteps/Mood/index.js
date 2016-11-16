@@ -21,6 +21,7 @@ const Mood = ({
     <View style={styles.list}>
       {Object.keys(MOOD_IMAGES).map(key => (
         <TouchableWithoutFeedback
+          uid={key}
           key={key}
           onPress={() => onChange({ menteeState: key })}
         >
