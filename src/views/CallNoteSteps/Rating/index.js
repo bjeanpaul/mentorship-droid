@@ -1,32 +1,50 @@
 import React, { PropTypes } from 'react';
-import { MultiLineTextInput } from 'src/components';
+import { View, ScrollView } from 'react-native';
+import { RadioList } from 'src/components';
 
 import { FormStep } from 'src/components';
+import styles from './styles';
 
 
-const Reflections = ({
-  reflection = '',
+const Rating = ({
+  activityHelpful = '',
   onChangeText,
   ...props,
-}) => (
-  <FormStep
-    paginationBackDisabled
-    paginationDisabled={reflection.length === 0}
-    title="Please share your reflections of the discussion"
-    {...props}
-  >
-    <MultiLineTextInput
-      value={reflection}
-      placeholder="Type your answer here"
-      onChangeText={text => onChangeText({ reflection: text })}
-    />
-  </FormStep>
-);
+}) => {
+  const items = [
+    'Not at all',
+    'A little',
+    'Somewhat',
+    'Quite a bit',
+    'A lot',
+  ];
+  const initialSelectedIndex = items.indexOf(activityHelpful);
 
-Reflections.propTypes = {
-  reflection: PropTypes.string,
+  return (
+    <FormStep
+      paginationDisabled={activityHelpful.length === 0}
+      title="Was the activity helpful in facilitating your discussion?"
+      {...props}
+    >
+      <View style={styles.ratingContainer}>
+        <ScrollView>
+          <View>
+            <RadioList
+              items={items}
+              onIndexChanged={(item) => onChangeText({ activityHelpful: item.item })}
+              initialSelectedIndex={initialSelectedIndex === -1 ? initialSelectedIndex : void 0}
+            />
+          </View>
+        </ScrollView>
+      </View>
+    </FormStep>
+  );
+};
+
+Rating.propTypes = {
+  activityHelpful: PropTypes.string,
   onChangeText: PropTypes.func.isRequired,
 };
 
 
-export default Reflections;
+export default Rating;
