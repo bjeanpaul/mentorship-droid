@@ -16,6 +16,7 @@ const Reflections = ({
     {...props}
   >
     <MultiLineTextInput
+      uid="reflectionInput"
       value={reflection}
       placeholder="Type your answer here"
       onChange={text => onChange({ reflection: text })}
