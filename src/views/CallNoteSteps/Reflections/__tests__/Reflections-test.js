@@ -1,14 +1,14 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import { uidEquals } from 'app/scripts/helpers';
+import { uidEquals, fakeCallNote } from 'app/scripts/helpers';
 import { Reflections } from 'src/views/CallNoteSteps';
 
 
 describe('Reflections', () => {
   const createComponent = (props = {}) => (
     <Reflections
-      reflection="Walk in silence"
+      callNote={fakeCallNote({ reflection: 'Walk in Silence' })}
       onChange={noop}
       onBackPress={noop}
       onNextPress={noop}

@@ -1,16 +1,22 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import { uidEquals } from 'app/scripts/helpers';
+import {
+  uidEquals,
+  fakeCallNote,
+  fakeActivity,
+  fakeCategory,
+} from 'app/scripts/helpers';
+
 import { Completed } from 'src/views/CallNoteSteps';
 
 
 describe('Completed', () => {
   const createComponent = (props = {}) => (
     <Completed
-      objectiveAchieved={void 0}
-      objective="None"
-      color="pink"
+      callNote={fakeCallNote({ objectiveAchieved: void 0 })}
+      activity={fakeActivity({ objective: 'None' })}
+      category={fakeCategory({ color: 'pink' })}
       onChange={noop}
       onBackPress={noop}
       onNextPress={noop}

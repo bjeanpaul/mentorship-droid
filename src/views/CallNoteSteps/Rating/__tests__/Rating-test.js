@@ -1,14 +1,14 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import { uidEquals } from 'app/scripts/helpers';
+import { uidEquals, fakeCallNote } from 'app/scripts/helpers';
 import { Rating } from 'src/views/CallNoteSteps';
 
 
 describe('Rating', () => {
   const createComponent = (props = {}) => (
     <Rating
-      activityHelpful="A lot"
+      callNote={fakeCallNote({ activityHelpful: 'A lot' })}
       onChange={noop}
       onBackPress={noop}
       onNextPress={noop}

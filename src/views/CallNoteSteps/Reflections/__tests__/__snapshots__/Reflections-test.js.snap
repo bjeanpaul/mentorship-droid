@@ -75,7 +75,7 @@ exports[`Reflections should render 1`] = `
         }
         uid="reflectionInput"
         underlineColorAndroid="transparent"
-        value="Walk in silence" />
+        value="Walk in Silence" />
     </View>
   </View>
   <View

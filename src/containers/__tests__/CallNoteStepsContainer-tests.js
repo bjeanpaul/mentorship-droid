@@ -1,8 +1,4 @@
-import {
-  mapStateToProps,
-  savingMapStateToProps,
-  completedMapDispatchToProps,
-} from 'src/containers/CallNoteStepsContainer';
+import { mapStateToProps } from 'src/containers/CallNoteStepsContainer';
 
 import {
   fakeState,
@@ -15,70 +11,65 @@ import {
 
 describe('CallNoteStepsContainer', () => {
   describe('mapStateToProps', () => {
-    it('should provide props for the given prop names', () => {
-      const callNote = fakeCallNote({ reflection: 'foo' });
+    it('should provide the call note', () => {
+      const call = fakeCall();
+      const callNote = fakeCallNote();
 
       const state = fakeState({
         callNote: { callNote },
       });
 
-      expect(mapStateToProps('reflection')(state)).toEqual({
-        reflection: 'foo',
+      expect(mapStateToProps(state, { call }).callNote).toEqual({
+        call: call.id,
+        ...callNote,
       });
     });
-  });
 
-  describe('completedMapDispatchToProps', () => {
-    it('should provide the activity objective and category color', () => {
-      const call = fakeCall({
-        id: 20,
-        activity: 11,
-      });
+    it('should provide the activity if relevant', () => {
+      const call1 = fakeCall({ activity: void 0 });
+      const call2 = fakeCall({ activity: 23 });
+      const activity = fakeActivity({ id: 23 });
+      const callNote = fakeCallNote();
 
       const state = fakeState({
-        callNote: {
-          callNote: {},
-        },
-        calls: {
-          20: call,
-        },
+        callNote: { callNote },
         entities: {
-          categories: {
-            23: fakeCategory({
-              id: 23,
-              color: 'orange',
-            }),
-          },
           activities: {
-            11: fakeActivity({
-              id: 11,
-              category: 23,
-              objective: 'to eat ice-cream',
-            }),
+            23: activity,
           },
         },
       });
 
-      expect(completedMapDispatchToProps(state, { call }))
-        .toEqual({
-          color: 'orange',
-          objective: 'to eat ice-cream',
-          objectiveAchieved: void 0,
-        });
+      expect(mapStateToProps(state, { call: call1 }).activity).toEqual(void 0);
+      expect(mapStateToProps(state, { call: call2 }).activity).toEqual(activity);
     });
-  });
 
-  describe('savingMapStateToProps', () => {
-    it('should provide the call note data', () => {
-      const call = fakeCall({ id: 20 });
-      const callNote = fakeCallNote({ call: 20 });
+    it('should provide the category if relevant', () => {
+      const call1 = fakeCall({ activity: void 0 });
+      const call2 = fakeCall({ activity: 20 });
+      const call3 = fakeCall({ activity: 23 });
+      const category = fakeCategory({ id: 21 });
+
+      const callNote = fakeCallNote();
 
       const state = fakeState({
         callNote: { callNote },
+        entities: {
+          activities: {
+            23: fakeActivity({
+              id: 23,
+              category: 21,
+            }),
+          },
+          category: {
+            21: category,
+          },
+        },
       });
 
-      expect(savingMapStateToProps(state, { call }))
-        .toEqual(jasmine.objectContaining({ callNote }));
+      expect(mapStateToProps(state, { call: call1 }).category).toEqual(void 0);
+      expect(mapStateToProps(state, { call: call2 }).category).toEqual(void 0);
+      expect(mapStateToProps(state, { call: call3 }).category).toEqual(category);
     });
   });
 });

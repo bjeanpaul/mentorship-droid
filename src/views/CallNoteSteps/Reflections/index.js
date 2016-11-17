@@ -5,8 +5,8 @@ import { FormStep } from 'src/components';
 
 
 const Reflections = ({
-  reflection = '',
   onChange,
+  callNote: { reflection = '' },
   ...props,
 }) => (
   <FormStep
@@ -25,7 +25,7 @@ const Reflections = ({
 );
 
 Reflections.propTypes = {
-  reflection: PropTypes.string,
+  callNote: PropTypes.object,
   onChange: PropTypes.func.isRequired,
 };
 

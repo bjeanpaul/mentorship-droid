@@ -7,8 +7,8 @@ import styles from './styles';
 
 
 const CallQuality = ({
-  callQuality = '',
   onChange,
+  callNote: { callQuality = '' },
   ...props,
 }) => {
   const items = [
@@ -50,7 +50,7 @@ const CallQuality = ({
 };
 
 CallQuality.propTypes = {
-  callQuality: PropTypes.string,
+  callNote: PropTypes.object,
   onChange: PropTypes.func.isRequired,
 };
 

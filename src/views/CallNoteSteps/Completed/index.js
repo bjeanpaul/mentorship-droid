@@ -9,10 +9,10 @@ import styles from './styles';
 
 
 const Completed = ({
-  objectiveAchieved,
-  objective,
-  color,
   onChange,
+  callNote: { objectiveAchieved },
+  activity: { objective },
+  category: { color },
   ...props,
 }) => (
   <FormStep
@@ -28,9 +28,9 @@ const Completed = ({
         >
           <Image
             source={
-              objectiveAchieved ?
-              images.CALL_NOTES_COMPLETED_YES_SELECTED :
-              images.CALL_NOTES_COMPLETED_YES
+              objectiveAchieved
+                ? images.CALL_NOTES_COMPLETED_YES_SELECTED
+                : images.CALL_NOTES_COMPLETED_YES
             }
           />
         </TouchableWithoutFeedback>
@@ -63,10 +63,10 @@ const Completed = ({
 );
 
 Completed.propTypes = {
-  objectiveAchieved: PropTypes.any,
+  callNote: PropTypes.object,
+  activity: PropTypes.object,
+  category: PropTypes.object,
   onChange: PropTypes.func.isRequired,
-  objective: PropTypes.string,
-  color: PropTypes.string,
 };
 
 

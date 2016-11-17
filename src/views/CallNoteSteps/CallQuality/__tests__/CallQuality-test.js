@@ -1,14 +1,14 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import { uidEquals } from 'app/scripts/helpers';
+import { uidEquals, fakeCallNote } from 'app/scripts/helpers';
 import { CallQuality } from 'src/views/CallNoteSteps';
 
 
 describe('CallQuality', () => {
   const createComponent = (props = {}) => (
     <CallQuality
-      activityHelpful="A lot"
+      callNote={fakeCallNote({ callQuality: 'excellent' })}
       onChange={noop}
       onBackPress={noop}
       onNextPress={noop}

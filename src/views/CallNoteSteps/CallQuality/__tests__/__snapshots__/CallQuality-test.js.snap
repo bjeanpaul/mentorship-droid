@@ -382,26 +382,15 @@ exports[`CallQuality should render 1`] = `
           Array [
             Object {
               "alignItems": "center",
-              "borderRadius": 5,
-              "justifyContent": "center",
-            },
-            Object {
-              "backgroundColor": "transparent",
-              "borderColor": "#f77040",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
               "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300,
             },
-            Array [
-              Object {
-                "marginLeft": 0,
-                "marginRight": 0,
-              },
-              Object {
-                "flex": 1,
-              },
-            ],
-            Object {
-              "borderColor": "#dfe5e6",
-            },
+            undefined,
           ]
         }>
         <Text
@@ -409,32 +398,12 @@ exports[`CallQuality should render 1`] = `
           allowFontScaling={true}
           ellipsizeMode="tail"
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Array [
-                Object {
-                  "fontFamily": "Brandon Text_bold",
-                  "fontSize": 13,
-                  "fontWeight": "bold",
-                  "letterSpacing": 1,
-                  "marginBottom": 17,
-                  "marginTop": 15,
-                },
-                Object {
-                  "color": "#f77040",
-                },
-                Object {
-                  "color": "#dfe5e6",
-                },
-              ],
-            ]
+            Object {
+              "color": "#333333",
+              "margin": 20,
+            }
           }>
-          NEXT
+          TouchableNativeFeedback is not supported on this platform!
         </Text>
       </View>
     </View>

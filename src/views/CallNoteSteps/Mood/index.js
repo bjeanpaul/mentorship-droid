@@ -9,8 +9,8 @@ import styles from './styles';
 
 
 const Mood = ({
-  menteeState = '',
   onChange,
+  callNote: { menteeState = '' },
   ...props,
 }) => (
   <FormStep
@@ -42,7 +42,7 @@ const Mood = ({
 
 
 Mood.propTypes = {
-  menteeState: PropTypes.string,
+  callNote: PropTypes.object,
   onChange: PropTypes.func.isRequired,
 };
 

@@ -7,8 +7,8 @@ import styles from './styles';
 
 
 const Rating = ({
-  activityHelpful = '',
   onChange,
+  callNote: { activityHelpful = '' },
   ...props,
 }) => {
   const items = [
@@ -47,7 +47,7 @@ const Rating = ({
 };
 
 Rating.propTypes = {
-  activityHelpful: PropTypes.string,
+  callNote: PropTypes.object,
   onChange: PropTypes.func.isRequired,
 };
 
