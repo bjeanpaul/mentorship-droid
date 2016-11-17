@@ -9232,8 +9232,6 @@ exports[`ScheduleList should render 1`] = `
                         "width": 30,
                         "zIndex": 9,
                       },
-                      Object {},
-                      undefined,
                     ]
                   }>
                   <Text
@@ -9251,8 +9249,6 @@ exports[`ScheduleList should render 1`] = `
                           "fontFamily": "Brandon Text",
                           "fontSize": 14,
                         },
-                        Object {},
-                        undefined,
                       ]
                     }>
                     20
@@ -9274,12 +9270,8 @@ exports[`ScheduleList should render 1`] = `
                         "marginTop": -6,
                         "width": 6,
                       },
-                      Object {
-                        "backgroundColor": "#cccccc",
-                      },
-                      Object {
-                        "backgroundColor": "#f77040",
-                      },
+                      false,
+                      false,
                     ]
                   } />
               </View>

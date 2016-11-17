@@ -13,6 +13,7 @@ import {
   remove,
   inject,
   topOf,
+  getCurrent,
 } from 'src/navigationHelpers';
 
 
@@ -273,6 +274,19 @@ describe('navigationHelpers', () => {
         index: 1,
       }))
       .toEqual(createRoute('E'));
+    });
+  });
+
+  describe('getCurrent', () => {
+    it('should get the current route', () => {
+      const [a, b] = [createRoute('A'), createRoute('B')];
+
+      const stack = {
+        ...createStack([a, b]),
+        index: 0,
+      };
+
+      expect(getCurrent(stack)).toEqual(a);
     });
   });
 });
