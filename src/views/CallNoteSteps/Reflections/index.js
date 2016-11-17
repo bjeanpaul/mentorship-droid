@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
-import { MultiLineTextInput } from 'src/components';
 
-import { FormStep } from 'src/components';
+import { FormStep, MultiLineTextInput } from 'src/components';
 
 
 const Reflections = ({
@@ -19,7 +18,7 @@ const Reflections = ({
       uid="reflectionInput"
       value={reflection}
       placeholder="Type your answer here"
-      onChange={text => onChange({ reflection: text })}
+      onChangeText={text => onChange({ reflection: text })}
     />
   </FormStep>
 );

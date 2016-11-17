@@ -5,7 +5,7 @@ import { View, Image, TouchableWithoutFeedback, ScrollView } from 'react-native'
 import { Section } from 'src/views/Activity';
 import { FormStep } from 'src/components';
 import images from 'src/constants/images';
-import styles from './styles';
+import styles from 'src/views/CallNoteSteps/styles';
 
 
 const Completed = ({

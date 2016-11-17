@@ -37,7 +37,11 @@ exports[`Rating should render 1`] = `
     Was the activity helpful in facilitating your discussion?
   </Text>
   <View
-    style={undefined}>
+    style={
+      Object {
+        "flex": 2,
+      }
+    }>
     <ScrollView>
       <View>
         <View

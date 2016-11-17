@@ -29,7 +29,7 @@ describe('Reflections', () => {
     }));
 
     el.findWhere(uidEquals('reflectionInput'))
-      .simulate('change', 'ok');
+      .simulate('changeText', 'ok');
 
     expect(onChange.mock.calls)
       .toEqual([[{ reflection: 'ok' }]]);

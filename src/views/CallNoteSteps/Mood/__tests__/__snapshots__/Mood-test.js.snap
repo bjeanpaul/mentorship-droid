@@ -37,7 +37,14 @@ exports[`Mood should render 1`] = `
     How was your Mentee today?
   </Text>
   <View
-    style={undefined}>
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "center",
+      }
+    }>
     <View
       accessibilityComponentType={undefined}
       accessibilityLabel={undefined}
@@ -51,18 +58,36 @@ exports[`Mood should render 1`] = `
       onResponderTerminate={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      style={undefined}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginVertical": 10,
+          "width": 120,
+        }
+      }
       testID={undefined}>
       <Image
         source={1}
         style={
           Array [
-            undefined,
+            Object {
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            },
             false,
           ]
         }>
         <View
-          style={undefined} />
+          style={
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.2)",
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            }
+          } />
       </Image>
       <Text
         accessible={true}
@@ -76,7 +101,10 @@ exports[`Mood should render 1`] = `
               "fontSize": 13,
               "textAlign": "center",
             },
-            undefined,
+            Object {
+              "color": "#003035",
+              "fontSize": 18,
+            },
           ]
         }>
         Happy
@@ -95,18 +123,36 @@ exports[`Mood should render 1`] = `
       onResponderTerminate={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      style={undefined}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginVertical": 10,
+          "width": 120,
+        }
+      }
       testID={undefined}>
       <Image
         source={1}
         style={
           Array [
-            undefined,
+            Object {
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            },
             false,
           ]
         }>
         <View
-          style={undefined} />
+          style={
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.2)",
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            }
+          } />
       </Image>
       <Text
         accessible={true}
@@ -120,7 +166,10 @@ exports[`Mood should render 1`] = `
               "fontSize": 13,
               "textAlign": "center",
             },
-            undefined,
+            Object {
+              "color": "#003035",
+              "fontSize": 18,
+            },
           ]
         }>
         Sad
@@ -139,18 +188,36 @@ exports[`Mood should render 1`] = `
       onResponderTerminate={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      style={undefined}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginVertical": 10,
+          "width": 120,
+        }
+      }
       testID={undefined}>
       <Image
         source={1}
         style={
           Array [
-            undefined,
+            Object {
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            },
             false,
           ]
         }>
         <View
-          style={undefined} />
+          style={
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.2)",
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            }
+          } />
       </Image>
       <Text
         accessible={true}
@@ -164,7 +231,10 @@ exports[`Mood should render 1`] = `
               "fontSize": 13,
               "textAlign": "center",
             },
-            undefined,
+            Object {
+              "color": "#003035",
+              "fontSize": 18,
+            },
           ]
         }>
         Bored
@@ -183,18 +253,36 @@ exports[`Mood should render 1`] = `
       onResponderTerminate={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      style={undefined}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginVertical": 10,
+          "width": 120,
+        }
+      }
       testID={undefined}>
       <Image
         source={1}
         style={
           Array [
-            undefined,
+            Object {
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            },
             false,
           ]
         }>
         <View
-          style={undefined} />
+          style={
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.2)",
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            }
+          } />
       </Image>
       <Text
         accessible={true}
@@ -208,7 +296,10 @@ exports[`Mood should render 1`] = `
               "fontSize": 13,
               "textAlign": "center",
             },
-            undefined,
+            Object {
+              "color": "#003035",
+              "fontSize": 18,
+            },
           ]
         }>
         Confused
@@ -227,18 +318,36 @@ exports[`Mood should render 1`] = `
       onResponderTerminate={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      style={undefined}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginVertical": 10,
+          "width": 120,
+        }
+      }
       testID={undefined}>
       <Image
         source={1}
         style={
           Array [
-            undefined,
+            Object {
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            },
             false,
           ]
         }>
         <View
-          style={undefined} />
+          style={
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.2)",
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            }
+          } />
       </Image>
       <Text
         accessible={true}
@@ -252,7 +361,10 @@ exports[`Mood should render 1`] = `
               "fontSize": 13,
               "textAlign": "center",
             },
-            undefined,
+            Object {
+              "color": "#003035",
+              "fontSize": 18,
+            },
           ]
         }>
         Upset
@@ -271,18 +383,36 @@ exports[`Mood should render 1`] = `
       onResponderTerminate={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
-      style={undefined}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginVertical": 10,
+          "width": 120,
+        }
+      }
       testID={undefined}>
       <Image
         source={1}
         style={
           Array [
-            undefined,
+            Object {
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            },
             false,
           ]
         }>
         <View
-          style={undefined} />
+          style={
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.2)",
+              "borderRadius": 77,
+              "height": 77,
+              "width": 77,
+            }
+          } />
       </Image>
       <Text
         accessible={true}
@@ -296,7 +426,10 @@ exports[`Mood should render 1`] = `
               "fontSize": 13,
               "textAlign": "center",
             },
-            undefined,
+            Object {
+              "color": "#003035",
+              "fontSize": 18,
+            },
           ]
         }>
         Withdrawn

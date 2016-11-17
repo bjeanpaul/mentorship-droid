@@ -3,7 +3,7 @@ import { View, ScrollView } from 'react-native';
 import { Text, RadioList } from 'src/components';
 
 import { FormStep } from 'src/components';
-import styles from './styles';
+import styles from 'src/views/CallNoteSteps/styles';
 
 
 const CallQuality = ({
