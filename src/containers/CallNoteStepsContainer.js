@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { createCallNoteWithMentor, changeCallNote } from 'src/actions/callNote';
 import { stepBack, stepForward } from 'src/actions/callNote';
-import { getActivity, getCategory } from 'src/stores/helpers';
+import { getActivity, getCategory, getCall } from 'src/stores/helpers';
 import CallNoteSteps from 'src/views/CallNoteSteps';
 
 
@@ -13,15 +13,18 @@ export const propsToActions = {
 };
 
 
-export const mapStateToProps = (state, { call }) => {
-  let { callNote: { callNote } } = state;
+export const mapStateToProps = (state, { callId }) => {
+  const call = getCall(state, callId);
+  const { callNote: callNoteState } = state;
+  const navigationState = callNoteState.navigation;
+
+  const callNote = {
+    call: call.id,
+    ...callNoteState.callNote,
+  };
+
   let activity;
   let category;
-
-  callNote = {
-    call: call.id,
-    ...callNote,
-  };
 
   if (call.activity) {
     activity = getActivity(state, call.activity);
@@ -32,6 +35,7 @@ export const mapStateToProps = (state, { call }) => {
     callNote,
     activity,
     category,
+    navigationState,
   };
 };
 
