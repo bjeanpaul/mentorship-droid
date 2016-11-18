@@ -135,7 +135,7 @@ const Rating = ({
             <RadioList
               items={constants.RATING_ITEMS}
               onIndexChanged={item => onChangeText({
-                activityHelpful: item.index.toString()
+                activityHelpful: item.index.toString(),
               })}
               initialSelectedIndex={+activityHelpful}
             />
