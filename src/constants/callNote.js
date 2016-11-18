@@ -52,6 +52,31 @@ const EVENT_MOOD_IMAGES = fromPairs([
 ]);
 
 
+const CALL_QUALITY_EXCELLENT = 'EXCELLENT';
+const CALL_QUALITY_OK = 'OK';
+const CALL_QUALITY_INAUDIBLE = 'INAUDIBLE';
+const CALL_QUALITY_DROPPED = 'DROPPED';
+const CALL_QUALITY_DELAYED = 'DELAYED';
+
+
+const RATING_ITEMS = [
+  'Not at all',
+  'A little',
+  'Somewhat',
+  'Quite a bit',
+  'A lot',
+];
+
+
+const CALL_QUALITY_ITEMS = fromPairs([
+  [CALL_QUALITY_EXCELLENT, 'Excellent'],
+  [CALL_QUALITY_OK, 'Ok'],
+  [CALL_QUALITY_INAUDIBLE, "Couldn't hear"],
+  [CALL_QUALITY_DROPPED, 'Call dropped'],
+  [CALL_QUALITY_DELAYED, 'Delays'],
+]);
+
+
 export {
   CALL_NOTE_LIST_REQUEST,
   CALL_NOTE_LIST_SUCCESS,
@@ -86,4 +111,13 @@ export {
 
   MOOD_IMAGES,
   EVENT_MOOD_IMAGES,
+
+  CALL_QUALITY_EXCELLENT,
+  CALL_QUALITY_OK,
+  CALL_QUALITY_INAUDIBLE,
+  CALL_QUALITY_DROPPED,
+  CALL_QUALITY_DELAYED,
+
+  RATING_ITEMS,
+  CALL_QUALITY_ITEMS,
 };

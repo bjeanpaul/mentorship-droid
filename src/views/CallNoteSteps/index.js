@@ -5,7 +5,7 @@ import { Text, MultiLineTextInput, RadioList } from 'src/components';
 
 import { Section } from 'src/views/Activity';
 import FormStep from 'src/containers/CallNoteFormStepContainer';
-import { MOOD_IMAGES } from 'src/constants/callNote';
+import * as constants from 'src/constants/callNote';
 import images from 'src/constants/images';
 import styles from './styles';
 
@@ -42,7 +42,7 @@ const Mood = ({
     title="How was your Mentee today?"
   >
     <View style={styles.list}>
-      {Object.keys(MOOD_IMAGES).map(key => (
+      {Object.keys(constants.MOOD_IMAGES).map(key => (
         <TouchableWithoutFeedback
           key={key}
           onPress={() => onSelectImage({ menteeState: key })}
@@ -50,7 +50,7 @@ const Mood = ({
           <View style={styles.item}>
             <Image
               style={[styles.image, menteeState === key && styles.imageIsSelected]}
-              source={MOOD_IMAGES[key]}
+              source={constants.MOOD_IMAGES[key]}
             >
             { menteeState !== key && <View style={styles.imageHighlight} /> }
             </Image>
@@ -121,18 +121,9 @@ Completed.propTypes = {
 
 
 const Rating = ({
-  activityHelpful = '',
+  activityHelpful = -1,
   onChangeText,
 }) => {
-  const items = [
-    'Not at all',
-    'A little',
-    'Somewhat',
-    'Quite a bit',
-    'A lot',
-  ];
-  const initialSelectedIndex = items.indexOf(activityHelpful);
-
   return (
     <FormStep
       paginationDisabled={activityHelpful.length === 0}
@@ -142,9 +133,13 @@ const Rating = ({
         <ScrollView>
           <View>
             <RadioList
-              items={items}
-              onIndexChanged={(item) => onChangeText({ activityHelpful: item.item })}
-              initialSelectedIndex={initialSelectedIndex === -1 ? initialSelectedIndex : void 0}
+              items={constants.RATING_ITEMS}
+              onIndexChanged={item => onChangeText({ activityHelpful: item.index })}
+              initialSelectedIndex={
+                activityHelpful === -1
+                  ? -1
+                  : void 0
+              }
             />
           </View>
         </ScrollView>
@@ -162,14 +157,15 @@ const CallQuality = ({
   callQuality = '',
   onChangeText,
 }) => {
-  const items = [
-    'Excellent',
-    'Ok',
-    "Couldn't hear",
-    'Call dropped',
-    'Delays',
+  const values = [
+    constants.CALL_QUALITY_EXCELLENT,
+    constants.CALL_QUALITY_OK,
+    constants.CALL_QUALITY_INAUDIBLE,
+    constants.CALL_QUALITY_DROPPED,
+    constants.CALL_QUALITY_DELAYED,
   ];
-  const initialSelectedIndex = items.indexOf(callQuality);
+
+  const initialSelectedIndex = values.indexOf(callQuality);
 
   return (
     <FormStep
@@ -183,9 +179,17 @@ const CallQuality = ({
         <ScrollView>
           <View>
             <RadioList
-              items={items}
-              onIndexChanged={(item) => onChangeText({ callQuality: item.item })}
-              initialSelectedIndex={initialSelectedIndex === -1 ? initialSelectedIndex : void 0}
+              items={values.map(v => constants.CALL_QUALITY_ITEMS[v])}
+              onIndexChanged={
+                item => onChangeText({
+                  callQuality: values[item.index],
+                })
+              }
+              initialSelectedIndex={
+                initialSelectedIndex === -1
+                  ? initialSelectedIndex
+                  : void 0
+              }
             />
           </View>
         </ScrollView>
