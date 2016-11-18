@@ -134,12 +134,10 @@ const Rating = ({
           <View>
             <RadioList
               items={constants.RATING_ITEMS}
-              onIndexChanged={item => onChangeText({ activityHelpful: item.index })}
-              initialSelectedIndex={
-                activityHelpful === -1
-                  ? -1
-                  : void 0
-              }
+              onIndexChanged={item => onChangeText({
+                activityHelpful: item.index.toString()
+              })}
+              initialSelectedIndex={+activityHelpful}
             />
           </View>
         </ScrollView>
@@ -185,11 +183,7 @@ const CallQuality = ({
                   callQuality: values[item.index],
                 })
               }
-              initialSelectedIndex={
-                initialSelectedIndex === -1
-                  ? initialSelectedIndex
-                  : void 0
-              }
+              initialSelectedIndex={initialSelectedIndex}
             />
           </View>
         </ScrollView>
