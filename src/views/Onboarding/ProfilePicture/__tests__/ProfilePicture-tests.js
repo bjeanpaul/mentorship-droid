@@ -18,7 +18,7 @@ describe('ProfilePicture', () => {
   );
 
   it('should map props correctly', () => {
-    expect(render(createComponent())).toMatchSnapshot();
+    expect(render(createComponent()).toJSON()).toMatchSnapshot();
   });
 
   it('should be able to tap and fire `onChoosePhotoPress`', () => {
