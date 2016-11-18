@@ -4,22 +4,14 @@ import { RadioList } from 'src/components';
 
 import { FormStep } from 'src/components';
 import styles from 'src/views/CallNoteSteps/styles';
+import * as constants from 'src/constants/callNote';
 
 
 const Rating = ({
   onChange,
-  callNote: { activityHelpful = '' },
+  callNote: { activityHelpful = -1 },
   ...props,
 }) => {
-  const items = [
-    'Not at all',
-    'A little',
-    'Somewhat',
-    'Quite a bit',
-    'A lot',
-  ];
-  const initialSelectedIndex = items.indexOf(activityHelpful);
-
   return (
     <FormStep
       paginationDisabled={activityHelpful.length === 0}
@@ -31,13 +23,11 @@ const Rating = ({
           <View>
             <RadioList
               uid="ratings"
-              items={items}
-              onIndexChanged={(item) => onChange({ activityHelpful: item.item })}
-              initialSelectedIndex={
-                initialSelectedIndex < 0
-                  ? initialSelectedIndex
-                  : void 0
-              }
+              items={constants.RATING_ITEMS}
+              onIndexChanged={item => onChange({
+                activityHelpful: item.index.toString(),
+              })}
+              initialSelectedIndex={+activityHelpful}
             />
           </View>
         </ScrollView>

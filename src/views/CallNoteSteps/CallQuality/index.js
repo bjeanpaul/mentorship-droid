@@ -4,6 +4,7 @@ import { Text, RadioList } from 'src/components';
 
 import { FormStep } from 'src/components';
 import styles from 'src/views/CallNoteSteps/styles';
+import * as constants from 'src/constants/callNote';
 
 
 const CallQuality = ({
@@ -11,14 +12,15 @@ const CallQuality = ({
   callNote: { callQuality = '' },
   ...props,
 }) => {
-  const items = [
-    'Excellent',
-    'Ok',
-    "Couldn't hear",
-    'Call dropped',
-    'Delays',
+  const values = [
+    constants.CALL_QUALITY_EXCELLENT,
+    constants.CALL_QUALITY_OK,
+    constants.CALL_QUALITY_INAUDIBLE,
+    constants.CALL_QUALITY_DROPPED,
+    constants.CALL_QUALITY_DELAYED,
   ];
-  const initialSelectedIndex = items.indexOf(callQuality);
+
+  const initialSelectedIndex = values.indexOf(callQuality);
 
   return (
     <FormStep
@@ -34,13 +36,13 @@ const CallQuality = ({
           <View>
             <RadioList
               uid="callQualities"
-              items={items}
-              onIndexChanged={(item) => onChange({ callQuality: item.item })}
-              initialSelectedIndex={
-                initialSelectedIndex < 0
-                  ? initialSelectedIndex
-                  : void 0
+              items={values.map(v => constants.CALL_QUALITY_ITEMS[v])}
+              onIndexChanged={
+                item => onChange({
+                  callQuality: values[item.index],
+                })
               }
+              initialSelectedIndex={initialSelectedIndex}
             />
           </View>
         </ScrollView>

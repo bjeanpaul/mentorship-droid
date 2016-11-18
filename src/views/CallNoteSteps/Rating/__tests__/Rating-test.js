@@ -29,10 +29,10 @@ describe('Rating', () => {
     }));
 
     el.findWhere(uidEquals('ratings'))
-      .simulate('indexChanged', { item: 'very' });
+      .simulate('indexChanged', { index: 0 });
 
     expect(onChange.mock.calls)
-      .toEqual([[{ activityHelpful: 'very' }]]);
+      .toEqual([[{ activityHelpful: '0' }]]);
   });
 
   it('should call onBackPress() when back is pressed', () => {
