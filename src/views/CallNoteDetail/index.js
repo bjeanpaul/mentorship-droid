@@ -18,6 +18,7 @@ const mentee = fromPairs([
   [constants.CALL_NOTES_MENTEE_WITHDRAWN, images.CALL_NOTES_MENTEE_WITHDRAWN],
 ]);
 
+
 const Title = ({ children }) => (
   <View style={styles.titleContainer}>
     <Text style={Text.types.sectionTitle}>{children}</Text>
@@ -90,9 +91,10 @@ const CallNoteDetail = ({
           <View style={styles.sectionBody}>
             <Image
               style={styles.objectiveAchievedImage}
-              source={objectiveAchieved ?
-                images.CALL_NOTES_COMPLETED_YES_SELECTED :
-                images.CALL_NOTES_COMPLETED_NO_SELECTED
+              source={
+                objectiveAchieved
+                  ? images.CALL_NOTES_COMPLETED_YES_SELECTED
+                  : images.CALL_NOTES_COMPLETED_NO_SELECTED
               }
             />
           </View>
@@ -102,7 +104,7 @@ const CallNoteDetail = ({
       <View style={styles.section}>
         <Title>Helpfulness of Activity</Title>
         <Text style={[Text.types.paragraph, styles.activityHelpfulText]}>
-          {activityHelpful}
+          {constants.RATING_ITEMS[activityHelpful]}
         </Text>
       </View>
     </ScrollView>
