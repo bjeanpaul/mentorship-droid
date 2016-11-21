@@ -11,6 +11,13 @@ const navigation = makeStepperNavigationReducer({
 
 const callNote = (state = {}, action) => {
   switch (action.type) {
+    // TODO remove once we no longer have a duplicates issue
+    case constants.CALL_NOTE_CREATE_REQUEST:
+      return {
+        ...state,
+        isSending: true,
+      };
+
     case constants.CALL_NOTES_CHANGE_CALL_NOTE:
       return {
         ...state,
