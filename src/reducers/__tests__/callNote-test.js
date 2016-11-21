@@ -21,4 +21,14 @@ describe('reducers/callNote', () => {
         .toEqual(reduce(void 0, { type: 'FAKE' }));
     });
   });
+
+  describe('CALL_NOTE_CREATE_REQUEST', () => {
+    it('should mark the call note as sending', () => {
+      const { callNote: { isSending } } = reduce(void 0, {
+        type: 'CALL_NOTE_CREATE_REQUEST',
+      });
+
+      expect(isSending).toBe(true);
+    });
+  });
 });
