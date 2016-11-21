@@ -6,7 +6,7 @@ import styles from './styles';
 
 
 const Greeting = ({
-  firstName,
+  profile: { firstName },
   onCompleteProfilePress,
 }) => (
   <Step>
@@ -31,7 +31,7 @@ const Greeting = ({
 
 
 Greeting.propTypes = {
-  firstName: PropTypes.string,
+  profile: PropTypes.shape({ firstName: PropTypes.string }).isRequired,
   onCompleteProfilePress: PropTypes.func.isRequired,
 };
 

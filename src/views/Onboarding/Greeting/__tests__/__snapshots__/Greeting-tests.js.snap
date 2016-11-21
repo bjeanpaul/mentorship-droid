@@ -57,6 +57,7 @@ exports[`Greeting should map props correctly 1`] = `
         ]
       }>
       Welcome 
+      Jeff
     </Text>
     <Text
       accessible={true}

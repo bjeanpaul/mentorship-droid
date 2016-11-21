@@ -1,35 +1,39 @@
 import React, { PropTypes } from 'react';
 
-import { TextInput } from 'src/components';
-import FormStep from 'src/containers/OnboardingFormStepContainer';
+import { TextInput, FormStep } from 'src/components';
 
 
 const Occupation = ({
-  jobTitle = '',
-  jobSector = '',
-  onChangeText,
+  profile: {
+    jobTitle = '',
+    jobSector = '',
+  },
+  onChange,
+  ...props,
 }) => (
   <FormStep
     paginationDisabled={jobTitle.length === 0 || jobSector.length === 0}
     title="What do you do?"
+    {...props}
   >
     <TextInput
       label="Job Sector"
       value={jobSector}
-      onChangeText={text => onChangeText({ jobSector: text })}
+      onChangeText={text => onChange({ jobSector: text })}
     />
     <TextInput
       label="Job Title"
       value={jobTitle}
-      onChangeText={text => onChangeText({ jobTitle: text })}
+      onChangeText={text => onChange({ jobTitle: text })}
     />
   </FormStep>
 );
 
 Occupation.propTypes = {
-  jobSector: PropTypes.string,
-  jobTitle: PropTypes.string,
-  onChangeText: PropTypes.func.isRequired,
+  profile: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onBackPress: PropTypes.func.isRequired,
+  onNextPress: PropTypes.func.isRequired,
 };
 
 

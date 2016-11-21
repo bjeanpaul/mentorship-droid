@@ -1,30 +1,33 @@
 import React, { PropTypes } from 'react';
 
-import { Text, MultiLineTextInput } from 'src/components';
+import { Text, MultiLineTextInput, FormStep } from 'src/components';
 import styles from 'src/views/Onboarding/styles';
-import FormStep from 'src/containers/OnboardingFormStepContainer';
 
 
 const ThreeWords = ({
-  tags = '',
-  onChangeText,
+  profile: { tags = '' },
+  onChange,
+  ...props,
 }) => (
   <FormStep
     title="Describe yourself in three words"
     paginationDisabled={tags.split(' ').length < 3}
+    {...props}
   >
     <MultiLineTextInput
       value={tags}
       placeholder="Type your answer here"
-      onChangeText={text => onChangeText({ tags: text })}
+      onChangeText={text => onChange({ tags: text })}
     />
     <Text style={styles.hint}>e.g. curious, savvy, blunt, friendly</Text>
   </FormStep>
 );
 
 ThreeWords.propTypes = {
-  tags: PropTypes.string,
-  onChangeText: PropTypes.func.isRequired,
+  profile: PropTypes.object,
+  onChange: PropTypes.func.isRequired,
+  onBackPress: PropTypes.func.isRequired,
+  onNextPress: PropTypes.func.isRequired,
 };
 
 

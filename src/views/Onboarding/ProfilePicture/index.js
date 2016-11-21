@@ -1,26 +1,29 @@
 import React, { PropTypes } from 'react';
 import { View, Image, TouchableWithoutFeedback } from 'react-native';
-import FormStep from 'src/containers/OnboardingFormStepContainer';
-import { Text } from 'src/components';
+
+import { Text, FormStep } from 'src/components';
 import images from 'src/constants/images';
 import styles from './styles';
 
 
 const ProfilePicture = ({
-  profilePicture,
+  profile: { profilePic },
   onChoosePhotoPress,
+  ...props,
 }) => (
   <FormStep
     title="Add a profile picture"
-    paginationDisabled={!profilePicture}
+    paginationDisabled={!profilePic}
+    {...props}
   >
     <TouchableWithoutFeedback onPress={onChoosePhotoPress}>
       <View style={styles.imageContainer}>
         <Image
           style={styles.image}
           source={
-            profilePicture && { uri: profilePicture } ||
-            images.PROFILE_FACE_ADD
+            profilePic
+              ? { uri: profilePic }
+              : images.PROFILE_FACE_ADD
           }
         />
         <Text style={styles.imageLabel}>Choose Photo</Text>
@@ -31,8 +34,10 @@ const ProfilePicture = ({
 
 
 ProfilePicture.propTypes = {
-  profilePicture: PropTypes.string,
+  profile: PropTypes.object.isRequired,
   onChoosePhotoPress: PropTypes.func.isRequired,
+  onBackPress: PropTypes.func.isRequired,
+  onNextPress: PropTypes.func.isRequired,
 };
 
 

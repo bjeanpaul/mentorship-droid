@@ -1,20 +1,19 @@
 import { noop } from 'lodash';
 import React from 'react';
-import { Provider } from 'react-redux';
 
-import { fakeStore } from 'app/scripts/helpers';
+import { fakeProfile } from 'app/scripts/helpers';
 import { ThreeWords } from 'src/views/Onboarding';
 
 
 describe('ThreeWords', () => {
   const createComponent = (props = {}) => (
-    <Provider store={fakeStore()}>
-      <ThreeWords
-        tags="typing thinking understanding"
-        onChangeText={noop}
-        {...props}
-      />
-    </Provider>
+    <ThreeWords
+      profile={fakeProfile({ tags: 'typing thinking understanding' })}
+      onChange={noop}
+      onBackPress={noop}
+      onNextPress={noop}
+      {...props}
+    />
   );
 
   it('should render', () => {

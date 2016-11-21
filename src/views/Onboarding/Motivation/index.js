@@ -1,29 +1,32 @@
 import React, { PropTypes } from 'react';
 
-import { MultiLineTextInput } from 'src/components';
-import FormStep from 'src/containers/OnboardingFormStepContainer';
+import { MultiLineTextInput, FormStep } from 'src/components';
 
 
 const Motivation = ({
-  motivation = '',
-  onChangeText,
+  profile: { motivation = '' },
+  onChange,
+  ...props,
 }) => (
   <FormStep
     title="Why did you become a mentor?"
     paginationDisabled={motivation.length === 0}
+    {...props}
   >
     <MultiLineTextInput
       value={motivation}
       placeholder="Type your answer here"
       maxLength={50}
-      onChangeText={text => onChangeText({ motivation: text })}
+      onChangeText={text => onChange({ motivation: text })}
     />
   </FormStep>
 );
 
 Motivation.propTypes = {
-  motivation: PropTypes.string,
-  onChangeText: PropTypes.func.isRequired,
+  profile: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onBackPress: PropTypes.func.isRequired,
+  onNextPress: PropTypes.func.isRequired,
 };
 
 

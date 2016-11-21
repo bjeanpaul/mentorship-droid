@@ -1,20 +1,19 @@
 import { noop } from 'lodash';
 import React from 'react';
-import { Provider } from 'react-redux';
 
-import { fakeStore } from 'app/scripts/helpers';
+import { fakeProfile } from 'app/scripts/helpers';
 import { Motivation } from 'src/views/Onboarding';
 
 
 describe('Motivation', () => {
   const createComponent = (props = {}) => (
-    <Provider store={fakeStore()}>
-      <Motivation
-        motivation="To provide for my family"
-        onChangeText={noop}
-        {...props}
-      />
-    </Provider>
+    <Motivation
+      profile={fakeProfile({ motivation: 'To provide for my family' })}
+      onChange={noop}
+      onBackPress={noop}
+      onNextPress={noop}
+      {...props}
+    />
   );
 
   it('should render', () => {
