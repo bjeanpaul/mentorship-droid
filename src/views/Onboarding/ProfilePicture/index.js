@@ -7,13 +7,13 @@ import styles from './styles';
 
 
 const ProfilePicture = ({
-  profile: { profilePic },
+  profile: { profilePictureUploadPath },
   onChoosePhotoPress,
   ...props,
 }) => (
   <FormStep
     title="Add a profile picture"
-    paginationDisabled={!profilePic}
+    paginationDisabled={!profilePictureUploadPath}
     {...props}
   >
     <TouchableWithoutFeedback onPress={onChoosePhotoPress}>
@@ -21,8 +21,8 @@ const ProfilePicture = ({
         <Image
           style={styles.image}
           source={
-            profilePic
-              ? { uri: profilePic }
+            profilePictureUploadPath
+              ? { uri: profilePictureUploadPath }
               : images.PROFILE_FACE_ADD
           }
         />

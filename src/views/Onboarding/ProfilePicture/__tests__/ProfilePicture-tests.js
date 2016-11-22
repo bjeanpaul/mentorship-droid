@@ -8,7 +8,7 @@ import { ProfilePicture } from 'src/views/Onboarding';
 describe('ProfilePicture', () => {
   const createComponent = (props = {}) => (
     <ProfilePicture
-      profile={fakeProfile({ profilePic: 'path/to/image.png' })}
+      profile={fakeProfile({ profilePictureUploadPath: 'path/to/image.png' })}
       onChoosePhotoPress={noop}
       onBackPress={noop}
       onNextPress={noop}
