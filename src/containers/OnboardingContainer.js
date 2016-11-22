@@ -5,7 +5,7 @@ import {
   changeProfile,
   stepBack,
   stepForward,
-  save,
+  setupProfile,
 } from 'src/actions/onboarding';
 
 import { getAuthUserProfile } from 'src/stores/helpers';
@@ -17,7 +17,7 @@ export const propsToActions = {
   onChange: changeProfile,
   onBackPress: stepBack,
   onNextPress: stepForward,
-  save,
+  save: setupProfile,
 };
 
 
