@@ -9,7 +9,7 @@ describe('Greeting', () => {
   const createComponent = (props = {}) => (
     <Greeting
       profile={fakeProfile({ firstName: 'Jeff' })}
-      onCompleteProfilePress={noop}
+      onNextPress={noop}
       {...props}
     />
   );
@@ -18,10 +18,10 @@ describe('Greeting', () => {
     expect(render(createComponent()).toJSON()).toMatchSnapshot();
   });
 
-  it('should call `onCompleteProfilePress` when complete profile is pressed', () => {
-    const onCompleteProfilePress = jest.fn();
-    const el = shallow(createComponent({ onCompleteProfilePress }));
+  it('should call `onNextPress` when complete profile is pressed', () => {
+    const onNextPress = jest.fn();
+    const el = shallow(createComponent({ onNextPress }));
     el.find('Button').simulate('press');
-    expect(onCompleteProfilePress.mock.calls).toEqual([[]]);
+    expect(onNextPress.mock.calls).toEqual([[]]);
   });
 });

@@ -7,7 +7,7 @@ import styles from './styles';
 
 const Greeting = ({
   profile: { firstName },
-  onCompleteProfilePress,
+  onNextPress,
 }) => (
   <Step>
     <BaseView style={styles.base}>
@@ -22,7 +22,7 @@ const Greeting = ({
           Help build a vibrant mentor community. Complete your profile to allow
           others learn more about you.
         </Text>
-      <Button onPress={onCompleteProfilePress}>
+      <Button onPress={onNextPress}>
         COMPLETE PROFILE
       </Button>
     </BaseView>
@@ -32,7 +32,7 @@ const Greeting = ({
 
 Greeting.propTypes = {
   profile: PropTypes.shape({ firstName: PropTypes.string }).isRequired,
-  onCompleteProfilePress: PropTypes.func.isRequired,
+  onNextPress: PropTypes.func.isRequired,
 };
 
 
