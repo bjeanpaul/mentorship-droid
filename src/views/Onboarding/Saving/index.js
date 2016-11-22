@@ -6,7 +6,7 @@ class Saving extends React.Component {
   // TODO: Stepper should dispatch an action when it's on the last view
   componentDidMount() {
     const { profile } = this.props;
-    this.props.save(profile);
+    this.props.save(profile.id, profile);
   }
 
   render() {
@@ -16,7 +16,7 @@ class Saving extends React.Component {
 
 
 Saving.propTypes = {
-  profile: PropTypes.any.isRequired,
+  profile: PropTypes.object.isRequired,
   save: PropTypes.func.isRequired,
 };
 
