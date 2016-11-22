@@ -1,7 +1,22 @@
 import React, { PropTypes } from 'react';
 import { ProgressBar, BaseView, FormView } from 'src/components';
-import { NavigationExperimental } from 'react-native';
-const { CardStack: NavigationCardStack } = NavigationExperimental;
+import { StyleSheet, View, NavigationExperimental } from 'react-native';
+
+const {
+  Card: NavigationCard,
+  Transitioner: NavigationTransitioner,
+} = NavigationExperimental;
+
+const {
+  PagerStyleInterpolator: NavigationPagerStyleInterpolator,
+} = NavigationCard;
+
+
+const styles = StyleSheet.create({
+  scenes: {
+    flex: 1,
+  },
+});
 
 
 const Step = ({
@@ -13,7 +28,28 @@ const Step = ({
 );
 
 
-const renderScene = children => ({ scene: { index } }) => children[index];
+const renderScene = (scene, transitionProps, children) => {
+  const sceneProps = {
+    ...transitionProps,
+    scene,
+  };
+
+  return (
+    <NavigationCard
+      {...sceneProps}
+      style={NavigationPagerStyleInterpolator.forHorizontal(sceneProps)}
+      key={scene.route.key}
+      renderScene={cardProps => children[cardProps.scene.index]}
+    />
+  );
+};
+
+
+const renderScenes = (transitionProps, children) => (
+  <View style={styles.scenes}>
+    {transitionProps.scenes.map(scene => renderScene(scene, transitionProps, children))}
+  </View>
+);
 
 
 const Stepper = ({
@@ -33,9 +69,9 @@ const Stepper = ({
   return (
     <FormView>
       {progressBar}
-      <NavigationCardStack
+      <NavigationTransitioner
         navigationState={navigationState}
-        renderScene={renderScene(children)}
+        render={props => renderScenes(props, children)}
       />
     </FormView>
   );
