@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
-import { Stepper } from 'src/components';
-import containers from 'src/containers/OnboardingStepsContainer';
 
+import { Stepper } from 'src/components';
 import Greeting from './Greeting';
 import ProfilePicture from './ProfilePicture';
 import Occupation from './Occupation';
@@ -14,21 +13,23 @@ import Saving from './Saving';
 
 const Onboarding = ({
   navigationState,
+  ...props,
 }) => (
   <Stepper navigationState={navigationState}>
-    <containers.Greeting />
-    <containers.ProfilePicture />
-    <containers.Occupation />
-    <containers.Inspiration />
-    <containers.Motivation />
-    <containers.ThreeWords />
-    <containers.Skills />
-    <containers.Saving />
+    <Greeting {...props} />
+    <ProfilePicture {...props} />
+    <Occupation {...props} />
+    <Inspiration {...props} />
+    <Motivation {...props} />
+    <ThreeWords {...props} />
+    <Skills {...props} />
+    <Saving {...props} />
   </Stepper>
 );
 
 
 Onboarding.propTypes = {
+  profile: PropTypes.object,
   navigationState: PropTypes.object.isRequired,
 };
 
