@@ -10,6 +10,7 @@ describe('FormStep', () => {
       title="Test Test Title"
       onBackPress={noop}
       onNextPress={noop}
+      onDonePress={noop}
       {...props}
     >
       <Text>I am a child.</Text>
