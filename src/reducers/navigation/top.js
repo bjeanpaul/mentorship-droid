@@ -116,6 +116,11 @@ export default (state = createInitialState(), action) => {
       return replaceOrPush(state, routes.ROUTE_CALL_COMPLETED, route);
     }
 
+    case callNotes.CALL_NOTE_CREATE_REQUEST: {
+      const route = createRoute(routes.ROUTE_CALL_NOTE_SAVING);
+      return replaceOrPush(state, routes.ROUTE_CREATE_CALL_NOTES, route);
+    }
+
     case callNotes.CALL_NOTE_CREATE_SUCCESS: {
       const {
         payload: {
@@ -123,7 +128,7 @@ export default (state = createInitialState(), action) => {
         },
       } = action;
       const route = createRoute(routes.ROUTE_CALL_NOTE_SAVED, { callNoteId });
-      return replaceOrPush(state, routes.ROUTE_CREATE_CALL_NOTES, route);
+      return replaceOrPush(state, routes.ROUTE_CALL_NOTE_SAVING, route);
     }
 
     case callNotes.CALL_NOTE_CHOOSE: {
