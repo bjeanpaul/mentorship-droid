@@ -37,6 +37,7 @@ import ConnectingCallFailureContainer from 'src/containers/ConnectingCallFailure
 import CallCompletedContainer from 'src/containers/CallCompletedContainer';
 
 import CallNoteStepsContainer from 'src/containers/CallNoteStepsContainer';
+import CallNoteSavingContainer from 'src/containers/CallNoteSavingContainer';
 import CallNoteSavedContainer from 'src/containers/CallNoteSavedContainer';
 import CallNoteListContainer from 'src/containers/CallNoteListContainer';
 import CallNoteDetailContainer from 'src/containers/CallNoteDetailContainer';
@@ -81,6 +82,7 @@ export default fromPairs([
   [constants.ROUTE_CALL_COMPLETED, CallCompletedContainer],
 
   [constants.ROUTE_CREATE_CALL_NOTES, CallNoteStepsContainer],
+  [constants.ROUTE_CALL_NOTE_SAVING, CallNoteSavingContainer],
   [constants.ROUTE_CALL_NOTE_SAVED, CallNoteSavedContainer],
   [constants.ROUTE_CALL_NOTE_LIST, CallNoteListContainer],
   [constants.ROUTE_CALL_NOTE_DETAIL, CallNoteDetailContainer],
