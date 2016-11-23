@@ -9,9 +9,12 @@ import * as constants from 'src/constants/callNote';
 
 const CallQuality = ({
   onChange,
-  callNote: { callQuality = '' },
+  callNote,
+  onDonePress,
   ...props,
 }) => {
+  const { callQuality = '' } = callNote;
+
   const values = [
     constants.CALL_QUALITY_EXCELLENT,
     constants.CALL_QUALITY_OK,
@@ -24,8 +27,10 @@ const CallQuality = ({
 
   return (
     <FormStep
+      last
       paginationDisabled={callQuality.length === 0}
       title="Rate the call quality"
+      onDonePress={() => onDonePress(callNote)}
       {...props}
     >
       <View style={styles.callQualityContainer}>
@@ -54,6 +59,7 @@ const CallQuality = ({
 CallQuality.propTypes = {
   callNote: PropTypes.object,
   onChange: PropTypes.func.isRequired,
+  onDonePress: PropTypes.func.isRequired,
 };
 
 

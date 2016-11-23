@@ -12,7 +12,7 @@ describe('CallQuality', () => {
       callNote={fakeCallNote({ callQuality: 'excellent' })}
       onChange={noop}
       onBackPress={noop}
-      onNextPress={noop}
+      onDonePress={noop}
       {...props}
     />
   );
@@ -50,17 +50,20 @@ describe('CallQuality', () => {
       .toEqual([[]]);
   });
 
-  it('should call onNextPress() when back is pressed', () => {
-    const onNextPress = jest.fn();
+  it('should call onDonePress() when done is pressed', () => {
+    const onDonePress = jest.fn();
+
+    const callNote = fakeCallNote();
 
     const el = shallow(createComponent({
-      onNextPress,
+      callNote,
+      onDonePress,
     }));
 
     el.find('FormStep')
-      .simulate('nextPress');
+      .simulate('donePress');
 
-    expect(onNextPress.mock.calls)
-      .toEqual([[]]);
+    expect(onDonePress.mock.calls)
+      .toEqual([[callNote]]);
   });
 });

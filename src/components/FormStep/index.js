@@ -8,22 +8,18 @@ const FormStep = ({
   paginationDisabled,
   paginationBackDisabled,
   children,
-  onBackPress,
-  onNextPress,
+  ...props,
 }) => (
   <Step>
-    <Text
-      style={[Text.types.title, styles.title]}
-    >
-      {title}
-    </Text>
+    <Text style={[Text.types.title, styles.title]}>{title}</Text>
+
     {children}
+
     <View style={styles.paginationContainer}>
       <Pagination
-        onBackPress={onBackPress}
-        onNextPress={onNextPress}
         backDisabled={paginationBackDisabled}
         disabled={paginationDisabled}
+        {...props}
       />
     </View>
   </Step>
@@ -35,7 +31,9 @@ FormStep.propTypes = {
   paginationDisabled: PropTypes.bool,
   paginationBackDisabled: PropTypes.bool,
   onBackPress: PropTypes.func.isRequired,
-  onNextPress: PropTypes.func.isRequired,
+  onNextPress: PropTypes.func,
+  onDonePress: PropTypes.func,
+  last: PropTypes.bool,
 };
 
 
