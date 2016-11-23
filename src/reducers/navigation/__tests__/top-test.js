@@ -67,6 +67,28 @@ describe('src/reducers/navigation/top', () => {
     });
   });
 
+  describe('ONBOARDING_SETUP_PROFILE_REQUEST', () => {
+    it('should replace the onboarding route with the saving route', () => {
+      const action = onboarding.setupProfile.request();
+
+      const oldRoute = createRoute(routes.ROUTE_ONBOARDING);
+      const newRoute = createRoute(routes.ROUTE_ONBOARDING_SAVING);
+
+      const state = push(createStack(), oldRoute);
+
+      expect(reduce(state, action))
+        .toEqual(replaceAt(state, routes.ROUTE_ONBOARDING, newRoute));
+    });
+
+    it('should push on the saving route if there is no onboarding route', () => {
+      const action = onboarding.setupProfile.request();
+      const route = createRoute(routes.ROUTE_ONBOARDING_SAVING);
+
+      expect(reduce(createStack(), action))
+        .toEqual(push(createStack(), route));
+    });
+  });
+
   describe('NEW_USER_ENTER', () => {
     it('should push the onboarding entry route', () => {
       expect(reduce(createStack(), entry.enterNewUser()))
@@ -75,7 +97,15 @@ describe('src/reducers/navigation/top', () => {
   });
 
   describe('LOAD_REQUEST', () => {
-    it('should push the loading route', () => {
+    it('should replace the onboarding saving route if it exists', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_ONBOARDING_SAVING));
+      const route = createRoute(routes.ROUTE_LOADING);
+
+      expect(reduce(state, sync.loadRequest()))
+        .toEqual(replaceAt(state, routes.ROUTE_ONBOARDING_SAVING, route));
+    });
+
+    it('should push the loading route if there is no onboarding saving route', () => {
       expect(reduce(createStack(), sync.loadRequest()))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_LOADING)));
     });
