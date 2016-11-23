@@ -13,7 +13,9 @@ describe('CallNoteSteps', () => {
       callNote={fakeCallNote()}
       activity={void 0}
       onChange={noop}
-      save={noop}
+      onBackPress={noop}
+      onNextPress={noop}
+      onDonePress={noop}
       {...props}
     />
   );
@@ -27,7 +29,6 @@ describe('CallNoteSteps', () => {
       'Completed',
       'Rating',
       'CallQuality',
-      'Saving',
     ];
 
     for (const step of steps) expect(el.find(step).length).toEqual(1);
@@ -40,7 +41,6 @@ describe('CallNoteSteps', () => {
       'Reflections',
       'Mood',
       'CallQuality',
-      'Saving',
     ];
 
     const unshown = [

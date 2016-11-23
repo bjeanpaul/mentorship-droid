@@ -6,7 +6,6 @@ import Mood from './Mood';
 import Completed from './Completed';
 import Rating from './Rating';
 import CallQuality from './CallQuality';
-import Saving from 'src/views/CallNoteSaving';
 
 
 const CallNoteSteps = ({
@@ -21,7 +20,6 @@ const CallNoteSteps = ({
         <Completed {...props} />
         <Rating {...props} />
         <CallQuality {...props} />
-        <Saving {...props} />
       </Stepper>
     );
   } else {
@@ -30,7 +28,6 @@ const CallNoteSteps = ({
         <Reflections {...props} />
         <Mood {...props} />
         <CallQuality {...props} />
-        <Saving {...props} />
       </Stepper>
     );
   }
