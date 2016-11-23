@@ -8,7 +8,6 @@ import Inspiration from './Inspiration';
 import Motivation from './Motivation';
 import ThreeWords from './ThreeWords';
 import Skills from './Skills';
-import Saving from './Saving';
 
 
 const Onboarding = ({
@@ -23,7 +22,6 @@ const Onboarding = ({
     <Motivation {...props} />
     <ThreeWords {...props} />
     <Skills {...props} />
-    <Saving {...props} />
   </Stepper>
 );
 
@@ -42,7 +40,6 @@ export {
   Motivation,
   ThreeWords,
   Skills,
-  Saving,
 };
 
 export default Onboarding;
