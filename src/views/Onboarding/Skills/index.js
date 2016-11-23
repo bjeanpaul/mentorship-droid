@@ -4,30 +4,37 @@ import { MultiLineTextInput, FormStep } from 'src/components';
 
 
 const Skills = ({
-  profile: { skills = '' },
+  profile,
   onChange,
+  onDonePress,
   ...props,
-}) => (
-  <FormStep
-    title="What skills and strengths do you have that will help you as a Mentor?"
-    paginationDisabled={skills.length === 0}
-    {...props}
-  >
-    <MultiLineTextInput
-      value={skills}
-      placeholder="Type your answer here"
-      maxLength={50}
-      onChangeText={text => onChange({ skills: text })}
-    />
-  </FormStep>
-);
+}) => {
+  const { skills = '' } = profile;
+
+  return (
+    <FormStep
+      last
+      title="What skills and strengths do you have that will help you as a Mentor?"
+      paginationDisabled={skills.length === 0}
+      onDonePress={() => onDonePress(profile.id, profile)}
+      {...props}
+    >
+      <MultiLineTextInput
+        value={skills}
+        placeholder="Type your answer here"
+        maxLength={50}
+        onChangeText={text => onChange({ skills: text })}
+      />
+    </FormStep>
+  );
+};
 
 
 Skills.propTypes = {
   profile: PropTypes.object,
   onChange: PropTypes.func.isRequired,
   onBackPress: PropTypes.func.isRequired,
-  onNextPress: PropTypes.func.isRequired,
+  onDonePress: PropTypes.func.isRequired,
 };
 
 

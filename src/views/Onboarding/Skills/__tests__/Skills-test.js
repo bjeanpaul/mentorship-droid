@@ -13,7 +13,7 @@ describe('Skills', () => {
       })}
       onChange={noop}
       onBackPress={noop}
-      onNextPress={noop}
+      onDonePress={noop}
       {...props}
     />
   );
@@ -21,6 +21,21 @@ describe('Skills', () => {
   it('should render', () => {
     const el = render(createComponent());
     expect(el.toJSON()).toMatchSnapshot();
+  });
+
+  it('should call onDonePress when done is pressed', () => {
+    const profile = fakeProfile();
+    const onDonePress = jest.fn();
+
+    const el = shallow(createComponent({
+      profile,
+      onDonePress,
+    }));
+
+    el.find('FormStep')
+      .simulate('donePress');
+
+    expect(onDonePress.mock.calls).toEqual([[profile.id, profile]]);
   });
 });
 
