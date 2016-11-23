@@ -25,18 +25,8 @@ export const createCallNote = apiAction({
 });
 
 
-// TODO remove once we no longer have a duplicates issue
-export const createCallNoteOnce = (callNote, fn = createCallNote) => {
-  return (dispatch, ctx, getState) => {
-    const { callNote: { callNote: { isSending } } } = getState();
-    if (!isSending) return fn(callNote)(dispatch, ctx, getState);
-    else return null;
-  };
-};
-
-
 // TODO remove once api doesn't need client side to figure out mentor id
-export const createCallNoteWithMentor = (data, fn = createCallNoteOnce) => {
+export const createCallNoteWithMentor = (data, fn = createCallNote) => {
   return (dispatch, ctx, ...xargs) => fn({
     ...data,
     mentor: ctx.profile.id,
