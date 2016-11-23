@@ -9,7 +9,7 @@ export const propsToActions = {
   onChange: changeCallNote,
   onBackPress: stepBack,
   onNextPress: stepForward,
-  save: createCallNoteWithMentor,
+  onDonePress: createCallNoteWithMentor,
 };
 
 
