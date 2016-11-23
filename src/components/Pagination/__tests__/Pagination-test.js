@@ -68,7 +68,7 @@ describe('Button', () => {
 
     const el = shallow(createComponent({
       last: true,
-      onDonePress
+      onDonePress,
     }));
 
     el.findWhere(uidEquals('done'))
