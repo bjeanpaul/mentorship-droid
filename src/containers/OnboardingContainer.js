@@ -17,7 +17,7 @@ export const propsToActions = {
   onChange: changeProfile,
   onBackPress: stepBack,
   onNextPress: stepForward,
-  save: setupProfile,
+  onDonePress: setupProfile,
 };
 
 
