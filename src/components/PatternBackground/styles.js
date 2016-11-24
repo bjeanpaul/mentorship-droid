@@ -7,6 +7,4 @@ export default StyleSheet.create({
     position: 'absolute',
     backgroundColor: colors.BG_PATTERN,
   },
-  pattern: {
-  },
 });

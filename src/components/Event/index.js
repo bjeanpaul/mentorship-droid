@@ -27,11 +27,8 @@ const Event = ({
       </View>
 
       {
-        onPress && <View style={styles.moreContainer}>
-          <Image
-            style={styles.more}
-            source={images.EVENT_MORE}
-          />
+        onPress && <View style={styles.more}>
+          <Image source={images.EVENT_MORE} />
         </View>
       }
     </View>

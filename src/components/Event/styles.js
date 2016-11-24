@@ -46,10 +46,8 @@ export default StyleSheet.create({
     color: colors.EVENT_BLURB,
     textAlign: 'left',
   },
-  moreContainer: {
+  more: {
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  more: {
   },
 });

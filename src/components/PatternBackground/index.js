@@ -37,14 +37,7 @@ class PatternBackground extends Component {
     return (
       <View>
         <View uid="patterns" style={styles.patternContainer}>
-        {
-          times(this.getRepeats(), i => (
-            <Image
-              key={i}
-              style={styles.pattern}
-              source={images.PATTERN_BG}
-            />))
-        }
+        {times(this.getRepeats(), i => <Image key={i} source={images.PATTERN_BG} />)}
         </View>
 
         <View uid="container" onLayout={event => this.onLayout(event)}>
