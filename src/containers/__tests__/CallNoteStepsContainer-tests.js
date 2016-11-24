@@ -1,7 +1,4 @@
-import {
-  completedMapDispatchToProps,
-  savingMapStateToProps,
-} from 'src/containers/CallNoteStepsContainer';
+import { mapStateToProps } from 'src/containers/CallNoteStepsContainer';
 
 import {
   fakeState,
@@ -13,57 +10,100 @@ import {
 
 
 describe('CallNoteStepsContainer', () => {
-  describe('completedMapDispatchToProps', () => {
-    it('should provide the activity objective and category color', () => {
-      const call = fakeCall({
-        id: 20,
-        activity: 11,
-      });
-
-      const state = fakeState({
-        callNote: {
-          callNote: {},
-        },
-        calls: {
-          20: call,
-        },
-        entities: {
-          categories: {
-            23: fakeCategory({
-              id: 23,
-              color: 'orange',
-            }),
-          },
-          activities: {
-            11: fakeActivity({
-              id: 11,
-              category: 23,
-              objective: 'to eat ice-cream',
-            }),
-          },
-        },
-      });
-
-      expect(completedMapDispatchToProps(state, { call }))
-        .toEqual({
-          color: 'orange',
-          objective: 'to eat ice-cream',
-          objectiveAchieved: void 0,
-        });
-    });
-  });
-
-  describe('savingMapStateToProps', () => {
-    it('should provide the call note data', () => {
-      const call = fakeCall({ id: 20 });
-      const callNote = fakeCallNote({ call: 20 });
+  describe('mapStateToProps', () => {
+    it('should provide the call note', () => {
+      const call = fakeCall({ id: 2 });
+      const callNote = fakeCallNote();
 
       const state = fakeState({
         callNote: { callNote },
+        entities: {
+          calls: {
+            2: call,
+          },
+        },
       });
 
-      expect(savingMapStateToProps(state, { call }))
-        .toEqual(jasmine.objectContaining({ callNote }));
+      expect(mapStateToProps(state, { callId: 2 }).callNote).toEqual({
+        call: 2,
+        ...callNote,
+      });
+    });
+
+    it('should provide the activity if relevant', () => {
+      const call1 = fakeCall({
+        id: 1,
+        activity: void 0,
+      });
+
+      const call2 = fakeCall({
+        id: 2,
+        activity: 23,
+      });
+
+      const activity = fakeActivity({ id: 23 });
+      const callNote = fakeCallNote();
+
+      const state = fakeState({
+        callNote: { callNote },
+        entities: {
+          calls: {
+            1: call1,
+            2: call2,
+          },
+          activities: {
+            23: activity,
+          },
+        },
+      });
+
+      expect(mapStateToProps(state, { callId: 1 }).activity).toEqual(void 0);
+      expect(mapStateToProps(state, { callId: 2 }).activity).toEqual(activity);
+    });
+
+    it('should provide the category if relevant', () => {
+      const call1 = fakeCall({
+        id: 1,
+        activity: void 0,
+      });
+
+      const call2 = fakeCall({
+        id: 2,
+        activity: 20,
+      });
+
+      const call3 = fakeCall({
+        id: 3,
+        activity: 23,
+      });
+
+      const category = fakeCategory({ id: 21 });
+
+      const callNote = fakeCallNote();
+
+      const state = fakeState({
+        callNote: { callNote },
+        entities: {
+          calls: {
+            1: call1,
+            2: call2,
+            3: call3,
+          },
+          activities: {
+            23: fakeActivity({
+              id: 23,
+              category: 21,
+            }),
+          },
+          category: {
+            21: category,
+          },
+        },
+      });
+
+      expect(mapStateToProps(state, { callId: 1 }).category).toEqual(void 0);
+      expect(mapStateToProps(state, { callId: 2 }).category).toEqual(void 0);
+      expect(mapStateToProps(state, { callId: 3 }).category).toEqual(category);
     });
   });
 });

@@ -27,14 +27,6 @@ export const listProfiles = (auth, params = {}) => request({
 });
 
 
-export const createProfile = (data, auth) => request({
-  url: '/profile/',
-  method: 'POST',
-  data,
-  auth,
-});
-
-
 export const getProfile = (id, auth) => request({
   url: `/profile/${id}/`,
   method: 'GET',
@@ -65,6 +57,12 @@ export const updateProfilePicture = (id, path, auth) => request({
   auth,
   data: imageData({ path }),
 });
+
+
+export const setupProfile = async (id, data, auth) => {
+  await updateProfilePicture(id, data.profilePictureUploadPath, auth);
+  return updateProfile(id, pick(data, REQUIRED_PROFILE_FIELDS), auth);
+};
 
 
 export const profileIsComplete = profile => every(
