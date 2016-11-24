@@ -1,6 +1,5 @@
 jest.mock('src/api/request');
 
-
 import { identity } from 'lodash';
 import { arrayOf } from 'normalizr';
 import { fakeAuth } from 'app/scripts/helpers';
@@ -11,10 +10,7 @@ import { parseResults } from 'src/api/parse';
 import {
   listScheduledCalls,
   createScheduledCall,
-  getScheduledCall,
-  updateScheduledCall,
   patchScheduledCall,
-  removeScheduledCall,
 } from 'src/api';
 
 
@@ -49,29 +45,6 @@ describe('api/schedule', () => {
     });
   });
 
-  describe('getScheduledCall', () => {
-    it('should construct a request for getting a scheduled call', () => {
-      expect(getScheduledCall(23, fakeAuth())).toEqual({
-        url: '/schedule/23/',
-        method: 'GET',
-        auth: fakeAuth(),
-        schema: ScheduledCall,
-      });
-    });
-  });
-
-  describe('updateScheduledCall', () => {
-    it('should construct a request for updating a scheduled call', () => {
-      expect(updateScheduledCall(23, { fake: 'schedule' }, fakeAuth())).toEqual({
-        url: '/schedule/23/',
-        method: 'PUT',
-        data: { fake: 'schedule' },
-        auth: fakeAuth(),
-        schema: ScheduledCall,
-      });
-    });
-  });
-
   describe('patchScheduledCall', () => {
     it('should construct a request for updating a scheduled call', () => {
       expect(patchScheduledCall(23, { fake: 'schedule' }, fakeAuth())).toEqual({
@@ -80,16 +53,6 @@ describe('api/schedule', () => {
         data: { fake: 'schedule' },
         auth: fakeAuth(),
         schema: ScheduledCall,
-      });
-    });
-  });
-
-  describe('removeScheduledCall', () => {
-    it('should construct a request for removing a scheduled call', () => {
-      expect(removeScheduledCall(23, fakeAuth())).toEqual({
-        url: '/schedule/23/',
-        method: 'DELETE',
-        auth: fakeAuth(),
       });
     });
   });

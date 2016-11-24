@@ -75,28 +75,6 @@ describe('actions/callNote', () => {
     });
   });
 
-  describe('updateCallNote', () => {
-    it('should create actions for call notes api updates', () => {
-      expect(isEqual(actions.updateCallNote, apiAction({
-        method: api.updateCallNote,
-        request: staticAction(constants.CALL_NOTE_UPDATE_REQUEST),
-        success: dataAction(constants.CALL_NOTE_UPDATE_SUCCESS),
-        failures: [[ApiResponseError, staticAction(constants.CALL_NOTE_UPDATE_FAILURE)]],
-      }))).toBe(true);
-    });
-  });
-
-  describe('patchCallNote', () => {
-    it('should create actions for call notes api patchs', () => {
-      expect(isEqual(actions.patchCallNote, apiAction({
-        method: api.patchCallNote,
-        request: staticAction(constants.CALL_NOTE_PATCH_REQUEST),
-        success: dataAction(constants.CALL_NOTE_PATCH_SUCCESS),
-        failures: [[ApiResponseError, staticAction(constants.CALL_NOTE_PATCH_FAILURE)]],
-      }))).toBe(true);
-    });
-  });
-
   describe('openCreateCallNote', () => {
     it('should create an action for new call notes', () => {
       expect(actions.openCreateCallNote({ callId: 23 })).toEqual({

@@ -18,14 +18,6 @@ export const listScheduledCalls = apiAction({
 });
 
 
-export const fetchScheduledCall = apiAction({
-  method: api.getScheduledCall,
-  request: staticAction(constants.SCHEDULED_CALL_FETCH_REQUEST),
-  success: dataAction(constants.SCHEDULED_CALL_FETCH_SUCCESS),
-  failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_FETCH_FAILURE)]],
-});
-
-
 export const createScheduledCall = apiAction({
   method: api.createScheduledCall,
   request: staticAction(constants.SCHEDULED_CALL_CREATE_REQUEST),
@@ -34,27 +26,11 @@ export const createScheduledCall = apiAction({
 });
 
 
-export const updateScheduledCall = apiAction({
-  method: api.updateScheduledCall,
-  request: staticAction(constants.SCHEDULED_CALL_UPDATE_REQUEST),
-  success: dataAction(constants.SCHEDULED_CALL_UPDATE_SUCCESS),
-  failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_UPDATE_FAILURE)]],
-});
-
-
 export const patchScheduledCall = apiAction({
   method: api.patchScheduledCall,
   request: staticAction(constants.SCHEDULED_CALL_PATCH_REQUEST),
   success: dataAction(constants.SCHEDULED_CALL_PATCH_SUCCESS),
   failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_PATCH_FAILURE)]],
-});
-
-
-export const removeScheduledCall = apiAction({
-  method: api.removeScheduledCall,
-  request: staticAction(constants.SCHEDULED_CALL_REMOVE_REQUEST),
-  success: staticAction(constants.SCHEDULED_CALL_REMOVE_SUCCESS),
-  failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_REMOVE_FAILURE)]],
 });
 
 
