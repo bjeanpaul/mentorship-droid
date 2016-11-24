@@ -1,10 +1,10 @@
 import { merge, uniqueId, noop, isFunction } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
 import { Profile, ScheduledCall, Activity, Category, Event, CallNote } from 'src/api';
-import { getContext } from 'src/stores/helpers';
+import { getContext } from 'src/store/helpers';
 import { staticAction } from 'src/actionHelpers';
 import { createStack } from 'src/navigationHelpers';
-import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/event';
+import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/events';
 
 
 export const capture = async (fn, ...xargs) => {
