@@ -1,8 +1,8 @@
 import React from 'react';
 import { noop } from 'lodash';
 
-import { fakeProfile } from 'app/scripts/helpers';
 import { ProfilePicture } from 'src/views/Onboarding';
+import { fakeProfile, uidEquals } from 'app/scripts/helpers';
 
 
 describe('ProfilePicture', () => {
@@ -23,7 +23,10 @@ describe('ProfilePicture', () => {
   it('should be able to tap and fire `onChoosePhotoPress`', () => {
     const onChoosePhotoPress = jest.fn();
     const el = shallow(createComponent({ onChoosePhotoPress }));
-    el.find('TouchableWithoutFeedback').at(0).simulate('press');
+
+    el.findWhere(uidEquals('choosePhoto'))
+      .simulate('press');
+
     expect(onChoosePhotoPress.mock.calls).toEqual([[]]);
   });
 });

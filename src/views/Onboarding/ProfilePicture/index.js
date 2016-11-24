@@ -16,7 +16,7 @@ const ProfilePicture = ({
     paginationDisabled={!profilePictureUploadPath}
     {...props}
   >
-    <TouchableWithoutFeedback onPress={onChoosePhotoPress}>
+    <TouchableWithoutFeedback uid="choosePhoto" onPress={onChoosePhotoPress}>
       <View style={styles.imageContainer}>
         <Image
           style={styles.image}

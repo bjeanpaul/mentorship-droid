@@ -22,7 +22,8 @@ const Greeting = ({
           Help build a vibrant mentor community. Complete your profile to allow
           others learn more about you.
         </Text>
-      <Button onPress={onNextPress}>
+
+      <Button uid="completeProfile" onPress={onNextPress}>
         COMPLETE PROFILE
       </Button>
     </BaseView>

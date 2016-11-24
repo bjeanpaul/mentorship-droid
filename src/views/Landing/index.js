@@ -22,14 +22,14 @@ const Landing = ({
           Hello, welcome to your{'\n'}
           mentorship journey!
         </Text>
-        <Button onPress={onGetStartedPress}>
+        <Button uid="getStarted" onPress={onGetStartedPress}>
           GET STARTED
         </Button>
       </View>
       <View style={styles.login}>
         <Text style={styles.loginText}>
           Already have an account?
-          <Link onPress={onLoginPress}> Log in.</Link>
+          <Link uid="login" onPress={onLoginPress}> Log in.</Link>
         </Text>
       </View>
     </View>

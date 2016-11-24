@@ -17,7 +17,9 @@ describe('MultiLineTextInput', () => {
     const el = shallow(<MultiLineTextInput value="21" maxLength={50} />);
     expect(getCharCount(el)).toEqual('2/50');
 
-    el.find('TextInput').simulate('changeText', { text: '2123' });
+    el.findWhere(uidEquals('input'))
+      .simulate('changeText', { text: '2123' });
+
     expect(getCharCount(el)).toEqual('4/50');
   });
 

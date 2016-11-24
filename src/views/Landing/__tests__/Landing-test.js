@@ -1,20 +1,19 @@
-import React from 'react';
 import { noop } from 'lodash';
-
-import FirstEvent from 'src/components/FirstEvent';
+import React from 'react';
+import Landing from '../index';
 import { uidEquals } from 'app/scripts/helpers';
 
 
-describe('FirstEvent', () => {
+describe('Landing', () => {
   const createComponent = (props = {}) => (
-    <FirstEvent
-      firstName="John Wurst"
+    <Landing
       onGetStartedPress={noop}
+      onLoginPress={noop}
       {...props}
     />
   );
 
-  it('should render the props', () => {
+  it('should map `onGetStartedPress` and `onLoginPress`', () => {
     expect(render(createComponent())).toMatchSnapshot();
   });
 
@@ -26,5 +25,15 @@ describe('FirstEvent', () => {
       .simulate('press');
 
     expect(onGetStartedPress).toBeCalled();
+  });
+
+  it('should be able to tap and fire `onLoginPress`', () => {
+    const onLoginPress = jest.fn();
+    const el = shallow(createComponent({ onLoginPress }));
+
+    el.findWhere(uidEquals('login'))
+      .simulate('press');
+
+    expect(onLoginPress).toBeCalled();
   });
 });

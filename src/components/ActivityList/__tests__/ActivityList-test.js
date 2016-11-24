@@ -1,7 +1,7 @@
 import React from 'react';
 import { noop } from 'lodash';
 import ActivityList from 'src/components/ActivityList';
-import { fakeCategory, fakeActivity } from 'app/scripts/helpers';
+import { fakeCategory, fakeActivity, uidEquals } from 'app/scripts/helpers';
 import { ACTIVITY_ICON } from 'app/scripts/fixtures';
 
 
@@ -75,12 +75,12 @@ describe('ActivityList', () => {
     const onActivityPress = jest.fn();
     const el = shallow(createComponent({ onActivityPress }));
 
-    el.findWhere(child => child.prop('activityId') === 1)
+    el.findWhere(uidEquals('activity:1'))
       .simulate('press');
 
     expect(onActivityPress.mock.calls).toEqual([[1]]);
 
-    el.findWhere(child => child.prop('activityId') === 2)
+    el.findWhere(uidEquals('activity:2'))
       .simulate('press');
 
     expect(onActivityPress.mock.calls).toEqual([[1], [2]]);

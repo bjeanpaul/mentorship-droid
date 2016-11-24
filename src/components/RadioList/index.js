@@ -32,6 +32,7 @@ class RadioList extends Component {
       <View style={styles.container}>
         {this.props.items.map((item, index) => (
           <TouchableWithoutFeedback
+            uid={`item:${index}`}
             key={index}
             onPress={() => this.handlePressRow(index)}
           >

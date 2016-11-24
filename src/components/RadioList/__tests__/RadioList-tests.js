@@ -1,6 +1,7 @@
 import React from 'react';
 import RadioList from 'src/components/RadioList';
 import { noop } from 'lodash';
+import { uidEquals } from 'app/scripts/helpers';
 
 
 describe('RadioList', () => {
@@ -28,14 +29,13 @@ describe('RadioList', () => {
       onIndexChanged,
     }));
     expect(onIndexChanged.mock.calls).toEqual([]);
-    el.find('TouchableWithoutFeedback').at(1).simulate('press');
-    expect(onIndexChanged.mock.calls).toEqual([
-      [
-        {
-          index: 1,
-          item: 'Cat',
-        },
-      ],
-    ]);
+
+    el.findWhere(uidEquals('item:1'))
+      .simulate('press');
+
+    expect(onIndexChanged.mock.calls).toEqual([[{
+      index: 1,
+      item: 'Cat',
+    }]]);
   });
 });
