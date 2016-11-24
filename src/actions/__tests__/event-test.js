@@ -1,37 +1,26 @@
-jest.mock('src/actionHelpers', () => ({
-  apiAction: global.mock(),
-  staticAction: global.mock(),
-  dataAction: global.mock(),
-}));
+jest.mock('src/api/events');
 
-
-import { isEqual } from 'lodash';
 import * as constants from 'src/constants/event';
 import * as api from 'src/api';
-
-import {
-  apiAction,
-  staticAction,
-  dataAction,
-} from 'src/actionHelpers';
-
+import { dataAction } from 'src/actionHelpers';
 import { listEvents } from 'src/actions/event';
+import { testApiAction } from 'app/scripts/helpers';
 
 const { NetworkError, ApiResponseError } = api;
 
 
 describe('actions/events', () => {
   describe('listEvents', () => {
-    it('should create actions for events api lists', () => {
-      expect(isEqual(listEvents, apiAction({
+    it('should create actions for events api lists', async () => {
+      await testApiAction(listEvents, {
         method: api.listEvents,
-        request: staticAction(constants.EVENT_LIST_REQUEST),
+        request: constants.EVENT_LIST_REQUEST,
         success: dataAction(constants.EVENT_LIST_SUCCESS),
         failures: [
-          [ApiResponseError, staticAction(constants.EVENT_LIST_FAILURE)],
-          [NetworkError, staticAction(constants.EVENT_LIST_NETWORK_FAILURE)],
+          [ApiResponseError, constants.EVENT_LIST_FAILURE],
+          [NetworkError, constants.EVENT_LIST_NETWORK_FAILURE],
         ],
-      }))).toBe(true);
+      })();
     });
   });
 });

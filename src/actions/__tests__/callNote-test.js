@@ -1,45 +1,40 @@
-jest.mock('src/actionHelpers', () => ({
-  apiAction: global.mock(),
-  staticAction: global.mock(),
-  dataAction: global.mock(),
-}));
+jest.mock('src/api/callNotes');
 
-
-import { isEqual } from 'lodash';
 import * as constants from 'src/constants/callNote';
 import * as api from 'src/api';
+import * as actions from 'src/actions/callNote';
+import { dataAction } from 'src/actionHelpers';
 
 import {
-  apiAction,
-  staticAction,
-  dataAction,
-} from 'src/actionHelpers';
-
-import * as actions from 'src/actions/callNote';
-import { capture, fakeContext, fakeCallNote, fakeState } from 'app/scripts/helpers';
+  capture,
+  fakeContext,
+  fakeCallNote,
+  fakeState,
+  testApiAction,
+} from 'app/scripts/helpers';
 
 const { ApiResponseError } = api;
 
 
 describe('actions/callNote', () => {
   describe('listCallNotes', () => {
-    it('should create actions for call note api lists', () => {
-      expect(isEqual(actions.listCallNotes, apiAction({
+    it('should create actions for call note api lists', async () => {
+      await testApiAction(actions.listCallNotes, {
         method: api.listCallNotes,
-        request: staticAction(constants.CALL_NOTE_LIST_REQUEST),
+        request: constants.CALL_NOTE_LIST_REQUEST,
         success: dataAction(constants.CALL_NOTE_LIST_SUCCESS),
-        failures: [[ApiResponseError, staticAction(constants.CALL_NOTE_LIST_FAILURE)]],
-      }))).toBe(true);
+        failures: [[ApiResponseError, constants.CALL_NOTE_LIST_FAILURE]],
+      })();
     });
   });
 
   describe('createCallNote', () => {
-    it('should create actions for call notes api creates', () => {
-      expect(isEqual(actions.createCallNote, apiAction({
+    it('should create actions for call notes api creates', async () => {
+      await testApiAction(actions.createCallNote, {
         method: api.createCallNote,
-        request: staticAction(constants.CALL_NOTE_CREATE_REQUEST),
+        request: constants.CALL_NOTE_CREATE_REQUEST,
         success: dataAction(constants.CALL_NOTE_CREATE_SUCCESS),
-      }))).toBe(true);
+      })(fakeCallNote());
     });
   });
 
