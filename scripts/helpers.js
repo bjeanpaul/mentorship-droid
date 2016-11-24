@@ -1,7 +1,8 @@
-import { merge, uniqueId } from 'lodash';
+import { merge, uniqueId, isFunction } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
 import { Profile, ScheduledCall, Activity, Category, Event, CallNote } from 'src/api';
 import { getContext } from 'src/stores/helpers';
+import { staticAction } from 'src/actionHelpers';
 import { createStack } from 'src/navigationHelpers';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/event';
 
@@ -152,6 +153,61 @@ export const fakeStore = (state = fakeState()) => ({
   dispatch: () => {},
   getState: () => state,
 });
+
+
+const castActionCreator = obj => !isFunction(obj)
+  ? staticAction(obj)
+  : obj;
+
+
+const testApiActionSuccess = async (actionFn, conf, args) => {
+  const {
+    method,
+    request,
+    success,
+    response = { fake: 'data' },
+    state = fakeState(),
+    context = fakeContext(),
+  } = conf;
+
+  method.mockClear();
+  method.mockImplementation(() => Promise.resolve(response));
+
+  expect(await capture(actionFn(...args), context, () => state)).toEqual([
+    castActionCreator(request)(...args),
+    castActionCreator(success)(response, ...args),
+  ]);
+};
+
+
+const testApiActionFailure = async (Type, failure, actionFn, conf, args) => {
+  const {
+    method,
+    request,
+    state = fakeState(),
+    context = fakeContext(),
+  } = conf;
+
+  const e = new Type();
+
+  method.mockClear();
+  method.mockImplementation(() => Promise.reject(e));
+
+  expect(await capture(actionFn(...args), context, () => state)).toEqual([
+    castActionCreator(request)(...args),
+    castActionCreator(failure)(e, ...args),
+  ]);
+};
+
+
+export const testApiAction = (actionFn, conf) => async (...args) => {
+  await testApiActionSuccess(actionFn, conf, args);
+  const { failures = [] } = conf;
+
+  for (const [Type, failure] of failures) {
+    await testApiActionFailure(Type, failure, actionFn, conf, args);
+  }
+};
 
 
 export const fakeProfileData = (data = { id: 23 }) => (
