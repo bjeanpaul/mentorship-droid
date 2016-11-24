@@ -1,9 +1,9 @@
 jest.mock('src/api/events');
 
-import * as constants from 'src/constants/event';
+import * as constants from 'src/constants/events';
 import * as api from 'src/api';
 import { dataAction } from 'src/actionHelpers';
-import { listEvents } from 'src/actions/event';
+import { listEvents } from 'src/actions/events';
 import { testApiAction } from 'app/scripts/helpers';
 
 const { NetworkError, ApiResponseError } = api;

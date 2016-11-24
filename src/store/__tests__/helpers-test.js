@@ -3,7 +3,7 @@ import moment from 'moment';
 import {
   EVENT_TYPE_CALL_NOTES_CREATED,
   EVENT_TYPE_SCHEDULED_CALL_CREATED,
-} from 'src/constants/event';
+} from 'src/constants/events';
 
 import {
   fakeState,

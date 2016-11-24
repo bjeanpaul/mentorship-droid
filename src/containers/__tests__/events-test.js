@@ -2,7 +2,7 @@ import events from 'src/containers/events';
 import {
   EVENT_TYPE_SCHEDULED_CALL_CREATED,
   EVENT_TYPE_ACTIVITIY_CATEGORY_COMPLETED,
-} from 'src/constants/event';
+} from 'src/constants/events';
 
 import ScheduledCallEventContainer from 'src/containers/ScheduledCallEventContainer';
 import MilestoneEventContainer from 'src/containers/MilestoneEventContainer';

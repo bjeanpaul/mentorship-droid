@@ -1,5 +1,5 @@
 import * as api from 'src/api';
-import * as constants from 'src/constants/event';
+import * as constants from 'src/constants/events';
 
 import {
   apiAction,

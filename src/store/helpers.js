@@ -1,7 +1,7 @@
 import moment from 'moment';
 import { values, isUndefined, sortBy, filter, first } from 'lodash';
 
-import { TYPES_TO_COLLECTIONS } from 'src/constants/event';
+import { TYPES_TO_COLLECTIONS } from 'src/constants/events';
 
 
 export const getAuthUserProfile = ({
