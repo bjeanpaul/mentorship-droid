@@ -8,7 +8,7 @@ import {
   setupProfile,
 } from 'src/actions/onboarding';
 
-import { getAuthUserProfile } from 'src/stores/helpers';
+import { getAuthUserProfile } from 'src/store/helpers';
 import Onboarding from 'src/views/Onboarding';
 
 

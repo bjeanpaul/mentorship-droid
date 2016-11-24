@@ -33,7 +33,7 @@ import {
   getCallNote,
   getNextScheduledCall,
   getScheduledCallsBetween,
-} from 'src/stores/helpers';
+} from 'src/store/helpers';
 
 
 describe('helpers', () => {

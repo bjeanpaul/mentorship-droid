@@ -1,7 +1,7 @@
 import { isUndefined, filter } from 'lodash';
 import { connect } from 'react-redux';
 import CallNoteList from 'src/views/CallNoteList';
-import { getCallNotes } from 'src/stores/helpers';
+import { getCallNotes } from 'src/store/helpers';
 import { dismissScreen } from 'src/actions/navigation';
 import { chooseCallNote } from 'src/actions/callNote';
 

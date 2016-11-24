@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 
 import errors from 'src/errors';
 import tick from 'src/actions/tick';
-import configureStore from 'src/stores/configureStore';
+import configureStore from 'src/store/configureStore';
 import TopNavigationContainer from 'src/containers/TopNavigationContainer';
 
 
