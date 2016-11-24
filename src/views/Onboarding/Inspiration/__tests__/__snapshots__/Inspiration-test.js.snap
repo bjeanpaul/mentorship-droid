@@ -73,6 +73,7 @@ exports[`Inspiration should render 1`] = `
             },
           ]
         }
+        uid="input"
         underlineColorAndroid="transparent"
         value="Music, of course" />
     </View>

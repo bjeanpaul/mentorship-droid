@@ -73,6 +73,7 @@ exports[`ThreeWords should render 1`] = `
             },
           ]
         }
+        uid="input"
         underlineColorAndroid="transparent"
         value="typing thinking understanding" />
     </View>

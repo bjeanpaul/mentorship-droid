@@ -74,6 +74,7 @@ exports[`Skills should render 1`] = `
             },
           ]
         }
+        uid="input"
         underlineColorAndroid="transparent"
         value="I had a bunch when I was younger, but now I\'m old and tired." />
     </View>
@@ -98,7 +99,8 @@ exports[`Skills should render 1`] = `
             "textAlign": "right",
           },
         ]
-      }>
+      }
+      uid="charCount">
       60
       /
       50

@@ -74,6 +74,7 @@ exports[`Motivation should render 1`] = `
             },
           ]
         }
+        uid="input"
         underlineColorAndroid="transparent"
         value="To provide for my family" />
     </View>
@@ -98,7 +99,8 @@ exports[`Motivation should render 1`] = `
             "textAlign": "right",
           },
         ]
-      }>
+      }
+      uid="charCount">
       24
       /
       50
