@@ -1,40 +1,33 @@
 import React from 'react';
 import MultiLineTextInput from 'src/components/MultiLineTextInput';
+import { uidEquals } from 'app/scripts/helpers';
 
 
 describe('MultiLineTextInput', () => {
-  it('should render correctly', () => {
+  const getCharCount = el => el
+    .findWhere(uidEquals('charCount'))
+    .children()
+    .nodes.join('');
+
+  it('should render', () => {
     expect(render(<MultiLineTextInput />)).toMatchSnapshot();
   });
 
-  it('should show initial number of characters', () => {
-    const el = shallow(
-      <MultiLineTextInput
-        value="12345"
-        maxLength={50}
-      />);
+  it('should show the number of characters used', () => {
+    const el = shallow(<MultiLineTextInput value="21" maxLength={50} />);
+    expect(getCharCount(el)).toEqual('2/50');
 
-    expect(el.find('Text').at(0).children().nodes[0]).toEqual(5);
+    el.find('TextInput').simulate('changeText', { text: '2123' });
+    expect(getCharCount(el)).toEqual('4/50');
   });
 
-  it('should show updated number of characters', () => {
-    const el = shallow(
-      <MultiLineTextInput
-        value="12345"
-        maxLength={50}
-      />);
+  it('should call onChangeText() when text changes', () => {
+    const onChangeText = jest.fn();
+    const el = shallow(<MultiLineTextInput onChangeText={onChangeText} />);
 
-    el.find('TextInput').simulate('changeText', {
-      target: { value: '1234567890' },
-    });
-  });
+    el.findWhere(uidEquals('input'))
+      .simulate('changeText', { text: '21' });
 
-  it('should show maximum character limit', () => {
-    const el = shallow(
-      <MultiLineTextInput
-        maxLength={50}
-      />);
-
-    expect(el.find('Text').at(0).children().nodes[1]).toEqual(50);
+    expect(onChangeText.mock.calls).toEqual([['21']]);
   });
 });
