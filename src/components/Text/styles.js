@@ -6,7 +6,7 @@ import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 
 export default StyleSheet.create({
   default: {
-    color: colors.DEFAULT_TEXT,
+    color: colors.TEXT_DEFAULT,
     fontFamily: FONT.REGULAR,
     fontSize: 13,
     textAlign: 'center',

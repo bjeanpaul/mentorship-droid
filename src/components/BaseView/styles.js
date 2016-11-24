@@ -3,7 +3,7 @@ import colors from 'src/constants/colors';
 
 export default StyleSheet.create({
   view: {
-    backgroundColor: colors.DEFAULT_BG,
+    backgroundColor: colors.BG_DEFAULT,
     flex: 1,
   },
 });

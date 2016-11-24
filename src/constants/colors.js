@@ -1,18 +1,19 @@
 export default {
-  DEFAULT_BG: '#fff',
-  DEFAULT_STATUS_BG: '#99acae',
+  BG_DEFAULT: '#fff',
   BG_DARK: '#003035',
   BG_ORANGE: 'rgba(246, 111, 63, 0.95)',
   BG_PATTERN: '#eff2f2',
 
-  DEFAULT_TEXT: '#003035',
+  STATUS_BG_DEFAULT: '#99acae',
+
+  TEXT_DEFAULT: '#003035',
   TEXT_LIGHT: '#fff',
   TEXT_ERROR: '#864a47',
 
   LABEL_TEXT: '#9fb1b3',
   LINK_TEXT: '#f77040',
-  SECTION_TITLE_TEXT: '#9fb1b3',
 
+  SECTION_TITLE_TEXT: '#9fb1b3',
   SECTION_DIVIDER: '#dfe5e6',
 
   TEXT_INPUT_BORDER_COLOR: '#dfe5e6',
