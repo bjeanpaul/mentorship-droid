@@ -1,5 +1,5 @@
 import * as api from 'src/api';
-import * as constants from 'src/constants/callNote';
+import * as constants from 'src/constants/callNotes';
 
 import {
   apiAction,

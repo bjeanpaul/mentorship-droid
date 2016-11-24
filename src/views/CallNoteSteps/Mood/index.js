@@ -4,7 +4,7 @@ import { View, Image, TouchableWithoutFeedback } from 'react-native';
 import { Text } from 'src/components';
 
 import { FormStep } from 'src/components';
-import { MOOD_IMAGES } from 'src/constants/callNote';
+import { MOOD_IMAGES } from 'src/constants/callNotes';
 import styles from 'src/views/CallNoteSteps/styles';
 
 

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import CallNoteEvent from 'src/views/CallNoteEvent';
-import { chooseCallNote } from 'src/actions/callNote';
+import { chooseCallNote } from 'src/actions/callNotes';
 import { getCallNote } from 'src/store/helpers';
 
 

@@ -1,8 +1,8 @@
 jest.mock('src/api/callNotes');
 
-import * as constants from 'src/constants/callNote';
+import * as constants from 'src/constants/callNotes';
 import * as api from 'src/api';
-import * as actions from 'src/actions/callNote';
+import * as actions from 'src/actions/callNotes';
 import { dataAction } from 'src/actionHelpers';
 
 import {
@@ -16,7 +16,7 @@ import {
 const { ApiResponseError } = api;
 
 
-describe('actions/callNote', () => {
+describe('actions/callNotes', () => {
   describe('listCallNotes', () => {
     it('should create actions for call note api lists', async () => {
       await testApiAction(actions.listCallNotes, {

@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { makeStepperNavigationReducer } from 'src/navigationHelpers';
 
-import * as constants from 'src/constants/callNote';
+import * as constants from 'src/constants/callNotes';
 
 const navigation = makeStepperNavigationReducer({
   FORWARD: constants.CALL_NOTES_STEP_FORWARD,

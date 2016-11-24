@@ -2,7 +2,7 @@ import { noop } from 'lodash';
 import React from 'react';
 
 import { uidEquals, fakeCallNote } from 'app/scripts/helpers';
-import { CALL_NOTES_MENTEE_HAPPY } from 'src/constants/callNote';
+import { CALL_NOTES_MENTEE_HAPPY } from 'src/constants/callNotes';
 import { Mood } from 'src/views/CallNoteSteps';
 
 

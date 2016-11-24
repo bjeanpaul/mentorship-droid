@@ -20,7 +20,7 @@ import {
   CALL_NOTE_LIST_SUCCESS,
   CALL_NOTE_PATCH_SUCCESS,
   CALL_NOTE_CREATE_SUCCESS,
-} from 'src/constants/callNote';
+} from 'src/constants/callNotes';
 
 
 const ACTIONS_WITH_ENTITIES = [

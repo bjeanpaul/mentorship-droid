@@ -3,7 +3,7 @@ import React from 'react';
 
 import { uidEquals, fakeCallNote } from 'app/scripts/helpers';
 import { CallQuality } from 'src/views/CallNoteSteps';
-import * as constants from 'src/constants/callNote';
+import * as constants from 'src/constants/callNotes';
 
 
 describe('CallQuality', () => {
