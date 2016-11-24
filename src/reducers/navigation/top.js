@@ -61,14 +61,21 @@ export default (state = createInitialState(), action) => {
     case entry.NEW_USER_ENTER:
       return push(state, createRoute(routes.ROUTE_ONBOARDING));
 
+    case onboarding.ONBOARDING_SETUP_PROFILE_REQUEST: {
+      const route = createRoute(routes.ROUTE_ONBOARDING_SAVING);
+      return replaceOrPush(state, routes.ROUTE_ONBOARDING, route);
+    }
+
     case onboarding.ONBOARDING_CHOOSE_PROFILE_PICTURE:
       return push(state, createRoute(routes.ROUTE_ONBOARDING_CAMERA_ROLL));
 
     case onboarding.ONBOARDING_CHANGE_PROFILE_PICTURE:
       return pop(state);
 
-    case sync.LOAD_REQUEST:
-      return push(state, createRoute(routes.ROUTE_LOADING));
+    case sync.LOAD_REQUEST: {
+      const route = createRoute(routes.ROUTE_LOADING);
+      return replaceOrPush(state, routes.ROUTE_ONBOARDING_SAVING, route);
+    }
 
     case sync.LOAD_SUCCESS: {
       const route = createRoute(routes.ROUTE_NAVIGATOR);
@@ -116,6 +123,11 @@ export default (state = createInitialState(), action) => {
       return replaceOrPush(state, routes.ROUTE_CALL_COMPLETED, route);
     }
 
+    case callNotes.CALL_NOTE_CREATE_REQUEST: {
+      const route = createRoute(routes.ROUTE_CALL_NOTE_SAVING);
+      return replaceOrPush(state, routes.ROUTE_CREATE_CALL_NOTES, route);
+    }
+
     case callNotes.CALL_NOTE_CREATE_SUCCESS: {
       const {
         payload: {
@@ -123,7 +135,7 @@ export default (state = createInitialState(), action) => {
         },
       } = action;
       const route = createRoute(routes.ROUTE_CALL_NOTE_SAVED, { callNoteId });
-      return replaceOrPush(state, routes.ROUTE_CREATE_CALL_NOTES, route);
+      return replaceOrPush(state, routes.ROUTE_CALL_NOTE_SAVING, route);
     }
 
     case callNotes.CALL_NOTE_CHOOSE: {

@@ -1,20 +1,19 @@
 jest.mock('src/api/request');
 
-
 import { identity, fromPairs } from 'lodash';
 import { arrayOf } from 'normalizr';
-import { fakeAuth } from 'app/scripts/helpers';
+import { fakeAuth, fakeProfile } from 'app/scripts/helpers';
 import request, { imageData } from 'src/api/request';
 import { Profile } from 'src/api/schemas';
 import { parseResults } from 'src/api/parse';
 
 import {
   listProfiles,
-  createProfile,
   getProfile,
   updateProfile,
   removeProfile,
   updateProfilePicture,
+  setupProfile,
   profileIsComplete,
   REQUIRED_PROFILE_FIELDS,
 } from 'src/api';
@@ -38,17 +37,6 @@ describe('api/profiles', () => {
         parse: parseResults,
         auth: fakeAuth(),
         params: { foo: 23 },
-      });
-    });
-  });
-
-  describe('createProfile', () => {
-    it('should construct a request for creating a profile', () => {
-      expect(createProfile({ fake: 'profile' }, fakeAuth())).toEqual({
-        url: '/profile/',
-        method: 'POST',
-        data: { fake: 'profile' },
-        auth: fakeAuth(),
       });
     });
   });
@@ -104,18 +92,42 @@ describe('api/profiles', () => {
     });
   });
 
+  describe('setupProfile', () => {
+    it('should update the profile picture', async () => {
+      const auth = fakeAuth();
+
+      const profile = fakeProfile({
+        profilePictureUploadPath: 'content://foo.png',
+      });
+
+      await setupProfile(21, profile, auth);
+
+      expect(request.mock.calls.slice()).toEqual(jasmine.arrayContaining([[
+        updateProfilePicture(21, 'content://foo.png', auth),
+      ]]));
+    });
+
+    it('should update the profile', async () => {
+      const fields = fromPairs(REQUIRED_PROFILE_FIELDS.map(key => [key, key]));
+      const auth = fakeAuth();
+      const profile = fakeProfile(fields);
+
+      await setupProfile(21, profile, auth);
+
+      expect(request.mock.calls.slice()).toEqual(jasmine.arrayContaining([[
+        updateProfile(21, fields, auth),
+      ]]));
+    });
+  });
+
   describe('profileIsComplete', () => {
     it('should return true if required fields are filled-in', () => {
-      const profile = fromPairs(REQUIRED_PROFILE_FIELDS.map(
-        (key) => [key, 'FAKE FIELD VALUE']
-      ));
+      const profile = fromPairs(REQUIRED_PROFILE_FIELDS.map(key => [key, key]));
       expect(profileIsComplete(profile)).toBe(true);
     });
 
     it('should return false if required fields are empty', () => {
-      const profile = fromPairs(REQUIRED_PROFILE_FIELDS.map(
-        (key) => [key, 'FAKE FIELD VALUE']
-      ));
+      const profile = fromPairs(REQUIRED_PROFILE_FIELDS.map(key => [key, key]));
 
       expect(profileIsComplete({
         ...profile,

@@ -16,7 +16,7 @@ import {
 } from 'src/actionHelpers';
 
 import * as actions from 'src/actions/callNote';
-import { capture, fakeContext, fakeCallNote, fakeState } from 'app/scripts/helpers';
+import { capture, fakeContext, fakeCallNote } from 'app/scripts/helpers';
 
 const { ApiResponseError } = api;
 
@@ -40,24 +40,6 @@ describe('actions/callNote', () => {
         request: staticAction(constants.CALL_NOTE_CREATE_REQUEST),
         success: dataAction(constants.CALL_NOTE_CREATE_SUCCESS),
       }))).toBe(true);
-    });
-  });
-
-  describe('createCallNoteOnce', () => {
-    it('should only create a call note if it isnt already sending', async () => {
-      const state = fakeState();
-      const getState = () => state;
-
-      const ctx = fakeContext();
-      const callNote = fakeCallNote();
-      const fn = d => dispatch => dispatch(d);
-
-      let res = await capture(actions.createCallNoteOnce(callNote, fn), ctx, getState);
-      expect(res).toEqual([callNote]);
-
-      state.callNote.callNote.isSending = true;
-      res = await capture(actions.createCallNoteOnce(callNote, fn), ctx, getState);
-      expect(res).toEqual([]);
     });
   });
 
