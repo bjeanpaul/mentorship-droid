@@ -1,4 +1,4 @@
-import { merge, uniqueId, isFunction } from 'lodash';
+import { merge, uniqueId, noop, isFunction } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
 import { Profile, ScheduledCall, Activity, Category, Event, CallNote } from 'src/api';
 import { getContext } from 'src/stores/helpers';
@@ -155,61 +155,6 @@ export const fakeStore = (state = fakeState()) => ({
 });
 
 
-const castActionCreator = obj => !isFunction(obj)
-  ? staticAction(obj)
-  : obj;
-
-
-const testApiActionSuccess = async (actionFn, conf, args) => {
-  const {
-    method,
-    request,
-    success,
-    response = { fake: 'data' },
-    state = fakeState(),
-    context = fakeContext(),
-  } = conf;
-
-  method.mockClear();
-  method.mockImplementation(() => Promise.resolve(response));
-
-  expect(await capture(actionFn(...args), context, () => state)).toEqual([
-    castActionCreator(request)(...args),
-    castActionCreator(success)(response, ...args),
-  ]);
-};
-
-
-const testApiActionFailure = async (Type, failure, actionFn, conf, args) => {
-  const {
-    method,
-    request,
-    state = fakeState(),
-    context = fakeContext(),
-  } = conf;
-
-  const e = new Type();
-
-  method.mockClear();
-  method.mockImplementation(() => Promise.reject(e));
-
-  expect(await capture(actionFn(...args), context, () => state)).toEqual([
-    castActionCreator(request)(...args),
-    castActionCreator(failure)(e, ...args),
-  ]);
-};
-
-
-export const testApiAction = (actionFn, conf) => async (...args) => {
-  await testApiActionSuccess(actionFn, conf, args);
-  const { failures = [] } = conf;
-
-  for (const [Type, failure] of failures) {
-    await testApiActionFailure(Type, failure, actionFn, conf, args);
-  }
-};
-
-
 export const fakeProfileData = (data = { id: 23 }) => (
   normalize(data, Profile));
 
@@ -244,3 +189,73 @@ export const fakeListEventsData = (data = [fakeEvent()]) => (
 
 export const fakeListCallNotesData = (data = [fakeCallNote()]) => (
     normalize(data, arrayOf(CallNote)));
+
+
+const castActionCreator = obj => !isFunction(obj)
+  ? staticAction(obj)
+  : obj;
+
+
+const testApiActionCalls = async (actionFn, conf, args) => {
+  const { method, context, getStore, expectedApiCalls } = conf;
+  method.mockClear();
+  await actionFn(...args)(noop, context, getStore);
+  expect(method.mock.calls).toEqual(expectedApiCalls);
+};
+
+
+const testApiActionSuccess = async (actionFn, conf, args) => {
+  const { method, response, request, success, context, getStore } = conf;
+
+  method.mockClear();
+  method.mockImplementation(() => Promise.resolve(response));
+
+  expect(await capture(actionFn(...args), context, getStore)).toEqual([
+    castActionCreator(request)(...args),
+    castActionCreator(success)(response, ...args),
+  ]);
+};
+
+
+const testApiActionFailure = async (Type, failure, actionFn, conf, args) => {
+  const { method, request, context, getStore } = conf;
+  const e = new Type();
+
+  method.mockClear();
+  method.mockImplementation(() => Promise.reject(e));
+
+  expect(await capture(actionFn(...args), context, getStore)).toEqual([
+    castActionCreator(request)(...args),
+    castActionCreator(failure)(e, ...args),
+  ]);
+};
+
+
+const testApiActionDefaults = args => {
+  const context = fakeContext();
+
+  return {
+    context,
+    failures: [],
+    getStore: () => fakeState(),
+    response: { fake: 'data' },
+    expectedApiCalls: [args.concat(context.auth)],
+  };
+};
+
+
+export const testApiAction = (actionFn, opts) => async (...args) => {
+  const conf = {
+    ...testApiActionDefaults(args),
+    ...opts,
+  };
+
+  const { failures } = conf;
+
+  await testApiActionCalls(actionFn, conf, args);
+  await testApiActionSuccess(actionFn, conf, args);
+
+  for (const [Type, failure] of failures) {
+    await testApiActionFailure(Type, failure, actionFn, conf, args);
+  }
+};
