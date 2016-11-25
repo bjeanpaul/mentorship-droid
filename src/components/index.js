@@ -26,6 +26,7 @@ import Failure from './Failure';
 import ActivityList from './ActivityList';
 import RadioList from './RadioList';
 import PatternBackground from './PatternBackground';
+import FormStep from './FormStep';
 
 
 export {
@@ -58,4 +59,5 @@ export {
   ActivityList,
   RadioList,
   PatternBackground,
+  FormStep,
 };

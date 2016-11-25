@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ActivityList from 'src/views/ActivityList';
-import { getCategory, getCategoryActivities } from 'src/stores/helpers';
+import { getCategory, getCategoryActivities } from 'src/store/helpers';
 import { chooseScheduledCallActivity } from 'src/actions/schedule';
 import { dismissScreen } from 'src/actions/navigation';
 

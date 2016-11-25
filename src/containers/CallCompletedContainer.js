@@ -2,7 +2,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import CallCompleted from 'src/views/CallCompleted';
-import { openCreateCallNote } from 'src/actions/callNote';
+import { openCreateCallNote } from 'src/actions/callNotes';
 import { dismissScreen } from 'src/actions/navigation';
 
 

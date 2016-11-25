@@ -3,8 +3,8 @@ import React from 'react';
 
 import CallNoteEvent from 'src/views/CallNoteEvent';
 import { fakeEvent, fakeCallNote } from 'app/scripts/helpers';
-import * as constants from 'src/constants/callNote';
-import { EVENT_MOOD_IMAGES } from 'src/constants/callNote';
+import * as constants from 'src/constants/callNotes';
+import { EVENT_MOOD_IMAGES } from 'src/constants/callNotes';
 
 
 describe('CallNoteEvent', () => {

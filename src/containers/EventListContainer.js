@@ -2,7 +2,7 @@ import moment from 'moment';
 import { connect } from 'react-redux';
 import { groupBy, sortBy } from 'lodash';
 import EventList from 'src/views/EventList';
-import { getEvents } from 'src/stores/helpers';
+import { getEvents } from 'src/store/helpers';
 
 
 const formatDateLabel = date => moment(date).calendar(Date.now(), {

@@ -30,7 +30,7 @@ describe('actions/onboarding', () => {
       expect(actions.changeProfilePicture('path/to/image.png')).toEqual({
         type: constants.ONBOARDING_CHANGE_PROFILE_PICTURE,
         payload: {
-          profilePicture: 'path/to/image.png',
+          profilePictureUploadPath: 'path/to/image.png',
         },
       });
     });

@@ -2,7 +2,7 @@ import { first } from 'lodash';
 import { connect } from 'react-redux';
 import { START_CALL_RANGE_START, START_CALL_RANGE_END } from 'src/constants/schedule';
 import Journey from 'src/views/Journey';
-import { getNextScheduledCall, getScheduledCallsBetween } from 'src/stores/helpers';
+import { getNextScheduledCall, getScheduledCallsBetween } from 'src/store/helpers';
 import { openScheduledCall, addScheduledCall, startScheduledCall } from 'src/actions/schedule';
 import { openProfileSettings } from 'src/actions/profile';
 import { openCall } from 'src/actions/calls';

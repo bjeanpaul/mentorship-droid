@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import CallNoteDetail from 'src/views/CallNoteDetail';
-import { getCallNote, getActivity } from 'src/stores/helpers';
+import { getCallNote, getActivity } from 'src/store/helpers';
 import { dismissScreen } from 'src/actions/navigation';
 
 const mapStateToProps = (state, { callNoteId }) => {

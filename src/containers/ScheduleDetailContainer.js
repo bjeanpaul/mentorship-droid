@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import ScheduleDetail from 'src/views/ScheduleDetail';
 import { dismissScreen } from 'src/actions/navigation';
-import { getScheduledCall, getScheduledCalls, getActivity } from 'src/stores/helpers';
+import { getScheduledCall, getScheduledCalls, getActivity } from 'src/store/helpers';
 
 import {
   createScheduledCall,

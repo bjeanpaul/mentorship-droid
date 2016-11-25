@@ -1,79 +1,43 @@
-import { pick } from 'lodash';
 import { connect } from 'react-redux';
-import { createCallNoteWithMentor, changeCallNote } from 'src/actions/callNote';
-import { getActivity, getCategory } from 'src/stores/helpers';
-
-import {
-  Reflections,
-  Mood,
-  Completed,
-  Rating,
-  CallQuality,
-} from 'src/views/CallNoteSteps';
-import Saving from 'src/views/CallNoteSaving';
+import { createCallNoteWithMentor, changeCallNote } from 'src/actions/callNotes';
+import { stepBack, stepForward } from 'src/actions/callNotes';
+import { getActivity, getCategory, getCall } from 'src/store/helpers';
+import CallNoteSteps from 'src/views/CallNoteSteps';
 
 
-const callNoteContainer = ({
-  component,
-  callNoteProps,
-  actions = {
-    onChangeText: changeCallNote,
-  },
-}) => connect(
-  state => pick(state.callNote.callNote, callNoteProps),
-  actions,
-)(component);
+export const propsToActions = {
+  onChange: changeCallNote,
+  onBackPress: stepBack,
+  onNextPress: stepForward,
+  save: createCallNoteWithMentor,
+};
 
 
-export const completedMapDispatchToProps = (state, { call }) => {
-  const { objective, category } = getActivity(state, call.activity);
-  const { color } = getCategory(state, category);
+export const mapStateToProps = (state, { callId }) => {
+  const call = getCall(state, callId);
+  const { callNote: callNoteState } = state;
+  const navigationState = callNoteState.navigation;
+
+  const callNote = {
+    call: call.id,
+    ...callNoteState.callNote,
+  };
+
+  let activity;
+  let category;
+
+  if (call.activity) {
+    activity = getActivity(state, call.activity);
+    category = activity && getCategory(state, activity.category);
+  }
 
   return {
-    objectiveAchieved: state.callNote.callNote.objectiveAchieved,
-    objective,
-    color,
+    callNote,
+    activity,
+    category,
+    navigationState,
   };
 };
 
 
-export const savingMapStateToProps = (state, { call }) => ({
-  callNote: {
-    call: call.id,
-    ...state.callNote.callNote,
-  },
-});
-
-
-export default {
-  Reflections: callNoteContainer({
-    component: Reflections,
-    callNoteProps: ['reflection'],
-  }),
-
-  Mood: callNoteContainer({
-    component: Mood,
-    callNoteProps: ['menteeState'],
-    actions: {
-      onSelectImage: changeCallNote,
-    },
-  }),
-
-  Completed: connect(completedMapDispatchToProps, {
-    onSelectImage: changeCallNote,
-  })(Completed),
-
-  Rating: callNoteContainer({
-    component: Rating,
-    callNoteProps: ['activityHelpful'],
-  }),
-
-  CallQuality: callNoteContainer({
-    component: CallQuality,
-    callNoteProps: ['callQuality'],
-  }),
-
-  Saving: connect(savingMapStateToProps, {
-    save: createCallNoteWithMentor,
-  })(Saving),
-};
+export default connect(mapStateToProps, propsToActions)(CallNoteSteps);

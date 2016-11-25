@@ -2,7 +2,7 @@ import moment from 'moment';
 import { connect } from 'react-redux';
 import { Event } from 'src/components';
 import images from 'src/constants/images';
-import { getScheduledCall, getScheduledCallActivity } from 'src/stores/helpers';
+import { getScheduledCall, getScheduledCallActivity } from 'src/store/helpers';
 
 
 const mapStateToProps = (state, {

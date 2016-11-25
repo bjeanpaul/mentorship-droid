@@ -2,7 +2,7 @@ import { bindActionCreators } from 'redux';
 import { omitBy, isUndefined } from 'lodash';
 import { connect } from 'react-redux';
 import StartCall from 'src/views/StartCall';
-import { getScheduledCall, getScheduledCallActivity } from 'src/stores/helpers';
+import { getScheduledCall, getScheduledCallActivity } from 'src/store/helpers';
 import { createCall } from 'src/actions/calls';
 import { dismissScreen } from 'src/actions/navigation';
 

@@ -1,6 +1,6 @@
 import { mapStateToProps } from 'src/containers/MilestoneEventContainer';
 import { fakeState, fakeEvent, fakeCategory } from 'app/scripts/helpers';
-import { EVENT_TYPE_ACTIVITIY_CATEGORY_COMPLETED } from 'src/constants/event';
+import { EVENT_TYPE_ACTIVITIY_CATEGORY_COMPLETED } from 'src/constants/events';
 
 
 describe('MilestoneEventContainer', () => {

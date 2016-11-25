@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Category from 'src/views/Category';
-import { getCategory, getCategoryActivities } from 'src/stores/helpers';
+import { getCategory, getCategoryActivities } from 'src/store/helpers';
 import { dismissActivityScreen, chooseActivity } from 'src/actions/activities';
 
 
