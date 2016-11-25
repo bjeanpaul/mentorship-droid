@@ -18,7 +18,7 @@ describe('MultiLineTextInput', () => {
     expect(getCharCount(el)).toEqual('2/50');
 
     el.findWhere(uidEquals('input'))
-      .simulate('changeText', { text: '2123' });
+      .simulate('changeText', '2123');
 
     expect(getCharCount(el)).toEqual('4/50');
   });
@@ -28,7 +28,7 @@ describe('MultiLineTextInput', () => {
     const el = shallow(<MultiLineTextInput onChangeText={onChangeText} />);
 
     el.findWhere(uidEquals('input'))
-      .simulate('changeText', { text: '21' });
+      .simulate('changeText', '21');
 
     expect(onChangeText.mock.calls).toEqual([['21']]);
   });

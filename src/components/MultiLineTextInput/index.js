@@ -25,7 +25,7 @@ export default class MultiLineTextInput extends React.Component {
     });
   }
 
-  onChangeText({ text }) {
+  onChangeText(text) {
     this.setState({ charCount: text.length });
 
     if (this.props.onChangeText) {
