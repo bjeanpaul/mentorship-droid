@@ -1,25 +1,18 @@
 import React from 'react';
 import { Text } from 'react-native';
 import Stepper, { Step } from 'src/components/Stepper';
-import { createStack, createRoute, stepKey } from 'src/navigationHelpers';
+import { uidEquals } from 'app/scripts/helpers';
 
 
 describe('Stepper', () => {
   const createComponent = (props = {}) => (
-    <Stepper
-      navigationState={createStack([
-        createRoute(stepKey(0)),
-        createRoute(stepKey(1)),
-      ])}
-      {...props}
-    >
-      <Step><Text>Step 1</Text></Step>
-      <Step><Text>Step 2</Text></Step>
+    <Stepper {...props}>
+      <Step uid="step:1"><Text>Step 1</Text></Step>
+      <Step uid="step:2"><Text>Step 2</Text></Step>
     </Stepper>
   );
 
-
-  it('should render', () => {
+  it('should render its steps', () => {
     expect(render(createComponent())).toMatchSnapshot();
   });
 
@@ -27,5 +20,48 @@ describe('Stepper', () => {
     expect(render(createComponent({
       hideProgress: true,
     }))).toMatchSnapshot();
+  });
+
+  it('should page between steps when page buttons are pressed', () => {
+    const el = shallow(createComponent());
+    expect(el.state().index).toEqual(0);
+
+    el.find('NavigationStack')
+      .shallow()
+      .findWhere(uidEquals('step:1'))
+      .simulate('nextPress');
+
+    expect(el.state().index).toEqual(1);
+
+    el.find('NavigationStack')
+      .shallow()
+      .findWhere(uidEquals('step:2'))
+      .simulate('backPress');
+
+    expect(el.state().index).toEqual(0);
+  });
+
+  it('should clamp the step index betwen the range of steps', () => {
+    const el = shallow(createComponent());
+    expect(el.state().index).toEqual(0);
+
+    el.find('NavigationStack')
+      .shallow()
+      .findWhere(uidEquals('step:1'))
+      .simulate('backPress');
+
+    expect(el.state().index).toEqual(0);
+
+    el.find('NavigationStack')
+      .shallow()
+      .findWhere(uidEquals('step:1'))
+      .simulate('nextPress');
+
+    el.find('NavigationStack')
+      .shallow()
+      .findWhere(uidEquals('step:2'))
+      .simulate('nextPress');
+
+    expect(el.state().index).toEqual(1);
   });
 });

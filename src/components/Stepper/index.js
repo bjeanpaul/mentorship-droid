@@ -1,7 +1,16 @@
-import { fromPairs } from 'lodash';
-import React, { PropTypes } from 'react';
+import { range, clamp, fromPairs, debounce } from 'lodash';
+import React, { Component, PropTypes } from 'react';
 import { ProgressBar, BaseView, FormView, NavigationStack } from 'src/components';
-import { stepKey } from 'src/navigationHelpers';
+import { createRoute } from 'src/navigationHelpers';
+
+
+const PAGING_DEBOUNCE = 250;
+
+
+const debouncePager = fn => debounce(fn, PAGING_DEBOUNCE, {
+  leading: true,
+  trailing: false,
+});
 
 
 const Step = ({
@@ -13,39 +22,75 @@ const Step = ({
 );
 
 
-const getRoutes = children => {
-  const routes = React.Children.toArray(children)
-    .map((child, i) => [stepKey(i), child]);
+class Stepper extends Component {
+  constructor(props) {
+    super(props);
 
-  return fromPairs(routes);
-};
+    this.state = {
+      index: 0,
+    };
 
+    this.onNextPress = debouncePager(this.onNextPress.bind(this));
+    this.onBackPress = debouncePager(this.onBackPress.bind(this));
+  }
 
-const Stepper = ({
-  children,
-  navigationState,
-  hideProgress,
-}) => {
-  const completed = (navigationState.index + 1) / React.Children.count(children);
-  const routes = getRoutes(children);
+  onNextPress() {
+    this.incrStep(+1);
+  }
 
-  return (
-    <FormView>
-      {!hideProgress && <ProgressBar completed={completed} />}
-      <NavigationStack
-        navigationState={navigationState}
-        routes={routes}
-      />
-    </FormView>
-  );
-};
+  onBackPress() {
+    this.incrStep(-1);
+  }
+
+  getRoutes() {
+    const routes = React.Children.toArray(this.props.children)
+      .map((child, i) => [i, this.createRoute(child)]);
+
+    return fromPairs(routes);
+  }
+
+  getNumSteps() {
+    return React.Children.count(this.props.children);
+  }
+
+  getNavigationState() {
+    return {
+      index: this.state.index,
+      routes: range(this.getNumSteps()).map(i => createRoute(i)),
+    };
+  }
+
+  createRoute(el) {
+    return React.cloneElement(el, {
+      onNextPress: this.onNextPress,
+      onBackPress: this.onBackPress,
+    });
+  }
+
+  incrStep(v) {
+    this.setState({
+      index: clamp(this.state.index + v, 0, this.getNumSteps() - 1),
+    });
+  }
+
+  render() {
+    const numSteps = React.Children.count(this.props.children);
+    const completed = (this.state.index + 1) / numSteps;
+
+    return (
+      <FormView>
+        {!this.props.hideProgress && <ProgressBar completed={completed} />}
+        <NavigationStack
+          navigationState={this.getNavigationState()}
+          routes={this.getRoutes()}
+        />
+      </FormView>
+    );
+  }
+}
 
 
 Stepper.propTypes = {
-  navigationState: PropTypes.shape({
-    index: PropTypes.number,
-    routes: PropTypes.array,
-  }),
   hideProgress: PropTypes.bool,
   children: PropTypes.arrayOf(Step).isRequired,
 };

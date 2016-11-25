@@ -1,4 +1,4 @@
-exports[`Stepper should render 1`] = `
+exports[`Stepper should render its steps 1`] = `
 <View
   accessibilityComponentType={undefined}
   accessibilityLabel={undefined}
@@ -43,14 +43,14 @@ exports[`Stepper should render 1`] = `
               "backgroundColor": "#f77040",
             },
             Object {
-              "flex": 1,
+              "flex": 0.5,
             },
           ]
         } />
       <View
         style={
           Object {
-            "flex": 0,
+            "flex": 0.5,
           }
         } />
     </View>
@@ -74,7 +74,7 @@ exports[`Stepper should render 1`] = `
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail">
-          Step 2
+          Step 1
         </Text>
       </View>
     </View>
@@ -132,7 +132,7 @@ exports[`Stepper should toggle the rendering of the progressBar 1`] = `
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail">
-          Step 2
+          Step 1
         </Text>
       </View>
     </View>
