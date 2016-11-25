@@ -1,14 +1,11 @@
 import { connect } from 'react-redux';
 import { createCallNoteWithMentor, changeCallNote } from 'src/actions/callNotes';
-import { stepBack, stepForward } from 'src/actions/callNotes';
 import { getActivity, getCategory, getCall } from 'src/store/helpers';
 import CallNoteSteps from 'src/views/CallNoteSteps';
 
 
 export const propsToActions = {
   onChange: changeCallNote,
-  onBackPress: stepBack,
-  onNextPress: stepForward,
   onDonePress: createCallNoteWithMentor,
 };
 

@@ -1,13 +1,6 @@
 import { combineReducers } from 'redux';
-import { createStepperNavigationReducer } from 'src/navigationHelpers';
 
 import * as constants from 'src/constants/callNotes';
-
-const navigation = createStepperNavigationReducer({
-  FORWARD: constants.CALL_NOTES_STEP_FORWARD,
-  BACK: constants.CALL_NOTES_STEP_BACK,
-});
-
 
 const callNote = (state = {}, action) => {
   switch (action.type) {
@@ -30,7 +23,6 @@ const callNote = (state = {}, action) => {
 };
 
 const reduce = combineReducers({
-  navigation,
   callNote,
 });
 

@@ -3,20 +3,6 @@ import * as constants from 'src/constants/onboarding';
 
 
 describe('actions/onboarding', () => {
-  describe('navigation', () => {
-    it('should create an action for stepping back', () => {
-      expect(actions.stepBack()).toEqual({
-        type: constants.ONBOARDING_STEP_BACK_REQUEST,
-      });
-    });
-
-    it('should create an action for stepping forward', () => {
-      expect(actions.stepForward()).toEqual({
-        type: constants.ONBOARDING_STEP_FORWARD_REQUEST,
-      });
-    });
-  });
-
   describe('chooseProfilePicture', () => {
     it('should create an action for choosing a profile picture', () => {
       expect(actions.chooseProfilePicture()).toEqual({

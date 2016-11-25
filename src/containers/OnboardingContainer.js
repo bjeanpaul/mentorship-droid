@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import {
   chooseProfilePicture,
   changeProfile,
-  stepBack,
-  stepForward,
   setupProfile,
 } from 'src/actions/onboarding';
 
@@ -15,8 +13,6 @@ import Onboarding from 'src/views/Onboarding';
 export const propsToActions = {
   onChoosePhotoPress: chooseProfilePicture,
   onChange: changeProfile,
-  onBackPress: stepBack,
-  onNextPress: stepForward,
   onDonePress: setupProfile,
 };
 

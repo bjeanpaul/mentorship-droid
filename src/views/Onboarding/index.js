@@ -11,10 +11,9 @@ import Skills from './Skills';
 
 
 const Onboarding = ({
-  navigationState,
   ...props,
 }) => (
-  <Stepper navigationState={navigationState}>
+  <Stepper>
     <Greeting {...props} />
     <ProfilePicture {...props} />
     <Occupation {...props} />
@@ -28,7 +27,6 @@ const Onboarding = ({
 
 Onboarding.propTypes = {
   profile: PropTypes.object,
-  navigationState: PropTypes.object.isRequired,
 };
 
 

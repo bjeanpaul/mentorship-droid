@@ -39,19 +39,7 @@ const setupProfile = apiAction({
 });
 
 
-const stepBack = () => ({
-  type: constants.ONBOARDING_STEP_BACK_REQUEST,
-});
-
-
-const stepForward = () => ({
-  type: constants.ONBOARDING_STEP_FORWARD_REQUEST,
-});
-
-
 export {
-  stepBack,
-  stepForward,
   setupProfile,
   changeProfile,
   changeProfilePicture,

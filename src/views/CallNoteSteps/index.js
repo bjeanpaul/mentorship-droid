@@ -8,13 +8,10 @@ import Rating from './Rating';
 import CallQuality from './CallQuality';
 
 
-const CallNoteSteps = ({
-  navigationState,
-  ...props,
-}) => {
+const CallNoteSteps = props => {
   if (props.activity) {
     return (
-      <Stepper navigationState={navigationState}>
+      <Stepper>
         <Reflections {...props} />
         <Mood {...props} />
         <Completed {...props} />
@@ -24,7 +21,7 @@ const CallNoteSteps = ({
     );
   } else {
     return (
-      <Stepper navigationState={navigationState}>
+      <Stepper>
         <Reflections {...props} />
         <Mood {...props} />
         <CallQuality {...props} />
@@ -36,7 +33,6 @@ const CallNoteSteps = ({
 
 CallNoteSteps.propTypes = {
   activity: PropTypes.any,
-  navigationState: PropTypes.object.isRequired,
 };
 
 

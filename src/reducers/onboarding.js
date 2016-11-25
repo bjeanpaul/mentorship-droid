@@ -1,12 +1,6 @@
 import { combineReducers } from 'redux';
-import { createStepperNavigationReducer } from 'src/navigationHelpers';
 
 import * as constants from 'src/constants/onboarding';
-
-const navigation = createStepperNavigationReducer({
-  FORWARD: constants.ONBOARDING_STEP_FORWARD_REQUEST,
-  BACK: constants.ONBOARDING_STEP_BACK_REQUEST,
-});
 
 
 const profile = (state = {}, action) => {
@@ -25,6 +19,5 @@ const profile = (state = {}, action) => {
 
 
 export default combineReducers({
-  navigation,
   profile,
 });
