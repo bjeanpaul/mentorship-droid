@@ -1,9 +1,9 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
-import { getContext } from 'src/stores/helpers';
-import contextMiddleware from 'src/stores/contextMiddleware';
-import chainMiddleware from 'src/stores/chainMiddleware';
+import { getContext } from 'src/store/helpers';
+import contextMiddleware from 'src/store/contextMiddleware';
+import chainMiddleware from 'src/store/chainMiddleware';
 import rootReducer from 'src/reducers';
 import effects from 'src/effects';
 

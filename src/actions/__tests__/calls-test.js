@@ -1,27 +1,23 @@
-jest.mock('src/actionHelpers', () => ({
-  apiAction: global.mock(),
-  staticAction: global.mock(),
-  dataAction: global.mock(),
-}));
+jest.mock('src/api/calls');
 
-import { isEqual } from 'lodash';
 import * as constants from 'src/constants/calls';
 import * as api from 'src/api';
-import { apiAction, dataAction, staticAction } from 'src/actionHelpers';
+import { dataAction } from 'src/actionHelpers';
 import { createCall } from 'src/actions/calls';
+import { testApiAction, fakeCall } from 'app/scripts/helpers';
 
 const { ApiResponseError } = api;
 
 
 describe('call/actions', () => {
   describe('createCall', () => {
-    it('should create actions for call api creates', () => {
-      expect(isEqual(createCall, apiAction({
+    it('should create actions for call api creates', async () => {
+      await testApiAction(createCall, {
         method: api.createCall,
-        request: staticAction(constants.CALL_CREATE_REQUEST),
+        request: constants.CALL_CREATE_REQUEST,
         success: dataAction(constants.CALL_CREATE_SUCCESS),
-        failures: [[ApiResponseError, staticAction(constants.CALL_CREATE_FAILURE)]],
-      }))).toBe(true);
+        failures: [[ApiResponseError, constants.CALL_CREATE_FAILURE]],
+      })(fakeCall());
     });
   });
 });

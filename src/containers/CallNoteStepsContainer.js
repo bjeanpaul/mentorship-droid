@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { createCallNoteWithMentor, changeCallNote } from 'src/actions/callNote';
-import { stepBack, stepForward } from 'src/actions/callNote';
-import { getActivity, getCategory, getCall } from 'src/stores/helpers';
+import { createCallNoteWithMentor, changeCallNote } from 'src/actions/callNotes';
+import { stepBack, stepForward } from 'src/actions/callNotes';
+import { getActivity, getCategory, getCall } from 'src/store/helpers';
 import CallNoteSteps from 'src/views/CallNoteSteps';
 
 

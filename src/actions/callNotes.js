@@ -1,5 +1,5 @@
 import * as api from 'src/api';
-import * as constants from 'src/constants/callNote';
+import * as constants from 'src/constants/callNotes';
 
 import {
   apiAction,
@@ -32,22 +32,6 @@ export const createCallNoteWithMentor = (data, fn = createCallNote) => {
     mentor: ctx.profile.id,
   })(dispatch, ctx, ...xargs);
 };
-
-
-export const updateCallNote = apiAction({
-  method: api.updateCallNote,
-  request: staticAction(constants.CALL_NOTE_UPDATE_REQUEST),
-  success: dataAction(constants.CALL_NOTE_UPDATE_SUCCESS),
-  failures: [[ApiResponseError, staticAction(constants.CALL_NOTE_UPDATE_FAILURE)]],
-});
-
-
-export const patchCallNote = apiAction({
-  method: api.patchCallNote,
-  request: staticAction(constants.CALL_NOTE_PATCH_REQUEST),
-  success: dataAction(constants.CALL_NOTE_PATCH_SUCCESS),
-  failures: [[ApiResponseError, staticAction(constants.CALL_NOTE_PATCH_FAILURE)]],
-});
 
 
 export const openCreateCallNote = ({ callId }) => ({

@@ -39,6 +39,4 @@ export default StyleSheet.create({
   activityHelpfulText: {
     textAlign: 'center',
   },
-  alignCenter: {
-  },
 });

@@ -4,7 +4,7 @@ import { Text, RadioList } from 'src/components';
 
 import { FormStep } from 'src/components';
 import styles from 'src/views/CallNoteSteps/styles';
-import * as constants from 'src/constants/callNote';
+import * as constants from 'src/constants/callNotes';
 
 
 const CallQuality = ({

@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 import { dismissScreen } from 'src/actions/navigation';
 import { logout } from 'src/actions/auth';
-import { viewAllCallNotes } from 'src/actions/callNote';
+import { viewAllCallNotes } from 'src/actions/callNotes';
 import ProfileSettings from 'src/views/ProfileSettings';
 
 

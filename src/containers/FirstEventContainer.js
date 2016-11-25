@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { FirstEvent } from 'src/components';
-import { getAuthUserProfile } from 'src/stores/helpers';
+import { getAuthUserProfile } from 'src/store/helpers';
 import { addScheduledCall } from 'src/actions/schedule';
 
 

@@ -1,4 +1,4 @@
-import chainMiddleware from 'src/stores/chainMiddleware';
+import chainMiddleware from 'src/store/chainMiddleware';
 import { capture } from 'app/scripts/helpers';
 
 

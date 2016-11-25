@@ -1,7 +1,7 @@
 import { mapStateToProps } from 'src/containers/ScheduledCallEventContainer';
 import { fakeState, fakeEvent, fakeScheduledCall, fakeActivity } from 'app/scripts/helpers';
 import images from 'src/constants/images';
-import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/event';
+import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/events';
 
 
 describe('CallScheduledEventContainer', () => {

@@ -1,8 +1,8 @@
-import reduce from 'src/reducers/callNote';
-import { changeCallNote, openCreateCallNote } from 'src/actions/callNote';
+import reduce from 'src/reducers/callNotes';
+import { changeCallNote, openCreateCallNote } from 'src/actions/callNotes';
 
 
-describe('reducers/callNote', () => {
+describe('reducers/callNotes', () => {
   describe('CALL_NOTES_CHANGE_CALL_NOTE', () => {
     it('should update the current call note state with state in the payload', () => {
       const { callNote: { reflections, mood } } = reduce(void 0, changeCallNote({

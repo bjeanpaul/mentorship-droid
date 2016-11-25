@@ -1,6 +1,6 @@
 import { mapStateToProps } from 'src/containers/OnboardingContainer';
 
-import { getAuthUserProfile } from 'src/stores/helpers';
+import { getAuthUserProfile } from 'src/store/helpers';
 import { createStack } from 'src/navigationHelpers';
 import { fakeState } from 'app/scripts/helpers';
 

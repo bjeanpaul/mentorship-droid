@@ -1,5 +1,5 @@
 import noop from 'lodash';
-import contextMiddleware from 'src/stores/contextMiddleware';
+import contextMiddleware from 'src/store/contextMiddleware';
 import { capture } from 'app/scripts/helpers';
 
 

@@ -1,27 +1,14 @@
-jest.mock('src/actionHelpers', () => ({
-  apiAction: global.mock(),
-  staticAction: global.mock(),
-  dataAction: global.mock(),
-}));
+jest.mock('src/api/schedule');
 
-
-import { isEqual } from 'lodash';
 import * as constants from 'src/constants/schedule';
 import * as api from 'src/api';
-
-import {
-  apiAction,
-  staticAction,
-  dataAction,
-} from 'src/actionHelpers';
+import { dataAction } from 'src/actionHelpers';
+import { testApiAction, fakeScheduledCall } from 'app/scripts/helpers';
 
 import {
   listScheduledCalls,
   createScheduledCall,
-  fetchScheduledCall,
-  updateScheduledCall,
   patchScheduledCall,
-  removeScheduledCall,
   addScheduledCall,
   addNextScheduledCall,
   openScheduledCall,
@@ -35,68 +22,35 @@ const { ApiResponseError } = api;
 
 describe('schedule/actions', () => {
   describe('listScheduledCalls', () => {
-    it('should create actions for schedule api lists', () => {
-      expect(isEqual(listScheduledCalls, apiAction({
+    it('should create actions for schedule api lists', async () => {
+      await testApiAction(listScheduledCalls, {
         method: api.listScheduledCalls,
-        request: staticAction(constants.SCHEDULED_CALL_LIST_REQUEST),
+        request: constants.SCHEDULED_CALL_LIST_REQUEST,
         success: dataAction(constants.SCHEDULED_CALL_LIST_SUCCESS),
-        failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_LIST_FAILURE)]],
-      }))).toBe(true);
+        failures: [[ApiResponseError, constants.SCHEDULED_CALL_LIST_FAILURE]],
+      })();
     });
   });
 
   describe('createScheduledCall', () => {
-    it('should create actions for schedule api creates', () => {
-      expect(isEqual(createScheduledCall, apiAction({
+    it('should create actions for schedule api creates', async () => {
+      await testApiAction(createScheduledCall, {
         method: api.createScheduledCall,
-        request: staticAction(constants.SCHEDULED_CALL_CREATE_REQUEST),
+        request: constants.SCHEDULED_CALL_CREATE_REQUEST,
         success: dataAction(constants.SCHEDULED_CALL_CREATE_SUCCESS),
-        failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_CREATE_FAILURE)]],
-      }))).toBe(true);
-    });
-  });
-
-  describe('fetchScheduledCall', () => {
-    it('should create actions for schedule api fetches', () => {
-      expect(isEqual(fetchScheduledCall, apiAction({
-        method: api.getScheduledCall,
-        request: staticAction(constants.SCHEDULED_CALL_FETCH_REQUEST),
-        success: dataAction(constants.SCHEDULED_CALL_FETCH_SUCCESS),
-        failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_FETCH_FAILURE)]],
-      }))).toBe(true);
-    });
-  });
-
-  describe('updateScheduledCall', () => {
-    it('should create actions for schedule api updates', () => {
-      expect(isEqual(updateScheduledCall, apiAction({
-        method: api.updateScheduledCall,
-        request: staticAction(constants.SCHEDULED_CALL_UPDATE_REQUEST),
-        success: dataAction(constants.SCHEDULED_CALL_UPDATE_SUCCESS),
-        failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_UPDATE_FAILURE)]],
-      }))).toBe(true);
+        failures: [[ApiResponseError, constants.SCHEDULED_CALL_CREATE_FAILURE]],
+      })(fakeScheduledCall());
     });
   });
 
   describe('patchScheduledCall', () => {
-    it('should create actions for schedule api patchs', () => {
-      expect(isEqual(patchScheduledCall, apiAction({
+    it('should create actions for schedule api patchs', async () => {
+      await testApiAction(patchScheduledCall, {
         method: api.patchScheduledCall,
-        request: staticAction(constants.SCHEDULED_CALL_PATCH_REQUEST),
+        request: constants.SCHEDULED_CALL_PATCH_REQUEST,
         success: dataAction(constants.SCHEDULED_CALL_PATCH_SUCCESS),
-        failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_PATCH_FAILURE)]],
-      }))).toBe(true);
-    });
-  });
-
-  describe('removeScheduledCall', () => {
-    it('should create actions for schedule api removes', () => {
-      expect(isEqual(removeScheduledCall, apiAction({
-        method: api.removeScheduledCall,
-        request: staticAction(constants.SCHEDULED_CALL_REMOVE_REQUEST),
-        success: staticAction(constants.SCHEDULED_CALL_REMOVE_SUCCESS),
-        failures: [[ApiResponseError, staticAction(constants.SCHEDULED_CALL_REMOVE_FAILURE)]],
-      }))).toBe(true);
+        failures: [[ApiResponseError, constants.SCHEDULED_CALL_PATCH_FAILURE]],
+      })(21, fakeScheduledCall());
     });
   });
 

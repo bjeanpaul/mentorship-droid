@@ -10,7 +10,7 @@ import {
   SCHEDULED_CALL_CREATE_SUCCESS,
 } from 'src/constants/schedule';
 
-import { EVENT_LIST_SUCCESS } from 'src/constants/event';
+import { EVENT_LIST_SUCCESS } from 'src/constants/events';
 
 import {
   CALL_CREATE_SUCCESS,
@@ -20,7 +20,7 @@ import {
   CALL_NOTE_LIST_SUCCESS,
   CALL_NOTE_PATCH_SUCCESS,
   CALL_NOTE_CREATE_SUCCESS,
-} from 'src/constants/callNote';
+} from 'src/constants/callNotes';
 
 
 const ACTIONS_WITH_ENTITIES = [

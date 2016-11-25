@@ -9,7 +9,7 @@ import { setupNotifications } from 'src/actions/notifications';
 
 import { SCHEDULED_CALL_CREATE_SUCCESS } from 'src/constants/schedule';
 import { NAV_TAB_JOURNEY } from 'src/constants/navigation';
-import { listEvents } from 'src/actions/event';
+import { listEvents } from 'src/actions/events';
 
 
 export default fromPairs([
