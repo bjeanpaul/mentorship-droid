@@ -1,22 +1,7 @@
+import { fromPairs } from 'lodash';
 import React, { PropTypes } from 'react';
-import { ProgressBar, BaseView, FormView } from 'src/components';
-import { StyleSheet, View, NavigationExperimental } from 'react-native';
-
-const {
-  Card: NavigationCard,
-  Transitioner: NavigationTransitioner,
-} = NavigationExperimental;
-
-const {
-  PagerStyleInterpolator: NavigationPagerStyleInterpolator,
-} = NavigationCard;
-
-
-const styles = StyleSheet.create({
-  scenes: {
-    flex: 1,
-  },
-});
+import { ProgressBar, BaseView, FormView, NavigationStack } from 'src/components';
+import { stepKey } from 'src/navigationHelpers';
 
 
 const Step = ({
@@ -28,28 +13,12 @@ const Step = ({
 );
 
 
-const renderScene = (scene, transitionProps, children) => {
-  const sceneProps = {
-    ...transitionProps,
-    scene,
-  };
+const getRoutes = children => {
+  const routes = React.Children.toArray(children)
+    .map((child, i) => [stepKey(i), child]);
 
-  return (
-    <NavigationCard
-      {...sceneProps}
-      style={NavigationPagerStyleInterpolator.forHorizontal(sceneProps)}
-      key={scene.route.key}
-      renderScene={cardProps => children[cardProps.scene.index]}
-    />
-  );
+  return fromPairs(routes);
 };
-
-
-const renderScenes = (transitionProps, children) => (
-  <View style={styles.scenes}>
-    {transitionProps.scenes.map(scene => renderScene(scene, transitionProps, children))}
-  </View>
-);
 
 
 const Stepper = ({
@@ -57,21 +26,15 @@ const Stepper = ({
   navigationState,
   hideProgress,
 }) => {
-  let progressBar;
-  if (!hideProgress) {
-    progressBar = (
-      <ProgressBar
-        completed={ (navigationState.index + 1) / React.Children.count(children) }
-      />
-    );
-  }
+  const completed = (navigationState.index + 1) / React.Children.count(children);
+  const routes = getRoutes(children);
 
   return (
     <FormView>
-      {progressBar}
-      <NavigationTransitioner
+      {!hideProgress && <ProgressBar completed={completed} />}
+      <NavigationStack
         navigationState={navigationState}
-        render={props => renderScenes(props, children)}
+        routes={routes}
       />
     </FormView>
   );

@@ -1,18 +1,16 @@
 import React from 'react';
 import { Text } from 'react-native';
 import Stepper, { Step } from 'src/components/Stepper';
+import { createStack, createRoute, stepKey } from 'src/navigationHelpers';
 
 
 describe('Stepper', () => {
   const createComponent = (props = {}) => (
     <Stepper
-      navigationState={{
-        index: 1,
-        routes: [
-          { key: 'STEP_0' },
-          { key: 'STEP_1' },
-        ],
-      }}
+      navigationState={createStack([
+        createRoute(stepKey(0)),
+        createRoute(stepKey(1)),
+      ])}
       {...props}
     >
       <Step><Text>Step 1</Text></Step>
@@ -21,7 +19,7 @@ describe('Stepper', () => {
   );
 
 
-  it('should map props correctly', () => {
+  it('should render', () => {
     expect(render(createComponent())).toMatchSnapshot();
   });
 
