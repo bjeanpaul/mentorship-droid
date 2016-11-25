@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import { makeStepperNavigationReducer } from 'src/navigationHelpers';
+import { createStepperNavigationReducer } from 'src/navigationHelpers';
 
 import * as constants from 'src/constants/callNotes';
 
-const navigation = makeStepperNavigationReducer({
+const navigation = createStepperNavigationReducer({
   FORWARD: constants.CALL_NOTES_STEP_FORWARD,
   BACK: constants.CALL_NOTES_STEP_BACK,
 });

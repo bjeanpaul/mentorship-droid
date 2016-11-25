@@ -77,7 +77,7 @@ export const popCurrent = state => ({
 export const stepKey = i => `STEP_${i}`;
 
 
-export const makeStepperNavigationReducer = ({ FORWARD, BACK }) => (state = {
+export const createStepperNavigationReducer = ({ FORWARD, BACK }) => (state = {
   index: 0,
   routes: [createRoute(stepKey(0))],
 }, action) => {
