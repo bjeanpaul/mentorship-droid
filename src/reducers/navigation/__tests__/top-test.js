@@ -15,7 +15,11 @@ import * as profile from 'src/actions/profile';
 import * as errors from 'src/constants/errors';
 
 import {
-  createDummyRoute, createStack, createRoute, push, pop, replaceAt,
+  createStack,
+  createRoute,
+  push,
+  pop,
+  replaceAt,
 } from 'src/navigationHelpers';
 
 import { fakeCallNote, fakeCallNoteData } from 'app/scripts/helpers';
@@ -412,10 +416,7 @@ describe('src/reducers/navigation/top', () => {
       ]);
 
       expect(reduce(state, schedule.patchScheduledCall.success()))
-        .toEqual(createStack([
-          createDummyRoute(createDummyRoute.index),
-          createRoute(routes.ROUTE_CALL_SCHEDULED),
-        ]));
+        .toEqual(createStack([createRoute(routes.ROUTE_CALL_SCHEDULED)]));
     });
   });
 
@@ -427,10 +428,7 @@ describe('src/reducers/navigation/top', () => {
       ]);
 
       expect(reduce(state, schedule.patchScheduledCall.success()))
-        .toEqual(createStack([
-          createDummyRoute(createDummyRoute.index),
-          createRoute(routes.ROUTE_CALL_SCHEDULED),
-        ]));
+        .toEqual(createStack([createRoute(routes.ROUTE_CALL_SCHEDULED)]));
     });
   });
 
