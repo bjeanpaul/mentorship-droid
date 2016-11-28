@@ -40,7 +40,7 @@ describe('ActivityList', () => {
       .find('ActivityList')
       .shallow();
 
-    el.findWhere(child => child.prop('activityId') === 1)
+    el.findWhere(uidEquals('activity:1'))
       .simulate('press');
 
     expect(onActivityPress.mock.calls).toEqual([[1]]);

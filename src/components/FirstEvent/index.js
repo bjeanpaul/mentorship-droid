@@ -15,6 +15,7 @@ const FirstEvent = ({
       documented here.
     </Text>
     <Button
+      uid="getStarted"
       layout={Button.layouts.inline}
       onPress={onGetStartedPress}
     >

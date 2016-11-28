@@ -99,7 +99,9 @@ describe('NavigationStack', () => {
     expect(el.find('A').length).toEqual(1);
     expect(el.find('B').length).toEqual(0);
 
-    el.setProps({ navigationState: push(navigationState, createRoute('B')) });
+    el.setProps({
+      navigationState: push(navigationState, createRoute('B')),
+    });
 
     expect(el.find('A').length).toEqual(1);
     expect(el.find('B').length).toEqual(1);
@@ -134,5 +136,24 @@ describe('NavigationStack', () => {
 
     expect(el.find('A').length).toEqual(1);
     expect(el.find('B').length).toEqual(0);
+  });
+
+  it('should support react elements as routes', () => {
+    const navigationState = createStack([createRoute('a')]);
+
+    const el = shallow(createComponent({
+      navigationState,
+      routes: {
+        a: <A text="foo" />,
+        b: <B text="foo" />,
+      },
+    }));
+
+    el.setProps({
+      navigationState: push(navigationState, createRoute('b')),
+    });
+
+    expect(el.find('A').length).toEqual(1);
+    expect(el.find('B').length).toEqual(1);
   });
 });

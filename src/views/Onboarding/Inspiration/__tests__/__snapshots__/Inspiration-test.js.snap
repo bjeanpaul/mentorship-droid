@@ -1,0 +1,179 @@
+exports[`Inspiration should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center",
+        },
+        Array [
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400",
+          },
+          Object {
+            "margin": 25,
+            "marginBottom": 50,
+          },
+        ],
+      ]
+    }>
+    Who would you love as your own mentor?
+  </Text>
+  <View>
+    <View
+      style={
+        Array [
+          Object {
+            "borderBottomWidth": 1,
+            "borderColor": "#dfe5e6",
+            "marginBottom": 27,
+            "marginLeft": 24,
+            "marginRight": 24,
+          },
+          false,
+        ]
+      }>
+      <TextInput
+        multiline={true}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        placeholder="Type your answer here"
+        placeholderTextColor="#c0cbcc"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 18,
+              "lineHeight": 28,
+              "marginBottom": 8,
+              "padding": 0,
+            },
+            Object {
+              "height": 32,
+            },
+          ]
+        }
+        uid="input"
+        underlineColorAndroid="transparent"
+        value="Music, of course" />
+    </View>
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center",
+        },
+        Object {
+          "color": "#9fb1b3",
+          "fontSize": 14,
+          "marginLeft": 24,
+          "marginRight": 24,
+          "textAlign": "left",
+        },
+      ]
+    }>
+    e.g. Malala, Sania Nehwal, Chanda Kocchar
+  </Text>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "flex-end",
+      }
+    }>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "margin": 16,
+        }
+      }>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300,
+            },
+            undefined,
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20,
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffbcbc",
+              "borderColor": "red",
+              "borderWidth": 1,
+              "height": 100,
+              "justifyContent": "center",
+              "margin": 10,
+              "width": 300,
+            },
+            undefined,
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#333333",
+              "margin": 20,
+            }
+          }>
+          TouchableNativeFeedback is not supported on this platform!
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

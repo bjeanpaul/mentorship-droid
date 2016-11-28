@@ -8,7 +8,7 @@ import * as onboarding from 'src/actions/onboarding';
 import * as notifications from 'src/constants/notifications';
 import * as routes from 'src/constants/routes';
 import * as calls from 'src/actions/calls';
-import * as callNotes from 'src/actions/callNote';
+import * as callNotes from 'src/actions/callNotes';
 import * as schedule from 'src/actions/schedule';
 import * as activities from 'src/actions/activities';
 import * as profile from 'src/actions/profile';
@@ -67,6 +67,28 @@ describe('src/reducers/navigation/top', () => {
     });
   });
 
+  describe('ONBOARDING_SETUP_PROFILE_REQUEST', () => {
+    it('should replace the onboarding route with the saving route', () => {
+      const action = onboarding.setupProfile.request();
+
+      const oldRoute = createRoute(routes.ROUTE_ONBOARDING);
+      const newRoute = createRoute(routes.ROUTE_ONBOARDING_SAVING);
+
+      const state = push(createStack(), oldRoute);
+
+      expect(reduce(state, action))
+        .toEqual(replaceAt(state, routes.ROUTE_ONBOARDING, newRoute));
+    });
+
+    it('should push on the saving route if there is no onboarding route', () => {
+      const action = onboarding.setupProfile.request();
+      const route = createRoute(routes.ROUTE_ONBOARDING_SAVING);
+
+      expect(reduce(createStack(), action))
+        .toEqual(push(createStack(), route));
+    });
+  });
+
   describe('NEW_USER_ENTER', () => {
     it('should push the onboarding entry route', () => {
       expect(reduce(createStack(), entry.enterNewUser()))
@@ -75,7 +97,15 @@ describe('src/reducers/navigation/top', () => {
   });
 
   describe('LOAD_REQUEST', () => {
-    it('should push the loading route', () => {
+    it('should replace the onboarding saving route if it exists', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_ONBOARDING_SAVING));
+      const route = createRoute(routes.ROUTE_LOADING);
+
+      expect(reduce(state, sync.loadRequest()))
+        .toEqual(replaceAt(state, routes.ROUTE_ONBOARDING_SAVING, route));
+    });
+
+    it('should push the loading route if there is no onboarding saving route', () => {
       expect(reduce(createStack(), sync.loadRequest()))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_LOADING)));
     });
@@ -193,18 +223,40 @@ describe('src/reducers/navigation/top', () => {
     });
   });
 
-  describe('CALL_NOTE_CREATE_SUCCESS', () => {
-    it('should replace the call note create route with the saved route', () => {
-      const callNote = fakeCallNote({ id: 23 });
-      const action = callNotes.createCallNote.success(fakeCallNoteData(callNote));
+  describe('CALL_NOTE_CREATE_REQUEST', () => {
+    it('should replace the call note create route with the saving route', () => {
+      const action = callNotes.createCallNote.request();
 
       const oldRoute = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId: 23 });
-      const newRoute = createRoute(routes.ROUTE_CALL_NOTE_SAVED, { callNoteId: 23 });
+      const newRoute = createRoute(routes.ROUTE_CALL_NOTE_SAVING);
 
       const state = push(createStack(), oldRoute);
 
       expect(reduce(state, action))
         .toEqual(replaceAt(state, routes.ROUTE_CREATE_CALL_NOTES, newRoute));
+    });
+
+    it('should push on the call note saving route if there is no create route', () => {
+      const action = callNotes.createCallNote.request();
+      const route = createRoute(routes.ROUTE_CALL_NOTE_SAVING);
+
+      expect(reduce(createStack(), action))
+        .toEqual(push(createStack(), route));
+    });
+  });
+
+  describe('CALL_NOTE_CREATE_SUCCESS', () => {
+    it('should replace the saving route with the saved route', () => {
+      const callNote = fakeCallNote({ id: 23 });
+      const action = callNotes.createCallNote.success(fakeCallNoteData(callNote));
+
+      const oldRoute = createRoute(routes.ROUTE_CALL_NOTE_SAVING);
+      const newRoute = createRoute(routes.ROUTE_CALL_NOTE_SAVED, { callNoteId: 23 });
+
+      const state = push(createStack(), oldRoute);
+
+      expect(reduce(state, action))
+        .toEqual(replaceAt(state, routes.ROUTE_CALL_NOTE_SAVING, newRoute));
     });
 
     it('should push on the call note saved route if there is no create route', () => {

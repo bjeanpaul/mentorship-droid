@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 import { Event } from 'src/components';
-import { EVENT_MOOD_IMAGES } from 'src/constants/callNote';
+import { EVENT_MOOD_IMAGES } from 'src/constants/callNotes';
 
 
 const CallNoteEvent = ({

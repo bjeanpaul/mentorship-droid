@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import ScheduleList from 'src/views/ScheduleList';
-import { getScheduledCalls, getActivity } from 'src/stores/helpers';
+import { getScheduledCalls, getActivity } from 'src/store/helpers';
 import { addScheduledCall, openScheduledCall } from 'src/actions/schedule';
 
 

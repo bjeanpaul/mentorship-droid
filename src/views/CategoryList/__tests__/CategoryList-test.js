@@ -35,12 +35,12 @@ describe('CategoryList', () => {
     const onCategoryPress = jest.fn();
     const el = shallow(createComponent({ onCategoryPress }));
 
-    el.findWhere(child => child.prop('categoryId') === 1)
+    el.findWhere(uidEquals('category:1'))
       .simulate('press');
 
     expect(onCategoryPress.mock.calls).toEqual([[1]]);
 
-    el.findWhere(child => child.prop('categoryId') === 2)
+    el.findWhere(uidEquals('category:2'))
       .simulate('press');
 
     expect(onCategoryPress.mock.calls).toEqual([[1], [2]]);

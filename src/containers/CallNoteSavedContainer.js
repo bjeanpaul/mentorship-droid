@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import CallNoteSaved from 'src/views/CallNoteSaved';
 import { addNextScheduledCall } from 'src/actions/schedule';
 import { dismissScreen } from 'src/actions/navigation';
-import { getCallNote, getActivity } from 'src/stores/helpers';
+import { getCallNote, getActivity } from 'src/store/helpers';
 
 
 const mapStateToProps = (state, { callNoteId }) => {

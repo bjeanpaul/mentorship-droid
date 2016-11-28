@@ -1,4 +1,4 @@
-exports[`MultiLineTextInput should render correctly 1`] = `
+exports[`MultiLineTextInput should render 1`] = `
 <View>
   <View
     style={
@@ -35,6 +35,7 @@ exports[`MultiLineTextInput should render correctly 1`] = `
           },
         ]
       }
+      uid="input"
       underlineColorAndroid="transparent" />
   </View>
 </View>

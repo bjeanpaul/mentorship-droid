@@ -1,21 +1,15 @@
-import React, { PropTypes } from 'react';
-import { ProgressBar, BaseView, FormView } from 'src/components';
-import { StyleSheet, View, NavigationExperimental } from 'react-native';
-
-const {
-  Card: NavigationCard,
-  Transitioner: NavigationTransitioner,
-} = NavigationExperimental;
-
-const {
-  PagerStyleInterpolator: NavigationPagerStyleInterpolator,
-} = NavigationCard;
+import { range, clamp, fromPairs, debounce } from 'lodash';
+import React, { Component, PropTypes } from 'react';
+import { ProgressBar, BaseView, FormView, NavigationStack } from 'src/components';
+import { createRoute } from 'src/navigationHelpers';
 
 
-const styles = StyleSheet.create({
-  scenes: {
-    flex: 1,
-  },
+const PAGING_DEBOUNCE = 250;
+
+
+const debouncePager = fn => debounce(fn, PAGING_DEBOUNCE, {
+  leading: true,
+  trailing: false,
 });
 
 
@@ -28,61 +22,75 @@ const Step = ({
 );
 
 
-const renderScene = (scene, transitionProps, children) => {
-  const sceneProps = {
-    ...transitionProps,
-    scene,
-  };
+class Stepper extends Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <NavigationCard
-      {...sceneProps}
-      style={NavigationPagerStyleInterpolator.forHorizontal(sceneProps)}
-      key={scene.route.key}
-      renderScene={cardProps => children[cardProps.scene.index]}
-    />
-  );
-};
+    this.state = {
+      index: 0,
+    };
 
-
-const renderScenes = (transitionProps, children) => (
-  <View style={styles.scenes}>
-    {transitionProps.scenes.map(scene => renderScene(scene, transitionProps, children))}
-  </View>
-);
-
-
-const Stepper = ({
-  children,
-  navigationState,
-  hideProgress,
-}) => {
-  let progressBar;
-  if (!hideProgress) {
-    progressBar = (
-      <ProgressBar
-        completed={ (navigationState.index + 1) / React.Children.count(children) }
-      />
-    );
+    this.onNextPress = debouncePager(this.onNextPress.bind(this));
+    this.onBackPress = debouncePager(this.onBackPress.bind(this));
   }
 
-  return (
-    <FormView>
-      {progressBar}
-      <NavigationTransitioner
-        navigationState={navigationState}
-        render={props => renderScenes(props, children)}
-      />
-    </FormView>
-  );
-};
+  onNextPress() {
+    this.incrStep(+1);
+  }
+
+  onBackPress() {
+    this.incrStep(-1);
+  }
+
+  getRoutes() {
+    const routes = React.Children.toArray(this.props.children)
+      .map((child, i) => [i, this.createRoute(child)]);
+
+    return fromPairs(routes);
+  }
+
+  getNumSteps() {
+    return React.Children.count(this.props.children);
+  }
+
+  getNavigationState() {
+    return {
+      index: this.state.index,
+      routes: range(this.getNumSteps()).map(i => createRoute(i)),
+    };
+  }
+
+  createRoute(el) {
+    return React.cloneElement(el, {
+      onNextPress: this.onNextPress,
+      onBackPress: this.onBackPress,
+    });
+  }
+
+  incrStep(v) {
+    this.setState({
+      index: clamp(this.state.index + v, 0, this.getNumSteps() - 1),
+    });
+  }
+
+  render() {
+    const numSteps = React.Children.count(this.props.children);
+    const completed = (this.state.index + 1) / numSteps;
+
+    return (
+      <FormView>
+        {!this.props.hideProgress && <ProgressBar completed={completed} />}
+        <NavigationStack
+          navigationState={this.getNavigationState()}
+          routes={this.getRoutes()}
+        />
+      </FormView>
+    );
+  }
+}
 
 
 Stepper.propTypes = {
-  navigationState: PropTypes.shape({
-    index: PropTypes.number,
-    routes: PropTypes.array,
-  }),
   hideProgress: PropTypes.bool,
   children: PropTypes.arrayOf(Step).isRequired,
 };

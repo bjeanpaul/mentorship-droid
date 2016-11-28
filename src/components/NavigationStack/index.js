@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { View, StyleSheet, Animated } from 'react-native';
 
 import { getCurrent } from 'src/navigationHelpers';
-import { NotFound } from 'src/components';
 import { DEVICE_WIDTH } from 'src/constants/styles';
+import NotFound from 'src/components/NotFound';
 
 
 const styles = StyleSheet.create({
@@ -11,6 +11,9 @@ const styles = StyleSheet.create({
     flex: 1,
     width: DEVICE_WIDTH * 2,
     flexDirection: 'row',
+  },
+  routeContainer: {
+    flex: 1,
   },
 });
 
@@ -93,12 +96,15 @@ class NavigationStack extends Component {
     }).start();
   }
 
-  renderRoute({
-    key,
-    context,
-  }) {
-    const Route = this.props.routes[key] || NotFound;
-    return <Route key={key} {...context} />;
+  renderRoute({ key, context }) {
+    const obj = this.props.routes[key];
+
+    if (React.isValidElement(obj)) {
+      return <View key={key} style={styles.routeContainer}>{obj}</View>;
+    } else {
+      const Route = obj || NotFound;
+      return <Route key={key} {...context} />;
+    }
   }
 
   renderAnimation(left, right) {

@@ -28,15 +28,10 @@ const CategoryList = ({
         {categories.map(({ id, title, color }) => (
         <TouchableNativeFeedback
           key={id}
-          categoryId={id}
+          uid={`category:${id}`}
           onPress={() => onCategoryPress(id)}
         >
-          <View
-            style={[
-              styles.category,
-              { backgroundColor: color },
-            ]}
-          >
+          <View style={[styles.category, { backgroundColor: color }]}>
             <Text style={[styles.categoryTitle, Text.themes.light]}>{title}</Text>
           </View>
         </TouchableNativeFeedback>
