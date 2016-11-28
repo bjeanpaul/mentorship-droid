@@ -1,6 +1,7 @@
 {
   "name": "app",
-  "version": "0.1.41",
+  "version": "0.2.0",
+  "devVersion": "0",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
