@@ -48,3 +48,10 @@ export const errorSink = (store, actions, fallback) => e => Promise.resolve(e)
   .then(switchError(actions))
   .then(store.dispatch)
   .catch(fallback);
+
+
+export const pipeline = fns => (v, ...args) => {
+  let res = v;
+  for (const fn of fns) res = fn(res, ...args);
+  return res;
+};

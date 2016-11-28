@@ -7,6 +7,7 @@ import {
   switchError,
   makeGradient,
   errorSink,
+  pipeline,
 } from 'src/helpers';
 
 
@@ -109,6 +110,17 @@ describe('helpers', () => {
 
       await sink(new A());
       expect(fallback.mock.calls).toEqual([[e]]);
+    });
+  });
+
+  describe('pipeline', () => {
+    it('should thread the given value through a pipeline of functions', () => {
+      const fn = pipeline([
+        (a, b) => a + b,
+        (a, b) => a * b,
+      ]);
+
+      expect(fn(2, 3)).toEqual(15);
     });
   });
 });
