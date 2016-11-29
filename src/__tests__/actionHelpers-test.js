@@ -2,7 +2,7 @@ import { identity, noop } from 'lodash';
 import immediate from 'immediate-promise';
 import defer from 'promise-defer';
 
-import { mock, capture, fakeContext } from 'app/scripts/helpers';
+import { mock, capture, fakeContext, fakeAuth } from 'app/scripts/helpers';
 
 import {
   apiAction,
@@ -10,6 +10,7 @@ import {
   dataAction,
   castThunk,
   sequence,
+  tickAction,
 } from 'src/actionHelpers';
 
 
@@ -179,6 +180,31 @@ describe('actionHelpers', () => {
         ['a2', 21, 23, 2, 3],
         ['a3', 21, 23, 2, 3],
       ]);
+    });
+  });
+
+  describe('tickAction', () => {
+    jest.useFakeTimers();
+
+    it('should dispatch a tick action each interval', () => {
+      const dispatch = jest.fn();
+      tickAction(21, 'FOO')(dispatch);
+
+      expect(dispatch.mock.calls).toEqual([]);
+
+      jest.runTimersToTime(21);
+
+      expect(dispatch.mock.calls).toEqual([[{
+        type: 'FOO',
+      }]]);
+
+      jest.runTimersToTime(21);
+
+      expect(dispatch.mock.calls).toEqual([[{
+        type: 'FOO',
+      }], [{
+        type: 'FOO',
+      }]]);
     });
   });
 });

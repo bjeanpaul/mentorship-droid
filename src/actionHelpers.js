@@ -58,3 +58,7 @@ export const sequence = actions => (...args) => {
     return p;
   };
 };
+
+
+export const tickAction = (interval, type) => dispatch =>
+  setInterval(() => dispatch({ type }), interval);
