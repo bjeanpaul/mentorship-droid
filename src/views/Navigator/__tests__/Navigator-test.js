@@ -1,38 +1,34 @@
-import { fromPairs, noop } from 'lodash';
+import { noop, fromPairs, toPairs, values } from 'lodash';
 import React from 'react';
+import { View } from 'react-native';
 
 import Navigator from 'src/views/Navigator';
-import { Text } from 'src/components';
 import { uidEquals } from 'app/scripts/helpers';
-import { createStack, createRoute } from 'src/navigationHelpers';
+import { NAV_TAB_ROUTES } from 'src/constants/routes';
 import { NAV_TAB_JOURNEY, NAV_TAB_ACTIVITIES } from 'src/constants/navigation';
 
 
 describe('Navigator', () => {
-  const A = () => <Text>A</Text>;
-  const B = () => <Text>B</Text>;
+  const createRoutes = () => {
+    const routes = values(NAV_TAB_ROUTES)
+      .map(route => [route, <View uid="tab" route={route} />]);
+
+    return fromPairs(routes);
+  };
 
   const createComponent = (props = {}) => (
     <Navigator
-      routes={{
-        A,
-        B,
-      }}
+      routes={createRoutes()}
       activeTab={NAV_TAB_ACTIVITIES}
-      navigationStates={fromPairs([
-        [NAV_TAB_ACTIVITIES, createStack([createRoute('A')])],
-        [NAV_TAB_JOURNEY, createStack([createRoute('B')])],
-      ])}
       onTabPress={noop}
       {...props}
     />);
 
   it('should render the currently active tab', () => {
-    expect(render(createComponent({ activeTab: NAV_TAB_JOURNEY })))
-      .toMatchSnapshot();
-
-    expect(render(createComponent({ activeTab: NAV_TAB_ACTIVITIES })))
-      .toMatchSnapshot();
+    for (const [tab, route] of toPairs(NAV_TAB_ROUTES)) {
+      const el = shallow(createComponent({ activeTab: tab }));
+      expect(el.findWhere(uidEquals('tab')).prop('route')).toEqual(route);
+    }
   });
 
   it('should call onTabPress when a tab is pressed', () => {
@@ -42,11 +38,11 @@ describe('Navigator', () => {
       onTabPress,
       activeTab: NAV_TAB_JOURNEY,
     }))
-      .find('NavTabBar')
-      .shallow()
-      .findWhere(uidEquals(NAV_TAB_ACTIVITIES))
-      .shallow()
-      .simulate('press');
+    .find('NavTabBar')
+    .shallow()
+    .findWhere(uidEquals(NAV_TAB_ACTIVITIES))
+    .shallow()
+    .simulate('press');
 
     expect(onTabPress.mock.calls).toEqual([
       [NAV_TAB_ACTIVITIES],
@@ -56,11 +52,11 @@ describe('Navigator', () => {
       onTabPress,
       activeTab: NAV_TAB_ACTIVITIES,
     }))
-      .find('NavTabBar')
-      .shallow()
-      .findWhere(uidEquals(NAV_TAB_JOURNEY))
-      .shallow()
-      .simulate('press');
+    .find('navtabbar')
+    .shallow()
+    .findWhere(uidEquals(NAV_TAB_JOURNEY))
+    .shallow()
+    .simulate('press');
 
     expect(onTabPress.mock.calls).toEqual([
       [NAV_TAB_ACTIVITIES],
