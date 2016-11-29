@@ -2,7 +2,7 @@ import { identity, noop } from 'lodash';
 import immediate from 'immediate-promise';
 import defer from 'promise-defer';
 
-import { mock, capture, fakeContext, fakeAuth } from 'app/scripts/helpers';
+import { mock, capture, fakeContext } from 'app/scripts/helpers';
 
 import {
   apiAction,
