@@ -188,7 +188,7 @@ describe('actionHelpers', () => {
 
     it('should dispatch a tick action each interval', () => {
       const dispatch = jest.fn();
-      tickAction(21, 'FOO')(dispatch);
+      tickAction(21, 'FOO')()(dispatch);
 
       expect(dispatch.mock.calls).toEqual([]);
 
