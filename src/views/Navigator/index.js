@@ -11,16 +11,20 @@ const Navigator = ({
   routes,
   activeTab,
   onTabPress,
-}) => (
-  <View style={styles.default}>
-    {routes[NAV_TAB_ROUTES[activeTab]]}
+}) => {
+  const Route = routes[NAV_TAB_ROUTES[activeTab]];
 
-    <NavTabBar
-      activeTab={activeTab}
-      onTabPress={onTabPress}
-    />
-  </View>
-);
+  return (
+    <View style={styles.default}>
+      {Route && <Route />}
+
+      <NavTabBar
+        activeTab={activeTab}
+        onTabPress={onTabPress}
+      />
+    </View>
+  );
+};
 
 
 Navigator.propTypes = {

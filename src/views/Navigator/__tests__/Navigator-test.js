@@ -9,16 +9,21 @@ import { NAV_TAB_JOURNEY, NAV_TAB_ACTIVITIES } from 'src/constants/navigation';
 
 
 describe('Navigator', () => {
-  const createRoutes = () => {
+  const defineRoute = route => {
+    const Route = () => <View route={route} />;
+    return Route;
+  };
+
+  const defineRoutes = () => {
     const routes = values(NAV_TAB_ROUTES)
-      .map(route => [route, <View uid="tab" route={route} />]);
+      .map(route => [route, defineRoute(route)]);
 
     return fromPairs(routes);
   };
 
   const createComponent = (props = {}) => (
     <Navigator
-      routes={createRoutes()}
+      routes={defineRoutes()}
       activeTab={NAV_TAB_ACTIVITIES}
       onTabPress={noop}
       {...props}
@@ -27,7 +32,14 @@ describe('Navigator', () => {
   it('should render the currently active tab', () => {
     for (const [tab, route] of toPairs(NAV_TAB_ROUTES)) {
       const el = shallow(createComponent({ activeTab: tab }));
-      expect(el.findWhere(uidEquals('tab')).prop('route')).toEqual(route);
+
+      const actualRoute = el
+        .find('Route')
+        .shallow()
+        .find('View')
+        .prop('route');
+
+      expect(actualRoute).toEqual(route);
     }
   });
 
@@ -52,7 +64,7 @@ describe('Navigator', () => {
       onTabPress,
       activeTab: NAV_TAB_ACTIVITIES,
     }))
-    .find('navtabbar')
+    .find('NavTabBar')
     .shallow()
     .findWhere(uidEquals(NAV_TAB_JOURNEY))
     .shallow()
