@@ -44,7 +44,12 @@ export const dataStatus = type => details => ({
 });
 
 
-export const errorSink = (store, actions, fallback) => e => Promise.resolve(e)
-  .then(switchError(actions))
-  .then(store.dispatch)
-  .catch(fallback);
+export const errorSink = (store, actions, fallback) => e =>
+  Promise.resolve(e)
+    .then(switchError(actions))
+    .then(store.dispatch)
+    .catch(fallback);
+
+
+export const pipeline = fns => (v, ...args) =>
+  fns.reduce((res, fn) => fn(res, ...args), v);
