@@ -7,11 +7,12 @@ import images from 'src/constants/images';
 import * as constants from 'src/constants/navigation';
 
 
-const tabs = {
-  activities: constants.NAV_TAB_ACTIVITIES,
-  journey: constants.NAV_TAB_JOURNEY,
-  scheduledCalls: constants.NAV_TAB_SCHEDULED_CALLS,
-};
+const tabs = [
+  constants.NAV_TAB_ACTIVITIES,
+  constants.NAV_TAB_JOURNEY,
+  constants.NAV_TAB_SCHEDULED_CALLS,
+  constants.NAV_TAB_CHAT,
+];
 
 
 const icons = {
@@ -46,26 +47,16 @@ export const NavTabBar = ({
   onTabPress,
 }) => (
   <View style={styles.bar}>
-    <NavTab
-      uid={tabs.journey}
-      onPress={onTabPress}
-      type={tabs.journey}
-      active={activeTab === tabs.journey}
-    />
-
-    <NavTab
-      uid={tabs.activities}
-      onPress={onTabPress}
-      type={tabs.activities}
-      active={activeTab === tabs.activities}
-    />
-
-    <NavTab
-      uid={tabs.scheduledCalls}
-      onPress={onTabPress}
-      type={tabs.scheduledCalls}
-      active={activeTab === tabs.scheduledCalls}
-    />
+    {
+      tabs.map(tab => (
+        <NavTab
+          uid={tab}
+          type={tab}
+          key={tab}
+          onPress={onTabPress}
+          active={activeTab === tab}
+        />))
+    }
   </View>
 );
 
