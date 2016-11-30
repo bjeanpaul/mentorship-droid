@@ -5,6 +5,7 @@ import {
   apiAction,
   dataAction,
   staticAction,
+  tickAction,
 } from 'src/actionHelpers';
 
 const { NetworkError, ApiResponseError } = api;
@@ -21,6 +22,12 @@ const listEvents = apiAction({
 });
 
 
+const startEventPolling = tickAction(
+  constants.EVENT_POLL_INTERVAL,
+  constants.EVENT_POLL_TICK);
+
+
 export {
   listEvents,
+  startEventPolling,
 };
