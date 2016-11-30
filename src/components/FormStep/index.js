@@ -30,7 +30,7 @@ FormStep.propTypes = {
   children: PropTypes.any.isRequired,
   paginationDisabled: PropTypes.bool,
   paginationBackDisabled: PropTypes.bool,
-  onBackPress: PropTypes.func.isRequired,
+  onBackPress: PropTypes.func,
   onNextPress: PropTypes.func,
   onDonePress: PropTypes.func,
   last: PropTypes.bool,

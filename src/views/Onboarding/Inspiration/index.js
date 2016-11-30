@@ -26,8 +26,8 @@ const Inspiration = ({
 Inspiration.propTypes = {
   profile: PropTypes.object,
   onChange: PropTypes.func.isRequired,
-  onBackPress: PropTypes.func.isRequired,
-  onNextPress: PropTypes.func.isRequired,
+  onBackPress: PropTypes.func,
+  onNextPress: PropTypes.func,
 };
 
 

@@ -33,7 +33,7 @@ const Skills = ({
 Skills.propTypes = {
   profile: PropTypes.object,
   onChange: PropTypes.func.isRequired,
-  onBackPress: PropTypes.func.isRequired,
+  onBackPress: PropTypes.func,
   onDonePress: PropTypes.func.isRequired,
 };
 
