@@ -2,10 +2,10 @@ import * as constants from 'src/constants/landing';
 
 
 export const showActivation = () => ({
-  type: constants.SHOW_ACTIVATION_REQUEST,
+  type: constants.ACTIVATION_SHOW,
 });
 
 
 export const showLogin = () => ({
-  type: constants.SHOW_LOGIN_REQUEST,
+  type: constants.LOGIN_SHOW,
 });

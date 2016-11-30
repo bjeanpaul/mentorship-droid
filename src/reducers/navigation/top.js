@@ -60,10 +60,10 @@ export default (state = createInitialState(), action) => {
     case errors.NETWORK_ERROR:
       return push(popEphemeral(state), createRoute(routes.ROUTE_NETWORK_ERROR));
 
-    case landing.SHOW_ACTIVATION_REQUEST:
+    case landing.ACTIVATION_SHOW:
       return push(state, createRoute(routes.ROUTE_AUTH_ACTIVATION));
 
-    case landing.SHOW_LOGIN_REQUEST:
+    case landing.LOGIN_SHOW:
       return push(state, createRoute(routes.ROUTE_AUTH_LOGIN));
 
     case entry.NEW_USER_ENTER:
