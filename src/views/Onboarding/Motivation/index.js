@@ -25,8 +25,8 @@ const Motivation = ({
 Motivation.propTypes = {
   profile: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired,
-  onBackPress: PropTypes.func.isRequired,
-  onNextPress: PropTypes.func.isRequired,
+  onBackPress: PropTypes.func,
+  onNextPress: PropTypes.func,
 };
 
 

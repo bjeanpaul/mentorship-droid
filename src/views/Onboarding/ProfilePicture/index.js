@@ -36,8 +36,8 @@ const ProfilePicture = ({
 ProfilePicture.propTypes = {
   profile: PropTypes.object.isRequired,
   onChoosePhotoPress: PropTypes.func.isRequired,
-  onBackPress: PropTypes.func.isRequired,
-  onNextPress: PropTypes.func.isRequired,
+  onBackPress: PropTypes.func,
+  onNextPress: PropTypes.func,
 };
 
 

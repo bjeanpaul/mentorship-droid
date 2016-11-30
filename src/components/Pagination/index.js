@@ -1,3 +1,4 @@
+import { noop } from 'lodash';
 import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 import Button from 'src/components/Button';
@@ -6,9 +7,9 @@ import styles from './styles';
 
 
 const Pagination = ({
-  onBackPress,
-  onNextPress,
-  onDonePress,
+  onBackPress = noop,
+  onNextPress = noop,
+  onDonePress = noop,
   backDisabled,
   disabled,
   last = false,
@@ -49,7 +50,7 @@ const Pagination = ({
 
 
 Pagination.propTypes = {
-  onBackPress: PropTypes.func.isRequired,
+  onBackPress: PropTypes.func,
   onNextPress: PropTypes.func,
   onDonePress: PropTypes.func,
   backDisabled: PropTypes.bool,

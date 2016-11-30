@@ -1,3 +1,4 @@
+import { noop } from 'lodash';
 import React, { PropTypes } from 'react';
 import { View, Image } from 'react-native';
 import { BaseView, Text, Button, Step } from 'src/components';
@@ -7,7 +8,7 @@ import styles from './styles';
 
 const Greeting = ({
   profile: { firstName },
-  onNextPress,
+  onNextPress = noop,
 }) => (
   <Step>
     <BaseView style={styles.base}>
@@ -33,7 +34,7 @@ const Greeting = ({
 
 Greeting.propTypes = {
   profile: PropTypes.shape({ firstName: PropTypes.string }).isRequired,
-  onNextPress: PropTypes.func.isRequired,
+  onNextPress: PropTypes.func,
 };
 
 

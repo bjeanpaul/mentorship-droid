@@ -42,20 +42,20 @@ const getDirection = (prev, curr) => {
   // if active route hasn't changed
   if (prevRoute.key === currRoute.key) return null;
 
-  // pop or backward navigation: rightward
-  // push, forward navigation or some other change: leftward
-  return prev.routes.length > 1 && currRoute.key === prev.routes[prev.index - 1].key
-    ? DIRECTION_RIGHTWARD
-    : DIRECTION_LEFTWARD;
+  // pop or backward navigation: leftward
+  // push, forward navigation or some other change: rightward
+  return prev.index > 0 && currRoute.key === prev.routes[prev.index - 1].key
+    ? DIRECTION_LEFTWARD
+    : DIRECTION_RIGHTWARD;
 };
 
 
 const getPositionInputs = direction => {
   switch (direction) {
-    case DIRECTION_LEFTWARD:
+    case DIRECTION_RIGHTWARD:
       return [0, 1];
 
-    case DIRECTION_RIGHTWARD:
+    case DIRECTION_LEFTWARD:
       return [1, 0];
 
     default:
@@ -127,10 +127,10 @@ class NavigationStack extends Component {
 
     switch (getDirection(prev, curr)) {
       case DIRECTION_LEFTWARD:
-        return this.renderAnimation(prev, curr);
+        return this.renderAnimation(curr, prev);
 
       case DIRECTION_RIGHTWARD:
-        return this.renderAnimation(curr, prev);
+        return this.renderAnimation(prev, curr);
 
       default:
         return this.renderRoute(getCurrent(this.state.curr));
