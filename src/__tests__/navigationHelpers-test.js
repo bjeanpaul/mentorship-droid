@@ -3,7 +3,6 @@ import { unary } from 'lodash';
 import {
   replaceOrPush,
   createRoute,
-  createDummyRoute,
   push,
   pushList,
   popCurrent,
@@ -24,14 +23,6 @@ describe('navigationHelpers', () => {
         key: 'FOO',
         context: { bar: 23 },
       });
-    });
-  });
-
-  describe('createDummyRoute', () => {
-    it('should create a dummy route', () => {
-      const { key, context } = createDummyRoute();
-      expect(key).toMatch(/DUMMY_ROUTE_\d/);
-      expect(context).toEqual({});
     });
   });
 
@@ -192,7 +183,6 @@ describe('navigationHelpers', () => {
       expect(remove(stack, 'BAR')).toEqual({
         index: 2,
         routes: [
-          createDummyRoute(createDummyRoute.index),
           createRoute('FOO'),
           createRoute('BAZ'),
         ],
