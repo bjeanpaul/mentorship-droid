@@ -127,10 +127,10 @@ class NavigationStack extends Component {
 
     switch (getDirection(prev, curr)) {
       case DIRECTION_LEFTWARD:
-        return this.renderAnimation(prev, curr);
+        return this.renderAnimation(curr, prev);
 
       case DIRECTION_RIGHTWARD:
-        return this.renderAnimation(curr, prev);
+        return this.renderAnimation(prev, curr);
 
       default:
         return this.renderRoute(getCurrent(this.state.curr));
