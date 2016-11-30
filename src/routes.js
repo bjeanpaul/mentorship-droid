@@ -43,6 +43,8 @@ import CallNoteSavedContainer from 'src/containers/CallNoteSavedContainer';
 import CallNoteListContainer from 'src/containers/CallNoteListContainer';
 import CallNoteDetailContainer from 'src/containers/CallNoteDetailContainer';
 
+import Chat from 'src/containers/ChatContainer';
+
 import ProfileSettingsContainer from 'src/containers/ProfileSettingsContainer';
 
 
@@ -88,6 +90,8 @@ export default fromPairs([
   [constants.ROUTE_CALL_NOTE_SAVED, CallNoteSavedContainer],
   [constants.ROUTE_CALL_NOTE_LIST, CallNoteListContainer],
   [constants.ROUTE_CALL_NOTE_DETAIL, CallNoteDetailContainer],
+
+  [constants.ROUTE_CHAT, Chat],
 
   [constants.ROUTE_PROFILE_SETTINGS, ProfileSettingsContainer],
 ]);
