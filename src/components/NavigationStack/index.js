@@ -42,20 +42,20 @@ const getDirection = (prev, curr) => {
   // if active route hasn't changed
   if (prevRoute.key === currRoute.key) return null;
 
-  // pop or backward navigation: rightward
-  // push, forward navigation or some other change: leftward
+  // pop or backward navigation: leftward
+  // push, forward navigation or some other change: rightward
   return prev.routes.length > 1 && currRoute.key === prev.routes[prev.index - 1].key
-    ? DIRECTION_RIGHTWARD
-    : DIRECTION_LEFTWARD;
+    ? DIRECTION_LEFTWARD
+    : DIRECTION_RIGHTWARD;
 };
 
 
 const getPositionInputs = direction => {
   switch (direction) {
-    case DIRECTION_LEFTWARD:
+    case DIRECTION_RIGHTWARD:
       return [0, 1];
 
-    case DIRECTION_RIGHTWARD:
+    case DIRECTION_LEFTWARD:
       return [1, 0];
 
     default:
