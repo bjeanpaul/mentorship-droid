@@ -1,4 +1,4 @@
-import { reject, isNull, last } from 'lodash';
+import { reject, last } from 'lodash';
 import { NavigationExperimental } from 'react-native';
 
 const {
@@ -27,18 +27,6 @@ export const createRoute = (key, context = {}) => ({
   key,
   context,
 });
-
-
-export const createDummyRoute = (index = null) => {
-  const i = isNull(index)
-    ? ++createDummyRoute.index
-    : index;
-
-  return createRoute(`DUMMY_ROUTE_${i}`);
-};
-
-
-createDummyRoute.index = 0;
 
 
 export const insertAfterCurrent = (state, route) => !has(state, route.key)
@@ -74,25 +62,6 @@ export const popCurrent = state => ({
 });
 
 
-export const makeStepperNavigationReducer = ({ FORWARD, BACK }) => (state = {
-  index: 0,
-  routes: [
-    { key: 'STEP_0' },
-  ],
-}, action) => {
-  switch (action.type) {
-    case FORWARD:
-      return push(state, {
-        key: `STEP_${state.index + 1}`,
-      });
-    case BACK:
-      return pop(state);
-    default:
-      return state;
-  }
-};
-
-
 export const createStack = (routes = []) => ({
   index: Math.max(routes.length - 1, 0),
   routes,
@@ -118,12 +87,11 @@ export const inject = (state, key, context) => ({
 });
 
 
-// We prepend a dummy route to avoid unintentional transitions
 export const remove = (state, key) => !has(state, key)
   ? state
   : {
     ...state,
-    routes: [createDummyRoute()].concat(reject(state.routes, { key })),
+    routes: reject(state.routes, { key }),
   };
 
 

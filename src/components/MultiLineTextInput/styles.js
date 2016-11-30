@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
 
+export const MAX_HEIGHT = 32;
+
 export default StyleSheet.create({
   charCount: {
     fontSize: 14,

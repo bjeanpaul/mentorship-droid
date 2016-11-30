@@ -9,7 +9,7 @@ import {
   getActivity,
   getNextScheduledCall,
   getCallNotes,
-} from 'src/stores/helpers';
+} from 'src/store/helpers';
 
 import {
   scheduleActivityCall,

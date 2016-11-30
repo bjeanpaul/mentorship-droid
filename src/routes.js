@@ -9,6 +9,7 @@ import LoginContainer from 'src/containers/LoginContainer';
 import ActivationContainer from 'src/containers/ActivationContainer';
 
 import OnboardingContainer from 'src/containers/OnboardingContainer';
+import OnboardingSavingContainer from 'src/containers/OnboardingSavingContainer';
 import CameraRollContainer from 'src/containers/CameraRollContainer';
 
 import LoadingContainer from 'src/containers/LoadingContainer';
@@ -36,7 +37,8 @@ import ConnectingCallContainer from 'src/containers/ConnectingCallContainer';
 import ConnectingCallFailureContainer from 'src/containers/ConnectingCallFailureContainer';
 import CallCompletedContainer from 'src/containers/CallCompletedContainer';
 
-import CallNoteStepperContainer from 'src/containers/CallNoteStepperContainer';
+import CallNoteStepsContainer from 'src/containers/CallNoteStepsContainer';
+import CallNoteSavingContainer from 'src/containers/CallNoteSavingContainer';
 import CallNoteSavedContainer from 'src/containers/CallNoteSavedContainer';
 import CallNoteListContainer from 'src/containers/CallNoteListContainer';
 import CallNoteDetailContainer from 'src/containers/CallNoteDetailContainer';
@@ -54,6 +56,7 @@ export default fromPairs([
   [constants.ROUTE_AUTH_LOGIN, LoginContainer],
 
   [constants.ROUTE_ONBOARDING, OnboardingContainer],
+  [constants.ROUTE_ONBOARDING_SAVING, OnboardingSavingContainer],
   [constants.ROUTE_ONBOARDING_CAMERA_ROLL, CameraRollContainer],
 
   [constants.ROUTE_LOADING, LoadingContainer],
@@ -80,7 +83,8 @@ export default fromPairs([
   [constants.ROUTE_CONNECTING_CALL_FAILURE, ConnectingCallFailureContainer],
   [constants.ROUTE_CALL_COMPLETED, CallCompletedContainer],
 
-  [constants.ROUTE_CREATE_CALL_NOTES, CallNoteStepperContainer],
+  [constants.ROUTE_CREATE_CALL_NOTES, CallNoteStepsContainer],
+  [constants.ROUTE_CALL_NOTE_SAVING, CallNoteSavingContainer],
   [constants.ROUTE_CALL_NOTE_SAVED, CallNoteSavedContainer],
   [constants.ROUTE_CALL_NOTE_LIST, CallNoteListContainer],
   [constants.ROUTE_CALL_NOTE_DETAIL, CallNoteDetailContainer],

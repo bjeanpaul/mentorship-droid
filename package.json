@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "version": "0.1.41",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -63,9 +63,9 @@
       "node_modules/jest-react-native"
     ],
     "moduleNameMapper": {
-      "react-dom": "<rootDir>/scripts/jest/image-stub.js",
-      "react-compat": "<rootDir>/scripts/jest/image-stub.js",
-      "^.*\\.png$": "<rootDir>/scripts/jest/image-stub.js"
+      "react-dom": "<rootDir>/scripts/jest/stub.js",
+      "react-compat": "<rootDir>/scripts/jest/stub.js",
+      "^.*\\.png$": "<rootDir>/scripts/jest/stub.js"
     }
   }
 }

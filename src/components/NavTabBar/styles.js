@@ -7,7 +7,7 @@ import colors from 'src/constants/colors';
 export default StyleSheet.create({
   bar: {
     height: 56,
-    backgroundColor: colors.DEFAULT_BG,
+    backgroundColor: colors.BG_DEFAULT,
     borderTopColor: colors.NAV_TAB_BAR_BORDER,
     borderTopWidth: 1,
     flexDirection: 'row',

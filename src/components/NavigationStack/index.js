@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { View, StyleSheet, Animated } from 'react-native';
 
 import { getCurrent } from 'src/navigationHelpers';
-import { NotFound } from 'src/components';
 import { DEVICE_WIDTH } from 'src/constants/styles';
+import NotFound from 'src/components/NotFound';
 
 
 const styles = StyleSheet.create({
@@ -11,6 +11,9 @@ const styles = StyleSheet.create({
     flex: 1,
     width: DEVICE_WIDTH * 2,
     flexDirection: 'row',
+  },
+  routeContainer: {
+    flex: 1,
   },
 });
 
@@ -39,20 +42,20 @@ const getDirection = (prev, curr) => {
   // if active route hasn't changed
   if (prevRoute.key === currRoute.key) return null;
 
-  // pop or backward navigation: rightward
-  // push, forward navigation or some other change: leftward
-  return prev.routes.length > 1 && currRoute.key === prev.routes[prev.index - 1].key
-    ? DIRECTION_RIGHTWARD
-    : DIRECTION_LEFTWARD;
+  // pop or backward navigation: leftward
+  // push, forward navigation or some other change: rightward
+  return prev.index > 0 && currRoute.key === prev.routes[prev.index - 1].key
+    ? DIRECTION_LEFTWARD
+    : DIRECTION_RIGHTWARD;
 };
 
 
 const getPositionInputs = direction => {
   switch (direction) {
-    case DIRECTION_LEFTWARD:
+    case DIRECTION_RIGHTWARD:
       return [0, 1];
 
-    case DIRECTION_RIGHTWARD:
+    case DIRECTION_LEFTWARD:
       return [1, 0];
 
     default:
@@ -93,12 +96,15 @@ class NavigationStack extends Component {
     }).start();
   }
 
-  renderRoute({
-    key,
-    context,
-  }) {
-    const Route = this.props.routes[key] || NotFound;
-    return <Route key={key} {...context} />;
+  renderRoute({ key, context }) {
+    const obj = this.props.routes[key];
+
+    if (React.isValidElement(obj)) {
+      return <View key={key} style={styles.routeContainer}>{obj}</View>;
+    } else {
+      const Route = obj || NotFound;
+      return <Route key={key} {...context} />;
+    }
   }
 
   renderAnimation(left, right) {
@@ -121,10 +127,10 @@ class NavigationStack extends Component {
 
     switch (getDirection(prev, curr)) {
       case DIRECTION_LEFTWARD:
-        return this.renderAnimation(prev, curr);
+        return this.renderAnimation(curr, prev);
 
       case DIRECTION_RIGHTWARD:
-        return this.renderAnimation(curr, prev);
+        return this.renderAnimation(prev, curr);
 
       default:
         return this.renderRoute(getCurrent(this.state.curr));

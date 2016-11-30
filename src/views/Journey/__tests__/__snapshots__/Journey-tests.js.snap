@@ -91,11 +91,9 @@ exports[`Journey should render 1`] = `
         }
         uid="patterns">
         <Image
-          source={1}
-          style={Object {}} />
+          source={1} />
         <Image
-          source={1}
-          style={Object {}} />
+          source={1} />
       </View>
       <View
         onLayout={[Function]}
@@ -338,11 +336,9 @@ exports[`Journey should render the current scheduled call to be started 1`] = `
         }
         uid="patterns">
         <Image
-          source={1}
-          style={Object {}} />
+          source={1} />
         <Image
-          source={1}
-          style={Object {}} />
+          source={1} />
       </View>
       <View
         onLayout={[Function]}
@@ -585,11 +581,9 @@ exports[`Journey should render the next scheduled call 1`] = `
         }
         uid="patterns">
         <Image
-          source={1}
-          style={Object {}} />
+          source={1} />
         <Image
-          source={1}
-          style={Object {}} />
+          source={1} />
       </View>
       <View
         onLayout={[Function]}

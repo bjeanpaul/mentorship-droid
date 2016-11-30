@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { MilestoneEvent } from 'src/components';
-import { getCategory } from 'src/stores/helpers';
+import { getCategory } from 'src/store/helpers';
 
 
 const mapStateToProps = (state, {
