@@ -44,7 +44,7 @@ const getDirection = (prev, curr) => {
 
   // pop or backward navigation: leftward
   // push, forward navigation or some other change: rightward
-  return prev.routes.length > 1 && currRoute.key === prev.routes[prev.index - 1].key
+  return prev.index > 0 && currRoute.key === prev.routes[prev.index - 1].key
     ? DIRECTION_LEFTWARD
     : DIRECTION_RIGHTWARD;
 };

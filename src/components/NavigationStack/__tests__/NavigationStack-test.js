@@ -125,6 +125,49 @@ describe('NavigationStack', () => {
     expect(start.mock.calls).toEqual([[]]);
   });
 
+  it('should transition rightward for index increments', () => {
+    const navigationState = {
+      ...createStack([
+        createRoute('A'),
+        createRoute('B'),
+      ]),
+      index: 0,
+    };
+    const el = shallow(createComponent({ navigationState }));
+    const { position } = el.state();
+
+    expect(el.find('A').length).toEqual(1);
+    expect(el.find('B').length).toEqual(0);
+
+    el.setProps({
+      navigationState: {
+        ...navigationState,
+        index: 1,
+      },
+    });
+
+    expect(el.find('A').length).toEqual(1);
+    expect(el.find('B').length).toEqual(1);
+
+    expect(position.value).toEqual(0);
+
+    expect(el.prop('style')).toEqual(jasmine.arrayContaining([{
+      transform: jasmine.arrayContaining([{
+        translateX: [{
+          inputRange: [0, 1],
+          outputRange: [0, -DEVICE_WIDTH],
+        }],
+      }]),
+    }]));
+
+    expect(Animated.timing.mock.calls).toEqual([[
+      position,
+      jasmine.objectContaining({ toValue: 1 }),
+    ]]);
+
+    expect(start.mock.calls).toEqual([[]]);
+  });
+
   it('should only render the current route if the stack has not changed', () => {
     const navigationState = createStack([createRoute('A')]);
     const el = shallow(createComponent({ navigationState }));
