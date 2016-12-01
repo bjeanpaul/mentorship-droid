@@ -26,14 +26,14 @@ describe('src/reducers/navigation/top', () => {
     });
   });
 
-  describe('SHOW_ACTIVATION_REQUEST', () => {
+  describe('ACTIVATION_SHOW', () => {
     it('should push the activation route', () => {
       expect(reduce(createStack(), landing.showActivation()))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_AUTH_ACTIVATION)));
     });
   });
 
-  describe('SHOW_LOGIN_REQUEST', () => {
+  describe('LOGIN_SHOW', () => {
     it('should push the login route', () => {
       expect(reduce(createStack(), landing.showLogin()))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_AUTH_LOGIN)));
