@@ -92,8 +92,8 @@ android {
         applicationId "org.praekelt.mentorship"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
-        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        versionCode npmVersion[0] * 10000 + npmVersion[1] * 100 + npmVersion[2]
+        versionName npmVersionName
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
