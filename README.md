@@ -39,8 +39,7 @@ Are added to the GitHub repo whenever a new tag is pushed.
 ```
 git flow hotfix start <version>
 # make some commits or merge in PR's branch if changes are in different branch
-npm version <version>
-git commit package.json -m <version>
+./utils/version.sh <version>
 git flow hotfix finish -p <version>
 ```
 
@@ -49,8 +48,5 @@ A `dev` suffix should be used for dev releases, starting at `-dev`, followed by 
 
 ```
 # make relevant changes to `develop` branch (ideally via merging in feature branches)
-npm run dev-release:start
-npm version <version>
-git commit package.json -m <version>
-npm run dev-release:finish
+./utils/dev-release.sh <version>
 ```
