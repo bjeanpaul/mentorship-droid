@@ -4,6 +4,7 @@ import { listActivities } from 'src/api/activities';
 import { listScheduledCalls } from 'src/api/schedule';
 import { listEvents } from 'src/api/events';
 import { listCallNotes } from 'src/api/callNotes';
+import { listMessages } from 'src/api/chat';
 
 
 export const load = auth => Promise.resolve()
@@ -13,6 +14,7 @@ export const load = auth => Promise.resolve()
     listScheduledCalls(auth),
     listEvents(auth),
     listCallNotes(auth),
+    listMessages(auth),
   ]))
   .then((res) => merge(...map(res, 'entities')))
   .then(entities => ({ entities }));
