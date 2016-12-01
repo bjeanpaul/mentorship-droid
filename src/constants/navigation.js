@@ -1,4 +1,3 @@
-// TODO rename these to not include request
 const SCREEN_DISMISS = 'SCREEN_DISMISS';
 const NAV_TAB_CHANGE = 'NAV_TAB_CHANGE';
 
