@@ -7,7 +7,7 @@ import { uidEquals } from 'app/scripts/helpers';
 describe('NavTabBar', () => {
   const createComponent = (props) => (
     <NavTabBar
-      activeTab={NavTabBar.tabs.activities}
+      activeTab={NavTabBar.tabs[0]}
       onTabPress={noop}
       {...props}
     />
