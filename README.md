@@ -48,9 +48,9 @@ git flow hotfix finish -p <version>
 A `dev` suffix should be used for dev releases, starting at `-dev`, followed by `-dev1`, `dev2`, etc. For example: `0.2.0-dev1`.
 
 ```
-# merge in feature branch via `git flow feature finish` if relevant
-git checkout develop
+# make relevant changes to `develop` branch (ideally via merging in feature branches)
+npm run dev-release:start
 npm version <version>
 git commit package.json -m <version>
-npm run dev:release
+npm run dev-release:finish
 ```
