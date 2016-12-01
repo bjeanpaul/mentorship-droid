@@ -8,9 +8,7 @@
     "test": "NODE_ENV=test jest",
     "test:watch": "NODE_ENV=test jest --watch",
     "lint": "eslint index.android.js 'src/**/*.js'",
-    "ci": "npm run lint && npm test",
-    "dev-release:start": "git checkout support/dev && git merge develop",
-    "dev-release:finish": "git push origin support/dev && git push --tags && git checkout develop"
+    "ci": "npm run lint && npm test"
   },
   "dependencies": {
     "axios": "^0.13.1",
