@@ -32,3 +32,25 @@ on your _Android Virtual Device._
 ## Automatic Builds ##
 
 Are added to the GitHub repo whenever a new tag is pushed.
+
+## Release process
+
+### Hotfix releases
+```
+git flow hotfix start <version>
+# make some commits or merge in PR's branch if changes are in different branch
+npm version <version>
+git commit package.json -m <version>
+git flow hotfix finish -p <version>
+```
+
+### Development releases
+A `dev` suffix should be used for dev releases, starting at `-dev`, followed by `-dev1`, `dev2`, etc. For example: `0.2.0-dev1`.
+
+```
+# merge in feature branch via `git flow feature finish` if relevant
+git checkout develop
+npm version <version>
+git commit package.json -m <version>
+npm run dev:release
+```
