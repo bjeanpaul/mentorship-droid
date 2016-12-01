@@ -4,7 +4,7 @@ import { listActivities } from 'src/api/activities';
 import { listScheduledCalls } from 'src/api/schedule';
 import { listEvents } from 'src/api/events';
 import { listCallNotes } from 'src/api/callNotes';
-import { listMessages } from 'src/api/chat';
+import { listMessages } from 'src/api/messages';
 
 
 export const load = auth => Promise.resolve()

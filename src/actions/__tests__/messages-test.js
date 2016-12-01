@@ -1,11 +1,11 @@
-jest.mock('src/api/chat');
+jest.mock('src/api/messages');
 
 import * as constants from 'src/constants/schedule';
 import * as api from 'src/api';
 import { dataAction } from 'src/actionHelpers';
 import { testApiAction } from 'app/scripts/helpers';
 
-import { listMessages } from 'src/actions/chat';
+import { listMessages } from 'src/actions/messages';
 
 const { ApiResponseError } = api;
 

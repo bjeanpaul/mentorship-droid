@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Chat from 'src/views/Chat';
+import Messages from 'src/views/Messages';
 
 
-describe('Chat', () => {
+describe('Messages', () => {
   function createComponent(props = {}) {
     return (
-      <Chat
+      <Messages
         {...props}
       />
     );

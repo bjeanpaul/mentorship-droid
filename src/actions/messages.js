@@ -1,5 +1,5 @@
 import * as api from 'src/api';
-import * as constants from 'src/constants/chat';
+import * as constants from 'src/constants/messages';
 import { apiAction, dataAction, staticAction } from 'src/actionHelpers';
 
 const { ApiResponseError } = api;

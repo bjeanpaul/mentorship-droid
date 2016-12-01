@@ -4,7 +4,7 @@ jest
   .mock('src/api/schedule')
   .mock('src/api/events')
   .mock('src/api/callNotes')
-  .mock('src/api/chat');
+  .mock('src/api/messages');
 
 
 import { merge, fromPairs } from 'lodash';

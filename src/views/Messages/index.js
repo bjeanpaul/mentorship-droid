@@ -1,13 +1,13 @@
 import React from 'react';
 import { BaseView } from 'src/components';
 
-const Chat = () => (
+const Messages = () => (
   <BaseView />
 );
 
 
-Chat.propTypes = {
+Messages.propTypes = {
 };
 
 
-export default Chat;
+export default Messages;
