@@ -1,6 +1,6 @@
 import { fromPairs } from 'lodash';
 import React, { PropTypes } from 'react';
-import { View } from 'react-native';
+import { View, ScrollView } from 'react-native';
 
 import { BaseView, PatternBackground, Text } from 'src/components';
 import * as constants from 'src/constants/messages';
@@ -12,7 +12,9 @@ const Messages = ({
 }) => (
   <BaseView>
     <PatternBackground>
-      {groups.map((group, i) => <MessageGroup key={i} {...group} />)}
+      <ScrollView>
+        {groups.map((group, i) => <MessageGroup key={i} {...group} />)}
+      </ScrollView>
     </PatternBackground>
   </BaseView>
 );

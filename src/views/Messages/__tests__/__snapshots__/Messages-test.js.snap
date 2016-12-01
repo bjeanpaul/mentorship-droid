@@ -26,103 +26,105 @@ exports[`Messages should render 1`] = `
     <View
       onLayout={[Function]}
       uid="container">
-      <View>
-        <View
-          style={undefined}>
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "#003035",
-                  "fontFamily": "Brandon Text",
-                  "fontSize": 13,
-                  "textAlign": "center",
-                },
+      <ScrollView>
+        <View>
+          <View
+            style={undefined}>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
                 Array [
                   Object {
-                    "backgroundColor": "#fff",
-                    "borderRadius": 6,
-                    "fontSize": 16,
-                    "paddingBottom": 18,
-                    "paddingHorizontal": 24,
-                    "paddingTop": 14,
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                    "fontSize": 13,
+                    "textAlign": "center",
                   },
-                  undefined,
-                ],
-              ]
-            }>
-            Sputnik sickles found in the seats
-          </Text>
-        </View>
-        <View
-          style={undefined}>
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "#003035",
-                  "fontFamily": "Brandon Text",
-                  "fontSize": 13,
-                  "textAlign": "center",
-                },
+                  Array [
+                    Object {
+                      "backgroundColor": "#fff",
+                      "borderRadius": 6,
+                      "fontSize": 16,
+                      "paddingBottom": 18,
+                      "paddingHorizontal": 24,
+                      "paddingTop": 14,
+                    },
+                    undefined,
+                  ],
+                ]
+              }>
+              Sputnik sickles found in the seats
+            </Text>
+          </View>
+          <View
+            style={undefined}>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
                 Array [
                   Object {
-                    "backgroundColor": "#fff",
-                    "borderRadius": 6,
-                    "fontSize": 16,
-                    "paddingBottom": 18,
-                    "paddingHorizontal": 24,
-                    "paddingTop": 14,
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                    "fontSize": 13,
+                    "textAlign": "center",
                   },
-                  Object {
-                    "backgroundColor": "#00aa9f",
-                    "color": "#fff",
-                  },
-                ],
-              ]
-            }>
-            I lost my liquid tongue for the wet pen
-          </Text>
+                  Array [
+                    Object {
+                      "backgroundColor": "#fff",
+                      "borderRadius": 6,
+                      "fontSize": 16,
+                      "paddingBottom": 18,
+                      "paddingHorizontal": 24,
+                      "paddingTop": 14,
+                    },
+                    Object {
+                      "backgroundColor": "#00aa9f",
+                      "color": "#fff",
+                    },
+                  ],
+                ]
+              }>
+              I lost my liquid tongue for the wet pen
+            </Text>
+          </View>
         </View>
-      </View>
-      <View>
-        <View
-          style={undefined}>
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "#003035",
-                  "fontFamily": "Brandon Text",
-                  "fontSize": 13,
-                  "textAlign": "center",
-                },
+        <View>
+          <View
+            style={undefined}>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
                 Array [
                   Object {
-                    "backgroundColor": "#fff",
-                    "borderRadius": 6,
-                    "fontSize": 16,
-                    "paddingBottom": 18,
-                    "paddingHorizontal": 24,
-                    "paddingTop": 14,
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                    "fontSize": 13,
+                    "textAlign": "center",
                   },
-                  undefined,
-                ],
-              ]
-            }>
-            Let a stool pigeon escort those who contort
-          </Text>
+                  Array [
+                    Object {
+                      "backgroundColor": "#fff",
+                      "borderRadius": 6,
+                      "fontSize": 16,
+                      "paddingBottom": 18,
+                      "paddingHorizontal": 24,
+                      "paddingTop": 14,
+                    },
+                    undefined,
+                  ],
+                ]
+              }>
+              Let a stool pigeon escort those who contort
+            </Text>
+          </View>
         </View>
-      </View>
+      </ScrollView>
     </View>
   </View>
 </View>
