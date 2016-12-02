@@ -8,15 +8,15 @@ import * as constants from 'src/constants/navigation';
 
 
 const tabSpecs = [{
-  tabKey: constants.NAV_TAB_ACTIVITIES,
-  icon: images.NAV_TAB_ACTIVITIES,
-  iconActive: images.NAV_TAB_ACTIVITIES_ACTIVE,
-  title: 'Activities',
-}, {
   tabKey: constants.NAV_TAB_JOURNEY,
   icon: images.NAV_TAB_JOURNEY,
   iconActive: images.NAV_TAB_JOURNEY_ACTIVE,
   title: 'Journey',
+}, {
+  tabKey: constants.NAV_TAB_ACTIVITIES,
+  icon: images.NAV_TAB_ACTIVITIES,
+  iconActive: images.NAV_TAB_ACTIVITIES_ACTIVE,
+  title: 'Activities',
 }, {
   tabKey: constants.NAV_TAB_SCHEDULED_CALLS,
   icon: images.NAV_TAB_SCHEDULED_CALLS,
