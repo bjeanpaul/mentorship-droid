@@ -51,7 +51,7 @@ describe('api/messages', () => {
         auth: fakeAuth(),
         data: {
           content: 'Set tall in your just beyond merch booth bound chest',
-        }
+        },
       });
 
       expect(parse(fakeMessage()))
