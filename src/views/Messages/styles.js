@@ -11,7 +11,7 @@ export default StyleSheet.create({
     borderRadius: 6,
     backgroundColor: colors.BG_DEFAULT,
   },
-  messageContentReceived: {
+  messageContentSent: {
     color: colors.TEXT_LIGHT,
     backgroundColor: colors.MESSAGE_RECEIVED_BG,
   },

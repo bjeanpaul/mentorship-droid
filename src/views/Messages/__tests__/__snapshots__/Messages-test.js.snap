@@ -51,7 +51,10 @@ exports[`Messages should render 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    undefined,
+                    Object {
+                      "backgroundColor": "#00aa9f",
+                      "color": "#fff",
+                    },
                   ],
                 ]
               }>
@@ -81,10 +84,7 @@ exports[`Messages should render 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    Object {
-                      "backgroundColor": "#00aa9f",
-                      "color": "#fff",
-                    },
+                    undefined,
                   ],
                 ]
               }>
@@ -116,7 +116,10 @@ exports[`Messages should render 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    undefined,
+                    Object {
+                      "backgroundColor": "#00aa9f",
+                      "color": "#fff",
+                    },
                   ],
                 ]
               }>
