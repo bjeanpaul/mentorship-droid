@@ -173,6 +173,10 @@ export const fakeScheduledCallData = (data = { id: 23 }) => (
   normalize(data, api.ScheduledCall));
 
 
+export const fakeMessageData = (data = [fakeMessage()]) => (
+    normalize(data, api.Message));
+
+
 export const fakeProfileListData = (data = [{ id: 23 }]) => (
   normalize(data, arrayOf(api.Profile)));
 
