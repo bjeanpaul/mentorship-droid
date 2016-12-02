@@ -10,3 +10,4 @@ export const Event = new Schema('events');
 export const Call = new Schema('calls');
 export const CallNote = new Schema('callNotes');
 export const Message = new Schema('messages');
+export const PendingMessage = new Schema('pendingMessages');

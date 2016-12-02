@@ -1,8 +1,10 @@
-import { arrayOf } from 'normalizr';
+import { uniqueId } from 'lodash';
+import { arrayOf, normalize } from 'normalizr';
 
 import request from 'src/api/request';
-import { parseResults } from 'src/api/parse';
-import { Message } from 'src/api/schemas';
+import { parseResults, parseSendMessageResult } from 'src/api/parse';
+import { Message, PendingMessage } from 'src/api/schemas';
+import * as constants from 'src/constants/messages';
 
 
 export const listMessages = (auth, params = {}) => request({
@@ -13,3 +15,32 @@ export const listMessages = (auth, params = {}) => request({
   params,
   auth,
 });
+
+
+export const sendMessage = (msg, auth) => request({
+  url: '/chat_message/',
+  method: 'POST',
+  schema: arrayOf(Message),
+  parse: parseSendMessageResult(msg),
+  data: { content: msg.content },
+  auth,
+});
+
+
+export const createPendingMessage = (data = {}) => ({
+  id: uniqueId(constants.PENDING_MESSAGE_UID_PREFIX),
+  timestamp: new Date().toISOString(),
+  status: constants.MESSAGE_STATUS_IDLE,
+  content: '',
+  ...data,
+});
+
+
+const setMessage = status => msg => normalize({
+  ...msg,
+  status,
+}, PendingMessage);
+
+
+export const setMessageSending = setMessage(constants.MESSAGE_STATUS_SENDING);
+export const setMessageFailed = setMessage(constants.MESSAGE_STATUS_FAILED);
