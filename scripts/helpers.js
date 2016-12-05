@@ -176,7 +176,7 @@ export const fakeScheduledCallData = (data = { id: 23 }) => (
   normalize(data, api.ScheduledCall));
 
 
-export const fakeMessageData = (data = [fakeMessage()]) => (
+export const fakeMessageData = (data = fakeMessage()) => (
     normalize(data, api.Message));
 
 

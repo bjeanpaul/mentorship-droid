@@ -21,7 +21,7 @@ export const sendMessage = (msg, auth) => request({
   url: '/chat_message/',
   method: 'POST',
   schema: arrayOf(Message),
-  parse: parseSendMessageResult(msg),
+  parse: parseSendMessageResult,
   data: { content: msg.content },
   auth,
 });

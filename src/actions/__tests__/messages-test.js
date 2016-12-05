@@ -1,5 +1,6 @@
 jest.mock('src/api/messages');
 
+import { identity } from 'lodash';
 import * as constants from 'src/constants/messages';
 import * as api from 'src/api';
 import { dataAction } from 'src/actionHelpers';
@@ -11,6 +12,10 @@ const { ApiResponseError } = api;
 
 
 describe('messages/actions', () => {
+  beforeEach(() => {
+    api.createPendingMessage.mockClear();
+  });
+
   describe('listMessages', () => {
     it('should create actions for message lists', async () => {
       await testApiAction(listMessages, {
@@ -24,7 +29,8 @@ describe('messages/actions', () => {
 
   describe('sendMessage', () => {
     it('should create actions for sending messages', async () => {
-      const msg = api.createPendingMessage();
+      api.createPendingMessage.mockImplementation(identity);
+      const msg = { id: 23 };
       const response = fakeMessageData();
 
       await testApiAction(sendMessage, {
@@ -36,7 +42,10 @@ describe('messages/actions', () => {
         }),
         success: () => ({
           type: constants.MESSAGE_SEND_SUCCESS,
-          payload: response,
+          payload: {
+            ...response,
+            pendingId: 23,
+          },
         }),
         failures: [[Error, () => ({
           type: constants.MESSAGE_SEND_FAILURE,

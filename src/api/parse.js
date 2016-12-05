@@ -58,11 +58,7 @@ export const parseCategoryListResults = flow(parseResults, parseCategories);
 export const parseActivityListResults = flow(parseResults, parseActivities);
 
 
-export const parseSendMessageResult = pendingMsg => data => {
-  const {
-    id: pendingId,
-  } = pendingMsg;
-
+export const parseSendMessageResult = data => {
   const {
     id,
     type,
@@ -77,9 +73,6 @@ export const parseSendMessageResult = pendingMsg => data => {
     content,
     timestamp,
     status: constants.MESSAGE_STATUS_SENT,
-    details: {
-      pendingId,
-      ...details,
-    },
+    details,
   };
 };

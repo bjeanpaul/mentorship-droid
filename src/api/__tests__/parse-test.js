@@ -3,7 +3,6 @@ import { fakeCategory, fakeActivity } from 'app/scripts/helpers';
 import colors from 'src/constants/colors';
 import * as constants from 'src/constants/messages';
 import config from 'src/config';
-import { createPendingMessage } from 'src/api';
 
 import {
   parseResults,
@@ -105,9 +104,7 @@ describe('api/parse', () => {
         otherField: 'bar',
       };
 
-      const pendingMsg = createPendingMessage({ id: 23 });
-
-      expect(parseSendMessageResult(pendingMsg)(msg))
+      expect(parseSendMessageResult(msg))
         .toEqual({
           id: 21,
           timestamp: '2016-11-30T09:43:20.311Z',
@@ -115,7 +112,6 @@ describe('api/parse', () => {
           status: constants.MESSAGE_STATUS_SENT,
           content: 'foo',
           details: {
-            pendingId: 23,
             otherField: 'bar',
           },
         });
