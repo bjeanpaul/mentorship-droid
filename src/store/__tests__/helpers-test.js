@@ -15,6 +15,7 @@ import {
   fakeCall,
   fakeEvent,
   fakeCallNote,
+  fakeMessage,
 } from 'app/scripts/helpers';
 
 import {
@@ -33,6 +34,7 @@ import {
   getCallNote,
   getNextScheduledCall,
   getScheduledCallsBetween,
+  getMessages,
 } from 'src/store/helpers';
 
 
@@ -413,6 +415,31 @@ describe('helpers', () => {
       };
 
       expect(getCallNote(state, 2)).toEqual(callNote1);
+    });
+  });
+
+  describe('getMessages', () => {
+    it('should get the current messages', () => {
+      const message1 = fakeMessage({
+        id: 1,
+        timeSent: '2016-11-30T09:43:20.311Z',
+      });
+
+      const message2 = fakeMessage({
+        id: 2,
+        timeSent: '2016-11-31T09:43:20.311Z',
+      });
+
+      const state = fakeState({
+        entities: {
+          messages: {
+            1: message1,
+            2: message2,
+          },
+        },
+      });
+
+      expect(getMessages(state)).toEqual([message1, message2]);
     });
   });
 });

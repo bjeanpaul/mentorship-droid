@@ -35,7 +35,7 @@ const activeIcons = {
 
 const titles = {
   NAV_TAB_ACTIVITIES: 'Activities',
-  NAV_TAB_CHAT: 'Chat',
+  NAV_TAB_CHAT: 'Messages',
   NAV_TAB_COMMUNITY: 'Community',
   NAV_TAB_JOURNEY: 'Journey',
   NAV_TAB_SCHEDULED_CALLS: 'Calls',

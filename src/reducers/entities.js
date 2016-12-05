@@ -10,6 +10,7 @@ const entitiesReducer = (state = {
   scheduledCalls: {},
   callNotes: {},
   calls: {},
+  messages: {},
 }, action) => {
   switch (action.type) {
     case AUTH_LOGOUT:

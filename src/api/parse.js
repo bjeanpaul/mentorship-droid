@@ -55,3 +55,9 @@ export const parseActivities = activities => activities.map(parseActivity);
 
 export const parseCategoryListResults = flow(parseResults, parseCategories);
 export const parseActivityListResults = flow(parseResults, parseActivities);
+
+
+export const parseSendMessageResult = pendingMsg => data => ({
+  ...data,
+  pendingId: pendingMsg.id,
+});
