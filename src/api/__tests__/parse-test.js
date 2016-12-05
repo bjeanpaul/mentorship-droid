@@ -1,7 +1,8 @@
 import { makeGradient } from 'src/helpers';
-import { fakeCategory, fakeActivity } from 'app/scripts/helpers';
+import { fakeCategory, fakeActivity, fakeMessage } from 'app/scripts/helpers';
 import colors from 'src/constants/colors';
 import config from 'src/config';
+import { createPendingMessage } from 'src/api';
 
 import {
   parseResults,
@@ -9,6 +10,7 @@ import {
   parseActivities,
   parseCategory,
   parseActivity,
+  parseSendMessageResult,
 } from 'src/api/parse';
 
 const { API_BASE_URL } = config;
@@ -89,6 +91,19 @@ describe('api/parse', () => {
     it('should not parse the icon url if it is falsy', () => {
       const { icon } = parseActivity(fakeActivity({ icon: null }));
       expect(icon).toEqual(null);
+    });
+  });
+
+  describe('parseSendMessageResult', () => {
+    it('should assign the pending message id', () => {
+      const msg = fakeMessage();
+      const pendingMsg = createPendingMessage();
+
+      expect(parseSendMessageResult(pendingMsg)(msg))
+        .toEqual({
+          ...msg,
+          pendingId: pendingMsg.id,
+        });
     });
   });
 });

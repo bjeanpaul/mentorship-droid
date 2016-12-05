@@ -4,7 +4,7 @@ import { Text, PatternBackground } from 'src/components';
 import { uidEquals } from 'app/scripts/helpers';
 
 
-describe.only('PatternBackground', () => {
+describe('PatternBackground', () => {
   it('should render', () => {
     const el = render(
       <PatternBackground>
@@ -34,7 +34,7 @@ describe.only('PatternBackground', () => {
       />
     );
 
-    el.findWhere(uidEquals('container'))
+    el.findWhere(uidEquals('contentContainer'))
       .simulate('layout', {
         nativeEvent: {
           layout: {

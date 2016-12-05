@@ -118,4 +118,8 @@ export default {
   RADIO_LIST_BORDER: '#dfe5e6',
 
   PROFILE_SETTINGS_SECTION_ITEM_DIVIDER: '#dfe5e6',
+
+  MESSAGE_SENT_BG: '#00aa9f',
+  SEND_BORDER: '#dfe5e6',
+  SEND_INPUT_PLACEHOLDER_TEXT: '#9fb1b3',
 };

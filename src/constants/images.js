@@ -63,6 +63,8 @@ import EVENT_MENTEE_CONFUSED from 'app/assets/confused-journey.png';
 import EVENT_MENTEE_UPSET from 'app/assets/upset-journey.png';
 import EVENT_MENTEE_WITHDRAWN from 'app/assets/withdrawn-journey.png';
 
+import SEND_MESSAGE_ICON from 'app/assets/send-icon-chat.png';
+
 
 export default {
   PATTERN_BG,
@@ -129,4 +131,6 @@ export default {
 
   YES,
   YES_SELECTED,
+
+  SEND_MESSAGE_ICON,
 };
