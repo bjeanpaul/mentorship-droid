@@ -4,6 +4,13 @@ import { MESSAGE_SEND_SUCCESS } from 'src/constants/messages';
 import { ACTIONS_WITH_ENTITIES } from 'src/constants/entities';
 
 
+const mergeActionEntities = (state, action) => {
+  return includes(ACTIONS_WITH_ENTITIES, action.type)
+    ? merge({}, state, action.payload.entities)
+    : state;
+};
+
+
 const entitiesReducer = (state = {
   activities: {},
   categories: {},
@@ -27,13 +34,11 @@ const entitiesReducer = (state = {
         pendingMessages: omit(state.pendingMessages, action.payload.pendingId),
       };
 
-      return merge({}, nextState, action.payload.entities);
+      return mergeActionEntities(nextState, action);
     }
 
     default:
-      return includes(ACTIONS_WITH_ENTITIES, action.type)
-        ? merge({}, state, action.payload.entities)
-        : state;
+      return mergeActionEntities(state, action);
   }
 };
 

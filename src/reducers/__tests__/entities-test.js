@@ -1,6 +1,9 @@
 jest.mock('src/constants/entities', () => ({
   __esModule: true,
-  ACTIONS_WITH_ENTITIES: ['ACTION_WITH_ENTITIES'],
+  ACTIONS_WITH_ENTITIES: [
+    'ACTION_WITH_ENTITIES',
+    'MESSAGE_SEND_SUCCESS',
+  ],
 }));
 
 import { createPendingMessage } from 'src/api';
@@ -102,6 +105,7 @@ describe('reducers/entities', () => {
         pendingMessages: {
           23: createPendingMessage(),
         },
+        messages: {},
       };
 
       const msg = fakeMessage({ id: 21 });
