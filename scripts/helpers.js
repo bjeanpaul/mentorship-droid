@@ -4,6 +4,7 @@ import { getContext } from 'src/store/helpers';
 import { staticAction } from 'src/actionHelpers';
 import { createStack } from 'src/navigationHelpers';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/events';
+import { MESSAGE_STATUS_SENT, MESSAGE_TYPE_INBOUND } from 'src/constants/messages';
 import * as api from 'src/api';
 
 
@@ -113,9 +114,11 @@ export const fakeCallNote = data => ({
 
 export const fakeMessage = data => ({
   id: 21,
-  type: 'RECEIVED',
-  timeSent: '2016-11-30T09:43:20.311Z',
+  type: MESSAGE_TYPE_INBOUND,
+  status: MESSAGE_STATUS_SENT,
+  timestamp: '2016-11-30T09:43:20.311Z',
   content: 'Sputnik sickles found in the seats',
+  details: {},
   ...data,
 });
 

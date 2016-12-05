@@ -43,13 +43,13 @@ const MessageGroup = ({
 
 
 const messageTypeStyles = fromPairs([
-  [constants.MESSAGE_TYPE_SENT, {
-    bubble: styles.bubbleSent,
-    messageContent: styles.messageContentSent,
+  [constants.MESSAGE_TYPE_OUTBOUND, {
+    bubble: styles.bubbleOutbound,
+    messageContent: styles.messageContentOutbound,
   }],
-  [constants.MESSAGE_TYPE_RECEIVED, {
-    bubble: styles.bubbleReceived,
-    messageContent: styles.messageContentReceived,
+  [constants.MESSAGE_TYPE_INBOUND, {
+    bubble: styles.bubbleInbound,
+    messageContent: styles.messageContentInbound,
   }],
 ]);
 

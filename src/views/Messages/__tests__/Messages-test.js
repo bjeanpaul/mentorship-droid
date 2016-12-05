@@ -2,6 +2,7 @@ import { noop } from 'lodash';
 import React from 'react';
 
 import Messages from 'src/views/Messages';
+import * as constants from 'src/constants/messages';
 import { fakeMessage, uidEquals } from 'app/scripts/helpers';
 
 
@@ -12,18 +13,18 @@ describe('Messages', () => {
         groups={[{
           messages: [
             fakeMessage({
-              type: 'SENT',
+              type: constants.MESSAGE_TYPE_OUTBOUND,
               content: 'Sputnik sickles found in the seats',
             }),
             fakeMessage({
-              type: 'RECEIVED',
+              type: constants.MESSAGE_TYPE_INBOUND,
               content: 'I lost my liquid tongue for the wet pen',
             }),
           ],
         }, {
           messages: [
             fakeMessage({
-              type: 'SENT',
+              type: constants.MESSAGE_TYPE_OUTBOUND,
               content: 'Let a stool pigeon escort those who contort',
             }),
           ],

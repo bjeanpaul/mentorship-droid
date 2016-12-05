@@ -1,6 +1,7 @@
 import { flow } from 'lodash';
 import colors from 'src/constants/colors';
 import { makeGradient } from 'src/helpers';
+import * as constants from 'src/constants/messages';
 import config from 'src/config';
 
 const { API_BASE_URL } = config;
@@ -57,7 +58,28 @@ export const parseCategoryListResults = flow(parseResults, parseCategories);
 export const parseActivityListResults = flow(parseResults, parseActivities);
 
 
-export const parseSendMessageResult = pendingMsg => data => ({
-  ...data,
-  pendingId: pendingMsg.id,
-});
+export const parseSendMessageResult = pendingMsg => data => {
+  const {
+    id: pendingId,
+  } = pendingMsg;
+
+  const {
+    id,
+    type,
+    timeSent: timestamp,
+    content,
+    ...details,
+  } = data;
+
+  return {
+    id,
+    type,
+    content,
+    timestamp,
+    status: constants.MESSAGE_STATUS_SENT,
+    details: {
+      pendingId,
+      ...details,
+    },
+  };
+};
