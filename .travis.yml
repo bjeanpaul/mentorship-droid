@@ -18,7 +18,7 @@ before_install:
 - nvm install 6
 - node --version
 install:
-- npm install
+- travis_retry npm install
 android:
   components:
   - build-tools-23.0.1
@@ -28,8 +28,8 @@ android:
   - extra-google-m2repository
   - addon-google_apis-google-16
 script:
-- npm run ci
-- '[ -z "$TRAVIS_TAG" ] || ./utils/travis-release.sh'
+- travis_retry npm run ci
+- '[ -z "$TRAVIS_TAG" ] || travis_retry ./utils/travis-release.sh'
 deploy:
   skip_cleanup: true
   provider: releases
