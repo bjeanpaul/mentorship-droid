@@ -30,10 +30,11 @@ export const sendMessage = (msg, auth) => request({
 export const createPendingMessage = (data = {}) => ({
   id: uniqueId(constants.PENDING_MESSAGE_UID_PREFIX),
   timestamp: new Date().toISOString(),
-  type: constants.MESSAGE_TYPE_OUTBOUND,
-  status: constants.MESSAGE_STATUS_IDLE,
+  type: constants.MESSAGE_TYPE_PENDING,
   content: '',
-  details: {},
+  details: {
+    status: constants.MESSAGE_STATUS_IDLE,
+  },
   ...data,
 });
 
