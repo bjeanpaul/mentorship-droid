@@ -99,7 +99,6 @@ describe('api/parse', () => {
       const msg = {
         id: 21,
         timeSent: '2016-11-30T09:43:20.311Z',
-        direction: constants.MESSAGE_DIRECTION_OUTBOUND,
         content: 'foo',
         otherField: 'bar',
       };
@@ -107,9 +106,8 @@ describe('api/parse', () => {
       expect(parseSendMessageResult(msg))
         .toEqual({
           id: 21,
+          type: constants.MESSAGE_TYPE_COMPLETE,
           timestamp: '2016-11-30T09:43:20.311Z',
-          direction: constants.MESSAGE_DIRECTION_OUTBOUND,
-          status: constants.MESSAGE_STATUS_SENT,
           content: 'foo',
           details: {
             otherField: 'bar',

@@ -55,7 +55,7 @@ const messageTypeStyles = fromPairs([
 
 
 const Message = ({
-  direction,
+  details: { direction },
   content,
 }) => {
   const directionStyles = messageTypeStyles[direction];
@@ -148,7 +148,9 @@ Bubble.propTypes = {
 
 
 Message.propTypes = {
-  direction: PropTypes.string,
+  details: PropTypes.shape({
+    direction: PropTypes.string.isRequired,
+  }).isRequired,
   content: PropTypes.string,
 };
 

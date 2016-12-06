@@ -65,7 +65,7 @@ describe('api/messages', () => {
         ...msg,
         details: {
           ...msg.details,
-          status: constants.MESSAGE_STATUS_SENDING,
+          status: constants.PENDING_MESSAGE_STATUS_SENDING,
         },
       }, PendingMessage));
     });
@@ -79,7 +79,7 @@ describe('api/messages', () => {
         ...msg,
         details: {
           ...msg.details,
-          status: constants.MESSAGE_STATUS_SENDING,
+          status: constants.PENDING_MESSAGE_STATUS_SENDING,
         },
       }, PendingMessage));
     });

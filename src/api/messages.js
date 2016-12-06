@@ -30,10 +30,10 @@ export const sendMessage = (msg, auth) => request({
 export const createPendingMessage = (data = {}) => ({
   id: uniqueId(constants.PENDING_MESSAGE_UID_PREFIX),
   timestamp: new Date().toISOString(),
-  direction: constants.MESSAGE_DIRECTION_PENDING,
+  type: constants.MESSAGE_TYPE_PENDING,
   content: '',
   details: {
-    status: constants.MESSAGE_STATUS_IDLE,
+    status: constants.PENDING_MESSAGE_STATUS_IDLE,
   },
   ...data,
 });
@@ -43,5 +43,5 @@ const setMessage = status => msg =>
   normalize(merge({}, msg, { details: { status } }), PendingMessage);
 
 
-export const setMessageSending = setMessage(constants.MESSAGE_STATUS_SENDING);
-export const setMessageFailed = setMessage(constants.MESSAGE_STATUS_FAILED);
+export const setMessageSending = setMessage(constants.PENDING_MESSAGE_STATUS_SENDING);
+export const setMessageFailed = setMessage(constants.PENDING_MESSAGE_STATUS_FAILED);
