@@ -16,6 +16,7 @@ import {
   fakeEvent,
   fakeCallNote,
   fakeMessage,
+  fakePendingMessage,
 } from 'app/scripts/helpers';
 
 import {
@@ -419,27 +420,45 @@ describe('helpers', () => {
   });
 
   describe('getMessages', () => {
-    it('should get the current messages', () => {
-      const message1 = fakeMessage({
+    it('should get the current messages in descending order', () => {
+      const msg1 = fakeMessage({
         id: 1,
-        timeSent: '2016-11-30T09:43:20.311Z',
+        timestamp: '2016-11-02T09:43:20.311Z',
       });
 
-      const message2 = fakeMessage({
+      const msg2 = fakeMessage({
         id: 2,
-        timeSent: '2016-11-31T09:43:20.311Z',
+        timestamp: '2016-11-01T09:43:20.311Z',
       });
 
-      const state = fakeState({
-        entities: {
-          messages: {
-            1: message1,
-            2: message2,
-          },
-        },
+      const msg3 = fakePendingMessage({
+        id: 3,
+        timestamp: '2016-11-04T09:43:20.311Z',
       });
 
-      expect(getMessages(state)).toEqual([message1, message2]);
+      const msg4 = fakePendingMessage({
+        id: 4,
+        timestamp: '2016-11-03:43:20.311Z',
+      });
+
+      const state = fakeState();
+
+      state.entities.messages = {
+        1: msg1,
+        2: msg2,
+      };
+
+      state.entities.pendingMessages = {
+        3: msg3,
+        4: msg4,
+      };
+
+      expect(getMessages(state)).toEqual([
+        msg3,
+        msg4,
+        msg1,
+        msg2,
+      ]);
     });
   });
 });
