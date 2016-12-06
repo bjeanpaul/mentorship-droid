@@ -114,7 +114,7 @@ export const fakeCallNote = data => ({
 });
 
 
-export const fakeMessage = data => merge(({
+export const fakeMessage = data => merge({
   id: 21,
   type: MESSAGE_TYPE_COMPLETE,
   timestamp: '2016-11-30T09:43:20.311Z',
@@ -122,7 +122,7 @@ export const fakeMessage = data => merge(({
   details: {
     direction: MESSAGE_DIRECTION_INBOUND,
   },
-}, data));
+}, data);
 
 
 export const fakePendingMessage = data => merge(api.createPendingMessage({

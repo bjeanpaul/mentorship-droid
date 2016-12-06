@@ -273,3 +273,623 @@ exports[`Messages should render 1`] = `
   </View>
 </View>
 `;
+
+exports[`Messages should render failed messages 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#eff2f2",
+          "position": "absolute",
+        }
+      }
+      uid="patterns">
+      <Image
+        source={1} />
+      <Image
+        source={1} />
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      uid="contentContainer">
+      <ScrollView>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "paddingHorizontal": 16,
+            }
+          }>
+          <View>
+            <View />
+          </View>
+        </View>
+      </ScrollView>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "#dfe5e6",
+            "borderTopWidth": 1,
+            "flexDirection": "row",
+            "padding": 16,
+          }
+        }>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#fff",
+                "borderRadius": 6,
+                "flex": 1,
+                "paddingBottom": 17,
+                "paddingHorizontal": 24,
+                "paddingTop": 14,
+              },
+              Object {
+                "paddingBottom": 12,
+                "paddingTop": 10,
+              },
+            ]
+          }>
+          <TextInput
+            multiline={true}
+            onTextChange={[Function]}
+            placeholder="Write something"
+            placeholderTextColor={undefined}
+            style={
+              Object {
+                "borderBottomWidth": 0,
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 16,
+                "padding": 0,
+              }
+            }
+            uid="sendInput"
+            underlineColorAndroid="transparent" />
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#f77040",
+              "borderRadius": 40,
+              "height": 40,
+              "marginLeft": 12,
+              "width": 40,
+            }
+          }
+          testID={undefined}>
+          <Image
+            source={1}
+            style={
+              Object {
+                "padding": 8,
+              }
+            } />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Messages should render inbound messages 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#eff2f2",
+          "position": "absolute",
+        }
+      }
+      uid="patterns">
+      <Image
+        source={1} />
+      <Image
+        source={1} />
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      uid="contentContainer">
+      <ScrollView>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "paddingHorizontal": 16,
+            }
+          }>
+          <View>
+            <View
+              style={
+                Object {
+                  "marginVertical": 24,
+                }
+              }>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#fff",
+                      "borderRadius": 6,
+                      "flex": 1,
+                      "paddingBottom": 17,
+                      "paddingHorizontal": 24,
+                      "paddingTop": 14,
+                    },
+                    undefined,
+                  ]
+                }>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "fontFamily": "Brandon Text",
+                        "fontSize": 13,
+                        "textAlign": "center",
+                      },
+                      Array [
+                        Object {
+                          "fontSize": 16,
+                          "textAlign": "left",
+                        },
+                        undefined,
+                      ],
+                    ]
+                  }>
+                  Sputnik sickles found in the seats
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </ScrollView>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "#dfe5e6",
+            "borderTopWidth": 1,
+            "flexDirection": "row",
+            "padding": 16,
+          }
+        }>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#fff",
+                "borderRadius": 6,
+                "flex": 1,
+                "paddingBottom": 17,
+                "paddingHorizontal": 24,
+                "paddingTop": 14,
+              },
+              Object {
+                "paddingBottom": 12,
+                "paddingTop": 10,
+              },
+            ]
+          }>
+          <TextInput
+            multiline={true}
+            onTextChange={[Function]}
+            placeholder="Write something"
+            placeholderTextColor={undefined}
+            style={
+              Object {
+                "borderBottomWidth": 0,
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 16,
+                "padding": 0,
+              }
+            }
+            uid="sendInput"
+            underlineColorAndroid="transparent" />
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#f77040",
+              "borderRadius": 40,
+              "height": 40,
+              "marginLeft": 12,
+              "width": 40,
+            }
+          }
+          testID={undefined}>
+          <Image
+            source={1}
+            style={
+              Object {
+                "padding": 8,
+              }
+            } />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Messages should render outbound messages 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#eff2f2",
+          "position": "absolute",
+        }
+      }
+      uid="patterns">
+      <Image
+        source={1} />
+      <Image
+        source={1} />
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      uid="contentContainer">
+      <ScrollView>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "paddingHorizontal": 16,
+            }
+          }>
+          <View>
+            <View
+              style={
+                Object {
+                  "marginVertical": 24,
+                }
+              }>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#fff",
+                      "borderRadius": 6,
+                      "flex": 1,
+                      "paddingBottom": 17,
+                      "paddingHorizontal": 24,
+                      "paddingTop": 14,
+                    },
+                    Object {
+                      "backgroundColor": "#00aa9f",
+                    },
+                  ]
+                }>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "fontFamily": "Brandon Text",
+                        "fontSize": 13,
+                        "textAlign": "center",
+                      },
+                      Array [
+                        Object {
+                          "fontSize": 16,
+                          "textAlign": "left",
+                        },
+                        Object {
+                          "color": "#fff",
+                        },
+                      ],
+                    ]
+                  }>
+                  Sputnik sickles found in the seats
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </ScrollView>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "#dfe5e6",
+            "borderTopWidth": 1,
+            "flexDirection": "row",
+            "padding": 16,
+          }
+        }>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#fff",
+                "borderRadius": 6,
+                "flex": 1,
+                "paddingBottom": 17,
+                "paddingHorizontal": 24,
+                "paddingTop": 14,
+              },
+              Object {
+                "paddingBottom": 12,
+                "paddingTop": 10,
+              },
+            ]
+          }>
+          <TextInput
+            multiline={true}
+            onTextChange={[Function]}
+            placeholder="Write something"
+            placeholderTextColor={undefined}
+            style={
+              Object {
+                "borderBottomWidth": 0,
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 16,
+                "padding": 0,
+              }
+            }
+            uid="sendInput"
+            underlineColorAndroid="transparent" />
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#f77040",
+              "borderRadius": 40,
+              "height": 40,
+              "marginLeft": 12,
+              "width": 40,
+            }
+          }
+          testID={undefined}>
+          <Image
+            source={1}
+            style={
+              Object {
+                "padding": 8,
+              }
+            } />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Messages should render sending messages 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#eff2f2",
+          "position": "absolute",
+        }
+      }
+      uid="patterns">
+      <Image
+        source={1} />
+      <Image
+        source={1} />
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+      uid="contentContainer">
+      <ScrollView>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "paddingHorizontal": 16,
+            }
+          }>
+          <View>
+            <View />
+          </View>
+        </View>
+      </ScrollView>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "#dfe5e6",
+            "borderTopWidth": 1,
+            "flexDirection": "row",
+            "padding": 16,
+          }
+        }>
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#fff",
+                "borderRadius": 6,
+                "flex": 1,
+                "paddingBottom": 17,
+                "paddingHorizontal": 24,
+                "paddingTop": 14,
+              },
+              Object {
+                "paddingBottom": 12,
+                "paddingTop": 10,
+              },
+            ]
+          }>
+          <TextInput
+            multiline={true}
+            onTextChange={[Function]}
+            placeholder="Write something"
+            placeholderTextColor={undefined}
+            style={
+              Object {
+                "borderBottomWidth": 0,
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 16,
+                "padding": 0,
+              }
+            }
+            uid="sendInput"
+            underlineColorAndroid="transparent" />
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#f77040",
+              "borderRadius": 40,
+              "height": 40,
+              "marginLeft": 12,
+              "width": 40,
+            }
+          }
+          testID={undefined}>
+          <Image
+            source={1}
+            style={
+              Object {
+                "padding": 8,
+              }
+            } />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

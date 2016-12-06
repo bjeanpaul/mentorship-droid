@@ -1,49 +1,27 @@
-import { fromPairs } from 'lodash';
-import React, { PropTypes } from 'react';
-import { View } from 'react-native';
-
-import { Text } from 'src/components';
+import { delegate } from 'src/helpers';
 import * as constants from 'src/constants/messages';
-import styles from './styles';
-import Bubble from './Bubble';
+import SendingMessage from './SendingMessage';
+import FailedMessage from './FailedMessage';
+import InboundMessage from './InboundMessage';
+import OutboundMessage from './OutboundMessage';
 
 
-const messageTypeStyles = fromPairs([
-  [constants.MESSAGE_DIRECTION_OUTBOUND, {
-    bubble: styles.bubbleOutbound,
-    messageContent: styles.messageContentOutbound,
-  }],
-  [constants.MESSAGE_DIRECTION_INBOUND, {
-    bubble: styles.bubbleInbound,
-    messageContent: styles.messageContentInbound,
-  }],
+const PendingMessage = delegate('details.status', [
+  [constants.PENDING_MESSAGE_STATUS_SENDING, SendingMessage],
+  [constants.PENDING_MESSAGE_STATUS_FAILED, FailedMessage],
 ]);
 
 
-const Message = ({
-  details: { direction },
-  content,
-}) => {
-  const directionStyles = messageTypeStyles[direction];
-
-  return (
-    <View style={styles.message}>
-      <Bubble style={directionStyles.bubble}>
-        <Text style={[styles.messageContent, directionStyles.messageContent]}>
-          {content}
-        </Text>
-      </Bubble>
-    </View>
-  );
-};
+const CompleteMessage = delegate('details.direction', [
+  [constants.MESSAGE_DIRECTION_INBOUND, InboundMessage],
+  [constants.MESSAGE_DIRECTION_OUTBOUND, OutboundMessage],
+]);
 
 
-Message.propTypes = {
-  content: PropTypes.string,
-  details: PropTypes.shape({
-    direction: PropTypes.string.isRequired,
-  }).isRequired,
-};
+const Message = delegate('type', [
+  [constants.MESSAGE_TYPE_PENDING, PendingMessage],
+  [constants.MESSAGE_TYPE_COMPLETE, CompleteMessage],
+]);
 
 
 export default Message;
