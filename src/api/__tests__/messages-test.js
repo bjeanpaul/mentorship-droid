@@ -63,7 +63,10 @@ describe('api/messages', () => {
 
       expect(setMessageSending(msg)).toEqual(normalize({
         ...msg,
-        status: constants.MESSAGE_STATUS_SENDING,
+        details: {
+          ...msg.details,
+          status: constants.MESSAGE_STATUS_SENDING,
+        },
       }, PendingMessage));
     });
   });
@@ -74,7 +77,10 @@ describe('api/messages', () => {
 
       expect(setMessageFailed(msg)).toEqual(normalize({
         ...msg,
-        status: constants.MESSAGE_STATUS_FAILED,
+        details: {
+          ...msg.details,
+          status: constants.MESSAGE_STATUS_SENDING,
+        },
       }, PendingMessage));
     });
   });

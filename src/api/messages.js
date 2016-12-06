@@ -1,4 +1,4 @@
-import { uniqueId } from 'lodash';
+import { uniqueId, merge } from 'lodash';
 import { arrayOf, normalize } from 'normalizr';
 
 import request from 'src/api/request';
@@ -39,10 +39,8 @@ export const createPendingMessage = (data = {}) => ({
 });
 
 
-const setMessage = status => msg => normalize({
-  ...msg,
-  status,
-}, PendingMessage);
+const setMessage = status => msg =>
+  normalize(merge({}, msg, { details: { status } }), PendingMessage);
 
 
 export const setMessageSending = setMessage(constants.MESSAGE_STATUS_SENDING);
