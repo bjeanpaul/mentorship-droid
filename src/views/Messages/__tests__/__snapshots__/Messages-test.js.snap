@@ -321,7 +321,55 @@ exports[`Messages should render failed messages 1`] = `
             }
           }>
           <View>
-            <View />
+            <View
+              style={
+                Object {
+                  "marginVertical": 24,
+                }
+              }>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#fff",
+                      "borderRadius": 6,
+                      "flex": 1,
+                      "paddingBottom": 17,
+                      "paddingHorizontal": 24,
+                      "paddingTop": 14,
+                    },
+                    Object {
+                      "backgroundColor": "#c0cbcc",
+                    },
+                  ]
+                }>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "fontFamily": "Brandon Text",
+                        "fontSize": 13,
+                        "textAlign": "center",
+                      },
+                      Array [
+                        Object {
+                          "fontSize": 16,
+                          "textAlign": "left",
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.3)",
+                        },
+                      ],
+                    ]
+                  }>
+                  I wrestled a bear once
+                </Text>
+              </View>
+            </View>
           </View>
         </View>
       </ScrollView>
@@ -809,7 +857,55 @@ exports[`Messages should render sending messages 1`] = `
             }
           }>
           <View>
-            <View />
+            <View
+              style={
+                Object {
+                  "marginVertical": 24,
+                }
+              }>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#fff",
+                      "borderRadius": 6,
+                      "flex": 1,
+                      "paddingBottom": 17,
+                      "paddingHorizontal": 24,
+                      "paddingTop": 14,
+                    },
+                    Object {
+                      "backgroundColor": "#c0cbcc",
+                    },
+                  ]
+                }>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "fontFamily": "Brandon Text",
+                        "fontSize": 13,
+                        "textAlign": "center",
+                      },
+                      Array [
+                        Object {
+                          "fontSize": 16,
+                          "textAlign": "left",
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.3)",
+                        },
+                      ],
+                    ]
+                  }>
+                  I wrestled a bear once
+                </Text>
+              </View>
+            </View>
           </View>
         </View>
       </ScrollView>

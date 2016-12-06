@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 import { Text } from 'src/components';
-import baseStyles, { themes } from './styles';
+import baseStyles, { themes, states } from './styles';
 import Bubble from 'src/views/Messages/Bubble';
 
 
@@ -18,6 +18,7 @@ const MessageBubble = ({
 
 
 MessageBubble.themes = themes;
+MessageBubble.states = states;
 
 
 MessageBubble.propTypes = {
