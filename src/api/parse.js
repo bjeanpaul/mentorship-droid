@@ -61,18 +61,16 @@ export const parseActivityListResults = flow(parseResults, parseActivities);
 export const parseSendMessageResult = data => {
   const {
     id,
-    direction,
     timeSent: timestamp,
     content,
     ...details,
   } = data;
 
   return {
+    type: constants.MESSAGE_TYPE_COMPLETE,
     id,
-    direction,
     content,
     timestamp,
-    status: constants.MESSAGE_STATUS_SENT,
     details,
   };
 };
