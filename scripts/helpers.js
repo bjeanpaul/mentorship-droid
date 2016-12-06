@@ -125,6 +125,12 @@ export const fakeMessage = data => merge(({
 }, data));
 
 
+export const fakePendingMessage = data => merge(api.createPendingMessage({
+  id: 3,
+  content: 'I wrestled a bear once',
+}), data);
+
+
 export const fakeState = (overrides = {}) => merge({}, {
   auth: {
     profileId: 23,
@@ -155,6 +161,12 @@ export const fakeState = (overrides = {}) => merge({}, {
     },
     callNotes: {
       100: fakeCallNote({ id: 100 }),
+    },
+    messages: {
+      3: fakeMessage({ id: 3 }),
+    },
+    pendingMessage: {
+      4: fakePendingMessage({ id: 4 }),
     },
   },
 }, overrides);
