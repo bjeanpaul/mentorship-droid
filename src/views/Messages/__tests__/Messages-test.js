@@ -13,18 +13,18 @@ describe('Messages', () => {
         groups={[{
           messages: [
             fakeMessage({
-              type: constants.MESSAGE_TYPE_OUTBOUND,
+              direction: constants.MESSAGE_TYPE_OUTBOUND,
               content: 'Sputnik sickles found in the seats',
             }),
             fakeMessage({
-              type: constants.MESSAGE_TYPE_INBOUND,
+              direction: constants.MESSAGE_TYPE_INBOUND,
               content: 'I lost my liquid tongue for the wet pen',
             }),
           ],
         }, {
           messages: [
             fakeMessage({
-              type: constants.MESSAGE_TYPE_OUTBOUND,
+              direction: constants.MESSAGE_TYPE_OUTBOUND,
               content: 'Let a stool pigeon escort those who contort',
             }),
           ],
