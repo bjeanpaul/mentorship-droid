@@ -20,7 +20,7 @@ export const states = {
       backgroundColor: colors.MESSAGE_BUBBLE_BG_PENDING,
     },
     content: {
-      color: colors.MESSAGE_BUBBLE_TEXT_PENDING,
+      color: colors.TEXT_LIGHT,
     },
   }),
 };

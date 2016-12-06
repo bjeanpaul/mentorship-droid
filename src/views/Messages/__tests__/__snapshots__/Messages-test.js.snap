@@ -361,7 +361,7 @@ exports[`Messages should render failed messages 1`] = `
                           "textAlign": "left",
                         },
                         Object {
-                          "color": "rgba(0, 0, 0, 0.3)",
+                          "color": "#fff",
                         },
                       ],
                     ]
@@ -897,7 +897,7 @@ exports[`Messages should render sending messages 1`] = `
                           "textAlign": "left",
                         },
                         Object {
-                          "color": "rgba(0, 0, 0, 0.3)",
+                          "color": "#fff",
                         },
                       ],
                     ]
