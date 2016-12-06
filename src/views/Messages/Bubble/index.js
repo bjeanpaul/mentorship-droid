@@ -7,7 +7,7 @@ const Bubble = ({
   children,
   style,
 }) => (
-  <View style={[styles.bubble, style]}>
+  <View style={[styles.container, style]}>
     {children}
   </View>
 );

@@ -1,29 +1,15 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { View } from 'react-native';
 
-import { Text } from 'src/components';
 import styles from './styles';
-import Bubble from './Bubble';
+import MessageBubble from './MessageBubble';
 
 
-const InboundMessage = ({
-  content,
-}) => {
-  return (
-    <View style={styles.message}>
-      <Bubble style={styles.bubbleInbound}>
-        <Text style={[styles.messageContent, styles.messageContentInbound]}>
-          {content}
-        </Text>
-      </Bubble>
-    </View>
-  );
-};
-
-
-InboundMessage.propTypes = {
-  content: PropTypes.string,
-};
+const InboundMessage = props => (
+  <View style={styles.message}>
+    <MessageBubble {...props} />
+  </View>
+);
 
 
 export default InboundMessage;
