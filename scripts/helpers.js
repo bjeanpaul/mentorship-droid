@@ -114,7 +114,7 @@ export const fakeCallNote = data => ({
 
 export const fakeMessage = data => ({
   id: 21,
-  type: MESSAGE_TYPE_INBOUND,
+  direction: MESSAGE_TYPE_INBOUND,
   timestamp: '2016-11-30T09:43:20.311Z',
   content: 'Sputnik sickles found in the seats',
   details: {},
