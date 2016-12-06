@@ -55,15 +55,15 @@ const messageTypeStyles = fromPairs([
 
 
 const Message = ({
-  type,
+  direction,
   content,
 }) => {
-  const typeStyles = messageTypeStyles[type];
+  const directionStyles = messageTypeStyles[direction];
 
   return (
     <View style={styles.message}>
-      <Bubble style={typeStyles.bubble}>
-        <Text style={[styles.messageContent, typeStyles.messageContent]}>
+      <Bubble style={directionStyles.bubble}>
+        <Text style={[styles.messageContent, directionStyles.messageContent]}>
           {content}
         </Text>
       </Bubble>
@@ -148,7 +148,7 @@ Bubble.propTypes = {
 
 
 Message.propTypes = {
-  type: PropTypes.string,
+  direction: PropTypes.string,
   content: PropTypes.string,
 };
 
