@@ -31,9 +31,7 @@ describe('MessagesContainer', () => {
     };
 
     expect(mapStateToProps(state)).toEqual(jasmine.objectContaining({
-      groups: [{
-        messages: [msg3, msg2, msg1],
-      }],
+      messages: [msg3, msg2, msg1],
     }));
   });
 });
