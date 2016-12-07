@@ -95,9 +95,9 @@ export const groupByDate = (items, unit, order, key) => {
     .toISOString());
 
   res = toPairs(res)
-    .map(([date, items]) => ({
+    .map(([date, groupItems]) => ({
       date,
-      items,
+      items: groupItems,
     }));
 
   return orderBy(res, ['date'], [order]);
