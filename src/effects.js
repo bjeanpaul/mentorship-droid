@@ -6,7 +6,9 @@ import { enter } from 'src/actions/entry';
 import { load } from 'src/actions/sync';
 import { sequence } from 'src/actionHelpers';
 import { setupNotifications } from 'src/actions/notifications';
+import { listMessages } from 'src/actions/messages';
 import { EVENT_POLL_TICK } from 'src/constants/events';
+import { NEW_MESSAGE_RECEIVED } from 'src/constants/notifications';
 
 import { SCHEDULED_CALL_CREATE_SUCCESS } from 'src/constants/schedule';
 import { listEvents, startEventPolling } from 'src/actions/events';
@@ -18,4 +20,5 @@ export default fromPairs([
   [ONBOARDING_SETUP_PROFILE_SUCCESS, load],
   [SCHEDULED_CALL_CREATE_SUCCESS, listEvents],
   [EVENT_POLL_TICK, listEvents],
+  [NEW_MESSAGE_RECEIVED, listMessages],
 ]);
