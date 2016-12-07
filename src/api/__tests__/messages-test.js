@@ -2,7 +2,7 @@ jest.mock('src/api/request');
 
 import { identity } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
-import { fakeAuth, fakeMessage } from 'app/scripts/helpers';
+import { fakeAuth } from 'app/scripts/helpers';
 import request from 'src/api/request';
 import { Message, PendingMessage } from 'src/api/schemas';
 import { parseResults, parseSendMessageResult } from 'src/api/parse';
@@ -42,20 +42,18 @@ describe('api/messages', () => {
         content: 'Set tall in your just beyond merch booth bound chest',
       });
 
-      const { parse, ...res } = sendMessage(msg, fakeAuth());
+      const res = sendMessage(msg, fakeAuth());
 
       expect(res).toEqual({
         url: '/chat_message/',
         method: 'POST',
         schema: arrayOf(Message),
         auth: fakeAuth(),
+        parse: parseSendMessageResult,
         data: {
           content: 'Set tall in your just beyond merch booth bound chest',
         },
       });
-
-      expect(parse(fakeMessage()))
-        .toEqual(parseSendMessageResult(msg)(fakeMessage()));
     });
   });
 
@@ -65,7 +63,10 @@ describe('api/messages', () => {
 
       expect(setMessageSending(msg)).toEqual(normalize({
         ...msg,
-        status: constants.MESSAGE_STATUS_SENDING,
+        details: {
+          ...msg.details,
+          status: constants.PENDING_MESSAGE_STATUS_SENDING,
+        },
       }, PendingMessage));
     });
   });
@@ -76,7 +77,10 @@ describe('api/messages', () => {
 
       expect(setMessageFailed(msg)).toEqual(normalize({
         ...msg,
-        status: constants.MESSAGE_STATUS_FAILED,
+        details: {
+          ...msg.details,
+          status: constants.PENDING_MESSAGE_STATUS_FAILED,
+        },
       }, PendingMessage));
     });
   });

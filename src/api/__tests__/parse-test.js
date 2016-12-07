@@ -1,8 +1,8 @@
 import { makeGradient } from 'src/helpers';
-import { fakeCategory, fakeActivity, fakeMessage } from 'app/scripts/helpers';
+import { fakeCategory, fakeActivity } from 'app/scripts/helpers';
 import colors from 'src/constants/colors';
+import * as constants from 'src/constants/messages';
 import config from 'src/config';
-import { createPendingMessage } from 'src/api';
 
 import {
   parseResults,
@@ -96,13 +96,22 @@ describe('api/parse', () => {
 
   describe('parseSendMessageResult', () => {
     it('should assign the pending message id', () => {
-      const msg = fakeMessage();
-      const pendingMsg = createPendingMessage();
+      const msg = {
+        id: 21,
+        timeSent: '2016-11-30T09:43:20.311Z',
+        content: 'foo',
+        otherField: 'bar',
+      };
 
-      expect(parseSendMessageResult(pendingMsg)(msg))
+      expect(parseSendMessageResult(msg))
         .toEqual({
-          ...msg,
-          pendingId: pendingMsg.id,
+          id: 21,
+          type: constants.MESSAGE_TYPE_COMPLETE,
+          timestamp: '2016-11-30T09:43:20.311Z',
+          content: 'foo',
+          details: {
+            otherField: 'bar',
+          },
         });
     });
   });

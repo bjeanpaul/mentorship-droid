@@ -43,27 +43,27 @@ const MessageGroup = ({
 
 
 const messageTypeStyles = fromPairs([
-  [constants.MESSAGE_TYPE_SENT, {
-    bubble: styles.bubbleSent,
-    messageContent: styles.messageContentSent,
+  [constants.MESSAGE_DIRECTION_OUTBOUND, {
+    bubble: styles.bubbleOutbound,
+    messageContent: styles.messageContentOutbound,
   }],
-  [constants.MESSAGE_TYPE_RECEIVED, {
-    bubble: styles.bubbleReceived,
-    messageContent: styles.messageContentReceived,
+  [constants.MESSAGE_DIRECTION_INBOUND, {
+    bubble: styles.bubbleInbound,
+    messageContent: styles.messageContentInbound,
   }],
 ]);
 
 
 const Message = ({
-  type,
+  details: { direction },
   content,
 }) => {
-  const typeStyles = messageTypeStyles[type];
+  const directionStyles = messageTypeStyles[direction];
 
   return (
     <View style={styles.message}>
-      <Bubble style={typeStyles.bubble}>
-        <Text style={[styles.messageContent, typeStyles.messageContent]}>
+      <Bubble style={directionStyles.bubble}>
+        <Text style={[styles.messageContent, directionStyles.messageContent]}>
           {content}
         </Text>
       </Bubble>
@@ -148,7 +148,9 @@ Bubble.propTypes = {
 
 
 Message.propTypes = {
-  type: PropTypes.string,
+  details: PropTypes.shape({
+    direction: PropTypes.string.isRequired,
+  }).isRequired,
   content: PropTypes.string,
 };
 

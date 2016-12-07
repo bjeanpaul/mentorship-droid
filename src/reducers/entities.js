@@ -1,7 +1,14 @@
-import { includes } from 'lodash';
-import merge from 'lodash/merge';
+import { includes, omit, merge } from 'lodash';
 import { AUTH_LOGOUT } from 'src/constants/auth';
+import { MESSAGE_SEND_SUCCESS } from 'src/constants/messages';
 import { ACTIONS_WITH_ENTITIES } from 'src/constants/entities';
+
+
+const mergeActionEntities = (state, action) => {
+  return includes(ACTIONS_WITH_ENTITIES, action.type)
+    ? merge({}, state, action.payload.entities)
+    : state;
+};
 
 
 const entitiesReducer = (state = {
@@ -11,6 +18,7 @@ const entitiesReducer = (state = {
   callNotes: {},
   calls: {},
   messages: {},
+  pendingMessages: {},
 }, action) => {
   switch (action.type) {
     case AUTH_LOGOUT:
@@ -19,10 +27,18 @@ const entitiesReducer = (state = {
         activities: {},
         categories: {},
       };
+
+    case MESSAGE_SEND_SUCCESS: {
+      const nextState = {
+        ...state,
+        pendingMessages: omit(state.pendingMessages, action.payload.pendingId),
+      };
+
+      return mergeActionEntities(nextState, action);
+    }
+
     default:
-      return includes(ACTIONS_WITH_ENTITIES, action.type)
-        ? merge(state, action.payload.entities)
-        : state;
+      return mergeActionEntities(state, action);
   }
 };
 

@@ -24,7 +24,10 @@ export const sendMessage = data => async (dispatch, { auth }) => {
   try {
     dispatch({
       type: constants.MESSAGE_SEND_SUCCESS,
-      payload: (await api.sendMessage(msg, auth)),
+      payload: {
+        ...await api.sendMessage(msg, auth),
+        pendingId: msg.id,
+      },
     });
   } catch (e) {
     dispatch({

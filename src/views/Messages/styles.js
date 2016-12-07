@@ -19,14 +19,14 @@ export default StyleSheet.create({
     borderRadius: 6,
     backgroundColor: colors.BG_DEFAULT,
   },
-  bubbleSent: {
+  bubbleOutbound: {
     backgroundColor: colors.MESSAGE_SENT_BG,
   },
   messageContent: {
     fontSize: 16,
     textAlign: 'left',
   },
-  messageContentSent: {
+  messageContentOutbound: {
     color: colors.TEXT_LIGHT,
   },
   send: {

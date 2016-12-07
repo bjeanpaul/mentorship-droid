@@ -5,7 +5,10 @@ import { staticAction } from 'src/actionHelpers';
 import { createStack } from 'src/navigationHelpers';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/events';
 import * as api from 'src/api';
-
+import {
+  MESSAGE_TYPE_COMPLETE,
+  MESSAGE_DIRECTION_INBOUND,
+} from 'src/constants/messages';
 
 export const capture = async (fn, ...xargs) => {
   const res = [];
@@ -111,13 +114,15 @@ export const fakeCallNote = data => ({
 });
 
 
-export const fakeMessage = data => ({
+export const fakeMessage = data => merge(({
   id: 21,
-  type: 'RECEIVED',
-  timeSent: '2016-11-30T09:43:20.311Z',
+  type: MESSAGE_TYPE_COMPLETE,
+  timestamp: '2016-11-30T09:43:20.311Z',
   content: 'Sputnik sickles found in the seats',
-  ...data,
-});
+  details: {
+    direction: MESSAGE_DIRECTION_INBOUND,
+  },
+}, data));
 
 
 export const fakeState = (overrides = {}) => merge({}, {
@@ -173,7 +178,7 @@ export const fakeScheduledCallData = (data = { id: 23 }) => (
   normalize(data, api.ScheduledCall));
 
 
-export const fakeMessageData = (data = [fakeMessage()]) => (
+export const fakeMessageData = (data = fakeMessage()) => (
     normalize(data, api.Message));
 
 

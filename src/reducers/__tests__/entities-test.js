@@ -1,11 +1,22 @@
 jest.mock('src/constants/entities', () => ({
   __esModule: true,
-  ACTIONS_WITH_ENTITIES: ['ACTION_WITH_ENTITIES'],
+  ACTIONS_WITH_ENTITIES: [
+    'ACTION_WITH_ENTITIES',
+    'MESSAGE_SEND_SUCCESS',
+  ],
 }));
 
+import { createPendingMessage } from 'src/api';
 import reduce from 'src/reducers/entities';
 import { logout } from 'src/actions/auth';
-import { fakeCategory, fakeActivity } from 'app/scripts/helpers';
+import { MESSAGE_SEND_SUCCESS } from 'src/constants/messages';
+
+import {
+  fakeCategory,
+  fakeActivity,
+  fakeMessage,
+  fakeMessageData,
+} from 'app/scripts/helpers';
 
 
 describe('reducers/entities', () => {
@@ -66,6 +77,49 @@ describe('reducers/entities', () => {
 
       expect(reduce(state, logout()))
         .toEqual(jasmine.objectContaining({ activities: {} }));
+    });
+  });
+
+  describe('MESSAGE_SEND_SUCCESS', () => {
+    it('should remove the relevant pending message', () => {
+      const state = {
+        pendingMessages: {
+          23: createPendingMessage(),
+        },
+      };
+
+      const action = {
+        type: MESSAGE_SEND_SUCCESS,
+        payload: {
+          ...fakeMessageData(),
+          pendingId: 23,
+        },
+      };
+
+      const nextState = reduce(state, action);
+      expect(23 in nextState.pendingMessages).toBe(false);
+    });
+
+    it('should merge in the message entity in the payload', () => {
+      const state = {
+        pendingMessages: {
+          23: createPendingMessage(),
+        },
+        messages: {},
+      };
+
+      const msg = fakeMessage({ id: 21 });
+
+      const action = {
+        type: MESSAGE_SEND_SUCCESS,
+        payload: {
+          ...fakeMessageData(msg),
+          pendingId: 23,
+        },
+      };
+
+      const nextState = reduce(state, action);
+      expect(nextState.messages[21]).toEqual(msg);
     });
   });
 });
