@@ -1,3 +1,4 @@
+import moment from 'moment';
 import { mock } from 'app/scripts/helpers';
 import { identity, noop } from 'lodash';
 
@@ -9,6 +10,8 @@ import {
   errorSink,
   pipeline,
   delegate,
+  formatDateRelatively,
+  groupByDate,
 } from 'src/helpers';
 
 
@@ -143,6 +146,60 @@ describe('helpers', () => {
         value: 21,
       }))
       .toEqual(42);
+    });
+  });
+
+  describe('formatDateRelatively', () => {
+    it('should format the dates nicely', () => {
+      const date = Date.now();
+      expect(formatDateRelatively(date)).toEqual('Today');
+
+      expect(formatDateRelatively(moment(date).subtract(1, 'day')))
+        .toEqual('Yesterday');
+
+      expect(formatDateRelatively(moment(date).subtract(2, 'day')))
+        .toEqual('Last Sunday');
+
+      expect(formatDateRelatively(moment(date).subtract(6, 'day')))
+        .toEqual('Last Wednesday');
+
+      expect(formatDateRelatively(moment(date).subtract(30, 'day')))
+        .toEqual('Sunday, 28 August');
+    });
+  });
+
+  describe('groupByDate', () => {
+    it('should group events by the given date unit', () => {
+      const item1 = {
+        id: 1,
+        date: '2016-11-02T01:43:20.311Z',
+      };
+
+      const item2 = {
+        id: 2,
+        date: '2016-11-02T02:43:20.311Z',
+      };
+
+      const item3 = {
+        id: 3,
+        date: '2016-11-03T01:43:20.311Z',
+      };
+
+      const item4 = {
+        id: 4,
+        date: '2016-11-03T02:43:20.311Z',
+      };
+
+      const items = [item1, item2, item3, item4];
+
+      expect(groupByDate(items, 'day', 'desc', 'date'))
+        .toEqual([{
+          date: '2016-11-02T22:00:00.000Z',
+          items: [item4, item3],
+        }, {
+          date: '2016-11-01T22:00:00.000Z',
+          items: [item2, item1],
+        }]);
     });
   });
 });
