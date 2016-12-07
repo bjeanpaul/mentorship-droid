@@ -8,7 +8,7 @@ import { sequence } from 'src/actionHelpers';
 import { setupNotifications } from 'src/actions/notifications';
 import { listRecentMessages } from 'src/actions/messages';
 import { EVENT_POLL_TICK } from 'src/constants/events';
-import { NEW_MESSAGE_RECEIVED } from 'src/constants/notifications';
+import { NEW_MESSAGE_RECEIVED, MESSAGE_POLL_TICK } from 'src/constants/notifications';
 
 import { SCHEDULED_CALL_CREATE_SUCCESS } from 'src/constants/schedule';
 import { listEvents, startEventPolling } from 'src/actions/events';
@@ -21,4 +21,5 @@ export default fromPairs([
   [SCHEDULED_CALL_CREATE_SUCCESS, listEvents],
   [EVENT_POLL_TICK, listEvents],
   [NEW_MESSAGE_RECEIVED, listRecentMessages],
+  [MESSAGE_POLL_TICK, listRecentMessages],
 ]);
