@@ -1,7 +1,7 @@
-import { noop } from 'lodash';
 import { connect } from 'react-redux';
 import Messages from 'src/views/Messages';
 import { getMessages } from 'src/store/helpers';
+import { sendMessage } from 'src/actions/messages';
 
 
 // TODO group messages
@@ -13,7 +13,7 @@ export const mapStateToProps = state => ({
 
 
 const propsToActions = {
-  onSendPress: noop,  // TODO
+  onSendPress: sendMessage,
 };
 
 

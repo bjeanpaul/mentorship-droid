@@ -1,31 +1,38 @@
 import { mapStateToProps } from 'src/containers/MessagesContainer';
-import { fakeState, fakeMessage } from 'app/scripts/helpers';
+import { fakeState, fakeMessage, fakePendingMessage } from 'app/scripts/helpers';
 
 
 describe('MessagesContainer', () => {
   it('should provide messages', () => {
-    const message1 = fakeMessage({
+    const state = fakeState();
+
+    const msg1 = fakeMessage({
       id: 1,
-      timeSent: '2016-11-30T09:43:20.311Z',
+      timestamp: '2016-11-29T09:43:20.311Z',
     });
 
-    const message2 = fakeMessage({
+    const msg2 = fakeMessage({
       id: 2,
-      timeSent: '2016-11-31T09:43:20.311Z',
+      timestamp: '2016-11-30T09:43:20.311Z',
     });
 
-    const state = fakeState({
-      entities: {
-        messages: {
-          1: message1,
-          2: message2,
-        },
-      },
+    const msg3 = fakePendingMessage({
+      id: 3,
+      timestamp: '2016-11-31T09:43:20.311Z',
     });
+
+    state.entities.messages = {
+      1: msg1,
+      2: msg2,
+    };
+
+    state.entities.pendingMessages = {
+      3: msg3,
+    };
 
     expect(mapStateToProps(state)).toEqual(jasmine.objectContaining({
       groups: [{
-        messages: [message1, message2],
+        messages: [msg3, msg2, msg1],
       }],
     }));
   });

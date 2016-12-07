@@ -8,6 +8,7 @@ import {
   makeGradient,
   errorSink,
   pipeline,
+  delegate,
 } from 'src/helpers';
 
 
@@ -121,6 +122,27 @@ describe('helpers', () => {
       ]);
 
       expect(fn(2, 3)).toEqual(15);
+    });
+  });
+
+  describe('delegate', () => {
+    it('should delegate to the matching function', () => {
+      const fn = delegate('a.b', [
+        ['FOO', ({ value }) => value + 1],
+        ['BAR', ({ value }) => value * 2],
+      ]);
+
+      expect(fn({
+        a: { b: 'FOO' },
+        value: 23,
+      }))
+      .toEqual(24);
+
+      expect(fn({
+        a: { b: 'BAR' },
+        value: 21,
+      }))
+      .toEqual(42);
     });
   });
 });

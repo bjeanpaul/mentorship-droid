@@ -1,5 +1,5 @@
 import convert from 'color-convert';
-import { find, isUndefined, omitBy, isNull } from 'lodash';
+import { find, isUndefined, omitBy, isNull, get, fromPairs } from 'lodash';
 
 
 export const makeGradient = (start, end, length) => {
@@ -53,3 +53,9 @@ export const errorSink = (store, actions, fallback) => e =>
 
 export const pipeline = fns => (v, ...args) =>
   fns.reduce((res, fn) => fn(res, ...args), v);
+
+
+export const delegate = (path, mappings) => {
+  const lookup = fromPairs(mappings);
+  return props => lookup[get(props, path)](props);
+};
