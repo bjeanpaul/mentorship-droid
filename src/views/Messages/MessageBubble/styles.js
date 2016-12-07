@@ -27,6 +27,9 @@ export const states = {
 
 
 export default StyleSheet.create({
+  bubble: {
+    marginBottom: 16,
+  },
   content: {
     fontSize: 16,
     textAlign: 'left',

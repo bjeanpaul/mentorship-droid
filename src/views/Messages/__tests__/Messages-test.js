@@ -91,4 +91,28 @@ describe('Messages', () => {
 
     expect(onSendPress.mock.calls).toEqual([[{ content: '123' }]]);
   });
+
+  it('should call onRetryPress() with the relevant message retry when pressed', () => {
+    const onRetryPress = jest.fn();
+
+    const msg = fakePendingMessage({
+      details: { status: constants.PENDING_MESSAGE_STATUS_FAILED },
+    });
+
+    const el = shallow(createComponent({
+      onRetryPress,
+      messages: [msg],
+    }));
+
+    const messageEl = el
+      .find('MessageGroup')
+      .shallow()
+      .find('Message')
+      .shallow();
+
+    messageEl.findWhere(uidEquals('retry'))
+      .simulate('press');
+
+    expect(onRetryPress.mock.calls).toEqual([[msg]]);
+  });
 });

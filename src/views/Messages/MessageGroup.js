@@ -10,10 +10,11 @@ import styles from './styles';
 const MessageGroup = ({
   date,
   items,
+  ...props
 }) => (
   <View>
     <Text style={styles.groupDate}>{formatDateRelatively(date)}</Text>
-    {items.map(msg => <Message key={msg.id} {...msg} />)}
+    {items.map(msg => <Message key={msg.id} {...props} {...msg} />)}
   </View>
 );
 

@@ -11,6 +11,7 @@ import { groupByDate } from 'src/helpers';
 const Messages = ({
   messages,
   onSendPress,
+  onRetryPress,
 }) => {
   const groups = groupByDate(messages, 'day', 'desc', 'timestamp');
 
@@ -19,7 +20,14 @@ const Messages = ({
       <PatternBackground>
         <ScrollView>
           <View style={styles.messages}>
-            {groups.map(group => <MessageGroup key={group.date} {...group} />)}
+            {
+              groups.map(group =>
+                <MessageGroup
+                  key={group.date}
+                  onRetryPress={onRetryPress}
+                  {...group}
+                />)
+            }
           </View>
         </ScrollView>
 

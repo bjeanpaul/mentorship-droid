@@ -11,6 +11,7 @@ export const mapStateToProps = state => ({
 
 const propsToActions = {
   onSendPress: sendMessage,
+  onRetryPress: sendMessage,
 };
 
 

@@ -85,9 +85,14 @@ exports[`Messages should render 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    Object {
-                      "backgroundColor": "#00aa9f",
-                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
                   ]
                 }>
                 <Text
@@ -134,7 +139,12 @@ exports[`Messages should render 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    undefined,
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      undefined,
+                    ],
                   ]
                 }>
                 <Text
@@ -179,9 +189,14 @@ exports[`Messages should render 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    Object {
-                      "backgroundColor": "#00aa9f",
-                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
                   ]
                 }>
                 <Text
@@ -382,9 +397,14 @@ exports[`Messages should render failed messages 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    Object {
-                      "backgroundColor": "#00aa9f",
-                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
                   ]
                 }>
                 <Text
@@ -431,7 +451,12 @@ exports[`Messages should render failed messages 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    undefined,
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      undefined,
+                    ],
                   ]
                 }>
                 <Text
@@ -476,9 +501,14 @@ exports[`Messages should render failed messages 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    Object {
-                      "backgroundColor": "#00aa9f",
-                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
                   ]
                 }>
                 <Text
@@ -679,7 +709,12 @@ exports[`Messages should render inbound messages 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    undefined,
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      undefined,
+                    ],
                   ]
                 }>
                 <Text
@@ -878,9 +913,14 @@ exports[`Messages should render outbound messages 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    Object {
-                      "backgroundColor": "#00aa9f",
-                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
                   ]
                 }>
                 <Text
@@ -927,7 +967,12 @@ exports[`Messages should render outbound messages 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    undefined,
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      undefined,
+                    ],
                   ]
                 }>
                 <Text
@@ -972,9 +1017,14 @@ exports[`Messages should render outbound messages 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    Object {
-                      "backgroundColor": "#00aa9f",
-                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
                   ]
                 }>
                 <Text
@@ -1175,9 +1225,14 @@ exports[`Messages should render sending messages 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    Object {
-                      "backgroundColor": "#00aa9f",
-                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
                   ]
                 }>
                 <Text
@@ -1224,7 +1279,12 @@ exports[`Messages should render sending messages 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    undefined,
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      undefined,
+                    ],
                   ]
                 }>
                 <Text
@@ -1269,9 +1329,14 @@ exports[`Messages should render sending messages 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    Object {
-                      "backgroundColor": "#00aa9f",
-                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
                   ]
                 }>
                 <Text

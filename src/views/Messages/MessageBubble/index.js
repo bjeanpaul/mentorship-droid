@@ -9,7 +9,7 @@ const MessageBubble = ({
   content,
   styles = {},
 }) => (
-  <Bubble style={styles.bubble}>
+  <Bubble style={[baseStyles.bubble, styles.bubble]}>
     <Text style={[baseStyles.content, styles.content]}>
       {content}
     </Text>
