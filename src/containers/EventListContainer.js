@@ -1,41 +1,22 @@
-import moment from 'moment';
 import { connect } from 'react-redux';
-import { groupBy, sortBy } from 'lodash';
 import EventList from 'src/views/EventList';
+import { groupByDate, formatDateRelatively } from 'src/helpers';
 import { getEvents } from 'src/store/helpers';
 
 
-const formatDateLabel = date => moment(date).calendar(Date.now(), {
-  sameDay: '[Today]',
-  nextDay: '[Tomorrow]',
-  nextWeek: 'dddd',
-  lastDay: '[Yesterday]',
-  lastWeek: '[Last] dddd',
-  sameElse: 'YYYY-MM-DD',
-});
-
 const groupEventsByDate = events => {
-  const groups = groupBy(sortBy(events, event => event.occuredAt).reverse(),
-    event => moment(event.occuredAt).format('YYYY-MM-DD')
-  );
-
-  return Object.keys(groups)
-  .sort()
-  .reverse()
-  .map(
-    date => ({
+  return groupByDate(events, 'day', 'desc', 'occuredAt')
+    .map(({ items, date }) => ({
       date,
-      label: formatDateLabel(date),
-      events: groups[date],
-    })
-  );
+      label: formatDateRelatively(date),
+      events: items,
+    }));
 };
 
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   groups: groupEventsByDate(getEvents(state)),
 });
 
 
-export { groupEventsByDate, formatDateLabel };
 export default connect(mapStateToProps)(EventList);
