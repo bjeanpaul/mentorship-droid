@@ -19,7 +19,8 @@ const MessageGroup = ({
 
 
 MessageGroup.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object),
+  date: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 
