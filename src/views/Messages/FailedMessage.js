@@ -9,7 +9,7 @@ import MessageBubble from './MessageBubble';
 
 const FailedMessage = ({
   ...props,
-  onRetryPress
+  onRetryPress,
 }) => {
   const msg = omit(props, 'onRetryPress');
 

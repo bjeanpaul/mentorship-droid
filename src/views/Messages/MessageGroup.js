@@ -10,7 +10,7 @@ import styles from './styles';
 const MessageGroup = ({
   date,
   items,
-  ...props
+  ...props,
 }) => (
   <View>
     <Text style={styles.groupDate}>{formatDateRelatively(date)}</Text>

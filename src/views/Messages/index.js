@@ -41,6 +41,7 @@ const Messages = ({
 Messages.propTypes = {
   messages: PropTypes.arrayOf(PropTypes.object),
   onSendPress: PropTypes.func.isRequired,
+  onRetryPress: PropTypes.func.isRequired,
 };
 
 
