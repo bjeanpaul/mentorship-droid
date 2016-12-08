@@ -20,7 +20,7 @@ export const listMessages = (auth, params = {}) => request({
 export const sendMessage = (msg, auth) => request({
   url: '/chat_message/',
   method: 'POST',
-  schema: arrayOf(Message),
+  schema: Message,
   parse: parseMessage,
   data: { content: msg.content },
   auth,
