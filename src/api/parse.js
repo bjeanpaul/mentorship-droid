@@ -1,4 +1,5 @@
 import { flow } from 'lodash';
+import { map } from 'lodash/fp';
 import colors from 'src/constants/colors';
 import { makeGradient } from 'src/helpers';
 import * as constants from 'src/constants/messages';
@@ -51,14 +52,7 @@ export const parseCategories = categories => {
 };
 
 
-export const parseActivities = activities => activities.map(parseActivity);
-
-
-export const parseCategoryListResults = flow(parseResults, parseCategories);
-export const parseActivityListResults = flow(parseResults, parseActivities);
-
-
-export const parseSendMessageResult = data => {
+export const parseMessage = data => {
   const {
     id,
     timeSent: timestamp,
@@ -74,3 +68,8 @@ export const parseSendMessageResult = data => {
     details,
   };
 };
+
+
+export const parseCategoryListResults = flow(parseResults, parseCategories);
+export const parseActivityListResults = flow(parseResults, map(parseActivity));
+export const parseMessageListResults = flow(parseResults, map(parseMessage));
