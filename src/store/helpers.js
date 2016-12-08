@@ -22,16 +22,16 @@ export const getContext = state => {
 };
 
 
-// TODO sort?
-export const getCategories = ({ entities: { categories } }) => values(categories);
+export const getCategories = ({ entities }) =>
+  sortBy(values(entities.categories), 'ordinal');
 
 
-// TODO sort?
-export const getCategoryActivities = ({
-  entities: { activities },
-}, targetCategoryId) => (
-  values(activities)
-    .filter(({ category }) => category === targetCategoryId));
+export const getCategoryActivities = ({ entities }, targetCategoryId) => {
+  const activities = values(entities.activities)
+    .filter(({ category }) => category === targetCategoryId);
+
+  return sortBy(activities, 'ordinal');
+};
 
 
 export const getCategory = ({ entities: { categories } }, id) => categories[id];
