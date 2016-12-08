@@ -25,6 +25,7 @@ const createComponent = (props = {}) => (
         details: { direction: constants.MESSAGE_DIRECTION_OUTBOUND },
       })]}
     onSendPress={noop}
+    onRetryPress={noop}
     {...props}
   />
 );

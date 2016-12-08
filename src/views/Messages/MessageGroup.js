@@ -14,7 +14,7 @@ const MessageGroup = ({
 }) => (
   <View>
     <Text style={styles.groupDate}>{formatDateRelatively(date)}</Text>
-    {items.map(msg => <Message key={msg.id} {...props} {...msg} />)}
+    {items.map(msg => <Message key={msg.id} message={msg} {...props} />)}
   </View>
 );
 
