@@ -113,5 +113,5 @@ export const getEvents = (state) =>
 
 
 export const getMessages = ({ entities }) => []
-  .concat(values(entities.messages));
-  .concat(values(entities.pendingMessages))
+  .concat(values(entities.messages))
+  .concat(values(entities.pendingMessages));

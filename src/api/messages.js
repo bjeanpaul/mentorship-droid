@@ -1,4 +1,4 @@
-import { flow, uniqueId, merge } from 'lodash';
+import { uniqueId, merge } from 'lodash';
 import { arrayOf, normalize } from 'normalizr';
 
 import request from 'src/api/request';

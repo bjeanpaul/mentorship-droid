@@ -7,7 +7,6 @@ import config from 'src/config';
 import {
   parseResults,
   parseCategories,
-  parseActivities,
   parseCategory,
   parseActivity,
   parseMessage,
