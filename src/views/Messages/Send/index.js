@@ -11,15 +11,17 @@ class Send extends Component {
     super(props);
     this.state = { content: '' };
     this.onSendPress = this.onSendPress.bind(this);
-    this.onTextChange = this.onTextChange.bind(this);
+    this.onChangeText = this.onChangeText.bind(this);
   }
 
-  onTextChange(content) {
+  onChangeText(content) {
     this.setState({ content });
   }
 
   onSendPress() {
-    this.props.onSendPress({ content: this.state.content });
+    const { content } = this.state;
+    this.setState({ content: '' });
+    this.props.onSendPress({ content });
   }
 
   render() {
@@ -33,7 +35,8 @@ class Send extends Component {
             placeholderTextColor={images.SEND_INPUT_PLACEHOLDER_TEXT}
             underlineColorAndroid="transparent"
             style={styles.input}
-            onTextChange={this.onTextChange}
+            onChangeText={this.onChangeText}
+            value={this.state.content}
           />
         </Bubble>
 
