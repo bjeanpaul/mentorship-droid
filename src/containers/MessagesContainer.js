@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 import Messages from 'src/views/Messages';
-import { getMessages } from 'src/store/helpers';
+import { getMessages, getAuthUserProfile } from 'src/store/helpers';
 import { sendMessage } from 'src/actions/messages';
 
 
 export const mapStateToProps = state => ({
+  profile: getAuthUserProfile(state),
   messages: getMessages(state),
 });
 
