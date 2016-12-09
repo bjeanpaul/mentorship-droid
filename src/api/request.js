@@ -44,6 +44,7 @@ const parseConf = ({
   schema = null,
   params = null,
   normalizeCase = true,
+  normalizeParamCase = true,
   parse: parseFn = identity,
   headers = {},
 }) => ({
@@ -56,9 +57,13 @@ const parseConf = ({
   parseFn,
 
   options: omitNulls({
-    url: API_BASE_URL + API_PATH + url,
-    params,
     method,
+
+    url: API_BASE_URL + API_PATH + url,
+
+    params: !isNull(params)
+      ? serialize(params, { normalizeCase: normalizeParamCase })
+      : null,
 
     data: !isNull(data)
       ? serialize(data, { normalizeCase })

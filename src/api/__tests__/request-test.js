@@ -227,6 +227,24 @@ describe('api/request', () => {
       ]]);
     });
 
+    it('should support case normalizing for query params', async () => {
+      await request({
+        url: '/foo',
+        method: 'GET',
+        params: {
+          fooBar: 23,
+        },
+      });
+
+      expect(axios.mock.calls).toEqual([[
+        jasmine.objectContaining({
+          params: {
+            foo_bar: 23,
+          },
+        }),
+      ]]);
+    });
+
     it('should support disabling of case normalizing', async () => {
       axios.mockReturnValue(Promise.resolve({
         data: { foo_bar: 23 },
