@@ -1,7 +1,9 @@
-import { noop, first } from 'lodash';
+import { constant, first } from 'lodash';
 import { connect } from 'react-redux';
 import MessageEvent from 'src/views/MessageEvent';
 import { getMessage } from 'src/store/helpers';
+import { changeNavTab } from 'src/actions/navigation';
+import { NAV_TAB_CHAT } from 'src/constants/navigation';
 
 
 const mapStateToProps = (state, { events }) => {
@@ -15,7 +17,7 @@ const mapStateToProps = (state, { events }) => {
 
 
 const propsToActions = {
-  onPress: noop,  // NOOP
+  onPress: constant(changeNavTab(NAV_TAB_CHAT)),
 };
 
 
