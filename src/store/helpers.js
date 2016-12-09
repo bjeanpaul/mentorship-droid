@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { values, isUndefined, sortBy, orderBy, filter, first } from 'lodash';
+import { values, isUndefined, sortBy, filter, first } from 'lodash';
 
 import { TYPES_TO_COLLECTIONS } from 'src/constants/events';
 
@@ -111,10 +111,9 @@ export const getEvents = (state) =>
     .filter(event => getEventObject(state, event));
 
 
-export const getMessages = ({ entities }) => {
-  const messages = []
-    .concat(values(entities.pendingMessages))
-    .concat(values(entities.messages));
+export const getMessages = ({ entities }) => []
+  .concat(values(entities.messages))
+  .concat(values(entities.pendingMessages));
 
-  return orderBy(messages, ['timestamp'], ['desc']);
-};
+
+export const getMessage = ({ entities }, id) => entities.messages[id];

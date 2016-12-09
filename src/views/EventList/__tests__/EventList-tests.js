@@ -1,49 +1,40 @@
 import { Provider } from 'react-redux';
 import React from 'react';
 import EventList from 'src/views/EventList';
-import { fakeStore, fakeState, fakeEvent, fakeProfile } from 'app/scripts/helpers';
+import { fakeStore, fakeState, fakeEvent } from 'app/scripts/helpers';
 
 
 describe('EventList', () => {
-  function createComponent(props = {}) {
+  function createComponent(props = {}, state = fakeState()) {
     return (
-      <EventList
-        {...props}
-      />
+      <Provider store={fakeStore(state)}>
+        <EventList
+          events={[fakeEvent()]}
+          {...props}
+        />
+      </Provider>
     );
   }
 
-  it('should not render unmapped event types', () => {
-    const groups = [{
-      date: '2008-08-08',
-      label: 'A long time ago',
+  it('should render', () => {
+    const el = render(createComponent());
+    expect(el.toJSON()).toMatchSnapshot();
+  });
+
+  it('should exclude events with no corresponding component for their type', () => {
+    const el = shallow(createComponent({
       events: [
-        fakeEvent({
-          id: 1,
-          occuredAt: '2008-08-08T10:00Z',
-          eventType: 'fake-event-type',
-        }),
+        fakeEvent(),
+        fakeEvent({ eventType: 'UNKNOWN' }),
       ],
-    }];
+    }));
 
-    const state = fakeState({
-      auth: {
-        profileId: 999,
-      },
-      entities: {
-        profiles: {
-          999: fakeProfile({
-            id: 999,
-            firstName: 'Yo yo bangles',
-          }),
-        },
-      },
-    });
+    const events = el.find('EventList')
+      .shallow()
+      .find('EventGroup')
+      .shallow()
+      .find('Event');
 
-    expect(render(
-      <Provider store={fakeStore(state)}>
-        {createComponent({ groups })}
-      </Provider>
-    ).toJSON()).toMatchSnapshot();
+    expect(events.length).toEqual(1);
   });
 });

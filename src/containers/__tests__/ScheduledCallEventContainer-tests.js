@@ -15,8 +15,10 @@ describe('CallScheduledEventContainer', () => {
         },
       });
 
-      expect(mapStateToProps(state, { objectId: 21 }))
-        .toEqual(jasmine.objectContaining({ scheduledCall }));
+      expect(mapStateToProps(state, {
+        event: { objectId: 21 },
+      }))
+      .toEqual(jasmine.objectContaining({ scheduledCall }));
     });
 
     it('should provide the activity', () => {
@@ -38,8 +40,10 @@ describe('CallScheduledEventContainer', () => {
         },
       });
 
-      expect(mapStateToProps(state, { objectId: 21 }))
-        .toEqual(jasmine.objectContaining({ activity }));
+      expect(mapStateToProps(state, {
+        event: { objectId: 21 },
+      }))
+      .toEqual(jasmine.objectContaining({ activity }));
     });
   });
 });

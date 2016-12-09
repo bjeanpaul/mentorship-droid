@@ -4,7 +4,7 @@ import { chooseCallNote } from 'src/actions/callNotes';
 import { getCallNote } from 'src/store/helpers';
 
 
-const mapStateToProps = (state, event) => {
+const mapStateToProps = (state, { event }) => {
   const callNote = getCallNote(state, event.objectId);
 
   return {

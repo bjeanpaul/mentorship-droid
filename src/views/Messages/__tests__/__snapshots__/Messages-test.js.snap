@@ -41,10 +41,33 @@ exports[`Messages should render 1`] = `
           style={
             Object {
               "flex": 1,
-              "paddingHorizontal": 16,
+              "padding": 16,
             }
           }>
           <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                    "fontSize": 13,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "fontFamily": "Brandon Text_medium",
+                    "fontSize": 16,
+                    "fontWeight": "400",
+                    "marginBottom": 3,
+                    "marginTop": 7,
+                  },
+                ]
+              }>
+              Wednesday, 30 November
+            </Text>
             <View
               style={
                 Object {
@@ -62,9 +85,14 @@ exports[`Messages should render 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    Object {
-                      "backgroundColor": "#00aa9f",
-                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
                   ]
                 }>
                 <Text
@@ -111,7 +139,12 @@ exports[`Messages should render 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    undefined,
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      undefined,
+                    ],
                   ]
                 }>
                 <Text
@@ -139,8 +172,6 @@ exports[`Messages should render 1`] = `
                 </Text>
               </View>
             </View>
-          </View>
-          <View>
             <View
               style={
                 Object {
@@ -158,9 +189,14 @@ exports[`Messages should render 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    Object {
-                      "backgroundColor": "#00aa9f",
-                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
                   ]
                 }>
                 <Text
@@ -222,7 +258,7 @@ exports[`Messages should render 1`] = `
           }>
           <TextInput
             multiline={true}
-            onTextChange={[Function]}
+            onChangeText={[Function]}
             placeholder="Write something"
             placeholderTextColor={undefined}
             style={
@@ -235,7 +271,8 @@ exports[`Messages should render 1`] = `
               }
             }
             uid="sendInput"
-            underlineColorAndroid="transparent" />
+            underlineColorAndroid="transparent"
+            value="" />
         </View>
         <View
           accessibilityComponentType={undefined}
@@ -317,10 +354,33 @@ exports[`Messages should render failed messages 1`] = `
           style={
             Object {
               "flex": 1,
-              "paddingHorizontal": 16,
+              "padding": 16,
             }
           }>
           <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                    "fontSize": 13,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "fontFamily": "Brandon Text_medium",
+                    "fontSize": 16,
+                    "fontWeight": "400",
+                    "marginBottom": 3,
+                    "marginTop": 7,
+                  },
+                ]
+              }>
+              Wednesday, 30 November
+            </Text>
             <View
               style={
                 Object {
@@ -338,9 +398,14 @@ exports[`Messages should render failed messages 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    Object {
-                      "backgroundColor": "#c0cbcc",
-                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
                   ]
                 }>
                 <Text
@@ -366,7 +431,111 @@ exports[`Messages should render failed messages 1`] = `
                       ],
                     ]
                   }>
-                  I wrestled a bear once
+                  Sputnik sickles found in the seats
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "marginVertical": 24,
+                }
+              }>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#fff",
+                      "borderRadius": 6,
+                      "flex": 1,
+                      "paddingBottom": 17,
+                      "paddingHorizontal": 24,
+                      "paddingTop": 14,
+                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      undefined,
+                    ],
+                  ]
+                }>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "fontFamily": "Brandon Text",
+                        "fontSize": 13,
+                        "textAlign": "center",
+                      },
+                      Array [
+                        Object {
+                          "fontSize": 16,
+                          "textAlign": "left",
+                        },
+                        undefined,
+                      ],
+                    ]
+                  }>
+                  I lost my liquid tongue for the wet pen
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "marginVertical": 24,
+                }
+              }>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#fff",
+                      "borderRadius": 6,
+                      "flex": 1,
+                      "paddingBottom": 17,
+                      "paddingHorizontal": 24,
+                      "paddingTop": 14,
+                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
+                  ]
+                }>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "fontFamily": "Brandon Text",
+                        "fontSize": 13,
+                        "textAlign": "center",
+                      },
+                      Array [
+                        Object {
+                          "fontSize": 16,
+                          "textAlign": "left",
+                        },
+                        Object {
+                          "color": "#fff",
+                        },
+                      ],
+                    ]
+                  }>
+                  Let a stool pigeon escort those who contort
                 </Text>
               </View>
             </View>
@@ -402,7 +571,7 @@ exports[`Messages should render failed messages 1`] = `
           }>
           <TextInput
             multiline={true}
-            onTextChange={[Function]}
+            onChangeText={[Function]}
             placeholder="Write something"
             placeholderTextColor={undefined}
             style={
@@ -415,7 +584,8 @@ exports[`Messages should render failed messages 1`] = `
               }
             }
             uid="sendInput"
-            underlineColorAndroid="transparent" />
+            underlineColorAndroid="transparent"
+            value="" />
         </View>
         <View
           accessibilityComponentType={undefined}
@@ -497,10 +667,33 @@ exports[`Messages should render inbound messages 1`] = `
           style={
             Object {
               "flex": 1,
-              "paddingHorizontal": 16,
+              "padding": 16,
             }
           }>
           <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                    "fontSize": 13,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "fontFamily": "Brandon Text_medium",
+                    "fontSize": 16,
+                    "fontWeight": "400",
+                    "marginBottom": 3,
+                    "marginTop": 7,
+                  },
+                ]
+              }>
+              Wednesday, 30 November
+            </Text>
             <View
               style={
                 Object {
@@ -518,7 +711,12 @@ exports[`Messages should render inbound messages 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    undefined,
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      undefined,
+                    ],
                   ]
                 }>
                 <Text
@@ -578,7 +776,7 @@ exports[`Messages should render inbound messages 1`] = `
           }>
           <TextInput
             multiline={true}
-            onTextChange={[Function]}
+            onChangeText={[Function]}
             placeholder="Write something"
             placeholderTextColor={undefined}
             style={
@@ -591,7 +789,8 @@ exports[`Messages should render inbound messages 1`] = `
               }
             }
             uid="sendInput"
-            underlineColorAndroid="transparent" />
+            underlineColorAndroid="transparent"
+            value="" />
         </View>
         <View
           accessibilityComponentType={undefined}
@@ -673,10 +872,33 @@ exports[`Messages should render outbound messages 1`] = `
           style={
             Object {
               "flex": 1,
-              "paddingHorizontal": 16,
+              "padding": 16,
             }
           }>
           <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                    "fontSize": 13,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "fontFamily": "Brandon Text_medium",
+                    "fontSize": 16,
+                    "fontWeight": "400",
+                    "marginBottom": 3,
+                    "marginTop": 7,
+                  },
+                ]
+              }>
+              Wednesday, 30 November
+            </Text>
             <View
               style={
                 Object {
@@ -694,9 +916,14 @@ exports[`Messages should render outbound messages 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    Object {
-                      "backgroundColor": "#00aa9f",
-                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
                   ]
                 }>
                 <Text
@@ -723,6 +950,110 @@ exports[`Messages should render outbound messages 1`] = `
                     ]
                   }>
                   Sputnik sickles found in the seats
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "marginVertical": 24,
+                }
+              }>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#fff",
+                      "borderRadius": 6,
+                      "flex": 1,
+                      "paddingBottom": 17,
+                      "paddingHorizontal": 24,
+                      "paddingTop": 14,
+                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      undefined,
+                    ],
+                  ]
+                }>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "fontFamily": "Brandon Text",
+                        "fontSize": 13,
+                        "textAlign": "center",
+                      },
+                      Array [
+                        Object {
+                          "fontSize": 16,
+                          "textAlign": "left",
+                        },
+                        undefined,
+                      ],
+                    ]
+                  }>
+                  I lost my liquid tongue for the wet pen
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "marginVertical": 24,
+                }
+              }>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#fff",
+                      "borderRadius": 6,
+                      "flex": 1,
+                      "paddingBottom": 17,
+                      "paddingHorizontal": 24,
+                      "paddingTop": 14,
+                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
+                  ]
+                }>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "fontFamily": "Brandon Text",
+                        "fontSize": 13,
+                        "textAlign": "center",
+                      },
+                      Array [
+                        Object {
+                          "fontSize": 16,
+                          "textAlign": "left",
+                        },
+                        Object {
+                          "color": "#fff",
+                        },
+                      ],
+                    ]
+                  }>
+                  Let a stool pigeon escort those who contort
                 </Text>
               </View>
             </View>
@@ -758,7 +1089,7 @@ exports[`Messages should render outbound messages 1`] = `
           }>
           <TextInput
             multiline={true}
-            onTextChange={[Function]}
+            onChangeText={[Function]}
             placeholder="Write something"
             placeholderTextColor={undefined}
             style={
@@ -771,7 +1102,8 @@ exports[`Messages should render outbound messages 1`] = `
               }
             }
             uid="sendInput"
-            underlineColorAndroid="transparent" />
+            underlineColorAndroid="transparent"
+            value="" />
         </View>
         <View
           accessibilityComponentType={undefined}
@@ -853,10 +1185,33 @@ exports[`Messages should render sending messages 1`] = `
           style={
             Object {
               "flex": 1,
-              "paddingHorizontal": 16,
+              "padding": 16,
             }
           }>
           <View>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                    "fontSize": 13,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "fontFamily": "Brandon Text_medium",
+                    "fontSize": 16,
+                    "fontWeight": "400",
+                    "marginBottom": 3,
+                    "marginTop": 7,
+                  },
+                ]
+              }>
+              Wednesday, 30 November
+            </Text>
             <View
               style={
                 Object {
@@ -874,9 +1229,14 @@ exports[`Messages should render sending messages 1`] = `
                       "paddingHorizontal": 24,
                       "paddingTop": 14,
                     },
-                    Object {
-                      "backgroundColor": "#c0cbcc",
-                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
                   ]
                 }>
                 <Text
@@ -902,7 +1262,111 @@ exports[`Messages should render sending messages 1`] = `
                       ],
                     ]
                   }>
-                  I wrestled a bear once
+                  Sputnik sickles found in the seats
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "marginVertical": 24,
+                }
+              }>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#fff",
+                      "borderRadius": 6,
+                      "flex": 1,
+                      "paddingBottom": 17,
+                      "paddingHorizontal": 24,
+                      "paddingTop": 14,
+                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      undefined,
+                    ],
+                  ]
+                }>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "fontFamily": "Brandon Text",
+                        "fontSize": 13,
+                        "textAlign": "center",
+                      },
+                      Array [
+                        Object {
+                          "fontSize": 16,
+                          "textAlign": "left",
+                        },
+                        undefined,
+                      ],
+                    ]
+                  }>
+                  I lost my liquid tongue for the wet pen
+                </Text>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "marginVertical": 24,
+                }
+              }>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#fff",
+                      "borderRadius": 6,
+                      "flex": 1,
+                      "paddingBottom": 17,
+                      "paddingHorizontal": 24,
+                      "paddingTop": 14,
+                    },
+                    Array [
+                      Object {
+                        "marginBottom": 16,
+                      },
+                      Object {
+                        "backgroundColor": "#00aa9f",
+                      },
+                    ],
+                  ]
+                }>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "fontFamily": "Brandon Text",
+                        "fontSize": 13,
+                        "textAlign": "center",
+                      },
+                      Array [
+                        Object {
+                          "fontSize": 16,
+                          "textAlign": "left",
+                        },
+                        Object {
+                          "color": "#fff",
+                        },
+                      ],
+                    ]
+                  }>
+                  Let a stool pigeon escort those who contort
                 </Text>
               </View>
             </View>
@@ -938,7 +1402,7 @@ exports[`Messages should render sending messages 1`] = `
           }>
           <TextInput
             multiline={true}
-            onTextChange={[Function]}
+            onChangeText={[Function]}
             placeholder="Write something"
             placeholderTextColor={undefined}
             style={
@@ -951,7 +1415,8 @@ exports[`Messages should render sending messages 1`] = `
               }
             }
             uid="sendInput"
-            underlineColorAndroid="transparent" />
+            underlineColorAndroid="transparent"
+            value="" />
         </View>
         <View
           accessibilityComponentType={undefined}

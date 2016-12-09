@@ -4,16 +4,14 @@ import { getMessages } from 'src/store/helpers';
 import { sendMessage } from 'src/actions/messages';
 
 
-// TODO group messages
 export const mapStateToProps = state => ({
-  groups: [{
-    messages: getMessages(state),
-  }],
+  messages: getMessages(state),
 });
 
 
 const propsToActions = {
   onSendPress: sendMessage,
+  onRetryPress: sendMessage,
 };
 
 
