@@ -11,14 +11,14 @@ import { EVENT_POLL_TICK } from 'src/constants/events';
 import { NEW_MESSAGE_RECEIVED } from 'src/constants/notifications';
 
 import { SCHEDULED_CALL_CREATE_SUCCESS } from 'src/constants/schedule';
-import { listEvents, startEventPolling } from 'src/actions/events';
+import { listRecentEvents, startEventPolling } from 'src/actions/events';
 
 
 export default fromPairs([
   [AUTH_LOGIN_SUCCESS, sequence([enter, setupNotifications, startEventPolling])],
   [EXISTING_USER_ENTER, load],
   [ONBOARDING_SETUP_PROFILE_SUCCESS, load],
-  [SCHEDULED_CALL_CREATE_SUCCESS, listEvents],
-  [EVENT_POLL_TICK, listEvents],
+  [SCHEDULED_CALL_CREATE_SUCCESS, listRecentEvents],
+  [EVENT_POLL_TICK, listRecentEvents],
   [NEW_MESSAGE_RECEIVED, listRecentMessages],
 ]);

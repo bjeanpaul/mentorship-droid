@@ -88,16 +88,22 @@ describe('helpers', () => {
     it('should get all categories', () => {
       const state = fakeState();
 
+      const category1 = fakeCategory({
+        id: 1,
+        ordinal: 2,
+      });
+
+      const category2 = fakeCategory({
+        id: 2,
+        ordinal: 1,
+      });
+
       state.entities.categories = {
-        2: fakeCategory({ id: 2 }),
-        3: fakeCategory({ id: 3 }),
+        1: category1,
+        3: category2,
       };
 
-      expect(getCategories(state))
-      .toEqual([
-        fakeCategory({ id: 2 }),
-        fakeCategory({ id: 3 }),
-      ]);
+      expect(getCategories(state)).toEqual([category2, category1]);
     });
   });
 
@@ -134,11 +140,13 @@ describe('helpers', () => {
       const activity1 = fakeActivity({
         id: 1,
         category: 7,
+        ordinal: 2,
       });
 
       const activity2 = fakeActivity({
         id: 2,
         category: 7,
+        ordinal: 1,
       });
 
       state.entities.activities = {
@@ -150,10 +158,7 @@ describe('helpers', () => {
         }),
       };
 
-      expect(getCategoryActivities(state, 7)).toEqual([
-        activity1,
-        activity2,
-      ]);
+      expect(getCategoryActivities(state, 7)).toEqual([activity2, activity1]);
     });
   });
 
