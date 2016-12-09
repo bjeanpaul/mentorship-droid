@@ -23,6 +23,7 @@ const TYPES_TO_COLLECTIONS = fromPairs([
   [EVENT_TYPE_SCHEDULED_CALL_CREATED, 'scheduledCalls'],
   [EVENT_TYPE_ACTIVITIY_CATEGORY_COMPLETED, 'categories'],
   [EVENT_TYPE_CALL_NOTES_CREATED, 'callNotes'],
+  [EVENT_TYPE_MESSAGE_RECEIVED, 'messages'],
 ]);
 
 
