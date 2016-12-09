@@ -115,3 +115,6 @@ export const getEvents = (state) =>
 export const getMessages = ({ entities }) => []
   .concat(values(entities.messages))
   .concat(values(entities.pendingMessages));
+
+
+export const getMessage = ({ entities }, id) => entities.messages[id];
