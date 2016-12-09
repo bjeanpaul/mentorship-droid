@@ -6,21 +6,19 @@ import MessageBubble from './MessageBubble';
 
 
 const SendingMessage = ({
-  message: { content },
+  message,
 }) => (
   <View style={styles.message}>
     <MessageBubble
       styles={MessageBubble.states.pending}
-      content={content}
+      {...message}
     />
   </View>
 );
 
 
 SendingMessage.propTypes = {
-  message: PropTypes.shape({
-    content: PropTypes.string.isRequired,
-  }).isRequired,
+  message: PropTypes.object.isRequired,
 };
 
 

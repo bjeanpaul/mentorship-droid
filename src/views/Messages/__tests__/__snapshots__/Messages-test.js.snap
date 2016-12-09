@@ -120,6 +120,27 @@ exports[`Messages should render 1`] = `
                     ]
                   }>
                   Sputnik sickles found in the seats
+                   
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "#003035",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 13,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.30)",
+                          "fontSize": 14,
+                        },
+                      ]
+                    }>
+                    11:11
+                  </Text>
                 </Text>
               </View>
             </View>
@@ -176,6 +197,27 @@ exports[`Messages should render 1`] = `
                     ]
                   }>
                   I lost my liquid tongue for the wet pen
+                   
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "#003035",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 13,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.30)",
+                          "fontSize": 14,
+                        },
+                      ]
+                    }>
+                    11:11
+                  </Text>
                 </Text>
               </View>
             </View>
@@ -231,6 +273,27 @@ exports[`Messages should render 1`] = `
                     ]
                   }>
                   Let a stool pigeon escort those who contort
+                   
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "#003035",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 13,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.30)",
+                          "fontSize": 14,
+                        },
+                      ]
+                    }>
+                    11:11
+                  </Text>
                 </Text>
               </View>
             </View>
@@ -441,6 +504,27 @@ exports[`Messages should render failed messages 1`] = `
                     ]
                   }>
                   Sputnik sickles found in the seats
+                   
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "#003035",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 13,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.30)",
+                          "fontSize": 14,
+                        },
+                      ]
+                    }>
+                    11:11
+                  </Text>
                 </Text>
               </View>
             </View>
@@ -497,6 +581,27 @@ exports[`Messages should render failed messages 1`] = `
                     ]
                   }>
                   I lost my liquid tongue for the wet pen
+                   
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "#003035",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 13,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.30)",
+                          "fontSize": 14,
+                        },
+                      ]
+                    }>
+                    11:11
+                  </Text>
                 </Text>
               </View>
             </View>
@@ -552,6 +657,27 @@ exports[`Messages should render failed messages 1`] = `
                     ]
                   }>
                   Let a stool pigeon escort those who contort
+                   
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "#003035",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 13,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.30)",
+                          "fontSize": 14,
+                        },
+                      ]
+                    }>
+                    11:11
+                  </Text>
                 </Text>
               </View>
             </View>
@@ -763,6 +889,27 @@ exports[`Messages should render inbound messages 1`] = `
                     ]
                   }>
                   Sputnik sickles found in the seats
+                   
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "#003035",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 13,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.30)",
+                          "fontSize": 14,
+                        },
+                      ]
+                    }>
+                    11:11
+                  </Text>
                 </Text>
               </View>
             </View>
@@ -973,6 +1120,27 @@ exports[`Messages should render outbound messages 1`] = `
                     ]
                   }>
                   Sputnik sickles found in the seats
+                   
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "#003035",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 13,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.30)",
+                          "fontSize": 14,
+                        },
+                      ]
+                    }>
+                    11:11
+                  </Text>
                 </Text>
               </View>
             </View>
@@ -1029,6 +1197,27 @@ exports[`Messages should render outbound messages 1`] = `
                     ]
                   }>
                   I lost my liquid tongue for the wet pen
+                   
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "#003035",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 13,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.30)",
+                          "fontSize": 14,
+                        },
+                      ]
+                    }>
+                    11:11
+                  </Text>
                 </Text>
               </View>
             </View>
@@ -1084,6 +1273,27 @@ exports[`Messages should render outbound messages 1`] = `
                     ]
                   }>
                   Let a stool pigeon escort those who contort
+                   
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "#003035",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 13,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.30)",
+                          "fontSize": 14,
+                        },
+                      ]
+                    }>
+                    11:11
+                  </Text>
                 </Text>
               </View>
             </View>
@@ -1294,6 +1504,27 @@ exports[`Messages should render sending messages 1`] = `
                     ]
                   }>
                   Sputnik sickles found in the seats
+                   
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "#003035",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 13,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.30)",
+                          "fontSize": 14,
+                        },
+                      ]
+                    }>
+                    11:11
+                  </Text>
                 </Text>
               </View>
             </View>
@@ -1350,6 +1581,27 @@ exports[`Messages should render sending messages 1`] = `
                     ]
                   }>
                   I lost my liquid tongue for the wet pen
+                   
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "#003035",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 13,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.30)",
+                          "fontSize": 14,
+                        },
+                      ]
+                    }>
+                    11:11
+                  </Text>
                 </Text>
               </View>
             </View>
@@ -1405,6 +1657,27 @@ exports[`Messages should render sending messages 1`] = `
                     ]
                   }>
                   Let a stool pigeon escort those who contort
+                   
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Array [
+                        Object {
+                          "color": "#003035",
+                          "fontFamily": "Brandon Text",
+                          "fontSize": 13,
+                          "textAlign": "center",
+                        },
+                        Object {
+                          "color": "rgba(0, 0, 0, 0.30)",
+                          "fontSize": 14,
+                        },
+                      ]
+                    }>
+                    11:11
+                  </Text>
                 </Text>
               </View>
             </View>

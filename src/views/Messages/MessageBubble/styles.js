@@ -34,4 +34,8 @@ export default StyleSheet.create({
     fontSize: 16,
     textAlign: 'left',
   },
+  time: {
+    fontSize: 14,
+    color: colors.MESSAGE_BUBBLE_TIME_TEXT,
+  },
 });

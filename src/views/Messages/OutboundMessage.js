@@ -6,21 +6,19 @@ import MessageBubble from './MessageBubble';
 
 
 const OutboundMessage = ({
-  message: { content },
+  message,
 }) => (
   <View style={styles.message}>
     <MessageBubble
       styles={MessageBubble.themes.dark}
-      content={content}
+      {...message}
     />
   </View>
 );
 
 
 OutboundMessage.propTypes = {
-  message: PropTypes.shape({
-    content: PropTypes.string.isRequired,
-  }).isRequired,
+  message: PropTypes.object.isRequired,
 };
 
 

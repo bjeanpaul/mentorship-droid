@@ -9,22 +9,18 @@ import MessageBubble from './MessageBubble';
 const FailedMessage = ({
   message,
   onRetryPress,
-}) => {
-  const { content } = message;
+}) => (
+  <View style={styles.message}>
+    <MessageBubble
+      styles={MessageBubble.states.pending}
+      {...message}
+    />
 
-  return (
-    <View style={styles.message}>
-      <MessageBubble
-        styles={MessageBubble.states.pending}
-        content={content}
-      />
-
-      <Button uid="retry" onPress={() => onRetryPress(message)}>
-        TRY AGAIN
-      </Button>
-    </View>
-  );
-};
+    <Button uid="retry" onPress={() => onRetryPress(message)}>
+      TRY AGAIN
+    </Button>
+  </View>
+);
 
 
 FailedMessage.propTypes = {

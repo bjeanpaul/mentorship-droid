@@ -6,18 +6,16 @@ import MessageBubble from './MessageBubble';
 
 
 const InboundMessage = ({
-  message: { content },
+  message,
 }) => (
   <View style={[styles.message, styles.messageInbound]}>
-    <MessageBubble content={content} />
+    <MessageBubble {...message} />
   </View>
 );
 
 
 InboundMessage.propTypes = {
-  message: PropTypes.shape({
-    content: PropTypes.string.isRequired,
-  }).isRequired,
+  message: PropTypes.object.isRequired,
 };
 
 
