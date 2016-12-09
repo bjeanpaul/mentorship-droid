@@ -16,7 +16,11 @@ const EventGroup = ({
       <Text style={styles.groupLabelText}>{formatDateRelatively(date)}</Text>
     </View>
 
-    {items.map(event => <Event key={event.id} event={event} />)}
+    {
+      items
+        .filter(Event.isRenderable)
+        .map(event => <Event key={event.id} event={event} />)
+    }
   </View>
 );
 

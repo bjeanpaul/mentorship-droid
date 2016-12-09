@@ -8,8 +8,11 @@ const Event = ({
 }) => {
   const { eventType } = event;
   const EventContainer = containers[eventType];
-  return EventContainer && <EventContainer {...event} />;
+  return <EventContainer {...event} />;
 };
+
+
+Event.isRenderable = ({ eventType }) => eventType in containers;
 
 
 Event.propTypes = {

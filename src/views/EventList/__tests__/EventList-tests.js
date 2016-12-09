@@ -20,4 +20,21 @@ describe('EventList', () => {
     const el = render(createComponent());
     expect(el.toJSON()).toMatchSnapshot();
   });
+
+  it('should exclude events with no corresponding component for their type', () => {
+    const el = shallow(createComponent({
+      events: [
+        fakeEvent(),
+        fakeEvent({ eventType: 'UNKNOWN' }),
+      ],
+    }));
+
+    const events = el.find('EventList')
+      .shallow()
+      .find('EventGroup')
+      .shallow()
+      .find('Event');
+
+    expect(events.length).toEqual(1);
+  });
 });
