@@ -1,4 +1,4 @@
-import { groupBy, pick, first, fromPairs } from 'lodash';
+import { groupBy, pick, first } from 'lodash';
 import { groupByDate } from 'src/helpers';
 import { COLLAPSIBLE_EVENTS } from 'src/constants/events';
 
