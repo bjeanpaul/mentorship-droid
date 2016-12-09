@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 
 import Avatar from './Avatar';
-import images from 'src/constants/images';
 
 
 const MentorAvatar = ({
