@@ -31,8 +31,8 @@ export default StyleSheet.create({
   },
   counter: {
     position: 'absolute',
-    top: 0,
-    left: 42,
+    top: -4,
+    left: 38,
     width: 20,
     height: 20,
     borderRadius: 20,
