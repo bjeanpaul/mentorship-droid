@@ -8,7 +8,7 @@ import MessageBubble from './MessageBubble';
 const InboundMessage = ({
   message: { content },
 }) => (
-  <View style={styles.message}>
+  <View style={[styles.message, styles.messageInbound]}>
     <MessageBubble content={content} />
   </View>
 );

@@ -8,7 +8,11 @@ export default StyleSheet.create({
     padding: 16,
   },
   message: {
+    alignItems: 'flex-end',
     marginVertical: 24,
+  },
+  messageInbound: {
+    alignItems: 'flex-start',
   },
   groupDate: {
     fontSize: 16,
