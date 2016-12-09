@@ -71,56 +71,54 @@ exports[`Messages should render 1`] = `
             <View
               style={
                 Object {
-                  "alignItems": "flex-end",
+                  "flexDirection": "row-reverse",
+                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#fff",
-                      "borderRadius": 6,
-                      "flex": 1,
-                      "paddingBottom": 17,
-                      "paddingHorizontal": 24,
-                      "paddingTop": 14,
-                    },
-                    Array [
-                      Object {
-                        "marginBottom": 16,
-                      },
-                      Object {
-                        "backgroundColor": "#00aa9f",
-                      },
-                    ],
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 40,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  }
                 }>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <Image
+                  source={1}
+                  style={undefined} />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }>
+                <View
                   style={
                     Array [
                       Object {
-                        "color": "#003035",
-                        "fontFamily": "Brandon Text",
-                        "fontSize": 13,
-                        "textAlign": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 6,
+                        "flex": 1,
+                        "paddingBottom": 17,
+                        "paddingHorizontal": 24,
+                        "paddingTop": 14,
                       },
                       Array [
                         Object {
-                          "fontSize": 16,
-                          "textAlign": "left",
+                          "marginBottom": 16,
+                          "marginHorizontal": 12,
                         },
                         Object {
-                          "color": "#fff",
+                          "backgroundColor": "#00aa9f",
                         },
                       ],
                     ]
                   }>
-                  Sputnik sickles found in the seats
-                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -133,71 +131,98 @@ exports[`Messages should render 1`] = `
                           "fontSize": 13,
                           "textAlign": "center",
                         },
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.30)",
-                          "fontSize": 14,
-                        },
+                        Array [
+                          Object {
+                            "fontSize": 16,
+                            "textAlign": "left",
+                          },
+                          Object {
+                            "color": "#fff",
+                          },
+                        ],
                       ]
                     }>
-                    11:11
+                    Sputnik sickles found in the seats
+                     
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#003035",
+                            "fontFamily": "Brandon Text",
+                            "fontSize": 13,
+                            "textAlign": "center",
+                          },
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.30)",
+                            "fontSize": 14,
+                          },
+                        ]
+                      }>
+                      11:11
+                    </Text>
                   </Text>
-                </Text>
+                </View>
               </View>
             </View>
             <View
               style={
                 Array [
                   Object {
-                    "alignItems": "flex-end",
+                    "flexDirection": "row-reverse",
+                    "justifyContent": "flex-end",
                     "marginVertical": 24,
                   },
                   Object {
-                    "alignItems": "flex-start",
+                    "flexDirection": "row",
+                    "justifyContent": "flex-start",
                   },
                 ]
               }>
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#fff",
-                      "borderRadius": 6,
-                      "flex": 1,
-                      "paddingBottom": 17,
-                      "paddingHorizontal": 24,
-                      "paddingTop": 14,
-                    },
-                    Array [
-                      Object {
-                        "marginBottom": 16,
-                      },
-                      undefined,
-                    ],
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 40,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  }
                 }>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <Image
+                  source={1}
+                  style={undefined} />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }>
+                <View
                   style={
                     Array [
                       Object {
-                        "color": "#003035",
-                        "fontFamily": "Brandon Text",
-                        "fontSize": 13,
-                        "textAlign": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 6,
+                        "flex": 1,
+                        "paddingBottom": 17,
+                        "paddingHorizontal": 24,
+                        "paddingTop": 14,
                       },
                       Array [
                         Object {
-                          "fontSize": 16,
-                          "textAlign": "left",
+                          "marginBottom": 16,
+                          "marginHorizontal": 12,
                         },
                         undefined,
                       ],
                     ]
                   }>
-                  I lost my liquid tongue for the wet pen
-                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -210,70 +235,92 @@ exports[`Messages should render 1`] = `
                           "fontSize": 13,
                           "textAlign": "center",
                         },
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.30)",
-                          "fontSize": 14,
-                        },
+                        Array [
+                          Object {
+                            "fontSize": 16,
+                            "textAlign": "left",
+                          },
+                          undefined,
+                        ],
                       ]
                     }>
-                    11:11
+                    I lost my liquid tongue for the wet pen
+                     
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#003035",
+                            "fontFamily": "Brandon Text",
+                            "fontSize": 13,
+                            "textAlign": "center",
+                          },
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.30)",
+                            "fontSize": 14,
+                          },
+                        ]
+                      }>
+                      11:11
+                    </Text>
                   </Text>
-                </Text>
+                </View>
               </View>
             </View>
             <View
               style={
                 Object {
-                  "alignItems": "flex-end",
+                  "flexDirection": "row-reverse",
+                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#fff",
-                      "borderRadius": 6,
-                      "flex": 1,
-                      "paddingBottom": 17,
-                      "paddingHorizontal": 24,
-                      "paddingTop": 14,
-                    },
-                    Array [
-                      Object {
-                        "marginBottom": 16,
-                      },
-                      Object {
-                        "backgroundColor": "#00aa9f",
-                      },
-                    ],
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 40,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  }
                 }>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <Image
+                  source={1}
+                  style={undefined} />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }>
+                <View
                   style={
                     Array [
                       Object {
-                        "color": "#003035",
-                        "fontFamily": "Brandon Text",
-                        "fontSize": 13,
-                        "textAlign": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 6,
+                        "flex": 1,
+                        "paddingBottom": 17,
+                        "paddingHorizontal": 24,
+                        "paddingTop": 14,
                       },
                       Array [
                         Object {
-                          "fontSize": 16,
-                          "textAlign": "left",
+                          "marginBottom": 16,
+                          "marginHorizontal": 12,
                         },
                         Object {
-                          "color": "#fff",
+                          "backgroundColor": "#00aa9f",
                         },
                       ],
                     ]
                   }>
-                  Let a stool pigeon escort those who contort
-                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -286,15 +333,41 @@ exports[`Messages should render 1`] = `
                           "fontSize": 13,
                           "textAlign": "center",
                         },
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.30)",
-                          "fontSize": 14,
-                        },
+                        Array [
+                          Object {
+                            "fontSize": 16,
+                            "textAlign": "left",
+                          },
+                          Object {
+                            "color": "#fff",
+                          },
+                        ],
                       ]
                     }>
-                    11:11
+                    Let a stool pigeon escort those who contort
+                     
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#003035",
+                            "fontFamily": "Brandon Text",
+                            "fontSize": 13,
+                            "textAlign": "center",
+                          },
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.30)",
+                            "fontSize": 14,
+                          },
+                        ]
+                      }>
+                      11:11
+                    </Text>
                   </Text>
-                </Text>
+                </View>
               </View>
             </View>
           </View>
@@ -455,56 +528,54 @@ exports[`Messages should render failed messages 1`] = `
             <View
               style={
                 Object {
-                  "alignItems": "flex-end",
+                  "flexDirection": "row-reverse",
+                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#fff",
-                      "borderRadius": 6,
-                      "flex": 1,
-                      "paddingBottom": 17,
-                      "paddingHorizontal": 24,
-                      "paddingTop": 14,
-                    },
-                    Array [
-                      Object {
-                        "marginBottom": 16,
-                      },
-                      Object {
-                        "backgroundColor": "#00aa9f",
-                      },
-                    ],
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 40,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  }
                 }>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <Image
+                  source={1}
+                  style={undefined} />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }>
+                <View
                   style={
                     Array [
                       Object {
-                        "color": "#003035",
-                        "fontFamily": "Brandon Text",
-                        "fontSize": 13,
-                        "textAlign": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 6,
+                        "flex": 1,
+                        "paddingBottom": 17,
+                        "paddingHorizontal": 24,
+                        "paddingTop": 14,
                       },
                       Array [
                         Object {
-                          "fontSize": 16,
-                          "textAlign": "left",
+                          "marginBottom": 16,
+                          "marginHorizontal": 12,
                         },
                         Object {
-                          "color": "#fff",
+                          "backgroundColor": "#00aa9f",
                         },
                       ],
                     ]
                   }>
-                  Sputnik sickles found in the seats
-                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -517,71 +588,98 @@ exports[`Messages should render failed messages 1`] = `
                           "fontSize": 13,
                           "textAlign": "center",
                         },
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.30)",
-                          "fontSize": 14,
-                        },
+                        Array [
+                          Object {
+                            "fontSize": 16,
+                            "textAlign": "left",
+                          },
+                          Object {
+                            "color": "#fff",
+                          },
+                        ],
                       ]
                     }>
-                    11:11
+                    Sputnik sickles found in the seats
+                     
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#003035",
+                            "fontFamily": "Brandon Text",
+                            "fontSize": 13,
+                            "textAlign": "center",
+                          },
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.30)",
+                            "fontSize": 14,
+                          },
+                        ]
+                      }>
+                      11:11
+                    </Text>
                   </Text>
-                </Text>
+                </View>
               </View>
             </View>
             <View
               style={
                 Array [
                   Object {
-                    "alignItems": "flex-end",
+                    "flexDirection": "row-reverse",
+                    "justifyContent": "flex-end",
                     "marginVertical": 24,
                   },
                   Object {
-                    "alignItems": "flex-start",
+                    "flexDirection": "row",
+                    "justifyContent": "flex-start",
                   },
                 ]
               }>
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#fff",
-                      "borderRadius": 6,
-                      "flex": 1,
-                      "paddingBottom": 17,
-                      "paddingHorizontal": 24,
-                      "paddingTop": 14,
-                    },
-                    Array [
-                      Object {
-                        "marginBottom": 16,
-                      },
-                      undefined,
-                    ],
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 40,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  }
                 }>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <Image
+                  source={1}
+                  style={undefined} />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }>
+                <View
                   style={
                     Array [
                       Object {
-                        "color": "#003035",
-                        "fontFamily": "Brandon Text",
-                        "fontSize": 13,
-                        "textAlign": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 6,
+                        "flex": 1,
+                        "paddingBottom": 17,
+                        "paddingHorizontal": 24,
+                        "paddingTop": 14,
                       },
                       Array [
                         Object {
-                          "fontSize": 16,
-                          "textAlign": "left",
+                          "marginBottom": 16,
+                          "marginHorizontal": 12,
                         },
                         undefined,
                       ],
                     ]
                   }>
-                  I lost my liquid tongue for the wet pen
-                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -594,70 +692,92 @@ exports[`Messages should render failed messages 1`] = `
                           "fontSize": 13,
                           "textAlign": "center",
                         },
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.30)",
-                          "fontSize": 14,
-                        },
+                        Array [
+                          Object {
+                            "fontSize": 16,
+                            "textAlign": "left",
+                          },
+                          undefined,
+                        ],
                       ]
                     }>
-                    11:11
+                    I lost my liquid tongue for the wet pen
+                     
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#003035",
+                            "fontFamily": "Brandon Text",
+                            "fontSize": 13,
+                            "textAlign": "center",
+                          },
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.30)",
+                            "fontSize": 14,
+                          },
+                        ]
+                      }>
+                      11:11
+                    </Text>
                   </Text>
-                </Text>
+                </View>
               </View>
             </View>
             <View
               style={
                 Object {
-                  "alignItems": "flex-end",
+                  "flexDirection": "row-reverse",
+                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#fff",
-                      "borderRadius": 6,
-                      "flex": 1,
-                      "paddingBottom": 17,
-                      "paddingHorizontal": 24,
-                      "paddingTop": 14,
-                    },
-                    Array [
-                      Object {
-                        "marginBottom": 16,
-                      },
-                      Object {
-                        "backgroundColor": "#00aa9f",
-                      },
-                    ],
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 40,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  }
                 }>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <Image
+                  source={1}
+                  style={undefined} />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }>
+                <View
                   style={
                     Array [
                       Object {
-                        "color": "#003035",
-                        "fontFamily": "Brandon Text",
-                        "fontSize": 13,
-                        "textAlign": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 6,
+                        "flex": 1,
+                        "paddingBottom": 17,
+                        "paddingHorizontal": 24,
+                        "paddingTop": 14,
                       },
                       Array [
                         Object {
-                          "fontSize": 16,
-                          "textAlign": "left",
+                          "marginBottom": 16,
+                          "marginHorizontal": 12,
                         },
                         Object {
-                          "color": "#fff",
+                          "backgroundColor": "#00aa9f",
                         },
                       ],
                     ]
                   }>
-                  Let a stool pigeon escort those who contort
-                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -670,15 +790,41 @@ exports[`Messages should render failed messages 1`] = `
                           "fontSize": 13,
                           "textAlign": "center",
                         },
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.30)",
-                          "fontSize": 14,
-                        },
+                        Array [
+                          Object {
+                            "fontSize": 16,
+                            "textAlign": "left",
+                          },
+                          Object {
+                            "color": "#fff",
+                          },
+                        ],
                       ]
                     }>
-                    11:11
+                    Let a stool pigeon escort those who contort
+                     
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#003035",
+                            "fontFamily": "Brandon Text",
+                            "fontSize": 13,
+                            "textAlign": "center",
+                          },
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.30)",
+                            "fontSize": 14,
+                          },
+                        ]
+                      }>
+                      11:11
+                    </Text>
                   </Text>
-                </Text>
+                </View>
               </View>
             </View>
           </View>
@@ -840,56 +986,57 @@ exports[`Messages should render inbound messages 1`] = `
               style={
                 Array [
                   Object {
-                    "alignItems": "flex-end",
+                    "flexDirection": "row-reverse",
+                    "justifyContent": "flex-end",
                     "marginVertical": 24,
                   },
                   Object {
-                    "alignItems": "flex-start",
+                    "flexDirection": "row",
+                    "justifyContent": "flex-start",
                   },
                 ]
               }>
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#fff",
-                      "borderRadius": 6,
-                      "flex": 1,
-                      "paddingBottom": 17,
-                      "paddingHorizontal": 24,
-                      "paddingTop": 14,
-                    },
-                    Array [
-                      Object {
-                        "marginBottom": 16,
-                      },
-                      undefined,
-                    ],
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 40,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  }
                 }>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <Image
+                  source={1}
+                  style={undefined} />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }>
+                <View
                   style={
                     Array [
                       Object {
-                        "color": "#003035",
-                        "fontFamily": "Brandon Text",
-                        "fontSize": 13,
-                        "textAlign": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 6,
+                        "flex": 1,
+                        "paddingBottom": 17,
+                        "paddingHorizontal": 24,
+                        "paddingTop": 14,
                       },
                       Array [
                         Object {
-                          "fontSize": 16,
-                          "textAlign": "left",
+                          "marginBottom": 16,
+                          "marginHorizontal": 12,
                         },
                         undefined,
                       ],
                     ]
                   }>
-                  Sputnik sickles found in the seats
-                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -902,15 +1049,39 @@ exports[`Messages should render inbound messages 1`] = `
                           "fontSize": 13,
                           "textAlign": "center",
                         },
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.30)",
-                          "fontSize": 14,
-                        },
+                        Array [
+                          Object {
+                            "fontSize": 16,
+                            "textAlign": "left",
+                          },
+                          undefined,
+                        ],
                       ]
                     }>
-                    11:11
+                    Sputnik sickles found in the seats
+                     
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#003035",
+                            "fontFamily": "Brandon Text",
+                            "fontSize": 13,
+                            "textAlign": "center",
+                          },
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.30)",
+                            "fontSize": 14,
+                          },
+                        ]
+                      }>
+                      11:11
+                    </Text>
                   </Text>
-                </Text>
+                </View>
               </View>
             </View>
           </View>
@@ -1071,56 +1242,54 @@ exports[`Messages should render outbound messages 1`] = `
             <View
               style={
                 Object {
-                  "alignItems": "flex-end",
+                  "flexDirection": "row-reverse",
+                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#fff",
-                      "borderRadius": 6,
-                      "flex": 1,
-                      "paddingBottom": 17,
-                      "paddingHorizontal": 24,
-                      "paddingTop": 14,
-                    },
-                    Array [
-                      Object {
-                        "marginBottom": 16,
-                      },
-                      Object {
-                        "backgroundColor": "#00aa9f",
-                      },
-                    ],
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 40,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  }
                 }>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <Image
+                  source={1}
+                  style={undefined} />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }>
+                <View
                   style={
                     Array [
                       Object {
-                        "color": "#003035",
-                        "fontFamily": "Brandon Text",
-                        "fontSize": 13,
-                        "textAlign": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 6,
+                        "flex": 1,
+                        "paddingBottom": 17,
+                        "paddingHorizontal": 24,
+                        "paddingTop": 14,
                       },
                       Array [
                         Object {
-                          "fontSize": 16,
-                          "textAlign": "left",
+                          "marginBottom": 16,
+                          "marginHorizontal": 12,
                         },
                         Object {
-                          "color": "#fff",
+                          "backgroundColor": "#00aa9f",
                         },
                       ],
                     ]
                   }>
-                  Sputnik sickles found in the seats
-                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -1133,71 +1302,98 @@ exports[`Messages should render outbound messages 1`] = `
                           "fontSize": 13,
                           "textAlign": "center",
                         },
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.30)",
-                          "fontSize": 14,
-                        },
+                        Array [
+                          Object {
+                            "fontSize": 16,
+                            "textAlign": "left",
+                          },
+                          Object {
+                            "color": "#fff",
+                          },
+                        ],
                       ]
                     }>
-                    11:11
+                    Sputnik sickles found in the seats
+                     
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#003035",
+                            "fontFamily": "Brandon Text",
+                            "fontSize": 13,
+                            "textAlign": "center",
+                          },
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.30)",
+                            "fontSize": 14,
+                          },
+                        ]
+                      }>
+                      11:11
+                    </Text>
                   </Text>
-                </Text>
+                </View>
               </View>
             </View>
             <View
               style={
                 Array [
                   Object {
-                    "alignItems": "flex-end",
+                    "flexDirection": "row-reverse",
+                    "justifyContent": "flex-end",
                     "marginVertical": 24,
                   },
                   Object {
-                    "alignItems": "flex-start",
+                    "flexDirection": "row",
+                    "justifyContent": "flex-start",
                   },
                 ]
               }>
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#fff",
-                      "borderRadius": 6,
-                      "flex": 1,
-                      "paddingBottom": 17,
-                      "paddingHorizontal": 24,
-                      "paddingTop": 14,
-                    },
-                    Array [
-                      Object {
-                        "marginBottom": 16,
-                      },
-                      undefined,
-                    ],
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 40,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  }
                 }>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <Image
+                  source={1}
+                  style={undefined} />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }>
+                <View
                   style={
                     Array [
                       Object {
-                        "color": "#003035",
-                        "fontFamily": "Brandon Text",
-                        "fontSize": 13,
-                        "textAlign": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 6,
+                        "flex": 1,
+                        "paddingBottom": 17,
+                        "paddingHorizontal": 24,
+                        "paddingTop": 14,
                       },
                       Array [
                         Object {
-                          "fontSize": 16,
-                          "textAlign": "left",
+                          "marginBottom": 16,
+                          "marginHorizontal": 12,
                         },
                         undefined,
                       ],
                     ]
                   }>
-                  I lost my liquid tongue for the wet pen
-                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -1210,70 +1406,92 @@ exports[`Messages should render outbound messages 1`] = `
                           "fontSize": 13,
                           "textAlign": "center",
                         },
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.30)",
-                          "fontSize": 14,
-                        },
+                        Array [
+                          Object {
+                            "fontSize": 16,
+                            "textAlign": "left",
+                          },
+                          undefined,
+                        ],
                       ]
                     }>
-                    11:11
+                    I lost my liquid tongue for the wet pen
+                     
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#003035",
+                            "fontFamily": "Brandon Text",
+                            "fontSize": 13,
+                            "textAlign": "center",
+                          },
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.30)",
+                            "fontSize": 14,
+                          },
+                        ]
+                      }>
+                      11:11
+                    </Text>
                   </Text>
-                </Text>
+                </View>
               </View>
             </View>
             <View
               style={
                 Object {
-                  "alignItems": "flex-end",
+                  "flexDirection": "row-reverse",
+                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#fff",
-                      "borderRadius": 6,
-                      "flex": 1,
-                      "paddingBottom": 17,
-                      "paddingHorizontal": 24,
-                      "paddingTop": 14,
-                    },
-                    Array [
-                      Object {
-                        "marginBottom": 16,
-                      },
-                      Object {
-                        "backgroundColor": "#00aa9f",
-                      },
-                    ],
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 40,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  }
                 }>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <Image
+                  source={1}
+                  style={undefined} />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }>
+                <View
                   style={
                     Array [
                       Object {
-                        "color": "#003035",
-                        "fontFamily": "Brandon Text",
-                        "fontSize": 13,
-                        "textAlign": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 6,
+                        "flex": 1,
+                        "paddingBottom": 17,
+                        "paddingHorizontal": 24,
+                        "paddingTop": 14,
                       },
                       Array [
                         Object {
-                          "fontSize": 16,
-                          "textAlign": "left",
+                          "marginBottom": 16,
+                          "marginHorizontal": 12,
                         },
                         Object {
-                          "color": "#fff",
+                          "backgroundColor": "#00aa9f",
                         },
                       ],
                     ]
                   }>
-                  Let a stool pigeon escort those who contort
-                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -1286,15 +1504,41 @@ exports[`Messages should render outbound messages 1`] = `
                           "fontSize": 13,
                           "textAlign": "center",
                         },
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.30)",
-                          "fontSize": 14,
-                        },
+                        Array [
+                          Object {
+                            "fontSize": 16,
+                            "textAlign": "left",
+                          },
+                          Object {
+                            "color": "#fff",
+                          },
+                        ],
                       ]
                     }>
-                    11:11
+                    Let a stool pigeon escort those who contort
+                     
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#003035",
+                            "fontFamily": "Brandon Text",
+                            "fontSize": 13,
+                            "textAlign": "center",
+                          },
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.30)",
+                            "fontSize": 14,
+                          },
+                        ]
+                      }>
+                      11:11
+                    </Text>
                   </Text>
-                </Text>
+                </View>
               </View>
             </View>
           </View>
@@ -1455,56 +1699,54 @@ exports[`Messages should render sending messages 1`] = `
             <View
               style={
                 Object {
-                  "alignItems": "flex-end",
+                  "flexDirection": "row-reverse",
+                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#fff",
-                      "borderRadius": 6,
-                      "flex": 1,
-                      "paddingBottom": 17,
-                      "paddingHorizontal": 24,
-                      "paddingTop": 14,
-                    },
-                    Array [
-                      Object {
-                        "marginBottom": 16,
-                      },
-                      Object {
-                        "backgroundColor": "#00aa9f",
-                      },
-                    ],
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 40,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  }
                 }>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <Image
+                  source={1}
+                  style={undefined} />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }>
+                <View
                   style={
                     Array [
                       Object {
-                        "color": "#003035",
-                        "fontFamily": "Brandon Text",
-                        "fontSize": 13,
-                        "textAlign": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 6,
+                        "flex": 1,
+                        "paddingBottom": 17,
+                        "paddingHorizontal": 24,
+                        "paddingTop": 14,
                       },
                       Array [
                         Object {
-                          "fontSize": 16,
-                          "textAlign": "left",
+                          "marginBottom": 16,
+                          "marginHorizontal": 12,
                         },
                         Object {
-                          "color": "#fff",
+                          "backgroundColor": "#00aa9f",
                         },
                       ],
                     ]
                   }>
-                  Sputnik sickles found in the seats
-                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -1517,71 +1759,98 @@ exports[`Messages should render sending messages 1`] = `
                           "fontSize": 13,
                           "textAlign": "center",
                         },
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.30)",
-                          "fontSize": 14,
-                        },
+                        Array [
+                          Object {
+                            "fontSize": 16,
+                            "textAlign": "left",
+                          },
+                          Object {
+                            "color": "#fff",
+                          },
+                        ],
                       ]
                     }>
-                    11:11
+                    Sputnik sickles found in the seats
+                     
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#003035",
+                            "fontFamily": "Brandon Text",
+                            "fontSize": 13,
+                            "textAlign": "center",
+                          },
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.30)",
+                            "fontSize": 14,
+                          },
+                        ]
+                      }>
+                      11:11
+                    </Text>
                   </Text>
-                </Text>
+                </View>
               </View>
             </View>
             <View
               style={
                 Array [
                   Object {
-                    "alignItems": "flex-end",
+                    "flexDirection": "row-reverse",
+                    "justifyContent": "flex-end",
                     "marginVertical": 24,
                   },
                   Object {
-                    "alignItems": "flex-start",
+                    "flexDirection": "row",
+                    "justifyContent": "flex-start",
                   },
                 ]
               }>
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#fff",
-                      "borderRadius": 6,
-                      "flex": 1,
-                      "paddingBottom": 17,
-                      "paddingHorizontal": 24,
-                      "paddingTop": 14,
-                    },
-                    Array [
-                      Object {
-                        "marginBottom": 16,
-                      },
-                      undefined,
-                    ],
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 40,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  }
                 }>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <Image
+                  source={1}
+                  style={undefined} />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }>
+                <View
                   style={
                     Array [
                       Object {
-                        "color": "#003035",
-                        "fontFamily": "Brandon Text",
-                        "fontSize": 13,
-                        "textAlign": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 6,
+                        "flex": 1,
+                        "paddingBottom": 17,
+                        "paddingHorizontal": 24,
+                        "paddingTop": 14,
                       },
                       Array [
                         Object {
-                          "fontSize": 16,
-                          "textAlign": "left",
+                          "marginBottom": 16,
+                          "marginHorizontal": 12,
                         },
                         undefined,
                       ],
                     ]
                   }>
-                  I lost my liquid tongue for the wet pen
-                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -1594,70 +1863,92 @@ exports[`Messages should render sending messages 1`] = `
                           "fontSize": 13,
                           "textAlign": "center",
                         },
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.30)",
-                          "fontSize": 14,
-                        },
+                        Array [
+                          Object {
+                            "fontSize": 16,
+                            "textAlign": "left",
+                          },
+                          undefined,
+                        ],
                       ]
                     }>
-                    11:11
+                    I lost my liquid tongue for the wet pen
+                     
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#003035",
+                            "fontFamily": "Brandon Text",
+                            "fontSize": 13,
+                            "textAlign": "center",
+                          },
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.30)",
+                            "fontSize": 14,
+                          },
+                        ]
+                      }>
+                      11:11
+                    </Text>
                   </Text>
-                </Text>
+                </View>
               </View>
             </View>
             <View
               style={
                 Object {
-                  "alignItems": "flex-end",
+                  "flexDirection": "row-reverse",
+                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
               <View
                 style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#fff",
-                      "borderRadius": 6,
-                      "flex": 1,
-                      "paddingBottom": 17,
-                      "paddingHorizontal": 24,
-                      "paddingTop": 14,
-                    },
-                    Array [
-                      Object {
-                        "marginBottom": 16,
-                      },
-                      Object {
-                        "backgroundColor": "#00aa9f",
-                      },
-                    ],
-                  ]
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 40,
+                    "height": 40,
+                    "justifyContent": "center",
+                    "width": 40,
+                  }
                 }>
-                <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  ellipsizeMode="tail"
+                <Image
+                  source={1}
+                  style={undefined} />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }>
+                <View
                   style={
                     Array [
                       Object {
-                        "color": "#003035",
-                        "fontFamily": "Brandon Text",
-                        "fontSize": 13,
-                        "textAlign": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 6,
+                        "flex": 1,
+                        "paddingBottom": 17,
+                        "paddingHorizontal": 24,
+                        "paddingTop": 14,
                       },
                       Array [
                         Object {
-                          "fontSize": 16,
-                          "textAlign": "left",
+                          "marginBottom": 16,
+                          "marginHorizontal": 12,
                         },
                         Object {
-                          "color": "#fff",
+                          "backgroundColor": "#00aa9f",
                         },
                       ],
                     ]
                   }>
-                  Let a stool pigeon escort those who contort
-                   
                   <Text
                     accessible={true}
                     allowFontScaling={true}
@@ -1670,15 +1961,41 @@ exports[`Messages should render sending messages 1`] = `
                           "fontSize": 13,
                           "textAlign": "center",
                         },
-                        Object {
-                          "color": "rgba(0, 0, 0, 0.30)",
-                          "fontSize": 14,
-                        },
+                        Array [
+                          Object {
+                            "fontSize": 16,
+                            "textAlign": "left",
+                          },
+                          Object {
+                            "color": "#fff",
+                          },
+                        ],
                       ]
                     }>
-                    11:11
+                    Let a stool pigeon escort those who contort
+                     
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#003035",
+                            "fontFamily": "Brandon Text",
+                            "fontSize": 13,
+                            "textAlign": "center",
+                          },
+                          Object {
+                            "color": "rgba(0, 0, 0, 0.30)",
+                            "fontSize": 14,
+                          },
+                        ]
+                      }>
+                      11:11
+                    </Text>
                   </Text>
-                </Text>
+                </View>
               </View>
             </View>
           </View>

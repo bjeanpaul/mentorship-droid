@@ -1,5 +1,6 @@
 import moment from 'moment';
 import React, { PropTypes } from 'react';
+import { View } from 'react-native';
 
 import { Text } from 'src/components';
 import baseStyles, { themes, states } from './styles';
@@ -11,13 +12,15 @@ const MessageBubble = ({
   timestamp,
   styles = {},
 }) => (
-  <Bubble style={[baseStyles.bubble, styles.bubble]}>
-    <Text style={[baseStyles.content, styles.content]}>
-      {content}
-      {' '}
-      <Text style={baseStyles.time}>{moment(timestamp).format('HH:MM')}</Text>
-    </Text>
-  </Bubble>
+  <View style={baseStyles.container}>
+    <Bubble style={[baseStyles.bubble, styles.bubble]}>
+      <Text style={[baseStyles.content, styles.content]}>
+        {content}
+        {' '}
+        <Text style={baseStyles.time}>{moment(timestamp).format('HH:MM')}</Text>
+      </Text>
+    </Bubble>
+  </View>
 );
 
 

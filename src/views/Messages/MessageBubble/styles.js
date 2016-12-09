@@ -27,7 +27,12 @@ export const states = {
 
 
 export default StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'flex-end',
+  },
   bubble: {
+    marginHorizontal: 12,
     marginBottom: 16,
   },
   content: {

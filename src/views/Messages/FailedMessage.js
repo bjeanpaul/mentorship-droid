@@ -3,6 +3,7 @@ import { View } from 'react-native';
 
 import { Button } from 'src/components';
 import styles from './styles';
+import MentorAvatar from './MentorAvatar';
 import MessageBubble from './MessageBubble';
 
 
@@ -11,6 +12,8 @@ const FailedMessage = ({
   onRetryPress,
 }) => (
   <View style={styles.message}>
+    <MentorAvatar />
+
     <MessageBubble
       styles={MessageBubble.states.pending}
       {...message}
