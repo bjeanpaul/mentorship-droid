@@ -1,4 +1,4 @@
-import { groupBy, pick, first } from 'lodash';
+import { groupBy, pick } from 'lodash';
 import { groupByDate } from 'src/helpers';
 import { COLLAPSIBLE_EVENTS } from 'src/constants/events';
 
@@ -9,15 +9,20 @@ const collapseEvents = (events, collapsibles) => {
   const groups = pick(groupBy(events, 'eventType'), collapsibles);
 
   for (const event of events) {
-    const { eventType } = event;
+    const { id, eventType } = event;
     const group = groups[eventType];
 
     if (!group) {
-      res.push(event);
+      res.push({
+        id,
+        eventType,
+        event,
+      });
     } else if (!seen[eventType]) {
       res.push({
-        id: first(group).id,
-        items: group,
+        id,
+        eventType,
+        events: group,
       });
 
       seen[eventType] = true;

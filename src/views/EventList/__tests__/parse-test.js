@@ -7,21 +7,25 @@ describe('src/views/EventList/parse', () => {
     it('should group events', () => {
       const event1 = fakeEvent({
         id: 1,
+        eventType: 'FOO',
         occuredAt: '2016-09-01T11:19:17.368442Z',
       });
 
       const event2 = fakeEvent({
         id: 2,
+        eventType: 'FOO',
         occuredAt: '2016-09-01T12:19:17.368442Z',
       });
 
       const event3 = fakeEvent({
         id: 3,
+        eventType: 'FOO',
         occuredAt: '2016-09-02T13:19:17.368442Z',
       });
 
       const event4 = fakeEvent({
         id: 4,
+        eventType: 'FOO',
         occuredAt: '2016-09-02T14:19:17.368442Z',
       });
 
@@ -31,10 +35,26 @@ describe('src/views/EventList/parse', () => {
       expect(res)
         .toEqual([{
           date: '2016-09-01T22:00:00.000Z',
-          items: [event4, event3],
+          items: [{
+            id: 4,
+            eventType: 'FOO',
+            event: event4,
+          }, {
+            id: 3,
+            eventType: 'FOO',
+            event: event3,
+          }],
         }, {
           date: '2016-08-31T22:00:00.000Z',
-          items: [event2, event1],
+          items: [{
+            id: 2,
+            eventType: 'FOO',
+            event: event2,
+          }, {
+            id: 1,
+            eventType: 'FOO',
+            event: event1,
+          }],
         }]);
     });
 
@@ -66,20 +86,22 @@ describe('src/views/EventList/parse', () => {
       const events = [event1, event2, event3, event4];
       const res = groupEvents(events, ['FOO', 'BAR']);
 
-      const foos = {
-        id: 3,
-        items: [event3, event1],
-      };
-
-      const bars = {
-        id: 2,
-        items: [event2],
-      };
-
       expect(res)
         .toEqual([{
           date: '2016-08-31T22:00:00.000Z',
-          items: [event4, foos, bars],
+          items: [{
+            id: 4,
+            eventType: 'BAZ',
+            event: event4,
+          }, {
+            id: 3,
+            eventType: 'FOO',
+            events: [event3, event1],
+          }, {
+            id: 2,
+            eventType: 'BAR',
+            events: [event2],
+          }],
         }]);
     });
   });
