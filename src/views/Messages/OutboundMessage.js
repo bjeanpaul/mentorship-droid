@@ -8,9 +8,10 @@ import MessageBubble from './MessageBubble';
 
 const OutboundMessage = ({
   message,
+  profile,
 }) => (
   <View style={styles.message}>
-    <MentorAvatar />
+    <MentorAvatar profile={profile} />
 
     <MessageBubble
       styles={MessageBubble.themes.dark}
@@ -22,6 +23,7 @@ const OutboundMessage = ({
 
 OutboundMessage.propTypes = {
   message: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired,
 };
 
 

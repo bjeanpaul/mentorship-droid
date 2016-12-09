@@ -9,10 +9,11 @@ import MessageBubble from './MessageBubble';
 
 const FailedMessage = ({
   message,
+  profile,
   onRetryPress,
 }) => (
   <View style={styles.message}>
-    <MentorAvatar />
+    <MentorAvatar profile={profile} />
 
     <MessageBubble
       styles={MessageBubble.states.pending}
@@ -30,6 +31,7 @@ FailedMessage.propTypes = {
   message: PropTypes.shape({
     content: PropTypes.string.isRequired,
   }).isRequired,
+  profile: PropTypes.object.isRequired,
   onRetryPress: PropTypes.func.isRequired,
 };
 

@@ -8,9 +8,10 @@ import MessageBubble from './MessageBubble';
 
 const SendingMessage = ({
   message,
+  profile,
 }) => (
   <View style={styles.message}>
-    <MentorAvatar />
+    <MentorAvatar profile={profile} />
 
     <MessageBubble
       styles={MessageBubble.states.pending}
@@ -22,6 +23,7 @@ const SendingMessage = ({
 
 SendingMessage.propTypes = {
   message: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired,
 };
 
 

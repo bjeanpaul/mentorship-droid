@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { View } from 'react-native';
+import { View, Image } from 'react-native';
 
 import styles from './styles';
 import MenteeAvatar from './MenteeAvatar';

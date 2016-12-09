@@ -12,6 +12,7 @@ const Messages = ({
   messages,
   onSendPress,
   onRetryPress,
+  ...props,
 }) => {
   const groups = groupByDate(messages, 'day', 'asc', 'timestamp');
 
@@ -25,7 +26,8 @@ const Messages = ({
                 <MessageGroup
                   key={group.date}
                   onRetryPress={onRetryPress}
-                  {...group}
+                  group={group}
+                  {...props}
                 />)
             }
           </View>
