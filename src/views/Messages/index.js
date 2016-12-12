@@ -21,21 +21,21 @@ const Messages = ({
     <BaseView>
       <KeyboardAvoidingView behaviour="height" style={{ flex: 1 }}>
         <PatternBackground>
-            <ScrollView inverted>
-              <View style={styles.messages}>
-              {
-                  groups.map(group =>
-                    <MessageGroup
-                      key={group.date}
-                      onRetryPress={onRetryPress}
-                      group={group}
-                      {...props}
-                    />)
-              }
-              </View>
-            </ScrollView>
+          <ScrollView inverted>
+            <View style={styles.messages}>
+            {
+                groups.map(group =>
+                  <MessageGroup
+                    key={group.date}
+                    onRetryPress={onRetryPress}
+                    group={group}
+                    {...props}
+                  />)
+            }
+            </View>
+          </ScrollView>
 
-            <Send onSendPress={onSendPress} />
+          <Send onSendPress={onSendPress} />
         </PatternBackground>
       </KeyboardAvoidingView>
     </BaseView>
