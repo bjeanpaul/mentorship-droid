@@ -87,8 +87,18 @@ exports[`Messages should render 1`] = `
                   }
                 }>
                 <Image
-                  source={1}
-                  style={undefined} />
+                  source={
+                    Object {
+                      "uri": "/foo.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "borderRadius": 40,
+                      "height": 40,
+                      "width": 40,
+                    }
+                  } />
               </View>
               <View
                 style={
@@ -194,7 +204,13 @@ exports[`Messages should render 1`] = `
                 }>
                 <Image
                   source={1}
-                  style={undefined} />
+                  style={
+                    Object {
+                      "borderRadius": 40,
+                      "height": 40,
+                      "width": 40,
+                    }
+                  } />
               </View>
               <View
                 style={
@@ -289,8 +305,18 @@ exports[`Messages should render 1`] = `
                   }
                 }>
                 <Image
-                  source={1}
-                  style={undefined} />
+                  source={
+                    Object {
+                      "uri": "/foo.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "borderRadius": 40,
+                      "height": 40,
+                      "width": 40,
+                    }
+                  } />
               </View>
               <View
                 style={
@@ -544,8 +570,18 @@ exports[`Messages should render failed messages 1`] = `
                   }
                 }>
                 <Image
-                  source={1}
-                  style={undefined} />
+                  source={
+                    Object {
+                      "uri": "/foo.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "borderRadius": 40,
+                      "height": 40,
+                      "width": 40,
+                    }
+                  } />
               </View>
               <View
                 style={
@@ -651,7 +687,13 @@ exports[`Messages should render failed messages 1`] = `
                 }>
                 <Image
                   source={1}
-                  style={undefined} />
+                  style={
+                    Object {
+                      "borderRadius": 40,
+                      "height": 40,
+                      "width": 40,
+                    }
+                  } />
               </View>
               <View
                 style={
@@ -746,8 +788,18 @@ exports[`Messages should render failed messages 1`] = `
                   }
                 }>
                 <Image
-                  source={1}
-                  style={undefined} />
+                  source={
+                    Object {
+                      "uri": "/foo.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "borderRadius": 40,
+                      "height": 40,
+                      "width": 40,
+                    }
+                  } />
               </View>
               <View
                 style={
@@ -1264,8 +1316,18 @@ exports[`Messages should render outbound messages 1`] = `
                   }
                 }>
                 <Image
-                  source={1}
-                  style={undefined} />
+                  source={
+                    Object {
+                      "uri": "/foo.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "borderRadius": 40,
+                      "height": 40,
+                      "width": 40,
+                    }
+                  } />
               </View>
               <View
                 style={
@@ -1371,7 +1433,13 @@ exports[`Messages should render outbound messages 1`] = `
                 }>
                 <Image
                   source={1}
-                  style={undefined} />
+                  style={
+                    Object {
+                      "borderRadius": 40,
+                      "height": 40,
+                      "width": 40,
+                    }
+                  } />
               </View>
               <View
                 style={
@@ -1466,8 +1534,18 @@ exports[`Messages should render outbound messages 1`] = `
                   }
                 }>
                 <Image
-                  source={1}
-                  style={undefined} />
+                  source={
+                    Object {
+                      "uri": "/foo.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "borderRadius": 40,
+                      "height": 40,
+                      "width": 40,
+                    }
+                  } />
               </View>
               <View
                 style={
@@ -1721,8 +1799,18 @@ exports[`Messages should render sending messages 1`] = `
                   }
                 }>
                 <Image
-                  source={1}
-                  style={undefined} />
+                  source={
+                    Object {
+                      "uri": "/foo.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "borderRadius": 40,
+                      "height": 40,
+                      "width": 40,
+                    }
+                  } />
               </View>
               <View
                 style={
@@ -1828,7 +1916,13 @@ exports[`Messages should render sending messages 1`] = `
                 }>
                 <Image
                   source={1}
-                  style={undefined} />
+                  style={
+                    Object {
+                      "borderRadius": 40,
+                      "height": 40,
+                      "width": 40,
+                    }
+                  } />
               </View>
               <View
                 style={
@@ -1923,8 +2017,18 @@ exports[`Messages should render sending messages 1`] = `
                   }
                 }>
                 <Image
-                  source={1}
-                  style={undefined} />
+                  source={
+                    Object {
+                      "uri": "/foo.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "borderRadius": 40,
+                      "height": 40,
+                      "width": 40,
+                    }
+                  } />
               </View>
               <View
                 style={

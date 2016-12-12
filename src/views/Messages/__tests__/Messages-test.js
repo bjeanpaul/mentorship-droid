@@ -3,11 +3,18 @@ import React from 'react';
 
 import Messages from 'src/views/Messages';
 import * as constants from 'src/constants/messages';
-import { fakeMessage, fakePendingMessage, uidEquals } from 'app/scripts/helpers';
+
+import {
+  fakeMessage,
+  fakeProfile,
+  fakePendingMessage,
+  uidEquals,
+} from 'app/scripts/helpers';
 
 
 const createComponent = (props = {}) => (
   <Messages
+    profile={fakeProfile()}
     messages={[
       fakeMessage({
         id: 1,
