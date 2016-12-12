@@ -1,51 +1,29 @@
 import React, { PropTypes } from 'react';
 import { View } from 'react-native';
-import { Text } from 'src/components';
-import containers from 'src/containers/events';
+
 import FirstEventContainer from 'src/containers/FirstEventContainer';
+import EventGroup from './EventGroup';
+import { groupEvents } from './parse';
 import styles from './styles';
 
 
 const EventList = ({
-  groups = [],
+  events = [],
 }) => {
-  const groupElements = groups.map((group, index) => {
-    const eventElements = group.events
-    .filter(event => containers[event.eventType])
-    .map(event => React.createElement(containers[event.eventType], {
-      ...event,
-      key: event.id,
-    }));
-    if (!eventElements.length) return void 0;
-    return (
-      <View key={index}>
-        <View style={styles.groupLabel}>
-          <Text style={styles.groupLabelText}>{group.label}</Text>
-        </View>
-        {eventElements}
-      </View>
-    );
-  }).filter(el => typeof(el) !== 'undefined');
-
   return (
     <View style={styles.container}>
-      {groupElements.length && groupElements || <FirstEventContainer />}
+    {
+      events.length
+        ? groupEvents(events).map(group => <EventGroup key={group.date} {...group} />)
+        : <FirstEventContainer />
+    }
     </View>
   );
 };
 
 
 EventList.propTypes = {
-  groups: PropTypes.arrayOf(PropTypes.shape({
-    date: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    events: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.number,
-      occuredAt: PropTypes.string,
-      eventType: PropTypes.string.isRequired,
-      objectId: PropTypes.number,
-    })).isRequired,
-  })),
+  events: PropTypes.arrayOf(PropTypes.object),
 };
 
 

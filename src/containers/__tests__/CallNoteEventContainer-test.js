@@ -16,7 +16,7 @@ describe('CallNoteEventContainer', () => {
         },
       });
 
-      expect(mapStateToProps(state, event)).toEqual(jasmine.objectContaining({
+      expect(mapStateToProps(state, { event })).toEqual(jasmine.objectContaining({
         callNote,
       }));
     });
@@ -32,7 +32,7 @@ describe('CallNoteEventContainer', () => {
         },
       });
 
-      expect(mapStateToProps(state, event)).toEqual(jasmine.objectContaining({
+      expect(mapStateToProps(state, { event })).toEqual(jasmine.objectContaining({
         event,
       }));
     });

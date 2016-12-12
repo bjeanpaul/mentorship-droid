@@ -2,7 +2,7 @@ import { every, pick, isNull } from 'lodash';
 import { arrayOf } from 'normalizr';
 import request, { imageData } from 'src/api/request';
 import { Profile } from 'src/api/schemas';
-import { parseResults } from 'src/api/parse';
+import { parseProfile, parseProfileListResults } from 'src/api/parse';
 
 
 export const REQUIRED_PROFILE_FIELDS = [
@@ -21,7 +21,7 @@ export const listProfiles = (auth, params = {}) => request({
   url: '/profile/',
   method: 'GET',
   schema: arrayOf(Profile),
-  parse: parseResults,
+  parse: parseProfileListResults,
   params,
   auth,
 });
@@ -31,6 +31,7 @@ export const getProfile = (id, auth) => request({
   url: `/profile/${id}/`,
   method: 'GET',
   schema: Profile,
+  parse: parseProfile,
   auth,
 });
 
@@ -39,6 +40,7 @@ export const updateProfile = (id, data, auth) => request({
   url: `/profile/${id}/`,
   method: 'PUT',
   schema: Profile,
+  parse: parseProfile,
   data,
   auth,
 });

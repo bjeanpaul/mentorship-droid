@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 
 import styles from './styles';
+import MentorAvatar from './MentorAvatar';
 import MessageBubble from './MessageBubble';
 
 
-const SendingMessage = props => (
+const SendingMessage = ({
+  message,
+  profile,
+}) => (
   <View style={styles.message}>
+    <MentorAvatar profile={profile} />
+
     <MessageBubble
       styles={MessageBubble.states.pending}
-      {...props}
+      {...message}
     />
   </View>
 );
+
+
+SendingMessage.propTypes = {
+  message: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired,
+};
 
 
 export default SendingMessage;

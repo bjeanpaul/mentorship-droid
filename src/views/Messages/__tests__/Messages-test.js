@@ -3,42 +3,36 @@ import React from 'react';
 
 import Messages from 'src/views/Messages';
 import * as constants from 'src/constants/messages';
-import { fakeMessage, fakePendingMessage, uidEquals } from 'app/scripts/helpers';
 
-
-const fakeGroup = data => ({
-  messages: [],
-  ...data,
-});
-
-
-const fakeSingleton = msg => [{
-  messages: [msg],
-}].map(fakeGroup);
+import {
+  fakeMessage,
+  fakeProfile,
+  fakePendingMessage,
+  uidEquals,
+} from 'app/scripts/helpers';
 
 
 const createComponent = (props = {}) => (
   <Messages
-    groups={[{
-      messages: [
-        fakeMessage({
-          content: 'Sputnik sickles found in the seats',
-          details: { direction: constants.MESSAGE_DIRECTION_OUTBOUND },
-        }),
-        fakeMessage({
-          content: 'I lost my liquid tongue for the wet pen',
-          details: { direction: constants.MESSAGE_DIRECTION_INBOUND },
-        }),
-      ],
-    }, {
-      messages: [
-        fakeMessage({
-          content: 'Let a stool pigeon escort those who contort',
-          details: { direction: constants.MESSAGE_DIRECTION_OUTBOUND },
-        }),
-      ],
-    }].map(fakeGroup)}
+    profile={fakeProfile()}
+    messages={[
+      fakeMessage({
+        id: 1,
+        content: 'Sputnik sickles found in the seats',
+        details: { direction: constants.MESSAGE_DIRECTION_OUTBOUND },
+      }),
+      fakeMessage({
+        id: 2,
+        content: 'I lost my liquid tongue for the wet pen',
+        details: { direction: constants.MESSAGE_DIRECTION_INBOUND },
+      }),
+      fakeMessage({
+        id: 3,
+        content: 'Let a stool pigeon escort those who contort',
+        details: { direction: constants.MESSAGE_DIRECTION_OUTBOUND },
+      })]}
     onSendPress={noop}
+    onRetryPress={noop}
     {...props}
   />
 );
@@ -52,9 +46,9 @@ describe('Messages', () => {
 
   it('should render inbound messages', () => {
     const el = render(createComponent({
-      groups: fakeSingleton(fakeMessage({
+      messages: [fakeMessage({
         details: { direction: constants.MESSAGE_DIRECTION_INBOUND },
-      })),
+      })],
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
@@ -62,9 +56,9 @@ describe('Messages', () => {
 
   it('should render outbound messages', () => {
     const el = render(createComponent({
-      groups: fakeSingleton(fakeMessage({
+      groups: [fakeMessage({
         details: { direction: constants.MESSAGE_DIRECTION_OUTBOUND },
-      })),
+      })],
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
@@ -72,9 +66,9 @@ describe('Messages', () => {
 
   it('should render sending messages', () => {
     const el = render(createComponent({
-      groups: fakeSingleton(fakePendingMessage({
+      groups: [fakePendingMessage({
         details: { status: constants.PENDING_MESSAGE_STATUS_SENDING },
-      })),
+      })],
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
@@ -82,9 +76,9 @@ describe('Messages', () => {
 
   it('should render failed messages', () => {
     const el = render(createComponent({
-      groups: fakeSingleton(fakePendingMessage({
+      groups: [fakePendingMessage({
         details: { status: constants.PENDING_MESSAGE_STATUS_FAILED },
-      })),
+      })],
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
@@ -98,11 +92,35 @@ describe('Messages', () => {
       .shallow();
 
     send.findWhere(uidEquals('sendInput'))
-      .simulate('textChange', '123');
+      .simulate('changeText', '123');
 
     send.findWhere(uidEquals('sendButton'))
       .simulate('press');
 
     expect(onSendPress.mock.calls).toEqual([[{ content: '123' }]]);
+  });
+
+  it('should call onRetryPress() with the relevant message retry when pressed', () => {
+    const onRetryPress = jest.fn();
+
+    const msg = fakePendingMessage({
+      details: { status: constants.PENDING_MESSAGE_STATUS_FAILED },
+    });
+
+    const el = shallow(createComponent({
+      onRetryPress,
+      messages: [msg],
+    }));
+
+    const messageEl = el
+      .find('MessageGroup')
+      .shallow()
+      .find('Message')
+      .shallow();
+
+    messageEl.findWhere(uidEquals('retry'))
+      .simulate('press');
+
+    expect(onRetryPress.mock.calls).toEqual([[msg]]);
   });
 });

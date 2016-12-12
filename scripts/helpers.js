@@ -79,6 +79,7 @@ export const fakeScheduledCall = data => ({
 export const fakeProfile = data => ({
   id: 23,
   firstName: 'Rodger',
+  profilePic: '/foo.png',
   ...data,
 });
 
@@ -96,7 +97,6 @@ export const fakeEvent = data => ({
   occuredAt: '2016-09-16T11:19:17.368442Z',
   eventType: EVENT_TYPE_SCHEDULED_CALL_CREATED,
   objectId: 23,
-  description: 'Im a big fake',
   ...data,
 });
 

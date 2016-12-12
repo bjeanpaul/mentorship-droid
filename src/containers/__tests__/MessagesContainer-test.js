@@ -1,25 +1,14 @@
 import { mapStateToProps } from 'src/containers/MessagesContainer';
 import { fakeState, fakeMessage, fakePendingMessage } from 'app/scripts/helpers';
+import { getAuthUserProfile } from 'src/store/helpers';
 
 
 describe('MessagesContainer', () => {
   it('should provide messages', () => {
     const state = fakeState();
-
-    const msg1 = fakeMessage({
-      id: 1,
-      timestamp: '2016-11-29T09:43:20.311Z',
-    });
-
-    const msg2 = fakeMessage({
-      id: 2,
-      timestamp: '2016-11-30T09:43:20.311Z',
-    });
-
-    const msg3 = fakePendingMessage({
-      id: 3,
-      timestamp: '2016-11-31T09:43:20.311Z',
-    });
+    const msg1 = fakeMessage({ id: 1 });
+    const msg2 = fakeMessage({ id: 2 });
+    const msg3 = fakePendingMessage({ id: 3 });
 
     state.entities.messages = {
       1: msg1,
@@ -31,9 +20,15 @@ describe('MessagesContainer', () => {
     };
 
     expect(mapStateToProps(state)).toEqual(jasmine.objectContaining({
-      groups: [{
-        messages: [msg3, msg2, msg1],
-      }],
+      messages: [msg1, msg2, msg3],
+    }));
+  });
+
+  it('should provide the authed users profile', () => {
+    const state = fakeState();
+
+    expect(mapStateToProps(state)).toEqual(jasmine.objectContaining({
+      profile: getAuthUserProfile(state),
     }));
   });
 });
