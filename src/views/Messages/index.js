@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
-import { View, ScrollView } from 'react-native';
+import { View } from 'react-native';
+import ScrollView from 'react-native-invertible-scroll-view';
 
 import { BaseView, PatternBackground } from 'src/components';
 import styles from './styles';
@@ -19,9 +20,9 @@ const Messages = ({
   return (
     <BaseView>
       <PatternBackground>
-        <ScrollView>
+        <ScrollView inverted>
           <View style={styles.messages}>
-            {
+          {
               groups.map(group =>
                 <MessageGroup
                   key={group.date}
@@ -29,7 +30,7 @@ const Messages = ({
                   group={group}
                   {...props}
                 />)
-            }
+          }
           </View>
         </ScrollView>
 
