@@ -2,22 +2,22 @@ import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 
 import styles from './styles';
+import MenteeAvatar from './MenteeAvatar';
 import MessageBubble from './MessageBubble';
 
 
 const InboundMessage = ({
-  message: { content },
+  message,
 }) => (
-  <View style={styles.message}>
-    <MessageBubble content={content} />
+  <View style={[styles.message, styles.messageInbound]}>
+    <MenteeAvatar />
+    <MessageBubble {...message} />
   </View>
 );
 
 
 InboundMessage.propTypes = {
-  message: PropTypes.shape({
-    content: PropTypes.string.isRequired,
-  }).isRequired,
+  message: PropTypes.object.isRequired,
 };
 
 

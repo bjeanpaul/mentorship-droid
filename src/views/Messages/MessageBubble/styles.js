@@ -27,11 +27,20 @@ export const states = {
 
 
 export default StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'flex-end',
+  },
   bubble: {
+    marginHorizontal: 12,
     marginBottom: 16,
   },
   content: {
     fontSize: 16,
     textAlign: 'left',
+  },
+  time: {
+    fontSize: 14,
+    color: colors.MESSAGE_BUBBLE_TIME_TEXT,
   },
 });

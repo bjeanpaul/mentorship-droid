@@ -1,3 +1,35 @@
+exports[`Event should render a counter if a count is given 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#ffbcbc",
+        "borderColor": "red",
+        "borderWidth": 1,
+        "height": 100,
+        "justifyContent": "center",
+        "margin": 10,
+        "width": 300,
+      },
+      undefined,
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#333333",
+        "margin": 20,
+      }
+    }>
+    TouchableNativeFeedback is not supported on this platform!
+  </Text>
+</View>
+`;
+
 exports[`Event should render a formatted date if the blurb is undefined 1`] = `
 <View
   style={

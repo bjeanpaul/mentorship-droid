@@ -8,7 +8,13 @@ export default StyleSheet.create({
     padding: 16,
   },
   message: {
+    flexDirection: 'row-reverse',
+    justifyContent: 'flex-end',
     marginVertical: 24,
+  },
+  messageInbound: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
   },
   groupDate: {
     fontSize: 16,

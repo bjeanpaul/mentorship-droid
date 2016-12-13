@@ -1,6 +1,5 @@
 import { mapStateToProps } from 'src/containers/EventListContainer';
 import { fakeState, fakeEvent } from 'app/scripts/helpers';
-import { formatDateRelatively } from 'src/helpers';
 
 
 describe('EventListContainer', () => {
@@ -35,18 +34,10 @@ describe('EventListContainer', () => {
         4: event4,
       };
 
-      const { groups } = mapStateToProps(state);
+      const { events } = mapStateToProps(state);
 
-      expect(groups)
-        .toEqual([{
-          date: '2016-11-02T22:00:00.000Z',
-          label: formatDateRelatively('2016-11-02T22:00:00.000Z'),
-          events: [event4, event3],
-        }, {
-          date: '2016-11-01T22:00:00.000Z',
-          label: formatDateRelatively('2016-11-01T22:00:00.000Z'),
-          events: [event2, event1],
-        }]);
+      expect(events)
+        .toEqual([event1, event2, event3, event4]);
     });
   });
 });

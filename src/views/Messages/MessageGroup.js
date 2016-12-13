@@ -8,8 +8,10 @@ import styles from './styles';
 
 
 const MessageGroup = ({
-  date,
-  items,
+  group: {
+    date,
+    items,
+  },
   ...props,
 }) => (
   <View>
@@ -20,8 +22,10 @@ const MessageGroup = ({
 
 
 MessageGroup.propTypes = {
-  date: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  group: PropTypes.shape({
+    date: PropTypes.string.isRequired,
+    items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }).isRequired,
 };
 
 

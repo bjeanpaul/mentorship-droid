@@ -72,6 +72,13 @@ export const parseMessage = data => {
 };
 
 
+export const parseProfile = ({ profilePic, ...data }) => ({
+  ...data,
+  profilePic: imageUrl(profilePic),
+});
+
+
 export const parseCategoryListResults = flow(parseResults, parseCategories);
 export const parseActivityListResults = flow(parseResults, map(parseActivity));
 export const parseMessageListResults = flow(parseResults, map(parseMessage));
+export const parseProfileListResults = flow(parseResults, map(parseProfile));
