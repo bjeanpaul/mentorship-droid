@@ -36,6 +36,7 @@ import {
   getNextScheduledCall,
   getScheduledCallsBetween,
   getMessages,
+  getMessage,
 } from 'src/store/helpers';
 
 
@@ -464,6 +465,25 @@ describe('helpers', () => {
         msg3,
         msg4,
       ]);
+    });
+  });
+
+  describe('getMessage', () => {
+    it('should get the message with the given id', () => {
+      const msg = fakeMessage({
+        id: 23,
+        timestamp: '2016-11-02T09:43:20.311Z',
+      });
+
+      const state = fakeState({
+        entities: {
+          messages: {
+            23: msg,
+          },
+        },
+      });
+
+      expect(getMessage(state, 23)).toEqual(msg);
     });
   });
 });

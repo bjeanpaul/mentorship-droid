@@ -4,9 +4,11 @@ import { getCategory } from 'src/store/helpers';
 
 
 const mapStateToProps = (state, {
-  objectId: categoryId,
-  eventType: type,
-  occuredAt: date,
+  event: {
+    objectId: categoryId,
+    eventType: type,
+    occuredAt: date,
+  },
 }) => {
   const {
     image,
