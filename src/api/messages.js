@@ -8,7 +8,7 @@ import * as constants from 'src/constants/messages';
 
 
 export const listMessages = (auth, params = {}) => request({
-  url: '/chat_message/',
+  url: '/message/',
   method: 'GET',
   schema: arrayOf(Message),
   parse: parseMessageListResults,
@@ -18,7 +18,7 @@ export const listMessages = (auth, params = {}) => request({
 
 
 export const sendMessage = (msg, auth) => request({
-  url: '/chat_message/',
+  url: '/message/',
   method: 'POST',
   schema: Message,
   parse: parseMessage,

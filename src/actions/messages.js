@@ -1,6 +1,6 @@
 import * as api from 'src/api';
 import * as constants from 'src/constants/messages';
-import { apiAction, dataAction, staticAction } from 'src/actionHelpers';
+import { apiAction, dataAction, staticAction, tickAction } from 'src/actionHelpers';
 
 const { ApiResponseError } = api;
 
@@ -47,3 +47,8 @@ export const sendMessage = data => async (dispatch, { auth }) => {
     });
   }
 };
+
+
+export const startMessagePolling = tickAction(
+  constants.MESSAGE_POLL_INTERVAL,
+  constants.MESSAGE_POLL_TICK);

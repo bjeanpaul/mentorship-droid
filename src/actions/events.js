@@ -1,12 +1,7 @@
 import * as api from 'src/api';
 import * as constants from 'src/constants/events';
 
-import {
-  apiAction,
-  dataAction,
-  staticAction,
-  tickAction,
-} from 'src/actionHelpers';
+import { apiAction, dataAction, staticAction, tickAction } from 'src/actionHelpers';
 
 const { NetworkError, ApiResponseError } = api;
 

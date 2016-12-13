@@ -26,7 +26,7 @@ describe('api/messages', () => {
   describe('listMessages', () => {
     it('should construct a request for listing chat messages', () => {
       expect(listMessages(fakeAuth(), { foo: 23 })).toEqual({
-        url: '/chat_message/',
+        url: '/message/',
         method: 'GET',
         schema: arrayOf(Message),
         parse: parseMessageListResults,
@@ -45,7 +45,7 @@ describe('api/messages', () => {
       const res = sendMessage(msg, fakeAuth());
 
       expect(res).toEqual({
-        url: '/chat_message/',
+        url: '/message/',
         method: 'POST',
         schema: Message,
         auth: fakeAuth(),
