@@ -18,7 +18,7 @@ describe('Button', () => {
     expect(render(
       <Button
         onPress={foo}
-        theme={Button.themes.light}
+        styles={Button.themes.light}
       >
         margle
       </Button>
@@ -29,7 +29,7 @@ describe('Button', () => {
     expect(render(
       <Button
         onPress={foo}
-        theme={Button.themes.transparent}
+        styles={Button.themes.transparent}
       >
         margle
       </Button>
@@ -52,6 +52,18 @@ describe('Button', () => {
       <Button
         onPress={foo}
         layout={Button.layouts.stretch}
+      >
+        margle
+      </Button>
+    ).toJSON()).toMatchSnapshot();
+  });
+
+
+  it('should render "small" size', () => {
+    expect(render(
+      <Button
+        onPress={foo}
+        styles={Button.sizes.small}
       >
         margle
       </Button>
