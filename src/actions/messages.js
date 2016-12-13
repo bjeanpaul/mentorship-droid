@@ -1,15 +1,26 @@
 import * as api from 'src/api';
 import * as constants from 'src/constants/messages';
-import { apiAction, dataAction, staticAction } from 'src/actionHelpers';
+import { apiAction, dataAction, staticAction, tickAction } from 'src/actionHelpers';
 
 const { ApiResponseError } = api;
 
 
-export const listMessages = apiAction({
+const listMessagesDef = {
   method: api.listMessages,
   request: staticAction(constants.MESSAGE_LIST_REQUEST),
   success: dataAction(constants.MESSAGE_LIST_SUCCESS),
   failures: [[ApiResponseError, staticAction(constants.MESSAGE_LIST_FAILURE)]],
+};
+
+
+export const listMessages = apiAction(listMessagesDef);
+
+
+export const listRecentMessages = apiAction({
+  ...listMessagesDef,
+  method: auth => api.listMessages(auth, {
+    pageSize: constants.MESSAGE_LIST_RECENT_PAGE_SIZE,
+  }),
 });
 
 
@@ -36,3 +47,8 @@ export const sendMessage = data => async (dispatch, { auth }) => {
     });
   }
 };
+
+
+export const startMessagePolling = tickAction(
+  constants.MESSAGE_POLL_INTERVAL,
+  constants.MESSAGE_POLL_TICK);

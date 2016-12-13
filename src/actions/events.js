@@ -1,17 +1,12 @@
 import * as api from 'src/api';
 import * as constants from 'src/constants/events';
 
-import {
-  apiAction,
-  dataAction,
-  staticAction,
-  tickAction,
-} from 'src/actionHelpers';
+import { apiAction, dataAction, staticAction, tickAction } from 'src/actionHelpers';
 
 const { NetworkError, ApiResponseError } = api;
 
 
-const listEvents = apiAction({
+const listEventDef = {
   method: api.listEvents,
   request: staticAction(constants.EVENT_LIST_REQUEST),
   success: dataAction(constants.EVENT_LIST_SUCCESS),
@@ -19,6 +14,17 @@ const listEvents = apiAction({
     [ApiResponseError, staticAction(constants.EVENT_LIST_FAILURE)],
     [NetworkError, staticAction(constants.EVENT_LIST_NETWORK_FAILURE)],
   ],
+};
+
+
+const listEvents = apiAction(listEventDef);
+
+
+const listRecentEvents = apiAction({
+  ...listEventDef,
+  method: auth => api.listEvents(auth, {
+    pageSize: constants.EVENT_LIST_RECENT_PAGE_SIZE,
+  }),
 });
 
 
@@ -29,5 +35,6 @@ const startEventPolling = tickAction(
 
 export {
   listEvents,
+  listRecentEvents,
   startEventPolling,
 };
