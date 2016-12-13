@@ -72,7 +72,6 @@ exports[`Messages should render 1`] = `
               style={
                 Object {
                   "flexDirection": "row-reverse",
-                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
@@ -102,10 +101,13 @@ exports[`Messages should render 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    },
+                    undefined,
+                  ]
                 }>
                 <View
                   style={
@@ -183,12 +185,10 @@ exports[`Messages should render 1`] = `
                 Array [
                   Object {
                     "flexDirection": "row-reverse",
-                    "justifyContent": "flex-end",
                     "marginVertical": 24,
                   },
                   Object {
                     "flexDirection": "row",
-                    "justifyContent": "flex-start",
                   },
                 ]
               }>
@@ -214,10 +214,15 @@ exports[`Messages should render 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    },
+                    Object {
+                      "alignItems": "flex-start",
+                    },
+                  ]
                 }>
                 <View
                   style={
@@ -290,7 +295,6 @@ exports[`Messages should render 1`] = `
               style={
                 Object {
                   "flexDirection": "row-reverse",
-                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
@@ -320,10 +324,13 @@ exports[`Messages should render 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    },
+                    undefined,
+                  ]
                 }>
                 <View
                   style={
@@ -555,7 +562,6 @@ exports[`Messages should render failed messages 1`] = `
               style={
                 Object {
                   "flexDirection": "row-reverse",
-                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
@@ -585,10 +591,13 @@ exports[`Messages should render failed messages 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    },
+                    undefined,
+                  ]
                 }>
                 <View
                   style={
@@ -666,12 +675,10 @@ exports[`Messages should render failed messages 1`] = `
                 Array [
                   Object {
                     "flexDirection": "row-reverse",
-                    "justifyContent": "flex-end",
                     "marginVertical": 24,
                   },
                   Object {
                     "flexDirection": "row",
-                    "justifyContent": "flex-start",
                   },
                 ]
               }>
@@ -697,10 +704,15 @@ exports[`Messages should render failed messages 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    },
+                    Object {
+                      "alignItems": "flex-start",
+                    },
+                  ]
                 }>
                 <View
                   style={
@@ -773,7 +785,6 @@ exports[`Messages should render failed messages 1`] = `
               style={
                 Object {
                   "flexDirection": "row-reverse",
-                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
@@ -803,10 +814,13 @@ exports[`Messages should render failed messages 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    },
+                    undefined,
+                  ]
                 }>
                 <View
                   style={
@@ -1039,12 +1053,10 @@ exports[`Messages should render inbound messages 1`] = `
                 Array [
                   Object {
                     "flexDirection": "row-reverse",
-                    "justifyContent": "flex-end",
                     "marginVertical": 24,
                   },
                   Object {
                     "flexDirection": "row",
-                    "justifyContent": "flex-start",
                   },
                 ]
               }>
@@ -1070,10 +1082,15 @@ exports[`Messages should render inbound messages 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    },
+                    Object {
+                      "alignItems": "flex-start",
+                    },
+                  ]
                 }>
                 <View
                   style={
@@ -1301,7 +1318,6 @@ exports[`Messages should render outbound messages 1`] = `
               style={
                 Object {
                   "flexDirection": "row-reverse",
-                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
@@ -1331,10 +1347,13 @@ exports[`Messages should render outbound messages 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    },
+                    undefined,
+                  ]
                 }>
                 <View
                   style={
@@ -1412,12 +1431,10 @@ exports[`Messages should render outbound messages 1`] = `
                 Array [
                   Object {
                     "flexDirection": "row-reverse",
-                    "justifyContent": "flex-end",
                     "marginVertical": 24,
                   },
                   Object {
                     "flexDirection": "row",
-                    "justifyContent": "flex-start",
                   },
                 ]
               }>
@@ -1443,10 +1460,15 @@ exports[`Messages should render outbound messages 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    },
+                    Object {
+                      "alignItems": "flex-start",
+                    },
+                  ]
                 }>
                 <View
                   style={
@@ -1519,7 +1541,6 @@ exports[`Messages should render outbound messages 1`] = `
               style={
                 Object {
                   "flexDirection": "row-reverse",
-                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
@@ -1549,10 +1570,13 @@ exports[`Messages should render outbound messages 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    },
+                    undefined,
+                  ]
                 }>
                 <View
                   style={
@@ -1784,7 +1808,6 @@ exports[`Messages should render sending messages 1`] = `
               style={
                 Object {
                   "flexDirection": "row-reverse",
-                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
@@ -1814,10 +1837,13 @@ exports[`Messages should render sending messages 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    },
+                    undefined,
+                  ]
                 }>
                 <View
                   style={
@@ -1895,12 +1921,10 @@ exports[`Messages should render sending messages 1`] = `
                 Array [
                   Object {
                     "flexDirection": "row-reverse",
-                    "justifyContent": "flex-end",
                     "marginVertical": 24,
                   },
                   Object {
                     "flexDirection": "row",
-                    "justifyContent": "flex-start",
                   },
                 ]
               }>
@@ -1926,10 +1950,15 @@ exports[`Messages should render sending messages 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    },
+                    Object {
+                      "alignItems": "flex-start",
+                    },
+                  ]
                 }>
                 <View
                   style={
@@ -2002,7 +2031,6 @@ exports[`Messages should render sending messages 1`] = `
               style={
                 Object {
                   "flexDirection": "row-reverse",
-                  "justifyContent": "flex-end",
                   "marginVertical": 24,
                 }
               }>
@@ -2032,10 +2060,13 @@ exports[`Messages should render sending messages 1`] = `
               </View>
               <View
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "flex": 1,
-                  }
+                  Array [
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    },
+                    undefined,
+                  ]
                 }>
                 <View
                   style={
