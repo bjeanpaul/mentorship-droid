@@ -18,10 +18,13 @@ describe('MilestoneEventContainer', () => {
           },
         },
       });
-      expect(mapStateToProps(state, fakeEvent({
-        eventType: EVENT_TYPE_ACTIVITIY_CATEGORY_COMPLETED,
-        objectId: 123, // category
-      }))).toEqual({
+
+      expect(mapStateToProps(state, {
+        event: fakeEvent({
+          eventType: EVENT_TYPE_ACTIVITIY_CATEGORY_COMPLETED,
+          objectId: 123, // category
+        }),
+      })).toEqual({
         type: EVENT_TYPE_ACTIVITIY_CATEGORY_COMPLETED,
         date: '2016-09-16T11:19:17.368442Z',
         image: 'http://images.are.worth.1000.words',

@@ -1,14 +1,15 @@
 import { makeGradient } from 'src/helpers';
 import { fakeCategory, fakeActivity } from 'app/scripts/helpers';
 import colors from 'src/constants/colors';
+import * as constants from 'src/constants/messages';
 import config from 'src/config';
 
 import {
   parseResults,
   parseCategories,
-  parseActivities,
   parseCategory,
   parseActivity,
+  parseMessage,
 } from 'src/api/parse';
 
 const { API_BASE_URL } = config;
@@ -51,13 +52,6 @@ describe('api/parse', () => {
     });
   });
 
-  describe('parseActivities', () => {
-    it('should parse each activity', () => {
-      expect(parseActivities([fakeActivity()]))
-        .toEqual([parseActivity(fakeActivity())]);
-    });
-  });
-
   describe('parseCategory', () => {
     it('should prepend the base api url to the image url', () => {
       const { image } = parseCategory(fakeCategory({ image: '/foo.jpg' }));
@@ -89,6 +83,28 @@ describe('api/parse', () => {
     it('should not parse the icon url if it is falsy', () => {
       const { icon } = parseActivity(fakeActivity({ icon: null }));
       expect(icon).toEqual(null);
+    });
+  });
+
+  describe('parseMessage', () => {
+    it('should assign the pending message id', () => {
+      const msg = {
+        id: 21,
+        timeSent: '2016-11-30T09:43:20.311Z',
+        content: 'foo',
+        otherField: 'bar',
+      };
+
+      expect(parseMessage(msg))
+        .toEqual({
+          id: 21,
+          type: constants.MESSAGE_TYPE_COMPLETE,
+          timestamp: '2016-11-30T09:43:20.311Z',
+          content: 'foo',
+          details: {
+            otherField: 'bar',
+          },
+        });
     });
   });
 });

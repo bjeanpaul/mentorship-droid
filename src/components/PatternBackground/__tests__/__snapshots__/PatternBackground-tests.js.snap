@@ -1,5 +1,10 @@
 exports[`PatternBackground should render 1`] = `
-<View>
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }>
   <View
     style={
       Object {
@@ -15,7 +20,12 @@ exports[`PatternBackground should render 1`] = `
   </View>
   <View
     onLayout={[Function]}
-    uid="container">
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+    uid="contentContainer">
     <Text
       accessible={true}
       allowFontScaling={true}

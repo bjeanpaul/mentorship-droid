@@ -22,47 +22,53 @@ export const getContext = state => {
 };
 
 
-// TODO sort?
-export const getCategories = ({ entities: { categories } }) => values(categories);
+export const getCategories = ({ entities }) =>
+  sortBy(values(entities.categories), 'ordinal');
 
 
-// TODO sort?
-export const getCategoryActivities = ({
-  entities: { activities },
-}, targetCategoryId) => (
-  values(activities)
-    .filter(({ category }) => category === targetCategoryId));
+export const getCategoryActivities = ({ entities }, targetCategoryId) => {
+  const activities = values(entities.activities)
+    .filter(({ category }) => category === targetCategoryId);
+
+  return sortBy(activities, 'ordinal');
+};
 
 
-export const getCategory = ({ entities: { categories } }, id) => categories[id];
+export const getCategory = ({ entities: { categories } }, id) =>
+  categories[id];
 
 
-export const getActivity = ({ entities: { activities } }, id) => activities[id];
+export const getActivity = ({ entities: { activities } }, id) =>
+  activities[id];
 
 
-export const getScheduledCalls = ({ entities: { scheduledCalls } }) => values(scheduledCalls);
+export const getScheduledCalls = ({ entities: { scheduledCalls } }) =>
+  values(scheduledCalls);
 
 
-export const getScheduledCall = ({ entities: { scheduledCalls } }, id) => scheduledCalls[id];
+export const getScheduledCall = ({ entities: { scheduledCalls } }, id) =>
+  scheduledCalls[id];
 
 
 export const getScheduledCallActivity = (state, id) => {
   const scheduledCall = getScheduledCall(state, id);
-  return scheduledCall && scheduledCall.activity && getActivity(state, scheduledCall.activity);
+  return scheduledCall
+      && scheduledCall.activity
+      && getActivity(state, scheduledCall.activity);
 };
 
 
 export const getActivityCallNotes = ({
   entities: { callNotes },
-}, activityId) => {
-  return values(callNotes)
+}, activityId) =>
+  values(callNotes)
     .filter(({ callActivityId }) => callActivityId === activityId);
-};
 
 
 export const getCallNotes = ({
   entities: { callNotes },
-}) => sortBy(callNotes, ({ callStartTime }) => +moment(callStartTime));
+}) =>
+  sortBy(callNotes, ({ callStartTime }) => +moment(callStartTime));
 
 
 export const getCall = ({ entities: { calls } }, id) => calls[id];
@@ -100,5 +106,14 @@ const getEventObject = (state, event) => {
 
 
 // TODO return the associated entitites to make the containers' jobs easier
-export const getEvents = state => values(state.entities.events)
-  .filter(event => getEventObject(state, event));
+export const getEvents = (state) =>
+  values(state.entities.events)
+    .filter(event => getEventObject(state, event));
+
+
+export const getMessages = ({ entities }) => []
+  .concat(values(entities.messages))
+  .concat(values(entities.pendingMessages));
+
+
+export const getMessage = ({ entities }, id) => entities.messages[id];

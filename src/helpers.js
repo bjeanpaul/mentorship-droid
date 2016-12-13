@@ -1,5 +1,18 @@
+import moment from 'moment';
 import convert from 'color-convert';
-import { find, isUndefined, omitBy, isNull } from 'lodash';
+
+import {
+  find,
+  isUndefined,
+  omitBy,
+  isNull,
+  get,
+  toPairs,
+  fromPairs,
+  iteratee,
+  groupBy,
+  orderBy,
+} from 'lodash';
 
 
 export const makeGradient = (start, end, length) => {
@@ -53,3 +66,39 @@ export const errorSink = (store, actions, fallback) => e =>
 
 export const pipeline = fns => (v, ...args) =>
   fns.reduce((res, fn) => fn(res, ...args), v);
+
+
+export const delegate = (path, mappings) => {
+  const lookup = fromPairs(mappings);
+  return props => lookup[get(props, path)](props);
+};
+
+
+export const formatDateRelatively = (date, ref = null) => moment(date).calendar(ref, {
+  sameDay: '[Today]',
+  nextDay: '[Tomorrow]',
+  nextWeek: 'dddd',
+  lastDay: '[Yesterday]',
+  lastWeek: '[Last] dddd',
+  sameElse: 'dddd, DD MMMM',
+});
+
+
+export const groupByDate = (items, unit, order, key) => {
+  const keyFn = iteratee(key);
+  let res;
+
+  res = orderBy(items, [keyFn], [order]);
+
+  res = groupBy(res, item => moment(keyFn(item))
+    .startOf(unit)
+    .toISOString());
+
+  res = toPairs(res)
+    .map(([date, groupItems]) => ({
+      date,
+      items: groupItems,
+    }));
+
+  return orderBy(res, ['date'], [order]);
+};

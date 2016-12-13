@@ -81,7 +81,12 @@ exports[`Journey should render 1`] = `
     </View>
   </View>
   <ScrollView>
-    <View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }>
       <View
         style={
           Object {
@@ -97,7 +102,12 @@ exports[`Journey should render 1`] = `
       </View>
       <View
         onLayout={[Function]}
-        uid="container">
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        uid="contentContainer">
         <Image
           source={1}
           style={
@@ -326,7 +336,12 @@ exports[`Journey should render the current scheduled call to be started 1`] = `
     </View>
   </View>
   <ScrollView>
-    <View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }>
       <View
         style={
           Object {
@@ -342,7 +357,12 @@ exports[`Journey should render the current scheduled call to be started 1`] = `
       </View>
       <View
         onLayout={[Function]}
-        uid="container">
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        uid="contentContainer">
         <Image
           source={1}
           style={
@@ -571,7 +591,12 @@ exports[`Journey should render the next scheduled call 1`] = `
     </View>
   </View>
   <ScrollView>
-    <View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }>
       <View
         style={
           Object {
@@ -587,7 +612,12 @@ exports[`Journey should render the next scheduled call 1`] = `
       </View>
       <View
         onLayout={[Function]}
-        uid="container">
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+        uid="contentContainer">
         <Image
           source={1}
           style={

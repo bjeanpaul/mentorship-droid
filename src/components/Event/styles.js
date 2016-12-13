@@ -17,6 +17,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
   },
   icon: {
+    overflow: 'visible',
     width: 56,
     height: 56,
     borderRadius: 56,
@@ -27,6 +28,21 @@ export default StyleSheet.create({
     width: 56,
     height: 56,
     borderRadius: 56,
+  },
+  counter: {
+    position: 'absolute',
+    top: -4,
+    left: 38,
+    width: 20,
+    height: 20,
+    borderRadius: 20,
+    backgroundColor: colors.BG_ORANGE,
+  },
+  counterContent: {
+    fontSize: 12,
+    fontFamily: FONT.BOLD,
+    fontWeight: FONT_WEIGHT.BOLD,
+    color: colors.TEXT_LIGHT,
   },
   textContainer: {
     flex: 1,

@@ -15,6 +15,8 @@ import {
   fakeCall,
   fakeEvent,
   fakeCallNote,
+  fakeMessage,
+  fakePendingMessage,
 } from 'app/scripts/helpers';
 
 import {
@@ -33,6 +35,8 @@ import {
   getCallNote,
   getNextScheduledCall,
   getScheduledCallsBetween,
+  getMessages,
+  getMessage,
 } from 'src/store/helpers';
 
 
@@ -85,16 +89,22 @@ describe('helpers', () => {
     it('should get all categories', () => {
       const state = fakeState();
 
+      const category1 = fakeCategory({
+        id: 1,
+        ordinal: 2,
+      });
+
+      const category2 = fakeCategory({
+        id: 2,
+        ordinal: 1,
+      });
+
       state.entities.categories = {
-        2: fakeCategory({ id: 2 }),
-        3: fakeCategory({ id: 3 }),
+        1: category1,
+        3: category2,
       };
 
-      expect(getCategories(state))
-      .toEqual([
-        fakeCategory({ id: 2 }),
-        fakeCategory({ id: 3 }),
-      ]);
+      expect(getCategories(state)).toEqual([category2, category1]);
     });
   });
 
@@ -131,11 +141,13 @@ describe('helpers', () => {
       const activity1 = fakeActivity({
         id: 1,
         category: 7,
+        ordinal: 2,
       });
 
       const activity2 = fakeActivity({
         id: 2,
         category: 7,
+        ordinal: 1,
       });
 
       state.entities.activities = {
@@ -147,10 +159,7 @@ describe('helpers', () => {
         }),
       };
 
-      expect(getCategoryActivities(state, 7)).toEqual([
-        activity1,
-        activity2,
-      ]);
+      expect(getCategoryActivities(state, 7)).toEqual([activity2, activity1]);
     });
   });
 
@@ -413,6 +422,68 @@ describe('helpers', () => {
       };
 
       expect(getCallNote(state, 2)).toEqual(callNote1);
+    });
+  });
+
+  describe('getMessages', () => {
+    it('should get the current messages in descending order', () => {
+      const msg1 = fakeMessage({
+        id: 1,
+        timestamp: '2016-11-02T09:43:20.311Z',
+      });
+
+      const msg2 = fakeMessage({
+        id: 2,
+        timestamp: '2016-11-01T09:43:20.311Z',
+      });
+
+      const msg3 = fakePendingMessage({
+        id: 3,
+        timestamp: '2016-11-04T09:43:20.311Z',
+      });
+
+      const msg4 = fakePendingMessage({
+        id: 4,
+        timestamp: '2016-11-03:43:20.311Z',
+      });
+
+      const state = fakeState();
+
+      state.entities.messages = {
+        1: msg1,
+        2: msg2,
+      };
+
+      state.entities.pendingMessages = {
+        3: msg3,
+        4: msg4,
+      };
+
+      expect(getMessages(state)).toEqual([
+        msg1,
+        msg2,
+        msg3,
+        msg4,
+      ]);
+    });
+  });
+
+  describe('getMessage', () => {
+    it('should get the message with the given id', () => {
+      const msg = fakeMessage({
+        id: 23,
+        timestamp: '2016-11-02T09:43:20.311Z',
+      });
+
+      const state = fakeState({
+        entities: {
+          messages: {
+            23: msg,
+          },
+        },
+      });
+
+      expect(getMessage(state, 23)).toEqual(msg);
     });
   });
 });

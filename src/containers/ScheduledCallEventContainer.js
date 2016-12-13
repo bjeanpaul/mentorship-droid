@@ -4,7 +4,7 @@ import { getScheduledCall, getScheduledCallActivity } from 'src/store/helpers';
 
 
 const mapStateToProps = (state, {
-  objectId: scheduledCallId,
+  event: { objectId: scheduledCallId },
 }) => {
   const scheduledCall = getScheduledCall(state, scheduledCallId);
   const activity = getScheduledCallActivity(state, scheduledCallId);
