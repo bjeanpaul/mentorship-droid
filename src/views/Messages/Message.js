@@ -6,22 +6,25 @@ import InboundMessage from './InboundMessage';
 import OutboundMessage from './OutboundMessage';
 
 
-const PendingMessage = delegate('details.status', [
+const renderPendingMessage = delegate('details.status', [
   [constants.PENDING_MESSAGE_STATUS_SENDING, SendingMessage],
   [constants.PENDING_MESSAGE_STATUS_FAILED, FailedMessage],
 ]);
 
 
-const CompleteMessage = delegate('details.direction', [
+const renderCompleteMessage = delegate('details.direction', [
   [constants.MESSAGE_DIRECTION_INBOUND, InboundMessage],
   [constants.MESSAGE_DIRECTION_OUTBOUND, OutboundMessage],
 ]);
 
 
-const Message = delegate('type', [
-  [constants.MESSAGE_TYPE_PENDING, PendingMessage],
-  [constants.MESSAGE_TYPE_COMPLETE, CompleteMessage],
+const renderMessage = delegate('type', [
+  [constants.MESSAGE_TYPE_PENDING, renderPendingMessage],
+  [constants.MESSAGE_TYPE_COMPLETE, renderCompleteMessage],
 ]);
+
+
+const Message = props => renderMessage(props);
 
 
 export default Message;

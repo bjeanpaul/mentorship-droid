@@ -5,29 +5,43 @@ import { BaseView, PatternBackground } from 'src/components';
 import styles from './styles';
 import MessageGroup from './MessageGroup';
 import Send from './Send';
+import { groupByDate } from 'src/helpers';
 
 
 const Messages = ({
-  groups,
+  messages,
   onSendPress,
-}) => (
-  <BaseView>
-    <PatternBackground>
-      <ScrollView>
-        <View style={styles.messages}>
-          {groups.map((group, i) => <MessageGroup key={i} {...group} />)}
-        </View>
-      </ScrollView>
+  onRetryPress,
+}) => {
+  const groups = groupByDate(messages, 'day', 'desc', 'timestamp');
 
-      <Send onSendPress={onSendPress} />
-    </PatternBackground>
-  </BaseView>
-);
+  return (
+    <BaseView>
+      <PatternBackground>
+        <ScrollView>
+          <View style={styles.messages}>
+            {
+              groups.map(group =>
+                <MessageGroup
+                  key={group.date}
+                  onRetryPress={onRetryPress}
+                  {...group}
+                />)
+            }
+          </View>
+        </ScrollView>
+
+        <Send onSendPress={onSendPress} />
+      </PatternBackground>
+    </BaseView>
+  );
+};
 
 
 Messages.propTypes = {
-  groups: PropTypes.arrayOf(PropTypes.object),
+  messages: PropTypes.arrayOf(PropTypes.object),
   onSendPress: PropTypes.func.isRequired,
+  onRetryPress: PropTypes.func.isRequired,
 };
 
 
