@@ -4,9 +4,9 @@ import { identity } from 'lodash';
 import * as constants from 'src/constants/messages';
 import * as api from 'src/api';
 import { dataAction } from 'src/actionHelpers';
-import { testApiAction, fakeMessageData } from 'app/scripts/helpers';
+import { testApiAction, fakeContext, fakeMessageData } from 'app/scripts/helpers';
 
-import { listMessages, sendMessage } from 'src/actions/messages';
+import { listMessages, listRecentMessages, sendMessage } from 'src/actions/messages';
 
 const { ApiResponseError } = api;
 
@@ -20,6 +20,23 @@ describe('messages/actions', () => {
     it('should create actions for message lists', async () => {
       await testApiAction(listMessages, {
         method: api.listMessages,
+        request: constants.MESSAGE_LIST_REQUEST,
+        success: dataAction(constants.MESSAGE_LIST_SUCCESS),
+        failures: [[ApiResponseError, constants.MESSAGE_LIST_FAILURE]],
+      })();
+    });
+  });
+
+  describe('listRecentMessages', () => {
+    it('should create actions for listing recent messages', async () => {
+      const context = fakeContext();
+
+      await testApiAction(listRecentMessages, {
+        context,
+        method: api.listMessages,
+        expectedApiCalls: [[context.auth, {
+          pageSize: constants.MESSAGE_LIST_RECENT_PAGE_SIZE,
+        }]],
         request: constants.MESSAGE_LIST_REQUEST,
         success: dataAction(constants.MESSAGE_LIST_SUCCESS),
         failures: [[ApiResponseError, constants.MESSAGE_LIST_FAILURE]],
