@@ -25,6 +25,7 @@ const createComponent = (props = {}) => (
         details: { direction: constants.MESSAGE_DIRECTION_OUTBOUND },
       })]}
     onSendPress={noop}
+    onRetryPress={noop}
     {...props}
   />
 );
@@ -84,7 +85,7 @@ describe('Messages', () => {
       .shallow();
 
     send.findWhere(uidEquals('sendInput'))
-      .simulate('textChange', '123');
+      .simulate('changeText', '123');
 
     send.findWhere(uidEquals('sendButton'))
       .simulate('press');

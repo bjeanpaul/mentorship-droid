@@ -6,19 +6,19 @@ import InboundMessage from './InboundMessage';
 import OutboundMessage from './OutboundMessage';
 
 
-const renderPendingMessage = delegate('details.status', [
+const renderPendingMessage = delegate('message.details.status', [
   [constants.PENDING_MESSAGE_STATUS_SENDING, SendingMessage],
   [constants.PENDING_MESSAGE_STATUS_FAILED, FailedMessage],
 ]);
 
 
-const renderCompleteMessage = delegate('details.direction', [
+const renderCompleteMessage = delegate('message.details.direction', [
   [constants.MESSAGE_DIRECTION_INBOUND, InboundMessage],
   [constants.MESSAGE_DIRECTION_OUTBOUND, OutboundMessage],
 ]);
 
 
-const renderMessage = delegate('type', [
+const renderMessage = delegate('message.type', [
   [constants.MESSAGE_TYPE_PENDING, renderPendingMessage],
   [constants.MESSAGE_TYPE_COMPLETE, renderCompleteMessage],
 ]);

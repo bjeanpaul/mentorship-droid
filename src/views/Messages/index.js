@@ -13,7 +13,7 @@ const Messages = ({
   onSendPress,
   onRetryPress,
 }) => {
-  const groups = groupByDate(messages, 'day', 'desc', 'timestamp');
+  const groups = groupByDate(messages, 'day', 'asc', 'timestamp');
 
   return (
     <BaseView>

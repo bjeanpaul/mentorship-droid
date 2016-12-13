@@ -1,4 +1,3 @@
-import { omit } from 'lodash';
 import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 
@@ -8,19 +7,19 @@ import MessageBubble from './MessageBubble';
 
 
 const FailedMessage = ({
-  ...props,
+  message,
   onRetryPress,
 }) => {
-  const msg = omit(props, 'onRetryPress');
+  const { content } = message;
 
   return (
     <View style={styles.message}>
       <MessageBubble
         styles={MessageBubble.states.pending}
-        {...props}
+        content={content}
       />
 
-      <Button uid="retry" onPress={() => onRetryPress(msg)}>
+      <Button uid="retry" onPress={() => onRetryPress(message)}>
         TRY AGAIN
       </Button>
     </View>
@@ -29,6 +28,9 @@ const FailedMessage = ({
 
 
 FailedMessage.propTypes = {
+  message: PropTypes.shape({
+    content: PropTypes.string.isRequired,
+  }).isRequired,
   onRetryPress: PropTypes.func.isRequired,
 };
 

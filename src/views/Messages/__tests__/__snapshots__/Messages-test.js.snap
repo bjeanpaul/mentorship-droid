@@ -258,7 +258,7 @@ exports[`Messages should render 1`] = `
           }>
           <TextInput
             multiline={true}
-            onTextChange={[Function]}
+            onChangeText={[Function]}
             placeholder="Write something"
             placeholderTextColor={undefined}
             style={
@@ -271,7 +271,8 @@ exports[`Messages should render 1`] = `
               }
             }
             uid="sendInput"
-            underlineColorAndroid="transparent" />
+            underlineColorAndroid="transparent"
+            value="" />
         </View>
         <View
           accessibilityComponentType={undefined}
@@ -570,7 +571,7 @@ exports[`Messages should render failed messages 1`] = `
           }>
           <TextInput
             multiline={true}
-            onTextChange={[Function]}
+            onChangeText={[Function]}
             placeholder="Write something"
             placeholderTextColor={undefined}
             style={
@@ -583,7 +584,8 @@ exports[`Messages should render failed messages 1`] = `
               }
             }
             uid="sendInput"
-            underlineColorAndroid="transparent" />
+            underlineColorAndroid="transparent"
+            value="" />
         </View>
         <View
           accessibilityComponentType={undefined}
@@ -774,7 +776,7 @@ exports[`Messages should render inbound messages 1`] = `
           }>
           <TextInput
             multiline={true}
-            onTextChange={[Function]}
+            onChangeText={[Function]}
             placeholder="Write something"
             placeholderTextColor={undefined}
             style={
@@ -787,7 +789,8 @@ exports[`Messages should render inbound messages 1`] = `
               }
             }
             uid="sendInput"
-            underlineColorAndroid="transparent" />
+            underlineColorAndroid="transparent"
+            value="" />
         </View>
         <View
           accessibilityComponentType={undefined}
@@ -1086,7 +1089,7 @@ exports[`Messages should render outbound messages 1`] = `
           }>
           <TextInput
             multiline={true}
-            onTextChange={[Function]}
+            onChangeText={[Function]}
             placeholder="Write something"
             placeholderTextColor={undefined}
             style={
@@ -1099,7 +1102,8 @@ exports[`Messages should render outbound messages 1`] = `
               }
             }
             uid="sendInput"
-            underlineColorAndroid="transparent" />
+            underlineColorAndroid="transparent"
+            value="" />
         </View>
         <View
           accessibilityComponentType={undefined}
@@ -1398,7 +1402,7 @@ exports[`Messages should render sending messages 1`] = `
           }>
           <TextInput
             multiline={true}
-            onTextChange={[Function]}
+            onChangeText={[Function]}
             placeholder="Write something"
             placeholderTextColor={undefined}
             style={
@@ -1411,7 +1415,8 @@ exports[`Messages should render sending messages 1`] = `
               }
             }
             uid="sendInput"
-            underlineColorAndroid="transparent" />
+            underlineColorAndroid="transparent"
+            value="" />
         </View>
         <View
           accessibilityComponentType={undefined}

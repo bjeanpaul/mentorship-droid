@@ -459,10 +459,10 @@ describe('helpers', () => {
       };
 
       expect(getMessages(state)).toEqual([
-        msg3,
-        msg4,
         msg1,
         msg2,
+        msg3,
+        msg4,
       ]);
     });
   });

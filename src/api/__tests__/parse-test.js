@@ -7,10 +7,9 @@ import config from 'src/config';
 import {
   parseResults,
   parseCategories,
-  parseActivities,
   parseCategory,
   parseActivity,
-  parseSendMessageResult,
+  parseMessage,
 } from 'src/api/parse';
 
 const { API_BASE_URL } = config;
@@ -53,13 +52,6 @@ describe('api/parse', () => {
     });
   });
 
-  describe('parseActivities', () => {
-    it('should parse each activity', () => {
-      expect(parseActivities([fakeActivity()]))
-        .toEqual([parseActivity(fakeActivity())]);
-    });
-  });
-
   describe('parseCategory', () => {
     it('should prepend the base api url to the image url', () => {
       const { image } = parseCategory(fakeCategory({ image: '/foo.jpg' }));
@@ -94,7 +86,7 @@ describe('api/parse', () => {
     });
   });
 
-  describe('parseSendMessageResult', () => {
+  describe('parseMessage', () => {
     it('should assign the pending message id', () => {
       const msg = {
         id: 21,
@@ -103,7 +95,7 @@ describe('api/parse', () => {
         otherField: 'bar',
       };
 
-      expect(parseSendMessageResult(msg))
+      expect(parseMessage(msg))
         .toEqual({
           id: 21,
           type: constants.MESSAGE_TYPE_COMPLETE,

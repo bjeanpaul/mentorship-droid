@@ -5,7 +5,7 @@ import { normalize, arrayOf } from 'normalizr';
 import { fakeAuth } from 'app/scripts/helpers';
 import request from 'src/api/request';
 import { Message, PendingMessage } from 'src/api/schemas';
-import { parseResults, parseSendMessageResult } from 'src/api/parse';
+import { parseMessage, parseMessageListResults } from 'src/api/parse';
 import * as constants from 'src/constants/messages';
 
 import {
@@ -26,10 +26,10 @@ describe('api/messages', () => {
   describe('listMessages', () => {
     it('should construct a request for listing chat messages', () => {
       expect(listMessages(fakeAuth(), { foo: 23 })).toEqual({
-        url: '/chat_message/',
+        url: '/message/',
         method: 'GET',
         schema: arrayOf(Message),
-        parse: parseResults,
+        parse: parseMessageListResults,
         auth: fakeAuth(),
         params: { foo: 23 },
       });
@@ -45,11 +45,11 @@ describe('api/messages', () => {
       const res = sendMessage(msg, fakeAuth());
 
       expect(res).toEqual({
-        url: '/chat_message/',
+        url: '/message/',
         method: 'POST',
-        schema: arrayOf(Message),
+        schema: Message,
         auth: fakeAuth(),
-        parse: parseSendMessageResult,
+        parse: parseMessage,
         data: {
           content: 'Set tall in your just beyond merch booth bound chest',
         },
