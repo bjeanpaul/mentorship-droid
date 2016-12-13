@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { FONT, FONT_WEIGHT } from 'src/constants/styles';
+import colors from 'src/constants/colors';
 
 
 export default StyleSheet.create({
@@ -7,9 +8,11 @@ export default StyleSheet.create({
     flex: 1,
     padding: 16,
   },
+  messageRow: {
+    marginVertical: 24,
+  },
   message: {
     flexDirection: 'row-reverse',
-    marginVertical: 24,
   },
   groupDate: {
     fontSize: 16,
@@ -23,5 +26,20 @@ export default StyleSheet.create({
   },
   messageBubbleContainerInbound: {
     alignItems: 'flex-start',
+  },
+  retry: {
+    marginTop: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 16,
+    borderRadius: 3,
+    backgroundColor: colors.BG_DEFAULT,
+  },
+  retryContent: {
+    fontSize: 11,
+    color: colors.LABEL_TEXT,
+    fontFamily: FONT.BOLD,
+    fontWeight: FONT_WEIGHT.BOLD,
   },
 });
