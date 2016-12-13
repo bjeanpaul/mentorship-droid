@@ -12,7 +12,7 @@ const MessageBubble = ({
   timestamp,
   styles = {},
 }) => (
-  <View style={baseStyles.container}>
+  <View style={[baseStyles.container, styles.container]}>
     <Bubble style={[baseStyles.bubble, styles.bubble]}>
       <Text style={[baseStyles.content, styles.content]}>
         {content}

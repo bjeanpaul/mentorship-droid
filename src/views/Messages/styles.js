@@ -9,12 +9,7 @@ export default StyleSheet.create({
   },
   message: {
     flexDirection: 'row-reverse',
-    justifyContent: 'flex-end',
     marginVertical: 24,
-  },
-  messageInbound: {
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
   },
   groupDate: {
     fontSize: 16,
@@ -22,5 +17,11 @@ export default StyleSheet.create({
     fontWeight: FONT_WEIGHT.MEDIUM,
     marginBottom: 3,
     marginTop: 7,
+  },
+  messageInbound: {
+    flexDirection: 'row',
+  },
+  messageBubbleContainerInbound: {
+    alignItems: 'flex-start',
   },
 });

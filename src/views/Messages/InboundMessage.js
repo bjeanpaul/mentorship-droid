@@ -11,7 +11,11 @@ const InboundMessage = ({
 }) => (
   <View style={[styles.message, styles.messageInbound]}>
     <MenteeAvatar />
-    <MessageBubble {...message} />
+
+    <MessageBubble
+      styles={{ container: styles.messageBubbleContainerInbound }}
+      {...message}
+    />
   </View>
 );
 
