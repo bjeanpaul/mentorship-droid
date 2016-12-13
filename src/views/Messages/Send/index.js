@@ -9,7 +9,15 @@ import images from 'src/constants/images';
 class Send extends Component {
   constructor(props) {
     super(props);
-    this.state = { content: '' };
+
+    const {
+      initialContent = '',
+    } = props;
+
+    this.state = {
+      content: initialContent,
+    };
+
     this.onSendPress = this.onSendPress.bind(this);
     this.onChangeText = this.onChangeText.bind(this);
   }
@@ -19,9 +27,15 @@ class Send extends Component {
   }
 
   onSendPress() {
-    const { content } = this.state;
-    this.setState({ content: '' });
-    this.props.onSendPress({ content });
+    if (this.hasContent()) {
+      const { content } = this.state;
+      this.setState({ content: '' });
+      this.props.onSendPress({ content });
+    }
+  }
+
+  hasContent() {
+    return this.state.content.length > 0;
   }
 
   render() {
@@ -44,7 +58,7 @@ class Send extends Component {
           uid="sendButton"
           onPress={this.onSendPress}
         >
-          <View style={styles.send}>
+          <View style={[styles.send, !this.hasContent() && styles.sendIsDisabled]}>
             <Image
               style={styles.sendImage}
               source={images.SEND_MESSAGE_ICON}
@@ -58,6 +72,7 @@ class Send extends Component {
 
 
 Send.propTypes = {
+  initialContent: PropTypes.string,
   onSendPress: PropTypes.func.isRequired,
 };
 
