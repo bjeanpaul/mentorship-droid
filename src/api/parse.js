@@ -20,6 +20,7 @@ export const parseCategory = ({
   image,
   ...d,
 }) => ({
+  ordinal: null,
   ...d,
   image: imageUrl(image),
 });
@@ -30,6 +31,7 @@ export const parseActivity = ({
   poster,
   icon,
 }) => ({
+  ordinal: null,
   ...d,
   poster: imageUrl(poster),
   icon: imageUrl(icon),

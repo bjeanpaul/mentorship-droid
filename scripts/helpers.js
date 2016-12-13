@@ -38,6 +38,7 @@ export const fakeAuth = () => ({
 
 export const fakeCategory = data => ({
   id: 1,
+  ordinal: 1,
   title: 'Level',
   color: '#97c13c',
   about: 'touba',
@@ -49,6 +50,7 @@ export const fakeCategory = data => ({
 
 export const fakeActivity = data => ({
   id: 1,
+  ordinal: 2,
   title: 'Activity 3',
   instructions: 'snoitcrutsni',
   isComplete: false,
