@@ -484,6 +484,7 @@ exports[`Messages should render 1`] = `
               ]
             }>
             <TextInput
+              maxLength={140}
               multiline={true}
               onChangeText={[Function]}
               placeholder="Write something"
@@ -1030,6 +1031,7 @@ exports[`Messages should render failed messages 1`] = `
               ]
             }>
             <TextInput
+              maxLength={140}
               multiline={true}
               onChangeText={[Function]}
               placeholder="Write something"
@@ -1340,6 +1342,7 @@ exports[`Messages should render inbound messages 1`] = `
               ]
             }>
             <TextInput
+              maxLength={140}
               multiline={true}
               onChangeText={[Function]}
               placeholder="Write something"
@@ -1886,6 +1889,7 @@ exports[`Messages should render outbound messages 1`] = `
               ]
             }>
             <TextInput
+              maxLength={140}
               multiline={true}
               onChangeText={[Function]}
               placeholder="Write something"
@@ -2432,6 +2436,7 @@ exports[`Messages should render sending messages 1`] = `
               ]
             }>
             <TextInput
+              maxLength={140}
               multiline={true}
               onChangeText={[Function]}
               placeholder="Write something"
@@ -2978,6 +2983,7 @@ exports[`Messages should render the send button as disabled when there is no con
               ]
             }>
             <TextInput
+              maxLength={140}
               multiline={true}
               onChangeText={[Function]}
               placeholder="Write something"
@@ -3524,6 +3530,7 @@ exports[`Messages should render the send button as disabled when there is no con
               ]
             }>
             <TextInput
+              maxLength={140}
               multiline={true}
               onChangeText={[Function]}
               placeholder="Write something"
