@@ -126,4 +126,5 @@ export default {
   MESSAGE_BUBBLE_BG_DARK: '#00aa9f',
   MESSAGE_BUBBLE_BG_PENDING: '#c0cbcc',
   MESSAGE_BUBBLE_TIME_TEXT: 'rgba(0, 0, 0, 0.30)',
+  MESSAGE_BUBBLE_HINT_TEXT: 'rgba(0, 0, 0, 0.30)',
 };

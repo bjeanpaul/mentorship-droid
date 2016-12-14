@@ -84,6 +84,16 @@ describe('Messages', () => {
     expect(el.toJSON()).toMatchSnapshot();
   });
 
+  it('should render outbound system messages', () => {
+    const el = render(createComponent({
+      groups: [fakePendingMessage({
+        details: { messageType: constants.COMPLETE_MESSAGE_TYPE_SYSTEM },
+      })],
+    }));
+
+    expect(el.toJSON()).toMatchSnapshot();
+  });
+
   it('should render the send button as disabled when there is no content', () => {
     let el;
     el = render(createComponent({ initialContent: '' }));

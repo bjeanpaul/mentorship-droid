@@ -10,6 +10,7 @@ import Bubble from 'src/views/Messages/Bubble';
 const MessageBubble = ({
   content,
   timestamp,
+  hint,
   styles = {},
 }) => (
   <View style={[baseStyles.container, styles.container]}>
@@ -19,6 +20,8 @@ const MessageBubble = ({
         {' '}
         <Text style={baseStyles.time}>{moment(timestamp).format('HH:MM')}</Text>
       </Text>
+
+      {hint && <Text style={[baseStyles.hint, styles.hint]}>{hint}</Text>}
     </Bubble>
   </View>
 );
@@ -29,9 +32,10 @@ MessageBubble.states = states;
 
 
 MessageBubble.propTypes = {
-  content: PropTypes.string,
-  timestamp: PropTypes.string,
   styles: PropTypes.object,
+  hint: PropTypes.any,
+  content: PropTypes.string.isRequired,
+  timestamp: PropTypes.string.isRequired,
 };
 
 

@@ -4,6 +4,11 @@ import { View } from 'react-native';
 import styles from './styles';
 import MentorAvatar from './MentorAvatar';
 import MessageBubble from './MessageBubble';
+import * as constants from 'src/constants/messages';
+
+
+const isSystemMessage = ({ details }) =>
+  details.messageType === constants.COMPLETE_MESSAGE_TYPE_SYSTEM;
 
 
 const OutboundMessage = ({
@@ -15,6 +20,7 @@ const OutboundMessage = ({
 
     <MessageBubble
       styles={MessageBubble.themes.dark}
+      hint={isSystemMessage(message) && 'Sent automatically by system'}
       {...message}
     />
   </View>
