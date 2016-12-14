@@ -46,6 +46,7 @@
     "promise-defer": "^1.0.0",
     "react-addons-test-utils": "~15.2.1",
     "react-dom": "^15.3.1",
+    "react-native-invertible-scroll-view": "^1.0.0",
     "react-test-renderer": "^15.3.1",
     "redux-logger": "^2.6.1"
   },

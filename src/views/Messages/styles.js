@@ -8,6 +8,7 @@ export default StyleSheet.create({
     padding: 16,
   },
   message: {
+    flexDirection: 'row-reverse',
     marginVertical: 24,
   },
   groupDate: {
@@ -16,5 +17,11 @@ export default StyleSheet.create({
     fontWeight: FONT_WEIGHT.MEDIUM,
     marginBottom: 3,
     marginTop: 7,
+  },
+  messageInbound: {
+    flexDirection: 'row',
+  },
+  messageBubbleContainerInbound: {
+    alignItems: 'flex-start',
   },
 });
