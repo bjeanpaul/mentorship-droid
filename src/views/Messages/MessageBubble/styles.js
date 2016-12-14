@@ -46,7 +46,6 @@ export default StyleSheet.create({
   },
   hint: {
     marginTop: 8,
-    marginBottom: -2,
     fontSize: 11,
     color: colors.MESSAGE_BUBBLE_HINT_TEXT,
     fontFamily: FONT.BOLD,
