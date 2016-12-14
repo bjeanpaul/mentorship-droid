@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { View } from 'react-native';
+import { View, KeyboardAvoidingView } from 'react-native';
 import ScrollView from 'react-native-invertible-scroll-view';
 
 import { BaseView, PatternBackground } from 'src/components';
@@ -19,23 +19,25 @@ const Messages = ({
 
   return (
     <BaseView>
-      <PatternBackground>
-        <ScrollView inverted>
-          <View style={styles.messages}>
-          {
-              groups.map(group =>
-                <MessageGroup
-                  key={group.date}
-                  onRetryPress={onRetryPress}
-                  group={group}
-                  {...props}
-                />)
-          }
-          </View>
-        </ScrollView>
+      <KeyboardAvoidingView behaviour="height" style={{ flex: 1 }}>
+        <PatternBackground>
+          <ScrollView inverted>
+            <View style={styles.messages}>
+            {
+                groups.map(group =>
+                  <MessageGroup
+                    key={group.date}
+                    onRetryPress={onRetryPress}
+                    group={group}
+                    {...props}
+                  />)
+            }
+            </View>
+          </ScrollView>
 
-        <Send onSendPress={onSendPress} />
-      </PatternBackground>
+          <Send onSendPress={onSendPress} />
+        </PatternBackground>
+      </KeyboardAvoidingView>
     </BaseView>
   );
 };
