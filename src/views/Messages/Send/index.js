@@ -51,6 +51,7 @@ class Send extends Component {
             style={styles.input}
             onChangeText={this.onChangeText}
             value={this.state.content}
+            maxLength={140}
           />
         </Bubble>
 
