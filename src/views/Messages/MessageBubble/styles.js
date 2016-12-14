@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import colors from 'src/constants/colors';
+import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 
 
 export const themes = {
@@ -42,5 +43,14 @@ export default StyleSheet.create({
   time: {
     fontSize: 14,
     color: colors.MESSAGE_BUBBLE_TIME_TEXT,
+  },
+  hint: {
+    marginTop: 8,
+    marginBottom: -2,
+    fontSize: 11,
+    color: colors.MESSAGE_BUBBLE_HINT_TEXT,
+    fontFamily: FONT.BOLD,
+    fontWeight: FONT_WEIGHT.BOLD,
+    alignSelf: 'flex-end',
   },
 });
