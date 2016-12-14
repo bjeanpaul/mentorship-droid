@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 
-import { Button } from 'src/components';
+import { Button, Text } from 'src/components';
 import styles from './styles';
 import MentorAvatar from './MentorAvatar';
 import MessageBubble from './MessageBubble';
@@ -12,17 +12,26 @@ const FailedMessage = ({
   profile,
   onRetryPress,
 }) => (
-  <View style={styles.message}>
-    <MentorAvatar profile={profile} />
+  <View>
+    <View style={styles.message}>
+      <MentorAvatar profile={profile} />
 
-    <MessageBubble
-      styles={MessageBubble.states.pending}
-      {...message}
-    />
+      <MessageBubble
+        styles={MessageBubble.states.pending}
+        {...message}
+      />
+    </View>
 
-    <Button uid="retry" onPress={() => onRetryPress(message)}>
-      TRY AGAIN
-    </Button>
+    <View style={styles.retry}>
+      <Text style={styles.retryContent}>SENDING FAILED</Text>
+      <Button
+        uid="retry"
+        onPress={() => onRetryPress(message)}
+        styles={Button.sizes.small}
+      >
+        TRY AGAIN
+      </Button>
+    </View>
   </View>
 );
 

@@ -232,6 +232,9 @@ exports[`Completed should render 1`] = `
               "alignItems": "center",
               "borderRadius": 5,
               "justifyContent": "center",
+              "marginHorizontal": 16,
+              "paddingBottom": 17,
+              "paddingTop": 15,
             },
             Object {
               "backgroundColor": "transparent",
@@ -247,9 +250,13 @@ exports[`Completed should render 1`] = `
                 "flex": 1,
               },
             ],
-            Object {
-              "borderColor": "#dfe5e6",
-            },
+            undefined,
+            Array [
+              Object {
+                "borderColor": "#dfe5e6",
+              },
+              undefined,
+            ],
           ]
         }>
         <Text
@@ -270,15 +277,17 @@ exports[`Completed should render 1`] = `
                   "fontSize": 13,
                   "fontWeight": "bold",
                   "letterSpacing": 1,
-                  "marginBottom": 17,
-                  "marginTop": 15,
                 },
                 Object {
                   "color": "#f77040",
                 },
-                Object {
-                  "color": "#dfe5e6",
-                },
+                undefined,
+                Array [
+                  Object {
+                    "color": "#dfe5e6",
+                  },
+                  undefined,
+                ],
               ],
             ]
           }>
