@@ -5,7 +5,7 @@ import { arrayOf } from 'normalizr';
 import { fakeAuth, fakeProfile } from 'app/scripts/helpers';
 import request, { imageData } from 'src/api/request';
 import { Profile } from 'src/api/schemas';
-import { parseResults } from 'src/api/parse';
+import { parseProfile, parseProfileListResults } from 'src/api/parse';
 
 import {
   listProfiles,
@@ -34,7 +34,7 @@ describe('api/profiles', () => {
         url: '/profile/',
         method: 'GET',
         schema: arrayOf(Profile),
-        parse: parseResults,
+        parse: parseProfileListResults,
         auth: fakeAuth(),
         params: { foo: 23 },
       });
@@ -48,6 +48,7 @@ describe('api/profiles', () => {
         method: 'GET',
         auth: fakeAuth(),
         schema: Profile,
+        parse: parseProfile,
       });
     });
   });
@@ -60,6 +61,7 @@ describe('api/profiles', () => {
         data: { fake: 'profile' },
         auth: fakeAuth(),
         schema: Profile,
+        parse: parseProfile,
       });
     });
   });

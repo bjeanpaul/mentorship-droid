@@ -34,7 +34,6 @@ import JOURNEY_CALL_ICON from 'app/assets/call-icon.png';
 import JOURNEY_MESSAGE_ICON from 'app/assets/message-icon.png';
 
 import SETTINGS_ICON from 'app/assets/settings.png';
-import PROFILE_PLACEHOLDER_AVATAR from 'app/assets/profile-placeholder-avatar.png';
 import EVENT_MORE from 'app/assets/action-more.png';
 
 import START_CALL from 'app/assets/mentee-holding-phone.png';
@@ -66,6 +65,9 @@ import SEND_MESSAGE_ICON from 'app/assets/send-icon-chat.png';
 
 import JOURNEY_EVENT_MESSAGE_ICON from 'app/assets/message-event-icon.png';
 import JOURNEY_EVENT_SCHEDULED_CALL_ICON from 'app/assets/event-icon-calendar.png';
+
+import PLACEHOLDER_CHAT_AVATAR from 'app/assets/profile-placeholder-avatar.png';
+import MENTEE_CHAT_AVATAR from 'app/assets/mentee-chat-avatar.png';
 
 
 export default {
@@ -100,7 +102,6 @@ export default {
   JOURNEY_MESSAGE_ICON,
 
   SETTINGS_ICON,
-  PROFILE_PLACEHOLDER_AVATAR,
   EVENT_MORE,
 
   NAV_TAB_ACTIVITIES_ACTIVE,
@@ -137,4 +138,7 @@ export default {
 
   JOURNEY_EVENT_MESSAGE_ICON,
   JOURNEY_EVENT_SCHEDULED_CALL_ICON,
+
+  PLACEHOLDER_CHAT_AVATAR,
+  MENTEE_CHAT_AVATAR,
 };

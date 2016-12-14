@@ -1,5 +1,5 @@
 import { makeGradient } from 'src/helpers';
-import { fakeCategory, fakeActivity } from 'app/scripts/helpers';
+import { fakeProfile, fakeCategory, fakeActivity } from 'app/scripts/helpers';
 import colors from 'src/constants/colors';
 import * as constants from 'src/constants/messages';
 import config from 'src/config';
@@ -10,6 +10,7 @@ import {
   parseCategory,
   parseActivity,
   parseMessage,
+  parseProfile,
 } from 'src/api/parse';
 
 const { API_BASE_URL } = config;
@@ -105,6 +106,18 @@ describe('api/parse', () => {
             otherField: 'bar',
           },
         });
+    });
+  });
+
+  describe('parseProfile', () => {
+    it('should add the profile image', () => {
+      const profile = fakeProfile({
+        profilePic: '/foo.jpg',
+      });
+
+      expect(parseProfile(profile)).toEqual(jasmine.objectContaining({
+        profilePic: `${API_BASE_URL}/foo.jpg`,
+      }));
     });
   });
 });

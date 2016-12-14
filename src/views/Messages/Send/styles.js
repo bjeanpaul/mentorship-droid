@@ -30,6 +30,9 @@ export default StyleSheet.create({
     borderRadius: 40,
     backgroundColor: colors.BUTTON_BG,
   },
+  sendIsDisabled: {
+    backgroundColor: colors.SEND_BUTTON_DISABLED_BG,
+  },
   sendImage: {
     padding: 8,
   },

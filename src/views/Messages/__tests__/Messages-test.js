@@ -3,11 +3,18 @@ import React from 'react';
 
 import Messages from 'src/views/Messages';
 import * as constants from 'src/constants/messages';
-import { fakeMessage, fakePendingMessage, uidEquals } from 'app/scripts/helpers';
+
+import {
+  fakeMessage,
+  fakeProfile,
+  fakePendingMessage,
+  uidEquals,
+} from 'app/scripts/helpers';
 
 
 const createComponent = (props = {}) => (
   <Messages
+    profile={fakeProfile()}
     messages={[
       fakeMessage({
         id: 1,
@@ -77,6 +84,15 @@ describe('Messages', () => {
     expect(el.toJSON()).toMatchSnapshot();
   });
 
+  it('should render the send button as disabled when there is no content', () => {
+    let el;
+    el = render(createComponent({ initialContent: '' }));
+    expect(el.toJSON()).toMatchSnapshot();
+
+    el = render(createComponent({ initialContent: 'foo' }));
+    expect(el.toJSON()).toMatchSnapshot();
+  });
+
   it('should call onSendPress() with input content when pressed', () => {
     const onSendPress = jest.fn();
     const el = shallow(createComponent({ onSendPress }));
@@ -91,6 +107,18 @@ describe('Messages', () => {
       .simulate('press');
 
     expect(onSendPress.mock.calls).toEqual([[{ content: '123' }]]);
+  });
+
+  it('should not call onSendPress() if there is no content', () => {
+    const onSendPress = jest.fn();
+    const el = shallow(createComponent({ onSendPress }));
+
+    el.find('Send')
+      .shallow()
+      .findWhere(uidEquals('sendButton'))
+      .simulate('press');
+
+    expect(onSendPress.mock.calls).toEqual([]);
   });
 
   it('should call onRetryPress() with the relevant message retry when pressed', () => {

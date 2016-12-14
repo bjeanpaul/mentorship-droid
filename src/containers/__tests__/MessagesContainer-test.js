@@ -1,5 +1,6 @@
 import { mapStateToProps } from 'src/containers/MessagesContainer';
 import { fakeState, fakeMessage, fakePendingMessage } from 'app/scripts/helpers';
+import { getAuthUserProfile } from 'src/store/helpers';
 
 
 describe('MessagesContainer', () => {
@@ -20,6 +21,14 @@ describe('MessagesContainer', () => {
 
     expect(mapStateToProps(state)).toEqual(jasmine.objectContaining({
       messages: [msg1, msg2, msg3],
+    }));
+  });
+
+  it('should provide the authed users profile', () => {
+    const state = fakeState();
+
+    expect(mapStateToProps(state)).toEqual(jasmine.objectContaining({
+      profile: getAuthUserProfile(state),
     }));
   });
 });

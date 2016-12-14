@@ -2,25 +2,28 @@ import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 
 import styles from './styles';
+import MentorAvatar from './MentorAvatar';
 import MessageBubble from './MessageBubble';
 
 
 const SendingMessage = ({
-  message: { content },
+  message,
+  profile,
 }) => (
   <View style={styles.message}>
+    <MentorAvatar profile={profile} />
+
     <MessageBubble
       styles={MessageBubble.states.pending}
-      content={content}
+      {...message}
     />
   </View>
 );
 
 
 SendingMessage.propTypes = {
-  message: PropTypes.shape({
-    content: PropTypes.string.isRequired,
-  }).isRequired,
+  message: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired,
 };
 
 

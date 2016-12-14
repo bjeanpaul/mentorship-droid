@@ -2,25 +2,28 @@ import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 
 import styles from './styles';
+import MentorAvatar from './MentorAvatar';
 import MessageBubble from './MessageBubble';
 
 
 const OutboundMessage = ({
-  message: { content },
+  message,
+  profile,
 }) => (
   <View style={styles.message}>
+    <MentorAvatar profile={profile} />
+
     <MessageBubble
       styles={MessageBubble.themes.dark}
-      content={content}
+      {...message}
     />
   </View>
 );
 
 
 OutboundMessage.propTypes = {
-  message: PropTypes.shape({
-    content: PropTypes.string.isRequired,
-  }).isRequired,
+  message: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired,
 };
 
 
