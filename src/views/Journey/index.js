@@ -83,25 +83,23 @@ const Journey = ({
       </View>
     </Header>
 
-    <ScrollView>
-      <PatternBackground>
-        <Image
-          source={images.JOURNEY_MENTEE}
-          style={styles.mentee}
-        >
-          <TouchableWithoutFeedback uid="call" onPress={onCallPress}>
-            <Image
-              source={images.JOURNEY_CALL_ICON}
-              style={styles.icon}
-            />
-          </TouchableWithoutFeedback>
-        </Image>
+    <PatternBackground>
+      <ScrollView>
+          <Image
+            source={images.JOURNEY_MENTEE}
+            style={styles.mentee}
+          >
+            <TouchableWithoutFeedback uid="call" onPress={onCallPress}>
+              <Image
+                source={images.JOURNEY_CALL_ICON}
+                style={styles.icon}
+              />
+            </TouchableWithoutFeedback>
+          </Image>
 
-        <View style={styles.eventsContainer}>
           <EventListContainer />
-        </View>
-      </PatternBackground>
-    </ScrollView>
+      </ScrollView>
+    </PatternBackground>
   </BaseView>
 );
 
