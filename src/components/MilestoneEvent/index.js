@@ -12,9 +12,12 @@ const MilestoneEvent = ({
   color,
 }) => (
   <View style={[styles.container, { backgroundColor: color }]}>
-    <View style={styles.imageContainer}>
-      <Image source={image.resize(112, 112).toSource()} />
-    </View>
+    {image.exists() && <View style={styles.imageContainer}>
+      <Image
+        source={image.resize(112, 112).toSource()}
+        style={styles.image}
+      />
+    </View>}
     <Text style={styles.milestonReachedText}>Milestone Reached</Text>
     <Text style={styles.categoryNameCompletedText}>{title} Completed</Text>
   </View>
