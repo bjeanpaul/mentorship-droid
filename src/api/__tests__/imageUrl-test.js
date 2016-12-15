@@ -7,14 +7,6 @@ const { API_BASE_URL } = config;
 
 
 describe('imageUrl', () => {
-  it('should support stringifying', () => {
-    expect(imageUrl('/foo.jpg').toString()).toEqual(`${API_BASE_URL}/foo.jpg`);
-  });
-
-  it('should simply return the url if it is falsy when stringifying', () => {
-    expect(imageUrl(null).toString()).toEqual(null);
-  });
-
   it('should support resizing', () => {
     const url = imageUrl('/foo.jpg')
       .resize(100, 200);
@@ -24,5 +16,21 @@ describe('imageUrl', () => {
 
     expect(url.toString())
       .toEqual(`${API_BASE_URL}/foo.jpg?filter_spec=fill-${width}x${height}`);
+  });
+
+  it('should support stringifying', () => {
+    expect(imageUrl('/foo.jpg').toString()).toEqual(`${API_BASE_URL}/foo.jpg`);
+  });
+
+  it('should simply return the url if it is falsy', () => {
+    expect(imageUrl(null).toString()).toEqual(null);
+  });
+
+  describe('toSource()', () => {
+    it('should return a source descriptor', () => {
+      expect(imageUrl('/foo.jpg').toSource()).toEqual({
+        uri: imageUrl('/foo.jpg').toString(),
+      });
+    });
   });
 });

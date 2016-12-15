@@ -22,6 +22,10 @@ class ImageUrl {
     });
   }
 
+  valueOf() {
+    return this.toString();
+  }
+
   toJSON() {
     return this.toString();
   }
@@ -30,6 +34,10 @@ class ImageUrl {
     return this.url
       ? buildUrl(API_BASE_URL + this.url, this.params)
       : this.url;
+  }
+
+  toSource() {
+    return { uri: this.toString() };
   }
 }
 
