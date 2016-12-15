@@ -57,7 +57,12 @@ const CallNoteDetail = ({
           <Title>Discussion With Activity</Title>
 
           <View style={[styles.sectionBody, styles.sectionBodyActivity]}>
-            <Image source={{ uri: activity.icon }} style={styles.activityImage} />
+            {
+              activity.icon.exists() && <Image
+                source={activity.icon.toSource()}
+                style={styles.activityImage}
+              />
+            }
 
             <Text style={[Text.types.paragraph, styles.activityObjective]}>
               {activity.objective}
