@@ -5,6 +5,7 @@ import { getContext } from 'src/store/helpers';
 import { staticAction } from 'src/actionHelpers';
 import { createStack } from 'src/navigationHelpers';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/events';
+import * as api from 'src/api';
 
 
 export const capture = async (fn, ...xargs) => {
@@ -40,7 +41,7 @@ export const fakeCategory = data => ({
   color: '#97c13c',
   about: 'touba',
   goal: 'laog',
-  image: null,
+  image: api.imageUrl(null),
   ...data,
 });
 
@@ -56,8 +57,8 @@ export const fakeActivity = data => ({
   prompts: 'tspmorp',
   reflectionPoints: 'tsnoip',
   skillsDeveloped: 'depoleved',
-  icon: null,
-  poster: null,
+  icon: api.imageUrl(null),
+  poster: api.imageUrl(null),
   category: 23,
   ...data,
 });
@@ -76,6 +77,7 @@ export const fakeScheduledCall = data => ({
 export const fakeProfile = data => ({
   id: 23,
   firstName: 'Rodger',
+  profilePic: api.imageUrl('/foo.png'),
   ...data,
 });
 
