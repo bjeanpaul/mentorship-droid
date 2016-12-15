@@ -13,7 +13,7 @@ const ScheduledCallEvent = ({
     date={callTime}
     icon={
       activity && activity.icon.exists()
-        ? activity.icon.toSource()
+        ? activity.icon.resize(56, 56).toSource()
         : images.JOURNEY_EVENT_SCHEDULED_CALL_ICON
     }
     title="Call scheduled"

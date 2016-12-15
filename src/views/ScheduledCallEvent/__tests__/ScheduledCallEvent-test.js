@@ -42,7 +42,7 @@ describe('ScheduledCallEvent', () => {
       }),
     }));
 
-    expect(el.find('Event').prop('icon'))
-      .toEqual(imageUrl('http://placehold.it/56x56').toSource());
+    expect(el.find('Event').prop('icon').uri)
+      .toMatch('http://placehold.it/56x56');
   });
 });
