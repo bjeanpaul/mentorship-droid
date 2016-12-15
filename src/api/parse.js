@@ -1,14 +1,7 @@
 import { flow } from 'lodash';
 import colors from 'src/constants/colors';
 import { makeGradient } from 'src/helpers';
-import config from 'src/config';
-
-const { API_BASE_URL } = config;
-
-
-const imageUrl = url => url
-  ? API_BASE_URL + url
-  : url;
+import imageUrl from './imageUrl';
 
 
 export const parseResults = ({ results }) => results;
