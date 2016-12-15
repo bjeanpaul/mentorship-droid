@@ -14,11 +14,13 @@ export default StyleSheet.create({
   imageContainer: {
     alignSelf: 'center',
     backgroundColor: colors.EVENT_MILESTONE_IMAGE_BG,
+    marginBottom: 20,
+    borderRadius: 66,
+  },
+  image: {
     width: 112,
     height: 112,
     borderRadius: 66,
-    overflow: 'hidden',
-    marginBottom: 20,
   },
   milestonReachedText: {
     fontSize: 16,
