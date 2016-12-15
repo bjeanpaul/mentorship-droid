@@ -15,7 +15,7 @@ describe('imageUrl', () => {
     const height = PixelRatio.getPixelSizeForLayoutSize(200);
 
     expect(url.toString())
-      .toEqual(`${API_BASE_URL}/foo.jpg?filter_spec=fill-${width}x${height}`);
+      .toEqual(`${API_BASE_URL}/foo.jpg?filter_spec=min-${width}x${height}`);
   });
 
   it('should support stringifying', () => {

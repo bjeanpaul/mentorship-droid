@@ -18,7 +18,7 @@ export class ImageUrl {
 
     return new ImageUrl(this.url, {
       ...this.params,
-      filter_spec: `fill-${width}x${height}`,
+      filter_spec: `min-${width}x${height}`,
     });
   }
 
