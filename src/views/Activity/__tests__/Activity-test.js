@@ -1,8 +1,8 @@
 import { noop } from 'lodash';
 import React from 'react';
 
+import { imageUrl } from 'src/api';
 import Activity from 'src/views/Activity';
-import { ACTIVITY_POSTER } from 'app/scripts/fixtures';
 
 import {
   fakeCallNote,
@@ -32,12 +32,12 @@ describe('Activity', () => {
   });
 
   it('should not try display a poster if none is given', () => {
-    const el = render(createComponent({ poster: null }));
+    const el = render(createComponent({ poster: imageUrl(null) }));
     expect(el.toJSON()).toMatchSnapshot();
   });
 
   it('should display the poster if one is given', () => {
-    const el = render(createComponent({ poster: ACTIVITY_POSTER }));
+    const el = render(createComponent({ poster: imageUrl('/foo.jpg') }));
     expect(el.toJSON()).toMatchSnapshot();
   });
 

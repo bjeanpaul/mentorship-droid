@@ -2,6 +2,7 @@ import moment from 'moment';
 import React, { PropTypes } from 'react';
 import { Event } from 'src/components';
 import images from 'src/constants/images';
+import { ImageUrl } from 'src/api';
 
 
 const ScheduledCallEvent = ({
@@ -11,8 +12,8 @@ const ScheduledCallEvent = ({
   <Event
     date={callTime}
     icon={
-      activity && activity.icon
-        ? { uri: activity.icon }
+      activity && activity.icon.exists()
+        ? activity.icon.resize(56, 56).toSource()
         : images.JOURNEY_EVENT_SCHEDULED_CALL_ICON
     }
     title="Call scheduled"
@@ -23,7 +24,7 @@ const ScheduledCallEvent = ({
 
 ScheduledCallEvent.propTypes = {
   activity: PropTypes.shape({
-    icon: PropTypes.any,
+    icon: PropTypes.instanceOf(ImageUrl).isRequired,
   }),
   scheduledCall: PropTypes.shape({
     callTime: PropTypes.string,
