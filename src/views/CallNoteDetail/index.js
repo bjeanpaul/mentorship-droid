@@ -59,7 +59,7 @@ const CallNoteDetail = ({
           <View style={[styles.sectionBody, styles.sectionBodyActivity]}>
             {
               activity.icon.exists() && <Image
-                source={activity.icon.toSource()}
+                source={activity.icon.resize(72, 72).toSource()}
                 style={styles.activityImage}
               />
             }
