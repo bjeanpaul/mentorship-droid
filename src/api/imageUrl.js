@@ -36,7 +36,7 @@ export class ImageUrl {
       : this.url;
   }
 
-  toSource(fallback) {
+  toSource(fallback = null) {
     return fallback && !this.exists()
       ? fallback
       : { uri: this.toString() };
