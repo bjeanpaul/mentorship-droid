@@ -32,6 +32,18 @@ describe('imageUrl', () => {
         uri: imageUrl('/foo.jpg').toString(),
       });
     });
+
+    it('should support a fallback', () => {
+      expect(imageUrl('/foo.jpg').toSource(23)).toEqual({
+        uri: imageUrl('/foo.jpg').toString(),
+      });
+
+      expect(imageUrl(null).toSource(23)).toEqual(23);
+
+      expect(imageUrl(null).toSource()).toEqual({
+        uri: null,
+      });
+    });
   });
 
   describe('exists', () => {
