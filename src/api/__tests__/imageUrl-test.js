@@ -26,11 +26,18 @@ describe('imageUrl', () => {
     expect(imageUrl(null).toString()).toEqual(null);
   });
 
-  describe('toSource()', () => {
+  describe('toSource', () => {
     it('should return a source descriptor', () => {
       expect(imageUrl('/foo.jpg').toSource()).toEqual({
         uri: imageUrl('/foo.jpg').toString(),
       });
+    });
+  });
+
+  describe('exists', () => {
+    it('should return whether the image url is truthy', () => {
+      expect(imageUrl(null).exists()).toBe(false);
+      expect(imageUrl('/foo.jpg').exists()).toBe(true);
     });
   });
 });

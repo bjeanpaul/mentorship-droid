@@ -22,8 +22,8 @@ class ImageUrl {
     });
   }
 
-  valueOf() {
-    return this.toString();
+  exists() {
+    return !!this.url;
   }
 
   toJSON() {
@@ -31,7 +31,7 @@ class ImageUrl {
   }
 
   toString() {
-    return this.url
+    return this.exists()
       ? buildUrl(API_BASE_URL + this.url, this.params)
       : this.url;
   }
