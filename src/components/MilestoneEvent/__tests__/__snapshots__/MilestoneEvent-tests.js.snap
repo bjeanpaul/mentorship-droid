@@ -31,7 +31,7 @@ exports[`MilestoneEvent should render the props 1`] = `
     <Image
       source={
         Object {
-          "uri": "/api/foo.jpg",
+          "uri": "/api/foo.jpg?filter_spec=min-224x224",
         }
       } />
   </View>
