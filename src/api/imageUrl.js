@@ -6,7 +6,7 @@ import config from 'src/config';
 const { API_BASE_URL } = config;
 
 
-class ImageUrl {
+export class ImageUrl {
   constructor(url, params = {}) {
     this.url = url;
     this.params = params;
