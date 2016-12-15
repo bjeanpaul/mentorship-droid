@@ -43,7 +43,7 @@ const ActivityIcon = ({
       ]}
     >
       <Image
-        source={icon.toSource(images.ACTIVITY_ICON_FALLBACK)}
+        source={icon.resize(72, 72).toSource(images.ACTIVITY_ICON_FALLBACK)}
         style={styles.activityIconImage}
       />
     </View>
