@@ -45,6 +45,12 @@ export const parseCategories = categories => {
 };
 
 
+export const parseProfile = ({ profilePic, ...data }) => ({
+  ...data,
+  profilePic: imageUrl(profilePic),
+});
+
+
 export const parseActivities = activities => activities.map(parseActivity);
 
 
