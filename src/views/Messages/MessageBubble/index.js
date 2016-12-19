@@ -18,7 +18,7 @@ const MessageBubble = ({
       <Text style={[baseStyles.content, styles.content]}>
         {content}
         {' '}
-        <Text style={baseStyles.time}>{moment(timestamp).format('HH:MM')}</Text>
+        <Text style={baseStyles.time}>{moment(timestamp).format('HH:mm')}</Text>
       </Text>
 
       {hint && <Text style={[baseStyles.hint, styles.hint]}>{hint}</Text>}
