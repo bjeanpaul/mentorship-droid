@@ -210,7 +210,7 @@ exports[`Messages should render 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -327,7 +327,7 @@ exports[`Messages should render 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -445,7 +445,7 @@ exports[`Messages should render 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -757,7 +757,7 @@ exports[`Messages should render failed messages 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -874,7 +874,7 @@ exports[`Messages should render failed messages 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -992,7 +992,7 @@ exports[`Messages should render failed messages 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -1303,7 +1303,7 @@ exports[`Messages should render inbound messages 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -1615,7 +1615,7 @@ exports[`Messages should render outbound messages 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -1732,7 +1732,7 @@ exports[`Messages should render outbound messages 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -1850,7 +1850,7 @@ exports[`Messages should render outbound messages 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -2162,7 +2162,7 @@ exports[`Messages should render outbound system messages 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -2279,7 +2279,7 @@ exports[`Messages should render outbound system messages 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -2397,7 +2397,7 @@ exports[`Messages should render outbound system messages 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -2709,7 +2709,7 @@ exports[`Messages should render sending messages 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -2826,7 +2826,7 @@ exports[`Messages should render sending messages 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -2944,7 +2944,7 @@ exports[`Messages should render sending messages 1`] = `
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -3256,7 +3256,7 @@ exports[`Messages should render the send button as disabled when there is no con
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -3373,7 +3373,7 @@ exports[`Messages should render the send button as disabled when there is no con
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -3491,7 +3491,7 @@ exports[`Messages should render the send button as disabled when there is no con
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -3803,7 +3803,7 @@ exports[`Messages should render the send button as disabled when there is no con
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -3920,7 +3920,7 @@ exports[`Messages should render the send button as disabled when there is no con
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
@@ -4038,7 +4038,7 @@ exports[`Messages should render the send button as disabled when there is no con
                                 },
                               ]
                             }>
-                            11:11
+                            11:43
                           </Text>
                         </Text>
                       </View>
