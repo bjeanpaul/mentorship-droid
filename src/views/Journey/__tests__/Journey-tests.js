@@ -22,7 +22,7 @@ describe('Journey', () => {
       onViewScheduledCallPress={noop}
       onStartScheduledCallPress={noop}
       onCallPress={noop}
-      onMessagePress={noop}
+      onChatPress={noop}
       onGetStartedPress={noop}
       onProfilePress={noop}
       {...props}
@@ -57,6 +57,13 @@ describe('Journey', () => {
     const el = shallow(createComponent({ onCallPress }));
     el.findWhere(uidEquals('call')).simulate('press');
     expect(onCallPress.mock.calls).toEqual([[]]);
+  });
+
+  it('should call onChatPress when the messages button is pressed', () => {
+    const onChatPress = jest.fn();
+    const el = shallow(createComponent({ onChatPress }));
+    el.findWhere(uidEquals('chat')).simulate('press');
+    expect(onChatPress.mock.calls).toEqual([[]]);
   });
 
   it('should call onProfilePress when the profile icon is pressed', () => {
