@@ -111,7 +111,7 @@ describe('api/parse', () => {
       });
 
       expect(parseProfile(profile)).toEqual(jasmine.objectContaining({
-        profilePic: imageUrl('foo.jpg'),
+        profilePic: imageUrl('/foo.jpg'),
       }));
     });
   });
