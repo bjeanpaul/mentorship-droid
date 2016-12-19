@@ -31,7 +31,7 @@ import NAV_TAB_SCHEDULED_CALLS_ACTIVE from 'app/assets/nav-calls-active.png';
 
 import JOURNEY_MENTEE from 'app/assets/journey-mentee.png';
 import JOURNEY_CALL_ICON from 'app/assets/call-icon.png';
-import JOURNEY_MESSAGE_ICON from 'app/assets/message-icon.png';
+import JOURNEY_CHAT_ICON from 'app/assets/chat-icon.png';
 
 import SETTINGS_ICON from 'app/assets/settings.png';
 import EVENT_MORE from 'app/assets/action-more.png';
@@ -99,7 +99,7 @@ export default {
 
   JOURNEY_MENTEE,
   JOURNEY_CALL_ICON,
-  JOURNEY_MESSAGE_ICON,
+  JOURNEY_CHAT_ICON,
 
   SETTINGS_ICON,
   EVENT_MORE,
