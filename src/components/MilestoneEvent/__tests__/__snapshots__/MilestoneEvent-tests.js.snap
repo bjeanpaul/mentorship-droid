@@ -1,3 +1,65 @@
+exports[`MilestoneEvent should not render the category image if it does not exist 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 4,
+        "margin": 24,
+        "marginTop": 0,
+        "padding": 20,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+      },
+      Object {
+        "backgroundColor": "blue",
+      },
+    ]
+  }>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center",
+        },
+        Object {
+          "color": "rgba(0, 0, 0, 0.35)",
+          "fontSize": 16,
+        },
+      ]
+    }>
+    Milestone Reached
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#003035",
+          "fontFamily": "Brandon Text",
+          "fontSize": 13,
+          "textAlign": "center",
+        },
+        Object {
+          "color": "#fff",
+          "fontSize": 24,
+        },
+      ]
+    }>
+    pew pew pew
+     Completed
+  </Text>
+</View>
+`;
+
 exports[`MilestoneEvent should render the props 1`] = `
 <View
   style={
@@ -22,16 +84,20 @@ exports[`MilestoneEvent should render the props 1`] = `
         "alignSelf": "center",
         "backgroundColor": "#fff",
         "borderRadius": 66,
-        "height": 112,
         "marginBottom": 20,
-        "overflow": "hidden",
-        "width": 112,
       }
     }>
     <Image
       source={
         Object {
-          "uri": "image.png",
+          "uri": "/api/foo.jpg?filter_spec=min-224x224",
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 66,
+          "height": 112,
+          "width": 112,
         }
       } />
   </View>

@@ -2,15 +2,8 @@ import { flow } from 'lodash';
 import { map } from 'lodash/fp';
 import colors from 'src/constants/colors';
 import { makeGradient } from 'src/helpers';
-import * as constants from 'src/constants/messages';
-import config from 'src/config';
-
-const { API_BASE_URL } = config;
-
-
-const imageUrl = url => url
-  ? API_BASE_URL + url
-  : url;
+import imageUrl from './imageUrl';
+import { MESSAGE_TYPE_COMPLETE } from 'src/constants/messages';
 
 
 export const parseResults = ({ results }) => results;
@@ -63,7 +56,7 @@ export const parseMessage = data => {
   } = data;
 
   return {
-    type: constants.MESSAGE_TYPE_COMPLETE,
+    type: MESSAGE_TYPE_COMPLETE,
     id,
     content,
     timestamp,
@@ -76,6 +69,9 @@ export const parseProfile = ({ profilePic, ...data }) => ({
   ...data,
   profilePic: imageUrl(profilePic),
 });
+
+
+export const parseActivities = activities => activities.map(parseActivity);
 
 
 export const parseCategoryListResults = flow(parseResults, parseCategories);

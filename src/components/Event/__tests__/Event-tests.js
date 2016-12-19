@@ -1,7 +1,6 @@
 import React from 'react';
 import { noop } from 'lodash';
 
-import { IMAGE } from 'app/scripts/fixtures';
 import Event from 'src/components/Event';
 
 
@@ -9,7 +8,7 @@ describe('Event', () => {
   const createComponent = (props = {}) => (
     <Event
       date="2016-09-16T11:19:17.368442Z"
-      icon={IMAGE}
+      icon={23}
       title="pew pew pew"
       blurb="i am a blurb"
       {...props}
