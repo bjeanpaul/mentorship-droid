@@ -43,7 +43,7 @@ export default StyleSheet.create({
     marginLeft: 24,
     marginRight: 24,
   },
-  eventsContainer: {
-    flex: -1,
+  events: {
+    flex: 1,
   },
 });

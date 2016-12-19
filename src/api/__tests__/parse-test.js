@@ -1,8 +1,8 @@
 import { makeGradient } from 'src/helpers';
-import { fakeProfile, fakeCategory, fakeActivity } from 'app/scripts/helpers';
+import { fakeCategory, fakeActivity, fakeProfile } from 'app/scripts/helpers';
 import colors from 'src/constants/colors';
-import * as constants from 'src/constants/messages';
-import config from 'src/config';
+import { imageUrl } from 'src/api';
+import { MESSAGE_TYPE_COMPLETE } from 'src/constants/messages';
 
 import {
   parseResults,
@@ -12,8 +12,6 @@ import {
   parseMessage,
   parseProfile,
 } from 'src/api/parse';
-
-const { API_BASE_URL } = config;
 
 
 describe('api/parse', () => {
@@ -56,34 +54,31 @@ describe('api/parse', () => {
   describe('parseCategory', () => {
     it('should prepend the base api url to the image url', () => {
       const { image } = parseCategory(fakeCategory({ image: '/foo.jpg' }));
-      expect(image).toEqual(`${API_BASE_URL}/foo.jpg`);
-    });
-
-    it('should not parse the image url if it is falsy', () => {
-      const { image } = parseCategory(fakeCategory({ image: null }));
-      expect(image).toEqual(null);
+      expect(image).toEqual(imageUrl('/foo.jpg'));
     });
   });
 
   describe('parseActivity', () => {
     it('should prepend the base api url to the poster url', () => {
       const { poster } = parseActivity(fakeActivity({ poster: '/foo.jpg' }));
-      expect(poster).toEqual(`${API_BASE_URL}/foo.jpg`);
+      expect(poster).toEqual(imageUrl('/foo.jpg'));
     });
 
     it('should prepend the base api url to the icon url', () => {
       const { icon } = parseActivity(fakeActivity({ icon: '/foo.jpg' }));
-      expect(icon).toEqual(`${API_BASE_URL}/foo.jpg`);
+      expect(icon).toEqual(imageUrl('/foo.jpg'));
     });
+  });
 
-    it('should not parse the poster url if it is falsy', () => {
-      const { poster } = parseActivity(fakeActivity({ poster: null }));
-      expect(poster).toEqual(null);
-    });
+  describe('parseProfile', () => {
+    it('should add the profile image', () => {
+      const profile = fakeProfile({
+        profilePic: '/foo.jpg',
+      });
 
-    it('should not parse the icon url if it is falsy', () => {
-      const { icon } = parseActivity(fakeActivity({ icon: null }));
-      expect(icon).toEqual(null);
+      expect(parseProfile(profile)).toEqual(jasmine.objectContaining({
+        profilePic: imageUrl('/foo.jpg'),
+      }));
     });
   });
 
@@ -99,7 +94,7 @@ describe('api/parse', () => {
       expect(parseMessage(msg))
         .toEqual({
           id: 21,
-          type: constants.MESSAGE_TYPE_COMPLETE,
+          type: MESSAGE_TYPE_COMPLETE,
           timestamp: '2016-11-30T09:43:20.311Z',
           content: 'foo',
           details: {
@@ -116,7 +111,7 @@ describe('api/parse', () => {
       });
 
       expect(parseProfile(profile)).toEqual(jasmine.objectContaining({
-        profilePic: `${API_BASE_URL}/foo.jpg`,
+        profilePic: imageUrl('foo.jpg'),
       }));
     });
   });

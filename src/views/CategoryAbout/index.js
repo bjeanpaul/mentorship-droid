@@ -15,7 +15,10 @@ const CategoryAbout = ({
 }) => (
   <ScrollView>
     <View style={styles.imageContainer}>
-      {image && <Image source={{ uri: image }} style={styles.image} />}
+      {image.exists() && <Image
+        source={image.resize(340, 160).toSource()}
+        style={styles.image}
+      />}
     </View>
 
     <Section title={`About ${title}`}>{about}</Section>

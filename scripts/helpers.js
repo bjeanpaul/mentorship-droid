@@ -10,6 +10,7 @@ import {
   MESSAGE_DIRECTION_INBOUND,
 } from 'src/constants/messages';
 
+
 export const capture = async (fn, ...xargs) => {
   const res = [];
   await fn(v => res.push(v), ...xargs);
@@ -43,7 +44,7 @@ export const fakeCategory = data => ({
   color: '#97c13c',
   about: 'touba',
   goal: 'laog',
-  image: null,
+  image: api.imageUrl(null),
   ...data,
 });
 
@@ -59,11 +60,12 @@ export const fakeActivity = data => ({
   prompts: 'tspmorp',
   reflectionPoints: 'tsnoip',
   skillsDeveloped: 'depoleved',
-  icon: null,
-  poster: null,
+  icon: api.imageUrl(null),
+  poster: api.imageUrl(null),
   category: 23,
   ...data,
 });
+
 
 export const fakeScheduledCall = data => ({
   id: 1,
@@ -79,7 +81,7 @@ export const fakeScheduledCall = data => ({
 export const fakeProfile = data => ({
   id: 23,
   firstName: 'Rodger',
-  profilePic: '/foo.png',
+  profilePic: api.imageUrl('/foo.png'),
   ...data,
 });
 

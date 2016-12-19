@@ -45,9 +45,9 @@ const Activity = props => {
         </Header>
 
         {
-          poster && <View style={[styles.posterContainer, { backgroundColor: color }]}>
+          poster.exists() && <View style={[styles.posterContainer, { backgroundColor: color }]}>
             <Image
-              source={{ uri: poster }}
+              source={poster.resize(360, 248).toSource()}
               style={styles.poster}
             />
           </View>

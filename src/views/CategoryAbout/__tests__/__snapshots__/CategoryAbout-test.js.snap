@@ -11,7 +11,7 @@ exports[`CategoryAbout should render 1`] = `
     <Image
       source={
         Object {
-          "uri": "http://8d5ebfb8.ngrok.io/category-image.png",
+          "uri": "/api/foo.jpg?filter_spec=min-680x320",
         }
       }
       style={

@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { View, Image, ScrollView, TouchableNativeFeedback } from 'react-native';
 import { Text } from 'src/components';
 import images from 'src/constants/images';
+import { ImageUrl } from 'src/api';
 import styles from './styles';
 
 
@@ -42,11 +43,7 @@ const ActivityIcon = ({
       ]}
     >
       <Image
-        source={
-          icon
-            ? { uri: icon }
-            : images.ACTIVITY_ICON_FALLBACK
-        }
+        source={icon.resize(72, 72).toSource(images.ACTIVITY_ICON_FALLBACK)}
         style={styles.activityIconImage}
       />
     </View>
@@ -71,7 +68,7 @@ ActivityList.propTypes = {
 
 
 ActivityIcon.propTypes = {
-  icon: PropTypes.string,
+  icon: PropTypes.instanceOf(ImageUrl),
   color: PropTypes.string.isRequired,
   isComplete: PropTypes.bool.isRequired,
 };

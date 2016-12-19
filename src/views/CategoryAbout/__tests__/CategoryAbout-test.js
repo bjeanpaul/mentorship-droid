@@ -1,8 +1,8 @@
 import React from 'react';
 
 import CategoryAbout from 'src/views/CategoryAbout';
+import { imageUrl } from 'src/api';
 import { fakeCategory } from 'app/scripts/helpers';
-import { CATEGORY_IMAGE } from 'app/scripts/fixtures';
 
 
 describe('CategoryAbout', () => {
@@ -11,7 +11,7 @@ describe('CategoryAbout', () => {
       <CategoryAbout
         category={fakeCategory({
           title: 'Level',
-          image: CATEGORY_IMAGE,
+          image: imageUrl('/foo.jpg'),
           about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
           goal: 'Ut enim ad minim veniam, quis nostrud exercitation',
         })}

@@ -1,5 +1,7 @@
 import React from 'react';
 import { noop } from 'lodash';
+
+import { imageUrl } from 'src/api';
 import CallNoteDetail from 'src/views/CallNoteDetail';
 import { uidEquals, fakeCallNote, fakeActivity } from 'app/scripts/helpers';
 
@@ -20,6 +22,15 @@ describe('CallNoteDetail', () => {
 
   it('should exclude the activity views if they are undefined', () => {
     const el = render(createComponent({ activity: void 0 }));
+    expect(el).toMatchSnapshot();
+  });
+
+  it('should exclude the activity icon if it does not exist', () => {
+    const el = render(createComponent({
+      activity: fakeActivity({
+        icon: imageUrl(null),
+      }),
+    }));
     expect(el).toMatchSnapshot();
   });
 

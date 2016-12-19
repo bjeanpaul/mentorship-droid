@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
 import { View, Image } from 'react-native';
+
+import { ImageUrl } from 'src/api';
 import { Text } from 'src/components';
 import styles from './styles';
 
@@ -10,9 +12,12 @@ const MilestoneEvent = ({
   color,
 }) => (
   <View style={[styles.container, { backgroundColor: color }]}>
-    <View style={styles.imageContainer}>
-      <Image source={{ uri: image }} />
-    </View>
+    {image.exists() && <View style={styles.imageContainer}>
+      <Image
+        source={image.resize(112, 112).toSource()}
+        style={styles.image}
+      />
+    </View>}
     <Text style={styles.milestonReachedText}>Milestone Reached</Text>
     <Text style={styles.categoryNameCompletedText}>{title} Completed</Text>
   </View>
@@ -20,7 +25,7 @@ const MilestoneEvent = ({
 
 
 MilestoneEvent.propTypes = {
-  image: PropTypes.string.isRequired,
+  image: PropTypes.instanceOf(ImageUrl).isRequired,
   title: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
 };
