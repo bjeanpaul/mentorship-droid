@@ -26,6 +26,6 @@ export default fromPairs([
   [ONBOARDING_SETUP_PROFILE_SUCCESS, load],
   [SCHEDULED_CALL_CREATE_SUCCESS, listRecentEvents],
   [EVENT_POLL_TICK, listRecentEvents],
-  [NEW_MESSAGE_RECEIVED, listRecentMessages],
   [MESSAGE_POLL_TICK, listRecentMessages],
+  [NEW_MESSAGE_RECEIVED, listRecentMessages],
 ]);

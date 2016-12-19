@@ -66,6 +66,7 @@ export const fakeActivity = data => ({
   ...data,
 });
 
+
 export const fakeScheduledCall = data => ({
   id: 1,
   createdAt: '2016-09-16T11:27:25.454520Z',

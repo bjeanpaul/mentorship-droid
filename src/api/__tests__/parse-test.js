@@ -1,5 +1,5 @@
 import { makeGradient } from 'src/helpers';
-import { fakeProfile, fakeCategory, fakeActivity } from 'app/scripts/helpers';
+import { fakeCategory, fakeActivity, fakeProfile } from 'app/scripts/helpers';
 import colors from 'src/constants/colors';
 import { imageUrl } from 'src/api';
 import { MESSAGE_TYPE_COMPLETE } from 'src/constants/messages';
