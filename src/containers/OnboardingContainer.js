@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 
 import {
-  chooseProfilePicture,
   changeProfile,
   setupProfile,
+  openPicturePicker,
 } from 'src/actions/onboarding';
 
 import { getAuthUserProfile } from 'src/store/helpers';
@@ -11,7 +11,7 @@ import Onboarding from 'src/views/Onboarding';
 
 
 export const propsToActions = {
-  onChoosePhotoPress: chooseProfilePicture,
+  onChoosePhotoPress: openPicturePicker,
   onChange: changeProfile,
   onDonePress: setupProfile,
 };
