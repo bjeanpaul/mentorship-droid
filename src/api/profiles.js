@@ -3,18 +3,7 @@ import { arrayOf } from 'normalizr';
 import request, { imageData } from 'src/api/request';
 import { Profile } from 'src/api/schemas';
 import { parseProfile, parseProfileListResults } from 'src/api/parse';
-
-
-export const REQUIRED_PROFILE_FIELDS = [
-  'jobTitle',
-  'jobSector',
-  'occupation',
-  'motivation',
-  'inspiration',
-  'tags',
-  'skills',
-  'profilePic',
-];
+import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
 
 
 export const listProfiles = (auth, params = {}) => request({

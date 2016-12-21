@@ -5,7 +5,7 @@ import * as constants from 'src/constants/onboarding';
 
 const profile = (state = {}, action) => {
   switch (action.type) {
-    case constants.ONBOARDING_CHANGE_PROFILE_PICTURE:
+    case constants.ONBOARDING_PICTURE_CHOSEN:
     case constants.ONBOARDING_CHANGE_PROFILE:
       return {
         ...state,

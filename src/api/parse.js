@@ -1,9 +1,10 @@
-import { flow } from 'lodash';
+import { flow, fromPairs } from 'lodash';
 import { map } from 'lodash/fp';
 import colors from 'src/constants/colors';
 import { makeGradient } from 'src/helpers';
 import imageUrl from './imageUrl';
 import { MESSAGE_TYPE_COMPLETE } from 'src/constants/messages';
+import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
 
 
 export const parseResults = ({ results }) => results;
@@ -67,6 +68,7 @@ export const parseMessage = data => {
 
 export const parseProfile = ({ profilePic, ...data }) => ({
   ...data,
+  ...fromPairs(REQUIRED_PROFILE_FIELDS.map(name => [name, data[name] || ''])),
   profilePic: imageUrl(profilePic),
 });
 
