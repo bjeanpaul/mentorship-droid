@@ -6,7 +6,6 @@ import {
   createStack,
   createRoute,
   push,
-  pop,
   replaceAt,
 } from 'src/navigationHelpers';
 

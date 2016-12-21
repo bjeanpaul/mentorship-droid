@@ -1,6 +1,6 @@
 import * as onboarding from 'src/constants/onboarding';
 import * as routes from 'src/constants/routes';
-import { push, pop, replaceOrPush, createRoute } from 'src/navigationHelpers';
+import { replaceOrPush, createRoute } from 'src/navigationHelpers';
 
 
 export default (state, action) => {
