@@ -10,12 +10,6 @@ export default (state, action) => {
       return replaceOrPush(state, routes.ROUTE_ONBOARDING, route);
     }
 
-    case onboarding.ONBOARDING_CHOOSE_PROFILE_PICTURE:
-      return push(state, createRoute(routes.ROUTE_ONBOARDING_CAMERA_ROLL));
-
-    case onboarding.ONBOARDING_CHANGE_PROFILE_PICTURE:
-      return pop(state);
-
     default:
       return state;
   }
