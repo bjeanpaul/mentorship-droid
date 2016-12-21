@@ -5,7 +5,8 @@ import { arrayOf } from 'normalizr';
 import { fakeAuth, fakeProfile } from 'app/scripts/helpers';
 import request, { imageData } from 'src/api/request';
 import { Profile } from 'src/api/schemas';
-import { parseResults } from 'src/api/parse';
+import { parseProfileListResults } from 'src/api/parse';
+import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
 
 import {
   listProfiles,
@@ -15,7 +16,6 @@ import {
   updateProfilePicture,
   setupProfile,
   profileIsComplete,
-  REQUIRED_PROFILE_FIELDS,
 } from 'src/api';
 
 
@@ -34,7 +34,7 @@ describe('api/profiles', () => {
         url: '/profile/',
         method: 'GET',
         schema: arrayOf(Profile),
-        parse: parseResults,
+        parse: parseProfileListResults,
         auth: fakeAuth(),
         params: { foo: 23 },
       });
