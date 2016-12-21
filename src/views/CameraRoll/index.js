@@ -49,7 +49,7 @@ class CameraRollPicker extends React.Component {
                 key={index}
                 photoId={index}
                 onPress={() => this.props.onPhotoPress(photoPath)}
-                >
+              >
                 <View style={styles.imageContainer}>
                   <Image
                     source={{ uri: photoPath }}
