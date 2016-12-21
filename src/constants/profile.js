@@ -1,7 +1,6 @@
 const REQUIRED_PROFILE_FIELDS = [
   'jobTitle',
   'jobSector',
-  'occupation',
   'motivation',
   'inspiration',
   'tags',
