@@ -72,13 +72,13 @@ exports[`CameraRoll should map props correctly 1`] = `
       </Text>
     </View>
   </View>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-      }
-    }>
-    <ScrollView>
+  <ScrollView>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+        }
+      }>
       <View
         style={
           Object {
@@ -175,7 +175,7 @@ exports[`CameraRoll should map props correctly 1`] = `
           </Text>
         </View>
       </View>
-    </ScrollView>
-  </View>
+    </View>
+  </ScrollView>
 </View>
 `;

@@ -6,6 +6,7 @@ import { fakeAuth, fakeProfile } from 'app/scripts/helpers';
 import request, { imageData } from 'src/api/request';
 import { Profile } from 'src/api/schemas';
 import { parseProfile, parseProfileListResults } from 'src/api/parse';
+import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
 
 import {
   listProfiles,
@@ -15,7 +16,6 @@ import {
   updateProfilePicture,
   setupProfile,
   profileIsComplete,
-  REQUIRED_PROFILE_FIELDS,
 } from 'src/api';
 
 

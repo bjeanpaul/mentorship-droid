@@ -1,8 +1,10 @@
+import { fromPairs } from 'lodash';
 import { makeGradient } from 'src/helpers';
 import { fakeCategory, fakeActivity, fakeProfile } from 'app/scripts/helpers';
 import colors from 'src/constants/colors';
 import { imageUrl } from 'src/api';
 import { MESSAGE_TYPE_COMPLETE } from 'src/constants/messages';
+import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
 
 import {
   parseResults,
@@ -79,6 +81,13 @@ describe('api/parse', () => {
       expect(parseProfile(profile)).toEqual(jasmine.objectContaining({
         profilePic: imageUrl('/foo.jpg'),
       }));
+    });
+
+    it('should initialise required fields to empty strings', () => {
+      const fieldNames = REQUIRED_PROFILE_FIELDS.filter(k => k !== 'profilePic');
+      const profile = fakeProfile(fromPairs(fieldNames.map(name => [name, null])));
+      const initialised = fromPairs(fieldNames.map(name => [name, '']));
+      expect(parseProfile(profile)).toEqual(jasmine.objectContaining(initialised));
     });
   });
 
