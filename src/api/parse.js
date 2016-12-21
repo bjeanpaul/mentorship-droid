@@ -1,7 +1,9 @@
-import { flow } from 'lodash';
+import { flow, fromPairs } from 'lodash';
+import { map } from 'lodash/fp';
 import colors from 'src/constants/colors';
 import { makeGradient } from 'src/helpers';
 import imageUrl from './imageUrl';
+import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
 
 
 export const parseResults = ({ results }) => results;
@@ -47,6 +49,7 @@ export const parseCategories = categories => {
 
 export const parseProfile = ({ profilePic, ...data }) => ({
   ...data,
+  ...fromPairs(REQUIRED_PROFILE_FIELDS.map(name => [name, data[name] || ''])),
   profilePic: imageUrl(profilePic),
 });
 
@@ -54,5 +57,6 @@ export const parseProfile = ({ profilePic, ...data }) => ({
 export const parseActivities = activities => activities.map(parseActivity);
 
 
+export const parseProfileListResults = flow(parseResults, map(parseProfile));
 export const parseCategoryListResults = flow(parseResults, parseCategories);
 export const parseActivityListResults = flow(parseResults, parseActivities);

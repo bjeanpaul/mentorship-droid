@@ -2,26 +2,15 @@ import { every, pick, isNull } from 'lodash';
 import { arrayOf } from 'normalizr';
 import request, { imageData } from 'src/api/request';
 import { Profile } from 'src/api/schemas';
-import { parseResults } from 'src/api/parse';
-
-
-export const REQUIRED_PROFILE_FIELDS = [
-  'jobTitle',
-  'jobSector',
-  'occupation',
-  'motivation',
-  'inspiration',
-  'tags',
-  'skills',
-  'profilePic',
-];
+import { parseProfileListResults } from 'src/api/parse';
+import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
 
 
 export const listProfiles = (auth, params = {}) => request({
   url: '/profile/',
   method: 'GET',
   schema: arrayOf(Profile),
-  parse: parseResults,
+  parse: parseProfileListResults,
   params,
   auth,
 });

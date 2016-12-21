@@ -41,26 +41,26 @@ class CameraRollPicker extends React.Component {
             onPress={this.props.onBackPress}
           />
         </Header>
-        <View style={styles.body}>
-          <ScrollView >
+        <ScrollView>
+          <View style={styles.body}>
             <View style={styles.imageGrid}>
               {this.state.photos.map((photoPath, index) =>
-                  <TouchableNativeFeedback
-                    key={index}
-                    photoId={index}
-                    onPress={() => this.props.onPhotoPress(photoPath)}
-                  >
-                    <View style={styles.imageContainer}>
-                      <Image
-                        source={{ uri: photoPath }}
-                        style={styles.image}
-                      />
-                    </View>
-                  </TouchableNativeFeedback>
+              <TouchableNativeFeedback
+                key={index}
+                photoId={index}
+                onPress={() => this.props.onPhotoPress(photoPath)}
+              >
+                <View style={styles.imageContainer}>
+                  <Image
+                    source={{ uri: photoPath }}
+                    style={styles.image}
+                  />
+                </View>
+              </TouchableNativeFeedback>
               )}
             </View>
-          </ScrollView>
-        </View>
+          </View>
+        </ScrollView>
       </BaseView>
     );
   }
