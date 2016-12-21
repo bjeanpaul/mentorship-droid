@@ -1,5 +1,6 @@
 import * as api from 'src/api';
 import * as constants from 'src/constants/onboarding';
+import ImagePicker from 'react-native-image-picker';
 
 import {
   apiAction,
@@ -8,19 +9,6 @@ import {
 } from 'src/actionHelpers';
 
 const { ApiResponseError } = api;
-
-
-const chooseProfilePicture = () => ({
-  type: constants.ONBOARDING_CHOOSE_PROFILE_PICTURE,
-});
-
-
-const changeProfilePicture = path => ({
-  type: constants.ONBOARDING_CHANGE_PROFILE_PICTURE,
-  payload: {
-    profilePictureUploadPath: path,
-  },
-});
 
 
 const changeProfile = (payload) => ({
@@ -39,9 +27,24 @@ const setupProfile = apiAction({
 });
 
 
+const choosePicture = profilePictureUploadPath => ({
+  type: constants.ONBOARDING_PICTURE_CHOSEN,
+  payload: {
+    profilePictureUploadPath,
+  },
+});
+
+
+const openPicturePicker = () => dispatch => {
+  ImagePicker.showImagePicker({}, resp => {
+    if (resp.uri) dispatch(choosePicture(resp.uri));
+  });
+};
+
+
 export {
   setupProfile,
   changeProfile,
-  changeProfilePicture,
-  chooseProfilePicture,
+  choosePicture,
+  openPicturePicker,
 };
