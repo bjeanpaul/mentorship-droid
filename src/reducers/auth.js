@@ -1,11 +1,18 @@
 import * as constants from 'src/constants/auth';
 import * as statuses from 'src/statuses/auth';
+import { AUTH_LOGOUT } from 'src/constants/auth';
 
 
-const authReducer = (state = {
+export const createInitialState = () => ({
   status: statuses.authStatusIdle(),
-}, action) => {
+});
+
+
+const authReducer = (state = createInitialState(), action) => {
   switch (action.type) {
+    case AUTH_LOGOUT:
+      return createInitialState();
+
     case constants.AUTH_LOGIN_REQUEST:
       return {
         ...state,
