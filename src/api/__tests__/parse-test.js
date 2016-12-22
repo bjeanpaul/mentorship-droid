@@ -38,6 +38,28 @@ describe('api/parse', () => {
         ordinal: 2,
       }]);
     });
+
+    it('should not overwrite existing ordinal properties', () => {
+      const res = addOrdinals([{
+        v: 2,
+      }, {
+        v: 3,
+        ordinal: 23,
+      }, {
+        v: 4,
+      }]);
+
+      expect(res).toEqual([{
+        v: 2,
+        ordinal: 0,
+      }, {
+        v: 3,
+        ordinal: 23,
+      }, {
+        v: 4,
+        ordinal: 2,
+      }]);
+    });
   });
 
   describe('parseResults', () => {

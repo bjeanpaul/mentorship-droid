@@ -8,8 +8,8 @@ import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
 
 export const addOrdinals = list => list
   .map((d, ordinal) => ({
-    ...d,
     ordinal,
+    ...d,
   }));
 
 
