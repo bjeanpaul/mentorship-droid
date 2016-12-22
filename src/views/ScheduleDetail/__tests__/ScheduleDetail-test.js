@@ -69,6 +69,53 @@ describe('ScheduleDetail', () => {
     }));
   });
 
+  it('should use an initial time if given', () => {
+    const el = shallow(createComponent({
+      initialTime: '2016-09-22T14:31:23.431Z',
+    }));
+
+    expect(el.state()).toEqual(jasmine.objectContaining({
+      time: {
+        hour: 16,
+        minute: 31,
+      },
+    }));
+  });
+
+  it('should use an initial date object if given', () => {
+    const el = shallow(createComponent({
+      initialDate: {
+        year: 2016,
+        month: 8,
+        date: 22,
+      },
+    }));
+
+    expect(el.state()).toEqual(jasmine.objectContaining({
+      date: {
+        year: 2016,
+        month: 8,
+        date: 22,
+      },
+    }));
+  });
+
+  it('should use an initial time if given', () => {
+    const el = shallow(createComponent({
+      initialTime: {
+        hour: 16,
+        minute: 31,
+      },
+    }));
+
+    expect(el.state()).toEqual(jasmine.objectContaining({
+      time: {
+        hour: 16,
+        minute: 31,
+      },
+    }));
+  });
+
   it('should use an initial call time as date and time if given', () => {
     const el = shallow(createComponent({
       initialDate: '2016-09-22T14:31:23.431Z',
@@ -199,11 +246,32 @@ describe('ScheduleDetail', () => {
   it('should call onActivityPress when the activity is pressed', () => {
     const onActivityPress = jest.fn();
 
-    shallow(createComponent({ onActivityPress }))
-      .findWhere(uidEquals('activity'))
-      .simulate('press');
+    shallow(createComponent({
+      onActivityPress,
+      initialDate: {
+        year: 2016,
+        month: 8,
+        date: 22,
+      },
+      initialTime: {
+        hour: 16,
+        minute: 31,
+      },
+    }))
+    .findWhere(uidEquals('activity'))
+    .simulate('press');
 
-    expect(onActivityPress.mock.calls).toEqual([[]]);
+    expect(onActivityPress.mock.calls).toEqual([[{
+      date: {
+        year: 2016,
+        month: 8,
+        date: 22,
+      },
+      time: {
+        hour: 16,
+        minute: 31,
+      },
+    }]]);
   });
 
   it('should call onActivityRemovePress when activity remove is pressed', () => {
