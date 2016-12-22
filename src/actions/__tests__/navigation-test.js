@@ -6,7 +6,6 @@ import BackAndroid from 'BackAndroid';
 import * as actions from 'src/actions/navigation';
 import * as routes from 'src/constants/routes';
 import * as constants from 'src/constants/navigation';
-import { logout } from 'src/actions/auth';
 import { fakeState, fakeContext } from 'app/scripts/helpers';
 import { createStack, createRoute } from 'src/navigationHelpers';
 
@@ -36,15 +35,14 @@ describe('actions/navigation', () => {
       expect(BackAndroid.exitApp.mock.calls).toEqual([[]]);
     });
 
-    it('should dispatch a logout action if on the navigator route', () => {
+    it('should exit the app if on the navigator route', () => {
       const state = fakeState();
       const ctx = fakeContext();
-      const dispatch = jest.fn();
 
       state.navigation.top = createStack([createRoute(routes.ROUTE_NAVIGATOR)]);
-      actions.dismissNative()(dispatch, ctx, constant(state));
+      actions.dismissNative()(noop, ctx, constant(state));
 
-      expect(dispatch.mock.calls).toEqual([[logout()]]);
+      expect(BackAndroid.exitApp.mock.calls).toEqual([[]]);
     });
 
     it('should dispatch dismiss screen action otherwise', () => {

@@ -4,7 +4,6 @@ import BackAndroid from 'BackAndroid';
 
 import * as routes from 'src/constants/routes';
 import { getActiveTopRoute } from 'src/store/helpers';
-import { logout } from 'src/actions/auth';
 
 
 export const dismissScreen = staticAction(constants.SCREEN_DISMISS);
@@ -22,10 +21,8 @@ export const dismissNative = () => (dispatch, ctx, getState) => {
 
   switch (activeRoute.key) {
     case routes.ROUTE_LANDING:
-      return BackAndroid.exitApp();
-
     case routes.ROUTE_NAVIGATOR:
-      return dispatch(logout());
+      return BackAndroid.exitApp();
 
     default:
       return dispatch(dismissScreen());
