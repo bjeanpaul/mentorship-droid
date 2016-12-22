@@ -1,5 +1,7 @@
 import { range, clamp, fromPairs, debounce } from 'lodash';
 import React, { Component, PropTypes } from 'react';
+import BackAndroid from 'BackAndroid';
+
 import { ProgressBar, BaseView, FormView, NavigationStack } from 'src/components';
 import { createRoute } from 'src/navigationHelpers';
 
@@ -32,6 +34,24 @@ class Stepper extends Component {
 
     this.onNextPress = debouncePager(this.onNextPress.bind(this));
     this.onBackPress = debouncePager(this.onBackPress.bind(this));
+    this.onNativeBackPress = this.onNativeBackPress.bind(this);
+  }
+
+  componentDidMount() {
+    BackAndroid.addEventListener('hardwareBackPress', this.onNativeBackPress);
+  }
+
+  componentWillUnmount() {
+    BackAndroid.removeEventListener('hardwareBackPress', this.onNativeBackPress);
+  }
+
+  onNativeBackPress() {
+    if (this.state.index > 0) {
+      this.onBackPress();
+      return true;
+    } else {
+      return false;
+    }
   }
 
   onNextPress() {
