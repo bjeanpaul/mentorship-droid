@@ -6,6 +6,11 @@ import {
 } from 'src/constants/events';
 
 import {
+  createStack,
+  createRoute,
+} from 'src/navigationHelpers';
+
+import {
   fakeState,
   fakeProfile,
   fakeAuth,
@@ -33,6 +38,7 @@ import {
   getCallNote,
   getNextScheduledCall,
   getScheduledCallsBetween,
+  getActiveTopRoute,
 } from 'src/store/helpers';
 
 
@@ -418,6 +424,17 @@ describe('helpers', () => {
       };
 
       expect(getCallNote(state, 2)).toEqual(callNote1);
+    });
+  });
+
+  describe('getActiveTopRoute', () => {
+    it('should get the active top route', () => {
+      const state = fakeState();
+      const route1 = createRoute('1');
+      const route2 = createRoute('2');
+      state.navigation.top = createStack([route1, route2]);
+
+      expect(getActiveTopRoute(state)).toEqual(route2);
     });
   });
 });
