@@ -1,4 +1,4 @@
-import { some } from 'lodash';
+import { some, isPlainObject } from 'lodash';
 import moment from 'moment';
 import React, { PropTypes } from 'react';
 import {
@@ -11,6 +11,8 @@ import styles from 'src/views/ScheduleDetail/styles';
 
 
 const dateFromMoment = m => {
+  if (isPlainObject(m)) return m;
+
   const {
     years: year,
     months: month,
@@ -26,6 +28,8 @@ const dateFromMoment = m => {
 
 
 const timeFromMoment = m => {
+  if (isPlainObject(m)) return m;
+
   const {
     hours: hour,
     minutes: minute,
@@ -38,12 +42,16 @@ const timeFromMoment = m => {
 };
 
 
-const parseDateProps = (initialDate, initialCallTime) => {
+const parseDateProps = (initialDate, initialTime, initialCallTime) => {
   let date = null;
   let time = null;
 
   if (initialDate) {
     date = dateFromMoment(initialDate);
+  }
+
+  if (initialTime) {
+    time = timeFromMoment(initialTime);
   }
 
   if (initialCallTime) {
@@ -107,17 +115,19 @@ class ScheduleDetail extends React.Component {
 
     const {
       initialDate = null,
+      initialTime = null,
       initialCallTimeHasChanged = false,
     } = props;
 
     this.state = {
-      ...parseDateProps(initialDate, this.props.initialCallTime),
+      ...parseDateProps(initialDate, initialTime, this.props.initialCallTime),
       timeHasChanged: initialCallTimeHasChanged,
     };
 
     this.onDonePress = this.onDonePress.bind(this);
     this.onDatePress = this.onDatePress.bind(this);
     this.onTimePress = this.onTimePress.bind(this);
+    this.onActivityPress = this.onActivityPress.bind(this);
   }
 
   async onDatePress() {
@@ -162,6 +172,18 @@ class ScheduleDetail extends React.Component {
         ...this.state.time,
       })
       .toISOString(),
+    });
+  }
+
+  onActivityPress() {
+    const {
+      date,
+      time,
+    } = this.state;
+
+    this.props.onActivityPress({
+      date,
+      time,
     });
   }
 
@@ -251,7 +273,7 @@ class ScheduleDetail extends React.Component {
                 removeUid="removeActivity"
                 value={this.props.activity && this.props.activity.title}
                 placeholder="Add Activity (Optional)"
-                onPress={this.props.onActivityPress}
+                onPress={this.onActivityPress}
                 onRemovePress={this.props.onActivityRemovePress}
               />
             </View>
@@ -281,8 +303,9 @@ ScheduleDetail.propTypes = {
   onActivityPress: PropTypes.func.isRequired,
   onActivityRemovePress: PropTypes.func.isRequired,
   onDone: PropTypes.func.isRequired,
-  initialDate: PropTypes.string,
-  initialCallTime: PropTypes.string,
+  initialTime: PropTypes.any,
+  initialDate: PropTypes.any,
+  initialCallTime: PropTypes.any,
   initialCallTimeHasChanged: PropTypes.bool,
   activity: PropTypes.object,
 };

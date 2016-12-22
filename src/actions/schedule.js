@@ -52,23 +52,31 @@ export const openScheduledCall = scheduledCallId => ({
 });
 
 
-export const changeScheduledCallActivity = (
-  staticAction(constants.SCHEDULED_CALL_ACTIVITY_CHANGE));
-
-
 export const removeScheduledCallActivity = (
   staticAction(constants.SCHEDULED_CALL_ACTIVITY_REMOVE));
 
 
-export const chooseScheduledCallCategory = categoryId => ({
-  type: constants.SCHEDULED_CALL_CATEGORY_CHOOSE,
-  payload: { categoryId },
+export const changeScheduledCallActivity = context => ({
+  type: constants.SCHEDULED_CALL_ACTIVITY_CHANGE,
+  payload: { context },
 });
 
 
-export const chooseScheduledCallActivity = activityId => ({
+export const chooseScheduledCallCategory = (categoryId, context) => ({
+  type: constants.SCHEDULED_CALL_CATEGORY_CHOOSE,
+  payload: {
+    categoryId,
+    context,
+  },
+});
+
+
+export const chooseScheduledCallActivity = (activityId, context) => ({
   type: constants.SCHEDULED_CALL_ACTIVITY_CHOOSE,
-  payload: { activityId },
+  payload: {
+    activityId,
+    context,
+  },
 });
 
 

@@ -11,16 +11,18 @@ describe('src/reducers/navigation/schedule', () => {
     it('should push on the scheduled call route', () => {
       expect(reduce(createStack(), schedule.addScheduledCall('2016-09-16T11:27:14Z')))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
-          initialDate: '2016-09-16T11:27:14Z',
+          date: '2016-09-16T11:27:14Z',
         })));
     });
   });
 
   describe('SCHEDULED_CALL_ADD_NEXT', () => {
     it('should push on the scheduled call route with the next call date', () => {
-      expect(reduce(createStack(), schedule.addNextScheduledCall('2016-09-16T11:27:14Z')))
+      const action = schedule.addNextScheduledCall('2016-09-16T11:27:14Z');
+
+      expect(reduce(createStack(), action))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULE_CALL, {
-          initialCallTime: moment('2016-09-23T11:30:00Z').toISOString(),
+          callTime: moment('2016-09-23T11:30:00Z').toISOString(),
         })));
     });
   });
@@ -36,17 +38,24 @@ describe('src/reducers/navigation/schedule', () => {
 
   describe('SCHEDULED_CALL_ACTIVITY_CHANGE', () => {
     it('should push on the choose category route', () => {
-      expect(reduce(createStack(), schedule.changeScheduledCallActivity()))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULED_CALL_CATEGORY)));
+      expect(reduce(createStack(), schedule.changeScheduledCallActivity({
+        foo: 21,
+      })))
+      .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULED_CALL_CATEGORY, {
+        context: { foo: 21 },
+      })));
     });
   });
 
   describe('SCHEDULED_CALL_CATEGORY_CHOOSE', () => {
     it('should push on the choose activity route', () => {
-      expect(reduce(createStack(), schedule.chooseScheduledCallCategory(23)))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULED_CALL_ACTIVITY, {
-          categoryId: 23,
-        })));
+      expect(reduce(createStack(), schedule.chooseScheduledCallCategory(23, {
+        foo: 21,
+      })))
+      .toEqual(push(createStack(), createRoute(routes.ROUTE_SCHEDULED_CALL_ACTIVITY, {
+        categoryId: 23,
+        context: { foo: 21 },
+      })));
     });
   });
 
@@ -58,7 +67,9 @@ describe('src/reducers/navigation/schedule', () => {
         createRoute(routes.ROUTE_SCHEDULED_CALL_ACTIVITY),
       ]);
 
-      const res = reduce(state, schedule.chooseScheduledCallActivity(23));
+      const res = reduce(state, schedule.chooseScheduledCallActivity(23, {
+        foo: 21,
+      }));
 
       expect(res).toEqual({
         index: 0,
@@ -75,11 +86,12 @@ describe('src/reducers/navigation/schedule', () => {
 
       const {
         routes: [{ context }],
-      } = reduce(state, schedule.chooseScheduledCallActivity(23));
+      } = reduce(state, schedule.chooseScheduledCallActivity(23, { foo: 21 }));
 
       expect(context).toEqual({
         scheduledCallId: 21,
         activityId: 23,
+        foo: 21,
       });
     });
   });

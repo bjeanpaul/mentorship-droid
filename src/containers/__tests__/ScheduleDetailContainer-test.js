@@ -15,7 +15,7 @@ import {
 
 describe('ScheduleDetailContainer', () => {
   describe('mapStateToProps', () => {
-    it('should provide the call time an id is given', () => {
+    it('should provide the call time if an id is given', () => {
       const state = fakeState();
 
       state.entities.scheduledCalls = {
@@ -116,15 +116,24 @@ describe('ScheduleDetailContainer', () => {
     it('should map the given date as the initial date', () => {
       const { initialDate } = mapStateToProps(fakeState(), {
         scheduledCallId: 23,
-        initialDate: '2016-09-22T14:31:23.431Z',
+        date: '2016-09-22T14:31:23.431Z',
       });
 
       expect(initialDate).toEqual('2016-09-22T14:31:23.431Z');
     });
 
+    it('should map the given time as the initial time', () => {
+      const { initialTime } = mapStateToProps(fakeState(), {
+        scheduledCallId: 23,
+        time: '2016-09-22T14:31:23.431Z',
+      });
+
+      expect(initialTime).toEqual('2016-09-22T14:31:23.431Z');
+    });
+
     it('should map the given call time as the initial call time', () => {
       const { initialCallTime } = mapStateToProps(fakeState(), {
-        initialCallTime: '2016-09-22T14:31:23.431Z',
+        callTime: '2016-09-22T14:31:23.431Z',
       });
 
       expect(initialCallTime).toEqual('2016-09-22T14:31:23.431Z');

@@ -1,3 +1,5 @@
+import { partialRight } from 'lodash';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import CategoryList from 'src/views/CategoryList';
 import { getCategories } from 'src/store/helpers';
@@ -10,10 +12,10 @@ export const mapStateToProps = state => ({
 });
 
 
-export const propToActions = {
-  onCategoryPress: chooseScheduledCallCategory,
+export const mapDispatchToProps = (dispatch, { context }) => bindActionCreators({
+  onCategoryPress: partialRight(chooseScheduledCallCategory, context),
   onBackPress: dismissScreen,
-};
+}, dispatch);
 
 
-export default connect(mapStateToProps, propToActions)(CategoryList);
+export default connect(mapStateToProps, mapDispatchToProps)(CategoryList);

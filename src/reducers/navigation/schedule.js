@@ -16,21 +16,22 @@ export default (state, action) => {
   switch (action.type) {
     case schedule.SCHEDULED_CALL_ADD: {
       const { payload: { date } } = action;
-      const route = createRoute(routes.ROUTE_SCHEDULE_CALL, { initialDate: date });
+      const route = createRoute(routes.ROUTE_SCHEDULE_CALL, { date });
       return push(state, route);
     }
 
     case schedule.SCHEDULED_CALL_ADD_NEXT: {
       const { payload: { date } } = action;
 
-      const initialCallTime = moment(date)
+      const callTime = moment(date)
         .add(1, 'week')
         .round(30, 'minutes')
         .toISOString();
 
       const route = createRoute(routes.ROUTE_SCHEDULE_CALL, {
-        initialCallTime,
+        callTime,
       });
+
       return push(state, route);
     }
 
@@ -41,21 +42,29 @@ export default (state, action) => {
     }
 
     case schedule.SCHEDULED_CALL_ACTIVITY_CHANGE: {
-      const route = createRoute(routes.ROUTE_SCHEDULED_CALL_CATEGORY);
+      const route = createRoute(routes.ROUTE_SCHEDULED_CALL_CATEGORY, action.payload);
       return push(state, route);
     }
 
     case schedule.SCHEDULED_CALL_CATEGORY_CHOOSE: {
-      const { payload: { categoryId } } = action;
-      return push(state, createRoute(routes.ROUTE_SCHEDULED_CALL_ACTIVITY, { categoryId }));
+      const route = createRoute(routes.ROUTE_SCHEDULED_CALL_ACTIVITY, action.payload);
+      return push(state, route);
     }
 
     case schedule.SCHEDULED_CALL_ACTIVITY_CHOOSE: {
-      const { payload: { activityId } } = action;
+      const {
+        payload: {
+          activityId,
+          context,
+        },
+      } = action;
 
       let newState = state;
       newState = pop(pop(newState));
-      newState = inject(newState, routes.ROUTE_SCHEDULE_CALL, { activityId });
+      newState = inject(newState, routes.ROUTE_SCHEDULE_CALL, {
+        ...context,
+        activityId,
+      });
 
       return newState;
     }

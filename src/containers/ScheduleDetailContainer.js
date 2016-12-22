@@ -27,14 +27,15 @@ const done = (scheduledCallId, activityId) => ({ callTime }) => {
 
 
 export const mapStateToProps = (state, {
-  scheduledCallId,
+  date,
+  time,
+  callTime,
   activityId,
-  initialDate,
-  initialCallTime,
+  scheduledCallId,
 }) => {
   const {
-    callTime,
-    activity: callActivityId,
+    callTime: scheduledCallTime,
+    activity: scheduledActivityId,
   } = scheduledCallId && getScheduledCall(state, scheduledCallId) || {};
 
   let activity;
@@ -45,8 +46,8 @@ export const mapStateToProps = (state, {
     activity = null;
   } else if (activityId) {
     activity = getActivity(state, activityId);
-  } else if (callActivityId) {
-    activity = getActivity(state, callActivityId);
+  } else if (scheduledActivityId) {
+    activity = getActivity(state, scheduledActivityId);
   }
 
   const calls = reject(getScheduledCalls(state), { id: scheduledCallId });
@@ -54,8 +55,9 @@ export const mapStateToProps = (state, {
   return {
     activity,
     callTimes: map(calls, 'callTime'),
-    initialDate,
-    initialCallTime: callTime || initialCallTime,
+    initialDate: date,
+    initialTime: time,
+    initialCallTime: callTime || scheduledCallTime,
   };
 };
 
