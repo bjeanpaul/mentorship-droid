@@ -6,6 +6,7 @@ import { imageUrl } from 'src/api';
 import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
 
 import {
+  addOrdinals,
   parseResults,
   parseCategories,
   parseActivities,
@@ -16,6 +17,29 @@ import {
 
 
 describe('api/parse', () => {
+  describe('addOrdinals', () => {
+    it('should add indices to each datum as an ordinal property', () => {
+      const res = addOrdinals([{
+        v: 2,
+      }, {
+        v: 3,
+      }, {
+        v: 4,
+      }]);
+
+      expect(res).toEqual([{
+        v: 2,
+        ordinal: 0,
+      }, {
+        v: 3,
+        ordinal: 1,
+      }, {
+        v: 4,
+        ordinal: 2,
+      }]);
+    });
+  });
+
   describe('parseResults', () => {
     it('should parse results data', () => {
       expect(parseResults({ results: [{ foo: 23 }] })).toEqual([{ foo: 23 }]);
