@@ -3,7 +3,7 @@ import { normalize, arrayOf } from 'normalizr';
 import { Profile, ScheduledCall, Activity, Category, Event, CallNote } from 'src/api';
 import { getContext } from 'src/store/helpers';
 import { staticAction } from 'src/actionHelpers';
-import { createStack } from 'src/navigationHelpers';
+import { createStack, createRoute } from 'src/navigationHelpers';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/events';
 import * as api from 'src/api';
 
@@ -145,6 +145,9 @@ export const fakeState = (overrides = {}) => merge({}, {
     callNotes: {
       100: fakeCallNote({ id: 100 }),
     },
+  },
+  navigation: {
+    top: createStack([createRoute('A')]),
   },
 }, overrides);
 
