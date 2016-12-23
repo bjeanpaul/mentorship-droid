@@ -1,3 +1,5 @@
+import { includes } from 'lodash';
+
 import { staticAction } from 'src/actionHelpers';
 import * as constants from 'src/constants/navigation';
 import BackAndroid from 'BackAndroid';
@@ -25,6 +27,8 @@ export const dismissNative = () => (dispatch, ctx, getState) => {
       return BackAndroid.exitApp();
 
     default:
-      return dispatch(dismissScreen());
+      return !includes(routes.BUSY_ROUTES, activeRoute.key)
+        ? dispatch(dismissScreen())
+        : null;
   }
 };
