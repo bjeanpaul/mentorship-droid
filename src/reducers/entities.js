@@ -28,7 +28,6 @@ const entitiesReducer = (state, action) => {
 
     case CALL_NOTE_CREATE_SUCCESS: {
       const { payload } = action;
-      console.log(payload);
 
       const {
         callActivity,
