@@ -1,14 +1,9 @@
-import { includes, omit, merge } from 'lodash';
+import { includes, omit, fromPairs } from 'lodash';
+import { merge } from 'lodash/fp';
 import { AUTH_LOGOUT } from 'src/constants/auth';
 import { MESSAGE_SEND_SUCCESS } from 'src/constants/messages';
 import { ACTIONS_WITH_ENTITIES } from 'src/constants/entities';
-
-
-const mergeActionEntities = (state, action) => {
-  return includes(ACTIONS_WITH_ENTITIES, action.type)
-    ? merge({}, state, action.payload.entities)
-    : state;
-};
+import { CALL_NOTE_CREATE_SUCCESS } from 'src/constants/callNotes';
 
 
 export const createInitialState = () => ({
@@ -22,24 +17,47 @@ export const createInitialState = () => ({
 });
 
 
-const entitiesReducer = (state = createInitialState(), action) => {
+const mergeActionEntities = (state, action) => {
+  return includes(ACTIONS_WITH_ENTITIES, action.type)
+    ? merge(state, action.payload.entities)
+    : state;
+};
+
+
+const entitiesReducer = (state, action) => {
   switch (action.type) {
     case AUTH_LOGOUT:
       return createInitialState();
 
     case MESSAGE_SEND_SUCCESS: {
-      const nextState = {
+      return {
         ...state,
         pendingMessages: omit(state.pendingMessages, action.payload.pendingId),
       };
+    }
 
-      return mergeActionEntities(nextState, action);
+    case CALL_NOTE_CREATE_SUCCESS: {
+      const { payload } = action;
+
+      const {
+        callActivity,
+        objectiveAchieved,
+      } = payload.entities.callNotes[payload.result];
+
+      return callActivity && objectiveAchieved
+        ? merge(state, {
+          activities: fromPairs([
+            [callActivity, { isComplete: true }],
+          ]),
+        })
+        : state;
     }
 
     default:
-      return mergeActionEntities(state, action);
+      return state;
   }
 };
 
 
-export default entitiesReducer;
+export default (state = createInitialState(), action) =>
+  mergeActionEntities(entitiesReducer(state, action), action);
