@@ -64,4 +64,33 @@ describe('Stepper', () => {
 
     expect(el.state().index).toEqual(1);
   });
+
+  describe('onNativeBackPress', () => {
+    it('should go back', () => {
+      const el = shallow(createComponent());
+
+      el.setState({ index: 1 })
+        .instance()
+        .onNativeBackPress();
+
+      expect(el.state().index).toEqual(0);
+    });
+
+    it('should return false when at step 0', () => {
+      let res;
+      const el = shallow(createComponent());
+
+      res = el.setState({ index: 1 })
+        .instance()
+        .onNativeBackPress();
+
+      expect(res).toBe(true);
+
+      res = el.setState({ index: 0 })
+        .instance()
+        .onNativeBackPress();
+
+      expect(res).toBe(false);
+    });
+  });
 });

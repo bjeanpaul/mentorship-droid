@@ -4,20 +4,20 @@ import { AUTH_LOGOUT } from 'src/constants/auth';
 import { ACTIONS_WITH_ENTITIES } from 'src/constants/entities';
 
 
-const entitiesReducer = (state = {
+export const createInitialState = () => ({
   activities: {},
   categories: {},
   scheduledCalls: {},
   callNotes: {},
   calls: {},
-}, action) => {
+});
+
+
+const entitiesReducer = (state = createInitialState(), action) => {
   switch (action.type) {
     case AUTH_LOGOUT:
-      return {
-        ...state,
-        activities: {},
-        categories: {},
-      };
+      return createInitialState();
+
     default:
       return includes(ACTIONS_WITH_ENTITIES, action.type)
         ? merge(state, action.payload.entities)

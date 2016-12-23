@@ -6,6 +6,13 @@ import imageUrl from './imageUrl';
 import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
 
 
+export const addOrdinals = list => list
+  .map((d, ordinal) => ({
+    ordinal,
+    ...d,
+  }));
+
+
 export const parseResults = ({ results }) => results;
 
 
@@ -13,7 +20,6 @@ export const parseCategory = ({
   image,
   ...d,
 }) => ({
-  ordinal: null,
   ...d,
   image: imageUrl(image),
 });
@@ -24,7 +30,6 @@ export const parseActivity = ({
   poster,
   icon,
 }) => ({
-  ordinal: null,
   ...d,
   poster: imageUrl(poster),
   icon: imageUrl(icon),
@@ -57,6 +62,22 @@ export const parseProfile = ({ profilePic, ...data }) => ({
 export const parseActivities = activities => activities.map(parseActivity);
 
 
-export const parseProfileListResults = flow(parseResults, map(parseProfile));
-export const parseCategoryListResults = flow(parseResults, parseCategories);
-export const parseActivityListResults = flow(parseResults, parseActivities);
+export const parseProfileListResults = flow([
+  parseResults,
+  map(parseProfile),
+  addOrdinals,
+]);
+
+
+export const parseCategoryListResults = flow([
+  parseResults,
+  parseCategories,
+  addOrdinals,
+]);
+
+
+export const parseActivityListResults = flow([
+  parseResults,
+  parseActivities,
+  addOrdinals,
+]);

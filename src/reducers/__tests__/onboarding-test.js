@@ -1,5 +1,7 @@
-import reduce from 'src/reducers/onboarding';
+import reduce, { createInitialState } from 'src/reducers/onboarding';
 import * as constants from 'src/constants/onboarding';
+import { fakeState } from 'app/scripts/helpers';
+import { logout } from 'src/actions/auth';
 
 
 describe('reducer/onboarding', () => {
@@ -30,6 +32,13 @@ describe('reducer/onboarding', () => {
       );
       expect(jobTitle).toEqual('Uncle');
       expect(jobSector).toEqual('Family');
+    });
+  });
+
+  describe('AUTH_LOGOUT', () => {
+    it('should reset to initial state', () => {
+      expect(reduce(fakeState().onboarding, logout()))
+        .toEqual(jasmine.objectContaining(createInitialState()));
     });
   });
 });
