@@ -55,5 +55,24 @@ describe('actions/navigation', () => {
 
       expect(dispatch.mock.calls).toEqual([[actions.dismissScreen()]]);
     });
+
+    it('should not dispatch or exit the app if on a busy route', () => {
+      const state = fakeState();
+      const ctx = fakeContext();
+      const dispatch = jest.fn();
+
+      for (const route of routes.BUSY_ROUTES) {
+        actions.dismissNative()(dispatch, ctx, constant({
+          ...state,
+          navigation: {
+            ...state.navigation,
+            top: createStack([createRoute(route)]),
+          },
+        }));
+      }
+
+      expect(dispatch.mock.calls).toEqual([]);
+      expect(BackAndroid.exitApp.mock.calls).toEqual([]);
+    });
   });
 });
