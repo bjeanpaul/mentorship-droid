@@ -148,7 +148,7 @@ ShallowWrapper {
   "renderer": ReactShallowRenderer {
     "_instance": ShallowComponentWrapper {
       "_calledComponentWillUnmount": false,
-      "_compositeType": 2,
+      "_compositeType": 0,
       "_context": Object {},
       "_currentElement": <LoadingOverlay
         onDismissPress={[Function]}
@@ -156,9 +156,10 @@ ShallowWrapper {
       "_debugID": 1,
       "_hostContainerInfo": null,
       "_hostParent": null,
-      "_instance": StatelessComponent {
+      "_instance": LoadingOverlay {
         "_reactInternalInstance": [Circular],
         "context": Object {},
+        "onNativeBackPress": [Function],
         "props": Object {
           "onDismissPress": [Function],
           "title": "Waiting for the 7:18…",

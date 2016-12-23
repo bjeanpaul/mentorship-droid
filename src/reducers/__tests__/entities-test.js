@@ -7,13 +7,12 @@ jest.mock('src/constants/entities', () => ({
 }));
 
 import { createPendingMessage } from 'src/api';
-import reduce from 'src/reducers/entities';
+import reduce, { createInitialState } from 'src/reducers/entities';
 import { logout } from 'src/actions/auth';
 import { MESSAGE_SEND_SUCCESS } from 'src/constants/messages';
+import { fakeState } from 'app/scripts/helpers';
 
 import {
-  fakeCategory,
-  fakeActivity,
   fakeMessage,
   fakeMessageData,
 } from 'app/scripts/helpers';
@@ -57,26 +56,9 @@ describe('reducers/entities', () => {
   });
 
   describe('AUTH_LOGOUT', () => {
-    it('should clear category entitites', () => {
-      const state = {
-        categories: {
-          23: fakeCategory(),
-        },
-      };
-
-      expect(reduce(state, logout()))
-        .toEqual(jasmine.objectContaining({ categories: {} }));
-    });
-
-    it('should clear activity entitites', () => {
-      const state = {
-        activities: {
-          23: fakeActivity(),
-        },
-      };
-
-      expect(reduce(state, logout()))
-        .toEqual(jasmine.objectContaining({ activities: {} }));
+    it('should reset to initial state', () => {
+      expect(reduce(fakeState().entities, logout()))
+        .toEqual(jasmine.objectContaining(createInitialState()));
     });
   });
 

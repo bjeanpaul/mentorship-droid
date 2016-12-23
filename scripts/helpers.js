@@ -2,7 +2,7 @@ import { merge, uniqueId, noop, isFunction } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
 import { getContext } from 'src/store/helpers';
 import { staticAction } from 'src/actionHelpers';
-import { createStack } from 'src/navigationHelpers';
+import { createStack, createRoute } from 'src/navigationHelpers';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/events';
 import * as api from 'src/api';
 import {
@@ -141,7 +141,6 @@ export const fakeState = (overrides = {}) => merge({}, {
     auth: fakeAuth(),
   },
   callNote: {
-    navigation: createStack(),
     callNote: {},
   },
   entities: {
@@ -172,6 +171,9 @@ export const fakeState = (overrides = {}) => merge({}, {
     pendingMessage: {
       4: fakePendingMessage({ id: 4 }),
     },
+  },
+  navigation: {
+    top: createStack([createRoute('A')]),
   },
 }, overrides);
 
