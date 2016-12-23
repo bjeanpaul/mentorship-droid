@@ -1,6 +1,7 @@
 import moment from 'moment';
 import { values, isUndefined, sortBy, filter, first } from 'lodash';
 
+import { getCurrent } from 'src/navigationHelpers';
 import { TYPES_TO_COLLECTIONS } from 'src/constants/events';
 
 
@@ -117,3 +118,6 @@ export const getMessages = ({ entities }) => []
 
 
 export const getMessage = ({ entities }, id) => entities.messages[id];
+
+
+export const getActiveTopRoute = store => getCurrent(store.navigation.top);

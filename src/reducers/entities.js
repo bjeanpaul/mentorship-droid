@@ -11,7 +11,7 @@ const mergeActionEntities = (state, action) => {
 };
 
 
-const entitiesReducer = (state = {
+export const createInitialState = () => ({
   activities: {},
   categories: {},
   scheduledCalls: {},
@@ -19,14 +19,13 @@ const entitiesReducer = (state = {
   calls: {},
   messages: {},
   pendingMessages: {},
-}, action) => {
+});
+
+
+const entitiesReducer = (state = createInitialState(), action) => {
   switch (action.type) {
     case AUTH_LOGOUT:
-      return {
-        ...state,
-        activities: {},
-        categories: {},
-      };
+      return createInitialState();
 
     case MESSAGE_SEND_SUCCESS: {
       const nextState = {

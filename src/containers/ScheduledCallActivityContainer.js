@@ -1,3 +1,5 @@
+import { partialRight } from 'lodash';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import ActivityList from 'src/views/ActivityList';
 import { getCategory, getCategoryActivities } from 'src/store/helpers';
@@ -11,10 +13,10 @@ export const mapStateToProps = (state, { categoryId }) => ({
 });
 
 
-export const propToActions = {
-  onActivityPress: chooseScheduledCallActivity,
+export const mapDispatchToProps = (dispatch, { context }) => bindActionCreators({
+  onActivityPress: partialRight(chooseScheduledCallActivity, context),
   onBackPress: dismissScreen,
-};
+}, dispatch);
 
 
-export default connect(mapStateToProps, propToActions)(ActivityList);
+export default connect(mapStateToProps, mapDispatchToProps)(ActivityList);

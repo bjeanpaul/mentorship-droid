@@ -1,5 +1,6 @@
-import reduce from 'src/reducers/auth';
-import { fakeAuth, fakeProfileListData } from 'app/scripts/helpers';
+import reduce, { createInitialState } from 'src/reducers/auth';
+import { fakeState, fakeAuth, fakeProfileListData } from 'app/scripts/helpers';
+import { logout } from 'src/actions/auth';
 import * as statuses from 'src/statuses/auth';
 import * as actions from 'src/actions/auth';
 
@@ -70,6 +71,13 @@ describe('auth/reducer', () => {
       }));
 
       expect(auth).toEqual(fakeAuth());
+    });
+  });
+
+  describe('AUTH_LOGOUT', () => {
+    it('should reset to initial state', () => {
+      expect(reduce(fakeState().auth, logout()))
+        .toEqual(jasmine.objectContaining(createInitialState()));
     });
   });
 });

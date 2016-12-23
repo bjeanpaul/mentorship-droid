@@ -36,47 +36,40 @@ exports[`ThreeWords should render 1`] = `
     }>
     Describe yourself in three words
   </Text>
-  <View>
-    <View
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomWidth": 1,
+          "borderColor": "#dfe5e6",
+          "marginBottom": 27,
+          "marginLeft": 24,
+          "marginRight": 24,
+        },
+        false,
+      ]
+    }>
+    <TextInput
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="Type your answer here"
+      placeholderTextColor="#c0cbcc"
       style={
         Array [
           Object {
-            "borderBottomWidth": 1,
-            "borderColor": "#dfe5e6",
-            "marginBottom": 27,
-            "marginLeft": 24,
-            "marginRight": 24,
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 18,
+            "lineHeight": 28,
+            "marginBottom": 8,
+            "padding": 0,
           },
-          false,
+          undefined,
         ]
-      }>
-      <TextInput
-        multiline={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onFocus={[Function]}
-        placeholder="Type your answer here"
-        placeholderTextColor="#c0cbcc"
-        style={
-          Array [
-            Object {
-              "color": "#003035",
-              "fontFamily": "Brandon Text",
-              "fontSize": 18,
-              "lineHeight": 28,
-              "marginBottom": 8,
-              "padding": 0,
-            },
-            Object {
-              "height": 32,
-            },
-          ]
-        }
-        uid="input"
-        underlineColorAndroid="transparent"
-        value="typing thinking understanding" />
-    </View>
+      }
+      underlineColorAndroid="transparent"
+      value="typing thinking understanding" />
   </View>
   <Text
     accessible={true}

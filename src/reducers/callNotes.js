@@ -1,9 +1,18 @@
 import { combineReducers } from 'redux';
 
 import * as constants from 'src/constants/callNotes';
+import { AUTH_LOGOUT } from 'src/constants/auth';
+
+
+export const createInitialState = () => ({
+});
+
 
 const callNote = (state = {}, action) => {
   switch (action.type) {
+    case AUTH_LOGOUT:
+      return createInitialState();
+
     // TODO remove once we no longer have a duplicates issue
     case constants.CALL_NOTE_CREATE_REQUEST:
       return {
@@ -22,15 +31,16 @@ const callNote = (state = {}, action) => {
   }
 };
 
+
 const reduce = combineReducers({
   callNote,
 });
 
 
-export default (state = {}, action) => {
+export default (state = createInitialState(), action) => {
   switch (action.type) {
     case constants.CALL_NOTE_CREATE_OPEN:
-      return reduce({}, action);
+      return reduce(createInitialState(), action);
 
     default:
       return reduce(state, action);

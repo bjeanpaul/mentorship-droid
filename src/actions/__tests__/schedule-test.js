@@ -12,6 +12,7 @@ import {
   addScheduledCall,
   addNextScheduledCall,
   openScheduledCall,
+  changeScheduledCallActivity,
   chooseScheduledCallCategory,
   chooseScheduledCallActivity,
   startScheduledCall,
@@ -82,22 +83,40 @@ describe('schedule/actions', () => {
     });
   });
 
+  describe('changeScheduledCallActivity', () => {
+    it('should create an action for choosing a activity', () => {
+      expect(changeScheduledCallActivity({ foo: 23 }))
+        .toEqual({
+          type: constants.SCHEDULED_CALL_ACTIVITY_CHANGE,
+          payload: {
+            context: { foo: 23 },
+          },
+        });
+    });
+  });
+
   describe('chooseScheduledCallCategory', () => {
     it('should create an action for choosing a category', () => {
-      expect(chooseScheduledCallCategory(23))
+      expect(chooseScheduledCallCategory(23, { foo: 21 }))
         .toEqual({
           type: constants.SCHEDULED_CALL_CATEGORY_CHOOSE,
-          payload: { categoryId: 23 },
+          payload: {
+            categoryId: 23,
+            context: { foo: 21 },
+          },
         });
     });
   });
 
   describe('chooseScheduledCallActivity', () => {
-    it('should create an action for choosing a activity', () => {
-      expect(chooseScheduledCallActivity(23))
+    it('should create an action for choosing an activity', () => {
+      expect(chooseScheduledCallActivity(23, { foo: 21 }))
         .toEqual({
           type: constants.SCHEDULED_CALL_ACTIVITY_CHOOSE,
-          payload: { activityId: 23 },
+          payload: {
+            activityId: 23,
+            context: { foo: 21 },
+          },
         });
     });
   });

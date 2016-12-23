@@ -1,5 +1,10 @@
-import { mapStateToProps } from 'src/containers/ScheduledCallActivityContainer';
 import { fakeState, fakeActivity, fakeCategory } from 'app/scripts/helpers';
+import { chooseScheduledCallActivity } from 'src/actions/schedule';
+import { dismissScreen } from 'src/actions/navigation';
+import {
+  mapStateToProps,
+  mapDispatchToProps,
+} from 'src/containers/ScheduledCallActivityContainer';
 
 
 describe('ScheduledCallActivityContainer', () => {
@@ -46,6 +51,29 @@ describe('ScheduledCallActivityContainer', () => {
       })).toEqual(jasmine.objectContaining({
         activities: [activity1, activity2],
       }));
+    });
+  });
+
+  describe('mapDispatchToProps', () => {
+    it('should map onBackPress to dismissScreen', () => {
+      const dispatch = jest.fn();
+      const { onBackPress } = mapDispatchToProps(dispatch, {});
+      onBackPress();
+      expect(dispatch.mock.calls).toEqual([[dismissScreen()]]);
+    });
+
+    it('should map onActivityPress to chooseScheduledCallActivity', () => {
+      const dispatch = jest.fn();
+
+      const { onActivityPress } = mapDispatchToProps(dispatch, {
+        context: { foo: 21 },
+      });
+
+      onActivityPress(23);
+
+      expect(dispatch.mock.calls).toEqual([[
+        chooseScheduledCallActivity(23, { foo: 21 }),
+      ]]);
     });
   });
 });
