@@ -1,5 +1,7 @@
-import reduce from 'src/reducers/callNotes';
+import reduce, { createInitialState } from 'src/reducers/callNotes';
 import { changeCallNote, openCreateCallNote } from 'src/actions/callNotes';
+import { fakeState } from 'app/scripts/helpers';
+import { logout } from 'src/actions/auth';
 
 
 describe('reducers/callNotes', () => {
@@ -29,6 +31,13 @@ describe('reducers/callNotes', () => {
       });
 
       expect(isSending).toBe(true);
+    });
+  });
+
+  describe('AUTH_LOGOUT', () => {
+    it('should reset to initial state', () => {
+      expect(reduce(fakeState().callNote, logout()))
+        .toEqual(jasmine.objectContaining(createInitialState()));
     });
   });
 });
