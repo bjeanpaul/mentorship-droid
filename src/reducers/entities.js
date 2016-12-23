@@ -13,17 +13,23 @@ export const createInitialState = () => ({
 });
 
 
-const entitiesReducer = (state = createInitialState(), action) => {
+const mergeActionEntities = (state, action) => {
+  return includes(ACTIONS_WITH_ENTITIES, action.type)
+    ? merge({}, state, action.payload.entities)
+    : state;
+};
+
+
+const entitiesReducer = (state, action) => {
   switch (action.type) {
     case AUTH_LOGOUT:
       return createInitialState();
 
     default:
-      return includes(ACTIONS_WITH_ENTITIES, action.type)
-        ? merge(state, action.payload.entities)
-        : state;
+      return state;
   }
 };
 
 
-export default entitiesReducer;
+export default (state = createInitialState(), action) =>
+  mergeActionEntities(entitiesReducer(state, action), action);
