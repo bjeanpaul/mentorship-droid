@@ -12,6 +12,9 @@ const styles = StyleSheet.create({
     width: DEVICE_WIDTH * 2,
     flexDirection: 'row',
   },
+  slideContainer: {
+    width: DEVICE_WIDTH,
+  },
   routeContainer: {
     flex: 1,
   },
@@ -78,6 +81,10 @@ class NavigationStack extends Component {
   componentWillReceiveProps({ navigationState: next }) {
     if (this.state.curr === next) return;
     const direction = getDirection(this.state.curr, next);
+
+    // active route hasn't changed, we dont need to do any transition
+    if (!direction) return;
+
     const [from, to] = getPositionInputs(direction);
     if (direction) this.state.position.setValue(from);
 
@@ -100,21 +107,23 @@ class NavigationStack extends Component {
     const obj = this.props.routes[key];
 
     if (React.isValidElement(obj)) {
-      return <View key={key} style={styles.routeContainer}>{obj}</View>;
+      return <View style={styles.routeContainer}>{obj}</View>;
     } else {
       const Route = obj || NotFound;
-      return <Route key={key} {...context} />;
+      return <Route {...context} />;
     }
   }
 
-  renderAnimation(left, right) {
-    const views = [left, right]
-      .map(getCurrent)
-      .map(this.renderRoute, this);
-
+  renderSlides(leftStack, rightStack = null) {
     return (
       <Animated.View style={[styles.container, animatedStyles(this.state.position)]}>
-        {views}
+        <View key="left" style={styles.slideContainer}>
+          {this.renderRoute(getCurrent(leftStack))}
+        </View>
+
+        <View key="right" style={styles.slideContainer}>
+          {rightStack && this.renderRoute(getCurrent(rightStack))}
+        </View>
       </Animated.View>
     );
   }
@@ -127,13 +136,13 @@ class NavigationStack extends Component {
 
     switch (getDirection(prev, curr)) {
       case DIRECTION_LEFTWARD:
-        return this.renderAnimation(curr, prev);
+        return this.renderSlides(curr, prev);
 
       case DIRECTION_RIGHTWARD:
-        return this.renderAnimation(prev, curr);
+        return this.renderSlides(prev, curr);
 
       default:
-        return this.renderRoute(getCurrent(this.state.curr));
+        return this.renderSlides(curr);
     }
   }
 }
