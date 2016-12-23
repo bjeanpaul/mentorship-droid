@@ -14,6 +14,7 @@ const Activity = props => {
       title: categoryTitle,
     },
     activity: {
+      id,
       title,
       poster,
       objective,
@@ -27,7 +28,7 @@ const Activity = props => {
   } = props;
 
   return (
-    <BaseView>
+    <BaseView key={`activity:${id}`}>
       <ScrollView>
         <Header style={{ backgroundColor: color }}>
           <Text
