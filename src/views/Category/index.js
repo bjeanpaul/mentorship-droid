@@ -41,7 +41,7 @@ class Category extends Component {
     } = category;
 
     return (
-      <BaseView>
+      <BaseView key={`category:${this.props.category.id}`}>
         <Header style={[styles.header, { backgroundColor: color }]}>
           <Text style={[Text.types.title, Text.themes.light]}>{title}</Text>
 
