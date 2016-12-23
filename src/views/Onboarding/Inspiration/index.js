@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-import { Text, MultiLineTextInput, FormStep } from 'src/components';
+import { Text, TextInput, FormStep } from 'src/components';
 import styles from 'src/views/Onboarding/styles';
 
 
@@ -14,7 +14,7 @@ const Inspiration = ({
     paginationDisabled={inspiration.length === 0}
     {...props}
   >
-    <MultiLineTextInput
+    <TextInput
       value={inspiration}
       placeholder="Type your answer here"
       onChangeText={text => onChange({ inspiration: text })}
