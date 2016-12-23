@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-import { Text, MultiLineTextInput, FormStep } from 'src/components';
+import { Text, TextInput, FormStep } from 'src/components';
 import styles from 'src/views/Onboarding/styles';
 
 
@@ -14,7 +14,7 @@ const ThreeWords = ({
     paginationDisabled={tags.split(' ').length < 3}
     {...props}
   >
-    <MultiLineTextInput
+    <TextInput
       value={tags}
       placeholder="Type your answer here"
       onChangeText={text => onChange({ tags: text })}
