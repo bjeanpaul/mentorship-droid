@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
 import { TouchableNativeFeedback, View } from 'react-native';
+import dismissKeyboard from 'dismissKeyboard';
+
 import Text from 'src/components/Text';
 import styles, { themes, layouts } from './styles';
 
@@ -8,8 +10,13 @@ const Button = ({
   layout = layouts.default,
   children,
   disabled,
-  onPress,
+  onPress: onPressProp,
 }) => {
+  const onPress = () => {
+    dismissKeyboard();
+    onPressProp();
+  };
+
   let button = (
     <View
       style={[
