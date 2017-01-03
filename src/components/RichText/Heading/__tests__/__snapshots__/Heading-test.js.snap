@@ -1,0 +1,13 @@
+exports[`RichText/Heading should render 1`] = `
+<View>
+  <View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={Object {}}>
+      Foo
+    </Text>
+  </View>
+</View>
+`;
