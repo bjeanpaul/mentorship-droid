@@ -35,4 +35,11 @@ richText.list = (conf = {}) => value => ({
 });
 
 
+richText.numberedList = (conf = {}) => richText.list({
+  start: 1,
+  ordered: true,
+  ...conf,
+});
+
+
 export default richText;
