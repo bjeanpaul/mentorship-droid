@@ -1,3 +1,6 @@
+import { defaultBlockParse } from 'simple-markdown';
+
+
 const parseItem = ({ type, value }, types) => {
   if (!(type in types)) throw new Error(`Unrecognised rich text type '${type}'`);
   return types[type](value);
@@ -21,6 +24,9 @@ export class RichText {
 
 
 const richText = types => input => new RichText(input, parse(input, types));
+
+
+richText.markdown = content => defaultBlockParse(content);
 
 
 richText.text = content => ({
