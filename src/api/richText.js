@@ -1,5 +1,6 @@
 import { assign, range, fromPairs } from 'lodash';
 import { defaultBlockParse } from 'simple-markdown';
+import imageUrl from 'src/api/imageUrl';
 
 
 const parseItem = ({ type, value }, types) => {
@@ -55,6 +56,12 @@ richText.numberedList = items => ({
   ...richText.list(items),
   start: 1,
   ordered: true,
+});
+
+
+richText.image = url => ({
+  type: 'mentorshipImage',
+  url: imageUrl(url),
 });
 
 
