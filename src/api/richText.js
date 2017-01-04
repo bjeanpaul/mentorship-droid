@@ -8,8 +8,9 @@ const parseItem = ({ type, value }, types) => {
 };
 
 
-export const parse = (data, types) => data
-  .map(d => parseItem(d, types));
+export const parse = (data, types) => Array.isArray(data)
+  ? data.map(d => parseItem(d, types))
+  : [parseItem(data, types)];
 
 
 export class RichText {

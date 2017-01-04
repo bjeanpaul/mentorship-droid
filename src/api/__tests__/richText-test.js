@@ -9,34 +9,7 @@ describe('api/richText', () => {
     defaultBlockParse.mockClear();
   });
 
-  it('should serialize to its original form', () => {
-    const fn = richText({
-      list: richText.list,
-    });
-
-    const input = [{
-      type: 'list',
-      value: [
-        'foo',
-        'bar',
-      ],
-    }];
-
-    expect(fn(input).toJSON()).toEqual(input);
-  });
-
-  it('should throw error for unrecognised types', () => {
-    const fn = richText({
-      list: richText.list,
-    });
-
-    expect(() => fn([{
-      type: 'foo',
-      value: 'bar',
-    }])).toThrow("Unrecognised rich text type 'foo'");
-  });
-
-  it('should support text', () => {
+  it('should support an array of rich text data', () => {
     const fn = richText({
       text: richText.text,
     });
@@ -44,7 +17,68 @@ describe('api/richText', () => {
     expect(fn([{
       type: 'text',
       value: 'foo',
+    }, {
+      type: 'text',
+      value: 'bar',
     }]).tree).toEqual([{
+      type: 'text',
+      content: 'foo',
+    }, {
+      type: 'text',
+      content: 'bar',
+    }]);
+  });
+
+  it('should support a single rich text datum', () => {
+    const fn = richText({
+      text: richText.text,
+    });
+
+    expect(fn({
+      type: 'text',
+      value: 'foo',
+    }).tree).toEqual([{
+      type: 'text',
+      content: 'foo',
+    }]);
+  });
+
+  it('should serialize to its original form', () => {
+    const fn = richText({
+      list: richText.list,
+    });
+
+    const input = {
+      type: 'list',
+      value: [
+        'foo',
+        'bar',
+      ],
+    };
+
+    expect(fn(input).toJSON()).toEqual(input);
+  });
+
+  it('should throw an error for unrecognised types', () => {
+    const fn = richText({
+      list: richText.list,
+    });
+
+    expect(() => fn({
+      type: 'foo',
+      value: 'bar',
+    })).toThrow("Unrecognised rich text type 'foo'");
+  });
+
+  it('should support text', () => {
+    const fn = richText({
+      text: richText.text,
+    });
+
+    expect(fn({
+      type: 'text',
+      value: 'foo',
+    }).tree).toEqual([{
       type: 'text',
       content: 'foo',
     }]);
@@ -55,10 +89,10 @@ describe('api/richText', () => {
       heading: richText.heading(23),
     });
 
-    expect(fn([{
+    expect(fn({
       type: 'heading',
       value: 'foo',
-    }]).tree).toEqual([{
+    }).tree).toEqual([{
       type: 'heading',
       level: 23,
       content: [{
@@ -116,10 +150,10 @@ describe('api/richText', () => {
       text: richText.markdown,
     });
 
-    expect(fn([{
+    expect(fn({
       type: 'text',
       value: '*foo*',
-    }]).tree).toEqual([{
+    }).tree).toEqual([{
       type: 'fake-markdown',
       content: '*foo*',
     }]);
@@ -130,13 +164,13 @@ describe('api/richText', () => {
       list: richText.list,
     });
 
-    expect(fn([{
+    expect(fn({
       type: 'list',
       value: [
         'foo',
         'bar',
       ],
-    }]).tree).toEqual([{
+    }).tree).toEqual([{
       type: 'list',
       start: void 0,
       ordered: false,
@@ -155,13 +189,13 @@ describe('api/richText', () => {
       numberedList: richText.numberedList,
     });
 
-    expect(fn([{
+    expect(fn({
       type: 'numberedList',
       value: [
         'foo',
         'bar',
       ],
-    }]).tree).toEqual([{
+    }).tree).toEqual([{
       type: 'list',
       start: 1,
       ordered: true,
@@ -180,10 +214,10 @@ describe('api/richText', () => {
       image: richText.image,
     });
 
-    expect(fn([{
+    expect(fn({
       type: 'image',
       value: '/foo.png',
-    }]).tree).toEqual([{
+    }).tree).toEqual([{
       type: 'mentorshipImage',
       url: imageUrl('/foo.png'),
     }]);
