@@ -50,6 +50,62 @@ describe('api/richText', () => {
     }]);
   });
 
+  it('support arbitrary heading levels', () => {
+    const fn = richText({
+      heading: richText.heading(23),
+    });
+
+    expect(fn([{
+      type: 'heading',
+      value: 'foo',
+    }]).tree).toEqual([{
+      type: 'heading',
+      level: 23,
+      content: [{
+        type: 'text',
+        content: 'foo',
+      }],
+    }]);
+  });
+
+  it('support heading levels 1-6', () => {
+    const fn = richText({
+      h1: richText.heading1,
+      h2: richText.heading2,
+      h3: richText.heading3,
+      h4: richText.heading4,
+      h5: richText.heading5,
+      h6: richText.heading6,
+    });
+
+    expect(fn([{
+      type: 'h1',
+      value: 'foo',
+    }, {
+      type: 'h2',
+      value: 'bar',
+    }, {
+      type: 'h3',
+      value: 'baz',
+    }, {
+      type: 'h4',
+      value: 'quux',
+    }, {
+      type: 'h5',
+      value: 'corge',
+    }, {
+      type: 'h6',
+      value: 'grault',
+    }]).tree).toEqual([
+      richText.heading(1)('foo'),
+      richText.heading(2)('bar'),
+      richText.heading(3)('baz'),
+      richText.heading(4)('quux'),
+      richText.heading(5)('corge'),
+      richText.heading(6)('grault'),
+    ]);
+  });
+
   it('should support markdown', () => {
     defaultBlockParse.mockImplementation(content => ({
       type: 'fake-markdown',

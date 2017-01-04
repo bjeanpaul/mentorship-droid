@@ -1,3 +1,4 @@
+import { assign, range, fromPairs } from 'lodash';
 import { defaultBlockParse } from 'simple-markdown';
 
 
@@ -35,6 +36,13 @@ richText.text = content => ({
 });
 
 
+richText.heading = level => content => ({
+  type: 'heading',
+  level,
+  content: [richText.text(content)],
+});
+
+
 richText.list = items => ({
   ordered: false,
   start: void 0,
@@ -48,6 +56,12 @@ richText.numberedList = items => ({
   start: 1,
   ordered: true,
 });
+
+
+assign(richText, fromPairs(range(1, 7).map(n => [
+  `heading${n}`,
+  richText.heading(n),
+])));
 
 
 export default richText;
