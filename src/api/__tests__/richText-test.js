@@ -70,6 +70,20 @@ describe('api/richText', () => {
     })).toThrow("Unrecognised rich text type 'foo'");
   });
 
+  it('should parse string inputs as markdown', () => {
+    defaultBlockParse.mockImplementation(content => ({
+      type: 'fake-markdown',
+      content,
+    }));
+
+    const fn = richText();
+
+    expect(fn('*foo*').tree).toEqual([{
+      type: 'fake-markdown',
+      content: '*foo*',
+    }]);
+  });
+
   it('should support text', () => {
     const fn = richText({
       text: richText.text,
