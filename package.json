@@ -29,7 +29,8 @@
     "react-native-image-picker": "^0.24.1",
     "react-redux": "^4.4.5",
     "redux": "^3.4.0",
-    "redux-thunk": "^2.0.1"
+    "redux-thunk": "^2.0.1",
+    "simple-markdown": "^0.2.1"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
