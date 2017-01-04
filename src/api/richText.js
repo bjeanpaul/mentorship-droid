@@ -1,4 +1,3 @@
-import { assign, range, fromPairs } from 'lodash';
 import { defaultBlockParse } from 'simple-markdown';
 import imageUrl from 'src/api/imageUrl';
 
@@ -44,6 +43,14 @@ richText.heading = level => content => ({
 });
 
 
+richText.heading1 = richText.heading(1);
+richText.heading2 = richText.heading(2);
+richText.heading3 = richText.heading(3);
+richText.heading4 = richText.heading(4);
+richText.heading5 = richText.heading(5);
+richText.heading6 = richText.heading(6);
+
+
 richText.list = items => ({
   ordered: false,
   start: void 0,
@@ -63,12 +70,6 @@ richText.image = url => ({
   type: 'mentorshipImage',
   url: imageUrl(url),
 });
-
-
-assign(richText, fromPairs(range(1, 7).map(n => [
-  `heading${n}`,
-  richText.heading(n),
-])));
 
 
 export default richText;
