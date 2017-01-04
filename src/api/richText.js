@@ -23,22 +23,24 @@ export class RichText {
 const richText = types => input => new RichText(input, parse(input, types));
 
 
-richText.list = (conf = {}) => value => ({
-  ordered: false,
-  start: void 0,
-  type: 'list',
-  items: value.map(content => ({
-    type: 'text',
-    content,
-  })),
-  ...conf,
+richText.text = content => ({
+  type: 'text',
+  content,
 });
 
 
-richText.numberedList = (conf = {}) => richText.list({
+richText.list = items => ({
+  ordered: false,
+  start: void 0,
+  type: 'list',
+  items: items.map(richText.text),
+});
+
+
+richText.numberedList = items => ({
+  ...richText.list(items),
   start: 1,
   ordered: true,
-  ...conf,
 });
 
 

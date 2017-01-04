@@ -4,7 +4,7 @@ import { richText } from 'src/api';
 describe('api/richText', () => {
   it('should serialize to its original form', () => {
     const fn = richText({
-      list: richText.list(),
+      list: richText.list,
     });
 
     const input = [{
@@ -20,7 +20,7 @@ describe('api/richText', () => {
 
   it('should throw error for unrecognised types', () => {
     const fn = richText({
-      list: richText.list(),
+      list: richText.list,
     });
 
     expect(() => fn([{
@@ -29,9 +29,23 @@ describe('api/richText', () => {
     }])).toThrow("Unrecognised rich text type 'foo'");
   });
 
+  it('should support text', () => {
+    const fn = richText({
+      text: richText.text,
+    });
+
+    expect(fn([{
+      type: 'text',
+      value: 'foo',
+    }]).tree).toEqual([{
+      type: 'text',
+      content: 'foo',
+    }]);
+  });
+
   it('should support unordered lists', () => {
     const fn = richText({
-      list: richText.list(),
+      list: richText.list,
     });
 
     expect(fn([{
@@ -44,6 +58,31 @@ describe('api/richText', () => {
       type: 'list',
       start: void 0,
       ordered: false,
+      items: [{
+        type: 'text',
+        content: 'foo',
+      }, {
+        type: 'text',
+        content: 'bar',
+      }],
+    }]);
+  });
+
+  it('should support numbered lists', () => {
+    const fn = richText({
+      numberedList: richText.numberedList,
+    });
+
+    expect(fn([{
+      type: 'numberedList',
+      value: [
+        'foo',
+        'bar',
+      ],
+    }]).tree).toEqual([{
+      type: 'list',
+      start: 1,
+      ordered: true,
       items: [{
         type: 'text',
         content: 'foo',
