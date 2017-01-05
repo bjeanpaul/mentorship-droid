@@ -8,13 +8,15 @@ export default StyleSheet.create({
   default: {
     color: colors.TEXT_DEFAULT,
     fontFamily: FONT.REGULAR,
-    fontSize: 13,
-    textAlign: 'center',
   },
 });
 
 
 export const types = StyleSheet.create({
+  normal: {
+    fontSize: 13,
+    textAlign: 'center',
+  },
   title: {
     fontSize: 20,
     fontFamily: FONT.MEDIUM,
