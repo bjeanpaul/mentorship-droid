@@ -48,18 +48,34 @@ const image = url => ({
 });
 
 
-const parseItem = (d, types) => {
+const parseItem = (d, mappings) => {
   if (isString(d)) return markdown(d);
 
   const { value, type } = d;
-  if (!(type in types)) throw new Error(`Unrecognised rich text type '${type}'`);
-  return types[type](value);
+  if (!(type in mappings)) throw new Error(`Unrecognised rich text type '${type}'`);
+  return mappings[type](value);
 };
 
 
-export const parse = (data, types) => isArray(data)
-  ? data.map(d => parseItem(d, types))
-  : [parseItem(data, types)];
+const types = {
+  markdown,
+  text,
+  heading,
+  list,
+  numberedList,
+  image,
+  heading1,
+  heading2,
+  heading3,
+  heading4,
+  heading5,
+  heading6,
+};
+
+
+export const parse = (data, mappings) => isArray(data)
+  ? data.map(d => parseItem(d, mappings))
+  : [parseItem(data, mappings)];
 
 
 export class RichText {
@@ -74,23 +90,9 @@ export class RichText {
 }
 
 
-const richText = (types = {}) => input => new RichText(input, parse(input, types));
+const richText = (mappings = types) =>
+  input => new RichText(input, parse(input, mappings));
 
 
-assign(richText, {
-  markdown,
-  text,
-  heading,
-  list,
-  numberedList,
-  image,
-  heading1,
-  heading2,
-  heading3,
-  heading4,
-  heading5,
-  heading6,
-});
-
-
+assign(richText, types);
 export default richText;
