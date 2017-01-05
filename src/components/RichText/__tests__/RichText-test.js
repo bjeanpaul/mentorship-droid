@@ -40,4 +40,14 @@ describe('RichText', () => {
       `)}</RichText>
     )).toMatchSnapshot();
   });
+
+  it('should support style overrides', () => {
+    expect(render(
+      <RichText
+        styles={{
+          text: { fontSize: 100 },
+        }}
+      >{richText()(`style overrides`)}</RichText>
+    )).toMatchSnapshot();
+  });
 });

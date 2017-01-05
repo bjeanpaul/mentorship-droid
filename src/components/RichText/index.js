@@ -11,6 +11,10 @@ import baseStyles from './styles';
 
 
 class RichText extends Component {
+  static defaultProps = {
+    styles: {},
+  };
+
   shouldComponentUpdate() {
   }
 
@@ -18,6 +22,7 @@ class RichText extends Component {
     return {
       ...mdStyles,
       ...baseStyles,
+      ...this.props.styles,
     };
   }
 
@@ -49,6 +54,7 @@ class RichText extends Component {
 
 RichText.propTypes = {
   children: PropTypes.instanceOf(RichTextObject).isRequired,
+  styles: PropTypes.any,
 };
 
 
