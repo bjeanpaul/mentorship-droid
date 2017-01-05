@@ -1,4 +1,5 @@
-import { merge } from 'lodash';
+import { merge } from 'lodash/fp';
+import { some, eq } from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { View } from 'react-native';
 import SimpleMarkdown from 'simple-markdown';
@@ -16,7 +17,8 @@ class RichText extends Component {
     rules: () => ({}),
   };
 
-  shouldComponentUpdate() {
+  shouldComponentUpdate(nextProps) {
+    return some(this.props, (v, k) => !eq(nextProps[k], v));
   }
 
   getStyles() {

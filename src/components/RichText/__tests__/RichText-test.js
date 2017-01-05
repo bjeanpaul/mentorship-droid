@@ -67,4 +67,29 @@ describe('RichText', () => {
       <RichText rules={rules}>{richText()('rule overrides')}</RichText>
     )).toMatchSnapshot();
   });
+
+  describe('shouldComponentUpdate', () => {
+    it('should compare props via a SameValueZero comparison', () => {
+      const content1 = richText()('foo');
+      const content2 = richText()('foo');
+
+      const props = {
+        styles: {},
+        rules: () => ({}),
+        children: content1,
+      };
+
+      const el = shallow(<RichText {...props} />);
+
+      expect(el.instance().shouldComponentUpdate({
+        ...props,
+        children: content1,
+      })).toEqual(false);
+
+      expect(el.instance().shouldComponentUpdate({
+        ...props,
+        children: content2,
+      })).toEqual(true);
+    });
+  });
 });
