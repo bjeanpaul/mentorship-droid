@@ -20,10 +20,16 @@ exports[`RichText should render typography 1`] = `
     style={
       Array [
         Object {
-          "fontWeight": "200",
+          "fontFamily": "Brandon Text_bold",
+          "fontWeight": "bold",
         },
         Object {
-          "fontSize": 32,
+          "fontFamily": "Brandon Text_medium",
+          "fontSize": 24,
+          "fontWeight": "400",
+          "marginBottom": 25,
+          "marginTop": 11,
+          "textAlign": "center",
         },
       ]
     }>
@@ -49,10 +55,13 @@ exports[`RichText should render typography 1`] = `
     style={
       Array [
         Object {
-          "fontWeight": "200",
+          "fontFamily": "Brandon Text_bold",
+          "fontWeight": "bold",
         },
         Object {
-          "fontSize": 24,
+          "fontSize": 18,
+          "marginBottom": 13,
+          "marginTop": 27,
         },
       ]
     }>
@@ -78,10 +87,13 @@ exports[`RichText should render typography 1`] = `
     style={
       Array [
         Object {
-          "fontWeight": "200",
+          "fontFamily": "Brandon Text_bold",
+          "fontWeight": "bold",
         },
         Object {
-          "fontSize": 18,
+          "fontSize": 16,
+          "marginBottom": 10,
+          "marginTop": 20,
         },
       ]
     }>
@@ -107,10 +119,13 @@ exports[`RichText should render typography 1`] = `
     style={
       Array [
         Object {
-          "fontWeight": "200",
+          "fontFamily": "Brandon Text_bold",
+          "fontWeight": "bold",
         },
         Object {
-          "fontSize": 16,
+          "fontSize": 15,
+          "marginBottom": 7,
+          "marginTop": 14,
         },
       ]
     }>
@@ -136,10 +151,13 @@ exports[`RichText should render typography 1`] = `
     style={
       Array [
         Object {
-          "fontWeight": "200",
+          "fontFamily": "Brandon Text_bold",
+          "fontWeight": "bold",
         },
         Object {
-          "fontSize": 13,
+          "fontSize": 14,
+          "marginBottom": 4,
+          "marginTop": 8,
         },
       ]
     }>
@@ -165,10 +183,13 @@ exports[`RichText should render typography 1`] = `
     style={
       Array [
         Object {
-          "fontWeight": "200",
+          "fontFamily": "Brandon Text_bold",
+          "fontWeight": "bold",
         },
         Object {
-          "fontSize": 11,
+          "fontSize": 13,
+          "marginBottom": 3,
+          "marginTop": 6,
         },
       ]
     }>
