@@ -1,6 +1,10 @@
 exports[`RichText should render typography 1`] = `
 <View
-  style={Object {}}>
+  style={
+    Object {
+      "paddingHorizontal": 16,
+    }
+  }>
   <Text
     accessible={true}
     allowFontScaling={true}
@@ -30,7 +34,8 @@ exports[`RichText should render typography 1`] = `
       style={
         Array [
           Object {
-            "color": "#222222",
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
           },
         ]
       }>
@@ -58,7 +63,8 @@ exports[`RichText should render typography 1`] = `
       style={
         Array [
           Object {
-            "color": "#222222",
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
           },
         ]
       }>
@@ -86,7 +92,8 @@ exports[`RichText should render typography 1`] = `
       style={
         Array [
           Object {
-            "color": "#222222",
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
           },
         ]
       }>
@@ -114,7 +121,8 @@ exports[`RichText should render typography 1`] = `
       style={
         Array [
           Object {
-            "color": "#222222",
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
           },
         ]
       }>
@@ -142,7 +150,8 @@ exports[`RichText should render typography 1`] = `
       style={
         Array [
           Object {
-            "color": "#222222",
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
           },
         ]
       }>
@@ -170,7 +179,8 @@ exports[`RichText should render typography 1`] = `
       style={
         Array [
           Object {
-            "color": "#222222",
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
           },
         ]
       }>
@@ -192,7 +202,11 @@ exports[`RichText should render typography 1`] = `
 
 exports[`RichText should support rule overrides 1`] = `
 <View
-  style={Object {}}>
+  style={
+    Object {
+      "paddingHorizontal": 16,
+    }
+  }>
   <Text
     accessible={true}
     allowFontScaling={true}
@@ -216,12 +230,15 @@ exports[`RichText should support rule overrides 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
           Array [
             Object {
-              "color": "#222222",
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
             },
             Object {
               "color": "#cc3333",
@@ -237,7 +254,11 @@ exports[`RichText should support rule overrides 1`] = `
 
 exports[`RichText should support style overrides 1`] = `
 <View
-  style={Object {}}>
+  style={
+    Object {
+      "paddingHorizontal": 16,
+    }
+  }>
   <Text
     accessible={true}
     allowFontScaling={true}
