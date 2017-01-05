@@ -19,9 +19,9 @@ export default {
     backgroundColor: colors.BG_DARK,
   },
   text: Text.styles.default,
-  paragraph: {
+  paragraph: [Text.types.paragraph, {
     fontSize: FONT_SIZE_NORMAL,
-  },
+  }],
   u: {
   },
   listItemText: {

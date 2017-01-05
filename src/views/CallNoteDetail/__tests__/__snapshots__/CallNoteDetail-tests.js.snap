@@ -150,8 +150,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
               Array [
                 Object {
                   "fontSize": 18,
-                  "paddingBottom": 12,
-                  "paddingTop": 18,
+                  "marginBottom": 20,
                   "textAlign": "left",
                 },
                 Object {
@@ -224,8 +223,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
             },
             Object {
               "fontSize": 18,
-              "paddingBottom": 12,
-              "paddingTop": 18,
+              "marginBottom": 20,
               "textAlign": "left",
             },
           ]
@@ -406,8 +404,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
             Array [
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
               Object {
@@ -561,8 +558,7 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
             },
             Object {
               "fontSize": 18,
-              "paddingBottom": 12,
-              "paddingTop": 18,
+              "marginBottom": 20,
               "textAlign": "left",
             },
           ]
@@ -686,8 +682,7 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
             Array [
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
               Object {
@@ -853,8 +848,7 @@ exports[`CallNoteDetail should render 1`] = `
               Array [
                 Object {
                   "fontSize": 18,
-                  "paddingBottom": 12,
-                  "paddingTop": 18,
+                  "marginBottom": 20,
                   "textAlign": "left",
                 },
                 Object {
@@ -927,8 +921,7 @@ exports[`CallNoteDetail should render 1`] = `
             },
             Object {
               "fontSize": 18,
-              "paddingBottom": 12,
-              "paddingTop": 18,
+              "marginBottom": 20,
               "textAlign": "left",
             },
           ]
@@ -1109,8 +1102,7 @@ exports[`CallNoteDetail should render 1`] = `
             Array [
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
               Object {

@@ -212,9 +212,16 @@ exports[`RichText should support rule overrides 1`] = `
     allowFontScaling={true}
     ellipsizeMode="tail"
     style={
-      Object {
-        "fontSize": 18,
-      }
+      Array [
+        Object {
+          "fontSize": 18,
+          "marginBottom": 20,
+          "textAlign": "left",
+        },
+        Object {
+          "fontSize": 18,
+        },
+      ]
     }>
     <Text
       accessible={true}
@@ -259,9 +266,16 @@ exports[`RichText should support style overrides 1`] = `
     allowFontScaling={true}
     ellipsizeMode="tail"
     style={
-      Object {
-        "fontSize": 18,
-      }
+      Array [
+        Object {
+          "fontSize": 18,
+          "marginBottom": 20,
+          "textAlign": "left",
+        },
+        Object {
+          "fontSize": 18,
+        },
+      ]
     }>
     <Text
       accessible={true}

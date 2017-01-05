@@ -271,8 +271,7 @@ exports[`Activity should display the poster if one is given 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -361,8 +360,7 @@ exports[`Activity should display the poster if one is given 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -451,8 +449,7 @@ exports[`Activity should display the poster if one is given 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -541,8 +538,7 @@ exports[`Activity should display the poster if one is given 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -631,8 +627,7 @@ exports[`Activity should display the poster if one is given 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -721,8 +716,7 @@ exports[`Activity should display the poster if one is given 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -1080,8 +1074,7 @@ exports[`Activity should display the relevant context for the latest call note 1
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -1170,8 +1163,7 @@ exports[`Activity should display the relevant context for the latest call note 1
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -1260,8 +1252,7 @@ exports[`Activity should display the relevant context for the latest call note 1
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -1350,8 +1341,7 @@ exports[`Activity should display the relevant context for the latest call note 1
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -1440,8 +1430,7 @@ exports[`Activity should display the relevant context for the latest call note 1
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -1530,8 +1519,7 @@ exports[`Activity should display the relevant context for the latest call note 1
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -1890,8 +1878,7 @@ exports[`Activity should display the relevant context for the next scheduled cal
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -1980,8 +1967,7 @@ exports[`Activity should display the relevant context for the next scheduled cal
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -2070,8 +2056,7 @@ exports[`Activity should display the relevant context for the next scheduled cal
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -2160,8 +2145,7 @@ exports[`Activity should display the relevant context for the next scheduled cal
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -2250,8 +2234,7 @@ exports[`Activity should display the relevant context for the next scheduled cal
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -2340,8 +2323,7 @@ exports[`Activity should display the relevant context for the next scheduled cal
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -2699,8 +2681,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -2789,8 +2770,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -2879,8 +2859,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -2969,8 +2948,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -3059,8 +3037,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -3149,8 +3126,7 @@ exports[`Activity should not try display a poster if none is given 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -3507,8 +3483,7 @@ exports[`Activity should render 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -3597,8 +3572,7 @@ exports[`Activity should render 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -3687,8 +3661,7 @@ exports[`Activity should render 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -3777,8 +3750,7 @@ exports[`Activity should render 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -3867,8 +3839,7 @@ exports[`Activity should render 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
@@ -3957,8 +3928,7 @@ exports[`Activity should render 1`] = `
               },
               Object {
                 "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
+                "marginBottom": 20,
                 "textAlign": "left",
               },
             ]
