@@ -213,12 +213,7 @@ exports[`RichText should support rule overrides 1`] = `
     ellipsizeMode="tail"
     style={
       Object {
-        "alignItems": "flex-start",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "justifyContent": "flex-start",
-        "marginBottom": 10,
-        "marginTop": 10,
+        "fontSize": 18,
       }
     }>
     <Text
@@ -265,12 +260,7 @@ exports[`RichText should support style overrides 1`] = `
     ellipsizeMode="tail"
     style={
       Object {
-        "alignItems": "flex-start",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "justifyContent": "flex-start",
-        "marginBottom": 10,
-        "marginTop": 10,
+        "fontSize": 18,
       }
     }>
     <Text
