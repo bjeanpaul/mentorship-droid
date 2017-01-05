@@ -32,6 +32,8 @@ exports[`ActivityList should render 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },

@@ -20,6 +20,8 @@ exports[`FirstEvent should render the props 1`] = `
         Object {
           "color": "#003035",
           "fontFamily": "Brandon Text",
+        },
+        Object {
           "fontSize": 13,
           "textAlign": "center",
         },
@@ -45,6 +47,8 @@ exports[`FirstEvent should render the props 1`] = `
         Object {
           "color": "#003035",
           "fontFamily": "Brandon Text",
+        },
+        Object {
           "fontSize": 13,
           "textAlign": "center",
         },

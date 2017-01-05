@@ -8,6 +8,8 @@ exports[`LoginStatusMessage should draw error statuses 1`] = `
       Object {
         "color": "#003035",
         "fontFamily": "Brandon Text",
+      },
+      Object {
         "fontSize": 13,
         "textAlign": "center",
       },
@@ -34,6 +36,8 @@ exports[`LoginStatusMessage should draw not found statuses 1`] = `
       Object {
         "color": "#003035",
         "fontFamily": "Brandon Text",
+      },
+      Object {
         "fontSize": 13,
         "textAlign": "center",
       },

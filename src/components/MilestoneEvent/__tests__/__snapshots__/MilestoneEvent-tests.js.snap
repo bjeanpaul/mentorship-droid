@@ -25,6 +25,8 @@ exports[`MilestoneEvent should not render the category image if it does not exis
         Object {
           "color": "#003035",
           "fontFamily": "Brandon Text",
+        },
+        Object {
           "fontSize": 13,
           "textAlign": "center",
         },
@@ -45,6 +47,8 @@ exports[`MilestoneEvent should not render the category image if it does not exis
         Object {
           "color": "#003035",
           "fontFamily": "Brandon Text",
+        },
+        Object {
           "fontSize": 13,
           "textAlign": "center",
         },
@@ -110,6 +114,8 @@ exports[`MilestoneEvent should render the props 1`] = `
         Object {
           "color": "#003035",
           "fontFamily": "Brandon Text",
+        },
+        Object {
           "fontSize": 13,
           "textAlign": "center",
         },
@@ -130,6 +136,8 @@ exports[`MilestoneEvent should render the props 1`] = `
         Object {
           "color": "#003035",
           "fontFamily": "Brandon Text",
+        },
+        Object {
           "fontSize": 13,
           "textAlign": "center",
         },

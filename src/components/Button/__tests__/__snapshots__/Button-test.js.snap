@@ -32,6 +32,8 @@ exports[`Button should be disabled 1`] = `
         Object {
           "color": "#003035",
           "fontFamily": "Brandon Text",
+        },
+        Object {
           "fontSize": 13,
           "textAlign": "center",
         },
