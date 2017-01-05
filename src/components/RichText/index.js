@@ -1,4 +1,4 @@
-import { merge } from 'lodash/fp';
+import { mergeAll } from 'lodash/fp';
 import { some, eq } from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { View } from 'react-native';
@@ -30,12 +30,12 @@ class RichText extends Component {
   }
 
   getRules(styles) {
-    return merge(
+    return mergeAll([
       SimpleMarkdown.defaultRules,
       mdRules(styles),
       baseRules(styles),
       this.props.rules(styles),
-    );
+    ]);
   }
 
   getRenderFn(styles) {

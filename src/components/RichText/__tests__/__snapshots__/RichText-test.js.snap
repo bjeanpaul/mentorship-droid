@@ -214,26 +214,22 @@ exports[`RichText should support rule overrides 1`] = `
       style={
         Array [
           Object {
-            "color": "#222222",
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center",
           },
-          undefined,
+          Array [
+            Object {
+              "color": "#222222",
+            },
+            Object {
+              "color": "#cc3333",
+            },
+          ],
         ]
       }>
-      rule 
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#222222",
-          },
-          undefined,
-        ]
-      }>
-      overrides
+      rule overrides
     </Text>
   </Text>
 </View>
