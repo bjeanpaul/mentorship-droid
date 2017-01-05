@@ -1,5 +1,5 @@
 import React from 'react';
-import { RichText } from 'src/components';
+import { Text, RichText } from 'src/components';
 import { richText } from 'src/api';
 
 
@@ -23,6 +23,7 @@ describe('RichText', () => {
         ###### h6
 
         text
+
         [link](http://www.google.com)
 
         *italics*
@@ -42,12 +43,28 @@ describe('RichText', () => {
   });
 
   it('should support style overrides', () => {
+    const styles = {
+      text: { fontSize: 100 },
+    };
+
     expect(render(
-      <RichText
-        styles={{
-          text: { fontSize: 100 },
-        }}
-      >{richText()(`style overrides`)}</RichText>
+      <RichText styles={styles}>{richText()('style overrides')}</RichText>
+    )).toMatchSnapshot();
+  });
+
+  it('should support rule overrides', () => {
+    const rules = styles => ({
+      text: {
+        react: (node, _, state) => (
+          <Text key={state.key} style={[styles.text, { color: '#cc3333' }]}>
+            {node.content}
+          </Text>
+        ),
+      },
+    });
+
+    expect(render(
+      <RichText rules={rules}>{richText()('rule overrides')}</RichText>
     )).toMatchSnapshot();
   });
 });

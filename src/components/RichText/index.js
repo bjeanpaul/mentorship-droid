@@ -13,6 +13,7 @@ import baseStyles from './styles';
 class RichText extends Component {
   static defaultProps = {
     styles: {},
+    rules: () => ({}),
   };
 
   shouldComponentUpdate() {
@@ -30,7 +31,9 @@ class RichText extends Component {
     return merge(
       SimpleMarkdown.defaultRules,
       mdRules(styles),
-      baseRules(styles));
+      baseRules(styles),
+      this.props.rules(styles),
+    );
   }
 
   getRenderFn(styles) {
@@ -55,6 +58,7 @@ class RichText extends Component {
 RichText.propTypes = {
   children: PropTypes.instanceOf(RichTextObject).isRequired,
   styles: PropTypes.any,
+  rules: PropTypes.func,
 };
 
 

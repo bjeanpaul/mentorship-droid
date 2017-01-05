@@ -189,3 +189,97 @@ exports[`RichText should render typography 1`] = `
     } />
 </View>
 `;
+
+exports[`RichText should support rule overrides 1`] = `
+<View
+  style={Object {}}>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "flex-start",
+        "marginBottom": 10,
+        "marginTop": 10,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Array [
+            Object {
+              "color": "#222222",
+            },
+            Object {
+              "color": "#cc3333",
+            },
+          ],
+        ]
+      }>
+      rule overrides
+    </Text>
+  </Text>
+</View>
+`;
+
+exports[`RichText should support style overrides 1`] = `
+<View
+  style={Object {}}>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "flex-start",
+        "marginBottom": 10,
+        "marginTop": 10,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "fontSize": 100,
+          },
+          undefined,
+        ]
+      }>
+      style 
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "fontSize": 100,
+          },
+          undefined,
+        ]
+      }>
+      overrides
+    </Text>
+  </Text>
+</View>
+`;
