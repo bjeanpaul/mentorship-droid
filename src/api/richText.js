@@ -90,8 +90,8 @@ export class RichText {
 }
 
 
-const richText = (mappings = types) =>
-  input => new RichText(input, parse(input, mappings));
+const richText = (mappings = types) => input =>
+  new RichText(input, parse(input, mappings));
 
 
 assign(richText, types);
