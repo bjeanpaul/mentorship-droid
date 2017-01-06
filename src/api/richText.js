@@ -42,10 +42,10 @@ const numberedList = items => ({
 });
 
 
-const image = url => ({
+const image = url => ([{
   type: 'mentorshipImage',
   url: imageUrl(url),
-});
+}]);
 
 
 const parseItem = (d, mappings) => {
