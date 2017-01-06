@@ -195,6 +195,8 @@ exports[`Journey should render 1`] = `
                   Object {
                     "color": "#003035",
                     "fontFamily": "Brandon Text",
+                  },
+                  Object {
                     "fontSize": 13,
                     "textAlign": "center",
                   },
@@ -220,6 +222,8 @@ exports[`Journey should render 1`] = `
                   Object {
                     "color": "#003035",
                     "fontFamily": "Brandon Text",
+                  },
+                  Object {
                     "fontSize": 13,
                     "textAlign": "center",
                   },
@@ -466,6 +470,8 @@ exports[`Journey should render the current scheduled call to be started 1`] = `
                   Object {
                     "color": "#003035",
                     "fontFamily": "Brandon Text",
+                  },
+                  Object {
                     "fontSize": 13,
                     "textAlign": "center",
                   },
@@ -491,6 +497,8 @@ exports[`Journey should render the current scheduled call to be started 1`] = `
                   Object {
                     "color": "#003035",
                     "fontFamily": "Brandon Text",
+                  },
+                  Object {
                     "fontSize": 13,
                     "textAlign": "center",
                   },
@@ -737,6 +745,8 @@ exports[`Journey should render the next scheduled call 1`] = `
                   Object {
                     "color": "#003035",
                     "fontFamily": "Brandon Text",
+                  },
+                  Object {
                     "fontSize": 13,
                     "textAlign": "center",
                   },
@@ -762,6 +772,8 @@ exports[`Journey should render the next scheduled call 1`] = `
                   Object {
                     "color": "#003035",
                     "fontFamily": "Brandon Text",
+                  },
+                  Object {
                     "fontSize": 13,
                     "textAlign": "center",
                   },

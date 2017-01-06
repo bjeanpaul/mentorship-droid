@@ -49,6 +49,8 @@ exports[`Activation should draw 1`] = `
             Object {
               "color": "#003035",
               "fontFamily": "Brandon Text",
+            },
+            Object {
               "fontSize": 13,
               "textAlign": "center",
             },
@@ -114,6 +116,8 @@ exports[`Activation should draw 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -179,6 +183,8 @@ exports[`Activation should draw 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },

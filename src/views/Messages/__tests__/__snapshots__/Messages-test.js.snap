@@ -85,6 +85,8 @@ exports[`Messages should render 1`] = `
                       Object {
                         "color": "#003035",
                         "fontFamily": "Brandon Text",
+                      },
+                      Object {
                         "fontSize": 13,
                         "textAlign": "center",
                       },
@@ -176,6 +178,8 @@ exports[`Messages should render 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -201,6 +205,8 @@ exports[`Messages should render 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -295,6 +301,8 @@ exports[`Messages should render 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -318,6 +326,8 @@ exports[`Messages should render 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -411,6 +421,8 @@ exports[`Messages should render 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -436,6 +448,8 @@ exports[`Messages should render 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -632,6 +646,8 @@ exports[`Messages should render failed messages 1`] = `
                       Object {
                         "color": "#003035",
                         "fontFamily": "Brandon Text",
+                      },
+                      Object {
                         "fontSize": 13,
                         "textAlign": "center",
                       },
@@ -723,6 +739,8 @@ exports[`Messages should render failed messages 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -748,6 +766,8 @@ exports[`Messages should render failed messages 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -842,6 +862,8 @@ exports[`Messages should render failed messages 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -865,6 +887,8 @@ exports[`Messages should render failed messages 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -958,6 +982,8 @@ exports[`Messages should render failed messages 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -983,6 +1009,8 @@ exports[`Messages should render failed messages 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -1179,6 +1207,8 @@ exports[`Messages should render inbound messages 1`] = `
                       Object {
                         "color": "#003035",
                         "fontFamily": "Brandon Text",
+                      },
+                      Object {
                         "fontSize": 13,
                         "textAlign": "center",
                       },
@@ -1271,6 +1301,8 @@ exports[`Messages should render inbound messages 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -1294,6 +1326,8 @@ exports[`Messages should render inbound messages 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -1490,6 +1524,8 @@ exports[`Messages should render outbound messages 1`] = `
                       Object {
                         "color": "#003035",
                         "fontFamily": "Brandon Text",
+                      },
+                      Object {
                         "fontSize": 13,
                         "textAlign": "center",
                       },
@@ -1581,6 +1617,8 @@ exports[`Messages should render outbound messages 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -1606,6 +1644,8 @@ exports[`Messages should render outbound messages 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -1700,6 +1740,8 @@ exports[`Messages should render outbound messages 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -1723,6 +1765,8 @@ exports[`Messages should render outbound messages 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -1816,6 +1860,8 @@ exports[`Messages should render outbound messages 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -1841,6 +1887,8 @@ exports[`Messages should render outbound messages 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -2037,6 +2085,8 @@ exports[`Messages should render outbound system messages 1`] = `
                       Object {
                         "color": "#003035",
                         "fontFamily": "Brandon Text",
+                      },
+                      Object {
                         "fontSize": 13,
                         "textAlign": "center",
                       },
@@ -2128,6 +2178,8 @@ exports[`Messages should render outbound system messages 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -2153,6 +2205,8 @@ exports[`Messages should render outbound system messages 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -2247,6 +2301,8 @@ exports[`Messages should render outbound system messages 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -2270,6 +2326,8 @@ exports[`Messages should render outbound system messages 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -2363,6 +2421,8 @@ exports[`Messages should render outbound system messages 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -2388,6 +2448,8 @@ exports[`Messages should render outbound system messages 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -2584,6 +2646,8 @@ exports[`Messages should render sending messages 1`] = `
                       Object {
                         "color": "#003035",
                         "fontFamily": "Brandon Text",
+                      },
+                      Object {
                         "fontSize": 13,
                         "textAlign": "center",
                       },
@@ -2675,6 +2739,8 @@ exports[`Messages should render sending messages 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -2700,6 +2766,8 @@ exports[`Messages should render sending messages 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -2794,6 +2862,8 @@ exports[`Messages should render sending messages 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -2817,6 +2887,8 @@ exports[`Messages should render sending messages 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -2910,6 +2982,8 @@ exports[`Messages should render sending messages 1`] = `
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -2935,6 +3009,8 @@ exports[`Messages should render sending messages 1`] = `
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -3131,6 +3207,8 @@ exports[`Messages should render the send button as disabled when there is no con
                       Object {
                         "color": "#003035",
                         "fontFamily": "Brandon Text",
+                      },
+                      Object {
                         "fontSize": 13,
                         "textAlign": "center",
                       },
@@ -3222,6 +3300,8 @@ exports[`Messages should render the send button as disabled when there is no con
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -3247,6 +3327,8 @@ exports[`Messages should render the send button as disabled when there is no con
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -3341,6 +3423,8 @@ exports[`Messages should render the send button as disabled when there is no con
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -3364,6 +3448,8 @@ exports[`Messages should render the send button as disabled when there is no con
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -3457,6 +3543,8 @@ exports[`Messages should render the send button as disabled when there is no con
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -3482,6 +3570,8 @@ exports[`Messages should render the send button as disabled when there is no con
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -3678,6 +3768,8 @@ exports[`Messages should render the send button as disabled when there is no con
                       Object {
                         "color": "#003035",
                         "fontFamily": "Brandon Text",
+                      },
+                      Object {
                         "fontSize": 13,
                         "textAlign": "center",
                       },
@@ -3769,6 +3861,8 @@ exports[`Messages should render the send button as disabled when there is no con
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -3794,6 +3888,8 @@ exports[`Messages should render the send button as disabled when there is no con
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -3888,6 +3984,8 @@ exports[`Messages should render the send button as disabled when there is no con
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -3911,6 +4009,8 @@ exports[`Messages should render the send button as disabled when there is no con
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },
@@ -4004,6 +4104,8 @@ exports[`Messages should render the send button as disabled when there is no con
                               Object {
                                 "color": "#003035",
                                 "fontFamily": "Brandon Text",
+                              },
+                              Object {
                                 "fontSize": 13,
                                 "textAlign": "center",
                               },
@@ -4029,6 +4131,8 @@ exports[`Messages should render the send button as disabled when there is no con
                                 Object {
                                   "color": "#003035",
                                   "fontFamily": "Brandon Text",
+                                },
+                                Object {
                                   "fontSize": 13,
                                   "textAlign": "center",
                                 },

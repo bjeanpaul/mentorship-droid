@@ -45,6 +45,8 @@ exports[`Greeting should map props correctly 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -68,6 +70,8 @@ exports[`Greeting should map props correctly 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },

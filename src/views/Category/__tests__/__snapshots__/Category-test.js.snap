@@ -37,6 +37,8 @@ exports[`Category should render 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -228,6 +230,8 @@ exports[`Category should render the currently active tab 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -419,6 +423,8 @@ exports[`Category should render the currently active tab 2`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },

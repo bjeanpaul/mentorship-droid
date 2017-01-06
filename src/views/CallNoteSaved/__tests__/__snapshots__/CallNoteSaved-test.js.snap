@@ -80,6 +80,8 @@ exports[`CallNoteSaved should render 1`] = `
             Object {
               "color": "#003035",
               "fontFamily": "Brandon Text",
+            },
+            Object {
               "fontSize": 13,
               "textAlign": "center",
             },
@@ -101,6 +103,8 @@ exports[`CallNoteSaved should render 1`] = `
             Object {
               "color": "#003035",
               "fontFamily": "Brandon Text",
+            },
+            Object {
               "fontSize": 13,
               "textAlign": "center",
             },
@@ -240,6 +244,8 @@ exports[`CallNoteSaved should render with an activity 1`] = `
             Object {
               "color": "#003035",
               "fontFamily": "Brandon Text",
+            },
+            Object {
               "fontSize": 13,
               "textAlign": "center",
             },
@@ -261,6 +267,8 @@ exports[`CallNoteSaved should render with an activity 1`] = `
             Object {
               "color": "#003035",
               "fontFamily": "Brandon Text",
+            },
+            Object {
               "fontSize": 13,
               "textAlign": "center",
             },
@@ -287,6 +295,8 @@ exports[`CallNoteSaved should render with an activity 1`] = `
             Object {
               "color": "#003035",
               "fontFamily": "Brandon Text",
+            },
+            Object {
               "fontSize": 13,
               "textAlign": "center",
             },
