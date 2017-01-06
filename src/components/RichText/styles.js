@@ -2,6 +2,7 @@ import { omit } from 'lodash';
 import mdStyles from 'react-native-simple-markdown/styles';
 
 import { FONT, FONT_WEIGHT } from 'src/constants/styles';
+import { DEVICE_WIDTH } from 'src/constants/styles';
 import colors from 'src/constants/colors';
 import Text from 'src/components/Text';
 
@@ -12,6 +13,16 @@ const FONT_SIZE_NORMAL = 18;
 export default {
   container: {
     paddingHorizontal: 16,
+  },
+  mentorshipImageContainer: {
+    alignItems: 'center',
+    marginTop: 10,
+    marginBottom: 20,
+  },
+  mentorshipImage: {
+    width: 328,
+    height: 183,
+    maxWidth: DEVICE_WIDTH - 20,
   },
   del: {
   },
