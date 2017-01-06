@@ -37,7 +37,7 @@ const list = items => ({
   ordered: false,
   start: void 0,
   type: 'list',
-  items: items.map(text),
+  items: items.map(item => [text(item)]),
 });
 
 

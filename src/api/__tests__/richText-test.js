@@ -205,13 +205,13 @@ describe('api/richText', () => {
       type: 'list',
       start: void 0,
       ordered: false,
-      items: [{
+      items: [[{
         type: 'text',
         content: 'foo',
-      }, {
+      }], [{
         type: 'text',
         content: 'bar',
-      }],
+      }]],
     }]);
   });
 
@@ -230,13 +230,13 @@ describe('api/richText', () => {
       type: 'list',
       start: 1,
       ordered: true,
-      items: [{
+      items: [[{
         type: 'text',
         content: 'foo',
-      }, {
+      }], [{
         type: 'text',
         content: 'bar',
-      }],
+      }]],
     }]);
   });
 
