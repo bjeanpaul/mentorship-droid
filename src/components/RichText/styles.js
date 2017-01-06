@@ -15,6 +15,10 @@ export default {
   },
   del: {
   },
+  blockQuoteSection: {
+    ...mdStyles.blockQuoteSection,
+    marginBottom: 20,
+  },
   blockQuoteSectionBar: {
     ...mdStyles.blockQuoteSectionBar,
     backgroundColor: colors.BG_DARK,
@@ -25,8 +29,12 @@ export default {
   }],
   u: {
   },
+  list: {
+    marginBottom: 20,
+  },
   listItemText: {
     ...omit(mdStyles.listItemText, 'color'),
+    flex: 1,
     fontSize: FONT_SIZE_NORMAL,
   },
   listItemNumber: {
