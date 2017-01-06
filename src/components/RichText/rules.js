@@ -20,7 +20,7 @@ const rules = styles => ({
       return (
         <Text key={state.key} style={styles.u}>{children}</Text>
       );
-    }
+    },
   },
 });
 
