@@ -5,7 +5,6 @@ import { richText } from 'src/api';
 
 describe('RichText', () => {
   it('should render typography', () => {
-    // TODO get underlining working
     // TODO get inline code working
     // TODO get code blocks working
     expect(render(
@@ -29,7 +28,11 @@ text
 *italics*
 **bold**
 ***bold italics***
-~~strikeout~~
+~~strikethrough~~
+__underline__
+__*underline italics*__
+__**underline bold**__
+__***underline bold italics***__
 
 > block quote
 
@@ -39,17 +42,6 @@ text
 1. numbered
 2. list
       `)}</RichText>
-    )).toMatchSnapshot();
-  });
-
-  it('should render images', () => {
-    const content = richText()({
-      type: 'image',
-      value: '/foo.png',
-    });
-
-    expect(render(
-      <RichText>{content}</RichText>
     )).toMatchSnapshot();
   });
 

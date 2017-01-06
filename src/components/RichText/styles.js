@@ -24,6 +24,9 @@ export default {
     height: 183,
     maxWidth: DEVICE_WIDTH - 20,
   },
+  u: {
+    textDecorationLine: 'underline',
+  },
   del: {
     textDecorationLine: 'line-through',
   },
@@ -39,8 +42,6 @@ export default {
   paragraph: [Text.types.paragraph, {
     fontSize: FONT_SIZE_NORMAL,
   }],
-  u: {
-  },
   list: {
     marginBottom: 20,
   },
