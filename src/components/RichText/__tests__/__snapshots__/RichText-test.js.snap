@@ -303,6 +303,7 @@ exports[`RichText should render typography 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
+          "fontSize": 15,
           "fontStyle": "italic",
         }
       }>
@@ -381,6 +382,7 @@ exports[`RichText should render typography 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
+          "fontSize": 15,
           "fontStyle": "italic",
         }
       }>
@@ -531,6 +533,7 @@ exports[`RichText should render typography 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
+            "fontSize": 15,
             "fontStyle": "italic",
           }
         }>
@@ -657,6 +660,7 @@ exports[`RichText should render typography 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
+            "fontSize": 15,
             "fontStyle": "italic",
           }
         }>

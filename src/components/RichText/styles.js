@@ -30,6 +30,10 @@ export default {
   del: {
     textDecorationLine: 'line-through',
   },
+  em: {
+    ...mdStyles.em,
+    fontSize: FONT_SIZE_NORMAL - 3,
+  },
   blockQuoteSection: {
     ...mdStyles.blockQuoteSection,
     marginBottom: 20,
