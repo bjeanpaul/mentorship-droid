@@ -442,7 +442,11 @@ exports[`RichText should render typography 1`] = `
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
-      style={Object {}}>
+      style={
+        Object {
+          "textDecorationLine": "line-through",
+        }
+      }>
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -464,6 +468,7 @@ exports[`RichText should render typography 1`] = `
       Array [
         Object {
           "flexDirection": "row",
+          "marginBottom": 20,
         },
         undefined,
       ]
@@ -533,7 +538,11 @@ exports[`RichText should render typography 1`] = `
     </Text>
   </View>
   <View
-    style={Object {}}>
+    style={
+      Object {
+        "marginBottom": 20,
+      }
+    }>
     <View
       style={
         Object {
@@ -559,6 +568,7 @@ exports[`RichText should render typography 1`] = `
         style={
           Object {
             "alignItems": "flex-start",
+            "flex": 1,
             "flexDirection": "row",
             "flexWrap": "wrap",
             "fontSize": 18,
@@ -606,6 +616,7 @@ exports[`RichText should render typography 1`] = `
         style={
           Object {
             "alignItems": "flex-start",
+            "flex": 1,
             "flexDirection": "row",
             "flexWrap": "wrap",
             "fontSize": 18,
@@ -670,6 +681,7 @@ exports[`RichText should render typography 1`] = `
         style={
           Object {
             "alignItems": "flex-start",
+            "flex": 1,
             "flexDirection": "row",
             "flexWrap": "wrap",
             "fontSize": 18,
@@ -717,6 +729,7 @@ exports[`RichText should render typography 1`] = `
         style={
           Object {
             "alignItems": "flex-start",
+            "flex": 1,
             "flexDirection": "row",
             "flexWrap": "wrap",
             "fontSize": 18,
