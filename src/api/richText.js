@@ -12,6 +12,12 @@ const text = content => ({
 });
 
 
+const paragraph = content => ({
+  type: 'paragraph',
+  content: [text(content)],
+});
+
+
 const heading = level => content => ({
   type: 'heading',
   level,
@@ -58,8 +64,9 @@ const parseItem = (d, mappings) => {
 
 
 const types = {
-  markdown,
   text,
+  markdown,
+  paragraph,
   heading,
   list,
   numberedList,

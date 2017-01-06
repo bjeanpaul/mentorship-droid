@@ -98,6 +98,23 @@ describe('api/richText', () => {
     }]);
   });
 
+  it('should support paragraphs', () => {
+    const fn = richText({
+      paragraph: richText.paragraph,
+    });
+
+    expect(fn({
+      type: 'paragraph',
+      value: 'foo',
+    }).tree).toEqual([{
+      type: 'paragraph',
+      content: [{
+        type: 'text',
+        content: 'foo',
+      }],
+    }]);
+  });
+
   it('support arbitrary heading levels', () => {
     const fn = richText({
       heading: richText.heading(23),
