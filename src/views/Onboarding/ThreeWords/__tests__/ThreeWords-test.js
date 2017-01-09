@@ -29,6 +29,7 @@ describe('ThreeWords', () => {
 
     expect(paginationDisabled('')).toBe(true);
     expect(paginationDisabled('foo bar')).toBe(true);
+    expect(paginationDisabled('foo, bar')).toBe(true);
     expect(paginationDisabled('foo bar baz quux')).toBe(true);
     expect(paginationDisabled('foo bar baz')).toBe(false);
     expect(paginationDisabled('foo,bar  baz')).toBe(false);
