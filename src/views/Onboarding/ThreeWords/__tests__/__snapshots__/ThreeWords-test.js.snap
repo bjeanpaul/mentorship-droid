@@ -92,7 +92,7 @@ exports[`ThreeWords should render 1`] = `
         },
       ]
     }>
-    e.g. curious savvy blunt
+    Please separate words with spaces or commas, e.g. curious savvy blunt
   </Text>
   <View
     style={
