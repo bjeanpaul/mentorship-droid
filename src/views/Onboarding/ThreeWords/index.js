@@ -19,7 +19,7 @@ const ThreeWords = ({
       placeholder="Type your answer here"
       onChangeText={text => onChange({ tags: text })}
     />
-    <Text style={styles.hint}>e.g. curious, savvy, blunt, friendly</Text>
+    <Text style={styles.hint}>e.g. curious savvy blunt</Text>
   </FormStep>
 );
 
