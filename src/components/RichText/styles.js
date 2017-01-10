@@ -2,6 +2,7 @@ import { omit } from 'lodash';
 import mdStyles from 'react-native-simple-markdown/styles';
 
 import { FONT, FONT_WEIGHT } from 'src/constants/styles';
+import { DEVICE_WIDTH } from 'src/constants/styles';
 import colors from 'src/constants/colors';
 import Text from 'src/components/Text';
 
@@ -13,7 +14,25 @@ export default {
   container: {
     paddingHorizontal: 16,
   },
+  mentorshipImageContainer: {
+    alignItems: 'center',
+    marginTop: 10,
+    marginBottom: 20,
+  },
+  mentorshipImage: {
+    width: 328,
+    height: 183,
+    maxWidth: DEVICE_WIDTH - 20,
+  },
+  u: {
+    textDecorationLine: 'underline',
+  },
   del: {
+    textDecorationLine: 'line-through',
+  },
+  em: {
+    ...mdStyles.em,
+    fontSize: FONT_SIZE_NORMAL - 3,
   },
   blockQuoteSection: {
     ...mdStyles.blockQuoteSection,
@@ -27,8 +46,6 @@ export default {
   paragraph: [Text.types.paragraph, {
     fontSize: FONT_SIZE_NORMAL,
   }],
-  u: {
-  },
   list: {
     marginBottom: 20,
   },

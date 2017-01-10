@@ -5,39 +5,42 @@ import { richText } from 'src/api';
 
 describe('RichText', () => {
   it('should render typography', () => {
-    // TODO get underlining working
     // TODO get inline code working
     // TODO get code blocks working
     expect(render(
       <RichText>{richText()(`
-        # h1
+# h1
 
-        ## h2
+## h2
 
-        ### h3
+### h3
 
-        #### h4
+#### h4
 
-        ##### h5
+##### h5
 
-        ###### h6
+###### h6
 
-        text
+text
 
-        [link](http://www.google.com)
+[link](http://www.google.com)
 
-        *italics*
-        **bold**
-        ***bold italics***
-        ~~strikeout~~
+*italics*
+**bold**
+***bold italics***
+~~strikethrough~~
+__underline__
+__*underline italics*__
+__**underline bold**__
+__***underline bold italics***__
 
-        > block quote
+> block quote
 
-        - unordered
-        - list
+- unordered
+- list
 
-        1. numbered
-        2. list
+1. numbered
+2. list
       `)}</RichText>
     )).toMatchSnapshot();
   });
