@@ -740,14 +740,9 @@ exports[`RichText should render typography 1`] = `
       style={
         Object {
           "backgroundColor": "#dfe5e6",
-          "borderColor": "#dddddd",
-          "borderRadius": 3,
-          "borderWidth": 1,
           "color": "#80979a",
           "fontFamily": "Courier",
           "fontSize": 14,
-          "fontWeight": "bold",
-          "padding": 18,
         }
       }>
       inlineCode
@@ -825,6 +820,29 @@ exports[`RichText should render typography 1`] = `
           quote
         </Text>
       </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#dfe5e6",
+        "marginBottom": 20,
+        "padding": 6,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "backgroundColor": "#dfe5e6",
+          "color": "#80979a",
+          "fontFamily": "Courier",
+          "fontSize": 14,
+        }
+      }>
+      code block
     </Text>
   </View>
   <View

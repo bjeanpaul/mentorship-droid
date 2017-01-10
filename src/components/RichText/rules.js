@@ -1,6 +1,6 @@
 import { isString } from 'lodash';
 import React from 'react';
-import { Text } from 'react-native';
+import { View, Text } from 'react-native';
 
 import Image from './Image';
 
@@ -30,6 +30,15 @@ const rules = styles => ({
   },
   inlineCode: {
     react: reactTextType(styles.inlineCode),
+  },
+  codeBlock: {
+    react: (node, output, state) => (
+      <View key={state.key} style={styles.codeBlock}>
+        <Text style={styles.codeBlockContent}>
+          {node.content}
+        </Text>
+      </View>
+    ),
   },
 });
 

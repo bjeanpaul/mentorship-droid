@@ -36,6 +36,10 @@ __***underline bold italics***__
 
 > block quote
 
+\`\`\`
+code block
+\`\`\`
+
 - unordered
 - list
 
