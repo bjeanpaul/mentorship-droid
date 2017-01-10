@@ -45,6 +45,8 @@ exports[`CategoryAbout should render 1`] = `
             Object {
               "color": "#003035",
               "fontFamily": "Brandon Text",
+            },
+            Object {
               "fontSize": 13,
               "textAlign": "center",
             },
@@ -70,13 +72,14 @@ exports[`CategoryAbout should render 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
           Object {
             "fontSize": 18,
-            "paddingBottom": 12,
-            "paddingTop": 18,
+            "marginBottom": 20,
             "textAlign": "left",
           },
         ]
@@ -107,6 +110,8 @@ exports[`CategoryAbout should render 1`] = `
             Object {
               "color": "#003035",
               "fontFamily": "Brandon Text",
+            },
+            Object {
               "fontSize": 13,
               "textAlign": "center",
             },
@@ -132,13 +137,14 @@ exports[`CategoryAbout should render 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
           Object {
             "fontSize": 18,
-            "paddingBottom": 12,
-            "paddingTop": 18,
+            "marginBottom": 20,
             "textAlign": "left",
           },
         ]

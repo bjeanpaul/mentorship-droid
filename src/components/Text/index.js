@@ -14,7 +14,7 @@ const Text = ({
   return (
     <RNText
       {...props}
-      style={[styles.default, style]}
+      style={[styles.default, types.normal, style]}
     >
       {text}
     </RNText>
@@ -31,6 +31,7 @@ Text.propTypes = {
 Text.types = types;
 Text.themes = themes;
 Text.uppercase = uppercase;
+Text.styles = styles;
 
 
 export default Text;

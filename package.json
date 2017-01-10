@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "version": "1.0.0-dev10",
+  "version": "0.2.18",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -27,9 +27,11 @@
     "react-native-config": "^0.1.0",
     "react-native-fcm": "^2.0.3",
     "react-native-image-picker": "^0.24.1",
+    "react-native-simple-markdown": "^1.0.60-rc.3",
     "react-redux": "^4.4.5",
     "redux": "^3.4.0",
-    "redux-thunk": "^2.0.1"
+    "redux-thunk": "^2.0.1",
+    "simple-markdown": "^0.2.1"
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",

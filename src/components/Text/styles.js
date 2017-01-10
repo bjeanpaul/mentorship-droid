@@ -8,13 +8,15 @@ export default StyleSheet.create({
   default: {
     color: colors.TEXT_DEFAULT,
     fontFamily: FONT.REGULAR,
-    fontSize: 13,
-    textAlign: 'center',
   },
 });
 
 
 export const types = StyleSheet.create({
+  normal: {
+    fontSize: 13,
+    textAlign: 'center',
+  },
   title: {
     fontSize: 20,
     fontFamily: FONT.MEDIUM,
@@ -31,8 +33,7 @@ export const types = StyleSheet.create({
   paragraph: {
     textAlign: 'left',
     fontSize: 18,
-    paddingTop: 18,
-    paddingBottom: 12,
+    marginBottom: 20,
   },
 
   sectionTitle: {

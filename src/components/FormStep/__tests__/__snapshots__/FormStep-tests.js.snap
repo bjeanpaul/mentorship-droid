@@ -18,6 +18,8 @@ exports[`FormStep should render 1`] = `
         Object {
           "color": "#003035",
           "fontFamily": "Brandon Text",
+        },
+        Object {
           "fontSize": 13,
           "textAlign": "center",
         },
@@ -139,6 +141,8 @@ exports[`FormStep should support disabling its back button 1`] = `
         Object {
           "color": "#003035",
           "fontFamily": "Brandon Text",
+        },
+        Object {
           "fontSize": 13,
           "textAlign": "center",
         },
@@ -221,6 +225,8 @@ exports[`FormStep should support disabling its back button 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },

@@ -78,6 +78,8 @@ exports[`Button should disable its done button if disabled is true 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -187,6 +189,8 @@ exports[`Button should disable its next button if disabled is true 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -406,6 +410,8 @@ exports[`Button should support disabling its back button 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },

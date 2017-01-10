@@ -8,6 +8,8 @@ exports[`Label should render its title 1`] = `
       Object {
         "color": "#003035",
         "fontFamily": "Brandon Text",
+      },
+      Object {
         "fontSize": 13,
         "textAlign": "center",
       },
@@ -38,6 +40,8 @@ exports[`Label should support style overriding 1`] = `
       Object {
         "color": "#003035",
         "fontFamily": "Brandon Text",
+      },
+      Object {
         "fontSize": 13,
         "textAlign": "center",
       },
