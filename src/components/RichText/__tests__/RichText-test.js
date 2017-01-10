@@ -5,7 +5,6 @@ import { richText } from 'src/api';
 
 describe('RichText', () => {
   it('should render typography', () => {
-    // TODO get inline code working
     // TODO get code blocks working
     expect(render(
       <RichText>{richText()(`
@@ -33,6 +32,7 @@ __underline__
 __*underline italics*__
 __**underline bold**__
 __***underline bold italics***__
+\`inlineCode\`
 
 > block quote
 

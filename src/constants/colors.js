@@ -127,4 +127,7 @@ export default {
   MESSAGE_BUBBLE_BG_PENDING: '#c0cbcc',
   MESSAGE_BUBBLE_TIME_TEXT: 'rgba(0, 0, 0, 0.30)',
   MESSAGE_BUBBLE_HINT_TEXT: 'rgba(0, 0, 0, 0.30)',
+
+  RICH_TEXT_CODE_TEXT: '#80979a',
+  RICH_TEXT_CODE_BG: '#dfe5e6',
 };

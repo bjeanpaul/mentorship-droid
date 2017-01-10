@@ -718,6 +718,40 @@ exports[`RichText should render typography 1`] = `
         </Text>
       </Text>
     </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+        ]
+      }>
+      
+      
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "backgroundColor": "#dfe5e6",
+          "borderColor": "#dddddd",
+          "borderRadius": 3,
+          "borderWidth": 1,
+          "color": "#80979a",
+          "fontFamily": "Courier",
+          "fontSize": 14,
+          "fontWeight": "bold",
+          "padding": 18,
+        }
+      }>
+      inlineCode
+    </Text>
   </Text>
   <View
     style={

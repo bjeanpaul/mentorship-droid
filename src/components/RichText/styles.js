@@ -34,6 +34,13 @@ export default {
     ...mdStyles.em,
     fontSize: FONT_SIZE_NORMAL - 3,
   },
+  inlineCode: {
+    ...mdStyles.inlineCode,
+    color: colors.RICH_TEXT_CODE_TEXT,
+    backgroundColor: colors.RICH_TEXT_CODE_BG,
+    fontSize: FONT_SIZE_NORMAL - 4,
+    padding: 18,
+  },
   blockQuoteSection: {
     ...mdStyles.blockQuoteSection,
     marginBottom: 20,
