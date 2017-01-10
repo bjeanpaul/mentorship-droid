@@ -5,7 +5,6 @@ import { richText } from 'src/api';
 
 describe('RichText', () => {
   it('should render typography', () => {
-    // TODO get code blocks working
     expect(render(
       <RichText>{richText()(`
 # h1
