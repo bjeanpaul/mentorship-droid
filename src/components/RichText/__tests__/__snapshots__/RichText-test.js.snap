@@ -23,6 +23,7 @@ exports[`RichText should render images 1`] = `
         Object {
           "height": 183,
           "maxWidth": 355,
+          "resizeMode": "contain",
           "width": 328,
         }
       } />
