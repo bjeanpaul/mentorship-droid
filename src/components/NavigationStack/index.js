@@ -162,7 +162,7 @@ class NavigationStack extends Component {
     const obj = this.props.routes[key];
 
     if (React.isValidElement(obj)) {
-      return <View style={styles.routeContainer}>{obj}</View>;
+      return <View style={styles.route}>{obj}</View>;
     } else {
       const Route = obj || NotFound;
       return <Route {...context} />;
