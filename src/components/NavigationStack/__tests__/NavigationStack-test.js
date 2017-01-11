@@ -7,7 +7,6 @@ import NavigationStack from 'src/components/NavigationStack';
 import { createStack, createRoute, push, pop } from 'src/navigationHelpers';
 import { Text } from 'src/components';
 import { DEVICE_WIDTH } from 'src/constants/styles';
-import { uidEquals } from 'app/scripts/helpers';
 
 
 describe('NavigationStack', () => {
