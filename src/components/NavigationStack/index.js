@@ -174,7 +174,8 @@ class NavigationStack extends Component {
       <View
         key={route.key}
         uid={route.key}
-        style={[styles.slide, isHidden && styles.slideIsHidden]}>
+        style={[styles.slide, isHidden && styles.slideIsHidden]}
+      >
         {this.renderRoute(route)}
       </View>
     );
