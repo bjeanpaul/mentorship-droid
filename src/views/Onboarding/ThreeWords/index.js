@@ -1,3 +1,4 @@
+import { compact } from 'lodash';
 import React, { PropTypes } from 'react';
 
 import { Text, TextInput, FormStep } from 'src/components';
@@ -7,7 +8,7 @@ import styles from 'src/views/Onboarding/styles';
 const DELIM = /[\s,]+/;
 
 
-const getTags = s => s.split(DELIM);
+const getTags = s => compact(s.split(DELIM));
 
 
 const ThreeWords = ({
