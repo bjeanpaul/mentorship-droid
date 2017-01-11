@@ -69,10 +69,51 @@ exports[`Stepper should render its steps 1`] = `
       }>
       <View
         style={
-          Object {
-            "width": 375,
-          }
-        }>
+          Array [
+            Object {
+              "width": 375,
+            },
+            Object {
+              "width": 0,
+            },
+          ]
+        }
+        uid={1}>
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                  "flex": 1,
+                },
+                undefined,
+              ]
+            }>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail">
+              Step 2
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "width": 375,
+            },
+            false,
+          ]
+        }
+        uid={0}>
         <View
           style={
             Object {
@@ -98,12 +139,6 @@ exports[`Stepper should render its steps 1`] = `
           </View>
         </View>
       </View>
-      <View
-        style={
-          Object {
-            "width": 375,
-          }
-        } />
     </View>
   </View>
 </View>
@@ -154,10 +189,51 @@ exports[`Stepper should toggle the rendering of the progressBar 1`] = `
       }>
       <View
         style={
-          Object {
-            "width": 375,
-          }
-        }>
+          Array [
+            Object {
+              "width": 375,
+            },
+            Object {
+              "width": 0,
+            },
+          ]
+        }
+        uid={1}>
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }>
+          <View
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                  "flex": 1,
+                },
+                undefined,
+              ]
+            }>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail">
+              Step 2
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "width": 375,
+            },
+            false,
+          ]
+        }
+        uid={0}>
         <View
           style={
             Object {
@@ -183,12 +259,6 @@ exports[`Stepper should toggle the rendering of the progressBar 1`] = `
           </View>
         </View>
       </View>
-      <View
-        style={
-          Object {
-            "width": 375,
-          }
-        } />
     </View>
   </View>
 </View>
