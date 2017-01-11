@@ -1,3 +1,4 @@
+import { includes } from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { View, StyleSheet, Animated } from 'react-native';
 
@@ -12,10 +13,13 @@ const styles = StyleSheet.create({
     width: DEVICE_WIDTH * 2,
     flexDirection: 'row',
   },
-  slideContainer: {
+  slide: {
     width: DEVICE_WIDTH,
   },
-  routeContainer: {
+  slideIsHidden: {
+    width: 0,
+  },
+  route: {
     flex: 1,
   },
 });
@@ -96,6 +100,57 @@ class NavigationStack extends Component {
     });
   }
 
+  getShownRoutes() {
+    const {
+      curr,
+      prev,
+    } = this.state;
+
+    let res;
+
+    switch (getDirection(prev, curr)) {
+      case DIRECTION_LEFTWARD:
+        res = [curr, prev];
+        break;
+
+      case DIRECTION_RIGHTWARD:
+        res = [prev, curr];
+        break;
+
+      default:
+        res = [curr];
+        break;
+    }
+
+    return res.map(getCurrent);
+  }
+
+  getRoutesExcluding(excludes) {
+    const keys = excludes.map(({ key }) => key);
+    return this.state.curr.routes
+      .filter(route => !includes(keys, route.key));
+  }
+
+  getSlides() {
+    const shownRoutes = this.getShownRoutes();
+
+    const hidden = this.getRoutesExcluding(shownRoutes)
+      .map(route => ({
+        route,
+        isHidden: true,
+      }));
+
+    const shown = shownRoutes
+      .map(route => ({
+        route,
+        isHidden: false,
+      }));
+
+    return []
+      .concat(hidden)
+      .concat(shown);
+  }
+
   animate(to) {
     Animated.timing(this.state.position, {
       duration: DURATION,
@@ -107,43 +162,31 @@ class NavigationStack extends Component {
     const obj = this.props.routes[key];
 
     if (React.isValidElement(obj)) {
-      return <View style={styles.routeContainer}>{obj}</View>;
+      return <View style={styles.route}>{obj}</View>;
     } else {
       const Route = obj || NotFound;
       return <Route {...context} />;
     }
   }
 
-  renderSlides(leftStack, rightStack = null) {
+  renderSlide({ route, isHidden }) {
     return (
-      <Animated.View style={[styles.container, animatedStyles(this.state.position)]}>
-        <View key="left" style={styles.slideContainer}>
-          {this.renderRoute(getCurrent(leftStack))}
-        </View>
-
-        <View key="right" style={styles.slideContainer}>
-          {rightStack && this.renderRoute(getCurrent(rightStack))}
-        </View>
-      </Animated.View>
+      <View
+        key={route.key}
+        uid={route.key}
+        style={[styles.slide, isHidden && styles.slideIsHidden]}
+      >
+        {this.renderRoute(route)}
+      </View>
     );
   }
 
   render() {
-    const {
-      curr,
-      prev,
-    } = this.state;
-
-    switch (getDirection(prev, curr)) {
-      case DIRECTION_LEFTWARD:
-        return this.renderSlides(curr, prev);
-
-      case DIRECTION_RIGHTWARD:
-        return this.renderSlides(prev, curr);
-
-      default:
-        return this.renderSlides(curr);
-    }
+    return (
+      <Animated.View style={[styles.container, animatedStyles(this.state.position)]}>
+        {this.getSlides().map(this.renderSlide, this)}
+      </Animated.View>
+    );
   }
 }
 

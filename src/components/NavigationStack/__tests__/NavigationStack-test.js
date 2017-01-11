@@ -64,13 +64,7 @@ describe('NavigationStack', () => {
 
     const { position } = el.state();
 
-    expect(el.find('A').length).toEqual(0);
-    expect(el.find('B').length).toEqual(1);
-
     el.setProps({ navigationState: pop(navigationState) });
-
-    expect(el.find('A').length).toEqual(1);
-    expect(el.find('B').length).toEqual(1);
 
     expect(position.value).toEqual(1);
 
@@ -96,15 +90,9 @@ describe('NavigationStack', () => {
     const el = shallow(createComponent({ navigationState }));
     const { position } = el.state();
 
-    expect(el.find('A').length).toEqual(1);
-    expect(el.find('B').length).toEqual(0);
-
     el.setProps({
       navigationState: push(navigationState, createRoute('B')),
     });
-
-    expect(el.find('A').length).toEqual(1);
-    expect(el.find('B').length).toEqual(1);
 
     expect(position.value).toEqual(0);
 
@@ -136,18 +124,12 @@ describe('NavigationStack', () => {
     const el = shallow(createComponent({ navigationState }));
     const { position } = el.state();
 
-    expect(el.find('A').length).toEqual(1);
-    expect(el.find('B').length).toEqual(0);
-
     el.setProps({
       navigationState: {
         ...navigationState,
         index: 1,
       },
     });
-
-    expect(el.find('A').length).toEqual(1);
-    expect(el.find('B').length).toEqual(1);
 
     expect(position.value).toEqual(0);
 
@@ -168,17 +150,28 @@ describe('NavigationStack', () => {
     expect(start.mock.calls).toEqual([[]]);
   });
 
-  it('should only render the current route if the stack has not changed', () => {
+  it('should only update stack state if active route has changed', () => {
     const navigationState = createStack([createRoute('A')]);
-    const el = shallow(createComponent({ navigationState }));
 
-    expect(el.find('A').length).toEqual(1);
-    expect(el.find('B').length).toEqual(0);
+    const nextNavigationState = createStack([
+      createRoute('A'),
+      createRoute('B'),
+    ]);
+
+    const el = shallow(createComponent({ navigationState }));
+    const prevState = el.state();
 
     el.setProps({ navigationState });
+    expect(el.state()).toEqual(prevState);
 
-    expect(el.find('A').length).toEqual(1);
-    expect(el.find('B').length).toEqual(0);
+    el.setProps({ navigationState: nextNavigationState });
+
+    expect(el.state()).not.toEqual(prevState);
+
+    expect(el.state()).toEqual(jasmine.objectContaining({
+      prev: prevState.curr,
+      curr: nextNavigationState,
+    }));
   });
 
   it('should support react elements as routes', () => {
