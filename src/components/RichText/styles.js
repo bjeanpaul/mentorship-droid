@@ -38,6 +38,10 @@ export default {
     ...mdStyles.blockQuoteSection,
     marginBottom: 20,
   },
+  blockQuoteSection: {
+    ...mdStyles.blockQuoteSection,
+    marginBottom: 20,
+  },
   blockQuoteSectionBar: {
     ...mdStyles.blockQuoteSectionBar,
     backgroundColor: colors.BG_DARK,
@@ -46,6 +50,9 @@ export default {
   paragraph: [Text.types.paragraph, {
     fontSize: FONT_SIZE_NORMAL,
   }],
+  list: {
+    marginBottom: 20,
+  },
   list: {
     marginBottom: 20,
   },
