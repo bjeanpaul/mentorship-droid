@@ -98,6 +98,23 @@ describe('api/richText', () => {
     }]);
   });
 
+  it('should support paragraphs', () => {
+    const fn = richText({
+      paragraph: richText.paragraph,
+    });
+
+    expect(fn({
+      type: 'paragraph',
+      value: 'foo',
+    }).tree).toEqual([{
+      type: 'paragraph',
+      content: [{
+        type: 'text',
+        content: 'foo',
+      }],
+    }]);
+  });
+
   it('support arbitrary heading levels', () => {
     const fn = richText({
       heading: richText.heading(23),
@@ -188,13 +205,13 @@ describe('api/richText', () => {
       type: 'list',
       start: void 0,
       ordered: false,
-      items: [{
+      items: [[{
         type: 'text',
         content: 'foo',
-      }, {
+      }], [{
         type: 'text',
         content: 'bar',
-      }],
+      }]],
     }]);
   });
 
@@ -213,13 +230,13 @@ describe('api/richText', () => {
       type: 'list',
       start: 1,
       ordered: true,
-      items: [{
+      items: [[{
         type: 'text',
         content: 'foo',
-      }, {
+      }], [{
         type: 'text',
         content: 'bar',
-      }],
+      }]],
     }]);
   });
 
@@ -231,9 +248,9 @@ describe('api/richText', () => {
     expect(fn({
       type: 'image',
       value: '/foo.png',
-    }).tree).toEqual([{
+    }).tree).toEqual([[{
       type: 'mentorshipImage',
       url: imageUrl('/foo.png'),
-    }]);
+    }]]);
   });
 });

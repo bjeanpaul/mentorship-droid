@@ -12,6 +12,12 @@ const text = content => ({
 });
 
 
+const paragraph = content => ({
+  type: 'paragraph',
+  content: [text(content)],
+});
+
+
 const heading = level => content => ({
   type: 'heading',
   level,
@@ -31,7 +37,7 @@ const list = items => ({
   ordered: false,
   start: void 0,
   type: 'list',
-  items: items.map(text),
+  items: items.map(item => [text(item)]),
 });
 
 
@@ -42,10 +48,10 @@ const numberedList = items => ({
 });
 
 
-const image = url => ({
+const image = url => ([{
   type: 'mentorshipImage',
   url: imageUrl(url),
-});
+}]);
 
 
 const parseItem = (d, mappings) => {
@@ -58,8 +64,9 @@ const parseItem = (d, mappings) => {
 
 
 const types = {
-  markdown,
   text,
+  markdown,
+  paragraph,
   heading,
   list,
   numberedList,
