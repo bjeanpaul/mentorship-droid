@@ -121,3 +121,7 @@ export const getMessage = ({ entities }, id) => entities.messages[id];
 
 
 export const getActiveTopRoute = store => getCurrent(store.navigation.top);
+
+
+export const getBlogPost = ({ entities }, id) => entities.blogPosts[id];
+export const getBlogPosts = ({ entities }) => values(entities.blogPosts);
