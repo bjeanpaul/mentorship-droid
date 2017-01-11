@@ -26,6 +26,7 @@ export default {
     resizeMode: 'contain',
   },
   del: {
+    textDecorationLine: 'line-through',
   },
   blockQuoteSection: {
     ...mdStyles.blockQuoteSection,
