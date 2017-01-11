@@ -23,7 +23,8 @@ text
 
 [link](http://www.google.com)
 
-*italics*
+*italics via asterisks*
+_italics via underscores_
 **bold**
 ***bold italics***
 ~~strikethrough~~

@@ -30,6 +30,7 @@ export default {
     width: 328,
     height: 183,
     maxWidth: DEVICE_WIDTH - 20,
+    resizeMode: 'contain',
   },
   u: {
     textDecorationLine: 'underline',
