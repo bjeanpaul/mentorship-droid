@@ -9,6 +9,13 @@ import Text from 'src/components/Text';
 
 const FONT_SIZE_NORMAL = 18;
 
+const code = {
+  fontFamily: 'Courier',
+  color: colors.RICH_TEXT_CODE_TEXT,
+  backgroundColor: colors.RICH_TEXT_CODE_BG,
+  fontSize: FONT_SIZE_NORMAL - 4,
+};
+
 
 export default {
   container: {
@@ -25,23 +32,23 @@ export default {
     maxWidth: DEVICE_WIDTH - 20,
     resizeMode: 'contain',
   },
+  u: {
+    textDecorationLine: 'underline',
+  },
   del: {
     textDecorationLine: 'line-through',
   },
-  blockQuoteSection: {
-    ...mdStyles.blockQuoteSection,
-    marginBottom: 20,
+  em: {
+    ...mdStyles.em,
+    fontSize: FONT_SIZE_NORMAL - 3,
   },
-  blockQuoteSectionBar: {
-    ...mdStyles.blockQuoteSectionBar,
-    backgroundColor: colors.BG_DARK,
+  inlineCode: {
+    ...code,
   },
   text: Text.styles.default,
   paragraph: [Text.types.paragraph, {
     fontSize: FONT_SIZE_NORMAL,
   }],
-  u: {
-  },
   list: {
     marginBottom: 20,
   },
@@ -94,6 +101,22 @@ export default {
     fontSize: 13,
     marginTop: 6,
     marginBottom: 3,
+  },
+  blockQuoteSection: {
+    ...mdStyles.blockQuoteSection,
+    marginBottom: 20,
+  },
+  blockQuoteSectionBar: {
+    ...mdStyles.blockQuoteSectionBar,
+    backgroundColor: colors.BG_DARK,
+  },
+  codeBlock: {
+    backgroundColor: colors.RICH_TEXT_CODE_BG,
+    padding: 6,
+    marginBottom: 20,
+  },
+  codeBlockContent: {
+    ...code,
   },
   table: {
   },

@@ -1,36 +1,3 @@
-exports[`RichText should render images 1`] = `
-<View
-  style={
-    Object {
-      "paddingHorizontal": 16,
-    }
-  }>
-  <View
-    style={
-      Object {
-        "alignItems": "center",
-        "marginBottom": 20,
-        "marginTop": 10,
-      }
-    }>
-    <Image
-      source={
-        Object {
-          "uri": "/api/foo.png?filter_spec=min-656x366",
-        }
-      }
-      style={
-        Object {
-          "height": 183,
-          "maxWidth": 355,
-          "resizeMode": "contain",
-          "width": 328,
-        }
-      } />
-  </View>
-</View>
-`;
-
 exports[`RichText should render typography 1`] = `
 <View
   style={
@@ -336,6 +303,7 @@ exports[`RichText should render typography 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
+          "fontSize": 15,
           "fontStyle": "italic",
         }
       }>
@@ -403,6 +371,7 @@ exports[`RichText should render typography 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
+          "fontSize": 15,
           "fontStyle": "italic",
         }
       }>
@@ -509,6 +478,7 @@ exports[`RichText should render typography 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
+          "fontSize": 15,
           "fontStyle": "italic",
         }
       }>
@@ -587,8 +557,291 @@ exports[`RichText should render typography 1`] = `
             },
           ]
         }>
-        strikeout
+        strikethrough
       </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+        ]
+      }>
+      
+      
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "textDecorationLine": "underline",
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+          ]
+        }>
+        underline
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+        ]
+      }>
+      
+      
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "textDecorationLine": "underline",
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 15,
+            "fontStyle": "italic",
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+            ]
+          }>
+          underline 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+            ]
+          }>
+          italics
+        </Text>
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+        ]
+      }>
+      
+      
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "textDecorationLine": "underline",
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontWeight": "bold",
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+            ]
+          }>
+          underline 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+            ]
+          }>
+          bold
+        </Text>
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+        ]
+      }>
+      
+      
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "textDecorationLine": "underline",
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 15,
+            "fontStyle": "italic",
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+              ]
+            }>
+            underline 
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+              ]
+            }>
+            bold 
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+              ]
+            }>
+            italics
+          </Text>
+        </Text>
+      </Text>
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+        ]
+      }>
+      
+      
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "backgroundColor": "#dfe5e6",
+          "color": "#80979a",
+          "fontFamily": "Courier",
+          "fontSize": 14,
+        }
+      }>
+      inlineCode
     </Text>
   </Text>
   <View
@@ -663,6 +916,29 @@ exports[`RichText should render typography 1`] = `
           quote
         </Text>
       </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#dfe5e6",
+        "marginBottom": 20,
+        "padding": 6,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "backgroundColor": "#dfe5e6",
+          "color": "#80979a",
+          "fontFamily": "Courier",
+          "fontSize": 14,
+        }
+      }>
+      code block
     </Text>
   </View>
   <View
