@@ -46,6 +46,7 @@ import MessagesContainer from 'src/containers/MessagesContainer';
 
 import ProfileSettingsContainer from 'src/containers/ProfileSettingsContainer';
 
+import BlogPostContainer from 'src/containers/BlogPostContainer';
 import BlogPostListContainer from 'src/containers/BlogPostListContainer';
 
 
@@ -95,5 +96,6 @@ export default fromPairs([
 
   [constants.ROUTE_PROFILE_SETTINGS, ProfileSettingsContainer],
 
+  [constants.ROUTE_BLOG_POST, BlogPostContainer],
   [constants.ROUTE_BLOG_POST_LIST, BlogPostListContainer],
 ]);
