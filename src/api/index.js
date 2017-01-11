@@ -10,6 +10,7 @@ export * from 'src/api/calls';
 export * from 'src/api/notificationSettings';
 export * from 'src/api/callNotes';
 export * from 'src/api/messages';
+export * from 'src/api/blogPosts';
 export * from 'src/api/richText';
 export * from 'src/api/imageUrl';
 export { default as richText } from 'src/api/richText';

@@ -1,10 +1,17 @@
 import { fromPairs } from 'lodash';
+
 import { makeGradient } from 'src/helpers';
-import { fakeCategory, fakeActivity, fakeProfile } from 'app/scripts/helpers';
 import colors from 'src/constants/colors';
 import { imageUrl } from 'src/api';
 import { MESSAGE_TYPE_COMPLETE } from 'src/constants/messages';
 import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
+
+import {
+  fakeCategory,
+  fakeActivity,
+  fakeProfile,
+  fakeBlogPost,
+} from 'app/scripts/helpers';
 
 import {
   addOrdinals,
@@ -14,6 +21,7 @@ import {
   parseActivity,
   parseMessage,
   parseProfile,
+  parseBlogPost,
 } from 'src/api/parse';
 
 
@@ -160,13 +168,25 @@ describe('api/parse', () => {
   });
 
   describe('parseProfile', () => {
-    it('should add the profile image', () => {
+    it('should parse the profile image to an ImageUrl', () => {
       const profile = fakeProfile({
         profilePic: '/foo.jpg',
       });
 
       expect(parseProfile(profile)).toEqual(jasmine.objectContaining({
         profilePic: imageUrl('/foo.jpg'),
+      }));
+    });
+  });
+
+  describe('parseBlogPost', () => {
+    it('should parse the image to an ImageUrl', () => {
+      const blogPost = fakeBlogPost({
+        image: '/images/foo.jpg',
+      });
+
+      expect(parseBlogPost(blogPost)).toEqual(jasmine.objectContaining({
+        image: imageUrl('/images/foo.jpg'),
       }));
     });
   });

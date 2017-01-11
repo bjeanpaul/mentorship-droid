@@ -78,6 +78,12 @@ export const parseProfile = ({ profilePic, ...data }) => ({
 });
 
 
+export const parseBlogPost = ({ image, ...data }) => ({
+  ...data,
+  image: imageUrl(image),
+});
+
+
 export const parseActivities = activities => activities.map(parseActivity);
 
 
@@ -105,4 +111,10 @@ export const parseActivityListResults = flow([
 export const parseMessageListResults = flow([
   parseResults,
   map(parseMessage),
+]);
+
+
+export const parseBlogPostListResults = flow([
+  parseResults,
+  map(parseBlogPost),
 ]);
