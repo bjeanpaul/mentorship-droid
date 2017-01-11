@@ -42,6 +42,17 @@ describe('RichText', () => {
     )).toMatchSnapshot();
   });
 
+  it('should render images', () => {
+    const content = richText()({
+      type: 'image',
+      value: '/foo.png',
+    });
+
+    expect(render(
+      <RichText>{content}</RichText>
+    )).toMatchSnapshot();
+  });
+
   it('should support style overrides', () => {
     const styles = {
       text: { fontSize: 100 },

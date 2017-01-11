@@ -248,9 +248,9 @@ describe('api/richText', () => {
     expect(fn({
       type: 'image',
       value: '/foo.png',
-    }).tree).toEqual([{
+    }).tree).toEqual([[{
       type: 'mentorshipImage',
       url: imageUrl('/foo.png'),
-    }]);
+    }]]);
   });
 });
