@@ -5,8 +5,6 @@ import { richText } from 'src/api';
 
 describe('RichText', () => {
   it('should render typography', () => {
-    // TODO get inline code working
-    // TODO get code blocks working
     expect(render(
       <RichText>{richText()(`
 # h1
@@ -25,7 +23,8 @@ text
 
 [link](http://www.google.com)
 
-*italics*
+*italics via asterisks*
+_italics via underscores_
 **bold**
 ***bold italics***
 ~~strikethrough~~
@@ -33,8 +32,13 @@ __underline__
 __*underline italics*__
 __**underline bold**__
 __***underline bold italics***__
+\`inlineCode\`
 
 > block quote
+
+\`\`\`
+code block
+\`\`\`
 
 - unordered
 - list
