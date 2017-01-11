@@ -135,6 +135,17 @@ export const fakePendingMessage = data => merge(api.createPendingMessage({
 }), data);
 
 
+export const fakeBlogPost = data => merge({
+  id: 7,
+  image: '/images/image.png',
+  title: 'A tactile cactus',
+  bodyContent: [{
+    type: 'paragraph',
+    value: 'Maybe Spain is the open-faced smile',
+  }],
+}, data);
+
+
 export const fakeState = (overrides = {}) => merge({}, {
   auth: {
     profileId: 23,
@@ -170,6 +181,9 @@ export const fakeState = (overrides = {}) => merge({}, {
     },
     pendingMessage: {
       4: fakePendingMessage({ id: 4 }),
+    },
+    blogPosts: {
+      7: fakeBlogPost({ id: 7 }),
     },
   },
   navigation: {
