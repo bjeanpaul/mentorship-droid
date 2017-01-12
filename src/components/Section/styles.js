@@ -9,6 +9,7 @@ export default StyleSheet.create({
   },
   header: {
     paddingBottom: 11,
+    marginBottom: 12,
     borderBottomWidth: 1,
     borderBottomColor: colors.SECTION_DIVIDER,
   },

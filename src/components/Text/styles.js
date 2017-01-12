@@ -31,8 +31,7 @@ export const types = StyleSheet.create({
   paragraph: {
     textAlign: 'left',
     fontSize: 18,
-    paddingTop: 18,
-    paddingBottom: 12,
+    marginBottom: 12,
   },
 
   sectionTitle: {

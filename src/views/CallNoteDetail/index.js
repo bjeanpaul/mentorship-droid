@@ -56,26 +56,31 @@ const CallNoteDetail = ({
         <View style={styles.section}>
           <Title>Discussion With Activity</Title>
 
-          <View style={[styles.sectionBody, styles.sectionBodyActivity]}>
-            {
-              activity.icon.exists() && <Image
-                source={activity.icon.resize(72, 72).toSource()}
-                style={styles.activityImage}
-              />
-            }
+          <View style={styles.sectionBody}>
+            <View style={styles.sectionBodyActivityItems}>
+              {
+                activity.icon.exists() && <Image
+                  source={activity.icon.resize(72, 72).toSource()}
+                  style={styles.activityImage}
+                />
+              }
 
-            <Text style={[Text.types.paragraph, styles.activityObjective]}>
-              {activity.objective}
-            </Text>
+              <Text style={[Text.types.paragraph, styles.activityObjective]}>
+                {activity.objective}
+              </Text>
+            </View>
           </View>
         </View>
       )}
 
       <View style={styles.section}>
         <Title>Your Reflections</Title>
-        <Text style={Text.types.paragraph}>
-          {reflection}
-        </Text>
+
+        <View style={styles.sectionBody}>
+          <Text style={Text.types.paragraph}>
+            {reflection}
+          </Text>
+        </View>
       </View>
 
       <View style={styles.section}>
@@ -108,9 +113,12 @@ const CallNoteDetail = ({
 
       <View style={styles.section}>
         <Title>Helpfulness of Activity</Title>
-        <Text style={[Text.types.paragraph, styles.activityHelpfulText]}>
-          {constants.RATING_ITEMS[activityHelpful]}
-        </Text>
+
+        <View style={styles.sectionBody}>
+          <Text style={[Text.types.paragraph, styles.activityHelpfulText]}>
+            {constants.RATING_ITEMS[activityHelpful]}
+          </Text>
+        </View>
       </View>
     </ScrollView>
   </BaseView>

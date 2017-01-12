@@ -16,18 +16,17 @@ export default StyleSheet.create({
     marginBottom: 45,
   },
   sectionBody: {
-    flex: 1,
   },
-  sectionBodyActivity: {
+  sectionBodyActivityItems: {
     flex: 1,
     flexDirection: 'row',
+    alignItems: 'center',
   },
   activityImage: {
     width: 72,
     height: 72,
     marginRight: 16,
-    alignSelf: 'center',
-    marginBottom: 45,
+    marginBottom: 12,
   },
   menteeStateImage: {
     alignSelf: 'center',
