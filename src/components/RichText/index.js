@@ -1,5 +1,5 @@
 import { mergeAll } from 'lodash/fp';
-import { some, eq } from 'lodash';
+import { assign, some, eq } from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { View } from 'react-native';
 import SimpleMarkdown from 'simple-markdown';
@@ -7,6 +7,7 @@ import mdStyles from 'react-native-simple-markdown/styles';
 import mdRules from 'react-native-simple-markdown/rules';
 
 import { RichText as RichTextObject } from 'src/api';
+import defineTypes from './defineTypes';
 import baseRules from './rules';
 import baseStyles from './styles';
 
@@ -64,4 +65,5 @@ RichText.propTypes = {
 };
 
 
+assign(RichText, defineTypes(RichText));
 export default RichText;
