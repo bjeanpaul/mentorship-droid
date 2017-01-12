@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { values, isUndefined, sortBy, filter, first } from 'lodash';
+import { values, isUndefined, sortBy, filter, first, orderBy } from 'lodash';
 
 import { getCurrent } from 'src/navigationHelpers';
 import { TYPES_TO_COLLECTIONS } from 'src/constants/events';
@@ -124,4 +124,7 @@ export const getActiveTopRoute = store => getCurrent(store.navigation.top);
 
 
 export const getBlogPost = ({ entities }, id) => entities.blogPosts[id];
-export const getBlogPosts = ({ entities }) => values(entities.blogPosts);
+
+
+export const getBlogPosts = ({ entities }) =>
+  orderBy(entities.blogPosts, [({ createdAt }) => +moment(createdAt)], ['desc']);

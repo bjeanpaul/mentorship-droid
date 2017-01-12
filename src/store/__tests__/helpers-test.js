@@ -497,15 +497,15 @@ describe('helpers', () => {
   });
 
   describe('getBlogPosts', () => {
-    it('should get the current blog posts', () => {
+    it('should get the current blog posts in descending creation order', () => {
       const post1 = fakeBlogPost({
         id: 1,
-        timestamp: '2016-11-02T09:43:20.311Z',
+        createdAt: '2016-11-02T09:43:20.311Z',
       });
 
       const post2 = fakeBlogPost({
         id: 2,
-        timestamp: '2016-11-01T09:43:20.311Z',
+        createdAt: '2016-11-01T09:43:20.311Z',
       });
 
       const state = fakeState();
