@@ -1,4 +1,4 @@
-import { assign, isArray, isString } from 'lodash';
+import { assign, isArray, isString, isFunction } from 'lodash';
 import { defaultBlockParse } from 'simple-markdown';
 import imageUrl from 'src/api/imageUrl';
 
@@ -80,7 +80,7 @@ const types = {
 };
 
 
-export const parse = (data, mappings) => isArray(data)
+const parse = (data, mappings) => isArray(data)
   ? data.map(d => parseItem(d, mappings))
   : [parseItem(data, mappings)];
 
@@ -97,9 +97,17 @@ export class RichText {
 }
 
 
-const richText = (mappings = types) => input =>
-  new RichText(input, parse(input, mappings));
+const richText = (obj = types) => isFunction(obj)
+  ? input => new RichText(input, [obj(input)])
+  : input => new RichText(input, parse(input, obj));
 
 
 assign(richText, types);
+
 export default richText;
+
+
+export {
+  parse as parseRichText,
+  types as richTextTypes,
+};

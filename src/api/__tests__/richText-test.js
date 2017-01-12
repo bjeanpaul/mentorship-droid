@@ -253,4 +253,13 @@ describe('api/richText', () => {
       url: imageUrl('/foo.png'),
     }]]);
   });
+
+  it('should support singleton definitions', () => {
+    const fn = richText(richText.text);
+
+    expect(fn('foo').tree).toEqual([{
+      type: 'text',
+      content: 'foo',
+    }]);
+  });
 });
