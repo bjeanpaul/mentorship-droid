@@ -10,6 +10,7 @@ exports[`Section should render 1`] = `
       Object {
         "borderBottomColor": "#dfe5e6",
         "borderBottomWidth": 1,
+        "marginBottom": 12,
         "paddingBottom": 11,
       }
     }>
@@ -52,8 +53,7 @@ exports[`Section should render 1`] = `
         },
         Object {
           "fontSize": 18,
-          "paddingBottom": 12,
-          "paddingTop": 18,
+          "marginBottom": 12,
           "textAlign": "left",
         },
       ]

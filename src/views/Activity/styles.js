@@ -67,7 +67,7 @@ export default StyleSheet.create({
     fontWeight: FONT_WEIGHT.BOLD,
   },
   section: {
-    paddingBottom: 29,
+    marginBottom: 29,
   },
   sectionHeader: {
     paddingLeft: 24,
@@ -76,6 +76,7 @@ export default StyleSheet.create({
     backgroundColor: colors.ACTIVITY_SECTION_HEADER_BG,
     borderColor: colors.ACTIVITY_SECTION_HEADER_BORDER,
     justifyContent: 'center',
+    marginBottom: 12,
   },
   sectionIcon: {
     width: 40,
