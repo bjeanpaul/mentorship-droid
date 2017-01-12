@@ -10,20 +10,24 @@ export default StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderStyle: 'solid',
     paddingBottom: 19,
+    marginBottom: 18,
   },
   section: {
     marginBottom: 45,
   },
   sectionBody: {
-    marginTop: 18,
+    flex: 1,
   },
   sectionBodyActivity: {
+    flex: 1,
     flexDirection: 'row',
   },
   activityImage: {
     width: 72,
     height: 72,
     marginRight: 16,
+    alignSelf: 'center',
+    marginBottom: 45,
   },
   menteeStateImage: {
     alignSelf: 'center',
@@ -32,9 +36,9 @@ export default StyleSheet.create({
     alignSelf: 'center',
   },
   activityObjective: {
+    flex: 1,
     paddingTop: 0,
     paddingBottom: 0,
-    alignSelf: 'center',
   },
   activityHelpfulText: {
     textAlign: 'center',

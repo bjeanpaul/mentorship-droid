@@ -90,6 +90,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -122,9 +123,10 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
         style={
           Array [
             Object {
-              "marginTop": 18,
+              "flex": 1,
             },
             Object {
+              "flex": 1,
               "flexDirection": "row",
             },
           ]
@@ -149,7 +151,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
                   "textAlign": "left",
                 },
                 Object {
-                  "alignSelf": "center",
+                  "flex": 1,
                   "paddingBottom": 0,
                   "paddingTop": 0,
                 },
@@ -172,6 +174,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -235,6 +238,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -266,7 +270,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
       <View
         style={
           Object {
-            "marginTop": 18,
+            "flex": 1,
           }
         }>
         <Image
@@ -290,6 +294,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -321,7 +326,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
       <View
         style={
           Object {
-            "marginTop": 18,
+            "flex": 1,
           }
         }>
         <Image
@@ -345,6 +350,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -495,6 +501,7 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -558,6 +565,7 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -589,7 +597,7 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
       <View
         style={
           Object {
-            "marginTop": 18,
+            "flex": 1,
           }
         }>
         <Image
@@ -613,6 +621,7 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -763,6 +772,7 @@ exports[`CallNoteDetail should render 1`] = `
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -795,9 +805,10 @@ exports[`CallNoteDetail should render 1`] = `
         style={
           Array [
             Object {
-              "marginTop": 18,
+              "flex": 1,
             },
             Object {
+              "flex": 1,
               "flexDirection": "row",
             },
           ]
@@ -822,7 +833,7 @@ exports[`CallNoteDetail should render 1`] = `
                   "textAlign": "left",
                 },
                 Object {
-                  "alignSelf": "center",
+                  "flex": 1,
                   "paddingBottom": 0,
                   "paddingTop": 0,
                 },
@@ -845,6 +856,7 @@ exports[`CallNoteDetail should render 1`] = `
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -908,6 +920,7 @@ exports[`CallNoteDetail should render 1`] = `
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -939,7 +952,7 @@ exports[`CallNoteDetail should render 1`] = `
       <View
         style={
           Object {
-            "marginTop": 18,
+            "flex": 1,
           }
         }>
         <Image
@@ -963,6 +976,7 @@ exports[`CallNoteDetail should render 1`] = `
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -994,7 +1008,7 @@ exports[`CallNoteDetail should render 1`] = `
       <View
         style={
           Object {
-            "marginTop": 18,
+            "flex": 1,
           }
         }>
         <Image
@@ -1018,6 +1032,7 @@ exports[`CallNoteDetail should render 1`] = `
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
