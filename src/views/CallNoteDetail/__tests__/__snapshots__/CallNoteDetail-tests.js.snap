@@ -90,6 +90,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -119,45 +120,44 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
         </Text>
       </View>
       <View
-        style={
-          Array [
-            Object {
-              "marginTop": 18,
-            },
-            Object {
-              "flexDirection": "row",
-            },
-          ]
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+        style={Object {}}>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-                "fontSize": 13,
-                "textAlign": "center",
-              },
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
               Array [
                 Object {
-                  "fontSize": 18,
-                  "paddingBottom": 12,
-                  "paddingTop": 18,
-                  "textAlign": "left",
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                  "fontSize": 13,
+                  "textAlign": "center",
                 },
-                Object {
-                  "alignSelf": "center",
-                  "paddingBottom": 0,
-                  "paddingTop": 0,
-                },
-              ],
-            ]
-          }>
-          raaar
-        </Text>
+                Array [
+                  Object {
+                    "fontSize": 18,
+                    "marginBottom": 12,
+                    "textAlign": "left",
+                  },
+                  Object {
+                    "flex": 1,
+                    "paddingBottom": 0,
+                    "paddingTop": 0,
+                  },
+                ],
+              ]
+            }>
+            raaar
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -172,6 +172,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -200,28 +201,30 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
           YOUR REFLECTIONS
         </Text>
       </View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#003035",
-              "fontFamily": "Brandon Text",
-              "fontSize": 13,
-              "textAlign": "center",
-            },
-            Object {
-              "fontSize": 18,
-              "paddingBottom": 12,
-              "paddingTop": 18,
-              "textAlign": "left",
-            },
-          ]
-        }>
-        It went well
-      </Text>
+      <View
+        style={Object {}}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "fontSize": 18,
+                "marginBottom": 12,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          It went well
+        </Text>
+      </View>
     </View>
     <View
       style={
@@ -235,6 +238,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -264,11 +268,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
         </Text>
       </View>
       <View
-        style={
-          Object {
-            "marginTop": 18,
-          }
-        }>
+        style={Object {}}>
         <Image
           source={1}
           style={
@@ -290,6 +290,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -319,11 +320,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
         </Text>
       </View>
       <View
-        style={
-          Object {
-            "marginTop": 18,
-          }
-        }>
+        style={Object {}}>
         <Image
           source={1}
           style={
@@ -345,6 +342,7 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -373,31 +371,33 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
           HELPFULNESS OF ACTIVITY
         </Text>
       </View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#003035",
-              "fontFamily": "Brandon Text",
-              "fontSize": 13,
-              "textAlign": "center",
-            },
+      <View
+        style={Object {}}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
             Array [
               Object {
-                "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
-                "textAlign": "left",
-              },
-              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
                 "textAlign": "center",
               },
-            ],
-          ]
-        } />
+              Array [
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+                Object {
+                  "textAlign": "center",
+                },
+              ],
+            ]
+          } />
+      </View>
     </View>
   </ScrollView>
 </View>
@@ -495,6 +495,7 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -523,28 +524,30 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
           YOUR REFLECTIONS
         </Text>
       </View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#003035",
-              "fontFamily": "Brandon Text",
-              "fontSize": 13,
-              "textAlign": "center",
-            },
-            Object {
-              "fontSize": 18,
-              "paddingBottom": 12,
-              "paddingTop": 18,
-              "textAlign": "left",
-            },
-          ]
-        }>
-        It went well
-      </Text>
+      <View
+        style={Object {}}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "fontSize": 18,
+                "marginBottom": 12,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          It went well
+        </Text>
+      </View>
     </View>
     <View
       style={
@@ -558,6 +561,7 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -587,11 +591,7 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
         </Text>
       </View>
       <View
-        style={
-          Object {
-            "marginTop": 18,
-          }
-        }>
+        style={Object {}}>
         <Image
           source={1}
           style={
@@ -613,6 +613,7 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -641,31 +642,33 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
           HELPFULNESS OF ACTIVITY
         </Text>
       </View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#003035",
-              "fontFamily": "Brandon Text",
-              "fontSize": 13,
-              "textAlign": "center",
-            },
+      <View
+        style={Object {}}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
             Array [
               Object {
-                "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
-                "textAlign": "left",
-              },
-              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
                 "textAlign": "center",
               },
-            ],
-          ]
-        } />
+              Array [
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+                Object {
+                  "textAlign": "center",
+                },
+              ],
+            ]
+          } />
+      </View>
     </View>
   </ScrollView>
 </View>
@@ -763,6 +766,7 @@ exports[`CallNoteDetail should render 1`] = `
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -792,45 +796,44 @@ exports[`CallNoteDetail should render 1`] = `
         </Text>
       </View>
       <View
-        style={
-          Array [
-            Object {
-              "marginTop": 18,
-            },
-            Object {
-              "flexDirection": "row",
-            },
-          ]
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+        style={Object {}}>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-                "fontSize": 13,
-                "textAlign": "center",
-              },
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
               Array [
                 Object {
-                  "fontSize": 18,
-                  "paddingBottom": 12,
-                  "paddingTop": 18,
-                  "textAlign": "left",
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                  "fontSize": 13,
+                  "textAlign": "center",
                 },
-                Object {
-                  "alignSelf": "center",
-                  "paddingBottom": 0,
-                  "paddingTop": 0,
-                },
-              ],
-            ]
-          }>
-          raaar
-        </Text>
+                Array [
+                  Object {
+                    "fontSize": 18,
+                    "marginBottom": 12,
+                    "textAlign": "left",
+                  },
+                  Object {
+                    "flex": 1,
+                    "paddingBottom": 0,
+                    "paddingTop": 0,
+                  },
+                ],
+              ]
+            }>
+            raaar
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -845,6 +848,7 @@ exports[`CallNoteDetail should render 1`] = `
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -873,28 +877,30 @@ exports[`CallNoteDetail should render 1`] = `
           YOUR REFLECTIONS
         </Text>
       </View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#003035",
-              "fontFamily": "Brandon Text",
-              "fontSize": 13,
-              "textAlign": "center",
-            },
-            Object {
-              "fontSize": 18,
-              "paddingBottom": 12,
-              "paddingTop": 18,
-              "textAlign": "left",
-            },
-          ]
-        }>
-        It went well
-      </Text>
+      <View
+        style={Object {}}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "fontSize": 18,
+                "marginBottom": 12,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          It went well
+        </Text>
+      </View>
     </View>
     <View
       style={
@@ -908,6 +914,7 @@ exports[`CallNoteDetail should render 1`] = `
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -937,11 +944,7 @@ exports[`CallNoteDetail should render 1`] = `
         </Text>
       </View>
       <View
-        style={
-          Object {
-            "marginTop": 18,
-          }
-        }>
+        style={Object {}}>
         <Image
           source={1}
           style={
@@ -963,6 +966,7 @@ exports[`CallNoteDetail should render 1`] = `
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -992,11 +996,7 @@ exports[`CallNoteDetail should render 1`] = `
         </Text>
       </View>
       <View
-        style={
-          Object {
-            "marginTop": 18,
-          }
-        }>
+        style={Object {}}>
         <Image
           source={1}
           style={
@@ -1018,6 +1018,7 @@ exports[`CallNoteDetail should render 1`] = `
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
             "borderStyle": "solid",
+            "marginBottom": 18,
             "paddingBottom": 19,
           }
         }>
@@ -1046,31 +1047,33 @@ exports[`CallNoteDetail should render 1`] = `
           HELPFULNESS OF ACTIVITY
         </Text>
       </View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "#003035",
-              "fontFamily": "Brandon Text",
-              "fontSize": 13,
-              "textAlign": "center",
-            },
+      <View
+        style={Object {}}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
             Array [
               Object {
-                "fontSize": 18,
-                "paddingBottom": 12,
-                "paddingTop": 18,
-                "textAlign": "left",
-              },
-              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 13,
                 "textAlign": "center",
               },
-            ],
-          ]
-        } />
+              Array [
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+                Object {
+                  "textAlign": "center",
+                },
+              ],
+            ]
+          } />
+      </View>
     </View>
   </ScrollView>
 </View>
