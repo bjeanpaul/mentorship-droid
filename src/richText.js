@@ -67,7 +67,6 @@ const types = {
   text,
   markdown,
   paragraph,
-  heading,
   list,
   numberedList,
   image,
@@ -102,7 +101,10 @@ const richText = (obj = types) => isFunction(obj)
   : input => new RichText(input, parse(input, obj));
 
 
-assign(richText, types);
+assign(richText, {
+  heading,
+  ...types,
+});
 
 export default richText;
 
