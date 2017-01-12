@@ -4,6 +4,7 @@ import { getContext } from 'src/store/helpers';
 import { staticAction } from 'src/actionHelpers';
 import { createStack, createRoute } from 'src/navigationHelpers';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/events';
+import richText from 'src/richText';
 import * as api from 'src/api';
 import {
   MESSAGE_TYPE_COMPLETE,
@@ -137,12 +138,12 @@ export const fakePendingMessage = data => merge(api.createPendingMessage({
 
 export const fakeBlogPost = data => merge({
   id: 7,
-  image: '/images/image.png',
+  image: api.imageUrl('/images/image.png'),
   title: 'A tactile cactus',
-  bodyContent: [{
+  bodyContent: richText([{
     type: 'paragraph',
     value: 'Maybe Spain is the open-faced smile',
-  }],
+  }]),
 }, data);
 
 
