@@ -1,6 +1,7 @@
 jest.mock('simple-markdown');
 
-import { richText, imageUrl } from 'src/api';
+import richText from 'src/richText';
+import { imageUrl } from 'src/api';
 import { defaultBlockParse } from 'simple-markdown';
 
 

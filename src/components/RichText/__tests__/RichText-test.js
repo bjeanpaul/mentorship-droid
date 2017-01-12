@@ -2,8 +2,8 @@ import { keys } from 'lodash';
 import React from 'react';
 import { View } from 'react-native';
 
+import richText, { richTextTypes } from 'src/richText';
 import { Text, RichText } from 'src/components';
-import { richText, richTextTypes } from 'src/api';
 
 
 describe('RichText', () => {

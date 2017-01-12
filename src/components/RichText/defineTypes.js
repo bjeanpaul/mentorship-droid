@@ -1,7 +1,7 @@
 import pascalCase from 'to-pascal-case';
 import { assign, mapKeys, mapValues } from 'lodash';
 import React, { PropTypes } from 'react';
-import { richText, richTextTypes } from 'src/api';
+import richText, { richTextTypes } from 'src/richText';
 
 
 const defineType = (type, RichText) => assign(({ children }) => (
