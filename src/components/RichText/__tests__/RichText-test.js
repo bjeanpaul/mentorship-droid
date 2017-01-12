@@ -3,7 +3,7 @@ import React from 'react';
 import { View } from 'react-native';
 
 import { Text, RichText } from 'src/components';
-import { richText, richTextTypes, imageUrl } from 'src/api';
+import { richText, richTextTypes } from 'src/api';
 
 
 describe('RichText', () => {
