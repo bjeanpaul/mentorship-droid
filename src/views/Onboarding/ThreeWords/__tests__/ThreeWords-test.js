@@ -34,8 +34,14 @@ describe('ThreeWords', () => {
     expect(paginationDisabled('foo,,,')).toBe(true);
     expect(paginationDisabled('foo,bar,')).toBe(true);
     expect(paginationDisabled('foo,bar,,')).toBe(true);
+    expect(paginationDisabled('+ _ &')).toBe(true);
+    expect(paginationDisabled('foo+ bar_ &')).toBe(true);
+    expect(paginationDisabled('+foo _bar &')).toBe(true);
     expect(paginationDisabled('foo bar baz')).toBe(false);
     expect(paginationDisabled('foo,bar  baz')).toBe(false);
+    expect(paginationDisabled('foo+ bar_ baz&')).toBe(false);
+    expect(paginationDisabled('+foo _bar &baz')).toBe(false);
+    expect(paginationDisabled('+foo_ &bar* $baz%')).toBe(false);
   });
 });
 

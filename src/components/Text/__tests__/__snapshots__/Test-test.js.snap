@@ -37,7 +37,7 @@ exports[`Text should render paragraphs 1`] = `
       },
       Object {
         "fontSize": 18,
-        "marginBottom": 20,
+        "marginBottom": 12,
         "textAlign": "left",
       },
     ]

@@ -5,10 +5,12 @@ import { Text, TextInput, FormStep } from 'src/components';
 import styles from 'src/views/Onboarding/styles';
 
 
-const DELIM = /[\s,]+/;
+const DELIM_RE = /[\s,]+/;
+const WORD_RE = /\S*[a-zA-Z]+\S*/;
 
 
-const getTags = s => compact(s.split(DELIM));
+const getTags = s => compact(s.split(DELIM_RE))
+  .filter(word => WORD_RE.test(word));
 
 
 const ThreeWords = ({

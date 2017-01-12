@@ -98,7 +98,7 @@ exports[`Completed should render 1`] = `
         <View
           style={
             Object {
-              "paddingBottom": 29,
+              "marginBottom": 29,
             }
           }>
           <View
@@ -108,6 +108,7 @@ exports[`Completed should render 1`] = `
                 "borderColor": "#dfe5e6",
                 "height": 72,
                 "justifyContent": "center",
+                "marginBottom": 12,
                 "paddingLeft": 24,
                 "paddingRight": 24,
               }
@@ -175,7 +176,7 @@ exports[`Completed should render 1`] = `
                   },
                   Object {
                     "fontSize": 18,
-                    "marginBottom": 20,
+                    "marginBottom": 12,
                     "textAlign": "left",
                   },
                 ]
