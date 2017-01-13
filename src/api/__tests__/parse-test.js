@@ -3,15 +3,16 @@ import { makeGradient } from 'src/helpers';
 import { fakeCategory, fakeActivity, fakeProfile } from 'app/scripts/helpers';
 import colors from 'src/constants/colors';
 import { imageUrl } from 'src/api';
+import { MESSAGE_TYPE_COMPLETE } from 'src/constants/messages';
 import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
 
 import {
   addOrdinals,
   parseResults,
   parseCategories,
-  parseActivities,
   parseCategory,
   parseActivity,
+  parseMessage,
   parseProfile,
 } from 'src/api/parse';
 
@@ -98,13 +99,6 @@ describe('api/parse', () => {
     });
   });
 
-  describe('parseActivities', () => {
-    it('should parse each activity', () => {
-      expect(parseActivities([fakeActivity()]))
-        .toEqual([parseActivity(fakeActivity())]);
-    });
-  });
-
   describe('parseCategory', () => {
     it('should prepend the base api url to the image url', () => {
       const { image } = parseCategory(fakeCategory({ image: '/foo.jpg' }));
@@ -140,6 +134,40 @@ describe('api/parse', () => {
       const profile = fakeProfile(fromPairs(fieldNames.map(name => [name, null])));
       const initialised = fromPairs(fieldNames.map(name => [name, '']));
       expect(parseProfile(profile)).toEqual(jasmine.objectContaining(initialised));
+    });
+  });
+
+  describe('parseMessage', () => {
+    it('should assign the pending message id', () => {
+      const msg = {
+        id: 21,
+        timeSent: '2016-11-30T09:43:20.311Z',
+        content: 'foo',
+        otherField: 'bar',
+      };
+
+      expect(parseMessage(msg))
+        .toEqual({
+          id: 21,
+          type: MESSAGE_TYPE_COMPLETE,
+          timestamp: '2016-11-30T09:43:20.311Z',
+          content: 'foo',
+          details: {
+            otherField: 'bar',
+          },
+        });
+    });
+  });
+
+  describe('parseProfile', () => {
+    it('should add the profile image', () => {
+      const profile = fakeProfile({
+        profilePic: '/foo.jpg',
+      });
+
+      expect(parseProfile(profile)).toEqual(jasmine.objectContaining({
+        profilePic: imageUrl('/foo.jpg'),
+      }));
     });
   });
 });

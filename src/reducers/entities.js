@@ -1,6 +1,7 @@
-import { includes, fromPairs } from 'lodash';
+import { includes, omit, fromPairs } from 'lodash';
 import { merge } from 'lodash/fp';
 import { AUTH_LOGOUT } from 'src/constants/auth';
+import { MESSAGE_SEND_SUCCESS } from 'src/constants/messages';
 import { ACTIONS_WITH_ENTITIES } from 'src/constants/entities';
 import { CALL_NOTE_CREATE_SUCCESS } from 'src/constants/callNotes';
 
@@ -11,6 +12,8 @@ export const createInitialState = () => ({
   scheduledCalls: {},
   callNotes: {},
   calls: {},
+  messages: {},
+  pendingMessages: {},
 });
 
 
@@ -25,6 +28,13 @@ const entitiesReducer = (state, action) => {
   switch (action.type) {
     case AUTH_LOGOUT:
       return createInitialState();
+
+    case MESSAGE_SEND_SUCCESS: {
+      return {
+        ...state,
+        pendingMessages: omit(state.pendingMessages, action.payload.pendingId),
+      };
+    }
 
     case CALL_NOTE_CREATE_SUCCESS: {
       const { payload } = action;

@@ -3,11 +3,14 @@ import { TouchableNativeFeedback, View } from 'react-native';
 import dismissKeyboard from 'dismissKeyboard';
 
 import Text from 'src/components/Text';
-import styles, { themes, layouts } from './styles';
+import baseStyles, { themes, layouts, sizes } from './styles';
 
+
+// NOTE: theme prop is being deprecated, provide themes via styles prop
 const Button = ({
   theme = themes.default,
-  layout = layouts.default,
+  layout,
+  styles = {},
   children,
   disabled,
   onPress: onPressProp,
@@ -20,17 +23,25 @@ const Button = ({
   let button = (
     <View
       style={[
-        styles.container,
+        baseStyles.container,
         theme.container,
         layout,
-        disabled && theme.containerIsDisabled,
+        styles.container,
+        disabled && [
+          theme.containerIsDisabled,
+          styles.containerIsDisabled,
+        ],
       ]}
     >
       <Text
         style={[
-          styles.title,
+          baseStyles.title,
           theme.title,
-          disabled && theme.titleIsDisabled,
+          styles.title,
+          disabled && [
+            theme.titleIsDisabled,
+            styles.titleIsDisabled,
+          ],
         ]}
       >
         {children}
@@ -50,6 +61,7 @@ const Button = ({
 
 Button.themes = themes;
 Button.layouts = layouts;
+Button.sizes = sizes;
 
 
 Button.propTypes = {
@@ -58,6 +70,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   theme: PropTypes.any,
   layout: PropTypes.any,
+  styles: PropTypes.object,
 };
 
 

@@ -42,6 +42,9 @@ exports[`Button should disable its done button if disabled is true 1`] = `
           "alignItems": "center",
           "borderRadius": 5,
           "justifyContent": "center",
+          "marginHorizontal": 16,
+          "paddingBottom": 17,
+          "paddingTop": 15,
         },
         Object {
           "backgroundColor": "transparent",
@@ -57,9 +60,13 @@ exports[`Button should disable its done button if disabled is true 1`] = `
             "flex": 1,
           },
         ],
-        Object {
-          "borderColor": "#dfe5e6",
-        },
+        undefined,
+        Array [
+          Object {
+            "borderColor": "#dfe5e6",
+          },
+          undefined,
+        ],
       ]
     }>
     <Text
@@ -71,6 +78,8 @@ exports[`Button should disable its done button if disabled is true 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -80,15 +89,17 @@ exports[`Button should disable its done button if disabled is true 1`] = `
               "fontSize": 13,
               "fontWeight": "bold",
               "letterSpacing": 1,
-              "marginBottom": 17,
-              "marginTop": 15,
             },
             Object {
               "color": "#f77040",
             },
-            Object {
-              "color": "#dfe5e6",
-            },
+            undefined,
+            Array [
+              Object {
+                "color": "#dfe5e6",
+              },
+              undefined,
+            ],
           ],
         ]
       }>
@@ -142,6 +153,9 @@ exports[`Button should disable its next button if disabled is true 1`] = `
           "alignItems": "center",
           "borderRadius": 5,
           "justifyContent": "center",
+          "marginHorizontal": 16,
+          "paddingBottom": 17,
+          "paddingTop": 15,
         },
         Object {
           "backgroundColor": "transparent",
@@ -157,9 +171,13 @@ exports[`Button should disable its next button if disabled is true 1`] = `
             "flex": 1,
           },
         ],
-        Object {
-          "borderColor": "#dfe5e6",
-        },
+        undefined,
+        Array [
+          Object {
+            "borderColor": "#dfe5e6",
+          },
+          undefined,
+        ],
       ]
     }>
     <Text
@@ -171,6 +189,8 @@ exports[`Button should disable its next button if disabled is true 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -180,15 +200,17 @@ exports[`Button should disable its next button if disabled is true 1`] = `
               "fontSize": 13,
               "fontWeight": "bold",
               "letterSpacing": 1,
-              "marginBottom": 17,
-              "marginTop": 15,
             },
             Object {
               "color": "#f77040",
             },
-            Object {
-              "color": "#dfe5e6",
-            },
+            undefined,
+            Array [
+              Object {
+                "color": "#dfe5e6",
+              },
+              undefined,
+            ],
           ],
         ]
       }>
@@ -351,6 +373,9 @@ exports[`Button should support disabling its back button 1`] = `
           "alignItems": "center",
           "borderRadius": 5,
           "justifyContent": "center",
+          "marginHorizontal": 16,
+          "paddingBottom": 17,
+          "paddingTop": 15,
         },
         Object {
           "backgroundColor": "transparent",
@@ -367,9 +392,13 @@ exports[`Button should support disabling its back button 1`] = `
             "width": 58,
           },
         ],
-        Object {
-          "borderColor": "#dfe5e6",
-        },
+        undefined,
+        Array [
+          Object {
+            "borderColor": "#dfe5e6",
+          },
+          undefined,
+        ],
       ]
     }>
     <Text
@@ -381,6 +410,8 @@ exports[`Button should support disabling its back button 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -390,15 +421,17 @@ exports[`Button should support disabling its back button 1`] = `
               "fontSize": 13,
               "fontWeight": "bold",
               "letterSpacing": 1,
-              "marginBottom": 17,
-              "marginTop": 15,
             },
             Object {
               "color": "#f77040",
             },
-            Object {
-              "color": "#dfe5e6",
-            },
+            undefined,
+            Array [
+              Object {
+                "color": "#dfe5e6",
+              },
+              undefined,
+            ],
           ],
         ]
       }>

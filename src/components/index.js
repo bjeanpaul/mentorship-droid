@@ -28,6 +28,7 @@ import RadioList from './RadioList';
 import PatternBackground from './PatternBackground';
 import FormStep from './FormStep';
 import NavigationStack from './NavigationStack';
+import RichText from './RichText';
 
 
 export {
@@ -62,4 +63,5 @@ export {
   PatternBackground,
   FormStep,
   NavigationStack,
+  RichText,
 };

@@ -66,6 +66,7 @@ HeaderContent.propTypes = {
 
 const Journey = ({
   onCallPress,
+  onChatPress,
   onProfilePress,
   ...props,
 }) => (
@@ -95,6 +96,13 @@ const Journey = ({
                 style={styles.icon}
               />
             </TouchableWithoutFeedback>
+
+            <TouchableWithoutFeedback uid="chat" onPress={onChatPress}>
+              <Image
+                source={images.JOURNEY_CHAT_ICON}
+                style={styles.icon}
+              />
+            </TouchableWithoutFeedback>
           </Image>
 
           <EventListContainer />
@@ -106,6 +114,7 @@ const Journey = ({
 
 Journey.propTypes = {
   onCallPress: PropTypes.func.isRequired,
+  onChatPress: PropTypes.func.isRequired,
   onProfilePress: PropTypes.func.isRequired,
 };
 

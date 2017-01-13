@@ -9,6 +9,8 @@ exports[`Link should render its children 1`] = `
       Object {
         "color": "#003035",
         "fontFamily": "Brandon Text",
+      },
+      Object {
         "fontSize": 13,
         "textAlign": "center",
       },
@@ -41,6 +43,8 @@ exports[`Link should support style overriding 1`] = `
       Object {
         "color": "#003035",
         "fontFamily": "Brandon Text",
+      },
+      Object {
         "fontSize": 13,
         "textAlign": "center",
       },

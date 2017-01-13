@@ -30,6 +30,8 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -103,6 +105,8 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -138,6 +142,8 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
                 Object {
                   "color": "#003035",
                   "fontFamily": "Brandon Text",
+                },
+                Object {
                   "fontSize": 13,
                   "textAlign": "center",
                 },
@@ -185,6 +191,8 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -212,6 +220,8 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -251,6 +261,8 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -303,6 +315,8 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -355,6 +369,8 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -382,6 +398,8 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -435,6 +453,8 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -508,6 +528,8 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -535,6 +557,8 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -574,6 +598,8 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -626,6 +652,8 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -653,6 +681,8 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -706,6 +736,8 @@ exports[`CallNoteDetail should render 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -779,6 +811,8 @@ exports[`CallNoteDetail should render 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -814,6 +848,8 @@ exports[`CallNoteDetail should render 1`] = `
                 Object {
                   "color": "#003035",
                   "fontFamily": "Brandon Text",
+                },
+                Object {
                   "fontSize": 13,
                   "textAlign": "center",
                 },
@@ -861,6 +897,8 @@ exports[`CallNoteDetail should render 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -888,6 +926,8 @@ exports[`CallNoteDetail should render 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -927,6 +967,8 @@ exports[`CallNoteDetail should render 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -979,6 +1021,8 @@ exports[`CallNoteDetail should render 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -1031,6 +1075,8 @@ exports[`CallNoteDetail should render 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -1058,6 +1104,8 @@ exports[`CallNoteDetail should render 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },

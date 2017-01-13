@@ -4,9 +4,12 @@ import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 
 export default StyleSheet.create({
   container: {
+    marginHorizontal: 16,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 5,
+    paddingTop: 15,
+    paddingBottom: 17,
   },
 
   title: {
@@ -14,18 +17,11 @@ export default StyleSheet.create({
     fontWeight: FONT_WEIGHT.BOLD,
     fontSize: 13,
     letterSpacing: 1,
-    marginTop: 15,
-    marginBottom: 17,
   },
 });
 
 
 export const layouts = StyleSheet.create({
-  default: {
-    marginLeft: 16,
-    marginRight: 16,
-  },
-
   inline: {
     marginLeft: 0,
     marginRight: 0,
@@ -93,6 +89,22 @@ export const themes = {
 
     titleIsDisabled: {
       color: colors.BUTTON_TRANSPARENT_DISABLED_TITLE,
+    },
+  }),
+};
+
+
+export const sizes = {
+  small: StyleSheet.create({
+    container: {
+      marginHorizontal: 8,
+      borderRadius: 2,
+      paddingTop: 0,
+      paddingBottom: 0,
+      paddingHorizontal: 2,
+    },
+    title: {
+      fontSize: 11,
     },
   }),
 };

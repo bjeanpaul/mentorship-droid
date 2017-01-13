@@ -1,11 +1,14 @@
 import { merge, uniqueId, noop, isFunction } from 'lodash';
 import { normalize, arrayOf } from 'normalizr';
-import { Profile, ScheduledCall, Activity, Category, Event, CallNote } from 'src/api';
 import { getContext } from 'src/store/helpers';
 import { staticAction } from 'src/actionHelpers';
 import { createStack, createRoute } from 'src/navigationHelpers';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/events';
 import * as api from 'src/api';
+import {
+  MESSAGE_TYPE_COMPLETE,
+  MESSAGE_DIRECTION_INBOUND,
+} from 'src/constants/messages';
 
 
 export const capture = async (fn, ...xargs) => {
@@ -63,6 +66,7 @@ export const fakeActivity = data => ({
   ...data,
 });
 
+
 export const fakeScheduledCall = data => ({
   id: 1,
   createdAt: '2016-09-16T11:27:25.454520Z',
@@ -95,9 +99,9 @@ export const fakeEvent = data => ({
   occuredAt: '2016-09-16T11:19:17.368442Z',
   eventType: EVENT_TYPE_SCHEDULED_CALL_CREATED,
   objectId: 23,
-  description: 'Im a big fake',
   ...data,
 });
+
 
 export const fakeCallNote = data => ({
   id: 404,
@@ -114,13 +118,29 @@ export const fakeCallNote = data => ({
 });
 
 
+export const fakeMessage = data => merge({
+  id: 21,
+  type: MESSAGE_TYPE_COMPLETE,
+  timestamp: '2016-11-30T09:43:20.311Z',
+  content: 'Sputnik sickles found in the seats',
+  details: {
+    direction: MESSAGE_DIRECTION_INBOUND,
+  },
+}, data);
+
+
+export const fakePendingMessage = data => merge(api.createPendingMessage({
+  id: 3,
+  content: 'I wrestled a bear once',
+}), data);
+
+
 export const fakeState = (overrides = {}) => merge({}, {
   auth: {
     profileId: 23,
     auth: fakeAuth(),
   },
   callNote: {
-    navigation: createStack(),
     callNote: {},
   },
   entities: {
@@ -145,6 +165,12 @@ export const fakeState = (overrides = {}) => merge({}, {
     callNotes: {
       100: fakeCallNote({ id: 100 }),
     },
+    messages: {
+      3: fakeMessage({ id: 3 }),
+    },
+    pendingMessage: {
+      4: fakePendingMessage({ id: 4 }),
+    },
   },
   navigation: {
     top: createStack([createRoute('A')]),
@@ -163,39 +189,47 @@ export const fakeStore = (state = fakeState()) => ({
 
 
 export const fakeProfileData = (data = { id: 23 }) => (
-  normalize(data, Profile));
+  normalize(data, api.Profile));
 
 
 export const fakeScheduledCallData = (data = { id: 23 }) => (
-  normalize(data, ScheduledCall));
+  normalize(data, api.ScheduledCall));
+
+
+export const fakeMessageData = (data = fakeMessage()) => (
+    normalize(data, api.Message));
 
 
 export const fakeProfileListData = (data = [{ id: 23 }]) => (
-  normalize(data, arrayOf(Profile)));
+  normalize(data, arrayOf(api.Profile)));
 
 
 export const fakeScheduledCallListData = (data = [{ id: 23 }]) => (
-  normalize(data, arrayOf(ScheduledCall)));
+  normalize(data, arrayOf(api.ScheduledCall)));
 
 
 export const fakeCategoryListData = (data = [fakeCategory()]) => (
-  normalize(data, arrayOf(Category)));
+  normalize(data, arrayOf(api.Category)));
 
 
 export const fakeActivityListData = (data = [fakeActivity()]) => (
-  normalize(data, arrayOf(Activity)));
+  normalize(data, arrayOf(api.Activity)));
 
 
 export const fakeCallNoteData = (data = fakeCallNote()) => (
-  normalize(data, CallNote));
+  normalize(data, api.CallNote));
 
 
 export const fakeListEventsData = (data = [fakeEvent()]) => (
-    normalize(data, arrayOf(Event)));
+    normalize(data, arrayOf(api.Event)));
 
 
 export const fakeListCallNotesData = (data = [fakeCallNote()]) => (
-    normalize(data, arrayOf(CallNote)));
+    normalize(data, arrayOf(api.CallNote)));
+
+
+export const fakeListMessagesData = (data = [fakeMessage()]) => (
+    normalize(data, arrayOf(api.Message)));
 
 
 const castActionCreator = obj => !isFunction(obj)

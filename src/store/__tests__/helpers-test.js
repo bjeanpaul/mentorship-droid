@@ -20,6 +20,8 @@ import {
   fakeCall,
   fakeEvent,
   fakeCallNote,
+  fakeMessage,
+  fakePendingMessage,
 } from 'app/scripts/helpers';
 
 import {
@@ -38,6 +40,8 @@ import {
   getCallNote,
   getNextScheduledCall,
   getScheduledCallsBetween,
+  getMessages,
+  getMessage,
   getActiveTopRoute,
 } from 'src/store/helpers';
 
@@ -424,6 +428,68 @@ describe('helpers', () => {
       };
 
       expect(getCallNote(state, 2)).toEqual(callNote1);
+    });
+  });
+
+  describe('getMessages', () => {
+    it('should get the current messages in descending order', () => {
+      const msg1 = fakeMessage({
+        id: 1,
+        timestamp: '2016-11-02T09:43:20.311Z',
+      });
+
+      const msg2 = fakeMessage({
+        id: 2,
+        timestamp: '2016-11-01T09:43:20.311Z',
+      });
+
+      const msg3 = fakePendingMessage({
+        id: 3,
+        timestamp: '2016-11-04T09:43:20.311Z',
+      });
+
+      const msg4 = fakePendingMessage({
+        id: 4,
+        timestamp: '2016-11-03:43:20.311Z',
+      });
+
+      const state = fakeState();
+
+      state.entities.messages = {
+        1: msg1,
+        2: msg2,
+      };
+
+      state.entities.pendingMessages = {
+        3: msg3,
+        4: msg4,
+      };
+
+      expect(getMessages(state)).toEqual([
+        msg1,
+        msg2,
+        msg3,
+        msg4,
+      ]);
+    });
+  });
+
+  describe('getMessage', () => {
+    it('should get the message with the given id', () => {
+      const msg = fakeMessage({
+        id: 23,
+        timestamp: '2016-11-02T09:43:20.311Z',
+      });
+
+      const state = fakeState({
+        entities: {
+          messages: {
+            23: msg,
+          },
+        },
+      });
+
+      expect(getMessage(state, 23)).toEqual(msg);
     });
   });
 

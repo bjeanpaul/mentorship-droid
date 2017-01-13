@@ -3,6 +3,7 @@ import { map } from 'lodash/fp';
 import colors from 'src/constants/colors';
 import { makeGradient } from 'src/helpers';
 import imageUrl from './imageUrl';
+import { MESSAGE_TYPE_COMPLETE } from 'src/constants/messages';
 import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
 
 
@@ -52,6 +53,24 @@ export const parseCategories = categories => {
 };
 
 
+export const parseMessage = data => {
+  const {
+    id,
+    timeSent: timestamp,
+    content,
+    ...details,
+  } = data;
+
+  return {
+    type: MESSAGE_TYPE_COMPLETE,
+    id,
+    content,
+    timestamp,
+    details,
+  };
+};
+
+
 export const parseProfile = ({ profilePic, ...data }) => ({
   ...data,
   ...fromPairs(REQUIRED_PROFILE_FIELDS.map(name => [name, data[name] || ''])),
@@ -78,6 +97,12 @@ export const parseCategoryListResults = flow([
 
 export const parseActivityListResults = flow([
   parseResults,
-  parseActivities,
+  map(parseActivity),
   addOrdinals,
+]);
+
+
+export const parseMessageListResults = flow([
+  parseResults,
+  map(parseMessage),
 ]);

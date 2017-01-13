@@ -31,15 +31,16 @@ const callNote = (state = {}, action) => {
   }
 };
 
+
 const reduce = combineReducers({
   callNote,
 });
 
 
-export default (state = {}, action) => {
+export default (state = createInitialState(), action) => {
   switch (action.type) {
     case constants.CALL_NOTE_CREATE_OPEN:
-      return reduce({}, action);
+      return reduce(createInitialState(), action);
 
     default:
       return reduce(state, action);

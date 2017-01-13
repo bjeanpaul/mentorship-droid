@@ -11,29 +11,29 @@ describe('Button', () => {
       <Button onPress={foo}>
         margle
       </Button>
-    )).toMatchSnapshot();
+    ).toJSON()).toMatchSnapshot();
   });
 
   it('should render "light" theme', () => {
     expect(render(
       <Button
         onPress={foo}
-        theme={Button.themes.light}
+        styles={Button.themes.light}
       >
         margle
       </Button>
-    )).toMatchSnapshot();
+    ).toJSON()).toMatchSnapshot();
   });
 
   it('should render "transparent" theme', () => {
     expect(render(
       <Button
         onPress={foo}
-        theme={Button.themes.transparent}
+        styles={Button.themes.transparent}
       >
         margle
       </Button>
-    )).toMatchSnapshot();
+    ).toJSON()).toMatchSnapshot();
   });
 
   it('should render "inline" layout', () => {
@@ -44,7 +44,7 @@ describe('Button', () => {
       >
         margle
       </Button>
-    )).toMatchSnapshot();
+    ).toJSON()).toMatchSnapshot();
   });
 
   it('should render "stretch" layout', () => {
@@ -55,7 +55,19 @@ describe('Button', () => {
       >
         margle
       </Button>
-    )).toMatchSnapshot();
+    ).toJSON()).toMatchSnapshot();
+  });
+
+
+  it('should render "small" size', () => {
+    expect(render(
+      <Button
+        onPress={foo}
+        styles={Button.sizes.small}
+      >
+        margle
+      </Button>
+    ).toJSON()).toMatchSnapshot();
   });
 
   it('should be disabled', () => {
@@ -66,7 +78,7 @@ describe('Button', () => {
       >
         margle
       </Button>
-    )).toMatchSnapshot();
+    ).toJSON()).toMatchSnapshot();
   });
 
   it('should take any kind of children', () => {
@@ -77,16 +89,18 @@ describe('Button', () => {
         <Icon type={Icon.types.backOrange} />
         I am text.
       </Button>
-    )).toMatchSnapshot();
+    ).toJSON()).toMatchSnapshot();
   });
 
   it('should be able to tap and fire `onPress`', () => {
     const mockFn = jest.fn();
+
     const el = shallow(
       <Button onPress={mockFn}>
         margle
       </Button>
     );
+
     el.simulate('press');
     expect(mockFn).toBeCalled();
   });

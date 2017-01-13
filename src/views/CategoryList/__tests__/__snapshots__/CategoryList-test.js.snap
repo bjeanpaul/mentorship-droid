@@ -32,6 +32,8 @@ exports[`CategoryList should render 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -152,6 +154,8 @@ exports[`CategoryList should render with a back button if onBackPress is given 1
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },

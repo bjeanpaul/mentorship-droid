@@ -7,38 +7,27 @@ import images from 'src/constants/images';
 import * as constants from 'src/constants/navigation';
 
 
-const tabs = {
-  activities: constants.NAV_TAB_ACTIVITIES,
-  journey: constants.NAV_TAB_JOURNEY,
-  scheduledCalls: constants.NAV_TAB_SCHEDULED_CALLS,
-};
-
-
-const icons = {
-  NAV_TAB_ACTIVITIES: images.NAV_TAB_ACTIVITIES,
-  NAV_TAB_CHAT: images.NAV_TAB_CHAT,
-  NAV_TAB_COMMUNITY: images.NAV_TAB_COMMUNITY,
-  NAV_TAB_JOURNEY: images.NAV_TAB_JOURNEY,
-  NAV_TAB_SCHEDULED_CALLS: images.NAV_TAB_SCHEDULED_CALLS,
-};
-
-
-const activeIcons = {
-  NAV_TAB_ACTIVITIES: images.NAV_TAB_ACTIVITIES_ACTIVE,
-  NAV_TAB_CHAT: images.NAV_TAB_CHAT_ACTIVE,
-  NAV_TAB_COMMUNITY: images.NAV_TAB_COMMUNITY_ACTIVE,
-  NAV_TAB_JOURNEY: images.NAV_TAB_JOURNEY_ACTIVE,
-  NAV_TAB_SCHEDULED_CALLS: images.NAV_TAB_SCHEDULED_CALLS_ACTIVE,
-};
-
-
-const titles = {
-  NAV_TAB_ACTIVITIES: 'Activities',
-  NAV_TAB_CHAT: 'Chat',
-  NAV_TAB_COMMUNITY: 'Community',
-  NAV_TAB_JOURNEY: 'Journey',
-  NAV_TAB_SCHEDULED_CALLS: 'Calls',
-};
+const tabSpecs = [{
+  tabKey: constants.NAV_TAB_JOURNEY,
+  icon: images.NAV_TAB_JOURNEY,
+  iconActive: images.NAV_TAB_JOURNEY_ACTIVE,
+  title: 'Journey',
+}, {
+  tabKey: constants.NAV_TAB_ACTIVITIES,
+  icon: images.NAV_TAB_ACTIVITIES,
+  iconActive: images.NAV_TAB_ACTIVITIES_ACTIVE,
+  title: 'Activities',
+}, {
+  tabKey: constants.NAV_TAB_SCHEDULED_CALLS,
+  icon: images.NAV_TAB_SCHEDULED_CALLS,
+  iconActive: images.NAV_TAB_SCHEDULED_CALLS_ACTIVE,
+  title: 'Calls',
+}, {
+  tabKey: constants.NAV_TAB_CHAT,
+  icon: images.NAV_TAB_CHAT,
+  iconActive: images.NAV_TAB_CHAT_ACTIVE,
+  title: 'Chat',
+}];
 
 
 export const NavTabBar = ({
@@ -46,59 +35,55 @@ export const NavTabBar = ({
   onTabPress,
 }) => (
   <View style={styles.bar}>
-    <NavTab
-      uid={tabs.journey}
-      onPress={onTabPress}
-      type={tabs.journey}
-      active={activeTab === tabs.journey}
-    />
-
-    <NavTab
-      uid={tabs.activities}
-      onPress={onTabPress}
-      type={tabs.activities}
-      active={activeTab === tabs.activities}
-    />
-
-    <NavTab
-      uid={tabs.scheduledCalls}
-      onPress={onTabPress}
-      type={tabs.scheduledCalls}
-      active={activeTab === tabs.scheduledCalls}
-    />
+  {
+    tabSpecs.map(({ tabKey, ...spec }) => (
+      <NavTab
+        uid={tabKey}
+        tabKey={tabKey}
+        key={tabKey}
+        onPress={onTabPress}
+        active={activeTab === tabKey}
+        {...spec}
+      />))
+  }
   </View>
 );
 
 
 export const NavTab = ({
-  type,
+  tabKey,
+  icon,
+  iconActive,
+  title,
   active,
   onPress,
-}) => (
-  <TouchableNativeFeedback onPress={() => !active && onPress(type)}>
-    <View style={styles.tab}>
-      <Image
-        source={
+}) => {
+  return (
+    <TouchableNativeFeedback onPress={() => !active && onPress(tabKey)}>
+      <View style={styles.tab}>
+        <Image
+          source={
+            !active
+              ? icon
+              : iconActive
+          }
+          style={styles.tabIcon}
+        />
+
+        {
           active
-            ? activeIcons[type]
-            : icons[type]
+            ? <Text style={[styles.tabTitle, active && styles.tabTitleIsActive]}>
+              {title}
+            </Text>
+            : null
         }
-        style={styles.tabIcon}
-      />
-
-      {
-        active
-          ? <Text style={[styles.tabTitle, active && styles.tabTitleIsActive]}>
-            {titles[type]}
-          </Text>
-          : null
-      }
-    </View>
-  </TouchableNativeFeedback>
-);
+      </View>
+    </TouchableNativeFeedback>
+  );
+};
 
 
-NavTabBar.tabs = tabs;
+NavTabBar.tabSpecs = tabSpecs;
 
 
 NavTabBar.propTypes = {
@@ -108,7 +93,10 @@ NavTabBar.propTypes = {
 
 
 NavTab.propTypes = {
-  type: PropTypes.string.isRequired,
+  tabKey: PropTypes.string.isRequired,
+  icon: PropTypes.any.isRequired,
+  iconActive: PropTypes.any.isRequired,
+  title: PropTypes.any.isRequired,
   active: PropTypes.bool.isRequired,
   onPress: PropTypes.func.isRequired,
 };

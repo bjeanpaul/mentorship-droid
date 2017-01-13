@@ -1,68 +1,48 @@
-exports[`EventList should not render unmapped event types 1`] = `
+exports[`EventList should render 1`] = `
 <View
   style={
     Object {
       "flex": 1,
     }
   }>
-  <View
-    style={
-      Object {
-        "backgroundColor": "#fff",
-        "borderRadius": 4,
-        "margin": 24,
-        "marginTop": 12,
-        "padding": 20,
-        "paddingLeft": 16,
-        "paddingRight": 16,
-      }
-    }>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+  <View>
+    <View
       style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 13,
-            "textAlign": "center",
-          },
-          Object {
-            "fontFamily": "Brandon Text_bold",
-            "fontSize": 20,
-            "fontWeight": "bold",
-            "marginBottom": 16,
-            "textAlign": "left",
-          },
-        ]
+        Object {
+          "alignSelf": "center",
+          "backgroundColor": "#eff2f2",
+          "borderColor": "#dfe5e6",
+          "borderRadius": 12.5,
+          "borderWidth": 0.5,
+          "marginBottom": 24,
+          "padding": 10,
+          "paddingBottom": 7,
+          "paddingTop": 5,
+        }
       }>
-      Hello 
-      Yo yo bangles
-      !
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 13,
-            "textAlign": "center",
-          },
-          Object {
-            "fontSize": 18,
-            "marginBottom": 24,
-            "textAlign": "left",
-          },
-        ]
-      }>
-      This is the start of something amazing! Your Mentor’s journey will be documented here.
-    </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+            Object {
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#9fb1b3",
+              "fontSize": 11,
+            },
+          ]
+        }>
+        Friday, 16 September
+      </Text>
+    </View>
     <View
       style={
         Array [

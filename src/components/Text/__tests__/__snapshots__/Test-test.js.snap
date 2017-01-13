@@ -8,6 +8,8 @@ exports[`Text should render 1`] = `
       Object {
         "color": "#003035",
         "fontFamily": "Brandon Text",
+      },
+      Object {
         "fontSize": 13,
         "textAlign": "center",
       },
@@ -28,6 +30,8 @@ exports[`Text should render paragraphs 1`] = `
       Object {
         "color": "#003035",
         "fontFamily": "Brandon Text",
+      },
+      Object {
         "fontSize": 13,
         "textAlign": "center",
       },
@@ -52,6 +56,8 @@ exports[`Text should render secondary titles 1`] = `
       Object {
         "color": "#003035",
         "fontFamily": "Brandon Text",
+      },
+      Object {
         "fontSize": 13,
         "textAlign": "center",
       },
@@ -77,6 +83,8 @@ exports[`Text should render section titles 1`] = `
       Object {
         "color": "#003035",
         "fontFamily": "Brandon Text",
+      },
+      Object {
         "fontSize": 13,
         "textAlign": "center",
       },
@@ -104,6 +112,8 @@ exports[`Text should render titles 1`] = `
       Object {
         "color": "#003035",
         "fontFamily": "Brandon Text",
+      },
+      Object {
         "fontSize": 13,
         "textAlign": "center",
       },
@@ -134,6 +144,8 @@ exports[`Text should support a light theme 1`] = `
         Object {
           "color": "#003035",
           "fontFamily": "Brandon Text",
+        },
+        Object {
           "fontSize": 13,
           "textAlign": "center",
         },

@@ -18,6 +18,8 @@ exports[`FormStep should render 1`] = `
         Object {
           "color": "#003035",
           "fontFamily": "Brandon Text",
+        },
+        Object {
           "fontSize": 13,
           "textAlign": "center",
         },
@@ -139,6 +141,8 @@ exports[`FormStep should support disabling its back button 1`] = `
         Object {
           "color": "#003035",
           "fontFamily": "Brandon Text",
+        },
+        Object {
           "fontSize": 13,
           "textAlign": "center",
         },
@@ -184,6 +188,9 @@ exports[`FormStep should support disabling its back button 1`] = `
               "alignItems": "center",
               "borderRadius": 5,
               "justifyContent": "center",
+              "marginHorizontal": 16,
+              "paddingBottom": 17,
+              "paddingTop": 15,
             },
             Object {
               "backgroundColor": "transparent",
@@ -200,9 +207,13 @@ exports[`FormStep should support disabling its back button 1`] = `
                 "width": 58,
               },
             ],
-            Object {
-              "borderColor": "#dfe5e6",
-            },
+            undefined,
+            Array [
+              Object {
+                "borderColor": "#dfe5e6",
+              },
+              undefined,
+            ],
           ]
         }>
         <Text
@@ -214,6 +225,8 @@ exports[`FormStep should support disabling its back button 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -223,15 +236,17 @@ exports[`FormStep should support disabling its back button 1`] = `
                   "fontSize": 13,
                   "fontWeight": "bold",
                   "letterSpacing": 1,
-                  "marginBottom": 17,
-                  "marginTop": 15,
                 },
                 Object {
                   "color": "#f77040",
                 },
-                Object {
-                  "color": "#dfe5e6",
-                },
+                undefined,
+                Array [
+                  Object {
+                    "color": "#dfe5e6",
+                  },
+                  undefined,
+                ],
               ],
             ]
           }>

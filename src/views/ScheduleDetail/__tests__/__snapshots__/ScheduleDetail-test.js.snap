@@ -30,6 +30,8 @@ exports[`ScheduleDetail should render 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -102,6 +104,8 @@ exports[`ScheduleDetail should render 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -175,6 +179,8 @@ exports[`ScheduleDetail should render 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -269,6 +275,8 @@ exports[`ScheduleDetail should render 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -354,17 +362,21 @@ exports[`ScheduleDetail should render 1`] = `
             "alignItems": "center",
             "borderRadius": 5,
             "justifyContent": "center",
+            "marginHorizontal": 16,
+            "paddingBottom": 17,
+            "paddingTop": 15,
           },
           Object {
             "backgroundColor": "#f77040",
           },
-          Object {
-            "marginLeft": 16,
-            "marginRight": 16,
-          },
-          Object {
-            "backgroundColor": "#dfe5e6",
-          },
+          undefined,
+          undefined,
+          Array [
+            Object {
+              "backgroundColor": "#dfe5e6",
+            },
+            undefined,
+          ],
         ]
       }>
       <Text
@@ -376,6 +388,8 @@ exports[`ScheduleDetail should render 1`] = `
             Object {
               "color": "#003035",
               "fontFamily": "Brandon Text",
+            },
+            Object {
               "fontSize": 13,
               "textAlign": "center",
             },
@@ -385,15 +399,17 @@ exports[`ScheduleDetail should render 1`] = `
                 "fontSize": 13,
                 "fontWeight": "bold",
                 "letterSpacing": 1,
-                "marginBottom": 17,
-                "marginTop": 15,
               },
               Object {
                 "color": "#ffffff",
               },
-              Object {
-                "color": "#ffffff",
-              },
+              undefined,
+              Array [
+                Object {
+                  "color": "#ffffff",
+                },
+                undefined,
+              ],
             ],
           ]
         }>
@@ -436,6 +452,8 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -508,6 +526,8 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -581,6 +601,8 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -649,6 +671,8 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -695,6 +719,8 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -780,17 +806,21 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
             "alignItems": "center",
             "borderRadius": 5,
             "justifyContent": "center",
+            "marginHorizontal": 16,
+            "paddingBottom": 17,
+            "paddingTop": 15,
           },
           Object {
             "backgroundColor": "#f77040",
           },
-          Object {
-            "marginLeft": 16,
-            "marginRight": 16,
-          },
-          Object {
-            "backgroundColor": "#dfe5e6",
-          },
+          undefined,
+          undefined,
+          Array [
+            Object {
+              "backgroundColor": "#dfe5e6",
+            },
+            undefined,
+          ],
         ]
       }>
       <Text
@@ -802,6 +832,8 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
             Object {
               "color": "#003035",
               "fontFamily": "Brandon Text",
+            },
+            Object {
               "fontSize": 13,
               "textAlign": "center",
             },
@@ -811,15 +843,17 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
                 "fontSize": 13,
                 "fontWeight": "bold",
                 "letterSpacing": 1,
-                "marginBottom": 17,
-                "marginTop": 15,
               },
               Object {
                 "color": "#ffffff",
               },
-              Object {
-                "color": "#ffffff",
-              },
+              undefined,
+              Array [
+                Object {
+                  "color": "#ffffff",
+                },
+                undefined,
+              ],
             ],
           ]
         }>
@@ -862,6 +896,8 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -934,6 +970,8 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -1007,6 +1045,8 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -1075,6 +1115,8 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -1121,6 +1163,8 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -1206,17 +1250,21 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
             "alignItems": "center",
             "borderRadius": 5,
             "justifyContent": "center",
+            "marginHorizontal": 16,
+            "paddingBottom": 17,
+            "paddingTop": 15,
           },
           Object {
             "backgroundColor": "#f77040",
           },
-          Object {
-            "marginLeft": 16,
-            "marginRight": 16,
-          },
-          Object {
-            "backgroundColor": "#dfe5e6",
-          },
+          undefined,
+          undefined,
+          Array [
+            Object {
+              "backgroundColor": "#dfe5e6",
+            },
+            undefined,
+          ],
         ]
       }>
       <Text
@@ -1228,6 +1276,8 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
             Object {
               "color": "#003035",
               "fontFamily": "Brandon Text",
+            },
+            Object {
               "fontSize": 13,
               "textAlign": "center",
             },
@@ -1237,15 +1287,17 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
                 "fontSize": 13,
                 "fontWeight": "bold",
                 "letterSpacing": 1,
-                "marginBottom": 17,
-                "marginTop": 15,
               },
               Object {
                 "color": "#ffffff",
               },
-              Object {
-                "color": "#ffffff",
-              },
+              undefined,
+              Array [
+                Object {
+                  "color": "#ffffff",
+                },
+                undefined,
+              ],
             ],
           ]
         }>
@@ -1288,6 +1340,8 @@ exports[`ScheduleDetail should render the activity title if an activity is given
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
+          },
+          Object {
             "fontSize": 13,
             "textAlign": "center",
           },
@@ -1360,6 +1414,8 @@ exports[`ScheduleDetail should render the activity title if an activity is given
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -1433,6 +1489,8 @@ exports[`ScheduleDetail should render the activity title if an activity is given
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -1527,6 +1585,8 @@ exports[`ScheduleDetail should render the activity title if an activity is given
               Object {
                 "color": "#003035",
                 "fontFamily": "Brandon Text",
+              },
+              Object {
                 "fontSize": 13,
                 "textAlign": "center",
               },
@@ -1641,17 +1701,21 @@ exports[`ScheduleDetail should render the activity title if an activity is given
             "alignItems": "center",
             "borderRadius": 5,
             "justifyContent": "center",
+            "marginHorizontal": 16,
+            "paddingBottom": 17,
+            "paddingTop": 15,
           },
           Object {
             "backgroundColor": "#f77040",
           },
-          Object {
-            "marginLeft": 16,
-            "marginRight": 16,
-          },
-          Object {
-            "backgroundColor": "#dfe5e6",
-          },
+          undefined,
+          undefined,
+          Array [
+            Object {
+              "backgroundColor": "#dfe5e6",
+            },
+            undefined,
+          ],
         ]
       }>
       <Text
@@ -1663,6 +1727,8 @@ exports[`ScheduleDetail should render the activity title if an activity is given
             Object {
               "color": "#003035",
               "fontFamily": "Brandon Text",
+            },
+            Object {
               "fontSize": 13,
               "textAlign": "center",
             },
@@ -1672,15 +1738,17 @@ exports[`ScheduleDetail should render the activity title if an activity is given
                 "fontSize": 13,
                 "fontWeight": "bold",
                 "letterSpacing": 1,
-                "marginBottom": 17,
-                "marginTop": 15,
               },
               Object {
                 "color": "#ffffff",
               },
-              Object {
-                "color": "#ffffff",
-              },
+              undefined,
+              Array [
+                Object {
+                  "color": "#ffffff",
+                },
+                undefined,
+              ],
             ],
           ]
         }>

@@ -1,13 +1,24 @@
 jest.mock('src/constants/entities', () => ({
   __esModule: true,
-  ACTIONS_WITH_ENTITIES: ['ACTION_WITH_ENTITIES'],
+  ACTIONS_WITH_ENTITIES: [
+    'ACTION_WITH_ENTITIES',
+    'MESSAGE_SEND_SUCCESS',
+  ],
 }));
 
 import { merge } from 'lodash/fp';
+
+import { createPendingMessage } from 'src/api';
 import reduce, { createInitialState } from 'src/reducers/entities';
 import { logout } from 'src/actions/auth';
-import { fakeState, fakeCallNote, fakeActivity } from 'app/scripts/helpers';
+import { MESSAGE_SEND_SUCCESS } from 'src/constants/messages';
 import { CALL_NOTE_CREATE_SUCCESS } from 'src/constants/callNotes';
+import { fakeState, fakeCallNote, fakeActivity } from 'app/scripts/helpers';
+
+import {
+  fakeMessage,
+  fakeMessageData,
+} from 'app/scripts/helpers';
 
 
 describe('reducers/entities', () => {
@@ -51,6 +62,49 @@ describe('reducers/entities', () => {
     it('should reset to initial state', () => {
       expect(reduce(fakeState().entities, logout()))
         .toEqual(jasmine.objectContaining(createInitialState()));
+    });
+  });
+
+  describe('MESSAGE_SEND_SUCCESS', () => {
+    it('should remove the relevant pending message', () => {
+      const state = {
+        pendingMessages: {
+          23: createPendingMessage(),
+        },
+      };
+
+      const action = {
+        type: MESSAGE_SEND_SUCCESS,
+        payload: {
+          ...fakeMessageData(),
+          pendingId: 23,
+        },
+      };
+
+      const nextState = reduce(state, action);
+      expect(23 in nextState.pendingMessages).toBe(false);
+    });
+
+    it('should merge in the message entity in the payload', () => {
+      const state = {
+        pendingMessages: {
+          23: createPendingMessage(),
+        },
+        messages: {},
+      };
+
+      const msg = fakeMessage({ id: 21 });
+
+      const action = {
+        type: MESSAGE_SEND_SUCCESS,
+        payload: {
+          ...fakeMessageData(msg),
+          pendingId: 23,
+        },
+      };
+
+      const nextState = reduce(state, action);
+      expect(nextState.messages[21]).toEqual(msg);
     });
   });
 

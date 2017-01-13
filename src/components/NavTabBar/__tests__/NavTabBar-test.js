@@ -7,7 +7,7 @@ import { uidEquals } from 'app/scripts/helpers';
 describe('NavTabBar', () => {
   const createComponent = (props) => (
     <NavTabBar
-      activeTab={NavTabBar.tabs.activities}
+      activeTab={NavTabBar.tabSpecs[0].tabKey}
       onTabPress={noop}
       {...props}
     />
@@ -18,7 +18,7 @@ describe('NavTabBar', () => {
   });
 
   it('should call `onTabPress` when a tab is pressed for inactive tabs', () => {
-    each(NavTabBar.tabs, activeTab => {
+    each(NavTabBar.tabSpecs, ({ tabKey: activeTab }) => {
       const onTabPress = jest.fn();
 
       const el = shallow(createComponent({
@@ -26,8 +26,8 @@ describe('NavTabBar', () => {
         onTabPress,
       }));
 
-      each(NavTabBar.tabs, tab => {
-        el.findWhere(uidEquals(tab))
+      each(NavTabBar.tabs, ({ tabKey }) => {
+        el.findWhere(uidEquals(tabKey))
           .shallow()
           .simulate('press');
       });

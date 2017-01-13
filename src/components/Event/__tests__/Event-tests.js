@@ -37,6 +37,14 @@ describe('Event', () => {
     expect(el.toJSON()).toMatchSnapshot();
   });
 
+  it('should render a counter if a count is given', () => {
+    const el = render(createComponent({
+      count: 23,
+    }));
+
+    expect(el.toJSON()).toMatchSnapshot();
+  });
+
   it('should call onPress when pressed', () => {
     const onPress = jest.fn();
 
