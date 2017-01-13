@@ -48,6 +48,7 @@ export default {
   text: Text.styles.default,
   paragraph: [Text.types.paragraph, {
     fontSize: FONT_SIZE_NORMAL,
+    marginBottom: 20,
   }],
   list: {
     marginBottom: 20,

@@ -968,11 +968,12 @@ exports[`RichText should render typography 1`] = `
       Array [
         Object {
           "fontSize": 18,
-          "marginBottom": 20,
+          "marginBottom": 12,
           "textAlign": "left",
         },
         Object {
           "fontSize": 18,
+          "marginBottom": 20,
         },
       ]
     }>
@@ -999,11 +1000,12 @@ exports[`RichText should render typography 1`] = `
       Array [
         Object {
           "fontSize": 18,
-          "marginBottom": 20,
+          "marginBottom": 12,
           "textAlign": "left",
         },
         Object {
           "fontSize": 18,
+          "marginBottom": 20,
         },
       ]
     }>
@@ -1041,11 +1043,12 @@ exports[`RichText should render typography 1`] = `
       Array [
         Object {
           "fontSize": 18,
-          "marginBottom": 20,
+          "marginBottom": 12,
           "textAlign": "left",
         },
         Object {
           "fontSize": 18,
+          "marginBottom": 20,
         },
       ]
     }>
@@ -1631,11 +1634,12 @@ exports[`RichText should render typography 1`] = `
           Array [
             Object {
               "fontSize": 18,
-              "marginBottom": 20,
+              "marginBottom": 12,
               "textAlign": "left",
             },
             Object {
               "fontSize": 18,
+              "marginBottom": 20,
             },
           ]
         }>
@@ -1787,11 +1791,12 @@ exports[`RichText should render typography 1`] = `
             Array [
               Object {
                 "fontSize": 18,
-                "marginBottom": 20,
+                "marginBottom": 12,
                 "textAlign": "left",
               },
               Object {
                 "fontSize": 18,
+                "marginBottom": 20,
               },
             ]
           }>
@@ -1928,11 +1933,12 @@ exports[`RichText should support rule overrides 1`] = `
       Array [
         Object {
           "fontSize": 18,
-          "marginBottom": 20,
+          "marginBottom": 12,
           "textAlign": "left",
         },
         Object {
           "fontSize": 18,
+          "marginBottom": 20,
         },
       ]
     }>
@@ -1982,11 +1988,12 @@ exports[`RichText should support style overrides 1`] = `
       Array [
         Object {
           "fontSize": 18,
-          "marginBottom": 20,
+          "marginBottom": 12,
           "textAlign": "left",
         },
         Object {
           "fontSize": 18,
+          "marginBottom": 20,
         },
       ]
     }>
