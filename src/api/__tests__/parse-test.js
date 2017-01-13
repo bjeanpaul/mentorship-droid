@@ -5,6 +5,7 @@ import colors from 'src/constants/colors';
 import { imageUrl } from 'src/api';
 import { MESSAGE_TYPE_COMPLETE } from 'src/constants/messages';
 import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
+import { RichText } from 'src/richText';
 
 import {
   fakeCategory,
@@ -22,6 +23,7 @@ import {
   parseMessage,
   parseProfile,
   parseBlogPost,
+  parseBlogPostBodyContent,
 } from 'src/api/parse';
 
 
@@ -183,11 +185,20 @@ describe('api/parse', () => {
     it('should parse the image to an ImageUrl', () => {
       const blogPost = fakeBlogPost({
         image: '/images/foo.jpg',
+        bodyContent: [{
+          type: 'paragraph',
+          value: 'Hoards of leaves wear 3d glasses',
+        }],
       });
 
-      expect(parseBlogPost(blogPost)).toEqual(jasmine.objectContaining({
-        image: imageUrl('/images/foo.jpg'),
-      }));
+      const res = parseBlogPost(blogPost);
+
+      expect(res.bodyContent instanceof RichText).toBe(true);
+
+      expect(res.bodyContent.tree).toEqual(parseBlogPostBodyContent([{
+        type: 'paragraph',
+        value: 'Hoards of leaves wear 3d glasses',
+      }]).tree);
     });
   });
 });

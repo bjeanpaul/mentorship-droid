@@ -5,6 +5,7 @@ import { makeGradient } from 'src/helpers';
 import imageUrl from './imageUrl';
 import { MESSAGE_TYPE_COMPLETE } from 'src/constants/messages';
 import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
+import richText from 'src/richText';
 
 
 export const addOrdinals = list => list
@@ -78,9 +79,19 @@ export const parseProfile = ({ profilePic, ...data }) => ({
 });
 
 
-export const parseBlogPost = ({ image, ...data }) => ({
+export const parseBlogPostBodyContent = richText({
+  paragraph: richText.markdown,
+  heading: richText.heading2,
+  list: richText.list,
+  numberedList: richText.numberedList,
+  image: richText.image,
+});
+
+
+export const parseBlogPost = ({ image, bodyContent, ...data }) => ({
   ...data,
   image: imageUrl(image),
+  bodyContent: parseBlogPostBodyContent(bodyContent),
 });
 
 
