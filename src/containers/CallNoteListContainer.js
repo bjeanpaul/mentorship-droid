@@ -7,7 +7,7 @@ import { chooseCallNote } from 'src/actions/callNotes';
 
 
 // TODO handle call notes without activities once we have designs for this
-export const mapStateToProps = (state, { activityId } = {}) => {
+export const mapStateToProps = (state, { activityId }) => {
   let callNotes = getCallNotes(state);
   if (!isUndefined(activityId)) callNotes = filter(callNotes, { callActivity: activityId });
   return { callNotes };
