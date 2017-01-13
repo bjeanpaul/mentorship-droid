@@ -33,7 +33,7 @@ export const types = StyleSheet.create({
   paragraph: {
     textAlign: 'left',
     fontSize: 18,
-    marginBottom: 20,
+    marginBottom: 12,
   },
 
   sectionTitle: {

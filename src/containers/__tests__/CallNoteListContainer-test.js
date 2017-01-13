@@ -17,7 +17,7 @@ describe('CallNoteListContainer', () => {
         },
       });
 
-      expect(mapStateToProps(state))
+      expect(mapStateToProps(state, {}))
         .toEqual(jasmine.objectContaining({
           callNotes: [
             callNote1,
