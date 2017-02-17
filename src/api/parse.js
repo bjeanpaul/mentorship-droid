@@ -88,9 +88,15 @@ export const parseBlogPostBodyContent = richText({
 });
 
 
-export const parseBlogPost = ({ image, bodyContent, ...data }) => ({
+export const parseBlogPost = ({
+  image,
+  thumbnail,
+  bodyContent,
+  ...data,
+}) => ({
   ...data,
   image: imageUrl(image),
+  thumbnail: imageUrl(thumbnail),
   bodyContent: parseBlogPostBodyContent(bodyContent),
 });
 

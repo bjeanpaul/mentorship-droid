@@ -139,6 +139,7 @@ export const fakePendingMessage = data => merge(api.createPendingMessage({
 export const fakeBlogPost = data => merge({
   id: 7,
   createdAt: '2016-11-30T09:43:20.311Z',
+  thumbnail: api.imageUrl('/images/thubmbnail.png'),
   image: api.imageUrl('/images/image.png'),
   title: 'A tactile cactus',
   bodyContent: richText([{

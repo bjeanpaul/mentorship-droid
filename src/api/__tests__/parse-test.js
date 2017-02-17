@@ -200,5 +200,24 @@ describe('api/parse', () => {
         value: 'Hoards of leaves wear 3d glasses',
       }]).tree);
     });
+
+    it('should parse the thumbnail to an ImageUrl', () => {
+      const blogPost = fakeBlogPost({
+        thumbnail: '/thumbnails/foo.jpg',
+        bodyContent: [{
+          type: 'paragraph',
+          value: 'Hoards of leaves wear 3d glasses',
+        }],
+      });
+
+      const res = parseBlogPost(blogPost);
+
+      expect(res.bodyContent instanceof RichText).toBe(true);
+
+      expect(res.bodyContent.tree).toEqual(parseBlogPostBodyContent([{
+        type: 'paragraph',
+        value: 'Hoards of leaves wear 3d glasses',
+      }]).tree);
+    });
   });
 });
