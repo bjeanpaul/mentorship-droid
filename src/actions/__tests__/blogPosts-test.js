@@ -20,4 +20,14 @@ describe('actions/callNotes', () => {
       })();
     });
   });
+
+  describe('chooseBlogPost', () => {
+    it('should create actions for choosing a blog post', () => {
+      expect(actions.chooseBlogPost(21))
+        .toEqual({
+          type: constants.BLOG_POST_CHOOSE,
+          payload: { id: 21 },
+        });
+    });
+  });
 });

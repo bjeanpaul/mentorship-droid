@@ -16,3 +16,9 @@ export const listBlogPosts = apiAction({
   success: dataAction(constants.BLOG_POST_LIST_SUCCESS),
   failures: [[ApiResponseError, staticAction(constants.BLOG_POST_LIST_FAILURE)]],
 });
+
+
+export const chooseBlogPost = id => ({
+  type: constants.BLOG_POST_CHOOSE,
+  payload: { id },
+});
