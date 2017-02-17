@@ -59,200 +59,208 @@ exports[`BlogPostList should render 1`] = `
           "backgroundColor": "#eff2f2",
         }
       }>
-      <View
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "flexDirection": "row",
-            "marginBottom": 8,
-            "paddingHorizontal": 10,
-            "paddingVertical": 18,
-          }
-        }>
+      <TouchableNativeFeedback
+        onPress={[Function]}
+        uid="blogPosts:1">
         <View
           style={
             Object {
-              "alignItems": "flex-start",
-              "flex": 1,
-              "flexDirection": "column",
-              "paddingRight": 18,
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "marginBottom": 8,
+              "paddingHorizontal": 10,
+              "paddingVertical": 18,
             }
           }>
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
+          <View
             style={
-              Array [
-                Object {
-                  "color": "#003035",
-                  "fontFamily": "Brandon Text",
-                },
-                Object {
-                  "fontSize": 13,
-                  "textAlign": "center",
-                },
-                Object {
-                  "color": "#9fb1b3",
-                  "fontFamily": "Brandon Text_medium",
-                  "fontSize": 11,
-                  "fontWeight": "400",
-                },
-              ]
+              Object {
+                "alignItems": "flex-start",
+                "flex": 1,
+                "flexDirection": "column",
+                "paddingRight": 18,
+              }
             }>
-            IN 2 MONTHS
-          </Text>
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "#003035",
-                  "fontFamily": "Brandon Text",
-                },
-                Object {
-                  "fontSize": 13,
-                  "textAlign": "center",
-                },
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
                 Array [
                   Object {
-                    "fontFamily": "Brandon Text_medium",
-                    "fontSize": 18,
-                    "fontWeight": "400",
-                    "textAlign": "left",
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
                   },
                   Object {
-                    "paddingLeft": 6,
+                    "fontSize": 13,
+                    "textAlign": "center",
                   },
-                ],
-              ]
-            }>
-            Foo
-          </Text>
-        </View>
-        <View
-          style={
-            Object {
-              "alignItems": "flex-end",
-              "flex": 1,
-              "flexDirection": "column",
-              "paddingRight": 6,
-            }
-          }>
-          <Image
-            source={
-              Object {
-                "uri": "/api/foo.png?filter_spec=min-192x192",
-              }
-            }
-            style={
-              Object {
-                "height": 96,
-                "paddingRight": 6,
-                "width": 96,
-              }
-            } />
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "flexDirection": "row",
-            "marginBottom": 8,
-            "paddingHorizontal": 10,
-            "paddingVertical": 18,
-          }
-        }>
-        <View
-          style={
-            Object {
-              "alignItems": "flex-start",
-              "flex": 1,
-              "flexDirection": "column",
-              "paddingRight": 18,
-            }
-          }>
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "#003035",
-                  "fontFamily": "Brandon Text",
-                },
-                Object {
-                  "fontSize": 13,
-                  "textAlign": "center",
-                },
-                Object {
-                  "color": "#9fb1b3",
-                  "fontFamily": "Brandon Text_medium",
-                  "fontSize": 11,
-                  "fontWeight": "400",
-                },
-              ]
-            }>
-            IN 2 MONTHS
-          </Text>
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "#003035",
-                  "fontFamily": "Brandon Text",
-                },
-                Object {
-                  "fontSize": 13,
-                  "textAlign": "center",
-                },
+                  Object {
+                    "color": "#9fb1b3",
+                    "fontFamily": "Brandon Text_medium",
+                    "fontSize": 11,
+                    "fontWeight": "400",
+                  },
+                ]
+              }>
+              IN 2 MONTHS
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
                 Array [
                   Object {
-                    "fontFamily": "Brandon Text_medium",
-                    "fontSize": 18,
-                    "fontWeight": "400",
-                    "textAlign": "left",
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
                   },
                   Object {
-                    "paddingLeft": 6,
+                    "fontSize": 13,
+                    "textAlign": "center",
                   },
-                ],
-              ]
+                  Array [
+                    Object {
+                      "fontFamily": "Brandon Text_medium",
+                      "fontSize": 18,
+                      "fontWeight": "400",
+                      "textAlign": "left",
+                    },
+                    Object {
+                      "paddingLeft": 6,
+                    },
+                  ],
+                ]
+              }>
+              Foo
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "flex": 1,
+                "flexDirection": "column",
+                "paddingRight": 6,
+              }
             }>
-            Bar
-          </Text>
+            <Image
+              source={
+                Object {
+                  "uri": "/api/foo.png?filter_spec=min-192x192",
+                }
+              }
+              style={
+                Object {
+                  "height": 96,
+                  "paddingRight": 6,
+                  "width": 96,
+                }
+              } />
+          </View>
         </View>
+      </TouchableNativeFeedback>
+      <TouchableNativeFeedback
+        onPress={[Function]}
+        uid="blogPosts:2">
         <View
           style={
             Object {
-              "alignItems": "flex-end",
-              "flex": 1,
-              "flexDirection": "column",
-              "paddingRight": 6,
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "marginBottom": 8,
+              "paddingHorizontal": 10,
+              "paddingVertical": 18,
             }
           }>
-          <Image
-            source={
-              Object {
-                "uri": "/api/bar.png?filter_spec=min-192x192",
-              }
-            }
+          <View
             style={
               Object {
-                "height": 96,
-                "paddingRight": 6,
-                "width": 96,
+                "alignItems": "flex-start",
+                "flex": 1,
+                "flexDirection": "column",
+                "paddingRight": 18,
               }
-            } />
+            }>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                  },
+                  Object {
+                    "fontSize": 13,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "color": "#9fb1b3",
+                    "fontFamily": "Brandon Text_medium",
+                    "fontSize": 11,
+                    "fontWeight": "400",
+                  },
+                ]
+              }>
+              IN 2 MONTHS
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                  },
+                  Object {
+                    "fontSize": 13,
+                    "textAlign": "center",
+                  },
+                  Array [
+                    Object {
+                      "fontFamily": "Brandon Text_medium",
+                      "fontSize": 18,
+                      "fontWeight": "400",
+                      "textAlign": "left",
+                    },
+                    Object {
+                      "paddingLeft": 6,
+                    },
+                  ],
+                ]
+              }>
+              Bar
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "flex": 1,
+                "flexDirection": "column",
+                "paddingRight": 6,
+              }
+            }>
+            <Image
+              source={
+                Object {
+                  "uri": "/api/bar.png?filter_spec=min-192x192",
+                }
+              }
+              style={
+                Object {
+                  "height": 96,
+                  "paddingRight": 6,
+                  "width": 96,
+                }
+              } />
+          </View>
         </View>
-      </View>
+      </TouchableNativeFeedback>
     </View>
   </ScrollView>
 </View>
