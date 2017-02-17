@@ -22,6 +22,7 @@ config.API_BASE_URL = '/api';
 // github.com/facebook/jest/issues/1384
 jest.mock('TextInput', () => 'TextInput');
 jest.mock('ScrollView', () => 'ScrollView');
+jest.mock('TouchableNativeFeedback', () => 'TouchableNativeFeedback');
 
 // automocking doesn't seem to work for axios
 jest.setMock('axios', jest.fn());
