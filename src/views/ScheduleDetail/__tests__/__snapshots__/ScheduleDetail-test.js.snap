@@ -44,35 +44,31 @@ exports[`ScheduleDetail should render 1`] = `
       }>
       Schedule Call
     </Text>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
   </View>
   <View
     style={
@@ -133,35 +129,47 @@ exports[`ScheduleDetail should render 1`] = `
               "justifyContent": "space-between",
             }
           }>
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#ffbcbc",
-                  "borderColor": "red",
-                  "borderWidth": 1,
-                  "height": 100,
-                  "justifyContent": "center",
-                  "margin": 10,
-                  "width": 300,
-                },
-                undefined,
-              ]
-            }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+          <TouchableNativeFeedback
+            onPress={[Function]}
+            uid="date">
+            <View
               style={
                 Object {
-                  "color": "#333333",
-                  "margin": 20,
+                  "flex": 1,
+                  "flexDirection": "row",
                 }
               }>
-              TouchableNativeFeedback is not supported on this platform!
-            </Text>
-          </View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#003035",
+                      "fontFamily": "Brandon Text",
+                    },
+                    Object {
+                      "fontSize": 13,
+                      "textAlign": "center",
+                    },
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "flex": 1,
+                        "fontSize": 20,
+                        "textAlign": "left",
+                      },
+                      Object {
+                        "color": "#f77040",
+                      },
+                    ],
+                  ]
+                }>
+                Add date
+              </Text>
+            </View>
+          </TouchableNativeFeedback>
         </View>
       </View>
       <View
@@ -208,35 +216,47 @@ exports[`ScheduleDetail should render 1`] = `
               "justifyContent": "space-between",
             }
           }>
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#ffbcbc",
-                  "borderColor": "red",
-                  "borderWidth": 1,
-                  "height": 100,
-                  "justifyContent": "center",
-                  "margin": 10,
-                  "width": 300,
-                },
-                undefined,
-              ]
-            }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+          <TouchableNativeFeedback
+            onPress={[Function]}
+            uid="time">
+            <View
               style={
                 Object {
-                  "color": "#333333",
-                  "margin": 20,
+                  "flex": 1,
+                  "flexDirection": "row",
                 }
               }>
-              TouchableNativeFeedback is not supported on this platform!
-            </Text>
-          </View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#003035",
+                      "fontFamily": "Brandon Text",
+                    },
+                    Object {
+                      "fontSize": 13,
+                      "textAlign": "center",
+                    },
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "flex": 1,
+                        "fontSize": 20,
+                        "textAlign": "left",
+                      },
+                      Object {
+                        "color": "#f77040",
+                      },
+                    ],
+                  ]
+                }>
+                Add time
+              </Text>
+            </View>
+          </TouchableNativeFeedback>
         </View>
       </View>
     </View>
@@ -304,35 +324,47 @@ exports[`ScheduleDetail should render 1`] = `
               "justifyContent": "space-between",
             }
           }>
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#ffbcbc",
-                  "borderColor": "red",
-                  "borderWidth": 1,
-                  "height": 100,
-                  "justifyContent": "center",
-                  "margin": 10,
-                  "width": 300,
-                },
-                undefined,
-              ]
-            }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+          <TouchableNativeFeedback
+            onPress={[Function]}
+            uid="activity">
+            <View
               style={
                 Object {
-                  "color": "#333333",
-                  "margin": 20,
+                  "flex": 1,
+                  "flexDirection": "row",
                 }
               }>
-              TouchableNativeFeedback is not supported on this platform!
-            </Text>
-          </View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#003035",
+                      "fontFamily": "Brandon Text",
+                    },
+                    Object {
+                      "fontSize": 13,
+                      "textAlign": "center",
+                    },
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "flex": 1,
+                        "fontSize": 20,
+                        "textAlign": "left",
+                      },
+                      Object {
+                        "color": "#f77040",
+                      },
+                    ],
+                  ]
+                }>
+                Add Activity (Optional)
+              </Text>
+            </View>
+          </TouchableNativeFeedback>
         </View>
       </View>
     </View>
@@ -466,35 +498,31 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
       }>
       Schedule Call
     </Text>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
   </View>
   <View
     style={
@@ -555,35 +583,45 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
               "justifyContent": "space-between",
             }
           }>
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#ffbcbc",
-                  "borderColor": "red",
-                  "borderWidth": 1,
-                  "height": 100,
-                  "justifyContent": "center",
-                  "margin": 10,
-                  "width": 300,
-                },
-                undefined,
-              ]
-            }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+          <TouchableNativeFeedback
+            onPress={[Function]}
+            uid="date">
+            <View
               style={
                 Object {
-                  "color": "#333333",
-                  "margin": 20,
+                  "flex": 1,
+                  "flexDirection": "row",
                 }
               }>
-              TouchableNativeFeedback is not supported on this platform!
-            </Text>
-          </View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#003035",
+                      "fontFamily": "Brandon Text",
+                    },
+                    Object {
+                      "fontSize": 13,
+                      "textAlign": "center",
+                    },
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "flex": 1,
+                        "fontSize": 20,
+                        "textAlign": "left",
+                      },
+                      false,
+                    ],
+                  ]
+                }>
+                Thu, 22 Sep 16
+              </Text>
+            </View>
+          </TouchableNativeFeedback>
         </View>
       </View>
       <View
@@ -630,35 +668,45 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
               "justifyContent": "space-between",
             }
           }>
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#ffbcbc",
-                  "borderColor": "red",
-                  "borderWidth": 1,
-                  "height": 100,
-                  "justifyContent": "center",
-                  "margin": 10,
-                  "width": 300,
-                },
-                undefined,
-              ]
-            }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+          <TouchableNativeFeedback
+            onPress={[Function]}
+            uid="time">
+            <View
               style={
                 Object {
-                  "color": "#333333",
-                  "margin": 20,
+                  "flex": 1,
+                  "flexDirection": "row",
                 }
               }>
-              TouchableNativeFeedback is not supported on this platform!
-            </Text>
-          </View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#003035",
+                      "fontFamily": "Brandon Text",
+                    },
+                    Object {
+                      "fontSize": 13,
+                      "textAlign": "center",
+                    },
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "flex": 1,
+                        "fontSize": 20,
+                        "textAlign": "left",
+                      },
+                      false,
+                    ],
+                  ]
+                }>
+                4:31 pm
+              </Text>
+            </View>
+          </TouchableNativeFeedback>
         </View>
       </View>
     </View>
@@ -748,35 +796,47 @@ exports[`ScheduleDetail should render date collision error feedback 1`] = `
               "justifyContent": "space-between",
             }
           }>
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#ffbcbc",
-                  "borderColor": "red",
-                  "borderWidth": 1,
-                  "height": 100,
-                  "justifyContent": "center",
-                  "margin": 10,
-                  "width": 300,
-                },
-                undefined,
-              ]
-            }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+          <TouchableNativeFeedback
+            onPress={[Function]}
+            uid="activity">
+            <View
               style={
                 Object {
-                  "color": "#333333",
-                  "margin": 20,
+                  "flex": 1,
+                  "flexDirection": "row",
                 }
               }>
-              TouchableNativeFeedback is not supported on this platform!
-            </Text>
-          </View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#003035",
+                      "fontFamily": "Brandon Text",
+                    },
+                    Object {
+                      "fontSize": 13,
+                      "textAlign": "center",
+                    },
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "flex": 1,
+                        "fontSize": 20,
+                        "textAlign": "left",
+                      },
+                      Object {
+                        "color": "#f77040",
+                      },
+                    ],
+                  ]
+                }>
+                Add Activity (Optional)
+              </Text>
+            </View>
+          </TouchableNativeFeedback>
         </View>
       </View>
     </View>
@@ -910,35 +970,31 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
       }>
       Schedule Call
     </Text>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
   </View>
   <View
     style={
@@ -999,35 +1055,45 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
               "justifyContent": "space-between",
             }
           }>
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#ffbcbc",
-                  "borderColor": "red",
-                  "borderWidth": 1,
-                  "height": 100,
-                  "justifyContent": "center",
-                  "margin": 10,
-                  "width": 300,
-                },
-                undefined,
-              ]
-            }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+          <TouchableNativeFeedback
+            onPress={[Function]}
+            uid="date">
+            <View
               style={
                 Object {
-                  "color": "#333333",
-                  "margin": 20,
+                  "flex": 1,
+                  "flexDirection": "row",
                 }
               }>
-              TouchableNativeFeedback is not supported on this platform!
-            </Text>
-          </View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#003035",
+                      "fontFamily": "Brandon Text",
+                    },
+                    Object {
+                      "fontSize": 13,
+                      "textAlign": "center",
+                    },
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "flex": 1,
+                        "fontSize": 20,
+                        "textAlign": "left",
+                      },
+                      false,
+                    ],
+                  ]
+                }>
+                Tue, 27 Sep 16
+              </Text>
+            </View>
+          </TouchableNativeFeedback>
         </View>
       </View>
       <View
@@ -1074,35 +1140,45 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
               "justifyContent": "space-between",
             }
           }>
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#ffbcbc",
-                  "borderColor": "red",
-                  "borderWidth": 1,
-                  "height": 100,
-                  "justifyContent": "center",
-                  "margin": 10,
-                  "width": 300,
-                },
-                undefined,
-              ]
-            }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+          <TouchableNativeFeedback
+            onPress={[Function]}
+            uid="time">
+            <View
               style={
                 Object {
-                  "color": "#333333",
-                  "margin": 20,
+                  "flex": 1,
+                  "flexDirection": "row",
                 }
               }>
-              TouchableNativeFeedback is not supported on this platform!
-            </Text>
-          </View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#003035",
+                      "fontFamily": "Brandon Text",
+                    },
+                    Object {
+                      "fontSize": 13,
+                      "textAlign": "center",
+                    },
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "flex": 1,
+                        "fontSize": 20,
+                        "textAlign": "left",
+                      },
+                      false,
+                    ],
+                  ]
+                }>
+                10:50 am
+              </Text>
+            </View>
+          </TouchableNativeFeedback>
         </View>
       </View>
     </View>
@@ -1192,35 +1268,47 @@ exports[`ScheduleDetail should render past time error feedback 1`] = `
               "justifyContent": "space-between",
             }
           }>
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#ffbcbc",
-                  "borderColor": "red",
-                  "borderWidth": 1,
-                  "height": 100,
-                  "justifyContent": "center",
-                  "margin": 10,
-                  "width": 300,
-                },
-                undefined,
-              ]
-            }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+          <TouchableNativeFeedback
+            onPress={[Function]}
+            uid="activity">
+            <View
               style={
                 Object {
-                  "color": "#333333",
-                  "margin": 20,
+                  "flex": 1,
+                  "flexDirection": "row",
                 }
               }>
-              TouchableNativeFeedback is not supported on this platform!
-            </Text>
-          </View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#003035",
+                      "fontFamily": "Brandon Text",
+                    },
+                    Object {
+                      "fontSize": 13,
+                      "textAlign": "center",
+                    },
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "flex": 1,
+                        "fontSize": 20,
+                        "textAlign": "left",
+                      },
+                      Object {
+                        "color": "#f77040",
+                      },
+                    ],
+                  ]
+                }>
+                Add Activity (Optional)
+              </Text>
+            </View>
+          </TouchableNativeFeedback>
         </View>
       </View>
     </View>
@@ -1354,35 +1442,31 @@ exports[`ScheduleDetail should render the activity title if an activity is given
       }>
       Schedule Call
     </Text>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
   </View>
   <View
     style={
@@ -1443,35 +1527,47 @@ exports[`ScheduleDetail should render the activity title if an activity is given
               "justifyContent": "space-between",
             }
           }>
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#ffbcbc",
-                  "borderColor": "red",
-                  "borderWidth": 1,
-                  "height": 100,
-                  "justifyContent": "center",
-                  "margin": 10,
-                  "width": 300,
-                },
-                undefined,
-              ]
-            }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+          <TouchableNativeFeedback
+            onPress={[Function]}
+            uid="date">
+            <View
               style={
                 Object {
-                  "color": "#333333",
-                  "margin": 20,
+                  "flex": 1,
+                  "flexDirection": "row",
                 }
               }>
-              TouchableNativeFeedback is not supported on this platform!
-            </Text>
-          </View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#003035",
+                      "fontFamily": "Brandon Text",
+                    },
+                    Object {
+                      "fontSize": 13,
+                      "textAlign": "center",
+                    },
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "flex": 1,
+                        "fontSize": 20,
+                        "textAlign": "left",
+                      },
+                      Object {
+                        "color": "#f77040",
+                      },
+                    ],
+                  ]
+                }>
+                Add date
+              </Text>
+            </View>
+          </TouchableNativeFeedback>
         </View>
       </View>
       <View
@@ -1518,35 +1614,47 @@ exports[`ScheduleDetail should render the activity title if an activity is given
               "justifyContent": "space-between",
             }
           }>
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#ffbcbc",
-                  "borderColor": "red",
-                  "borderWidth": 1,
-                  "height": 100,
-                  "justifyContent": "center",
-                  "margin": 10,
-                  "width": 300,
-                },
-                undefined,
-              ]
-            }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+          <TouchableNativeFeedback
+            onPress={[Function]}
+            uid="time">
+            <View
               style={
                 Object {
-                  "color": "#333333",
-                  "margin": 20,
+                  "flex": 1,
+                  "flexDirection": "row",
                 }
               }>
-              TouchableNativeFeedback is not supported on this platform!
-            </Text>
-          </View>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#003035",
+                      "fontFamily": "Brandon Text",
+                    },
+                    Object {
+                      "fontSize": 13,
+                      "textAlign": "center",
+                    },
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "flex": 1,
+                        "fontSize": 20,
+                        "textAlign": "left",
+                      },
+                      Object {
+                        "color": "#f77040",
+                      },
+                    ],
+                  ]
+                }>
+                Add time
+              </Text>
+            </View>
+          </TouchableNativeFeedback>
         </View>
       </View>
     </View>
@@ -1614,64 +1722,73 @@ exports[`ScheduleDetail should render the activity title if an activity is given
               "justifyContent": "space-between",
             }
           }>
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#ffbcbc",
-                  "borderColor": "red",
-                  "borderWidth": 1,
-                  "height": 100,
-                  "justifyContent": "center",
-                  "margin": 10,
-                  "width": 300,
-                },
-                undefined,
-              ]
-            }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+          <TouchableNativeFeedback
+            onPress={[Function]}
+            uid="activity">
+            <View
               style={
                 Object {
-                  "color": "#333333",
-                  "margin": 20,
+                  "flex": 1,
+                  "flexDirection": "row",
                 }
               }>
-              TouchableNativeFeedback is not supported on this platform!
-            </Text>
-          </View>
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#ffbcbc",
-                  "borderColor": "red",
-                  "borderWidth": 1,
-                  "height": 100,
-                  "justifyContent": "center",
-                  "margin": 10,
-                  "width": 300,
-                },
-                undefined,
-              ]
-            }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#003035",
+                      "fontFamily": "Brandon Text",
+                    },
+                    Object {
+                      "fontSize": 13,
+                      "textAlign": "center",
+                    },
+                    Array [
+                      Object {
+                        "color": "#003035",
+                        "flex": 1,
+                        "fontSize": 20,
+                        "textAlign": "left",
+                      },
+                      false,
+                    ],
+                  ]
+                }>
+                Activity 3
+              </Text>
+            </View>
+          </TouchableNativeFeedback>
+          <TouchableNativeFeedback
+            onPress={[Function]}
+            uid="removeActivity">
+            <View
               style={
                 Object {
-                  "color": "#333333",
-                  "margin": 20,
+                  "alignItems": "center",
+                  "padding": 2,
                 }
               }>
-              TouchableNativeFeedback is not supported on this platform!
-            </Text>
-          </View>
+              <Image
+                source={1}
+                style={
+                  Array [
+                    Object {
+                      "height": 24,
+                      "width": 24,
+                    },
+                    Object {
+                      "flex": -1,
+                      "height": 18,
+                      "resizeMode": "contain",
+                      "width": 18,
+                    },
+                  ]
+                } />
+            </View>
+          </TouchableNativeFeedback>
         </View>
       </View>
     </View>
