@@ -1,5 +1,0 @@
-describe('BlogPostContainer', () => {
-  describe('mapStateToProps', () => {
-    xit('should provide the relevant blog post');
-  });
-});
