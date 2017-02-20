@@ -61,7 +61,7 @@ exports[`RichText should allow for types to be created manually 1`] = `
           Object {
             "fontSize": 18,
             "marginBottom": 13,
-            "marginTop": 27,
+            "marginTop": 16,
           },
         ]
       }>
@@ -100,7 +100,6 @@ exports[`RichText should allow for types to be created manually 1`] = `
           Object {
             "fontSize": 16,
             "marginBottom": 10,
-            "marginTop": 20,
           },
         ]
       }>
@@ -139,7 +138,6 @@ exports[`RichText should allow for types to be created manually 1`] = `
           Object {
             "fontSize": 15,
             "marginBottom": 7,
-            "marginTop": 14,
           },
         ]
       }>
@@ -178,7 +176,6 @@ exports[`RichText should allow for types to be created manually 1`] = `
           Object {
             "fontSize": 14,
             "marginBottom": 4,
-            "marginTop": 8,
           },
         ]
       }>
@@ -217,7 +214,6 @@ exports[`RichText should allow for types to be created manually 1`] = `
           Object {
             "fontSize": 13,
             "marginBottom": 3,
-            "marginTop": 6,
           },
         ]
       }>
@@ -815,7 +811,7 @@ exports[`RichText should render typography 1`] = `
         Object {
           "fontSize": 18,
           "marginBottom": 13,
-          "marginTop": 27,
+          "marginTop": 16,
         },
       ]
     }>
@@ -847,7 +843,6 @@ exports[`RichText should render typography 1`] = `
         Object {
           "fontSize": 16,
           "marginBottom": 10,
-          "marginTop": 20,
         },
       ]
     }>
@@ -879,7 +874,6 @@ exports[`RichText should render typography 1`] = `
         Object {
           "fontSize": 15,
           "marginBottom": 7,
-          "marginTop": 14,
         },
       ]
     }>
@@ -911,7 +905,6 @@ exports[`RichText should render typography 1`] = `
         Object {
           "fontSize": 14,
           "marginBottom": 4,
-          "marginTop": 8,
         },
       ]
     }>
@@ -943,7 +936,6 @@ exports[`RichText should render typography 1`] = `
         Object {
           "fontSize": 13,
           "marginBottom": 3,
-          "marginTop": 6,
         },
       ]
     }>

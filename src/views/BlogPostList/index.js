@@ -56,6 +56,7 @@ BlogPostList.propTypes = {
   blogPosts: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
+    createdAt: PropTypes.string.isRequired,
     thumbnail: PropTypes.instanceOf(ImageUrl),
   })).isRequired,
 
