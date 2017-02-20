@@ -44,35 +44,31 @@ exports[`CallNoteList should render 1`] = `
       }>
       Call Notes
     </Text>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
   </View>
   <ScrollView />
 </View>
@@ -124,95 +120,111 @@ exports[`CallNoteList should render call notes as rows 1`] = `
       }>
       Call Notes
     </Text>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
   </View>
   <ScrollView>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      callNoteId={1}
+      onPress={[Function]}>
+      <View
         style={
           Object {
-            "color": "#333333",
-            "margin": 20,
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "marginLeft": 24,
+            "marginRight": 24,
+            "paddingBottom": 32,
+            "paddingTop": 26,
           }
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#003035",
+                "fontSize": 18,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          Wed, Sep 28, 7:34 pm
+        </Text>
+      </View>
+    </TouchableNativeFeedback>
+    <TouchableNativeFeedback
+      callNoteId={2}
+      onPress={[Function]}>
+      <View
         style={
           Object {
-            "color": "#333333",
-            "margin": 20,
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "marginLeft": 24,
+            "marginRight": 24,
+            "paddingBottom": 32,
+            "paddingTop": 26,
           }
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#003035",
+                "fontSize": 18,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          Wed, Sep 28, 7:34 pm
+        </Text>
+      </View>
+    </TouchableNativeFeedback>
   </ScrollView>
 </View>
 `;

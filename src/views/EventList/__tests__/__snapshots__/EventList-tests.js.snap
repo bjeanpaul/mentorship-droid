@@ -43,35 +43,108 @@ exports[`EventList should render 1`] = `
         Friday, 16 September
       </Text>
     </View>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
           Object {
-            "color": "#333333",
-            "margin": 20,
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRadius": 4,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "margin": 24,
+            "marginTop": 23,
+            "paddingBottom": 20,
+            "paddingLeft": 16,
+            "paddingRight": 8,
+            "paddingTop": 20,
           }
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#999",
+                "borderRadius": 56,
+                "height": 56,
+                "marginRight": 16,
+                "overflow": "visible",
+                "width": 56,
+              }
+            }>
+            <Image
+              source={1}
+              style={
+                Object {
+                  "borderRadius": 56,
+                  "height": 56,
+                  "width": 56,
+                }
+              } />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "alignSelf": "flex-start",
+              "flex": 1,
+              "flexDirection": "column",
+              "paddingTop": 3,
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 16,
+                  "fontWeight": "bold",
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            Call scheduled
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={2}
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#80979a",
+                  "fontSize": 15,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            Friday 16th, September 2016 1:27 pm
+          </Text>
+        </View>
+      </View>
+    </TouchableNativeFeedback>
   </View>
 </View>
 `;

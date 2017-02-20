@@ -44,35 +44,31 @@ exports[`StartCall should render 1`] = `
       }>
       Call Mentee
     </Text>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
   </View>
   <View
     style={
@@ -115,35 +111,62 @@ exports[`StartCall should render 1`] = `
         "padding": 24,
       }
     }>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "justifyContent": "center",
+              "marginHorizontal": 16,
+              "paddingBottom": 17,
+              "paddingTop": 15,
+            },
+            Object {
+              "backgroundColor": "#f77040",
+            },
+            Object {
+              "alignSelf": "stretch",
+            },
+            undefined,
+            undefined,
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Array [
+                Object {
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 13,
+                  "fontWeight": "bold",
+                  "letterSpacing": 1,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+                undefined,
+                undefined,
+              ],
+            ]
+          }>
+          ACTIVATE CALL
+        </Text>
+      </View>
+    </TouchableNativeFeedback>
   </View>
 </View>
 `;
@@ -194,35 +217,31 @@ exports[`StartCall should render with a call time 1`] = `
       }>
       Time for your call
     </Text>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
   </View>
   <View
     style={
@@ -287,35 +306,62 @@ exports[`StartCall should render with a call time 1`] = `
         "padding": 24,
       }
     }>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "justifyContent": "center",
+              "marginHorizontal": 16,
+              "paddingBottom": 17,
+              "paddingTop": 15,
+            },
+            Object {
+              "backgroundColor": "#f77040",
+            },
+            Object {
+              "alignSelf": "stretch",
+            },
+            undefined,
+            undefined,
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Array [
+                Object {
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 13,
+                  "fontWeight": "bold",
+                  "letterSpacing": 1,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+                undefined,
+                undefined,
+              ],
+            ]
+          }>
+          ACTIVATE CALL
+        </Text>
+      </View>
+    </TouchableNativeFeedback>
   </View>
 </View>
 `;
@@ -366,35 +412,31 @@ exports[`StartCall should render with a call time and activity 1`] = `
       }>
       Time for your call
     </Text>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
   </View>
   <View
     style={
@@ -481,35 +523,62 @@ exports[`StartCall should render with a call time and activity 1`] = `
         "padding": 24,
       }
     }>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderRadius": 5,
+              "justifyContent": "center",
+              "marginHorizontal": 16,
+              "paddingBottom": 17,
+              "paddingTop": 15,
+            },
+            Object {
+              "backgroundColor": "#f77040",
+            },
+            Object {
+              "alignSelf": "stretch",
+            },
+            undefined,
+            undefined,
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Array [
+                Object {
+                  "fontFamily": "Brandon Text_bold",
+                  "fontSize": 13,
+                  "fontWeight": "bold",
+                  "letterSpacing": 1,
+                },
+                Object {
+                  "color": "#ffffff",
+                },
+                undefined,
+                undefined,
+              ],
+            ]
+          }>
+          ACTIVATE CALL
+        </Text>
+      </View>
+    </TouchableNativeFeedback>
   </View>
 </View>
 `;

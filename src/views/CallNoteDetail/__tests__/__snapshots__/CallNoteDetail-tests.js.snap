@@ -44,35 +44,31 @@ exports[`CallNoteDetail should exclude the activity icon if it does not exist 1`
       }>
       Wed, Sep 28, 7:09 pm
     </Text>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
   </View>
   <ScrollView
     style={
@@ -467,35 +463,31 @@ exports[`CallNoteDetail should exclude the activity views if they are undefined 
       }>
       Wed, Sep 28, 7:09 pm
     </Text>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
   </View>
   <ScrollView
     style={
@@ -750,35 +742,31 @@ exports[`CallNoteDetail should render 1`] = `
       }>
       Wed, Sep 28, 7:09 pm
     </Text>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
   </View>
   <ScrollView
     style={
