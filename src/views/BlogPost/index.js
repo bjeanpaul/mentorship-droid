@@ -11,6 +11,7 @@ const { Heading1 } = RichText;
 
 
 const BlogPost = ({
+  onBackPress,
   blogPost: {
     title,
     image,
@@ -22,8 +23,9 @@ const BlogPost = ({
     <ScrollView>
       <Header style={Header.themes.light}>
         <HeaderIcon
-          uid="dismiss"
+          uid="back"
           type={HeaderIcon.types.backDark}
+          onPress={onBackPress}
         />
       </Header>
 
@@ -47,6 +49,7 @@ const BlogPost = ({
 
 
 BlogPost.propTypes = {
+  onBackPress: PropTypes.func.isRequired,
   blogPost: PropTypes.shape({
     title: PropTypes.string.isRequired,
     createdAt: PropTypes.string.isRequired,

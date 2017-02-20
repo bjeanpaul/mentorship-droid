@@ -1,14 +1,16 @@
+import { noop } from 'lodash';
 import React from 'react';
 
 import BlogPost from 'src/views/BlogPost';
 import { imageUrl } from 'src/api';
-import { fakeBlogPost } from 'app/scripts/helpers';
+import { uidEquals, fakeBlogPost } from 'app/scripts/helpers';
 
 
 describe('BlogPost', () => {
   function createComponent(props = {}) {
     return (
       <BlogPost
+        onBackPress={noop}
         blogPost={fakeBlogPost()}
         {...props}
       />
@@ -25,5 +27,15 @@ describe('BlogPost', () => {
         image: imageUrl(null),
       }),
     }))).toMatchSnapshot();
+  });
+
+  it('should call onBackPress when back is pressed', () => {
+    const onBackPress = jest.fn();
+    const el = shallow(createComponent({ onBackPress }));
+
+    el.findWhere(uidEquals('back'))
+      .simulate('press');
+
+    expect(onBackPress.mock.calls).toEqual([[]]);
   });
 });
