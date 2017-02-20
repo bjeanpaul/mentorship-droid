@@ -4,12 +4,10 @@ import React, { PropTypes } from 'react';
 import richText, { richTextTypes } from 'src/richText';
 
 
-const defineType = (type, RichText) => assign(({ children }) => (
-  <RichText>
-    {richText(type)(children)}
-  </RichText>
+const defineType = (type, RichText) => assign(({ content }) => (
+  <RichText content={richText(type)(content)} />
 ), {
-  propTypes: { children: PropTypes.any.isRequired },
+  propTypes: { content: PropTypes.any.isRequired },
 });
 
 

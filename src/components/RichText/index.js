@@ -47,11 +47,11 @@ class RichText extends Component {
   render() {
     const styles = this.getStyles();
     const renderFn = this.getRenderFn(styles);
-    const { children } = this.props;
+    const { content } = this.props;
 
     return (
       <View style={styles.container}>
-        {renderFn(children.tree)}
+        {renderFn(content.tree)}
       </View>
     );
   }
@@ -59,7 +59,7 @@ class RichText extends Component {
 
 
 RichText.propTypes = {
-  children: PropTypes.instanceOf(RichTextObject).isRequired,
+  content: PropTypes.instanceOf(RichTextObject).isRequired,
   styles: PropTypes.any,
   rules: PropTypes.func,
 };
