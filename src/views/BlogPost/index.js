@@ -33,7 +33,7 @@ const BlogPost = ({
         {moment(createdAt).fromNow().toUpperCase()}
       </Text>
 
-      <Heading1>{title}</Heading1>
+      <Heading1 content={title} />
 
       {image.exists() && <View style={styles.imageContainer}>
         <Image
@@ -42,7 +42,7 @@ const BlogPost = ({
         />
       </View>}
 
-      <RichText>{bodyContent}</RichText>
+      <RichText content={bodyContent} />
     </ScrollView>
   </BaseView>
 );
