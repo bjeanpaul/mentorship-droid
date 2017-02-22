@@ -52,13 +52,14 @@ exports[`BlogPostList should render 1`] = `
       Blog
     </Text>
   </View>
-  <ScrollView>
-    <View
-      style={
-        Object {
-          "backgroundColor": "#eff2f2",
-        }
-      }>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#eff2f2",
+        "flex": 1,
+      }
+    }>
+    <ScrollView>
       <TouchableNativeFeedback
         onPress={[Function]}
         uid="blogPosts:1">
@@ -261,7 +262,7 @@ exports[`BlogPostList should render 1`] = `
           </View>
         </View>
       </TouchableNativeFeedback>
-    </View>
-  </ScrollView>
+    </ScrollView>
+  </View>
 </View>
 `;

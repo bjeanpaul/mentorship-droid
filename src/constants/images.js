@@ -18,16 +18,20 @@ import ACTIVITY_RATIONALE from 'app/assets/rationale.png';
 import ACTIVITY_REFLECTION_POINTS from 'app/assets/reflection-points.png';
 import ACTIVITY_SKILLS_DEVELOPED from 'app/assets/skills-developed.png';
 import ACTIVITY_TOPIC from 'app/assets/topic.png';
+
 import NAV_TAB_ACTIVITIES from 'app/assets/nav-activities.png';
 import NAV_TAB_CHAT from 'app/assets/nav-chat.png';
 import NAV_TAB_COMMUNITY from 'app/assets/nav-community.png';
 import NAV_TAB_JOURNEY from 'app/assets/nav-journey.png';
 import NAV_TAB_SCHEDULED_CALLS from 'app/assets/nav-calls.png';
+import NAV_TAB_BLOG_POSTS from 'app/assets/nav-blogs.png';
+
 import NAV_TAB_ACTIVITIES_ACTIVE from 'app/assets/nav-activities-active.png';
 import NAV_TAB_CHAT_ACTIVE from 'app/assets/nav-chat-active.png';
 import NAV_TAB_COMMUNITY_ACTIVE from 'app/assets/nav-community-active.png';
 import NAV_TAB_JOURNEY_ACTIVE from 'app/assets/nav-journey-active.png';
 import NAV_TAB_SCHEDULED_CALLS_ACTIVE from 'app/assets/nav-calls-active.png';
+import NAV_TAB_BLOG_POSTS_ACTIVE from 'app/assets/nav-blogs-active.png';
 
 import JOURNEY_MENTEE from 'app/assets/journey-mentee.png';
 import JOURNEY_CALL_ICON from 'app/assets/call-icon.png';
@@ -91,11 +95,6 @@ export default {
   ACTIVITY_REFLECTION_POINTS,
   ACTIVITY_SKILLS_DEVELOPED,
   ACTIVITY_TOPIC,
-  NAV_TAB_ACTIVITIES,
-  NAV_TAB_CHAT,
-  NAV_TAB_COMMUNITY,
-  NAV_TAB_JOURNEY,
-  NAV_TAB_SCHEDULED_CALLS,
 
   JOURNEY_MENTEE,
   JOURNEY_CALL_ICON,
@@ -104,11 +103,19 @@ export default {
   SETTINGS_ICON,
   EVENT_MORE,
 
+  NAV_TAB_ACTIVITIES,
+  NAV_TAB_CHAT,
+  NAV_TAB_COMMUNITY,
+  NAV_TAB_JOURNEY,
+  NAV_TAB_SCHEDULED_CALLS,
+  NAV_TAB_BLOG_POSTS,
+
   NAV_TAB_ACTIVITIES_ACTIVE,
   NAV_TAB_CHAT_ACTIVE,
   NAV_TAB_COMMUNITY_ACTIVE,
   NAV_TAB_JOURNEY_ACTIVE,
   NAV_TAB_SCHEDULED_CALLS_ACTIVE,
+  NAV_TAB_BLOG_POSTS_ACTIVE,
 
   START_CALL,
   OVERLAY_DONE,
