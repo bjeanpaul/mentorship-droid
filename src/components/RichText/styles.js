@@ -80,7 +80,6 @@ export default {
   },
   heading2: {
     fontSize: 18,
-    marginTop: 16,
     marginBottom: 13,
   },
   heading3: {
