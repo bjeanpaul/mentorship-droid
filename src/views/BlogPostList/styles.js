@@ -6,6 +6,7 @@ import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 
 export default StyleSheet.create({
   blogPostList: {
+    flex: 1,
     backgroundColor: colors.BG_DEFAULT_SECONDARY,
   },
   blogPost: {
