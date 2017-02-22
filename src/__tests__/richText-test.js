@@ -263,4 +263,18 @@ describe('api/richText', () => {
       content: 'foo',
     }]);
   });
+
+  it('should normalize case', () => {
+    const fn = richText({
+      fooBar: richText.text,
+    });
+
+    expect(fn([{
+      type: 'foo_bar',
+      value: 'baz',
+    }]).tree).toEqual([{
+      type: 'text',
+      content: 'baz',
+    }]);
+  });
 });

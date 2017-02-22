@@ -1,4 +1,4 @@
-import { assign, isArray, isString, isFunction } from 'lodash';
+import { assign, isArray, isString, isFunction, camelCase } from 'lodash';
 import { defaultBlockParse } from 'simple-markdown';
 import imageUrl from 'src/api/imageUrl';
 
@@ -57,8 +57,11 @@ const image = url => ([{
 const parseItem = (d, mappings) => {
   if (isString(d)) return markdown(d);
 
-  const { value, type } = d;
+  let { type } = d;
+  type = camelCase(type);
   if (!(type in mappings)) throw new Error(`Unrecognised rich text type '${type}'`);
+
+  const { value } = d;
   return mappings[type](value);
 };
 
