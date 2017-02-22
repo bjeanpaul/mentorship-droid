@@ -13,13 +13,14 @@ const { Heading1 } = RichText;
 const BlogPost = ({
   onBackPress,
   blogPost: {
+    id,
     title,
     image,
     createdAt,
     bodyContent,
   },
 }) => (
-  <BaseView>
+  <BaseView key={`blogPost:${id}`}>
     <ScrollView>
       <Header style={Header.themes.light}>
         <HeaderIcon
