@@ -21,7 +21,8 @@
     "normalizr": "^2.2.1",
     "promise-each-concurrency": "^1.1.0",
     "raven-js": "^3.7.0",
-    "react": "^15.3.1",
+    "react": "~15.3.1",
+    "react-dom": "~15.3.1",
     "react-native": "^0.33.0",
     "react-native-calendar": "https://github.com/peterp/react-native-calendar/tarball/43ef42c6a5819377a4f6fd32f2a3f1cce73ab735",
     "react-native-config": "^0.1.0",
@@ -47,10 +48,9 @@
     "jest-react-native": "^15.0.0",
     "moment-timezone": "^0.5.5",
     "promise-defer": "^1.0.0",
-    "react-addons-test-utils": "~15.2.1",
-    "react-dom": "^15.3.1",
+    "react-addons-test-utils": "~15.3.1",
     "react-native-invertible-scroll-view": "^1.0.0",
-    "react-test-renderer": "^15.3.1",
+    "react-test-renderer": "~15.3.1",
     "redux-logger": "^2.6.1"
   },
   "//": [
