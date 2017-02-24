@@ -4,6 +4,7 @@ import { getContext } from 'src/store/helpers';
 import { staticAction } from 'src/actionHelpers';
 import { createStack, createRoute } from 'src/navigationHelpers';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/events';
+import richText from 'src/richText';
 import * as api from 'src/api';
 import {
   MESSAGE_TYPE_COMPLETE,
@@ -135,6 +136,19 @@ export const fakePendingMessage = data => merge(api.createPendingMessage({
 }), data);
 
 
+export const fakeBlogPost = data => merge({
+  id: 7,
+  createdAt: '2016-11-30T09:43:20.311Z',
+  thumbnail: api.imageUrl('/images/thubmbnail.png'),
+  image: api.imageUrl('/images/image.png'),
+  title: 'A tactile cactus',
+  bodyContent: richText()([{
+    type: 'paragraph',
+    value: 'Maybe Spain is the open-faced smile',
+  }]),
+}, data);
+
+
 export const fakeState = (overrides = {}) => merge({}, {
   auth: {
     profileId: 23,
@@ -170,6 +184,9 @@ export const fakeState = (overrides = {}) => merge({}, {
     },
     pendingMessage: {
       4: fakePendingMessage({ id: 4 }),
+    },
+    blogPosts: {
+      7: fakeBlogPost({ id: 7 }),
     },
   },
   navigation: {
