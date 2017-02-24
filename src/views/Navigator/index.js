@@ -36,6 +36,7 @@ Navigator.propTypes = {
     constants.NAV_TAB_COMMUNITY,
     constants.NAV_TAB_JOURNEY,
     constants.NAV_TAB_SCHEDULED_CALLS,
+    constants.NAV_TAB_BLOG_POSTS,
   ]),
 };
 

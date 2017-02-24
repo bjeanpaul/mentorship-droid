@@ -1,12 +1,13 @@
 import { mergeAll } from 'lodash/fp';
-import { some, eq } from 'lodash';
+import { assign, some, eq } from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { View } from 'react-native';
 import SimpleMarkdown from 'simple-markdown';
 import mdStyles from 'react-native-simple-markdown/styles';
 import mdRules from 'react-native-simple-markdown/rules';
 
-import { RichText as RichTextObject } from 'src/api';
+import { RichText as RichTextObject } from 'src/richText';
+import defineTypes from './defineTypes';
 import baseRules from './rules';
 import baseStyles from './styles';
 
@@ -46,11 +47,11 @@ class RichText extends Component {
   render() {
     const styles = this.getStyles();
     const renderFn = this.getRenderFn(styles);
-    const { children } = this.props;
+    const { content } = this.props;
 
     return (
       <View style={styles.container}>
-        {renderFn(children.tree)}
+        {renderFn(content.tree)}
       </View>
     );
   }
@@ -58,10 +59,11 @@ class RichText extends Component {
 
 
 RichText.propTypes = {
-  children: PropTypes.instanceOf(RichTextObject).isRequired,
+  content: PropTypes.instanceOf(RichTextObject).isRequired,
   styles: PropTypes.any,
   rules: PropTypes.func,
 };
 
 
+assign(RichText, defineTypes(RichText));
 export default RichText;

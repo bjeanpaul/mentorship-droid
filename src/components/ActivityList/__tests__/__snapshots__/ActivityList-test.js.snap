@@ -1,198 +1,486 @@
 exports[`ActivityList should render 1`] = `
 <ScrollView>
-  <View
-    style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#ffbcbc",
-          "borderColor": "red",
-          "borderWidth": 1,
-          "height": 100,
-          "justifyContent": "center",
-          "margin": 10,
-          "width": 300,
-        },
-        undefined,
-      ]
-    }>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+  <TouchableNativeFeedback
+    onPress={[Function]}
+    uid="activity:1">
+    <View
       style={
         Object {
-          "color": "#333333",
-          "margin": 20,
+          "alignItems": "flex-start",
+          "borderBottomColor": "#dfe5e6",
+          "borderBottomWidth": 1,
+          "height": 120,
+          "padding": 16,
         }
       }>
-      TouchableNativeFeedback is not supported on this platform!
-    </Text>
-  </View>
-  <View
-    style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#ffbcbc",
-          "borderColor": "red",
-          "borderWidth": 1,
-          "height": 100,
-          "justifyContent": "center",
-          "margin": 10,
-          "width": 300,
-        },
-        undefined,
-      ]
-    }>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+      <View
+        style={
+          Object {
+            "position": "absolute",
+            "top": 24,
+          }
+        }>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "borderRadius": 72,
+                "height": 72,
+                "justifyContent": "center",
+                "width": 72,
+              },
+              Object {
+                "backgroundColor": "#ebebeb",
+              },
+            ]
+          }>
+          <Image
+            source={1}
+            style={
+              Object {
+                "borderRadius": 72,
+                "height": 72,
+                "width": 72,
+              }
+            } />
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={3}
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+            Object {
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Object {
+              "fontSize": 18,
+              "marginLeft": 104,
+              "textAlign": "left",
+            },
+          ]
+        }>
+        Activity 1
+      </Text>
+    </View>
+  </TouchableNativeFeedback>
+  <TouchableNativeFeedback
+    onPress={[Function]}
+    uid="activity:2">
+    <View
       style={
         Object {
-          "color": "#333333",
-          "margin": 20,
+          "alignItems": "flex-start",
+          "borderBottomColor": "#dfe5e6",
+          "borderBottomWidth": 1,
+          "height": 120,
+          "padding": 16,
         }
       }>
-      TouchableNativeFeedback is not supported on this platform!
-    </Text>
-  </View>
+      <View
+        style={
+          Object {
+            "position": "absolute",
+            "top": 24,
+          }
+        }>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "borderRadius": 72,
+                "height": 72,
+                "justifyContent": "center",
+                "width": 72,
+              },
+              Object {
+                "backgroundColor": "#ebebeb",
+              },
+            ]
+          }>
+          <Image
+            source={1}
+            style={
+              Object {
+                "borderRadius": 72,
+                "height": 72,
+                "width": 72,
+              }
+            } />
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={3}
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+            Object {
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Object {
+              "fontSize": 18,
+              "marginLeft": 104,
+              "textAlign": "left",
+            },
+          ]
+        }>
+        Activity 2
+      </Text>
+    </View>
+  </TouchableNativeFeedback>
 </ScrollView>
 `;
 
 exports[`ActivityList should render a fallback for complete activities without an icon 1`] = `
 <ScrollView>
-  <View
-    style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#ffbcbc",
-          "borderColor": "red",
-          "borderWidth": 1,
-          "height": 100,
-          "justifyContent": "center",
-          "margin": 10,
-          "width": 300,
-        },
-        undefined,
-      ]
-    }>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+  <TouchableNativeFeedback
+    onPress={[Function]}
+    uid="activity:1">
+    <View
       style={
         Object {
-          "color": "#333333",
-          "margin": 20,
+          "alignItems": "flex-start",
+          "borderBottomColor": "#dfe5e6",
+          "borderBottomWidth": 1,
+          "height": 120,
+          "padding": 16,
         }
       }>
-      TouchableNativeFeedback is not supported on this platform!
-    </Text>
-  </View>
+      <View
+        style={
+          Object {
+            "position": "absolute",
+            "top": 24,
+          }
+        }>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "borderRadius": 72,
+                "height": 72,
+                "justifyContent": "center",
+                "width": 72,
+              },
+              Object {
+                "backgroundColor": "#97c13c",
+              },
+            ]
+          }>
+          <Image
+            source={1}
+            style={
+              Object {
+                "borderRadius": 72,
+                "height": 72,
+                "width": 72,
+              }
+            } />
+        </View>
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 24,
+              "left": 52,
+              "position": "absolute",
+              "top": -4,
+              "width": 24,
+            }
+          } />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={3}
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+            Object {
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Object {
+              "fontSize": 18,
+              "marginLeft": 104,
+              "textAlign": "left",
+            },
+          ]
+        }>
+        Activity 3
+      </Text>
+    </View>
+  </TouchableNativeFeedback>
 </ScrollView>
 `;
 
 exports[`ActivityList should render a fallback for incomplete activities without an icon 1`] = `
 <ScrollView>
-  <View
-    style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#ffbcbc",
-          "borderColor": "red",
-          "borderWidth": 1,
-          "height": 100,
-          "justifyContent": "center",
-          "margin": 10,
-          "width": 300,
-        },
-        undefined,
-      ]
-    }>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+  <TouchableNativeFeedback
+    onPress={[Function]}
+    uid="activity:1">
+    <View
       style={
         Object {
-          "color": "#333333",
-          "margin": 20,
+          "alignItems": "flex-start",
+          "borderBottomColor": "#dfe5e6",
+          "borderBottomWidth": 1,
+          "height": 120,
+          "padding": 16,
         }
       }>
-      TouchableNativeFeedback is not supported on this platform!
-    </Text>
-  </View>
+      <View
+        style={
+          Object {
+            "position": "absolute",
+            "top": 24,
+          }
+        }>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "borderRadius": 72,
+                "height": 72,
+                "justifyContent": "center",
+                "width": 72,
+              },
+              Object {
+                "backgroundColor": "#ebebeb",
+              },
+            ]
+          }>
+          <Image
+            source={1}
+            style={
+              Object {
+                "borderRadius": 72,
+                "height": 72,
+                "width": 72,
+              }
+            } />
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={3}
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+            Object {
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Object {
+              "fontSize": 18,
+              "marginLeft": 104,
+              "textAlign": "left",
+            },
+          ]
+        }>
+        Activity 3
+      </Text>
+    </View>
+  </TouchableNativeFeedback>
 </ScrollView>
 `;
 
 exports[`ActivityList should render complete activities 1`] = `
 <ScrollView>
-  <View
-    style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#ffbcbc",
-          "borderColor": "red",
-          "borderWidth": 1,
-          "height": 100,
-          "justifyContent": "center",
-          "margin": 10,
-          "width": 300,
-        },
-        undefined,
-      ]
-    }>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+  <TouchableNativeFeedback
+    onPress={[Function]}
+    uid="activity:1">
+    <View
       style={
         Object {
-          "color": "#333333",
-          "margin": 20,
+          "alignItems": "flex-start",
+          "borderBottomColor": "#dfe5e6",
+          "borderBottomWidth": 1,
+          "height": 120,
+          "padding": 16,
         }
       }>
-      TouchableNativeFeedback is not supported on this platform!
-    </Text>
-  </View>
+      <View
+        style={
+          Object {
+            "position": "absolute",
+            "top": 24,
+          }
+        }>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "borderRadius": 72,
+                "height": 72,
+                "justifyContent": "center",
+                "width": 72,
+              },
+              Object {
+                "backgroundColor": "#97c13c",
+              },
+            ]
+          }>
+          <Image
+            source={
+              Object {
+                "uri": "/api/foo.jpg?filter_spec=min-144x144",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 72,
+                "height": 72,
+                "width": 72,
+              }
+            } />
+        </View>
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 24,
+              "left": 52,
+              "position": "absolute",
+              "top": -4,
+              "width": 24,
+            }
+          } />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={3}
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+            Object {
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Object {
+              "fontSize": 18,
+              "marginLeft": 104,
+              "textAlign": "left",
+            },
+          ]
+        }>
+        Activity 3
+      </Text>
+    </View>
+  </TouchableNativeFeedback>
 </ScrollView>
 `;
 
 exports[`ActivityList should render incomplete activities 1`] = `
 <ScrollView>
-  <View
-    style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#ffbcbc",
-          "borderColor": "red",
-          "borderWidth": 1,
-          "height": 100,
-          "justifyContent": "center",
-          "margin": 10,
-          "width": 300,
-        },
-        undefined,
-      ]
-    }>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+  <TouchableNativeFeedback
+    onPress={[Function]}
+    uid="activity:1">
+    <View
       style={
         Object {
-          "color": "#333333",
-          "margin": 20,
+          "alignItems": "flex-start",
+          "borderBottomColor": "#dfe5e6",
+          "borderBottomWidth": 1,
+          "height": 120,
+          "padding": 16,
         }
       }>
-      TouchableNativeFeedback is not supported on this platform!
-    </Text>
-  </View>
+      <View
+        style={
+          Object {
+            "position": "absolute",
+            "top": 24,
+          }
+        }>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "borderRadius": 72,
+                "height": 72,
+                "justifyContent": "center",
+                "width": 72,
+              },
+              Object {
+                "backgroundColor": "#ebebeb",
+              },
+            ]
+          }>
+          <Image
+            source={
+              Object {
+                "uri": "/api/foo.jpg?filter_spec=min-144x144",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 72,
+                "height": 72,
+                "width": 72,
+              }
+            } />
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={3}
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+            Object {
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Object {
+              "fontSize": 18,
+              "marginLeft": 104,
+              "textAlign": "left",
+            },
+          ]
+        }>
+        Activity 3
+      </Text>
+    </View>
+  </TouchableNativeFeedback>
 </ScrollView>
 `;

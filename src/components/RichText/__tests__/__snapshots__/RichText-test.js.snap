@@ -1,3 +1,752 @@
+exports[`RichText should allow for types to be created manually 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "fontFamily": "Brandon Text_bold",
+            "fontWeight": "bold",
+          },
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 24,
+            "fontWeight": "400",
+            "marginBottom": 25,
+            "marginTop": 11,
+            "textAlign": "center",
+          },
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+          ]
+        }>
+        h1
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "fontFamily": "Brandon Text_bold",
+            "fontWeight": "bold",
+          },
+          Object {
+            "fontSize": 18,
+            "marginBottom": 13,
+          },
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+          ]
+        }>
+        h2
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "fontFamily": "Brandon Text_bold",
+            "fontWeight": "bold",
+          },
+          Object {
+            "fontSize": 16,
+            "marginBottom": 10,
+          },
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+          ]
+        }>
+        h3
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "fontFamily": "Brandon Text_bold",
+            "fontWeight": "bold",
+          },
+          Object {
+            "fontSize": 15,
+            "marginBottom": 7,
+          },
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+          ]
+        }>
+        h4
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "fontFamily": "Brandon Text_bold",
+            "fontWeight": "bold",
+          },
+          Object {
+            "fontSize": 14,
+            "marginBottom": 4,
+          },
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+          ]
+        }>
+        h5
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "fontFamily": "Brandon Text_bold",
+            "fontWeight": "bold",
+          },
+          Object {
+            "fontSize": 13,
+            "marginBottom": 3,
+          },
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+          ]
+        }>
+        h6
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+          undefined,
+        ]
+      }>
+      text
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "fontSize": 18,
+            "marginBottom": 12,
+            "textAlign": "left",
+          },
+          Object {
+            "fontSize": 18,
+            "marginBottom": 20,
+          },
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "fontSize": 15,
+            "fontStyle": "italic",
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+            ]
+          }>
+          ma
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+              ]
+            }>
+            rk
+          </Text>
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "textDecorationLine": "underline",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+              ]
+            }>
+            down
+          </Text>
+        </Text>
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "fontSize": 18,
+            "marginBottom": 12,
+            "textAlign": "left",
+          },
+          Object {
+            "fontSize": 18,
+            "marginBottom": 20,
+          },
+        ]
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+            undefined,
+          ]
+        }>
+        paragraph
+      </Text>
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+      }
+    }>
+    <View
+      style={
+        Object {
+          "marginBottom": 20,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#003035",
+              "fontSize": 18,
+            }
+          }>
+          • 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 1,
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "fontSize": 18,
+              "justifyContent": "flex-start",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                undefined,
+              ]
+            }>
+            l
+          </Text>
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#003035",
+              "fontSize": 18,
+            }
+          }>
+          • 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 1,
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "fontSize": 18,
+              "justifyContent": "flex-start",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                undefined,
+              ]
+            }>
+            i
+          </Text>
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#003035",
+              "fontSize": 18,
+            }
+          }>
+          • 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 1,
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "fontSize": 18,
+              "justifyContent": "flex-start",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                undefined,
+              ]
+            }>
+            s
+          </Text>
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#003035",
+              "fontSize": 18,
+            }
+          }>
+          • 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 1,
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "fontSize": 18,
+              "justifyContent": "flex-start",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                undefined,
+              ]
+            }>
+            t
+          </Text>
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+      }
+    }>
+    <View
+      style={
+        Object {
+          "marginBottom": 20,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#003035",
+              "fontSize": 18,
+            }
+          }>
+          1. 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 1,
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "fontSize": 18,
+              "justifyContent": "flex-start",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                undefined,
+              ]
+            }>
+            numbered
+          </Text>
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#003035",
+              "fontSize": 18,
+            }
+          }>
+          2. 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "flex": 1,
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "fontSize": 18,
+              "justifyContent": "flex-start",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                undefined,
+              ]
+            }>
+            list
+          </Text>
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 16,
+      }
+    }>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "marginBottom": 20,
+          "marginTop": 10,
+        }
+      }>
+      <Image
+        source={
+          Object {
+            "uri": "/api/images/foo.png?filter_spec=min-656x366",
+          }
+        }
+        style={
+          Object {
+            "height": 183,
+            "maxWidth": 355,
+            "resizeMode": "contain",
+            "width": 328,
+          }
+        } />
+    </View>
+  </View>
+</View>
+`;
+
 exports[`RichText should render typography 1`] = `
 <View
   style={
@@ -61,7 +810,6 @@ exports[`RichText should render typography 1`] = `
         Object {
           "fontSize": 18,
           "marginBottom": 13,
-          "marginTop": 27,
         },
       ]
     }>
@@ -93,7 +841,6 @@ exports[`RichText should render typography 1`] = `
         Object {
           "fontSize": 16,
           "marginBottom": 10,
-          "marginTop": 20,
         },
       ]
     }>
@@ -125,7 +872,6 @@ exports[`RichText should render typography 1`] = `
         Object {
           "fontSize": 15,
           "marginBottom": 7,
-          "marginTop": 14,
         },
       ]
     }>
@@ -157,7 +903,6 @@ exports[`RichText should render typography 1`] = `
         Object {
           "fontSize": 14,
           "marginBottom": 4,
-          "marginTop": 8,
         },
       ]
     }>
@@ -189,7 +934,6 @@ exports[`RichText should render typography 1`] = `
         Object {
           "fontSize": 13,
           "marginBottom": 3,
-          "marginTop": 6,
         },
       ]
     }>

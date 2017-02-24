@@ -58,64 +58,96 @@ exports[`CategoryList should render 1`] = `
         "flex": 1,
       }
     }>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}
+      uid="category:1">
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            Object {
+              "backgroundColor": "#c4cd39",
+            },
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Array [
+                Object {
+                  "fontFamily": "Brandon Text_medium",
+                  "fontSize": 20,
+                  "fontWeight": "400",
+                },
+                Object {
+                  "color": "#fff",
+                },
+              ],
+            ]
+          }>
+          Connect
+        </Text>
+      </View>
+    </TouchableNativeFeedback>
+    <TouchableNativeFeedback
+      onPress={[Function]}
+      uid="category:2">
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            Object {
+              "backgroundColor": "#97c13c",
+            },
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Array [
+                Object {
+                  "fontFamily": "Brandon Text_medium",
+                  "fontSize": 20,
+                  "fontWeight": "400",
+                },
+                Object {
+                  "color": "#fff",
+                },
+              ],
+            ]
+          }>
+          Level
+        </Text>
+      </View>
+    </TouchableNativeFeedback>
   </View>
 </View>
 `;
@@ -173,35 +205,31 @@ exports[`CategoryList should render with a back button if onBackPress is given 1
       }>
       Relationship Stages
     </Text>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
   </View>
   <View
     style={
@@ -209,64 +237,96 @@ exports[`CategoryList should render with a back button if onBackPress is given 1
         "flex": 1,
       }
     }>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+    <TouchableNativeFeedback
+      onPress={[Function]}
+      uid="category:1">
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            Object {
+              "backgroundColor": "#c4cd39",
+            },
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
-    <View
-      style={
-        Array [
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#ffbcbc",
-            "borderColor": "red",
-            "borderWidth": 1,
-            "height": 100,
-            "justifyContent": "center",
-            "margin": 10,
-            "width": 300,
-          },
-          undefined,
-        ]
-      }>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Array [
+                Object {
+                  "fontFamily": "Brandon Text_medium",
+                  "fontSize": 20,
+                  "fontWeight": "400",
+                },
+                Object {
+                  "color": "#fff",
+                },
+              ],
+            ]
+          }>
+          Connect
+        </Text>
+      </View>
+    </TouchableNativeFeedback>
+    <TouchableNativeFeedback
+      onPress={[Function]}
+      uid="category:2">
+      <View
         style={
-          Object {
-            "color": "#333333",
-            "margin": 20,
-          }
+          Array [
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            },
+            Object {
+              "backgroundColor": "#97c13c",
+            },
+          ]
         }>
-        TouchableNativeFeedback is not supported on this platform!
-      </Text>
-    </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Array [
+                Object {
+                  "fontFamily": "Brandon Text_medium",
+                  "fontSize": 20,
+                  "fontWeight": "400",
+                },
+                Object {
+                  "color": "#fff",
+                },
+              ],
+            ]
+          }>
+          Level
+        </Text>
+      </View>
+    </TouchableNativeFeedback>
   </View>
 </View>
 `;

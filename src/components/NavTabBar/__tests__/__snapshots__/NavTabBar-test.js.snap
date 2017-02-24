@@ -10,121 +10,108 @@ exports[`NavTabBar should render 1`] = `
       "justifyContent": "space-between",
     }
   }>
-  <View
-    style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#ffbcbc",
-          "borderColor": "red",
-          "borderWidth": 1,
-          "height": 100,
-          "justifyContent": "center",
-          "margin": 10,
-          "width": 300,
-        },
-        undefined,
-      ]
-    }>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+  <TouchableNativeFeedback
+    onPress={[Function]}>
+    <View
       style={
         Object {
-          "color": "#333333",
-          "margin": 20,
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
         }
       }>
-      TouchableNativeFeedback is not supported on this platform!
-    </Text>
-  </View>
-  <View
-    style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#ffbcbc",
-          "borderColor": "red",
-          "borderWidth": 1,
-          "height": 100,
-          "justifyContent": "center",
-          "margin": 10,
-          "width": 300,
-        },
-        undefined,
-      ]
-    }>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+      <Image
+        source={1}
+        style={undefined} />
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+            Object {
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Array [
+              Object {
+                "fontFamily": "Brandon Text_medium",
+                "fontSize": 12,
+                "fontWeight": "400",
+              },
+              Object {
+                "color": "#f77040",
+              },
+            ],
+          ]
+        }>
+        Journey
+      </Text>
+    </View>
+  </TouchableNativeFeedback>
+  <TouchableNativeFeedback
+    onPress={[Function]}>
+    <View
       style={
         Object {
-          "color": "#333333",
-          "margin": 20,
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
         }
       }>
-      TouchableNativeFeedback is not supported on this platform!
-    </Text>
-  </View>
-  <View
-    style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#ffbcbc",
-          "borderColor": "red",
-          "borderWidth": 1,
-          "height": 100,
-          "justifyContent": "center",
-          "margin": 10,
-          "width": 300,
-        },
-        undefined,
-      ]
-    }>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+      <Image
+        source={1}
+        style={undefined} />
+    </View>
+  </TouchableNativeFeedback>
+  <TouchableNativeFeedback
+    onPress={[Function]}>
+    <View
       style={
         Object {
-          "color": "#333333",
-          "margin": 20,
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
         }
       }>
-      TouchableNativeFeedback is not supported on this platform!
-    </Text>
-  </View>
-  <View
-    style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#ffbcbc",
-          "borderColor": "red",
-          "borderWidth": 1,
-          "height": 100,
-          "justifyContent": "center",
-          "margin": 10,
-          "width": 300,
-        },
-        undefined,
-      ]
-    }>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+      <Image
+        source={1}
+        style={undefined} />
+    </View>
+  </TouchableNativeFeedback>
+  <TouchableNativeFeedback
+    onPress={[Function]}>
+    <View
       style={
         Object {
-          "color": "#333333",
-          "margin": 20,
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
         }
       }>
-      TouchableNativeFeedback is not supported on this platform!
-    </Text>
-  </View>
+      <Image
+        source={1}
+        style={undefined} />
+    </View>
+  </TouchableNativeFeedback>
+  <TouchableNativeFeedback
+    onPress={[Function]}>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }>
+      <Image
+        source={1}
+        style={undefined} />
+    </View>
+  </TouchableNativeFeedback>
 </View>
 `;
