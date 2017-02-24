@@ -53,7 +53,7 @@ describe('ActivityList', () => {
     expect(render(createComponent({
       activities: [
         fakeActivity({
-          icon: null,
+          icon: imageUrl(null),
           isComplete: false,
         }),
       ],
@@ -64,7 +64,7 @@ describe('ActivityList', () => {
     expect(render(createComponent({
       activities: [
         fakeActivity({
-          icon: null,
+          icon: imageUrl(null),
           isComplete: true,
         }),
       ],

@@ -1,0 +1,267 @@
+exports[`BlogPostList should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16,
+        },
+        Object {
+          "backgroundColor": "#003035",
+        },
+      ]
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+          Object {
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Array [
+            Object {
+              "fontFamily": "Brandon Text_medium",
+              "fontSize": 20,
+              "fontWeight": "400",
+            },
+            Object {
+              "color": "#fff",
+            },
+          ],
+        ]
+      }>
+      Blog
+    </Text>
+  </View>
+  <ScrollView>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#eff2f2",
+        }
+      }>
+      <TouchableNativeFeedback
+        onPress={[Function]}
+        uid="blogPosts:1">
+        <View
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "marginBottom": 8,
+              "paddingHorizontal": 10,
+              "paddingVertical": 18,
+            }
+          }>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "flex": 1,
+                "flexDirection": "column",
+                "paddingRight": 18,
+              }
+            }>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                  },
+                  Object {
+                    "fontSize": 13,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "color": "#9fb1b3",
+                    "fontFamily": "Brandon Text_medium",
+                    "fontSize": 11,
+                    "fontWeight": "400",
+                  },
+                ]
+              }>
+              IN 2 MONTHS
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                  },
+                  Object {
+                    "fontSize": 13,
+                    "textAlign": "center",
+                  },
+                  Array [
+                    Object {
+                      "fontFamily": "Brandon Text_medium",
+                      "fontSize": 18,
+                      "fontWeight": "400",
+                      "textAlign": "left",
+                    },
+                    Object {
+                      "paddingLeft": 6,
+                    },
+                  ],
+                ]
+              }>
+              Foo
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "flex": 1,
+                "flexDirection": "column",
+                "paddingRight": 6,
+              }
+            }>
+            <Image
+              source={
+                Object {
+                  "uri": "/api/foo.png?filter_spec=min-192x192",
+                }
+              }
+              style={
+                Object {
+                  "height": 96,
+                  "paddingRight": 6,
+                  "width": 96,
+                }
+              } />
+          </View>
+        </View>
+      </TouchableNativeFeedback>
+      <TouchableNativeFeedback
+        onPress={[Function]}
+        uid="blogPosts:2">
+        <View
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "marginBottom": 8,
+              "paddingHorizontal": 10,
+              "paddingVertical": 18,
+            }
+          }>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "flex": 1,
+                "flexDirection": "column",
+                "paddingRight": 18,
+              }
+            }>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                  },
+                  Object {
+                    "fontSize": 13,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "color": "#9fb1b3",
+                    "fontFamily": "Brandon Text_medium",
+                    "fontSize": 11,
+                    "fontWeight": "400",
+                  },
+                ]
+              }>
+              IN 2 MONTHS
+            </Text>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                  },
+                  Object {
+                    "fontSize": 13,
+                    "textAlign": "center",
+                  },
+                  Array [
+                    Object {
+                      "fontFamily": "Brandon Text_medium",
+                      "fontSize": 18,
+                      "fontWeight": "400",
+                      "textAlign": "left",
+                    },
+                    Object {
+                      "paddingLeft": 6,
+                    },
+                  ],
+                ]
+              }>
+              Bar
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "flex": 1,
+                "flexDirection": "column",
+                "paddingRight": 6,
+              }
+            }>
+            <Image
+              source={
+                Object {
+                  "uri": "/api/bar.png?filter_spec=min-192x192",
+                }
+              }
+              style={
+                Object {
+                  "height": 96,
+                  "paddingRight": 6,
+                  "width": 96,
+                }
+              } />
+          </View>
+        </View>
+      </TouchableNativeFeedback>
+    </View>
+  </ScrollView>
+</View>
+`;

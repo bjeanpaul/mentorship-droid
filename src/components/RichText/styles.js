@@ -80,27 +80,23 @@ export default {
   },
   heading2: {
     fontSize: 18,
-    marginTop: 27,
+    marginTop: 16,
     marginBottom: 13,
   },
   heading3: {
     fontSize: 16,
-    marginTop: 20,
     marginBottom: 10,
   },
   heading4: {
     fontSize: 15,
-    marginTop: 14,
     marginBottom: 7,
   },
   heading5: {
     fontSize: 14,
-    marginTop: 8,
     marginBottom: 4,
   },
   heading6: {
     fontSize: 13,
-    marginTop: 6,
     marginBottom: 3,
   },
   blockQuoteSection: {
