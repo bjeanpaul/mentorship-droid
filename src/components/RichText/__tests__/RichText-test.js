@@ -1,12 +1,16 @@
+import { keys } from 'lodash';
 import React from 'react';
+import { View } from 'react-native';
+
+import richText, { richTextTypes } from 'src/richText';
 import { Text, RichText } from 'src/components';
-import { richText } from 'src/api';
 
 
 describe('RichText', () => {
   it('should render typography', () => {
     expect(render(
-      <RichText>{richText()(`
+      <RichText
+        content={richText()(`
 # h1
 
 ## h2
@@ -45,7 +49,8 @@ code block
 
 1. numbered
 2. list
-      `)}</RichText>
+        `)}
+      />
     )).toMatchSnapshot();
   });
 
@@ -55,7 +60,7 @@ code block
     };
 
     expect(render(
-      <RichText styles={styles}>{richText()('style overrides')}</RichText>
+      <RichText styles={styles} content={richText()('style overrides')} />
     )).toMatchSnapshot();
   });
 
@@ -71,8 +76,42 @@ code block
     });
 
     expect(render(
-      <RichText rules={rules}>{richText()('rule overrides')}</RichText>
+      <RichText rules={rules} content={richText()('rule overrides')} />
     )).toMatchSnapshot();
+  });
+
+  it('should allow for types to be created manually', () => {
+    expect(keys(richTextTypes).sort()).toEqual([
+      'markdown',
+      'text',
+      'paragraph',
+      'heading1',
+      'heading2',
+      'heading3',
+      'heading4',
+      'heading5',
+      'heading6',
+      'list',
+      'numberedList',
+      'image',
+    ].sort());
+
+    expect(render(
+      <View>
+        <RichText.Heading1 content="h1" />
+        <RichText.Heading2 content="h2" />
+        <RichText.Heading3 content="h3" />
+        <RichText.Heading4 content="h4" />
+        <RichText.Heading5 content="h5" />
+        <RichText.Heading6 content="h6" />
+        <RichText.Text content="text" />
+        <RichText.Markdown content="*ma**rk**__down__*" />
+        <RichText.Paragraph content="paragraph" />
+        <RichText.List content={'list'.split('')} />
+        <RichText.NumberedList content={['numbered', 'list']} />
+        <RichText.Image content="/images/foo.png" />
+      </View>
+    ).toJSON()).toMatchSnapshot();
   });
 
   describe('shouldComponentUpdate', () => {
@@ -83,19 +122,19 @@ code block
       const props = {
         styles: {},
         rules: () => ({}),
-        children: content1,
+        content: content1,
       };
 
       const el = shallow(<RichText {...props} />);
 
       expect(el.instance().shouldComponentUpdate({
         ...props,
-        children: content1,
+        content: content1,
       })).toEqual(false);
 
       expect(el.instance().shouldComponentUpdate({
         ...props,
-        children: content2,
+        content: content2,
       })).toEqual(true);
     });
   });

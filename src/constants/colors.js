@@ -1,5 +1,6 @@
 export default {
   BG_DEFAULT: '#fff',
+  BG_DEFAULT_SECONDARY: '#eff2f2',
   BG_DARK: '#003035',
   BG_ORANGE: 'rgba(246, 111, 63, 0.95)',
   BG_PATTERN: '#eff2f2',
@@ -9,6 +10,7 @@ export default {
   TEXT_DEFAULT: '#003035',
   TEXT_LIGHT: '#fff',
   TEXT_ERROR: '#864a47',
+  TEXT_SECONDARY: '#9fb1b3',
 
   LABEL_TEXT: '#9fb1b3',
   LINK_TEXT: '#f77040',
