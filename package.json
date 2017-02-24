@@ -38,6 +38,7 @@
   "devDependencies": {
     "babel-cli": "^6.7.5",
     "babel-eslint": "^6.1.2",
+    "babel-plugin-transform-remove-strict-mode": "0.0.2",
     "babel-polyfill": "^6.7.4",
     "enzyme": "^2.4.1",
     "eslint": "^2.3.0",
