@@ -142,7 +142,7 @@ export const fakeBlogPost = data => merge({
   thumbnail: api.imageUrl('/images/thubmbnail.png'),
   image: api.imageUrl('/images/image.png'),
   title: 'A tactile cactus',
-  bodyContent: richText([{
+  bodyContent: richText()([{
     type: 'paragraph',
     value: 'Maybe Spain is the open-faced smile',
   }]),
