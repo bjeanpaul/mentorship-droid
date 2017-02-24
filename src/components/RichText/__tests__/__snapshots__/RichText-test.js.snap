@@ -61,7 +61,6 @@ exports[`RichText should allow for types to be created manually 1`] = `
           Object {
             "fontSize": 18,
             "marginBottom": 13,
-            "marginTop": 16,
           },
         ]
       }>
@@ -811,7 +810,6 @@ exports[`RichText should render typography 1`] = `
         Object {
           "fontSize": 18,
           "marginBottom": 13,
-          "marginTop": 16,
         },
       ]
     }>

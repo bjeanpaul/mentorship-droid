@@ -74,6 +74,7 @@ const NAV_TAB_ROUTES = fromPairs([
   [navigation.NAV_TAB_JOURNEY, ROUTE_JOURNEY],
   [navigation.NAV_TAB_SCHEDULED_CALLS, ROUTE_SCHEDULED_CALLS],
   [navigation.NAV_TAB_CHAT, ROUTE_CHAT],
+  [navigation.NAV_TAB_BLOG_POSTS, ROUTE_BLOG_POST_LIST],
 ]);
 
 

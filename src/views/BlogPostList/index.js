@@ -18,36 +18,36 @@ const BlogPostList = ({
         </Text>
       </Header>
 
-      <ScrollView>
-        <View style={styles.blogPostList}>
+      <View style={styles.blogPostList}>
+        <ScrollView>
           {blogPosts.map(blog => (
-            <TouchableNativeFeedback
-              key={blog.id}
-              uid={`blogPosts:${blog.id}`}
-              onPress={() => onBlogPostPress(blog.id)}
-            >
-              <View style={styles.blogPost}>
-                <View style={styles.blogPostDetail}>
-                  <Text style={styles.blogPostCreatedAt}>
-                    {moment(blog.createdAt).fromNow().toUpperCase()}
-                  </Text>
+          <TouchableNativeFeedback
+            key={blog.id}
+            uid={`blogPosts:${blog.id}`}
+            onPress={() => onBlogPostPress(blog.id)}
+          >
+            <View style={styles.blogPost}>
+              <View style={styles.blogPostDetail}>
+                <Text style={styles.blogPostCreatedAt}>
+                  {moment(blog.createdAt).fromNow().toUpperCase()}
+                </Text>
 
-                  <Text style={[Text.types.secondaryTitle, styles.blogPostTitle]}>
-                    {blog.title}
-                  </Text>
-                </View>
-
-                <View style={styles.blogPostThumbnail}>
-                  <Image
-                    style={styles.blogPostThumbnailImage}
-                    source={blog.thumbnail.resize(96, 96).toSource()}
-                  />
-                </View>
+                <Text style={[Text.types.secondaryTitle, styles.blogPostTitle]}>
+                  {blog.title}
+                </Text>
               </View>
-            </TouchableNativeFeedback>
+
+              <View style={styles.blogPostThumbnail}>
+                <Image
+                  style={styles.blogPostThumbnailImage}
+                  source={blog.thumbnail.resize(96, 96).toSource()}
+                />
+              </View>
+            </View>
+          </TouchableNativeFeedback>
           ))}
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </View>
   </BaseView>
 );
 

@@ -4,7 +4,8 @@ jest
   .mock('src/api/schedule')
   .mock('src/api/events')
   .mock('src/api/callNotes')
-  .mock('src/api/messages');
+  .mock('src/api/messages')
+  .mock('src/api/blogPosts');
 
 
 import { merge, fromPairs } from 'lodash';
@@ -22,6 +23,7 @@ const METHODS = [
   'listEvents',
   'listCallNotes',
   'listMessages',
+  'listBlogPosts',
 ];
 
 
