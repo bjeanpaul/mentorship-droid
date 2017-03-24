@@ -1,8 +1,8 @@
-# MENTOR TOGETHER #
+# MENTOR TOGETHER
 
 This app is built with React Native, targetting Android.
 
-## Setup ##
+## Setup
 
 Follow the [Android setup steps](http://facebook.github.io/react-native/releases/0.28/docs/getting-started.html#content)
 for React Native.
@@ -20,16 +20,16 @@ to install our projects dependencies.
 Starts React Native's packager, builds the Android application and runs it
 on your _Android Virtual Device._
 
-## Debugging ##
+## Debugging
 
 `> npm run logs`
 
-## Tests ##
+## Tests
 
 `> npm test`
 
 
-## Automatic Builds ##
+## Automatic Builds
 
 Are added to the GitHub repo whenever a new tag is pushed.
 
@@ -76,3 +76,7 @@ git flow release start <version>
 ./utils/version.sh <version>
 git flow release finish -p <version>
 ```
+
+## Development Configuration
+
+Development-specific configuration can be defined by adding a `src/config/dev.js` module. See `src/config/dev.example.js` for an example.
