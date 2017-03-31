@@ -13,7 +13,9 @@ const FormStep = ({
   <Step>
     <Text style={[Text.types.title, styles.title]}>{title}</Text>
 
-    {children}
+    <View style={styles.contentContainer}>
+      {children}
+    </View>
 
     <View style={styles.paginationContainer}>
       <Pagination
