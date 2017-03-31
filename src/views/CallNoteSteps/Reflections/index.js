@@ -1,8 +1,7 @@
 import React, { PropTypes } from 'react';
-import { View, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 
 import { FormStep, MultiLineTextInput } from 'src/components';
-import styles from 'src/views/CallNoteSteps/styles';
 
 
 const Reflections = ({

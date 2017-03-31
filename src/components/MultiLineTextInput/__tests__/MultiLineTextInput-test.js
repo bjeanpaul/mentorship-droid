@@ -34,8 +34,6 @@ describe('MultiLineTextInput', () => {
   });
 
   it('should set the height to the content height', () => {
-    const onChangeText = jest.fn();
-
     const input = shallow(<MultiLineTextInput />)
       .findWhere(uidEquals('input'));
 
