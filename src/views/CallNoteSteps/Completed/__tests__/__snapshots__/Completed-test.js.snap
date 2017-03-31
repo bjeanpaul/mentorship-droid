@@ -41,157 +41,163 @@ exports[`Completed should render 1`] = `
   <View
     style={
       Object {
-        "flex": 3,
+        "flex": 1,
       }
     }>
     <View
       style={
         Object {
-          "flexDirection": "row",
-          "height": 64,
-          "justifyContent": "space-around",
+          "flex": 3,
         }
       }>
-      <Image
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
-        accessible={true}
-        hitSlop={undefined}
-        onLayout={undefined}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        source={1}
-        style={undefined}
-        testID={undefined} />
-      <Image
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
-        accessible={true}
-        hitSlop={undefined}
-        onLayout={undefined}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        source={1}
-        style={undefined}
-        testID={undefined} />
-    </View>
-    <View
-      style={
-        Object {
-          "borderColor": "#dfe5e6",
-          "borderWidth": 1,
-          "flex": 1,
-          "margin": 24,
-        }
-      }>
-      <ScrollView>
-        <View
-          style={
-            Object {
-              "marginBottom": 29,
-            }
-          }>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "height": 64,
+            "justifyContent": "space-around",
+          }
+        }>
+        <Image
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          source={1}
+          style={undefined}
+          testID={undefined} />
+        <Image
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          source={1}
+          style={undefined}
+          testID={undefined} />
+      </View>
+      <View
+        style={
+          Object {
+            "borderColor": "#dfe5e6",
+            "borderWidth": 1,
+            "flex": 1,
+            "margin": 24,
+          }
+        }>
+        <ScrollView>
           <View
             style={
               Object {
-                "backgroundColor": "#f9fafa",
-                "borderColor": "#dfe5e6",
-                "height": 72,
-                "justifyContent": "center",
-                "marginBottom": 12,
-                "paddingLeft": 24,
-                "paddingRight": 24,
+                "marginBottom": 29,
               }
             }>
-            <Image
-              source={1}
+            <View
               style={
                 Object {
-                  "height": 40,
-                  "position": "absolute",
-                  "resizeMode": "contain",
-                  "top": 16,
-                  "width": 40,
+                  "backgroundColor": "#f9fafa",
+                  "borderColor": "#dfe5e6",
+                  "height": 72,
+                  "justifyContent": "center",
+                  "marginBottom": 12,
+                  "paddingLeft": 24,
+                  "paddingRight": 24,
                 }
-              } />
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              numberOfLines={1}
-              style={
-                Array [
+              }>
+              <Image
+                source={1}
+                style={
                   Object {
-                    "color": "#003035",
-                    "fontFamily": "Brandon Text",
-                  },
-                  Object {
-                    "fontSize": 13,
-                    "textAlign": "center",
-                  },
+                    "height": 40,
+                    "position": "absolute",
+                    "resizeMode": "contain",
+                    "top": 16,
+                    "width": 40,
+                  }
+                } />
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                numberOfLines={1}
+                style={
                   Array [
-                    Object {},
                     Object {
-                      "color": "#80979a",
-                      "fontFamily": "Brandon Text_bold",
-                      "fontSize": 12,
-                      "fontWeight": "bold",
+                      "color": "#003035",
+                      "fontFamily": "Brandon Text",
                     },
-                  ],
-                ]
-              }>
-              OBJECTIVE
-            </Text>
-          </View>
-          <View
-            style={
-              Object {
-                "paddingLeft": 24,
-                "paddingRight": 24,
-              }
-            }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
+                    Object {
+                      "fontSize": 13,
+                      "textAlign": "center",
+                    },
+                    Array [
+                      Object {},
+                      Object {
+                        "color": "#80979a",
+                        "fontFamily": "Brandon Text_bold",
+                        "fontSize": 12,
+                        "fontWeight": "bold",
+                      },
+                    ],
+                  ]
+                }>
+                OBJECTIVE
+              </Text>
+            </View>
+            <View
               style={
-                Array [
-                  Object {
-                    "color": "#003035",
-                    "fontFamily": "Brandon Text",
-                  },
-                  Object {
-                    "fontSize": 13,
-                    "textAlign": "center",
-                  },
-                  Object {
-                    "fontSize": 18,
-                    "marginBottom": 12,
-                    "textAlign": "left",
-                  },
-                ]
+                Object {
+                  "paddingLeft": 24,
+                  "paddingRight": 24,
+                }
               }>
-              None
-            </Text>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Array [
+                    Object {
+                      "color": "#003035",
+                      "fontFamily": "Brandon Text",
+                    },
+                    Object {
+                      "fontSize": 13,
+                      "textAlign": "center",
+                    },
+                    Object {
+                      "fontSize": 18,
+                      "marginBottom": 12,
+                      "textAlign": "left",
+                    },
+                  ]
+                }>
+                None
+              </Text>
+            </View>
           </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </View>
     </View>
   </View>
   <View
     style={
       Object {
-        "flex": 1,
         "justifyContent": "flex-end",
       }
     }>

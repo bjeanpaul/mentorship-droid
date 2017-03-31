@@ -38,82 +38,88 @@ exports[`Motivation should render 1`] = `
     }>
     Why did you become a mentor?
   </Text>
-  <View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }>
     <View
-      style={
-        Array [
-          Object {
-            "borderBottomWidth": 1,
-            "borderColor": "#dfe5e6",
-            "marginBottom": 27,
-            "marginLeft": 24,
-            "marginRight": 24,
-          },
-          false,
-        ]
-      }>
-      <TextInput
-        maxLength={50}
-        multiline={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onFocus={[Function]}
-        placeholder="Type your answer here"
-        placeholderTextColor="#c0cbcc"
+      onLayout={undefined}>
+      <View
+        style={
+          Array [
+            Object {
+              "borderBottomWidth": 1,
+              "borderColor": "#dfe5e6",
+              "marginBottom": 27,
+              "marginLeft": 24,
+              "marginRight": 24,
+            },
+            false,
+          ]
+        }>
+        <TextInput
+          maxLength={50}
+          multiline={true}
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          onContentSizeChange={[Function]}
+          onFocus={[Function]}
+          placeholder="Type your answer here"
+          placeholderTextColor="#c0cbcc"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+                "fontSize": 18,
+                "marginBottom": 8,
+                "padding": 0,
+              },
+              Object {
+                "height": 0,
+              },
+            ]
+          }
+          uid="input"
+          underlineColorAndroid="transparent"
+          value="To provide for my family" />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
           Array [
             Object {
               "color": "#003035",
               "fontFamily": "Brandon Text",
-              "fontSize": 18,
-              "lineHeight": 28,
-              "marginBottom": 8,
-              "padding": 0,
             },
             Object {
-              "height": 32,
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#c0cbcc",
+              "fontSize": 14,
+              "margin": 28,
+              "marginBottom": 0,
+              "marginTop": -20,
+              "textAlign": "right",
             },
           ]
         }
-        uid="input"
-        underlineColorAndroid="transparent"
-        value="To provide for my family" />
+        uid="charCount">
+        24
+        /
+        50
+      </Text>
     </View>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-          },
-          Object {
-            "fontSize": 13,
-            "textAlign": "center",
-          },
-          Object {
-            "color": "#c0cbcc",
-            "fontSize": 14,
-            "margin": 28,
-            "marginBottom": 0,
-            "marginTop": -20,
-            "textAlign": "right",
-          },
-        ]
-      }
-      uid="charCount">
-      24
-      /
-      50
-    </Text>
   </View>
   <View
     style={
       Object {
-        "flex": 1,
         "justifyContent": "flex-end",
       }
     }>
