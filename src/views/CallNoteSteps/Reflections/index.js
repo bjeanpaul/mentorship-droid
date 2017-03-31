@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
+import { View, ScrollView } from 'react-native';
 
 import { FormStep, MultiLineTextInput } from 'src/components';
+import styles from 'src/views/CallNoteSteps/styles';
 
 
 const Reflections = ({
@@ -14,12 +16,14 @@ const Reflections = ({
     title="Please share your reflections of the discussion"
     {...props}
   >
-    <MultiLineTextInput
-      uid="reflectionInput"
-      value={reflection}
-      placeholder="Type your answer here"
-      onChangeText={text => onChange({ reflection: text })}
-    />
+    <ScrollView>
+      <MultiLineTextInput
+        uid="reflectionInput"
+        value={reflection}
+        placeholder="Type your answer here"
+        onChangeText={text => onChange({ reflection: text })}
+      />
+    </ScrollView>
   </FormStep>
 );
 
