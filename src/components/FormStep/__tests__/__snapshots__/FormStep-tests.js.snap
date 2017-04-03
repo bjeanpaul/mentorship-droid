@@ -38,16 +38,22 @@ exports[`FormStep should render 1`] = `
     }>
     Test Test Title
   </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail">
-    I am a child.
-  </Text>
   <View
     style={
       Object {
         "flex": 1,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      I am a child.
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
         "justifyContent": "flex-end",
       }
     }>
@@ -242,16 +248,22 @@ exports[`FormStep should support disabling its back button 1`] = `
     }>
     Test Test Title
   </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail">
-    I am a child.
-  </Text>
   <View
     style={
       Object {
         "flex": 1,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      I am a child.
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
         "justifyContent": "flex-end",
       }
     }>

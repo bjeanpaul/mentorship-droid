@@ -1,5 +1,6 @@
 exports[`MultiLineTextInput should render 1`] = `
-<View>
+<View
+  onLayout={undefined}>
   <View
     style={
       Array [
@@ -16,8 +17,8 @@ exports[`MultiLineTextInput should render 1`] = `
     <TextInput
       multiline={true}
       onBlur={[Function]}
-      onChange={[Function]}
       onChangeText={[Function]}
+      onContentSizeChange={[Function]}
       onFocus={[Function]}
       placeholderTextColor="#c0cbcc"
       style={
@@ -26,12 +27,11 @@ exports[`MultiLineTextInput should render 1`] = `
             "color": "#003035",
             "fontFamily": "Brandon Text",
             "fontSize": 18,
-            "lineHeight": 28,
             "marginBottom": 8,
             "padding": 0,
           },
           Object {
-            "height": 32,
+            "height": 0,
           },
         ]
       }

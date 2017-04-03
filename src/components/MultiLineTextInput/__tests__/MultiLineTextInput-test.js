@@ -32,4 +32,22 @@ describe('MultiLineTextInput', () => {
 
     expect(onChangeText.mock.calls).toEqual([['21']]);
   });
+
+  it('should set the height to the content height', () => {
+    const input = shallow(<MultiLineTextInput />)
+      .findWhere(uidEquals('input'));
+
+    expect(input.prop('style').height, 0);
+
+    input.findWhere(uidEquals('input'))
+      .simulate('contentSizeChange', {
+        nativeEvent: {
+          contentSize: {
+            height: 23,
+          },
+        },
+      });
+
+    expect(input.prop('style').height, 23);
+  });
 });
