@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { View } from 'react-native';
 import { TextInput, Text } from 'src/components';
-import styles, { MAX_HEIGHT } from './styles';
+import styles from './styles';
 
 
 export default class MultiLineTextInput extends React.Component {
@@ -12,14 +12,15 @@ export default class MultiLineTextInput extends React.Component {
 
     this.state = {
       height: 0,
+      maxHeight: 0,
       charCount: value.length || 0,
     };
 
-    this.onChange = this.onChange.bind(this);
+    this.onContentSizeChange = this.onContentSizeChange.bind(this);
     this.onChangeText = this.onChangeText.bind(this);
   }
 
-  onChange({ nativeEvent }) {
+  onContentSizeChange({ nativeEvent }) {
     this.setState({
       height: nativeEvent.contentSize.height,
     });
@@ -44,14 +45,14 @@ export default class MultiLineTextInput extends React.Component {
     }
 
     return (
-      <View>
+      <View onLayout={this.onLayout}>
         <TextInput
           {...this.props}
           uid="input"
           multiline
-          onChange={this.onChange}
+          onContentSizeChange={this.onContentSizeChange}
           onChangeText={this.onChangeText}
-          style={{ height: Math.max(MAX_HEIGHT, this.state.height) }}
+          style={{ height: this.state.height }}
         />
         {charCount}
       </View>

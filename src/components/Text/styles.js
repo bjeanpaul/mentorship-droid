@@ -17,6 +17,7 @@ export const types = StyleSheet.create({
     fontSize: 13,
     textAlign: 'center',
   },
+
   title: {
     fontSize: 20,
     fontFamily: FONT.MEDIUM,

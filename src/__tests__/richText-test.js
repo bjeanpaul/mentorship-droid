@@ -1,6 +1,7 @@
 jest.mock('simple-markdown');
 
-import { richText, imageUrl } from 'src/api';
+import richText from 'src/richText';
+import { imageUrl } from 'src/api';
 import { defaultBlockParse } from 'simple-markdown';
 
 
@@ -252,5 +253,28 @@ describe('api/richText', () => {
       type: 'mentorshipImage',
       url: imageUrl('/foo.png'),
     }]]);
+  });
+
+  it('should support singleton definitions', () => {
+    const fn = richText(richText.text);
+
+    expect(fn('foo').tree).toEqual([{
+      type: 'text',
+      content: 'foo',
+    }]);
+  });
+
+  it('should normalize case', () => {
+    const fn = richText({
+      fooBar: richText.text,
+    });
+
+    expect(fn([{
+      type: 'foo_bar',
+      value: 'baz',
+    }]).tree).toEqual([{
+      type: 'text',
+      content: 'baz',
+    }]);
   });
 });

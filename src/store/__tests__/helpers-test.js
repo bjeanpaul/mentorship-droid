@@ -22,6 +22,7 @@ import {
   fakeCallNote,
   fakeMessage,
   fakePendingMessage,
+  fakeBlogPost,
 } from 'app/scripts/helpers';
 
 import {
@@ -43,6 +44,8 @@ import {
   getMessages,
   getMessage,
   getActiveTopRoute,
+  getBlogPosts,
+  getBlogPost,
 } from 'src/store/helpers';
 
 
@@ -490,6 +493,51 @@ describe('helpers', () => {
       });
 
       expect(getMessage(state, 23)).toEqual(msg);
+    });
+  });
+
+  describe('getBlogPosts', () => {
+    it('should get the current blog posts in descending creation order', () => {
+      const post1 = fakeBlogPost({
+        id: 1,
+        createdAt: '2016-11-02T09:43:20.311Z',
+      });
+
+      const post2 = fakeBlogPost({
+        id: 2,
+        createdAt: '2016-11-01T09:43:20.311Z',
+      });
+
+      const state = fakeState();
+
+      state.entities.blogPosts = {
+        1: post1,
+        2: post2,
+      };
+
+      expect(getBlogPosts(state)).toEqual([
+        post1,
+        post2,
+      ]);
+    });
+  });
+
+  describe('getBlogPost', () => {
+    it('should get the blog post with the given id', () => {
+      const post = fakeBlogPost({
+        id: 23,
+        timestamp: '2016-11-02T09:43:20.311Z',
+      });
+
+      const state = fakeState({
+        entities: {
+          blogPosts: {
+            23: post,
+          },
+        },
+      });
+
+      expect(getBlogPost(state, 23)).toEqual(post);
     });
   });
 

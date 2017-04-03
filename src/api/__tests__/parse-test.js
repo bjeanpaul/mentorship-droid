@@ -1,10 +1,18 @@
 import { fromPairs } from 'lodash';
+
 import { makeGradient } from 'src/helpers';
-import { fakeCategory, fakeActivity, fakeProfile } from 'app/scripts/helpers';
 import colors from 'src/constants/colors';
 import { imageUrl } from 'src/api';
 import { MESSAGE_TYPE_COMPLETE } from 'src/constants/messages';
 import { REQUIRED_PROFILE_FIELDS } from 'src/constants/profile';
+import { RichText } from 'src/richText';
+
+import {
+  fakeCategory,
+  fakeActivity,
+  fakeProfile,
+  fakeBlogPost,
+} from 'app/scripts/helpers';
 
 import {
   addOrdinals,
@@ -14,6 +22,8 @@ import {
   parseActivity,
   parseMessage,
   parseProfile,
+  parseBlogPost,
+  parseBlogPostBodyContent,
 } from 'src/api/parse';
 
 
@@ -160,7 +170,7 @@ describe('api/parse', () => {
   });
 
   describe('parseProfile', () => {
-    it('should add the profile image', () => {
+    it('should parse the profile image to an ImageUrl', () => {
       const profile = fakeProfile({
         profilePic: '/foo.jpg',
       });
@@ -168,6 +178,46 @@ describe('api/parse', () => {
       expect(parseProfile(profile)).toEqual(jasmine.objectContaining({
         profilePic: imageUrl('/foo.jpg'),
       }));
+    });
+  });
+
+  describe('parseBlogPost', () => {
+    it('should parse the image to an ImageUrl', () => {
+      const blogPost = fakeBlogPost({
+        image: '/images/foo.jpg',
+        bodyContent: [{
+          type: 'paragraph',
+          value: 'Hoards of leaves wear 3d glasses',
+        }],
+      });
+
+      const res = parseBlogPost(blogPost);
+
+      expect(res.bodyContent instanceof RichText).toBe(true);
+
+      expect(res.bodyContent.tree).toEqual(parseBlogPostBodyContent([{
+        type: 'paragraph',
+        value: 'Hoards of leaves wear 3d glasses',
+      }]).tree);
+    });
+
+    it('should parse the thumbnail to an ImageUrl', () => {
+      const blogPost = fakeBlogPost({
+        thumbnail: '/thumbnails/foo.jpg',
+        bodyContent: [{
+          type: 'paragraph',
+          value: 'Hoards of leaves wear 3d glasses',
+        }],
+      });
+
+      const res = parseBlogPost(blogPost);
+
+      expect(res.bodyContent instanceof RichText).toBe(true);
+
+      expect(res.bodyContent.tree).toEqual(parseBlogPostBodyContent([{
+        type: 'paragraph',
+        value: 'Hoards of leaves wear 3d glasses',
+      }]).tree);
     });
   });
 });

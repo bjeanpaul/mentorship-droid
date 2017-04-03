@@ -9,8 +9,10 @@ export default StyleSheet.create(merge({
     margin: 25,
   },
   paginationContainer: {
-    flex: 1,
     justifyContent: 'flex-end',
+  },
+  contentContainer: {
+    flex: 1,
   },
 }, DEVICE_HEIGHT > DEVICE_HEIGHT_SMALL && {
   title: {

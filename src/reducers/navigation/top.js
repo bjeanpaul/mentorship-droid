@@ -15,6 +15,7 @@ import reduceCallNotes from 'src/reducers/navigation/callNotes';
 import reduceOnboarding from 'src/reducers/navigation/onboarding';
 import reduceActivities from 'src/reducers/navigation/activities';
 import reduceSchedule from 'src/reducers/navigation/schedule';
+import reduceBlogPosts from 'src/reducers/navigation/blogPosts';
 
 
 import {
@@ -43,6 +44,7 @@ const reduce = pipeline([
   reduceOnboarding,
   reduceActivities,
   reduceSchedule,
+  reduceBlogPosts,
 ]);
 
 

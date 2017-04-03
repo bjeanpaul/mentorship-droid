@@ -4,6 +4,7 @@ import { listActivities } from 'src/api/activities';
 import { listScheduledCalls } from 'src/api/schedule';
 import { listEvents } from 'src/api/events';
 import { listCallNotes } from 'src/api/callNotes';
+import { listBlogPosts } from 'src/api/blogPosts';
 import { listMessages } from 'src/api/messages';
 
 
@@ -14,6 +15,7 @@ export const load = auth => Promise.resolve()
     listScheduledCalls(auth),
     listEvents(auth),
     listCallNotes(auth),
+    listBlogPosts(auth),
     listMessages(auth),
   ]))
   .then((res) => merge(...map(res, 'entities')))

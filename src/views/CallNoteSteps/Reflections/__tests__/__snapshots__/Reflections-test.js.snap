@@ -38,52 +38,60 @@ exports[`Reflections should render 1`] = `
     }>
     Please share your reflections of the discussion
   </Text>
-  <View>
-    <View
-      style={
-        Array [
-          Object {
-            "borderBottomWidth": 1,
-            "borderColor": "#dfe5e6",
-            "marginBottom": 27,
-            "marginLeft": 24,
-            "marginRight": 24,
-          },
-          false,
-        ]
-      }>
-      <TextInput
-        multiline={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onChangeText={[Function]}
-        onFocus={[Function]}
-        placeholder="Type your answer here"
-        placeholderTextColor="#c0cbcc"
-        style={
-          Array [
-            Object {
-              "color": "#003035",
-              "fontFamily": "Brandon Text",
-              "fontSize": 18,
-              "lineHeight": 28,
-              "marginBottom": 8,
-              "padding": 0,
-            },
-            Object {
-              "height": 32,
-            },
-          ]
-        }
-        uid="input"
-        underlineColorAndroid="transparent"
-        value="Walk in Silence" />
-    </View>
-  </View>
   <View
     style={
       Object {
         "flex": 1,
+      }
+    }>
+    <ScrollView>
+      <View
+        onLayout={undefined}>
+        <View
+          style={
+            Array [
+              Object {
+                "borderBottomWidth": 1,
+                "borderColor": "#dfe5e6",
+                "marginBottom": 27,
+                "marginLeft": 24,
+                "marginRight": 24,
+              },
+              false,
+            ]
+          }>
+          <TextInput
+            multiline={true}
+            onBlur={[Function]}
+            onChangeText={[Function]}
+            onContentSizeChange={[Function]}
+            onFocus={[Function]}
+            placeholder="Type your answer here"
+            placeholderTextColor="#c0cbcc"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                  "fontSize": 18,
+                  "marginBottom": 8,
+                  "padding": 0,
+                },
+                Object {
+                  "height": 0,
+                },
+              ]
+            }
+            uid="input"
+            underlineColorAndroid="transparent"
+            value="Walk in Silence" />
+        </View>
+      </View>
+    </ScrollView>
+  </View>
+  <View
+    style={
+      Object {
         "justifyContent": "flex-end",
       }
     }>
@@ -176,35 +184,70 @@ exports[`Reflections should render 1`] = `
             } />
         </Text>
       </View>
-      <View
-        style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "#ffbcbc",
-              "borderColor": "red",
-              "borderWidth": 1,
-              "height": 100,
-              "justifyContent": "center",
-              "margin": 10,
-              "width": 300,
-            },
-            undefined,
-          ]
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <TouchableNativeFeedback
+        onPress={[Function]}>
+        <View
           style={
-            Object {
-              "color": "#333333",
-              "margin": 20,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "borderRadius": 5,
+                "justifyContent": "center",
+                "marginHorizontal": 16,
+                "paddingBottom": 17,
+                "paddingTop": 15,
+              },
+              Object {
+                "backgroundColor": "transparent",
+                "borderColor": "#f77040",
+                "borderWidth": 1,
+              },
+              Array [
+                Object {
+                  "marginLeft": 0,
+                  "marginRight": 0,
+                },
+                Object {
+                  "flex": 1,
+                },
+              ],
+              undefined,
+              false,
+            ]
           }>
-          TouchableNativeFeedback is not supported on this platform!
-        </Text>
-      </View>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Array [
+                  Object {
+                    "fontFamily": "Brandon Text_bold",
+                    "fontSize": 13,
+                    "fontWeight": "bold",
+                    "letterSpacing": 1,
+                  },
+                  Object {
+                    "color": "#f77040",
+                  },
+                  undefined,
+                  false,
+                ],
+              ]
+            }>
+            NEXT
+          </Text>
+        </View>
+      </TouchableNativeFeedback>
     </View>
   </View>
 </View>

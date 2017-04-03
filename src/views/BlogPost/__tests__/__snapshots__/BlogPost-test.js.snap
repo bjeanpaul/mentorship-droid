@@ -1,0 +1,548 @@
+exports[`BlogPost should handle rendering without an image 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }>
+  <ScrollView>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 16,
+            "paddingRight": 16,
+          },
+          Object {},
+        ]
+      }>
+      <TouchableNativeFeedback
+        onPress={[Function]}>
+        <View
+          style={
+            Array [
+              Object {
+                "position": "absolute",
+                "top": 24,
+              },
+              Object {},
+            ]
+          }>
+          <Image
+            source={1}
+            style={
+              Array [
+                Object {
+                  "height": 24,
+                  "width": 24,
+                },
+                Object {},
+              ]
+            } />
+        </View>
+      </TouchableNativeFeedback>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+          Object {
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#9fb1b3",
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 11,
+            "fontWeight": "400",
+            "textAlign": "center",
+          },
+        ]
+      }>
+      IN 2 MONTHS
+    </Text>
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 16,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontFamily": "Brandon Text_bold",
+              "fontWeight": "bold",
+            },
+            Object {
+              "fontFamily": "Brandon Text_medium",
+              "fontSize": 24,
+              "fontWeight": "400",
+              "marginBottom": 25,
+              "marginTop": 11,
+              "textAlign": "center",
+            },
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+            ]
+          }>
+          A 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+            ]
+          }>
+          tactile 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+            ]
+          }>
+          cactus
+        </Text>
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 16,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontSize": 18,
+              "marginBottom": 12,
+              "textAlign": "left",
+            },
+            Object {
+              "fontSize": 18,
+              "marginBottom": 20,
+            },
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              undefined,
+            ]
+          }>
+          Maybe 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              undefined,
+            ]
+          }>
+          Spain 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              undefined,
+            ]
+          }>
+          is 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              undefined,
+            ]
+          }>
+          the 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              undefined,
+            ]
+          }>
+          open-faced 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              undefined,
+            ]
+          }>
+          smile
+        </Text>
+      </Text>
+    </View>
+  </ScrollView>
+</View>
+`;
+
+exports[`BlogPost should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }>
+  <ScrollView>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 72,
+            "justifyContent": "center",
+            "paddingLeft": 16,
+            "paddingRight": 16,
+          },
+          Object {},
+        ]
+      }>
+      <TouchableNativeFeedback
+        onPress={[Function]}>
+        <View
+          style={
+            Array [
+              Object {
+                "position": "absolute",
+                "top": 24,
+              },
+              Object {},
+            ]
+          }>
+          <Image
+            source={1}
+            style={
+              Array [
+                Object {
+                  "height": 24,
+                  "width": 24,
+                },
+                Object {},
+              ]
+            } />
+        </View>
+      </TouchableNativeFeedback>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+          Object {
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#9fb1b3",
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 11,
+            "fontWeight": "400",
+            "textAlign": "center",
+          },
+        ]
+      }>
+      IN 2 MONTHS
+    </Text>
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 16,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontFamily": "Brandon Text_bold",
+              "fontWeight": "bold",
+            },
+            Object {
+              "fontFamily": "Brandon Text_medium",
+              "fontSize": 24,
+              "fontWeight": "400",
+              "marginBottom": 25,
+              "marginTop": 11,
+              "textAlign": "center",
+            },
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+            ]
+          }>
+          A 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+            ]
+          }>
+          tactile 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+            ]
+          }>
+          cactus
+        </Text>
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+        }
+      }>
+      <Image
+        source={
+          Object {
+            "uri": "/api/images/image.png?filter_spec=min-720x406",
+          }
+        }
+        style={
+          Object {
+            "height": 203,
+            "maxWidth": 375,
+            "resizeMode": "contain",
+            "width": 360,
+          }
+        } />
+    </View>
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 16,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontSize": 18,
+              "marginBottom": 12,
+              "textAlign": "left",
+            },
+            Object {
+              "fontSize": 18,
+              "marginBottom": 20,
+            },
+          ]
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              undefined,
+            ]
+          }>
+          Maybe 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              undefined,
+            ]
+          }>
+          Spain 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              undefined,
+            ]
+          }>
+          is 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              undefined,
+            ]
+          }>
+          the 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              undefined,
+            ]
+          }>
+          open-faced 
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              undefined,
+            ]
+          }>
+          smile
+        </Text>
+      </Text>
+    </View>
+  </ScrollView>
+</View>
+`;
