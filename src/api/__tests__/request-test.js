@@ -64,6 +64,24 @@ describe('api/request', () => {
       expect(err.response).toEqual(httpErr.response);
     });
 
+    it('should reject a 401 response as an ApiAuthorizationError', async () => {
+      const httpErr = new Error();
+      httpErr.message = 'o_O';
+      httpErr.response = { status: 401 };
+
+      axios.mockReturnValue(Promise.reject(httpErr));
+
+      const err = await request({
+        url: '/foo',
+        method: 'GET',
+      })
+      .catch(identity);
+
+      expect(err instanceof errors.ApiAuthorizationError).toBe(true);
+      expect(err.message).toEqual(httpErr.message);
+      expect(err.response).toEqual(httpErr.response);
+    });
+
     it('should reject a 403 response as an ApiAuthenticationError', async () => {
       const httpErr = new Error();
       httpErr.message = 'o_O';
