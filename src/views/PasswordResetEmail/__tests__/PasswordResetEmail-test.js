@@ -1,13 +1,13 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import PasswordResetContinue from 'src/views/PasswordResetContinue';
+import PasswordResetEmail from 'src/views/PasswordResetEmail';
 
 
-describe('PasswordResetContinue', () => {
+describe('PasswordResetEmail', () => {
   function createComponent(props = {}) {
     return (
-      <PasswordResetContinue
+      <PasswordResetEmail
         onDismissPress={noop}
         {...props}
       />

@@ -2,9 +2,9 @@ import React from 'react';
 import NotYetImplemented from 'src/views/NotYetImplemented';
 
 
-const PasswordResetStart = props => (
+const PasswordResetEmail = props => (
   <NotYetImplemented {...props} />
 );
 
 
-export default PasswordResetStart;
+export default PasswordResetEmail;
