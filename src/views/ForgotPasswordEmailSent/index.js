@@ -2,9 +2,9 @@ import React from 'react';
 import NotYetImplemented from 'src/views/NotYetImplemented';
 
 
-const PasswordResetEmailSent = props => (
+const ForgotPasswordEmailSent = props => (
   <NotYetImplemented {...props} />
 );
 
 
-export default PasswordResetEmailSent;
+export default ForgotPasswordEmailSent;

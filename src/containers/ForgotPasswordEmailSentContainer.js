@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import PasswordReset from 'src/views/PasswordReset';
+import ForgotPasswordEmailSent from 'src/views/ForgotPasswordEmailSent';
 import { dismissScreen } from 'src/actions/navigation';
 
 
@@ -9,4 +9,4 @@ export const mapDispatchToProps = {
 };
 
 
-export default connect(null, mapDispatchToProps)(PasswordReset);
+export default connect(null, mapDispatchToProps)(ForgotPasswordEmailSent);
