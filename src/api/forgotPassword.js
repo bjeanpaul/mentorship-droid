@@ -3,7 +3,8 @@ import request from 'src/api/request';
 
 const emailForgotPasswordToken = data => request({
   url: '/reset-password/',
-  method: 'POST', data,
+  method: 'POST',
+  data,
 });
 
 
