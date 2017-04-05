@@ -1,4 +1,4 @@
-import { apiAction, dataAction, staticAction } from 'src/actionHelpers';
+import { apiAction, staticAction } from 'src/actionHelpers';
 import * as constants from 'src/constants/calls';
 import * as api from 'src/api';
 
@@ -20,3 +20,11 @@ export const resetForgotPassword = apiAction({
     [ApiAuthorizationError, staticAction(constants.FORGOT_PASSWORD_RESET_BAD_TOKEN)],
   ],
 });
+
+
+export const showForgotPasswordEmail = staticAction(
+  constants.SHOW_FORGOT_PASSWORD_EMAIL);
+
+
+export const showForgotPasswordReset = staticAction(
+  constants.SHOW_FORGOT_PASSWORD_RESET);
