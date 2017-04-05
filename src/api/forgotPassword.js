@@ -1,10 +1,9 @@
 import request from 'src/api/request';
 
 
-const requestForgotPasswordReset = data => request({
+const emailForgotPasswordToken = data => request({
   url: '/reset-password/',
-  method: 'POST',
-  data,
+  method: 'POST', data,
 });
 
 
@@ -23,6 +22,6 @@ const resetForgotPassword = data => request({
 
 
 export {
-  requestForgotPasswordReset,
+  emailForgotPasswordToken,
   resetForgotPassword,
 };

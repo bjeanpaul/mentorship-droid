@@ -3,7 +3,7 @@ jest.mock('src/api/request');
 import { identity } from 'lodash';
 import { fakeAuth } from 'app/scripts/helpers';
 import request from 'src/api/request';
-import { requestForgotPasswordReset, resetForgotPassword } from 'src/api';
+import { emailForgotPasswordToken, resetForgotPassword } from 'src/api';
 
 
 describe('api/forgotPassword', () => {
@@ -12,9 +12,9 @@ describe('api/forgotPassword', () => {
     request.mockClear();
   });
 
-  describe('requestForgotPasswordReset', () => {
+  describe('emailForgotPasswordToken', () => {
     it('should construct a request for a password reset request', () => {
-      expect(requestForgotPasswordReset({ email: 'a@b.org' }, fakeAuth())).toEqual({
+      expect(emailForgotPasswordToken({ email: 'a@b.org' }, fakeAuth())).toEqual({
         url: '/reset-password/',
         method: 'POST',
         data: { email: 'a@b.org' },
