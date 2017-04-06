@@ -1,2 +1,0 @@
-xdescribe('src/reducers/forgotPassword', () => {
-});
