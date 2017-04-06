@@ -80,3 +80,5 @@ git flow release finish -p <version>
 ## Development Configuration
 
 Development-specific configuration can be defined by adding a `src/config/dev.js` module. See `src/config/dev.example.js` for an example.
+
+A development-specific entry point to the app can be added by defining `src/app.dev.js` and setting `USE_DEV_APP` to `true` in `src/config/dev.js`. This will override the default entry point, `src/app.js`.
