@@ -44,6 +44,7 @@ android/app/google-services.json
 .env.qa
 .env.prd
 src/config/dev.js
+src/app.dev.js
 
 *.keystore
 secrets.tar
