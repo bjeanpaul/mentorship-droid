@@ -9,19 +9,26 @@ import {
 
 describe('ScheduledCallCategoryContainer', () => {
   describe('mapStateToProps', () => {
-    it('should provide all categories', () => {
+    it('should provide all visible categories', () => {
+      const cat1 = fakeCategory({
+        id: 1,
+        isHidden: true,
+      });
+
+      const cat2 = fakeCategory({
+        id: 2,
+        isHidden: false,
+      });
+
       expect(mapStateToProps(fakeState({
         entities: {
           categories: {
-            21: fakeCategory({ id: 21 }),
-            23: fakeCategory({ id: 23 }),
+            1: cat1,
+            2: cat2,
           },
         },
       }))).toEqual(jasmine.objectContaining({
-        categories: [
-          fakeCategory({ id: 21 }),
-          fakeCategory({ id: 23 }),
-        ],
+        categories: [cat2],
       }));
     });
   });
