@@ -38,17 +38,18 @@ describe('ScheduledCallActivityContainer', () => {
         isHidden: false,
       });
 
-      expect(mapStateToProps(fakeState({
-        entities: {
-          activities: {
-            1: activity1,
-            2: activity2,
-          },
-          categories: {
-            21: fakeCategory({ id: 21 }),
-          },
-        },
-      }), {
+      const state = fakeState();
+
+      state.entities.categories = {
+        21: fakeCategory({ id: 21 }),
+      };
+
+      state.entities.activities = {
+        1: activity1,
+        2: activity2,
+      };
+
+      expect(mapStateToProps(state, {
         categoryId: 21,
       })).toEqual(jasmine.objectContaining({
         activities: [activity2],
