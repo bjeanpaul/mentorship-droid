@@ -115,6 +115,27 @@ describe('helpers', () => {
 
       expect(getCategories(state)).toEqual([category2, category1]);
     });
+
+    it('should support omitting hidden categories', () => {
+      const state = fakeState();
+
+      const category1 = fakeCategory({
+        id: 1,
+        isHidden: true,
+      });
+
+      const category2 = fakeCategory({
+        id: 2,
+        isHidden: false,
+      });
+
+      state.entities.categories = {
+        1: category1,
+        2: category2,
+      };
+
+      expect(getCategories(state, { omitHidden: true })).toEqual([category2]);
+    });
   });
 
   describe('getCategory', () => {
@@ -169,6 +190,31 @@ describe('helpers', () => {
       };
 
       expect(getCategoryActivities(state, 7)).toEqual([activity2, activity1]);
+    });
+
+    it('should support omitting hidden activities', () => {
+      const state = fakeState();
+
+      const activity1 = fakeActivity({
+        id: 1,
+        category: 7,
+        isHidden: true,
+      });
+
+      const activity2 = fakeActivity({
+        id: 2,
+        category: 7,
+        isHidden: false,
+      });
+
+      state.entities.activities = {
+        1: activity1,
+        2: activity2,
+      };
+
+      expect(getCategoryActivities(state, 7, {
+        omitHidden: true,
+      })).toEqual([activity2]);
     });
   });
 

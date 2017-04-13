@@ -9,7 +9,7 @@ import { dismissScreen } from 'src/actions/navigation';
 
 export const mapStateToProps = (state, { categoryId }) => ({
   category: getCategory(state, categoryId),
-  activities: getCategoryActivities(state, categoryId),
+  activities: getCategoryActivities(state, categoryId, { omitHidden: true }),
 });
 
 
