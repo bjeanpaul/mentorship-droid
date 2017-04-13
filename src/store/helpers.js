@@ -23,15 +23,24 @@ export const getContext = state => {
 };
 
 
-export const getCategories = ({ entities }) =>
-  sortBy(values(entities.categories), 'ordinal');
+export const getCategories = ({ entities }, opts = {}) => {
+  const { omitHidden = false } = opts;
+  let res = sortBy(values(entities.categories), 'ordinal');
+  if (omitHidden) res = filter(res, { isHidden: false });
+  return res;
+};
 
 
-export const getCategoryActivities = ({ entities }, targetCategoryId) => {
-  const activities = values(entities.activities)
+export const getCategoryActivities = ({ entities }, targetCategoryId, opts = {}) => {
+  const { omitHidden = false } = opts;
+
+  let res = values(entities.activities)
     .filter(({ category }) => category === targetCategoryId);
 
-  return sortBy(activities, 'ordinal');
+  res = sortBy(res, 'ordinal');
+  if (omitHidden) res = filter(res, { isHidden: false });
+
+  return res;
 };
 
 

@@ -6,8 +6,7 @@ import { dismissActivityScreen, chooseActivity } from 'src/actions/activities';
 
 const mapStateToProps = (state, { categoryId }) => ({
   category: getCategory(state, categoryId),
-  activities: getCategoryActivities(state, categoryId)
-    .filter(({ isHidden }) => !isHidden),
+  activities: getCategoryActivities(state, categoryId, { omitHidden: true }),
 });
 
 

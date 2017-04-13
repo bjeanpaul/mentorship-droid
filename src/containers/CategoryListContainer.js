@@ -5,8 +5,7 @@ import { chooseCategory } from 'src/actions/activities';
 
 
 export const mapStateToProps = state => ({
-  categories: getCategories(state)
-    .filter(({ isHidden }) => !isHidden),
+  categories: getCategories(state, { omitHidden: true }),
 });
 
 
