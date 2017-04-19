@@ -12,7 +12,9 @@ export const mapStateToProps = (state, { activity }) => {
   let callsAndCallNotes = getCallsWithCallNotes(state);
 
   if (!isUndefined(activity)) {
-    callsAndCallNotes = filter(callsAndCallNotes, { call: { activity: activity } });
+    callsAndCallNotes = filter(
+      callsAndCallNotes,
+      { call: { activity } });
   }
 
   callsAndCallNotes = orderBy(

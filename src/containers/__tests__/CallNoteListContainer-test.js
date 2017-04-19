@@ -137,6 +137,5 @@ describe('CallNoteListContainer', () => {
         })
       );
     });
-
   });
 });
