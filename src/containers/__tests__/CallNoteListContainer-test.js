@@ -94,5 +94,49 @@ describe('CallNoteListContainer', () => {
         })
       );
     });
+
+    it('should provide calls and call notes and order them by call start time', () => {
+      const call1 = fakeCall({ id: 1 });
+      const call2 = fakeCall({ id: 2 });
+      const callNote1 = fakeCallNote({
+        id: 21,
+        call: 1,
+        callStartTime: '2016-09-28T17:34Z',
+      });
+      const callNote2 = fakeCallNote({
+        id: 100,
+        call: 2,
+        callStartTime: '2016-10-01T17:34Z',
+      });
+
+      const state = {
+        entities: {
+          calls: {
+            1: call1,
+            2: call2,
+          },
+          callNotes: {
+            21: callNote1,
+            100: callNote2,
+          },
+        },
+      };
+
+      expect(mapStateToProps(state, {}))
+        .toEqual(jasmine.objectContaining({
+          callsAndCallNotes: [
+            {
+              callNote: callNote2,
+              call: call2,
+            },
+            {
+              callNote: callNote1,
+              call: call1,
+            },
+          ],
+        })
+      );
+    });
+
   });
 });

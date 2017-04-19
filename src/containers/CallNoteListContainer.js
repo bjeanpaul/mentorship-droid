@@ -1,4 +1,5 @@
-import { isUndefined, filter, noop } from 'lodash';
+import moment from 'moment';
+import { isUndefined, filter, noop, orderBy } from 'lodash';
 import { connect } from 'react-redux';
 import CallNoteList from 'src/views/CallNoteList';
 import { getCallsWithCallNotes } from 'src/store/helpers';
@@ -13,6 +14,12 @@ export const mapStateToProps = (state, { activity }) => {
   if (!isUndefined(activity)) {
     callsAndCallNotes = filter(callsAndCallNotes, { call: { activity: activity } });
   }
+
+  callsAndCallNotes = orderBy(
+    callsAndCallNotes,
+    ({ callNote: { callStartTime } }) => +moment(callStartTime), ['desc']
+  );
+
   return { callsAndCallNotes };
 };
 
