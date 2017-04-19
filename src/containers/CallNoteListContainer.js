@@ -1,4 +1,4 @@
-import { isUndefined, filter, noop, orderBy } from 'lodash';
+import { isUndefined, filter, noop } from 'lodash';
 import { connect } from 'react-redux';
 import CallNoteList from 'src/views/CallNoteList';
 import { getCallsWithCallNotes } from 'src/store/helpers';
@@ -7,11 +7,11 @@ import { chooseCallNote } from 'src/actions/callNotes';
 
 
 // TODO handle call notes without activities once we have designs for this
-export const mapStateToProps = (state, { activityId }) => {
+export const mapStateToProps = (state, { activity }) => {
   let callsAndCallNotes = getCallsWithCallNotes(state);
 
-  if (!isUndefined(activityId)) {
-    callsAndCallNotes = filter(callsAndCallNotes, { call: { callActivity: activityId } });
+  if (!isUndefined(activity)) {
+    callsAndCallNotes = filter(callsAndCallNotes, { call: { activity: activity } });
   }
   return { callsAndCallNotes };
 };
