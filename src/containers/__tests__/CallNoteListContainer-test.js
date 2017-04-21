@@ -15,6 +15,8 @@ describe('CallNoteListContainer', () => {
         id: 100,
         call: 2,
       });
+      const time1 = callNote1.callStartTime;
+      const time2 = callNote2.callStartTime;
 
       const state = {
         entities: {
@@ -35,10 +37,12 @@ describe('CallNoteListContainer', () => {
             {
               callNote: callNote1,
               call: call1,
+              time: time1,
             },
             {
               callNote: callNote2,
               call: call2,
+              time: time2,
             },
           ],
         }));
@@ -61,6 +65,8 @@ describe('CallNoteListContainer', () => {
         id: 100,
         call: 2,
       });
+      const time1 = callNote1.callStartTime;
+      const time2 = callNote2.callStartTime;
 
       const state = {
         entities: {
@@ -85,10 +91,12 @@ describe('CallNoteListContainer', () => {
             {
               callNote: callNote1,
               call: call1,
+              time: time1,
             },
             {
               callNote: callNote2,
               call: call2,
+              time: time2,
             },
           ],
         })
@@ -106,8 +114,10 @@ describe('CallNoteListContainer', () => {
       const callNote2 = fakeCallNote({
         id: 100,
         call: 2,
-        callStartTime: '2016-10-01T17:34Z',
+        callStartTime: '2017-09-28T17:34Z',
       });
+      const time1 = callNote1.callStartTime;
+      const time2 = callNote2.callStartTime;
 
       const state = {
         entities: {
@@ -128,14 +138,63 @@ describe('CallNoteListContainer', () => {
             {
               callNote: callNote2,
               call: call2,
+              time: time2,
             },
             {
               callNote: callNote1,
               call: call1,
+              time: time1,
             },
           ],
         })
       );
+    });
+
+    it('should add the timestamp of a callNote or the call Start Time if callNote does not exist', () => {
+      const call1 = fakeCall({ id: 1 });
+      const callNote1 = fakeCallNote({
+        id: 21,
+        call: 1,
+        callStartTime: '2016-09-28T17:34Z',
+      });
+
+      const call2 = fakeCall({
+        id: 2,
+        startTime: '2017-09-28T17:34Z',
+      });
+
+      const time1 = callNote1.callStartTime;
+      const time2 = call2.startTime;
+
+      const state = {
+        entities: {
+          calls: {
+            1: call1,
+            2: call2,
+          },
+          callNotes: {
+            21: callNote1,
+          },
+        },
+      };
+
+      expect( mapStateToProps(state, {}) )
+        .toEqual(jasmine.objectContaining({
+          callsAndCallNotes: [
+            {
+              callNote: null,
+              call: call2,
+              time: time2,
+            },
+            {
+              callNote: callNote1,
+              call: call1,
+              time: time1,
+            },
+          ],
+        })
+      );
+
     });
   });
 });

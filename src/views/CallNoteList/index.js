@@ -30,15 +30,12 @@ const CallNoteList = ({
             : onAddPress()}
         >
           <View style={styles.row}>
-            <Text style={styles.rowText}>
-              <Text style={styles.leftText}>
-                {moment(callAndCallNote.callNote.callStartTime).format('ddd, MMM D, h:mm a')}
-              </Text>
-              <Text style={styles.rightText}>
-                { callAndCallNote.callNote ? 'View' : 'Add' }
-              </Text>
+            <Text style={styles.leftText}>
+              {moment(callAndCallNote.time).format('ddd, MMM D, h:mm a')}
             </Text>
-
+            <Text style={styles.rightText}>
+              { callAndCallNote.callNote ? 'VIEW' : 'ADD' }
+            </Text>
           </View>
         </TouchableNativeFeedback>
       )}
