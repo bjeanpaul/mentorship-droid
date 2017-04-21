@@ -27,7 +27,7 @@ const CallNoteList = ({
           key={callAndCallNote.call.id}
           onPress={() => callAndCallNote.callNote ?
             onViewPress(callAndCallNote.callNote.id)
-            : onAddPress()}
+            : onAddPress({ callId: callAndCallNote.call.id })}
         >
           <View style={styles.row}>
             <Text style={styles.leftText}>

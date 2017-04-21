@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import CallNoteList from 'src/views/CallNoteList';
 import { getCallsWithCallNotes } from 'src/store/helpers';
 import { dismissScreen } from 'src/actions/navigation';
-import { chooseCallNote } from 'src/actions/callNotes';
+import { chooseCallNote, openCreateCallNote } from 'src/actions/callNotes';
 
 export const addTimeStampToCallsWithCallNotes = (callsAndCallNotes) => {
   return callsAndCallNotes.map((callAndCallNote) => {
@@ -39,7 +39,7 @@ export const mapStateToProps = (state, { activity }) => {
 
 export const mapDispatchToProps = {
   onViewPress: chooseCallNote,
-  onAddPress: noop,
+  onAddPress: openCreateCallNote,
   onDismissPress: dismissScreen,
 };
 
