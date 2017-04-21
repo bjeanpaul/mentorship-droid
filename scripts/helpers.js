@@ -46,6 +46,7 @@ export const fakeCategory = data => ({
   about: 'touba',
   goal: 'laog',
   image: api.imageUrl(null),
+  isHidden: false,
   ...data,
 });
 
@@ -64,6 +65,7 @@ export const fakeActivity = data => ({
   icon: api.imageUrl(null),
   poster: api.imageUrl(null),
   category: 23,
+  isHidden: false,
   ...data,
 });
 
