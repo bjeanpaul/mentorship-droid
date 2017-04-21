@@ -148,13 +148,16 @@ exports[`CallNoteList should render call notes as rows 1`] = `
   </View>
   <ScrollView>
     <TouchableNativeFeedback
-      callNoteId={1}
+      callId={2}
       onPress={[Function]}>
       <View
         style={
           Object {
+            "alignItems": "center",
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
             "marginLeft": 24,
             "marginRight": 24,
             "paddingBottom": 32,
@@ -178,28 +181,74 @@ exports[`CallNoteList should render call notes as rows 1`] = `
               Object {
                 "color": "#003035",
                 "fontSize": 18,
-                "textAlign": "left",
+              },
+            ]
+          }>
+          Tue, Sep 27, 10:51 am
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#f77040",
+                "fontSize": 13,
+              },
+            ]
+          }>
+          ADD
+        </Text>
+      </View>
+    </TouchableNativeFeedback>
+    <TouchableNativeFeedback
+      callId={1}
+      onPress={[Function]}>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginLeft": 24,
+            "marginRight": 24,
+            "paddingBottom": 32,
+            "paddingTop": 26,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#003035",
+                "fontSize": 18,
               },
             ]
           }>
           Wed, Sep 28, 7:34 pm
         </Text>
-      </View>
-    </TouchableNativeFeedback>
-    <TouchableNativeFeedback
-      callNoteId={2}
-      onPress={[Function]}>
-      <View
-        style={
-          Object {
-            "borderBottomWidth": 0.5,
-            "borderColor": "#dfe5e6",
-            "marginLeft": 24,
-            "marginRight": 24,
-            "paddingBottom": 32,
-            "paddingTop": 26,
-          }
-        }>
         <Text
           accessible={true}
           allowFontScaling={true}
@@ -215,13 +264,12 @@ exports[`CallNoteList should render call notes as rows 1`] = `
                 "textAlign": "center",
               },
               Object {
-                "color": "#003035",
-                "fontSize": 18,
-                "textAlign": "left",
+                "color": "#f77040",
+                "fontSize": 13,
               },
             ]
           }>
-          Wed, Sep 28, 7:34 pm
+          VIEW
         </Text>
       </View>
     </TouchableNativeFeedback>
