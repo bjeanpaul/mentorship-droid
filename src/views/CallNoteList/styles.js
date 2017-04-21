@@ -4,6 +4,9 @@ import colors from 'src/constants/colors';
 
 export default StyleSheet.create({
   row: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     paddingBottom: 32,
     paddingTop: 26,
     marginLeft: 24,
@@ -11,9 +14,12 @@ export default StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderColor: colors.CALL_NOTE_LIST_ROW_BORDER,
   },
-  rowText: {
-    textAlign: 'left',
+  leftText: {
     fontSize: 18,
     color: colors.CALL_NOTE_LIST_TEXT,
+  },
+  rightText: {
+    fontSize: 13,
+    color: colors.LINK_TEXT,
   },
 });
