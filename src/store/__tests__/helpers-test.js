@@ -627,12 +627,10 @@ describe('helpers', () => {
         {
           call: call1,
           callNote: callNote1,
-        },
-        {
+        }, {
           call: call2,
           callNote: callNote2,
-        },
-      ];
+        }];
 
       expect(getCallsWithCallNotes(state)).toEqual(expectedOutcome);
     });
@@ -646,12 +644,10 @@ describe('helpers', () => {
         {
           call: call1,
           callNote: callNote1,
-        },
-        {
+        }, {
           call: call2,
           callNote: null,
-        },
-      ];
+        }];
 
       expect(getCallsWithCallNotes(state)).toEqual(expectedOutcome);
     });
