@@ -30,10 +30,10 @@ const CallNoteList = ({
             : onAddPress({ callId: callAndCallNote.call.id })}
         >
           <View style={styles.row}>
-            <Text style={styles.leftText}>
+            <Text style={styles.callNoteTitle}>
               {moment(callAndCallNote.time).format('ddd, MMM D, h:mm a')}
             </Text>
-            <Text style={styles.rightText}>
+            <Text style={styles.callNoteAction}>
               { callAndCallNote.callNote ? 'VIEW' : 'ADD' }
             </Text>
           </View>

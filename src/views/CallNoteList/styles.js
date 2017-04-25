@@ -14,11 +14,11 @@ export default StyleSheet.create({
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderColor: colors.CALL_NOTE_LIST_ROW_BORDER,
   },
-  leftText: {
+  callNoteTitle: {
     fontSize: 18,
     color: colors.CALL_NOTE_LIST_TEXT,
   },
-  rightText: {
+  callNoteAction: {
     fontSize: 13,
     color: colors.LINK_TEXT,
   },
