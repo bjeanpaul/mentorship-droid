@@ -22,11 +22,6 @@ describe('CallNoteList', () => {
     call: 1,
     callStartTime: '2016-09-28T17:34Z',
   });
-  const callNote2 = fakeCallNote({
-    id: 100,
-    call: 2,
-    callStartTime: '2017-09-28T17:34Z',
-  });
   const time1 = callNote1.callStartTime;
   const time2 = call2.startTime;
 

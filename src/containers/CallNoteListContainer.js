@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { isUndefined, filter, noop, orderBy } from 'lodash';
+import { isUndefined, filter, orderBy } from 'lodash';
 import { connect } from 'react-redux';
 import CallNoteList from 'src/views/CallNoteList';
 import { getCallsWithCallNotes } from 'src/store/helpers';
@@ -8,9 +8,11 @@ import { chooseCallNote, openCreateCallNote } from 'src/actions/callNotes';
 
 export const addTimeStampToCallsWithCallNotes = (callsAndCallNotes) => {
   return callsAndCallNotes.map((callAndCallNote) => {
-    let time = callAndCallNote.callNote ? callAndCallNote.callNote.callStartTime : callAndCallNote.call.startTime;
+    const time = callAndCallNote.callNote
+      ? callAndCallNote.callNote.callStartTime
+      : callAndCallNote.call.startTime;
     return {
-      time: time,
+      time,
       ...callAndCallNote,
     };
   });

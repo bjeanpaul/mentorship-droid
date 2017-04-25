@@ -150,7 +150,7 @@ describe('CallNoteListContainer', () => {
       );
     });
 
-    it('should add the timestamp of a callNote or the call Start Time if callNote does not exist', () => {
+    it('should add the timestamp of a callNote or call Start Time', () => {
       const call1 = fakeCall({ id: 1 });
       const callNote1 = fakeCallNote({
         id: 21,
@@ -178,7 +178,7 @@ describe('CallNoteListContainer', () => {
         },
       };
 
-      expect( mapStateToProps(state, {}) )
+      expect(mapStateToProps(state, {}))
         .toEqual(jasmine.objectContaining({
           callsAndCallNotes: [
             {
@@ -194,7 +194,6 @@ describe('CallNoteListContainer', () => {
           ],
         })
       );
-
     });
   });
 });
