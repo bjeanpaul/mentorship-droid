@@ -31,7 +31,7 @@ const CallNoteList = ({
         >
           <View style={styles.row}>
             <Text style={styles.callNoteTitle}>
-              {moment(callAndCallNote.time).format('ddd, MMM D, h:mm a')}
+              {moment(callAndCallNote.call.startTime).format('ddd, MMM D, h:mm a')}
             </Text>
             <Text style={styles.callNoteAction}>
               { callAndCallNote.callNote ? 'VIEW' : 'ADD' }

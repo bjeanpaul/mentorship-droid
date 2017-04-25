@@ -15,28 +15,24 @@ describe('CallNoteList', () => {
     />
   );
 
-  const call1 = fakeCall({ id: 1 });
+  const call1 = fakeCall({
+    id: 1,
+    startTime: '2016-09-28T17:34Z',
+  });
   const call2 = fakeCall({ id: 2 });
   const callNote1 = fakeCallNote({
     id: 21,
     call: 1,
-    callStartTime: '2016-09-28T17:34Z',
   });
-  const time1 = callNote1.callStartTime;
-  const time2 = call2.startTime;
 
   const callsAndCallNotes = [
     {
       callNote: null,
       call: call2,
-      time: time2,
-    },
-    {
+    }, {
       callNote: callNote1,
       call: call1,
-      time: time1,
-    },
-  ];
+    }];
 
   it('should render', () => {
     const el = render(createComponent());
