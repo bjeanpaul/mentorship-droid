@@ -2,7 +2,7 @@ import { noop } from 'lodash';
 import React from 'react';
 
 import CallNoteSaved from 'src/views/CallNoteSaved';
-import { fakeActivity, fakeCallNote, uidEquals } from 'app/scripts/helpers';
+import { fakeActivity, fakeCallNote, fakeCallNoteMetadata, uidEquals } from 'app/scripts/helpers';
 
 
 describe('CallNoteSaved', () => {
@@ -11,6 +11,7 @@ describe('CallNoteSaved', () => {
       callNote={fakeCallNote()}
       onDismissPress={noop}
       onScheduleNextPress={noop}
+      metadata={fakeCallNoteMetadata()}
       {...props}
     />
   );

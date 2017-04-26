@@ -11,6 +11,8 @@ export const createInitialState = () => ({
 const callNote = (state = {}, action) => {
   switch (action.type) {
     case AUTH_LOGOUT:
+    case constants.CALL_NOTE_CREATE_OPEN:
+    case constants.CALL_NOTE_DELAYED_CREATE_OPEN:
       return createInitialState();
 
     // TODO remove once we no longer have a duplicates issue
@@ -51,18 +53,7 @@ const metadata = (state = {}, action) => {
 };
 
 
-const reduce = combineReducers({
+export default combineReducers({
   callNote,
   metadata,
 });
-
-
-export default (state = createInitialState(), action) => {
-  switch (action.type) {
-    case constants.CALL_NOTE_CREATE_OPEN:
-      return reduce(createInitialState(), action);
-
-    default:
-      return reduce(state, action);
-  }
-};

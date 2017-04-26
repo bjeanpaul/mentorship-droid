@@ -18,9 +18,10 @@ describe('reducers/callNotes', () => {
   });
 
   describe('CALL_NOTE_CREATE_OPEN', () => {
-    it('should reset the state to the initial state', () => {
-      expect(reduce(void 0, openCreateCallNote(23)))
-        .toEqual(reduce(void 0, { type: 'FAKE' }));
+    it('should reset the draft call note state to the initial state', () => {
+      const { callNote } = reduce(void 0, openCreateCallNote(23));
+      expect(callNote)
+        .toEqual({});
     });
   });
 
