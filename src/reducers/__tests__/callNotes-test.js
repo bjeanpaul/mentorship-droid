@@ -1,5 +1,8 @@
 import reduce, { createInitialState } from 'src/reducers/callNotes';
-import { changeCallNote, openCreateCallNote } from 'src/actions/callNotes';
+import {
+  changeCallNote,
+  openCreateCallNote,
+  openDelayedCreateCallNote } from 'src/actions/callNotes';
 import { fakeState } from 'app/scripts/helpers';
 import { logout } from 'src/actions/auth';
 
@@ -20,6 +23,14 @@ describe('reducers/callNotes', () => {
   describe('CALL_NOTE_CREATE_OPEN', () => {
     it('should reset the draft call note state to the initial state', () => {
       const { callNote } = reduce(void 0, openCreateCallNote(23));
+      expect(callNote)
+        .toEqual({});
+    });
+  });
+
+  describe('CALL_NOTE_DELAYED_CREATE_OPEN', () => {
+    it('should reset the draft call note state to the initial state', () => {
+      const { callNote } = reduce(void 0, openDelayedCreateCallNote(23));
       expect(callNote)
         .toEqual({});
     });
