@@ -1,6 +1,7 @@
 import { noop } from 'lodash';
 import React from 'react';
 
+import { ADD_DELAYED } from 'src/constants/callNotes';
 import CallNoteSaved from 'src/views/CallNoteSaved';
 import { fakeActivity, fakeCallNote, fakeCallNoteMetadata, uidEquals } from 'app/scripts/helpers';
 
@@ -24,6 +25,14 @@ describe('CallNoteSaved', () => {
   it('should render with an activity', () => {
     const el = render(createComponent({
       activity: fakeActivity({ title: 'Act III' }),
+    }));
+
+    expect(el.toJSON()).toMatchSnapshot();
+  });
+
+  it('should not display schedule option when call note creation is delayed', () => {
+    const el = render(createComponent({
+      metadata: fakeCallNoteMetadata({ actionType: ADD_DELAYED }),
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
