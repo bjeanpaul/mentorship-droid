@@ -157,3 +157,7 @@ export const getBlogPost = ({ entities }, id) => entities.blogPosts[id];
 
 export const getBlogPosts = ({ entities }) =>
   orderBy(entities.blogPosts, [({ createdAt }) => +moment(createdAt)], ['desc']);
+
+// TODO get metadata info about call note 'time-relevance'
+// query metadata
+export const getCallNoteMetadata = ({ callNote: { metadata } }) => metadata;

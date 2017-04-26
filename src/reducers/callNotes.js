@@ -31,9 +31,29 @@ const callNote = (state = {}, action) => {
   }
 };
 
+const metadata = (state = {}, action) => {
+  switch (action.type) {
+    case constants.CALL_NOTE_DELAYED_CREATE_OPEN:
+      return {
+        ...state,
+        actionType: 'ADD_DELAYED',
+      };
+
+    case constants.CALL_NOTE_CREATE_OPEN:
+      return {
+        ...state,
+        actionType: 'ADD_IMMEDIATE',
+      };
+
+    default:
+      return state;
+  }
+};
+
 
 const reduce = combineReducers({
   callNote,
+  metadata,
 });
 
 
