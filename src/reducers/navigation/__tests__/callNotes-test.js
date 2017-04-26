@@ -32,6 +32,25 @@ describe('src/reducers/navigation/callNotes', () => {
     });
   });
 
+  describe('CALL_NOTE_RETROACTIVELY_CREATE_OPEN', () => {
+    it('should replace the call completed route with create call notes route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_CALL_COMPLETED));
+      const route = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId: 23 });
+
+      expect(reduce(state, callNotes.openRetroactivelyCreateCallNote({ callId: 23 })))
+        .toEqual(replaceAt(state, routes.ROUTE_CALL_COMPLETED, route));
+    });
+
+    it('should push on the create call notes route there is no call completed route', () => {
+      expect(reduce(createStack(), callNotes.openRetroactivelyCreateCallNote({
+        callId: 23,
+      })))
+      .toEqual(push(createStack(), createRoute(routes.ROUTE_CREATE_CALL_NOTES, {
+        callId: 23,
+      })));
+    });
+  });
+
   describe('CALL_NOTE_CREATE_REQUEST', () => {
     it('should replace the call note create route with the saving route', () => {
       const action = callNotes.createCallNote.request();
