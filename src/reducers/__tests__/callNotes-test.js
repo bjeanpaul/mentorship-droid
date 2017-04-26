@@ -5,6 +5,7 @@ import {
   openRetroactivelyCreateCallNote } from 'src/actions/callNotes';
 import { fakeState } from 'app/scripts/helpers';
 import { logout } from 'src/actions/auth';
+import { ADD_RETROACTIVELY, ADD_IMMEDIATE } from 'src/constants/callNotes';
 
 
 describe('reducers/callNotes', () => {
@@ -26,6 +27,12 @@ describe('reducers/callNotes', () => {
       expect(callNote)
         .toEqual({});
     });
+
+    it('should set metadata to indicate that the call note is being created immediately', () => {
+      const { metadata } = reduce(void 0, openCreateCallNote(23));
+      expect(metadata)
+        .toEqual({ actionType: ADD_IMMEDIATE });
+    });
   });
 
   describe('CALL_NOTE_RETROACTIVELY_CREATE_OPEN', () => {
@@ -33,6 +40,12 @@ describe('reducers/callNotes', () => {
       const { callNote } = reduce(void 0, openRetroactivelyCreateCallNote(23));
       expect(callNote)
         .toEqual({});
+    });
+
+    it('should set metadata to indicate that the call note is being created retroactively', () => {
+      const { metadata } = reduce(void 0, openRetroactivelyCreateCallNote(23));
+      expect(metadata)
+        .toEqual({ actionType: ADD_RETROACTIVELY });
     });
   });
 
