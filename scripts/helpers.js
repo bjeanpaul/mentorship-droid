@@ -122,8 +122,9 @@ export const fakeCallNote = data => ({
 });
 
 
-export const fakeCallNoteMetadata = () => ({
+export const fakeCallNoteMetadata = data => ({
   actionType: ADD_IMMEDIATE,
+  ...data,
 });
 
 
