@@ -2,7 +2,7 @@ import reduce, { createInitialState } from 'src/reducers/callNotes';
 import {
   changeCallNote,
   openCreateCallNote,
-  openDelayedCreateCallNote } from 'src/actions/callNotes';
+  openRetroactivelyCreateCallNote } from 'src/actions/callNotes';
 import { fakeState } from 'app/scripts/helpers';
 import { logout } from 'src/actions/auth';
 
@@ -28,9 +28,9 @@ describe('reducers/callNotes', () => {
     });
   });
 
-  describe('CALL_NOTE_DELAYED_CREATE_OPEN', () => {
+  describe('CALL_NOTE_RETROACTIVELY_CREATE_OPEN', () => {
     it('should reset the draft call note state to the initial state', () => {
-      const { callNote } = reduce(void 0, openDelayedCreateCallNote(23));
+      const { callNote } = reduce(void 0, openRetroactivelyCreateCallNote(23));
       expect(callNote)
         .toEqual({});
     });

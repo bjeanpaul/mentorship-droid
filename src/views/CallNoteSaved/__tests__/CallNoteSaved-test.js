@@ -1,7 +1,7 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import { ADD_DELAYED } from 'src/constants/callNotes';
+import { ADD_RETROACTIVELY } from 'src/constants/callNotes';
 import CallNoteSaved from 'src/views/CallNoteSaved';
 import { fakeActivity, fakeCallNote, fakeCallNoteMetadata, uidEquals } from 'app/scripts/helpers';
 
@@ -30,9 +30,9 @@ describe('CallNoteSaved', () => {
     expect(el.toJSON()).toMatchSnapshot();
   });
 
-  it('should not display schedule option when call note creation is delayed', () => {
+  it('should not display schedule option when call note creation is created retroactively', () => {
     const el = render(createComponent({
-      metadata: fakeCallNoteMetadata({ actionType: ADD_DELAYED }),
+      metadata: fakeCallNoteMetadata({ actionType: ADD_RETROACTIVELY }),
     }));
 
     expect(el.toJSON()).toMatchSnapshot();

@@ -39,8 +39,8 @@ export const openCreateCallNote = ({ callId }) => ({
   payload: { callId },
 });
 
-export const openDelayedCreateCallNote = ({ callId }) => ({
-  type: constants.CALL_NOTE_DELAYED_CREATE_OPEN,
+export const openRetroactivelyCreateCallNote = ({ callId }) => ({
+  type: constants.CALL_NOTE_RETROACTIVELY_CREATE_OPEN,
   payload: { callId },
 });
 

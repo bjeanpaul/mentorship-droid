@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import CallNoteList from 'src/views/CallNoteList';
 import { getCallsWithCallNotes } from 'src/store/helpers';
 import { dismissScreen } from 'src/actions/navigation';
-import { chooseCallNote, openDelayedCreateCallNote } from 'src/actions/callNotes';
+import { chooseCallNote, openRetroactivelyCreateCallNote } from 'src/actions/callNotes';
 
 // TODO handle call notes without activities once we have designs for this
 export const mapStateToProps = (state, { activity }) => {
@@ -27,7 +27,7 @@ export const mapStateToProps = (state, { activity }) => {
 
 export const mapDispatchToProps = {
   onViewPress: chooseCallNote,
-  onAddPress: openDelayedCreateCallNote,
+  onAddPress: openRetroactivelyCreateCallNote,
   onDismissPress: dismissScreen,
 };
 

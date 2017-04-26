@@ -1,4 +1,4 @@
-exports[`CallNoteSaved should not display schedule option when call note creation is delayed 1`] = `
+exports[`CallNoteSaved should not display schedule option when call note creation is created retroactively 1`] = `
 <View
   style={
     Array [

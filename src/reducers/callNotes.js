@@ -12,7 +12,7 @@ const callNote = (state = {}, action) => {
   switch (action.type) {
     case AUTH_LOGOUT:
     case constants.CALL_NOTE_CREATE_OPEN:
-    case constants.CALL_NOTE_DELAYED_CREATE_OPEN:
+    case constants.CALL_NOTE_RETROACTIVELY_CREATE_OPEN:
       return createInitialState();
 
     // TODO remove once we no longer have a duplicates issue
@@ -35,16 +35,16 @@ const callNote = (state = {}, action) => {
 
 const metadata = (state = {}, action) => {
   switch (action.type) {
-    case constants.CALL_NOTE_DELAYED_CREATE_OPEN:
+    case constants.CALL_NOTE_RETROACTIVELY_CREATE_OPEN:
       return {
         ...state,
-        actionType: 'ADD_DELAYED',
+        actionType: constants.ADD_RETROACTIVELY,
       };
 
     case constants.CALL_NOTE_CREATE_OPEN:
       return {
         ...state,
-        actionType: 'ADD_IMMEDIATE',
+        actionType: constants.ADD_IMMEDIATE,
       };
 
     default:
