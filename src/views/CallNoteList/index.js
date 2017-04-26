@@ -25,8 +25,8 @@ const CallNoteList = ({
         <TouchableNativeFeedback
           callId={callAndCallNote.call.id}
           key={callAndCallNote.call.id}
-          onPress={() => callAndCallNote.callNote ?
-            onViewPress(callAndCallNote.callNote.id)
+          onPress={() => callAndCallNote.callNote
+            ? onViewPress(callAndCallNote.callNote.id)
             : onAddPress({ callId: callAndCallNote.call.id })}
         >
           <View style={styles.row}>
