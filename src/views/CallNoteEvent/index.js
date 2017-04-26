@@ -19,7 +19,7 @@ const CallNoteEvent = ({
     date={occuredAt}
     icon={EVENT_MOOD_IMAGES[menteeState]}
     blurb={reflection}
-    title="Call completed"
+    title="Wrote Call Notes"
     onPress={() => onPress(id)}
   />
 );

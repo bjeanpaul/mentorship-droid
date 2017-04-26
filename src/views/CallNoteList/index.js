@@ -6,8 +6,9 @@ import { BaseView, Text, Header, HeaderIcon } from 'src/components';
 import styles from './styles';
 
 const CallNoteList = ({
-  callNotes = [],
-  onRowPress,
+  callsAndCallNotes = [],
+  onViewPress,
+  onAddPress,
   onDismissPress,
 }) => (
   <BaseView>
@@ -20,15 +21,20 @@ const CallNoteList = ({
       />
     </Header>
     <ScrollView>
-      {callNotes.map(callNote =>
+      {callsAndCallNotes.map(callAndCallNote =>
         <TouchableNativeFeedback
-          callNoteId={callNote.id}
-          key={callNote.id}
-          onPress={() => onRowPress(callNote.id)}
+          callId={callAndCallNote.call.id}
+          key={callAndCallNote.call.id}
+          onPress={() => callAndCallNote.callNote
+            ? onViewPress(callAndCallNote.callNote.id)
+            : onAddPress({ callId: callAndCallNote.call.id })}
         >
           <View style={styles.row}>
-            <Text style={styles.rowText}>
-              {moment(callNote.callStartTime).format('ddd, MMM D, h:mm a')}
+            <Text style={styles.callNoteTitle}>
+              {moment(callAndCallNote.call.startTime).format('ddd, MMM D, h:mm a')}
+            </Text>
+            <Text style={styles.callNoteAction}>
+              { callAndCallNote.callNote ? 'VIEW' : 'ADD' }
             </Text>
           </View>
         </TouchableNativeFeedback>
@@ -39,8 +45,9 @@ const CallNoteList = ({
 
 
 CallNoteList.propTypes = {
-  callNotes: PropTypes.array.isRequired,
-  onRowPress: PropTypes.func.isRequired,
+  callsAndCallNotes: PropTypes.array.isRequired,
+  onViewPress: PropTypes.func.isRequired,
+  onAddPress: PropTypes.func.isRequired,
   onDismissPress: PropTypes.func.isRequired,
 };
 

@@ -86,6 +86,26 @@ export const getCall = ({ entities: { calls } }, id) => calls[id];
 
 export const getCallNote = ({ entities: { callNotes } }, id) => callNotes[id];
 
+// takes object of call notes indexed by callNote id
+// returns an object of call notes indexed by call id
+export const indexCallNotesByCallId = (callNotes) => {
+  const reindexedCallNotes = {};
+  Object.keys(callNotes).forEach((key) => {
+    const callNote = callNotes[key];
+    reindexedCallNotes[callNote.call] = callNote;
+  });
+  return reindexedCallNotes;
+};
+
+export const getCallsWithCallNotes = ({ entities: { calls, callNotes } }) => {
+  const reindexedCallNotes = indexCallNotesByCallId(callNotes);
+
+  return Object.keys(calls).map((key) => {
+    return {
+      call: calls[key],
+      callNote: reindexedCallNotes[key] ? reindexedCallNotes[key] : null };
+  });
+};
 
 export const getNextScheduledCall = (state, predicate = {}, time = Date.now()) => {
   let res = sortBy(getScheduledCalls(state), ({ callTime }) => +moment(callTime));
@@ -137,3 +157,7 @@ export const getBlogPost = ({ entities }, id) => entities.blogPosts[id];
 
 export const getBlogPosts = ({ entities }) =>
   orderBy(entities.blogPosts, [({ createdAt }) => +moment(createdAt)], ['desc']);
+
+// TODO get metadata info about call note 'time-relevance'
+// query metadata
+export const getCallNoteMetadata = ({ callNote: { metadata } }) => metadata;

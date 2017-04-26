@@ -3,6 +3,7 @@ import { normalize, arrayOf } from 'normalizr';
 import { getContext } from 'src/store/helpers';
 import { staticAction } from 'src/actionHelpers';
 import { createStack, createRoute } from 'src/navigationHelpers';
+import { ADD_IMMEDIATE } from 'src/constants/callNotes';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/events';
 import richText from 'src/richText';
 import * as api from 'src/api';
@@ -117,6 +118,12 @@ export const fakeCallNote = data => ({
   callQuality: 5,
   callActivity: 3,
   callStartTime: '2016-09-28T17:34Z',
+  ...data,
+});
+
+
+export const fakeCallNoteMetadata = data => ({
+  actionType: ADD_IMMEDIATE,
   ...data,
 });
 
