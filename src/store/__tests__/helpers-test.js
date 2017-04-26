@@ -623,14 +623,13 @@ describe('helpers', () => {
         72: callNote2,
       };
 
-      const expectedOutcome = [
-        {
-          call: call1,
-          callNote: callNote1,
-        }, {
-          call: call2,
-          callNote: callNote2,
-        }];
+      const expectedOutcome = [{
+        call: call1,
+        callNote: callNote1,
+      }, {
+        call: call2,
+        callNote: callNote2,
+      }];
 
       expect(getCallsWithCallNotes(state)).toEqual(expectedOutcome);
     });
@@ -640,14 +639,13 @@ describe('helpers', () => {
         56: callNote1,
       };
 
-      const expectedOutcome = [
-        {
-          call: call1,
-          callNote: callNote1,
-        }, {
-          call: call2,
-          callNote: null,
-        }];
+      const expectedOutcome = [{
+        call: call1,
+        callNote: callNote1,
+      }, {
+        call: call2,
+        callNote: null,
+      }];
 
       expect(getCallsWithCallNotes(state)).toEqual(expectedOutcome);
     });

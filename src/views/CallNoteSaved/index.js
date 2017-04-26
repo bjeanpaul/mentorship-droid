@@ -45,7 +45,7 @@ const CallNoteSaved = ({
         }
       </View>
 
-      { // use a constant
+      {
         (metadata.actionType === constants.ADD_IMMEDIATE) && <View style={styles.actionContainer}>
           <Button
             uid="scheduleNext"
