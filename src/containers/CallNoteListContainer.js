@@ -8,7 +8,6 @@ import { chooseCallNote, openRetroactivelyCreateCallNote } from 'src/actions/cal
 
 // TODO handle call notes without activities once we have designs for this
 export const mapStateToProps = (state, { activity, dismissable }) => {
-  console.log(state.navigation);
   let callsAndCallNotes = getCallsWithCallNotes(state);
 
   if (!isUndefined(activity)) {
