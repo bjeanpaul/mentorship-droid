@@ -52,7 +52,7 @@ CallNoteList.propTypes = {
   onViewPress: PropTypes.func.isRequired,
   onAddPress: PropTypes.func.isRequired,
   onDismissPress: PropTypes.func.isRequired,
-  notDismissable: PropTypes.bool,
+  dismissable: PropTypes.bool,
 };
 
 
