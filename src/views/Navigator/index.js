@@ -16,7 +16,7 @@ const Navigator = ({
 
   return (
     <View style={styles.default}>
-      {Route && <Route dismissable={null} />}
+      {Route && <Route notDismissable />}
 
       <NavTabBar
         activeTab={activeTab}

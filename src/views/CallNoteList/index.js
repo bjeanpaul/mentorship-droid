@@ -7,7 +7,7 @@ import styles from './styles';
 
 const CallNoteList = ({
   callsAndCallNotes = [],
-  dismissable,
+  notDismissable,
   onViewPress,
   onAddPress,
   onDismissPress,
@@ -15,7 +15,7 @@ const CallNoteList = ({
   <BaseView>
     <Header>
       <Text style={Text.types.title}>Call Notes</Text>
-      { dismissable &&
+      { !notDismissable &&
         <HeaderIcon
           uid="dismiss"
           type={HeaderIcon.types.dismissDark}
@@ -52,7 +52,7 @@ CallNoteList.propTypes = {
   onViewPress: PropTypes.func.isRequired,
   onAddPress: PropTypes.func.isRequired,
   onDismissPress: PropTypes.func.isRequired,
-  dismissable: PropTypes.bool,
+  notDismissable: PropTypes.bool,
 };
 
 
