@@ -39,6 +39,11 @@ describe('CallNoteList', () => {
     expect(el.toJSON()).toMatchSnapshot();
   });
 
+  it('should render without dismissable button', () => {
+    const el = render(createComponent({ notDismissable: true }));
+    expect(el.toJSON()).toMatchSnapshot();
+  });
+
   it('should render call notes as rows', () => {
     const el = render(createComponent({ callsAndCallNotes }));
     expect(el.toJSON()).toMatchSnapshot();

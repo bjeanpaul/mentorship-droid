@@ -276,3 +276,54 @@ exports[`CallNoteList should render call notes as rows 1`] = `
   </ScrollView>
 </View>
 `;
+
+exports[`CallNoteList should render without dismissable button 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16,
+        },
+        Object {},
+      ]
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+          Object {
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400",
+          },
+        ]
+      }>
+      Call Notes
+    </Text>
+  </View>
+  <ScrollView />
+</View>
+`;
