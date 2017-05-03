@@ -48,8 +48,4 @@ ControlledStepper.propTypes = {
 };
 
 
-ControlledStepper.defaultProps = {
-};
-
-
 export default ControlledStepper;
