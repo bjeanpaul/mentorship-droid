@@ -17,6 +17,7 @@ import ProgressBar from './ProgressBar';
 import Section from './Section';
 import Pagination from './Pagination';
 import Stepper, { Step } from './Stepper';
+import ControlledStepper from './ControlledStepper';
 import NavTabBar from './NavTabBar';
 import NotFound from './NotFound';
 import Event from './Event';
@@ -52,6 +53,7 @@ export {
   Pagination,
   Stepper,
   Step,
+  ControlledStepper,
   NavTabBar,
   NotFound,
   Event,

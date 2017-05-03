@@ -29,7 +29,7 @@ const FormStep = ({
 
 FormStep.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.any.isRequired,
+  children: PropTypes.any,
   paginationDisabled: PropTypes.bool,
   paginationBackDisabled: PropTypes.bool,
   onBackPress: PropTypes.func,
