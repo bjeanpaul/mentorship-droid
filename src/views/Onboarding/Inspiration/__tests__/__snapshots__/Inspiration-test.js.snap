@@ -40,68 +40,73 @@ exports[`Inspiration should render 1`] = `
   </Text>
   <View
     style={
-      Array [
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#dfe5e6",
-          "marginBottom": 27,
-          "marginLeft": 24,
-          "marginRight": 24,
-        },
-        false,
-      ]
+      Object {
+        "flex": 1,
+      }
     }>
-    <TextInput
-      onBlur={[Function]}
-      onChangeText={[Function]}
-      onFocus={[Function]}
-      placeholder="Type your answer here"
-      placeholderTextColor="#c0cbcc"
+    <View
+      style={
+        Array [
+          Object {
+            "borderBottomWidth": 1,
+            "borderColor": "#dfe5e6",
+            "marginBottom": 27,
+            "marginLeft": 24,
+            "marginRight": 24,
+          },
+          false,
+        ]
+      }>
+      <TextInput
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        placeholder="Type your answer here"
+        placeholderTextColor="#c0cbcc"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 18,
+              "marginBottom": 8,
+              "padding": 0,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value="Music, of course" />
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
             "color": "#003035",
             "fontFamily": "Brandon Text",
-            "fontSize": 18,
-            "lineHeight": 28,
-            "marginBottom": 8,
-            "padding": 0,
           },
-          undefined,
+          Object {
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#9fb1b3",
+            "fontSize": 14,
+            "marginLeft": 24,
+            "marginRight": 24,
+            "textAlign": "left",
+          },
         ]
-      }
-      underlineColorAndroid="transparent"
-      value="Music, of course" />
+      }>
+      e.g. Malala, Sania Nehwal, Chanda Kocchar
+    </Text>
   </View>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Array [
-        Object {
-          "color": "#003035",
-          "fontFamily": "Brandon Text",
-        },
-        Object {
-          "fontSize": 13,
-          "textAlign": "center",
-        },
-        Object {
-          "color": "#9fb1b3",
-          "fontSize": 14,
-          "marginLeft": 24,
-          "marginRight": 24,
-          "textAlign": "left",
-        },
-      ]
-    }>
-    e.g. Malala, Sania Nehwal, Chanda Kocchar
-  </Text>
   <View
     style={
       Object {
-        "flex": 1,
         "justifyContent": "flex-end",
       }
     }>

@@ -18,7 +18,6 @@ export default StyleSheet.create({
     fontSize: 18,
     color: colors.TEXT_INPUT_TEXT,
     padding: 0,
-    lineHeight: 28,
     marginBottom: 8,
   },
 });

@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { ScrollView } from 'react-native';
 
 import { FormStep, MultiLineTextInput } from 'src/components';
 
@@ -14,12 +15,14 @@ const Reflections = ({
     title="Please share your reflections of the discussion"
     {...props}
   >
-    <MultiLineTextInput
-      uid="reflectionInput"
-      value={reflection}
-      placeholder="Type your answer here"
-      onChangeText={text => onChange({ reflection: text })}
-    />
+    <ScrollView>
+      <MultiLineTextInput
+        uid="reflectionInput"
+        value={reflection}
+        placeholder="Type your answer here"
+        onChangeText={text => onChange({ reflection: text })}
+      />
+    </ScrollView>
   </FormStep>
 );
 

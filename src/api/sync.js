@@ -3,6 +3,7 @@ import { listCategories } from 'src/api/categories';
 import { listActivities } from 'src/api/activities';
 import { listScheduledCalls } from 'src/api/schedule';
 import { listEvents } from 'src/api/events';
+import { listCalls } from 'src/api/calls';
 import { listCallNotes } from 'src/api/callNotes';
 import { listBlogPosts } from 'src/api/blogPosts';
 import { listMessages } from 'src/api/messages';
@@ -14,6 +15,7 @@ export const load = auth => Promise.resolve()
     listActivities(auth),
     listScheduledCalls(auth),
     listEvents(auth),
+    listCalls(auth),
     listCallNotes(auth),
     listBlogPosts(auth),
     listMessages(auth),
