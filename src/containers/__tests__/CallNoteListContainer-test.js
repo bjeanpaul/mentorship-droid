@@ -1,5 +1,5 @@
 import { mapStateToProps } from 'src/containers/CallNoteListContainer';
-import { fakeCallNote, fakeCall } from 'app/scripts/helpers';
+import { fakeCallNote, fakeCall, fakeState } from 'app/scripts/helpers';
 
 
 describe('CallNoteListContainer', () => {
@@ -170,6 +170,14 @@ describe('CallNoteListContainer', () => {
             call: call1,
           }],
         })
+      );
+    });
+
+    it('should pass notDismissable if true', () => {
+      const state = fakeState();
+
+      expect(mapStateToProps(state, { notDismissable: true }))
+        .toEqual(jasmine.objectContaining({ notDismissable: true })
       );
     });
   });
