@@ -7,7 +7,7 @@ import { dismissScreen } from 'src/actions/navigation';
 import { chooseCallNote, openRetroactivelyCreateCallNote } from 'src/actions/callNotes';
 
 // TODO handle call notes without activities once we have designs for this
-export const mapStateToProps = (state, { activity }) => {
+export const mapStateToProps = (state, { activity, notDismissable }) => {
   let callsAndCallNotes = getCallsWithCallNotes(state);
 
   if (!isUndefined(activity)) {
@@ -21,7 +21,10 @@ export const mapStateToProps = (state, { activity }) => {
     ({ call: { startTime } }) => +moment(startTime), ['desc']
   );
 
-  return { callsAndCallNotes };
+  return {
+    callsAndCallNotes,
+    notDismissable,
+  };
 };
 
 

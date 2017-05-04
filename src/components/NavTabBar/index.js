@@ -27,6 +27,11 @@ const tabSpecs = [{
   icon: images.NAV_TAB_CHAT,
   iconActive: images.NAV_TAB_CHAT_ACTIVE,
   title: 'Chat',
+}, {
+  tabKey: constants.NAV_TAB_CALL_NOTES,
+  icon: images.NAV_TAB_CALL_NOTES,
+  iconActive: images.NAV_TAB_CALL_NOTES_ACTIVE,
+  title: 'Notes',
 }];
 
 

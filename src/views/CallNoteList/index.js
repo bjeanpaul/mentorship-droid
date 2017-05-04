@@ -7,6 +7,7 @@ import styles from './styles';
 
 const CallNoteList = ({
   callsAndCallNotes = [],
+  notDismissable,
   onViewPress,
   onAddPress,
   onDismissPress,
@@ -14,11 +15,13 @@ const CallNoteList = ({
   <BaseView>
     <Header>
       <Text style={Text.types.title}>Call Notes</Text>
-      <HeaderIcon
-        uid="dismiss"
-        type={HeaderIcon.types.dismissDark}
-        onPress={onDismissPress}
-      />
+      { !notDismissable &&
+        <HeaderIcon
+          uid="dismiss"
+          type={HeaderIcon.types.dismissDark}
+          onPress={onDismissPress}
+        />
+      }
     </Header>
     <ScrollView>
       {callsAndCallNotes.map(callAndCallNote =>
@@ -49,6 +52,7 @@ CallNoteList.propTypes = {
   onViewPress: PropTypes.func.isRequired,
   onAddPress: PropTypes.func.isRequired,
   onDismissPress: PropTypes.func.isRequired,
+  notDismissable: PropTypes.bool,
 };
 
 
