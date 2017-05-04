@@ -26,7 +26,7 @@ describe('Stepper', () => {
   it('should call onHardwareBackPress if provided as a prop when back pressed', () => {
     const onHardwareBackPress = jest.fn();
 
-    shallow(createComponent({ onHardwareBackPress, }))
+    shallow(createComponent({ onHardwareBackPress }))
       .instance()
       .onHardwareBackPress();
 
