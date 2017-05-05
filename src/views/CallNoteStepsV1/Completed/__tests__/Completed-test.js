@@ -1,15 +1,22 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import { uidEquals, fakeCallNote } from 'app/scripts/helpers';
-import { CALL_NOTES_MENTEE_HAPPY } from 'src/constants/callNotes';
-import { Mood } from 'src/views/CallNoteSteps';
+import {
+  uidEquals,
+  fakeCallNote,
+  fakeActivity,
+  fakeCategory,
+} from 'app/scripts/helpers';
+
+import { Completed } from 'src/views/CallNoteStepsV1';
 
 
-describe('Mood', () => {
+describe('Completed', () => {
   const createComponent = (props = {}) => (
-    <Mood
-      callNote={fakeCallNote({ menteeState: 'Sad' })}
+    <Completed
+      callNote={fakeCallNote({ objectiveAchieved: void 0 })}
+      activity={fakeActivity({ objective: 'None' })}
+      category={fakeCategory({ color: 'pink' })}
       onChange={noop}
       onBackPress={noop}
       onNextPress={noop}
@@ -22,18 +29,27 @@ describe('Mood', () => {
     expect(el.toJSON()).toMatchSnapshot();
   });
 
-  it('should call onChange() when a state is pressed', () => {
+  it('should call onChange() when the objective achieved choice changes', () => {
     const onChange = jest.fn();
 
     const el = shallow(createComponent({
       onChange,
     }));
 
-    el.findWhere(uidEquals(CALL_NOTES_MENTEE_HAPPY))
+    el.findWhere(uidEquals('objectiveAchieved'))
       .simulate('press');
 
     expect(onChange.mock.calls)
-      .toEqual([[{ menteeState: CALL_NOTES_MENTEE_HAPPY }]]);
+      .toEqual([[{ objectiveAchieved: true }]]);
+
+    el.findWhere(uidEquals('objectiveNotAchieved'))
+      .simulate('press');
+
+    expect(onChange.mock.calls)
+      .toEqual([
+        [{ objectiveAchieved: true }],
+        [{ objectiveAchieved: false }],
+      ]);
   });
 
   it('should call onBackPress() when back is pressed', () => {

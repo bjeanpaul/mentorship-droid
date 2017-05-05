@@ -2,17 +2,17 @@ import { noop } from 'lodash';
 import React from 'react';
 
 import { uidEquals, fakeCallNote } from 'app/scripts/helpers';
-import { CallQuality } from 'src/views/CallNoteSteps';
-import * as constants from 'src/constants/callNotes';
+import { CALL_NOTES_MENTEE_HAPPY } from 'src/constants/callNotes';
+import { Mood } from 'src/views/CallNoteStepsV1';
 
 
-describe('CallQuality', () => {
+describe('Mood', () => {
   const createComponent = (props = {}) => (
-    <CallQuality
-      callNote={fakeCallNote({ callQuality: 'excellent' })}
+    <Mood
+      callNote={fakeCallNote({ menteeState: 'Sad' })}
       onChange={noop}
       onBackPress={noop}
-      onDonePress={noop}
+      onNextPress={noop}
       {...props}
     />
   );
@@ -22,18 +22,18 @@ describe('CallQuality', () => {
     expect(el.toJSON()).toMatchSnapshot();
   });
 
-  it('should call onChange() when the rating changes', () => {
+  it('should call onChange() when a state is pressed', () => {
     const onChange = jest.fn();
 
     const el = shallow(createComponent({
       onChange,
     }));
 
-    el.findWhere(uidEquals('callQualities'))
-      .simulate('indexChanged', { index: 0 });
+    el.findWhere(uidEquals(CALL_NOTES_MENTEE_HAPPY))
+      .simulate('press');
 
     expect(onChange.mock.calls)
-      .toEqual([[{ callQuality: constants.CALL_QUALITY_EXCELLENT }]]);
+      .toEqual([[{ menteeState: CALL_NOTES_MENTEE_HAPPY }]]);
   });
 
   it('should call onBackPress() when back is pressed', () => {
@@ -50,20 +50,17 @@ describe('CallQuality', () => {
       .toEqual([[]]);
   });
 
-  it('should call onDonePress() when done is pressed', () => {
-    const onDonePress = jest.fn();
-
-    const callNote = fakeCallNote();
+  it('should call onNextPress() when back is pressed', () => {
+    const onNextPress = jest.fn();
 
     const el = shallow(createComponent({
-      callNote,
-      onDonePress,
+      onNextPress,
     }));
 
     el.find('FormStep')
-      .simulate('donePress');
+      .simulate('nextPress');
 
-    expect(onDonePress.mock.calls)
-      .toEqual([[callNote]]);
+    expect(onNextPress.mock.calls)
+      .toEqual([[]]);
   });
 });

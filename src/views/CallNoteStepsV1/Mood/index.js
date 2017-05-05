@@ -5,7 +5,7 @@ import { Text } from 'src/components';
 
 import { FormStep } from 'src/components';
 import { MOOD_IMAGES } from 'src/constants/callNotes';
-import styles from 'src/views/CallNoteSteps/styles';
+import styles from 'src/views/CallNoteStepsV1/styles';
 
 
 const Mood = ({

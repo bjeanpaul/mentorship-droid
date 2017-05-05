@@ -1,14 +1,14 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import CallNoteSteps from 'src/views/CallNoteSteps';
+import CallNoteStepsV1 from 'src/views/CallNoteStepsV1';
 import { createStack } from 'src/navigationHelpers';
 import { fakeActivity, fakeCallNote } from 'app/scripts/helpers';
 
 
-describe('CallNoteSteps', () => {
+describe('CallNoteStepsV1', () => {
   const createComponent = (props = {}) => (
-    <CallNoteSteps
+    <CallNoteStepsV1
       navigationState={createStack()}
       callNote={fakeCallNote()}
       activity={void 0}

@@ -2,7 +2,7 @@ import { noop } from 'lodash';
 import React from 'react';
 
 import { uidEquals, fakeCallNote } from 'app/scripts/helpers';
-import { Rating } from 'src/views/CallNoteSteps';
+import { Rating } from 'src/views/CallNoteStepsV1';
 
 
 describe('Rating', () => {

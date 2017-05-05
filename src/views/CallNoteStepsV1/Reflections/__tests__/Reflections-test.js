@@ -2,7 +2,7 @@ import { noop } from 'lodash';
 import React from 'react';
 
 import { uidEquals, fakeCallNote } from 'app/scripts/helpers';
-import { Reflections } from 'src/views/CallNoteSteps';
+import { Reflections } from 'src/views/CallNoteStepsV1';
 
 
 describe('Reflections', () => {

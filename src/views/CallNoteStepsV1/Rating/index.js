@@ -3,7 +3,7 @@ import { View, ScrollView } from 'react-native';
 import { RadioList } from 'src/components';
 
 import { FormStep } from 'src/components';
-import styles from 'src/views/CallNoteSteps/styles';
+import styles from 'src/views/CallNoteStepsV1/styles';
 import * as constants from 'src/constants/callNotes';
 
 

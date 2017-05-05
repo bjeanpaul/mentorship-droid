@@ -8,7 +8,7 @@ import Rating from './Rating';
 import CallQuality from './CallQuality';
 
 
-const CallNoteSteps = props => {
+const CallNoteStepsV1 = props => {
   if (props.activity) {
     return (
       <Stepper>
@@ -31,12 +31,12 @@ const CallNoteSteps = props => {
 };
 
 
-CallNoteSteps.propTypes = {
+CallNoteStepsV1.propTypes = {
   activity: PropTypes.any,
 };
 
 
-export default CallNoteSteps;
+export default CallNoteStepsV1;
 
 export {
   Reflections,
