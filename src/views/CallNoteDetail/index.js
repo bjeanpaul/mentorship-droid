@@ -22,7 +22,7 @@ const CallNoteDetail = ({
       activity={activity}
     />);
 
-  return (callNote.version && callNote.version === 2) ? version2 : version1;
+  return (callNote.version && String(callNote.version) === '2') ? version2 : version1;
 };
 
 CallNoteDetail.propTypes = {
