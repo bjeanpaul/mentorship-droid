@@ -13,11 +13,12 @@ export const propsToActions = {
 export const mapStateToProps = (state, { callId }) => {
   const call = getCall(state, callId);
   const { callNote: callNoteState } = state;
-  const navigationState = callNoteState.navigation;
+  const { navigation: navigationState } = callNoteState;
+  let { callNote } = callNoteState;
 
-  const callNote = {
+  callNote = {
     call: call.id,
-    ...callNoteState.callNote,
+    ...callNote,
   };
 
   let activity;

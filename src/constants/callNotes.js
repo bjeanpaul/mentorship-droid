@@ -1,6 +1,9 @@
 import { fromPairs } from 'lodash';
 import images from 'src/constants/images';
 
+export * from 'src/constants/callNotesV2';
+
+
 const CALL_NOTE_LIST_REQUEST = 'CALL_NOTE_LIST_REQUEST';
 const CALL_NOTE_LIST_SUCCESS = 'CALL_NOTE_LIST_SUCCESS';
 const CALL_NOTE_LIST_FAILURE = 'CALL_NOTE_LIST_FAILURE';
