@@ -122,6 +122,21 @@ export const fakeCallNote = data => ({
 });
 
 
+export const fakeCallNoteV2 = data => ({
+  id: 10,
+  version: '2',
+  createdAt: '2017-04-28T15:45:53.697771Z',
+  call: 12,
+  callResult: 'COMPLETED',
+  activityProgress: 'COMPLETED',
+  reflection: 'dzdfdszf',
+  mood: 'HAPPY',
+  objectiveAchieved: '1',
+  rating: '2',
+  callQuality: 'OK',
+  ...data,
+});
+
 export const fakeCallNoteMetadata = data => ({
   actionType: ADD_IMMEDIATE,
   ...data,
