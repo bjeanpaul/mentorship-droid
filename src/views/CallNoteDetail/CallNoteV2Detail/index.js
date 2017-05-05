@@ -18,6 +18,38 @@ const mentee = fromPairs([
   [constants.CALL_NOTES_MENTEE_WITHDRAWN, images.CALL_NOTES_MENTEE_WITHDRAWN],
 ]);
 
+// const activity_completion =
+
+
+// EXCELLENT', 'Excellent'
+// OK', 'Ok'
+// INAUDIBLE', 'Inaudible'
+// DROPPED', 'Dropped'
+// DELAYED', 'Delayed'
+
+const callResults = fromPairs([
+  ['COMPLETED', 'We completed it'],
+  ['PARTIALLY_COMPLETED', 'Partially completed'],
+  ['MENTEE_NOT_AVAILABLE', 'Mentee not available'],
+  ['MENTEE_RESCHEDULED', 'Mentee rescheduled'],
+]);
+
+
+const objectAchievedOptions = fromPairs([
+  ['1', 'Objective was achieved'],
+  ['2', 'Mostly achieved'],
+  ['3', 'Somewhat achieved'],
+  ['4', 'Achieved a little'],
+  ['5', 'Not at all'],
+]);
+
+const activityRatingOptions = fromPairs([
+  ['1', 'Very good'],
+  ['2', 'Good'],
+  ['3', 'Average'],
+  ['4', 'Poor'],
+  ['5', 'Very Poor'],
+]);
 
 const Title = ({ children }) => (
   <View style={styles.titleContainer}>
@@ -31,7 +63,13 @@ Title.propTypes = {
 const CallNoteV2Detail = ({
   onBackPress,
   call,
-  callNote,
+  callNote: {
+    callResult,
+    objectiveAchieved,
+    rating,
+    reflection,
+    mood,
+  },
   activity,
 }) => (
   <BaseView>
@@ -47,7 +85,47 @@ const CallNoteV2Detail = ({
     </Header>
 
     <ScrollView style={styles.scrollView}>
-      <Text>Hello World</Text>
+
+      <View style={styles.section}>
+        <Title>How Did the Call Go?</Title>
+
+        <View style={styles.sectionBody}>
+          <Text style={Text.types.paragraph}>
+            {callResults[callResult]}
+          </Text>
+        </View>
+      </View>
+
+      <View style={styles.section}>
+        <Title>Objective</Title>
+
+        <View style={styles.sectionBody}>
+          <Text style={Text.types.paragraph}>
+            {objectAchievedOptions[objectiveAchieved]}
+          </Text>
+        </View>
+      </View>
+
+      <View style={styles.section}>
+        <Title>Activity Rating</Title>
+
+        <View style={styles.sectionBody}>
+          <Text style={Text.types.paragraph}>
+            {activityRatingOptions[rating]}
+          </Text>
+        </View>
+      </View>
+
+      <View style={styles.section}>
+        <Title>Your Reflections</Title>
+
+        <View style={styles.sectionBody}>
+          <Text style={Text.types.paragraph}>
+            {reflection}
+          </Text>
+        </View>
+      </View>
+
     </ScrollView>
   </BaseView>
 );
