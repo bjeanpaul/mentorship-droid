@@ -6,7 +6,7 @@ import { dismissScreen } from 'src/actions/navigation';
 const mapStateToProps = (state, { callNoteId }) => {
   const callNote = getCallNote(state, callNoteId);
   const call = getCall(state, callNote.call);
-  const activity = callNote.callActivity && getActivity(state, callNote.callActivity);
+  const activity = call.activity && getActivity(state, call.activity);
 
   return {
     callNote,
