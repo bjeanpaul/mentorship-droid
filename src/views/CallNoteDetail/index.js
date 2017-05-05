@@ -1,4 +1,5 @@
 import CallNoteV1Detail from './CallNoteV1Detail';
+import CallNoteV2Detail from './CallNoteV2Detail';
 import React, { PropTypes } from 'react';
 
 const CallNoteDetail = ({
@@ -6,12 +7,23 @@ const CallNoteDetail = ({
   callNote,
   call,
   activity,
-}) => (
-<CallNoteV1Detail
-  onBackPress={onBackPress}
-  callNote={callNote}
-  activity={activity}
-/>);
+}) => {
+  const version1 = (
+    <CallNoteV1Detail
+      onBackPress={onBackPress}
+      callNote={callNote}
+      activity={activity}
+    />);
+  const version2 = (
+    <CallNoteV2Detail
+      onBackPress={onBackPress}
+      callNote={callNote}
+      call={call}
+      activity={activity}
+    />);
+
+  return (callNote.version && callNote.version === 2) ? version2 : version1;
+};
 
 CallNoteDetail.propTypes = {
   onBackPress: PropTypes.func.isRequired,
