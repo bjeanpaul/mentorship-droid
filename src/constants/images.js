@@ -66,6 +66,9 @@ import EVENT_MENTEE_BORED from 'app/assets/bored-journey.png';
 import EVENT_MENTEE_CONFUSED from 'app/assets/confused-journey.png';
 import EVENT_MENTEE_UPSET from 'app/assets/upset-journey.png';
 import EVENT_MENTEE_WITHDRAWN from 'app/assets/withdrawn-journey.png';
+import EVENT_MENTEE_EXCITED from 'app/assets/excited-journey.png';
+import EVENT_MENTEE_ENGAGED from 'app/assets/engaged-journey.png';
+
 
 import SEND_MESSAGE_ICON from 'app/assets/send-icon-chat.png';
 
@@ -141,6 +144,8 @@ export default {
   EVENT_MENTEE_CONFUSED,
   EVENT_MENTEE_UPSET,
   EVENT_MENTEE_WITHDRAWN,
+  EVENT_MENTEE_EXCITED,
+  EVENT_MENTEE_ENGAGED,
 
   YES,
   YES_SELECTED,
