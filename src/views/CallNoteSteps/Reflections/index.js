@@ -6,14 +6,15 @@ import { FormStep, MultiLineTextInput } from 'src/components';
 
 const Reflections = ({
   onChange,
+  onDismissPress,
   callNote: { reflection = '' },
   ...props,
 }) => (
   <FormStep
-    paginationBackDisabled
     paginationDisabled={reflection.length === 0}
     title="Please share your reflections of the discussion"
     {...props}
+    onBackPress={onDismissPress}
   >
     <ScrollView>
       <MultiLineTextInput
