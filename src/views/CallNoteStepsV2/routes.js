@@ -1,6 +1,6 @@
 import { fromPairs } from 'lodash';
 
-import * as constants from 'src/constants/callNotesV2';
+import * as constants from 'src/constants/callNotes';
 import CallResult from './CallResult';
 import UnplannedActivityCheck from './UnplannedActivityCheck';
 import PlannedActivityProgress from './PlannedActivityProgress';
@@ -12,13 +12,13 @@ import Mood from './Mood';
 import CallQuality from './CallQuality';
 
 export default fromPairs([
-  [constants.STEP_CALL_RESULT, CallResult],
-  [constants.STEP_UNPLANNED_ACTIVITY_CHECK, UnplannedActivityCheck],
-  [constants.STEP_PLANNED_ACTIVITY_PROGRESS, PlannedActivityProgress],
-  [constants.STEP_UNPLANNED_ACTIVITY_PROGRESS, UnplannedActivityProgress],
-  [constants.STEP_OBJECTIVE_ACHIEVED, ObjectiveAchieved],
-  [constants.STEP_REFLECTION, Reflection],
-  [constants.STEP_RATING, Rating],
-  [constants.STEP_MOOD, Mood],
-  [constants.STEP_CALL_QUALITY, CallQuality],
+  [constants.V2_STEP_CALL_RESULT, CallResult],
+  [constants.V2_STEP_UNPLANNED_ACTIVITY_CHECK, UnplannedActivityCheck],
+  [constants.V2_STEP_PLANNED_ACTIVITY_PROGRESS, PlannedActivityProgress],
+  [constants.V2_STEP_UNPLANNED_ACTIVITY_PROGRESS, UnplannedActivityProgress],
+  [constants.V2_STEP_OBJECTIVE_ACHIEVED, ObjectiveAchieved],
+  [constants.V2_STEP_REFLECTION, Reflection],
+  [constants.V2_STEP_RATING, Rating],
+  [constants.V2_STEP_MOOD, Mood],
+  [constants.V2_STEP_CALL_QUALITY, CallQuality],
 ]);
