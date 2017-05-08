@@ -2,7 +2,8 @@ import reduce, { createInitialState } from 'src/reducers/callNotes';
 import {
   changeCallNote,
   openCreateCallNote,
-  openRetroactivelyCreateCallNote } from 'src/actions/callNotes';
+  openRetroactivelyCreateCallNote,
+} from 'src/actions/callNotes';
 import { fakeState } from 'app/scripts/helpers';
 import { logout } from 'src/actions/auth';
 import { ADD_RETROACTIVELY, ADD_IMMEDIATE } from 'src/constants/callNotes';
@@ -25,7 +26,7 @@ describe('reducers/callNotes', () => {
     it('should reset the draft call note state to the initial state', () => {
       const { callNote } = reduce(void 0, openCreateCallNote(23));
       expect(callNote)
-        .toEqual({});
+        .toEqual(createInitialState());
     });
 
     it('should set metadata to indicate that the call note is being created immediately', () => {
@@ -39,7 +40,7 @@ describe('reducers/callNotes', () => {
     it('should reset the draft call note state to the initial state', () => {
       const { callNote } = reduce(void 0, openRetroactivelyCreateCallNote(23));
       expect(callNote)
-        .toEqual({});
+        .toEqual(createInitialState());
     });
 
     it('should set metadata to indicate that the call note is being created retroactively', () => {
@@ -62,7 +63,9 @@ describe('reducers/callNotes', () => {
   describe('AUTH_LOGOUT', () => {
     it('should reset to initial state', () => {
       expect(reduce(fakeState().callNote, logout()))
-        .toEqual(jasmine.objectContaining(createInitialState()));
+        .toEqual(jasmine.objectContaining({
+          callNote: createInitialState(),
+        }));
     });
   });
 });

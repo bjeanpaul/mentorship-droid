@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux';
 
-import { getCall } from 'src/store/helpers';
 import { createStack } from 'src/navigationHelpers';
 import * as constants from 'src/constants/callNotes';
 import { AUTH_LOGOUT } from 'src/constants/auth';
@@ -57,7 +56,7 @@ const metadata = (state = {}, action) => {
 };
 
 
-const navigation = (state = createStack(), action) => {
+const navigation = (state = createStack()) => {
   // TODO
   return state;
 };
