@@ -18,29 +18,29 @@ const mentee = fromPairs([
   [constants.CALL_NOTES_MENTEE_WITHDRAWN, images.CALL_NOTES_MENTEE_WITHDRAWN],
 ]);
 
-const callResults = fromPairs([
-  ['COMPLETED', 'We completed it'],
-  ['PARTIALLY_COMPLETED', 'Partially completed'],
-  ['MENTEE_NOT_AVAILABLE', 'Mentee not available'],
-  ['MENTEE_RESCHEDULED', 'Mentee rescheduled'],
-]);
+const callResults = {
+  COMPLETED: 'We completed it',
+  PARTIALLY_COMPLETED: 'Partially completed',
+  MENTEE_NOT_AVAILABLE: 'Mentee not available',
+  MENTEE_RESCHEDULED: 'Mentee rescheduled',
+};
 
 
-const objectAchievedOptions = fromPairs([
-  ['1', 'Objective was achieved'],
-  ['2', 'Mostly achieved'],
-  ['3', 'Somewhat achieved'],
-  ['4', 'Achieved a little'],
-  ['5', 'Not at all'],
-]);
+const objectAchievedOptions = {
+  1: 'Objective was achieved',
+  2: 'Mostly achieved',
+  3: 'Somewhat achieved',
+  4: 'Achieved a little',
+  5: 'Not at all',
+};
 
-const activityRatingOptions = fromPairs([
-  ['1', 'Very good'],
-  ['2', 'Good'],
-  ['3', 'Average'],
-  ['4', 'Poor'],
-  ['5', 'Very Poor'],
-]);
+const activityRatingOptions = {
+  1: 'Very good',
+  2: 'Good',
+  3: 'Average',
+  4: 'Poor',
+  5: 'Very Poor',
+};
 
 const Title = ({ children }) => (
   <View style={styles.titleContainer}>
