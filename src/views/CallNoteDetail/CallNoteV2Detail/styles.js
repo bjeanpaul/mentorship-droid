@@ -1,6 +1,8 @@
 import { StyleSheet } from 'react-native';
 import colors from 'src/constants/colors';
 
+const LARGE_CIRCLE_SIZE = 72;
+
 export default StyleSheet.create({
   scrollView: {
     padding: 24,
@@ -31,6 +33,11 @@ export default StyleSheet.create({
   menteeStateImage: {
     alignSelf: 'center',
     marginRight: 20,
+    borderWidth: 4,
+    borderRadius: LARGE_CIRCLE_SIZE,
+    width: LARGE_CIRCLE_SIZE,
+    height: LARGE_CIRCLE_SIZE,
+    borderColor: colors.CALL_NOTE_MOOD_IMAGE_SELECTED_BORDER,
   },
   activityObjective: {
     flex: 1,
