@@ -3,10 +3,12 @@ import { createCallNoteWithMentor, changeCallNote } from 'src/actions/callNotes'
 import { getActivity, getCategory, getCall } from 'src/store/helpers';
 import CallNoteStepsV1 from 'src/views/CallNoteStepsV1';
 
+import { dismissScreen } from 'src/actions/navigation';
 
 export const propsToActions = {
   onChange: changeCallNote,
   onDonePress: createCallNoteWithMentor,
+  onDismissPress: dismissScreen,
 };
 
 

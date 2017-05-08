@@ -102,88 +102,81 @@ exports[`Reflections should render 1`] = `
           "margin": 16,
         }
       }>
-      <View
-        style={
-          Array [
-            Object {
-              "alignItems": "center",
-              "borderRadius": 5,
-              "justifyContent": "center",
-              "marginHorizontal": 16,
-              "paddingBottom": 17,
-              "paddingTop": 15,
-            },
-            Object {
-              "backgroundColor": "transparent",
-              "borderColor": "#f77040",
-              "borderWidth": 1,
-            },
-            Array [
-              Object {
-                "marginLeft": 0,
-                "marginRight": 0,
-              },
-              Object {
-                "marginRight": 16,
-                "width": 58,
-              },
-            ],
-            undefined,
-            Array [
-              Object {
-                "borderColor": "#dfe5e6",
-              },
-              undefined,
-            ],
-          ]
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <TouchableNativeFeedback
+        onPress={[Function]}>
+        <View
           style={
             Array [
               Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
+                "alignItems": "center",
+                "borderRadius": 5,
+                "justifyContent": "center",
+                "marginHorizontal": 16,
+                "paddingBottom": 17,
+                "paddingTop": 15,
               },
               Object {
-                "fontSize": 13,
-                "textAlign": "center",
+                "backgroundColor": "transparent",
+                "borderColor": "#f77040",
+                "borderWidth": 1,
               },
               Array [
                 Object {
-                  "fontFamily": "Brandon Text_bold",
-                  "fontSize": 13,
-                  "fontWeight": "bold",
-                  "letterSpacing": 1,
+                  "marginLeft": 0,
+                  "marginRight": 0,
                 },
                 Object {
-                  "color": "#f77040",
+                  "marginRight": 16,
+                  "width": 58,
                 },
-                undefined,
-                Array [
-                  Object {
-                    "color": "#dfe5e6",
-                  },
-                  undefined,
-                ],
               ],
+              undefined,
+              undefined,
             ]
           }>
-          <Image
-            source={1}
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
             style={
               Array [
                 Object {
-                  "height": 24,
-                  "width": 24,
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
                 },
-                Object {},
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Array [
+                  Object {
+                    "fontFamily": "Brandon Text_bold",
+                    "fontSize": 13,
+                    "fontWeight": "bold",
+                    "letterSpacing": 1,
+                  },
+                  Object {
+                    "color": "#f77040",
+                  },
+                  undefined,
+                  undefined,
+                ],
               ]
-            } />
-        </Text>
-      </View>
+            }>
+            <Image
+              source={1}
+              style={
+                Array [
+                  Object {
+                    "height": 24,
+                    "width": 24,
+                  },
+                  Object {},
+                ]
+              } />
+          </Text>
+        </View>
+      </TouchableNativeFeedback>
       <TouchableNativeFeedback
         onPress={[Function]}>
         <View
