@@ -11,7 +11,7 @@ class CallNoteStepsV2 extends Component {
   }
 
   getRoute(key) {
-    const Step = routes[key];
+    const Step = this.props.routes[key];
 
     return (
       <Step
@@ -42,6 +42,11 @@ CallNoteStepsV2.propTypes = {
   onBackPress: PropTypes.func.isRequired,
   onNextPress: PropTypes.func.isRequired,
   onDonePress: PropTypes.func.isRequired,
+};
+
+
+CallNoteStepsV2.defaultProps = {
+  routes,
 };
 
 
