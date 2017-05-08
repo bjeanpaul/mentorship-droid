@@ -30,6 +30,7 @@ const Reflections = ({
 Reflections.propTypes = {
   callNote: PropTypes.object,
   onChange: PropTypes.func.isRequired,
+  onDismissPress: PropTypes.func.isRequired,
 };
 
 

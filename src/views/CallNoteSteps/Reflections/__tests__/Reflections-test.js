@@ -4,13 +4,12 @@ import React from 'react';
 import { uidEquals, fakeCallNote } from 'app/scripts/helpers';
 import { Reflections } from 'src/views/CallNoteSteps';
 
-
 describe('Reflections', () => {
   const createComponent = (props = {}) => (
     <Reflections
       callNote={fakeCallNote({ reflection: 'Walk in Silence' })}
       onChange={noop}
-      onBackPress={noop}
+      onDismissPress={noop}
       onNextPress={noop}
       {...props}
     />
@@ -35,17 +34,17 @@ describe('Reflections', () => {
       .toEqual([[{ reflection: 'ok' }]]);
   });
 
-  it('should call onBackPress() when back is pressed', () => {
-    const onBackPress = jest.fn();
+  it('should call onDismissPress() when back is pressed', () => {
+    const onDismissPress = jest.fn();
 
     const el = shallow(createComponent({
-      onBackPress,
+      onDismissPress,
     }));
 
     el.find('FormStep')
       .simulate('backPress');
 
-    expect(onBackPress.mock.calls)
+    expect(onDismissPress.mock.calls)
       .toEqual([[]]);
   });
 
