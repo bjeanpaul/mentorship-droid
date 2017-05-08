@@ -1,19 +1,30 @@
 import { connect } from 'react-redux';
-import { createCallNoteWithMentor, changeCallNote } from 'src/actions/callNotes';
 import { getActivity, getCategory, getCall } from 'src/store/helpers';
-import CallNoteStepsV1 from 'src/views/CallNoteStepsV1';
+import CallNoteSteps from 'src/views/CallNoteSteps';
+
+import {
+  createCallNoteWithMentor,
+  changeCallNote,
+  v2StepNext,
+  v2StepBack,
+} from 'src/actions/callNotes';
 
 
 export const propsToActions = {
   onChange: changeCallNote,
   onDonePress: createCallNoteWithMentor,
+
+  // Call notes v1 uses Stepper component, which provides the steps with its
+  // own next and back callbacks, so these are only needed for v2.
+  onNextPress: v2StepNext,
+  onBackPress: v2StepBack,
 };
 
 
 export const mapStateToProps = (state, { callId }) => {
   const call = getCall(state, callId);
   const { callNote: callNoteState } = state;
-  const { navigation: navigationState } = callNoteState;
+  const { steps } = callNoteState;
   let { callNote } = callNoteState;
 
   callNote = {
@@ -33,9 +44,9 @@ export const mapStateToProps = (state, { callId }) => {
     callNote,
     activity,
     category,
-    navigationState,
+    steps,
   };
 };
 
 
-export default connect(mapStateToProps, propsToActions)(CallNoteStepsV1);
+export default connect(mapStateToProps, propsToActions)(CallNoteSteps);
