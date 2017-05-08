@@ -53,7 +53,9 @@ Title.propTypes = {
 
 const CallNoteV2Detail = ({
   onBackPress,
-  call,
+  call: {
+    startTime,
+  },
   callNote: {
     callResult,
     objectiveAchieved,
@@ -66,7 +68,7 @@ const CallNoteV2Detail = ({
   <BaseView>
     <Header>
       <Text style={Text.types.title}>
-        {moment(call.startTime).format('ddd, MMM D, h:MM a')}
+        {moment(startTime).format('ddd, MMM D, h:MM a')}
       </Text>
       <HeaderIcon
         uid="back"
