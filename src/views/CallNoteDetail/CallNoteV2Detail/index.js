@@ -126,7 +126,22 @@ const CallNoteV2Detail = ({
         </View>
       </View>
 
-    </ScrollView>
+      <View style={styles.section}>
+        <Title>Your Mentee’s Mood</Title>
+
+        <View style={styles.sectionMoodBody}>
+          <Image
+            style={styles.menteeStateImage}
+            source={mentee[mood.toLowerCase()]}
+          />
+
+          <Text style={Text.types.paragraph}>
+            {mood[0].toUpperCase() + mood.slice(1).toLowerCase()}
+          </Text>
+        </View>
+      </View>
+
+     </ScrollView>
   </BaseView>
 );
 

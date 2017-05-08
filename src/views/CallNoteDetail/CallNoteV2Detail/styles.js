@@ -30,9 +30,7 @@ export default StyleSheet.create({
   },
   menteeStateImage: {
     alignSelf: 'center',
-  },
-  objectiveAchievedImage: {
-    alignSelf: 'center',
+    marginRight: 20,
   },
   activityObjective: {
     flex: 1,
@@ -41,5 +39,9 @@ export default StyleSheet.create({
   },
   activityHelpfulText: {
     textAlign: 'center',
+  },
+  sectionMoodBody: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 });
