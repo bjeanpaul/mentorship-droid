@@ -1,23 +1,35 @@
 import { merge } from 'lodash/fp';
-import { createStack } from 'src/navigationHelpers';
+import { unary } from 'lodash';
 import * as constants from 'src/constants/callNotes';
 import { AUTH_LOGOUT } from 'src/constants/auth';
+import {
+  createStack, createRoute, forward, back, jumpToIndex
+} from 'src/navigationHelpers';
 
 
 export const createInitialState = () => ({
   callNote: { version: 2 },
   metadata: {},
-  step: createStack(),
+  steps: null,
 });
 
 
-export default (state, action) => {
+export const createSteps = () => {
+  // TODO return null for v1
+  // TODO logic for different steps based on with/without activity
+  const steps = createStack(constants.V2_STEPS_WITH_ACTIVITY.map(unary(createRoute)));
+  return jumpToIndex(steps, 0);
+};
+
+
+export default (state = createInitialState(), action) => {
   switch (action.type) {
     case AUTH_LOGOUT:
       return createInitialState();
 
     case constants.CALL_NOTE_CREATE_OPEN:
       return merge(createInitialState(), {
+        steps: createSteps(state),
         metadata: {
           actionType: constants.ADD_IMMEDIATE,
         },
@@ -25,6 +37,7 @@ export default (state, action) => {
 
     case constants.CALL_NOTE_RETROACTIVELY_CREATE_OPEN:
       return merge(createInitialState(), {
+        steps: createSteps(state),
         metadata: {
           actionType: constants.ADD_RETROACTIVELY,
         },
@@ -42,6 +55,18 @@ export default (state, action) => {
       return merge(state, {
         callNote: action.payload,
       });
+
+    case constants.V2_STEP_BACK:
+      return {
+        ...state,
+        steps: back(state.steps),
+      };
+
+    case constants.V2_STEP_NEXT:
+      return {
+        ...state,
+        steps: forward(state.steps),
+      };
 
     default:
       return state;
