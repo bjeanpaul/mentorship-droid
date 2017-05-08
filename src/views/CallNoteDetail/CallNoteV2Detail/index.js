@@ -18,15 +18,6 @@ const mentee = fromPairs([
   [constants.CALL_NOTES_MENTEE_WITHDRAWN, images.CALL_NOTES_MENTEE_WITHDRAWN],
 ]);
 
-// const activity_completion =
-
-
-// EXCELLENT', 'Excellent'
-// OK', 'Ok'
-// INAUDIBLE', 'Inaudible'
-// DROPPED', 'Dropped'
-// DELAYED', 'Delayed'
-
 const callResults = fromPairs([
   ['COMPLETED', 'We completed it'],
   ['PARTIALLY_COMPLETED', 'Partially completed'],
