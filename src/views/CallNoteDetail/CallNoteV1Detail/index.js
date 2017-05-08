@@ -28,7 +28,7 @@ Title.propTypes = {
   children: PropTypes.any,
 };
 
-const CallNoteDetail = ({
+const CallNoteV1Detail = ({
   onBackPress,
   callNote: {
     activityHelpful,
@@ -125,11 +125,11 @@ const CallNoteDetail = ({
 );
 
 
-CallNoteDetail.propTypes = {
+CallNoteV1Detail.propTypes = {
   onBackPress: PropTypes.func.isRequired,
   callNote: PropTypes.object,
   activity: PropTypes.object,
 };
 
 
-export default CallNoteDetail;
+export default CallNoteV1Detail;
