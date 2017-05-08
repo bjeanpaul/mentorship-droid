@@ -42,6 +42,7 @@ CallNoteStepsV2.propTypes = {
   onBackPress: PropTypes.func.isRequired,
   onNextPress: PropTypes.func.isRequired,
   onDonePress: PropTypes.func.isRequired,
+  routes: PropTypes.object,
 };
 
 

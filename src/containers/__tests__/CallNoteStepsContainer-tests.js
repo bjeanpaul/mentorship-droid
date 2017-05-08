@@ -122,7 +122,7 @@ describe('CallNoteStepsContainer', () => {
         },
       });
 
-      expect(mapStateToProps(state, {callId: 1}).steps)
+      expect(mapStateToProps(state, { callId: 1 }).steps)
         .toEqual(steps);
     });
   });

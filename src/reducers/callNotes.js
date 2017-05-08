@@ -3,7 +3,7 @@ import { unary } from 'lodash';
 import * as constants from 'src/constants/callNotes';
 import { AUTH_LOGOUT } from 'src/constants/auth';
 import {
-  createStack, createRoute, forward, back, jumpToIndex
+  createStack, createRoute, forward, back, jumpToIndex,
 } from 'src/navigationHelpers';
 
 
