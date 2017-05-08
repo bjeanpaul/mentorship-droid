@@ -28,7 +28,6 @@ describe('CallNoteDetail', () => {
   it('should render CallNoteV1Detail when passed call note version 1', () => {
     const el = shallow(version1CreateComponent());
 
-    console.log(el);
     expect(el.find('CallNoteV1Detail').length).toEqual(1);
     expect(el.find('CallNoteV2Detail').length).toEqual(0);
   });
@@ -36,7 +35,6 @@ describe('CallNoteDetail', () => {
   it('should render CallNoteV2Detail when passed call note version 2', () => {
     const el = shallow(version2CreateComponent());
 
-    console.log(el);
     expect(el.find('CallNoteV1Detail').length).toEqual(0);
     expect(el.find('CallNoteV2Detail').length).toEqual(1);
   });
