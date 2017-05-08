@@ -9,7 +9,7 @@ import { fakeCallNote } from 'app/scripts/helpers';
 describe('CallNoteStepsV2', () => {
   const createComponent = (props = {}) => (
     <CallNoteStepsV2
-      navigationState={createStack()}
+      steps={createStack()}
       callNote={fakeCallNote()}
       onChange={noop}
       onBackPress={noop}
