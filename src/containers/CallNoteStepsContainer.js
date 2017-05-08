@@ -9,6 +9,7 @@ import {
   v2StepBack,
 } from 'src/actions/callNotes';
 
+import { dismissScreen } from 'src/actions/navigation';
 
 export const propsToActions = {
   onChange: changeCallNote,
@@ -18,6 +19,7 @@ export const propsToActions = {
   // own next and back callbacks, so these are only needed for v2.
   onNextPress: v2StepNext,
   onBackPress: v2StepBack,
+  onDismissPress: dismissScreen,
 };
 
 
