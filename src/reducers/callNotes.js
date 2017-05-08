@@ -1,6 +1,4 @@
 import { merge } from 'lodash/fp';
-import { combineReducers } from 'redux';
-
 import { createStack } from 'src/navigationHelpers';
 import * as constants from 'src/constants/callNotes';
 import { AUTH_LOGOUT } from 'src/constants/auth';
@@ -41,9 +39,9 @@ export default (state, action) => {
       });
 
     case constants.CALL_NOTES_CHANGE_CALL_NOTE:
-        return merge(state, {
-          callNote: action.payload,
-        });
+      return merge(state, {
+        callNote: action.payload,
+      });
 
     default:
       return state;
