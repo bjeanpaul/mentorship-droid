@@ -59,7 +59,7 @@ export const fakeActivity = data => ({
   instructions: 'snoitcrutsni',
   isComplete: false,
   lessonRationale: 'elanoitar',
-  objective: 'raaar',
+  objective: 'Let us make a Snowflake to Learn about Connection',
   prompts: 'tspmorp',
   reflectionPoints: 'tsnoip',
   skillsDeveloped: 'depoleved',
