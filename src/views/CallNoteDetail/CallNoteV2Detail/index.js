@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { fromPairs } from 'lodash';
+import { fromPairs, upperFirst } from 'lodash';
 
 import React, { PropTypes } from 'react';
 import { View, ScrollView, Image } from 'react-native';
@@ -136,7 +136,7 @@ const CallNoteV2Detail = ({
           />
 
           <Text style={Text.types.paragraph}>
-            {mood[0].toUpperCase() + mood.slice(1).toLowerCase()}
+            {upperFirst(mood.toLowerCase())}
           </Text>
         </View>
       </View>
