@@ -151,9 +151,9 @@ class NavigationStack extends Component {
       .concat(shown);
   }
 
-  getRoute(key) {
+  getRoute(key, context) {
     return isFunction(this.props.routes)
-      ? this.props.routes(key)
+      ? this.props.routes(key, context)
       : this.props.routes[key];
   }
 
@@ -165,7 +165,7 @@ class NavigationStack extends Component {
   }
 
   renderRoute({ key, context }) {
-    const obj = this.getRoute(key);
+    const obj = this.getRoute(key, context);
 
     if (React.isValidElement(obj)) {
       return <View style={styles.route}>{obj}</View>;
