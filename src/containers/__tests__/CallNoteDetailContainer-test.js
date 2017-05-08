@@ -10,7 +10,10 @@ import {
 
 describe('CallNoteDetailContainer', () => {
   describe('mapStateToProps', () => {
-    const call = fakeCall({ id: 15 });
+    const call = fakeCall({
+      id: 15,
+      activity: 50,
+    });
     let callNote = fakeCallNote({
       id: 21,
       call: 15,
@@ -30,6 +33,9 @@ describe('CallNoteDetailContainer', () => {
           calls: {
             15: call,
           },
+          activities: {
+            50: activity,
+          },
         },
       });
 
@@ -37,6 +43,7 @@ describe('CallNoteDetailContainer', () => {
         .toEqual(jasmine.objectContaining({
           callNote,
           call,
+          activity,
         }));
     });
 
@@ -53,6 +60,9 @@ describe('CallNoteDetailContainer', () => {
           calls: {
             15: call,
           },
+          activities: {
+            50: activity,
+          },
         },
       });
 
@@ -60,6 +70,7 @@ describe('CallNoteDetailContainer', () => {
         .toEqual(jasmine.objectContaining({
           callNote,
           call,
+          activity,
         }));
     });
 
