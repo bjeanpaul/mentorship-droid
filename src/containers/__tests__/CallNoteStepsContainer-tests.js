@@ -1,4 +1,5 @@
 import { mapStateToProps } from 'src/containers/CallNoteStepsContainer';
+import { createStack, createRoute } from 'src/navigationHelpers';
 
 import {
   fakeState,
@@ -104,6 +105,25 @@ describe('CallNoteStepsContainer', () => {
       expect(mapStateToProps(state, { callId: 1 }).category).toEqual(void 0);
       expect(mapStateToProps(state, { callId: 2 }).category).toEqual(void 0);
       expect(mapStateToProps(state, { callId: 3 }).category).toEqual(category);
+    });
+
+    it('should provide step navigation state', () => {
+      const steps = createStack([
+        createRoute('A'),
+        createRoute('B'),
+      ]);
+
+      const state = fakeState({
+        callNote: { steps },
+        entities: {
+          calls: {
+            1: fakeCall(),
+          },
+        },
+      });
+
+      expect(mapStateToProps(state, {callId: 1}).steps)
+        .toEqual(steps);
     });
   });
 });
