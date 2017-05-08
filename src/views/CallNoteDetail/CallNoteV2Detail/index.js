@@ -96,6 +96,27 @@ const CallNoteV2Detail = ({
         </View>
       </View>
 
+      {activity && (
+        <View style={styles.section}>
+          <Title>Activity</Title>
+
+          <View style={styles.sectionBody}>
+            <View style={styles.sectionBodyActivityItems}>
+              {
+                activity.icon.exists() && <Image
+                  source={activity.icon.resize(72, 72).toSource()}
+                  style={styles.activityImage}
+                />
+              }
+
+              <Text style={[Text.types.paragraph, styles.activityObjective]}>
+                {activity.objective}
+              </Text>
+            </View>
+          </View>
+        </View>
+      )}
+
       <View style={styles.section}>
         <Title>Objective</Title>
 
