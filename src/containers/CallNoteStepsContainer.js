@@ -2,11 +2,12 @@ import { connect } from 'react-redux';
 import { createCallNoteWithMentor, changeCallNote } from 'src/actions/callNotes';
 import { getActivity, getCategory, getCall } from 'src/store/helpers';
 import CallNoteSteps from 'src/views/CallNoteSteps';
-
+import { dismissScreen } from 'src/actions/navigation';
 
 export const propsToActions = {
   onChange: changeCallNote,
   onDonePress: createCallNoteWithMentor,
+  onDismissPress: dismissScreen,
 };
 
 
