@@ -68,3 +68,13 @@ export const chooseCallNote = callNoteId => ({
 
 
 export const viewAllCallNotes = staticAction(constants.CALL_NOTES_VIEW_ALL);
+
+
+export const v2StepNext = () => ({
+  type: constants.V2_STEP_NEXT,
+});
+
+
+export const v2StepBack = () => ({
+  type: constants.V2_STEP_BACK,
+});
