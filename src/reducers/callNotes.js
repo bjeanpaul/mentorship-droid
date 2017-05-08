@@ -1,3 +1,4 @@
+import { merge } from 'lodash/fp';
 import { combineReducers } from 'redux';
 
 import { createStack } from 'src/navigationHelpers';
@@ -6,64 +7,45 @@ import { AUTH_LOGOUT } from 'src/constants/auth';
 
 
 export const createInitialState = () => ({
-  version: 2,
+  callNote: { version: 2 },
+  metadata: {},
+  step: createStack(),
 });
 
 
-const callNote = (state = {}, action) => {
+export default (state, action) => {
   switch (action.type) {
     case AUTH_LOGOUT:
-    case constants.CALL_NOTE_CREATE_OPEN:
-    case constants.CALL_NOTE_RETROACTIVELY_CREATE_OPEN:
       return createInitialState();
+
+    case constants.CALL_NOTE_CREATE_OPEN:
+      return merge(createInitialState(), {
+        metadata: {
+          actionType: constants.ADD_IMMEDIATE,
+        },
+      });
+
+    case constants.CALL_NOTE_RETROACTIVELY_CREATE_OPEN:
+      return merge(createInitialState(), {
+        metadata: {
+          actionType: constants.ADD_RETROACTIVELY,
+        },
+      });
 
     // TODO remove once we no longer have a duplicates issue
     case constants.CALL_NOTE_CREATE_REQUEST:
-      return {
-        ...state,
-        isSending: true,
-      };
+      return merge(state, {
+        callNote: {
+          isSending: true,
+        },
+      });
 
     case constants.CALL_NOTES_CHANGE_CALL_NOTE:
-      return {
-        ...state,
-        ...action.payload,
-      };
+        return merge(state, {
+          callNote: action.payload,
+        });
 
     default:
       return state;
   }
 };
-
-
-const metadata = (state = {}, action) => {
-  switch (action.type) {
-    case constants.CALL_NOTE_RETROACTIVELY_CREATE_OPEN:
-      return {
-        ...state,
-        actionType: constants.ADD_RETROACTIVELY,
-      };
-
-    case constants.CALL_NOTE_CREATE_OPEN:
-      return {
-        ...state,
-        actionType: constants.ADD_IMMEDIATE,
-      };
-
-    default:
-      return state;
-  }
-};
-
-
-const navigation = (state = createStack()) => {
-  // TODO
-  return state;
-};
-
-
-export default combineReducers({
-  callNote,
-  metadata,
-  navigation,
-});

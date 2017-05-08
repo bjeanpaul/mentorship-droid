@@ -25,12 +25,14 @@ describe('reducers/callNotes', () => {
   describe('CALL_NOTE_CREATE_OPEN', () => {
     it('should reset the draft call note state to the initial state', () => {
       const { callNote } = reduce(void 0, openCreateCallNote(23));
+
       expect(callNote)
-        .toEqual(createInitialState());
+        .toEqual(createInitialState().callNote);
     });
 
     it('should set metadata to indicate that the call note is being created immediately', () => {
       const { metadata } = reduce(void 0, openCreateCallNote(23));
+
       expect(metadata)
         .toEqual({ actionType: ADD_IMMEDIATE });
     });
@@ -39,8 +41,9 @@ describe('reducers/callNotes', () => {
   describe('CALL_NOTE_RETROACTIVELY_CREATE_OPEN', () => {
     it('should reset the draft call note state to the initial state', () => {
       const { callNote } = reduce(void 0, openRetroactivelyCreateCallNote(23));
+
       expect(callNote)
-        .toEqual(createInitialState());
+        .toEqual(createInitialState().callNote);
     });
 
     it('should set metadata to indicate that the call note is being created retroactively', () => {
@@ -63,9 +66,7 @@ describe('reducers/callNotes', () => {
   describe('AUTH_LOGOUT', () => {
     it('should reset to initial state', () => {
       expect(reduce(fakeState().callNote, logout()))
-        .toEqual(jasmine.objectContaining({
-          callNote: createInitialState(),
-        }));
+        .toEqual(createInitialState());
     });
   });
 });
