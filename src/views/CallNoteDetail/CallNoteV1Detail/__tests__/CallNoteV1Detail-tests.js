@@ -2,12 +2,12 @@ import React from 'react';
 import { noop } from 'lodash';
 
 import { imageUrl } from 'src/api';
-import CallNoteDetail from 'src/views/CallNoteDetail';
+import CallNoteV1Detail from 'src/views/CallNoteDetail/CallNoteV1Detail';
 import { uidEquals, fakeCallNote, fakeActivity } from 'app/scripts/helpers';
 
-describe('CallNoteDetail', () => {
+describe('CallNoteV1Detail', () => {
   const createComponent = (props = {}) => (
-    <CallNoteDetail
+    <CallNoteV1Detail
       callNote={fakeCallNote()}
       activity={fakeActivity()}
       onBackPress={noop}
