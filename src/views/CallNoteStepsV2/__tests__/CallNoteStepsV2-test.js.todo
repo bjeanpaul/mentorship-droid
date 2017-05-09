@@ -1,0 +1,23 @@
+import { noop } from 'lodash';
+import React from 'react';
+
+import CallNoteStepsV2 from 'src/views/CallNoteStepsV2';
+import { createStack } from 'src/navigationHelpers';
+import { fakeCallNote } from 'app/scripts/helpers';
+
+
+describe('CallNoteStepsV2', () => {
+  const createComponent = (props = {}) => (
+    <CallNoteStepsV2
+      navigationState={createStack()}
+      callNote={fakeCallNote()}
+      onChange={noop}
+      onBackPress={noop}
+      onNextPress={noop}
+      onDonePress={noop}
+      {...props}
+    />
+  );
+
+  createComponent();
+});
