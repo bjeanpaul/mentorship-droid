@@ -110,3 +110,28 @@ export const V2_STEPS_WITH_ACTIVITY = [
   V2_STEP_MOOD,
   V2_STEP_CALL_QUALITY,
 ];
+
+export const V2_MOOD_IMAGES = fromPairs([
+  [CALL_NOTES_MENTEE_HAPPY, images.CALL_NOTES_MENTEE_HAPPY],
+  [CALL_NOTES_MENTEE_SAD, images.CALL_NOTES_MENTEE_SAD],
+  [CALL_NOTES_MENTEE_BORED, images.CALL_NOTES_MENTEE_BORED],
+  [CALL_NOTES_MENTEE_CONFUSED, images.CALL_NOTES_MENTEE_CONFUSED],
+  [CALL_NOTES_MENTEE_UPSET, images.CALL_NOTES_MENTEE_UPSET],
+  [CALL_NOTES_MENTEE_WITHDRAWN, images.CALL_NOTES_MENTEE_WITHDRAWN],
+]);
+
+export const V2_OBJECTIVE_ACHIEVED_LABELS = {
+  1: 'Objective was achieved',
+  2: 'Mostly achieved',
+  3: 'Somewhat achieved',
+  4: 'Achieved a little',
+  5: 'Not at all',
+};
+
+export const V2_RATING_LABELS = {
+  1: 'Very good',
+  2: 'Good',
+  3: 'Average',
+  4: 'Poor',
+  5: 'Very Poor',
+};
