@@ -27,7 +27,7 @@ describe('api/request', () => {
 
       expect(axios.mock.calls).toEqual([[
         jasmine.objectContaining({
-          url: '/api/mentor/foo',
+          url: '/api/v2/mentor/foo',
           method: 'GET',
         }),
       ]]);
