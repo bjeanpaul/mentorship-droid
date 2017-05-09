@@ -104,3 +104,9 @@ export const topOf = ({ routes }) => last(routes);
 
 
 export const getCurrent = stack => stack.routes[stack.index];
+
+
+export const gotoIndex = (state, index) => ({
+  ...state,
+  index,
+});

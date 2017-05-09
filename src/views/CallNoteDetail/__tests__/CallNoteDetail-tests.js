@@ -1,46 +1,41 @@
 import React from 'react';
 import { noop } from 'lodash';
 
-import { imageUrl } from 'src/api';
 import CallNoteDetail from 'src/views/CallNoteDetail';
-import { uidEquals, fakeCallNote, fakeActivity } from 'app/scripts/helpers';
+import { fakeCall, fakeCallNote, fakeCallNoteV2, fakeActivity } from 'app/scripts/helpers';
 
 describe('CallNoteDetail', () => {
-  const createComponent = (props = {}) => (
+  const version1CreateComponent = (props = {}) => (
     <CallNoteDetail
-      callNote={fakeCallNote()}
-      activity={fakeActivity()}
       onBackPress={noop}
+      callNote={fakeCallNote()}
+      call={fakeCall()}
+      activity={fakeActivity()}
       {...props}
     />
   );
 
-  it('should render', () => {
-    const el = render(createComponent());
-    expect(el).toMatchSnapshot();
+  const version2CreateComponent = (props = {}) => (
+    <CallNoteDetail
+      onBackPress={noop}
+      callNote={fakeCallNoteV2()}
+      call={fakeCall()}
+      activity={fakeActivity()}
+      {...props}
+    />
+  );
+
+  it('should render CallNoteV1Detail when passed call note version 1', () => {
+    const el = shallow(version1CreateComponent());
+
+    expect(el.find('CallNoteV1Detail').length).toEqual(1);
+    expect(el.find('CallNoteV2Detail').length).toEqual(0);
   });
 
-  it('should exclude the activity views if they are undefined', () => {
-    const el = render(createComponent({ activity: void 0 }));
-    expect(el).toMatchSnapshot();
-  });
+  it('should render CallNoteV2Detail when passed call note version 2', () => {
+    const el = shallow(version2CreateComponent());
 
-  it('should exclude the activity icon if it does not exist', () => {
-    const el = render(createComponent({
-      activity: fakeActivity({
-        icon: imageUrl(null),
-      }),
-    }));
-    expect(el).toMatchSnapshot();
-  });
-
-  it('should call onBackPress', () => {
-    const onBackPress = jest.fn();
-    const el = shallow(createComponent({ onBackPress }));
-
-    el.findWhere(uidEquals('back'))
-      .simulate('press');
-
-    expect(onBackPress).toBeCalled();
+    expect(el.find('CallNoteV1Detail').length).toEqual(0);
+    expect(el.find('CallNoteV2Detail').length).toEqual(1);
   });
 });
