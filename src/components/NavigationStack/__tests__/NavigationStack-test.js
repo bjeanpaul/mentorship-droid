@@ -192,4 +192,23 @@ describe('NavigationStack', () => {
     expect(el.find('A').length).toEqual(1);
     expect(el.find('B').length).toEqual(1);
   });
+
+  it('should function-based routes prop', () => {
+    const navigationState = createStack([createRoute('a')]);
+
+    const el = shallow(createComponent({
+      navigationState,
+      routes: key => ({
+        a: <A text="foo" />,
+        b: <B text="foo" />,
+      }[key]),
+    }));
+
+    el.setProps({
+      navigationState: push(navigationState, createRoute('b')),
+    });
+
+    expect(el.find('A').length).toEqual(1);
+    expect(el.find('B').length).toEqual(1);
+  });
 });
