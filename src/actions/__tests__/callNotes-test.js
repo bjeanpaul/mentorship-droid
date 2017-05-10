@@ -60,6 +60,15 @@ describe('actions/callNotes', () => {
     });
   });
 
+  describe('openRetroactivelyCreateCallNote', () => {
+    it('should create an action for new call notes', () => {
+      expect(actions.openRetroactivelyCreateCallNote({ callId: 23 })).toEqual({
+        type: constants.CALL_NOTE_RETROACTIVELY_CREATE_OPEN,
+        payload: { callId: 23 },
+      });
+    });
+  });
+
   describe('changeCallNote', () => {
     it('should create an action for updating a call note', () => {
       expect(actions.changeCallNote({

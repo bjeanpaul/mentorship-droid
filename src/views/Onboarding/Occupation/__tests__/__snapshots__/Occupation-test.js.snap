@@ -40,136 +40,140 @@ exports[`Occupation should render 1`] = `
   </Text>
   <View
     style={
-      Array [
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#dfe5e6",
-          "marginBottom": 27,
-          "marginLeft": 24,
-          "marginRight": 24,
-        },
-        false,
-      ]
+      Object {
+        "flex": 1,
+      }
     }>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
+    <View
       style={
         Array [
           Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
+            "borderBottomWidth": 1,
+            "borderColor": "#dfe5e6",
+            "marginBottom": 27,
+            "marginLeft": 24,
+            "marginRight": 24,
           },
-          Object {
-            "fontSize": 13,
-            "textAlign": "center",
-          },
-          Array [
-            Object {
-              "color": "#9fb1b3",
-              "fontFamily": "Brandon Text_bold",
-              "fontSize": 14,
-              "fontWeight": "bold",
-              "marginBottom": 9,
-              "textAlign": "left",
-            },
-            undefined,
-          ],
+          false,
         ]
       }>
-      Job Sector
-    </Text>
-    <TextInput
-      label="Job Sector"
-      onBlur={[Function]}
-      onChangeText={[Function]}
-      onFocus={[Function]}
-      placeholderTextColor="#c0cbcc"
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 18,
-            "lineHeight": 28,
-            "marginBottom": 8,
-            "padding": 0,
-          },
-          undefined,
-        ]
-      }
-      underlineColorAndroid="transparent"
-      value="Family" />
-  </View>
-  <View
-    style={
-      Array [
-        Object {
-          "borderBottomWidth": 1,
-          "borderColor": "#dfe5e6",
-          "marginBottom": 27,
-          "marginLeft": 24,
-          "marginRight": 24,
-        },
-        false,
-      ]
-    }>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-          },
-          Object {
-            "fontSize": 13,
-            "textAlign": "center",
-          },
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
           Array [
             Object {
-              "color": "#9fb1b3",
-              "fontFamily": "Brandon Text_bold",
-              "fontSize": 14,
-              "fontWeight": "bold",
-              "marginBottom": 9,
-              "textAlign": "left",
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+            Object {
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Array [
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 14,
+                "fontWeight": "bold",
+                "marginBottom": 9,
+                "textAlign": "left",
+              },
+              undefined,
+            ],
+          ]
+        }>
+        Job Sector
+      </Text>
+      <TextInput
+        label="Job Sector"
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        placeholderTextColor="#c0cbcc"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 18,
+              "marginBottom": 8,
+              "padding": 0,
             },
             undefined,
-          ],
-        ]
-      }>
-      Job Title
-    </Text>
-    <TextInput
-      label="Job Title"
-      onBlur={[Function]}
-      onChangeText={[Function]}
-      onFocus={[Function]}
-      placeholderTextColor="#c0cbcc"
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value="Family" />
+    </View>
+    <View
       style={
         Array [
           Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-            "fontSize": 18,
-            "lineHeight": 28,
-            "marginBottom": 8,
-            "padding": 0,
+            "borderBottomWidth": 1,
+            "borderColor": "#dfe5e6",
+            "marginBottom": 27,
+            "marginLeft": 24,
+            "marginRight": 24,
           },
-          undefined,
+          false,
         ]
-      }
-      underlineColorAndroid="transparent"
-      value="Uncle" />
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+            Object {
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Array [
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 14,
+                "fontWeight": "bold",
+                "marginBottom": 9,
+                "textAlign": "left",
+              },
+              undefined,
+            ],
+          ]
+        }>
+        Job Title
+      </Text>
+      <TextInput
+        label="Job Title"
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        placeholderTextColor="#c0cbcc"
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+              "fontSize": 18,
+              "marginBottom": 8,
+              "padding": 0,
+            },
+            undefined,
+          ]
+        }
+        underlineColorAndroid="transparent"
+        value="Uncle" />
+    </View>
   </View>
   <View
     style={
       Object {
-        "flex": 1,
         "justifyContent": "flex-end",
       }
     }>

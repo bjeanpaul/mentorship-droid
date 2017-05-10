@@ -11,6 +11,12 @@ export default (state, action) => {
       return replaceOrPush(state, routes.ROUTE_CALL_COMPLETED, route);
     }
 
+    case callNotes.CALL_NOTE_RETROACTIVELY_CREATE_OPEN: {
+      const { payload: { callId } } = action;
+      const route = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId });
+      return replaceOrPush(state, routes.ROUTE_CALL_COMPLETED, route);
+    }
+
     case callNotes.CALL_NOTE_CREATE_REQUEST: {
       const route = createRoute(routes.ROUTE_CALL_NOTE_SAVING);
       return replaceOrPush(state, routes.ROUTE_CREATE_CALL_NOTES, route);

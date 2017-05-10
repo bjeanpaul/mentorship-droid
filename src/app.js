@@ -10,7 +10,7 @@ import configureStore from 'src/store/configureStore';
 import TopNavigationContainer from 'src/containers/TopNavigationContainer';
 
 
-const store = configureStore();
+export const store = configureStore();
 errors(store);
 store.dispatch(tick());
 

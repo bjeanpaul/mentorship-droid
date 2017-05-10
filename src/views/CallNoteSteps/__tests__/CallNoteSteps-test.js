@@ -1,9 +1,9 @@
-import { noop } from 'lodash';
+import { noop, entries } from 'lodash';
 import React from 'react';
 
-import CallNoteSteps from 'src/views/CallNoteSteps';
+import CallNoteSteps, { VERSIONS } from 'src/views/CallNoteSteps';
 import { createStack } from 'src/navigationHelpers';
-import { fakeActivity, fakeCallNote } from 'app/scripts/helpers';
+import { fakeCallNote } from 'app/scripts/helpers';
 
 
 describe('CallNoteSteps', () => {
@@ -11,7 +11,6 @@ describe('CallNoteSteps', () => {
     <CallNoteSteps
       navigationState={createStack()}
       callNote={fakeCallNote()}
-      activity={void 0}
       onChange={noop}
       onBackPress={noop}
       onNextPress={noop}
@@ -20,35 +19,13 @@ describe('CallNoteSteps', () => {
     />
   );
 
-  it('should show all steps when the given call has an activity', () => {
-    const el = shallow(createComponent({ activity: fakeActivity() }));
+  it('should delegate to the relevant call note versions component', () => {
+    for (const [version, component] of entries(VERSIONS)) {
+      const el = shallow(createComponent({
+        callNote: fakeCallNote({ version }),
+      }));
 
-    const steps = [
-      'Reflections',
-      'Mood',
-      'Completed',
-      'Rating',
-      'CallQuality',
-    ];
-
-    for (const step of steps) expect(el.find(step).length).toEqual(1);
-  });
-
-  it('should not show activity steps if there is no activity', () => {
-    const el = shallow(createComponent({ activity: void 0 }));
-
-    const shown = [
-      'Reflections',
-      'Mood',
-      'CallQuality',
-    ];
-
-    const unshown = [
-      'Completed',
-      'Rating',
-    ];
-
-    for (const step of shown) expect(el.find(step).length).toEqual(1);
-    for (const step of unshown) expect(el.find(step).length).toEqual(0);
+      expect(el.find(component).length).toEqual(1);
+    }
   });
 });

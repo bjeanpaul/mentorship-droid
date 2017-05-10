@@ -1,16 +1,20 @@
 import { combineReducers } from 'redux';
 
+import { createStack } from 'src/navigationHelpers';
 import * as constants from 'src/constants/callNotes';
 import { AUTH_LOGOUT } from 'src/constants/auth';
 
 
 export const createInitialState = () => ({
+  version: '1',
 });
 
 
 const callNote = (state = {}, action) => {
   switch (action.type) {
     case AUTH_LOGOUT:
+    case constants.CALL_NOTE_CREATE_OPEN:
+    case constants.CALL_NOTE_RETROACTIVELY_CREATE_OPEN:
       return createInitialState();
 
     // TODO remove once we no longer have a duplicates issue
@@ -32,17 +36,34 @@ const callNote = (state = {}, action) => {
 };
 
 
-const reduce = combineReducers({
-  callNote,
-});
-
-
-export default (state = createInitialState(), action) => {
+const metadata = (state = {}, action) => {
   switch (action.type) {
+    case constants.CALL_NOTE_RETROACTIVELY_CREATE_OPEN:
+      return {
+        ...state,
+        actionType: constants.ADD_RETROACTIVELY,
+      };
+
     case constants.CALL_NOTE_CREATE_OPEN:
-      return reduce(createInitialState(), action);
+      return {
+        ...state,
+        actionType: constants.ADD_IMMEDIATE,
+      };
 
     default:
-      return reduce(state, action);
+      return state;
   }
 };
+
+
+const navigation = (state = createStack()) => {
+  // TODO
+  return state;
+};
+
+
+export default combineReducers({
+  callNote,
+  metadata,
+  navigation,
+});

@@ -1,4 +1,4 @@
-import { includes } from 'lodash';
+import { includes, isFunction } from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { View, StyleSheet, Animated } from 'react-native';
 
@@ -151,6 +151,12 @@ class NavigationStack extends Component {
       .concat(shown);
   }
 
+  getRoute(key, context) {
+    return isFunction(this.props.routes)
+      ? this.props.routes(key, context)
+      : this.props.routes[key];
+  }
+
   animate(to) {
     Animated.timing(this.state.position, {
       duration: DURATION,
@@ -159,7 +165,7 @@ class NavigationStack extends Component {
   }
 
   renderRoute({ key, context }) {
-    const obj = this.props.routes[key];
+    const obj = this.getRoute(key, context);
 
     if (React.isValidElement(obj)) {
       return <View style={styles.route}>{obj}</View>;
@@ -192,7 +198,7 @@ class NavigationStack extends Component {
 
 
 NavigationStack.propTypes = {
-  routes: PropTypes.object.isRequired,
+  routes: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
   navigationState: PropTypes.any.isRequired,
 };
 

@@ -38,6 +38,7 @@ import {
   getEvents,
   getCallNotes,
   getCall,
+  getCallsWithCallNotes,
   getCallNote,
   getNextScheduledCall,
   getScheduledCallsBetween,
@@ -115,6 +116,27 @@ describe('helpers', () => {
 
       expect(getCategories(state)).toEqual([category2, category1]);
     });
+
+    it('should support omitting hidden categories', () => {
+      const state = fakeState();
+
+      const category1 = fakeCategory({
+        id: 1,
+        isHidden: true,
+      });
+
+      const category2 = fakeCategory({
+        id: 2,
+        isHidden: false,
+      });
+
+      state.entities.categories = {
+        1: category1,
+        2: category2,
+      };
+
+      expect(getCategories(state, { omitHidden: true })).toEqual([category2]);
+    });
   });
 
   describe('getCategory', () => {
@@ -169,6 +191,31 @@ describe('helpers', () => {
       };
 
       expect(getCategoryActivities(state, 7)).toEqual([activity2, activity1]);
+    });
+
+    it('should support omitting hidden activities', () => {
+      const state = fakeState();
+
+      const activity1 = fakeActivity({
+        id: 1,
+        category: 7,
+        isHidden: true,
+      });
+
+      const activity2 = fakeActivity({
+        id: 2,
+        category: 7,
+        isHidden: false,
+      });
+
+      state.entities.activities = {
+        1: activity1,
+        2: activity2,
+      };
+
+      expect(getCategoryActivities(state, 7, {
+        omitHidden: true,
+      })).toEqual([activity2]);
     });
   });
 
@@ -549,6 +596,58 @@ describe('helpers', () => {
       state.navigation.top = createStack([route1, route2]);
 
       expect(getActiveTopRoute(state)).toEqual(route2);
+    });
+  });
+
+  describe('getCallsWithCallNotes', () => {
+    const state = fakeState();
+    const call1 = fakeCall({ id: 1 });
+    const call2 = fakeCall({ id: 2 });
+    const callNote1 = fakeCallNote({
+      id: 56,
+      call: 1,
+    });
+    const callNote2 = fakeCallNote({
+      id: 72,
+      call: 2,
+    });
+
+    state.entities.calls = {
+      1: call1,
+      2: call2,
+    };
+
+    it('should return an object of associated calls and callnotes', () => {
+      state.entities.callNotes = {
+        56: callNote1,
+        72: callNote2,
+      };
+
+      const expectedOutcome = [{
+        call: call1,
+        callNote: callNote1,
+      }, {
+        call: call2,
+        callNote: callNote2,
+      }];
+
+      expect(getCallsWithCallNotes(state)).toEqual(expectedOutcome);
+    });
+
+    it('should map null where callnotes do not exist', () => {
+      state.entities.callNotes = {
+        56: callNote1,
+      };
+
+      const expectedOutcome = [{
+        call: call1,
+        callNote: callNote1,
+      }, {
+        call: call2,
+        callNote: null,
+      }];
+
+      expect(getCallsWithCallNotes(state)).toEqual(expectedOutcome);
     });
   });
 });

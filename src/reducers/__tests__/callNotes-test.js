@@ -1,7 +1,12 @@
 import reduce, { createInitialState } from 'src/reducers/callNotes';
-import { changeCallNote, openCreateCallNote } from 'src/actions/callNotes';
+import {
+  changeCallNote,
+  openCreateCallNote,
+  openRetroactivelyCreateCallNote,
+} from 'src/actions/callNotes';
 import { fakeState } from 'app/scripts/helpers';
 import { logout } from 'src/actions/auth';
+import { ADD_RETROACTIVELY, ADD_IMMEDIATE } from 'src/constants/callNotes';
 
 
 describe('reducers/callNotes', () => {
@@ -18,9 +23,30 @@ describe('reducers/callNotes', () => {
   });
 
   describe('CALL_NOTE_CREATE_OPEN', () => {
-    it('should reset the state to the initial state', () => {
-      expect(reduce(void 0, openCreateCallNote(23)))
-        .toEqual(reduce(void 0, { type: 'FAKE' }));
+    it('should reset the draft call note state to the initial state', () => {
+      const { callNote } = reduce(void 0, openCreateCallNote(23));
+      expect(callNote)
+        .toEqual(createInitialState());
+    });
+
+    it('should set metadata to indicate that the call note is being created immediately', () => {
+      const { metadata } = reduce(void 0, openCreateCallNote(23));
+      expect(metadata)
+        .toEqual({ actionType: ADD_IMMEDIATE });
+    });
+  });
+
+  describe('CALL_NOTE_RETROACTIVELY_CREATE_OPEN', () => {
+    it('should reset the draft call note state to the initial state', () => {
+      const { callNote } = reduce(void 0, openRetroactivelyCreateCallNote(23));
+      expect(callNote)
+        .toEqual(createInitialState());
+    });
+
+    it('should set metadata to indicate that the call note is being created retroactively', () => {
+      const { metadata } = reduce(void 0, openRetroactivelyCreateCallNote(23));
+      expect(metadata)
+        .toEqual({ actionType: ADD_RETROACTIVELY });
     });
   });
 
@@ -37,7 +63,9 @@ describe('reducers/callNotes', () => {
   describe('AUTH_LOGOUT', () => {
     it('should reset to initial state', () => {
       expect(reduce(fakeState().callNote, logout()))
-        .toEqual(jasmine.objectContaining(createInitialState()));
+        .toEqual(jasmine.objectContaining({
+          callNote: createInitialState(),
+        }));
     });
   });
 });

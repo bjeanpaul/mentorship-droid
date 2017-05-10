@@ -1,8 +1,8 @@
-# MENTOR TOGETHER #
+# MENTOR TOGETHER
 
 This app is built with React Native, targetting Android.
 
-## Setup ##
+## Setup
 
 Follow the [Android setup steps](http://facebook.github.io/react-native/releases/0.28/docs/getting-started.html#content)
 for React Native.
@@ -20,16 +20,48 @@ to install our projects dependencies.
 Starts React Native's packager, builds the Android application and runs it
 on your _Android Virtual Device._
 
-## Debugging ##
+## Tests
 
-`> npm run logs`
+To run all tests:
 
-## Tests ##
+```
+npm test
+```
 
-`> npm test`
+To test on file changes:
+
+```
+npm test:watch
+```
+
+To run a particular test module:
+
+```
+npm test -- path/to/test/module.js
+```
+
+## Development
+
+For inspecting log output:
+
+```
+npm run logs
+```
+
+For keeping the js bundler running during development:
+
+```
+npm start
+```
+
+## Development Configuration
+
+Development-specific configuration can be defined by adding a `src/config/dev.js` module. See `src/config/dev.example.js` for an example.
+
+A development-specific entry point to the app can be added by defining `src/app.dev.js` and setting `USE_DEV_APP` to `true` in `src/config/dev.js`. This will override the default entry point, `src/app.js`.
 
 
-## Automatic Builds ##
+## Automatic Builds
 
 Are added to the GitHub repo whenever a new tag is pushed.
 
@@ -72,7 +104,7 @@ A `dev` suffix should be used for dev releases, starting at `-dev`, followed by 
 **Note:** This process should only be followed when the current changes on `develop` are to be merged into `master` and considered the new **production-ready** code.
 
 ```
-git flow release start <version>
-./utils/version.sh <version>
-git flow release finish -p <version>
+> git flow release start <version>
+> ./utils/version.sh <version>
+> git flow release finish -p <version>
 ```

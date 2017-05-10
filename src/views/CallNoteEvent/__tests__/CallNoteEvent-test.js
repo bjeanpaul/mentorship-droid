@@ -32,7 +32,7 @@ describe('CallNoteEvent', () => {
 
     expect(props).toEqual(jasmine.objectContaining({
       date: '2016-09-16T11:19:17.368442Z',
-      title: 'Call completed',
+      title: 'Wrote Call Notes',
       blurb: 'noitcefler',
       icon: EVENT_MOOD_IMAGES[constants.CALL_NOTES_MENTEE_HAPPY],
     }));

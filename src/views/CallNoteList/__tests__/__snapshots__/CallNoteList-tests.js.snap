@@ -148,13 +148,16 @@ exports[`CallNoteList should render call notes as rows 1`] = `
   </View>
   <ScrollView>
     <TouchableNativeFeedback
-      callNoteId={1}
+      callId={2}
       onPress={[Function]}>
       <View
         style={
           Object {
+            "alignItems": "center",
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
             "marginLeft": 24,
             "marginRight": 24,
             "paddingBottom": 32,
@@ -178,22 +181,46 @@ exports[`CallNoteList should render call notes as rows 1`] = `
               Object {
                 "color": "#003035",
                 "fontSize": 18,
-                "textAlign": "left",
               },
             ]
           }>
-          Wed, Sep 28, 7:34 pm
+          Tue, Sep 27, 10:51 am
+        </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#f77040",
+                "fontSize": 13,
+              },
+            ]
+          }>
+          ADD
         </Text>
       </View>
     </TouchableNativeFeedback>
     <TouchableNativeFeedback
-      callNoteId={2}
+      callId={1}
       onPress={[Function]}>
       <View
         style={
           Object {
+            "alignItems": "center",
             "borderBottomWidth": 0.5,
             "borderColor": "#dfe5e6",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
             "marginLeft": 24,
             "marginRight": 24,
             "paddingBottom": 32,
@@ -217,14 +244,86 @@ exports[`CallNoteList should render call notes as rows 1`] = `
               Object {
                 "color": "#003035",
                 "fontSize": 18,
-                "textAlign": "left",
               },
             ]
           }>
           Wed, Sep 28, 7:34 pm
         </Text>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#f77040",
+                "fontSize": 13,
+              },
+            ]
+          }>
+          VIEW
+        </Text>
       </View>
     </TouchableNativeFeedback>
   </ScrollView>
+</View>
+`;
+
+exports[`CallNoteList should render without dismissable button 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16,
+        },
+        Object {},
+      ]
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+          Object {
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400",
+          },
+        ]
+      }>
+      Call Notes
+    </Text>
+  </View>
+  <ScrollView />
 </View>
 `;
