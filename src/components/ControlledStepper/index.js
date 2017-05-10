@@ -42,7 +42,7 @@ class ControlledStepper extends Component {
 
 
 ControlledStepper.propTypes = {
-  routes: PropTypes.object.isRequired,
+  routes: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
   navigationState: NavigationPropTypes.navigationState.isRequired,
   onHardwareBackPress: PropTypes.func,
 };
