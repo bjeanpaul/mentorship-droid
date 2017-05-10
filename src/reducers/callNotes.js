@@ -6,7 +6,7 @@ import { AUTH_LOGOUT } from 'src/constants/auth';
 
 
 export const createInitialState = () => ({
-  version: 2,
+  version: '1',
 });
 
 
