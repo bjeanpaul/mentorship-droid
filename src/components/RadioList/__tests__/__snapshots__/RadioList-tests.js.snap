@@ -22,6 +22,7 @@ exports[`RadioList should render props correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "borderBottomWidth": 1,
         "borderColor": "#dfe5e6",
         "flexDirection": "row",
@@ -47,7 +48,7 @@ exports[`RadioList should render props correctly 1`] = `
           },
           Object {
             "color": "#003035",
-            "fontSize": 18,
+            "fontSize": 16,
           },
         ]
       }>
@@ -77,6 +78,7 @@ exports[`RadioList should render props correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "borderBottomWidth": 1,
         "borderColor": "#dfe5e6",
         "flexDirection": "row",
@@ -102,7 +104,7 @@ exports[`RadioList should render props correctly 1`] = `
           },
           Object {
             "color": "#003035",
-            "fontSize": 18,
+            "fontSize": 16,
           },
         ]
       }>
@@ -132,6 +134,7 @@ exports[`RadioList should render props correctly 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "borderBottomWidth": 1,
         "borderColor": "#dfe5e6",
         "flexDirection": "row",
@@ -157,7 +160,7 @@ exports[`RadioList should render props correctly 1`] = `
           },
           Object {
             "color": "#003035",
-            "fontSize": 18,
+            "fontSize": 16,
           },
         ]
       }>
@@ -199,6 +202,7 @@ exports[`RadioList should select an initial index 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "borderBottomWidth": 1,
         "borderColor": "#dfe5e6",
         "flexDirection": "row",
@@ -224,7 +228,7 @@ exports[`RadioList should select an initial index 1`] = `
           },
           Object {
             "color": "#003035",
-            "fontSize": 18,
+            "fontSize": 16,
           },
         ]
       }>
@@ -254,6 +258,7 @@ exports[`RadioList should select an initial index 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "borderBottomWidth": 1,
         "borderColor": "#dfe5e6",
         "flexDirection": "row",
@@ -279,7 +284,7 @@ exports[`RadioList should select an initial index 1`] = `
           },
           Object {
             "color": "#003035",
-            "fontSize": 18,
+            "fontSize": 16,
           },
         ]
       }>
@@ -309,6 +314,7 @@ exports[`RadioList should select an initial index 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Object {
+        "alignItems": "center",
         "borderBottomWidth": 1,
         "borderColor": "#dfe5e6",
         "flexDirection": "row",
@@ -334,7 +340,7 @@ exports[`RadioList should select an initial index 1`] = `
           },
           Object {
             "color": "#003035",
-            "fontSize": 18,
+            "fontSize": 16,
           },
         ]
       }>
