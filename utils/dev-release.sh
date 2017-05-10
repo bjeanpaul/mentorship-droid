@@ -1,5 +1,6 @@
 #!/bin/sh
 git checkout support/dev
+git pull
 git merge develop -X theirs
 ./utils/version.sh "$1"
 git tag "$1"
