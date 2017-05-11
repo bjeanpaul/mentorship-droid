@@ -120,7 +120,7 @@ const CallNoteV2Detail = ({
         <View style={styles.sectionMoodBody}>
           <Image
             style={styles.menteeStateImage}
-            source={constants.V2_MOOD_IMAGES[mood.toLowerCase()]}
+            source={constants.V2_MOOD_IMAGES[mood]}
           />
 
           <Text style={Text.types.paragraph}>
