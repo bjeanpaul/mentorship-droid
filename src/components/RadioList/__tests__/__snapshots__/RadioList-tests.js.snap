@@ -49,8 +49,8 @@ exports[`RadioList should render props correctly 1`] = `
           Object {
             "color": "#003035",
             "flex": 1,
-            "fontSize": 16,
-            "paddingRight": 16,
+            "fontSize": 14,
+            "marginRight": 16,
             "textAlign": "left",
           },
         ]
@@ -108,8 +108,8 @@ exports[`RadioList should render props correctly 1`] = `
           Object {
             "color": "#003035",
             "flex": 1,
-            "fontSize": 16,
-            "paddingRight": 16,
+            "fontSize": 14,
+            "marginRight": 16,
             "textAlign": "left",
           },
         ]
@@ -167,8 +167,8 @@ exports[`RadioList should render props correctly 1`] = `
           Object {
             "color": "#003035",
             "flex": 1,
-            "fontSize": 16,
-            "paddingRight": 16,
+            "fontSize": 14,
+            "marginRight": 16,
             "textAlign": "left",
           },
         ]
@@ -238,8 +238,8 @@ exports[`RadioList should select an initial index 1`] = `
           Object {
             "color": "#003035",
             "flex": 1,
-            "fontSize": 16,
-            "paddingRight": 16,
+            "fontSize": 14,
+            "marginRight": 16,
             "textAlign": "left",
           },
         ]
@@ -297,8 +297,8 @@ exports[`RadioList should select an initial index 1`] = `
           Object {
             "color": "#003035",
             "flex": 1,
-            "fontSize": 16,
-            "paddingRight": 16,
+            "fontSize": 14,
+            "marginRight": 16,
             "textAlign": "left",
           },
         ]
@@ -356,8 +356,8 @@ exports[`RadioList should select an initial index 1`] = `
           Object {
             "color": "#003035",
             "flex": 1,
-            "fontSize": 16,
-            "paddingRight": 16,
+            "fontSize": 14,
+            "marginRight": 16,
             "textAlign": "left",
           },
         ]

@@ -22,8 +22,8 @@ export default StyleSheet.create({
     textAlign: 'left',
     flex: 1,
     color: colors.RADIO_LIST_TEXT,
-    fontSize: 16,
-    paddingRight: 16,
+    fontSize: 14,
+    marginRight: 16,
   },
   itemImage: {
     height: 32,
