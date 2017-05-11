@@ -3,7 +3,11 @@ import { normalize, arrayOf } from 'normalizr';
 import { getContext } from 'src/store/helpers';
 import { staticAction } from 'src/actionHelpers';
 import { createStack, createRoute } from 'src/navigationHelpers';
-import { ADD_IMMEDIATE } from 'src/constants/callNotes';
+import {
+  ADD_IMMEDIATE,
+  CALL_NOTES_MENTEE_HAPPY,
+  V2_MOOD_HAPPY,
+} from 'src/constants/callNotes';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/events';
 import richText from 'src/richText';
 import * as api from 'src/api';
@@ -111,8 +115,9 @@ export const fakeCallNote = data => ({
   id: 404,
   mentor: 23,
   call: 50,
+  version: '1',
   reflection: 'It went well',
-  menteeState: 'sad',
+  menteeState: CALL_NOTES_MENTEE_HAPPY,
   objectiveAchieved: false,
   activityHelpful: true,
   callQuality: 5,
@@ -130,7 +135,7 @@ export const fakeCallNoteV2 = data => ({
   callResult: 'COMPLETED',
   activityProgress: 'COMPLETED',
   reflection: 'dzdfdszf',
-  mood: 'HAPPY',
+  mood: V2_MOOD_HAPPY,
   objectiveAchieved: '1',
   rating: '2',
   callQuality: 'OK',

@@ -9,15 +9,6 @@ import images from 'src/constants/images';
 import styles from './styles';
 
 
-const mentee = fromPairs([
-  [constants.CALL_NOTES_MENTEE_HAPPY, images.CALL_NOTES_MENTEE_HAPPY],
-  [constants.CALL_NOTES_MENTEE_SAD, images.CALL_NOTES_MENTEE_SAD],
-  [constants.CALL_NOTES_MENTEE_BORED, images.CALL_NOTES_MENTEE_BORED],
-  [constants.CALL_NOTES_MENTEE_CONFUSED, images.CALL_NOTES_MENTEE_CONFUSED],
-  [constants.CALL_NOTES_MENTEE_UPSET, images.CALL_NOTES_MENTEE_UPSET],
-  [constants.CALL_NOTES_MENTEE_WITHDRAWN, images.CALL_NOTES_MENTEE_WITHDRAWN],
-]);
-
 const callResults = {
   COMPLETED: 'We completed it',
   PARTIALLY_COMPLETED: 'Partially completed',
@@ -146,7 +137,7 @@ const CallNoteV2Detail = ({
         <View style={styles.sectionMoodBody}>
           <Image
             style={styles.menteeStateImage}
-            source={mentee[mood.toLowerCase()]}
+            source={constants.V2_MOOD_IMAGES[mood]}
           />
 
           <Text style={Text.types.paragraph}>
