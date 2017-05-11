@@ -8,6 +8,8 @@ const {
     pop,
     back,
     forward,
+    jumpTo,
+    jumpToIndex,
     replaceAt: _replaceAt,
     push: _push,
   },
@@ -20,6 +22,8 @@ export {
   pop,
   back,
   forward,
+  jumpTo,
+  jumpToIndex,
 };
 
 

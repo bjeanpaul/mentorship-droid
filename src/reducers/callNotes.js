@@ -1,69 +1,74 @@
-import { combineReducers } from 'redux';
-
-import { createStack } from 'src/navigationHelpers';
+import { merge } from 'lodash/fp';
+import { unary } from 'lodash';
 import * as constants from 'src/constants/callNotes';
 import { AUTH_LOGOUT } from 'src/constants/auth';
+import {
+  createStack, createRoute, forward, back, jumpToIndex,
+} from 'src/navigationHelpers';
 
 
 export const createInitialState = () => ({
-  version: '1',
+  callNote: { version: '1' },
+  metadata: {},
+  steps: null,
 });
 
 
-const callNote = (state = {}, action) => {
+export const createSteps = () => {
+  // TODO return null for v1
+  // TODO logic for different steps based on with/without activity
+  const steps = createStack(constants.V2_STEPS_WITH_ACTIVITY.map(unary(createRoute)));
+  return jumpToIndex(steps, 0);
+};
+
+
+export default (state = createInitialState(), action) => {
   switch (action.type) {
     case AUTH_LOGOUT:
-    case constants.CALL_NOTE_CREATE_OPEN:
-    case constants.CALL_NOTE_RETROACTIVELY_CREATE_OPEN:
       return createInitialState();
+
+    case constants.CALL_NOTE_CREATE_OPEN:
+      return merge(createInitialState(), {
+        steps: createSteps(state),
+        metadata: {
+          actionType: constants.ADD_IMMEDIATE,
+        },
+      });
+
+    case constants.CALL_NOTE_RETROACTIVELY_CREATE_OPEN:
+      return merge(createInitialState(), {
+        steps: createSteps(state),
+        metadata: {
+          actionType: constants.ADD_RETROACTIVELY,
+        },
+      });
 
     // TODO remove once we no longer have a duplicates issue
     case constants.CALL_NOTE_CREATE_REQUEST:
-      return {
-        ...state,
-        isSending: true,
-      };
+      return merge(state, {
+        callNote: {
+          isSending: true,
+        },
+      });
 
     case constants.CALL_NOTES_CHANGE_CALL_NOTE:
+      return merge(state, {
+        callNote: action.payload,
+      });
+
+    case constants.V2_STEP_BACK:
       return {
         ...state,
-        ...action.payload,
+        steps: back(state.steps),
+      };
+
+    case constants.V2_STEP_NEXT:
+      return {
+        ...state,
+        steps: forward(state.steps),
       };
 
     default:
       return state;
   }
 };
-
-
-const metadata = (state = {}, action) => {
-  switch (action.type) {
-    case constants.CALL_NOTE_RETROACTIVELY_CREATE_OPEN:
-      return {
-        ...state,
-        actionType: constants.ADD_RETROACTIVELY,
-      };
-
-    case constants.CALL_NOTE_CREATE_OPEN:
-      return {
-        ...state,
-        actionType: constants.ADD_IMMEDIATE,
-      };
-
-    default:
-      return state;
-  }
-};
-
-
-const navigation = (state = createStack()) => {
-  // TODO
-  return state;
-};
-
-
-export default combineReducers({
-  callNote,
-  metadata,
-  navigation,
-});

@@ -11,7 +11,7 @@ class CallNoteStepsV2 extends Component {
   }
 
   getRoute(key) {
-    const Step = routes[key];
+    const Step = this.props.routes[key];
 
     return (
       <Step
@@ -27,7 +27,7 @@ class CallNoteStepsV2 extends Component {
   render() {
     return (
       <ControlledStepper
-        navigationState={this.props.navigationState}
+        navigationState={this.props.steps}
         routes={this.getRoute}
       />
     );
@@ -36,12 +36,18 @@ class CallNoteStepsV2 extends Component {
 
 
 CallNoteStepsV2.propTypes = {
-  navigationState: NavigationPropTypes.navigationState.isRequired,
+  steps: NavigationPropTypes.navigationState.isRequired,
   callNote: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired,
   onBackPress: PropTypes.func.isRequired,
   onNextPress: PropTypes.func.isRequired,
   onDonePress: PropTypes.func.isRequired,
+  routes: PropTypes.object,
+};
+
+
+CallNoteStepsV2.defaultProps = {
+  routes,
 };
 
 
