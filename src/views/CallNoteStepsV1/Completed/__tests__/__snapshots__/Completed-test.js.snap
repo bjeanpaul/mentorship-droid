@@ -9,35 +9,41 @@ exports[`Completed should render 1`] = `
       undefined,
     ]
   }>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
+  <View
     style={
-      Array [
-        Object {
-          "color": "#003035",
-          "fontFamily": "Brandon Text",
-        },
-        Object {
-          "fontSize": 13,
-          "textAlign": "center",
-        },
+      Object {
+        "margin": 25,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
         Array [
           Object {
-            "fontFamily": "Brandon Text_medium",
-            "fontSize": 20,
-            "fontWeight": "400",
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
           },
           Object {
-            "margin": 25,
-            "marginBottom": 50,
+            "fontSize": 13,
+            "textAlign": "center",
           },
-        ],
-      ]
-    }>
-    Did you achieve the objective?
-  </Text>
+          Array [
+            Object {
+              "fontFamily": "Brandon Text_medium",
+              "fontSize": 20,
+              "fontWeight": "400",
+            },
+            Object {
+              "margin": 13,
+            },
+          ],
+        ]
+      }>
+      Did you achieve the objective?
+    </Text>
+  </View>
   <View
     style={
       Object {

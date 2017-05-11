@@ -9,35 +9,41 @@ exports[`CallQuality should render 1`] = `
       undefined,
     ]
   }>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
+  <View
     style={
-      Array [
-        Object {
-          "color": "#003035",
-          "fontFamily": "Brandon Text",
-        },
-        Object {
-          "fontSize": 13,
-          "textAlign": "center",
-        },
+      Object {
+        "margin": 25,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
         Array [
           Object {
-            "fontFamily": "Brandon Text_medium",
-            "fontSize": 20,
-            "fontWeight": "400",
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
           },
           Object {
-            "margin": 25,
-            "marginBottom": 50,
+            "fontSize": 13,
+            "textAlign": "center",
           },
-        ],
-      ]
-    }>
-    Rate the call quality
-  </Text>
+          Array [
+            Object {
+              "fontFamily": "Brandon Text_medium",
+              "fontSize": 20,
+              "fontWeight": "400",
+            },
+            Object {
+              "margin": 13,
+            },
+          ],
+        ]
+      }>
+      Rate the call quality
+    </Text>
+  </View>
   <View
     style={
       Object {
@@ -99,6 +105,7 @@ exports[`CallQuality should render 1`] = `
               onStartShouldSetResponder={[Function]}
               style={
                 Object {
+                  "alignItems": "center",
                   "borderBottomWidth": 1,
                   "borderColor": "#dfe5e6",
                   "flexDirection": "row",
@@ -124,7 +131,10 @@ exports[`CallQuality should render 1`] = `
                     },
                     Object {
                       "color": "#003035",
-                      "fontSize": 18,
+                      "flex": 1,
+                      "fontSize": 14,
+                      "marginRight": 16,
+                      "textAlign": "left",
                     },
                   ]
                 }>
@@ -154,6 +164,7 @@ exports[`CallQuality should render 1`] = `
               onStartShouldSetResponder={[Function]}
               style={
                 Object {
+                  "alignItems": "center",
                   "borderBottomWidth": 1,
                   "borderColor": "#dfe5e6",
                   "flexDirection": "row",
@@ -179,7 +190,10 @@ exports[`CallQuality should render 1`] = `
                     },
                     Object {
                       "color": "#003035",
-                      "fontSize": 18,
+                      "flex": 1,
+                      "fontSize": 14,
+                      "marginRight": 16,
+                      "textAlign": "left",
                     },
                   ]
                 }>
@@ -209,6 +223,7 @@ exports[`CallQuality should render 1`] = `
               onStartShouldSetResponder={[Function]}
               style={
                 Object {
+                  "alignItems": "center",
                   "borderBottomWidth": 1,
                   "borderColor": "#dfe5e6",
                   "flexDirection": "row",
@@ -234,7 +249,10 @@ exports[`CallQuality should render 1`] = `
                     },
                     Object {
                       "color": "#003035",
-                      "fontSize": 18,
+                      "flex": 1,
+                      "fontSize": 14,
+                      "marginRight": 16,
+                      "textAlign": "left",
                     },
                   ]
                 }>
@@ -264,6 +282,7 @@ exports[`CallQuality should render 1`] = `
               onStartShouldSetResponder={[Function]}
               style={
                 Object {
+                  "alignItems": "center",
                   "borderBottomWidth": 1,
                   "borderColor": "#dfe5e6",
                   "flexDirection": "row",
@@ -289,7 +308,10 @@ exports[`CallQuality should render 1`] = `
                     },
                     Object {
                       "color": "#003035",
-                      "fontSize": 18,
+                      "flex": 1,
+                      "fontSize": 14,
+                      "marginRight": 16,
+                      "textAlign": "left",
                     },
                   ]
                 }>
@@ -319,6 +341,7 @@ exports[`CallQuality should render 1`] = `
               onStartShouldSetResponder={[Function]}
               style={
                 Object {
+                  "alignItems": "center",
                   "borderBottomWidth": 1,
                   "borderColor": "#dfe5e6",
                   "flexDirection": "row",
@@ -344,7 +367,10 @@ exports[`CallQuality should render 1`] = `
                     },
                     Object {
                       "color": "#003035",
-                      "fontSize": 18,
+                      "flex": 1,
+                      "fontSize": 14,
+                      "marginRight": 16,
+                      "textAlign": "left",
                     },
                   ]
                 }>
