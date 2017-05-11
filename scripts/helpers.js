@@ -179,6 +179,12 @@ export const fakeBlogPost = data => merge({
 }, data);
 
 
+export const fakeForgotPasswordReset = data => merge({
+  token: '71828182',
+  newPassword: 'abc',
+}, data);
+
+
 export const fakeState = (overrides = {}) => merge({}, {
   auth: {
     profileId: 23,
