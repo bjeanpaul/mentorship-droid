@@ -8,7 +8,7 @@ import {
 
 
 export const createInitialState = () => ({
-  callNote: { version: 2 },
+  callNote: { version: '1' },
   metadata: {},
   steps: null,
 });
