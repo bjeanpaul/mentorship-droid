@@ -59,7 +59,7 @@ export const fakeActivity = data => ({
   instructions: 'snoitcrutsni',
   isComplete: false,
   lessonRationale: 'elanoitar',
-  objective: 'raaar',
+  objective: 'Let us make a Snowflake to Learn about Connection',
   prompts: 'tspmorp',
   reflectionPoints: 'tsnoip',
   skillsDeveloped: 'depoleved',
@@ -118,6 +118,22 @@ export const fakeCallNote = data => ({
   callQuality: 5,
   callActivity: 3,
   callStartTime: '2016-09-28T17:34Z',
+  ...data,
+});
+
+
+export const fakeCallNoteV2 = data => ({
+  id: 10,
+  version: '2',
+  createdAt: '2017-04-28T15:45:53.697771Z',
+  call: 12,
+  callResult: 'COMPLETED',
+  activityProgress: 'COMPLETED',
+  reflection: 'dzdfdszf',
+  mood: 'HAPPY',
+  objectiveAchieved: '1',
+  rating: '2',
+  callQuality: 'OK',
   ...data,
 });
 

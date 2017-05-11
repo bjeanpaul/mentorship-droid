@@ -1,0 +1,1116 @@
+exports[`CallNoteV1Detail should exclude the activity icon if it does not exist 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16,
+        },
+        Object {},
+      ]
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+          Object {
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400",
+          },
+        ]
+      }>
+      Wed, Sep 28, 7:09 pm
+    </Text>
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
+  </View>
+  <ScrollView
+    style={
+      Object {
+        "padding": 24,
+      }
+    }>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "marginBottom": 18,
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          DISCUSSION WITH ACTIVITY
+        </Text>
+      </View>
+      <View
+        style={Object {}}>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Array [
+                  Object {
+                    "fontSize": 18,
+                    "marginBottom": 12,
+                    "textAlign": "left",
+                  },
+                  Object {
+                    "flex": 1,
+                    "paddingBottom": 0,
+                    "paddingTop": 0,
+                  },
+                ],
+              ]
+            }>
+            Let us make a Snowflake to Learn about Connection
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "marginBottom": 18,
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          YOUR REFLECTIONS
+        </Text>
+      </View>
+      <View
+        style={Object {}}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "fontSize": 18,
+                "marginBottom": 12,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          It went well
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "marginBottom": 18,
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          YOUR MENTEE’S MOOD
+        </Text>
+      </View>
+      <View
+        style={Object {}}>
+        <Image
+          source={1}
+          style={
+            Object {
+              "alignSelf": "center",
+            }
+          } />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "marginBottom": 18,
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          OBJECTIVE ACHIEVED
+        </Text>
+      </View>
+      <View
+        style={Object {}}>
+        <Image
+          source={1}
+          style={
+            Object {
+              "alignSelf": "center",
+            }
+          } />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "marginBottom": 18,
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          HELPFULNESS OF ACTIVITY
+        </Text>
+      </View>
+      <View
+        style={Object {}}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Array [
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+                Object {
+                  "textAlign": "center",
+                },
+              ],
+            ]
+          } />
+      </View>
+    </View>
+  </ScrollView>
+</View>
+`;
+
+exports[`CallNoteV1Detail should exclude the activity views if they are undefined 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16,
+        },
+        Object {},
+      ]
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+          Object {
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400",
+          },
+        ]
+      }>
+      Wed, Sep 28, 7:09 pm
+    </Text>
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
+  </View>
+  <ScrollView
+    style={
+      Object {
+        "padding": 24,
+      }
+    }>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "marginBottom": 18,
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          YOUR REFLECTIONS
+        </Text>
+      </View>
+      <View
+        style={Object {}}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "fontSize": 18,
+                "marginBottom": 12,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          It went well
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "marginBottom": 18,
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          YOUR MENTEE’S MOOD
+        </Text>
+      </View>
+      <View
+        style={Object {}}>
+        <Image
+          source={1}
+          style={
+            Object {
+              "alignSelf": "center",
+            }
+          } />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "marginBottom": 18,
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          HELPFULNESS OF ACTIVITY
+        </Text>
+      </View>
+      <View
+        style={Object {}}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Array [
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+                Object {
+                  "textAlign": "center",
+                },
+              ],
+            ]
+          } />
+      </View>
+    </View>
+  </ScrollView>
+</View>
+`;
+
+exports[`CallNoteV1Detail should render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 72,
+          "justifyContent": "center",
+          "paddingLeft": 16,
+          "paddingRight": 16,
+        },
+        Object {},
+      ]
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+          Object {
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Object {
+            "fontFamily": "Brandon Text_medium",
+            "fontSize": 20,
+            "fontWeight": "400",
+          },
+        ]
+      }>
+      Wed, Sep 28, 7:09 pm
+    </Text>
+    <TouchableNativeFeedback
+      onPress={[Function]}>
+      <View
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+              "top": 24,
+            },
+            Object {},
+          ]
+        }>
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+              Object {},
+            ]
+          } />
+      </View>
+    </TouchableNativeFeedback>
+  </View>
+  <ScrollView
+    style={
+      Object {
+        "padding": 24,
+      }
+    }>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "marginBottom": 18,
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          DISCUSSION WITH ACTIVITY
+        </Text>
+      </View>
+      <View
+        style={Object {}}>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Array [
+                  Object {
+                    "fontSize": 18,
+                    "marginBottom": 12,
+                    "textAlign": "left",
+                  },
+                  Object {
+                    "flex": 1,
+                    "paddingBottom": 0,
+                    "paddingTop": 0,
+                  },
+                ],
+              ]
+            }>
+            Let us make a Snowflake to Learn about Connection
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "marginBottom": 18,
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          YOUR REFLECTIONS
+        </Text>
+      </View>
+      <View
+        style={Object {}}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "fontSize": 18,
+                "marginBottom": 12,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          It went well
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "marginBottom": 18,
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          YOUR MENTEE’S MOOD
+        </Text>
+      </View>
+      <View
+        style={Object {}}>
+        <Image
+          source={1}
+          style={
+            Object {
+              "alignSelf": "center",
+            }
+          } />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "marginBottom": 18,
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          OBJECTIVE ACHIEVED
+        </Text>
+      </View>
+      <View
+        style={Object {}}>
+        <Image
+          source={1}
+          style={
+            Object {
+              "alignSelf": "center",
+            }
+          } />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginBottom": 45,
+        }
+      }>
+      <View
+        style={
+          Object {
+            "borderBottomWidth": 0.5,
+            "borderColor": "#dfe5e6",
+            "borderStyle": "solid",
+            "marginBottom": 18,
+            "paddingBottom": 19,
+          }
+        }>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#9fb1b3",
+                "fontFamily": "Brandon Text_bold",
+                "fontSize": 12,
+                "fontWeight": "bold",
+                "letterSpacing": 1,
+                "textAlign": "left",
+              },
+            ]
+          }>
+          HELPFULNESS OF ACTIVITY
+        </Text>
+      </View>
+      <View
+        style={Object {}}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#003035",
+                "fontFamily": "Brandon Text",
+              },
+              Object {
+                "fontSize": 13,
+                "textAlign": "center",
+              },
+              Array [
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+                Object {
+                  "textAlign": "center",
+                },
+              ],
+            ]
+          } />
+      </View>
+    </View>
+  </ScrollView>
+</View>
+`;
