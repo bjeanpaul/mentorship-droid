@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
+
 import colors from 'src/constants/colors';
+
 
 export default StyleSheet.create({
   container: {
@@ -14,10 +16,14 @@ export default StyleSheet.create({
     borderColor: colors.RADIO_LIST_BORDER,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   itemLabel: {
+    textAlign: 'left',
+    flex: 1,
     color: colors.RADIO_LIST_TEXT,
-    fontSize: 18,
+    fontSize: 14,
+    marginRight: 16,
   },
   itemImage: {
     height: 32,

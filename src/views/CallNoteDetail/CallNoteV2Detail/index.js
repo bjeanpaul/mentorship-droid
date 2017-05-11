@@ -8,29 +8,13 @@ import * as constants from 'src/constants/callNotes';
 import styles from './styles';
 
 
-const callResults = {
+export const CALL_RESULT_LABELS = {
   COMPLETED: 'We completed it',
   PARTIALLY_COMPLETED: 'Partially completed',
   MENTEE_NOT_AVAILABLE: 'Mentee not available',
   MENTEE_RESCHEDULED: 'Mentee rescheduled',
 };
 
-
-const objectAchievedOptions = {
-  1: 'Objective was achieved',
-  2: 'Mostly achieved',
-  3: 'Somewhat achieved',
-  4: 'Achieved a little',
-  5: 'Not at all',
-};
-
-const activityRatingOptions = {
-  1: 'Very good',
-  2: 'Good',
-  3: 'Average',
-  4: 'Poor',
-  5: 'Very Poor',
-};
 
 const Title = ({ children }) => (
   <View style={styles.titleContainer}>
@@ -74,7 +58,7 @@ const CallNoteV2Detail = ({
 
         <View style={styles.sectionBody}>
           <Text style={Text.types.paragraph}>
-            {callResults[callResult]}
+            {CALL_RESULT_LABELS[callResult]}
           </Text>
         </View>
       </View>
@@ -105,7 +89,7 @@ const CallNoteV2Detail = ({
 
         <View style={styles.sectionBody}>
           <Text style={Text.types.paragraph}>
-            {objectAchievedOptions[objectiveAchieved]}
+            {constants.V2_OBJECTIVE_ACHIEVED_LABELS[objectiveAchieved]}
           </Text>
         </View>
       </View>
@@ -115,7 +99,7 @@ const CallNoteV2Detail = ({
 
         <View style={styles.sectionBody}>
           <Text style={Text.types.paragraph}>
-            {activityRatingOptions[rating]}
+            {constants.V2_RATING_LABELS[rating]}
           </Text>
         </View>
       </View>

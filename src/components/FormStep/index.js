@@ -5,13 +5,22 @@ import styles from './styles';
 
 const FormStep = ({
   title,
+  secondaryTitle,
   paginationDisabled,
   paginationBackDisabled,
   children,
   ...props,
 }) => (
   <Step>
-    <Text style={[Text.types.title, styles.title]}>{title}</Text>
+    <View style={styles.header}>
+      <Text style={[Text.types.title, styles.title]}>{title}</Text>
+
+      {
+        secondaryTitle && <Text style={styles.secondaryTitle}>
+          {secondaryTitle}
+        </Text>
+      }
+    </View>
 
     <View style={styles.contentContainer}>
       {children}
@@ -29,6 +38,7 @@ const FormStep = ({
 
 FormStep.propTypes = {
   title: PropTypes.string.isRequired,
+  secondaryTitle: PropTypes.string,
   children: PropTypes.any,
   paginationDisabled: PropTypes.bool,
   paginationBackDisabled: PropTypes.bool,

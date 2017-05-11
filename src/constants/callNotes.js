@@ -1,6 +1,7 @@
 import { fromPairs } from 'lodash';
 import images from 'src/constants/images';
 
+export const CALL_NOTE_VERSION = '1';
 
 export const CALL_NOTE_LIST_REQUEST = 'CALL_NOTE_LIST_REQUEST';
 export const CALL_NOTE_LIST_SUCCESS = 'CALL_NOTE_LIST_SUCCESS';
@@ -140,3 +141,31 @@ export const V2_STEPS_WITH_ACTIVITY = [
   V2_STEP_MOOD,
   V2_STEP_CALL_QUALITY,
 ];
+
+export const V2_CALL_RESULT_COMPLETED = 'COMPLETED';
+export const V2_CALL_RESULT_PARTIALLY_COMPLETED = 'PARTIALLY_COMPLETED';
+export const V2_CALL_RESULT_MENTEE_NOT_AVAILABLE = 'MENTEE_NOT_AVAILABLE';
+export const V2_CALL_RESULT_MENTEE_RESCHEDULED = 'MENTEE_RESCHEDULED';
+
+export const V2_CALL_RESULT_ITEMS = [
+  V2_CALL_RESULT_COMPLETED,
+  V2_CALL_RESULT_PARTIALLY_COMPLETED,
+  V2_CALL_RESULT_MENTEE_NOT_AVAILABLE,
+  V2_CALL_RESULT_MENTEE_RESCHEDULED,
+];
+
+export const V2_OBJECTIVE_ACHIEVED_LABELS = {
+  1: 'Objective was achieved',
+  2: 'Mostly achieved',
+  3: 'Somewhat achieved',
+  4: 'Achieved a little',
+  5: 'Not at all',
+};
+
+export const V2_RATING_LABELS = {
+  1: 'Very good',
+  2: 'Good',
+  3: 'Average',
+  4: 'Poor',
+  5: 'Very Poor',
+};
