@@ -1,22 +1,12 @@
 import moment from 'moment';
-import { fromPairs, upperFirst } from 'lodash';
+import { upperFirst } from 'lodash';
 
 import React, { PropTypes } from 'react';
 import { View, ScrollView, Image } from 'react-native';
 import { BaseView, Header, HeaderIcon, Text } from 'src/components';
 import * as constants from 'src/constants/callNotes';
-import images from 'src/constants/images';
 import styles from './styles';
 
-
-const mentee = fromPairs([
-  [constants.CALL_NOTES_MENTEE_HAPPY, images.CALL_NOTES_MENTEE_HAPPY],
-  [constants.CALL_NOTES_MENTEE_SAD, images.CALL_NOTES_MENTEE_SAD],
-  [constants.CALL_NOTES_MENTEE_BORED, images.CALL_NOTES_MENTEE_BORED],
-  [constants.CALL_NOTES_MENTEE_CONFUSED, images.CALL_NOTES_MENTEE_CONFUSED],
-  [constants.CALL_NOTES_MENTEE_UPSET, images.CALL_NOTES_MENTEE_UPSET],
-  [constants.CALL_NOTES_MENTEE_WITHDRAWN, images.CALL_NOTES_MENTEE_WITHDRAWN],
-]);
 
 const callResults = {
   COMPLETED: 'We completed it',
@@ -146,7 +136,7 @@ const CallNoteV2Detail = ({
         <View style={styles.sectionMoodBody}>
           <Image
             style={styles.menteeStateImage}
-            source={mentee[mood.toLowerCase()]}
+            source={constants.V2_MOOD_IMAGES[mood]}
           />
 
           <Text style={Text.types.paragraph}>
