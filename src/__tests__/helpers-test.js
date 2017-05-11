@@ -12,6 +12,7 @@ import {
   delegate,
   formatDateRelatively,
   groupByDate,
+  mergeStyles,
 } from 'src/helpers';
 
 
@@ -201,5 +202,50 @@ describe('helpers', () => {
           items: [item2, item1],
         }]);
     });
+  });
+
+  describe('mergeStyles', () => {
+    it('should merge a nested list of styles', () => {
+      expect(mergeStyles([{
+        a: 23,
+      }, [{
+        b: 21,
+      }, [{
+        c: 22,
+      }, {
+        d: 20,
+      }]]]))
+      .toEqual({
+        a: 23,
+        b: 21,
+        c: 22,
+        d: 20,
+      });
+    });
+  });
+
+  it('should concat each style class', () => {
+    expect(mergeStyles([{
+      a: 21,
+      b: 23,
+    }, {
+      a: { foo: 'bar' },
+      c: 20,
+    }, {
+      b: 22,
+    }]))
+    .toEqual({
+      a: [21, { foo: 'bar' }],
+      b: [23, 22],
+      c: 20,
+    });
+  });
+
+  it('should skip falsy stylesheets', () => {
+    expect(mergeStyles([{a: 21 }, null, undefined, { b: 22 }]))
+      .toEqual({
+        a: 21,
+        b: 22,
+      });
   });
 });
