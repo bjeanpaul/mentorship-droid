@@ -1,10 +1,9 @@
-import { mergeAll } from 'lodash/fp';
 import { StyleSheet } from 'react-native';
 
 import colors from 'src/constants/colors';
-import { DEVICE_WIDTH, DEVICE_WIDTH_MEDIUM } from 'src/constants/styles';
 
-export default StyleSheet.create(mergeAll([{
+
+export default StyleSheet.create({
   container: {
     flex: 1,
     marginLeft: 40,
@@ -20,15 +19,14 @@ export default StyleSheet.create(mergeAll([{
     alignItems: 'center',
   },
   itemLabel: {
+    textAlign: 'left',
+    flex: 1,
     color: colors.RADIO_LIST_TEXT,
-    fontSize: 14,
+    fontSize: 16,
+    paddingRight: 16,
   },
   itemImage: {
     height: 32,
     width: 32,
   },
-}, DEVICE_WIDTH > DEVICE_WIDTH_MEDIUM && {
-  itemLabel: {
-    fontSize: 16,
-  },
-}]));
+});
