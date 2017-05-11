@@ -264,36 +264,38 @@ exports[`Activity should display the poster if one is given 1`] = `
           OBJECTIVE
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          Let us make a Snowflake to Learn about Connection
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            Let us make a Snowflake to Learn about Connection
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -354,36 +356,38 @@ exports[`Activity should display the poster if one is given 1`] = `
           LESSON RATIONALE
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          elanoitar
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            elanoitar
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -444,36 +448,38 @@ exports[`Activity should display the poster if one is given 1`] = `
           INSTRUCTIONS
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          snoitcrutsni
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            snoitcrutsni
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -534,36 +540,38 @@ exports[`Activity should display the poster if one is given 1`] = `
           TIPS
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          tspmorp
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            tspmorp
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -624,36 +632,38 @@ exports[`Activity should display the poster if one is given 1`] = `
           REFLECTION POINTS
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          tsnoip
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            tsnoip
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -714,36 +724,38 @@ exports[`Activity should display the poster if one is given 1`] = `
           SKILLS DEVELOPED
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          depoleved
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            depoleved
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -1109,36 +1121,38 @@ exports[`Activity should display the relevant context for the latest call note 1
           OBJECTIVE
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          Let us make a Snowflake to Learn about Connection
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            Let us make a Snowflake to Learn about Connection
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -1199,36 +1213,38 @@ exports[`Activity should display the relevant context for the latest call note 1
           LESSON RATIONALE
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          elanoitar
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            elanoitar
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -1289,36 +1305,38 @@ exports[`Activity should display the relevant context for the latest call note 1
           INSTRUCTIONS
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          snoitcrutsni
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            snoitcrutsni
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -1379,36 +1397,38 @@ exports[`Activity should display the relevant context for the latest call note 1
           TIPS
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          tspmorp
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            tspmorp
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -1469,36 +1489,38 @@ exports[`Activity should display the relevant context for the latest call note 1
           REFLECTION POINTS
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          tsnoip
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            tsnoip
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -1559,36 +1581,38 @@ exports[`Activity should display the relevant context for the latest call note 1
           SKILLS DEVELOPED
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          depoleved
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            depoleved
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -1955,36 +1979,38 @@ exports[`Activity should display the relevant context for the next scheduled cal
           OBJECTIVE
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          Let us make a Snowflake to Learn about Connection
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            Let us make a Snowflake to Learn about Connection
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -2045,36 +2071,38 @@ exports[`Activity should display the relevant context for the next scheduled cal
           LESSON RATIONALE
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          elanoitar
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            elanoitar
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -2135,36 +2163,38 @@ exports[`Activity should display the relevant context for the next scheduled cal
           INSTRUCTIONS
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          snoitcrutsni
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            snoitcrutsni
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -2225,36 +2255,38 @@ exports[`Activity should display the relevant context for the next scheduled cal
           TIPS
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          tspmorp
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            tspmorp
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -2315,36 +2347,38 @@ exports[`Activity should display the relevant context for the next scheduled cal
           REFLECTION POINTS
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          tsnoip
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            tsnoip
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -2405,36 +2439,38 @@ exports[`Activity should display the relevant context for the next scheduled cal
           SKILLS DEVELOPED
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          depoleved
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            depoleved
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -2800,36 +2836,38 @@ exports[`Activity should not try display a poster if none is given 1`] = `
           OBJECTIVE
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          Let us make a Snowflake to Learn about Connection
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            Let us make a Snowflake to Learn about Connection
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -2890,36 +2928,38 @@ exports[`Activity should not try display a poster if none is given 1`] = `
           LESSON RATIONALE
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          elanoitar
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            elanoitar
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -2980,36 +3020,38 @@ exports[`Activity should not try display a poster if none is given 1`] = `
           INSTRUCTIONS
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          snoitcrutsni
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            snoitcrutsni
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -3070,36 +3112,38 @@ exports[`Activity should not try display a poster if none is given 1`] = `
           TIPS
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          tspmorp
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            tspmorp
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -3160,36 +3204,38 @@ exports[`Activity should not try display a poster if none is given 1`] = `
           REFLECTION POINTS
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          tsnoip
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            tsnoip
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -3250,36 +3296,38 @@ exports[`Activity should not try display a poster if none is given 1`] = `
           SKILLS DEVELOPED
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          depoleved
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            depoleved
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -3644,36 +3692,38 @@ exports[`Activity should render 1`] = `
           OBJECTIVE
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          Let us make a Snowflake to Learn about Connection
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            Let us make a Snowflake to Learn about Connection
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -3734,36 +3784,38 @@ exports[`Activity should render 1`] = `
           LESSON RATIONALE
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          elanoitar
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            elanoitar
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -3824,36 +3876,38 @@ exports[`Activity should render 1`] = `
           INSTRUCTIONS
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          snoitcrutsni
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            snoitcrutsni
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -3914,36 +3968,38 @@ exports[`Activity should render 1`] = `
           TIPS
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          tspmorp
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            tspmorp
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -4004,36 +4060,38 @@ exports[`Activity should render 1`] = `
           REFLECTION POINTS
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          tsnoip
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            tsnoip
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -4094,36 +4152,38 @@ exports[`Activity should render 1`] = `
           SKILLS DEVELOPED
         </Text>
       </View>
-      <View
-        style={
-          Object {
-            "paddingLeft": 24,
-            "paddingRight": 24,
-          }
-        }>
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+      <View>
+        <View
           style={
-            Array [
-              Object {
-                "color": "#003035",
-                "fontFamily": "Brandon Text",
-              },
-              Object {
-                "fontSize": 13,
-                "textAlign": "center",
-              },
-              Object {
-                "fontSize": 18,
-                "marginBottom": 12,
-                "textAlign": "left",
-              },
-            ]
+            Object {
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
           }>
-          depoleved
-        </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "fontSize": 18,
+                  "marginBottom": 12,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            depoleved
+          </Text>
+        </View>
       </View>
     </View>
     <View

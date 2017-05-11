@@ -49,12 +49,6 @@ export default StyleSheet.create(merge({
     justifyContent: 'space-around',
     height: 64,
   },
-  objectiveContainer: {
-    flex: 1,
-    margin: 24,
-    borderColor: colors.CALL_NOTE_OBJECTIVE_CONTAINER,
-    borderWidth: 1,
-  },
   ratingContainer: {
     flex: 2,
   },

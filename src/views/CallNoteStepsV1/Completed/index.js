@@ -1,8 +1,8 @@
 import { isUndefined } from 'lodash';
 import React, { PropTypes } from 'react';
-import { View, Image, TouchableWithoutFeedback, ScrollView } from 'react-native';
+import { View, Image, TouchableWithoutFeedback } from 'react-native';
 
-import { Section } from 'src/views/Activity';
+import { Panel } from 'src/components';
 import { FormStep } from 'src/components';
 import images from 'src/constants/images';
 import styles from 'src/views/CallNoteStepsV1/styles';
@@ -12,7 +12,6 @@ const Completed = ({
   onChange,
   callNote: { objectiveAchieved },
   activity: { objective },
-  category: { color },
   ...props,
 }) => (
   <FormStep
@@ -47,17 +46,15 @@ const Completed = ({
           />
         </TouchableWithoutFeedback>
       </View>
-      <View style={styles.objectiveContainer}>
-        <ScrollView>
-          <Section
-            color={color}
-            icon={images.ACTIVITY_OBJECTIVE}
-            title="Objective"
-          >
-            {objective}
-          </Section>
-        </ScrollView>
-      </View>
+
+      <Panel
+        scrollable
+        icon={images.ACTIVITY_OBJECTIVE}
+        title="Objective"
+        styles={Panel.types.embedded}
+      >
+        {objective}
+      </Panel>
     </View>
   </FormStep>
 );
@@ -65,7 +62,6 @@ const Completed = ({
 Completed.propTypes = {
   callNote: PropTypes.object,
   activity: PropTypes.object,
-  category: PropTypes.object,
   onChange: PropTypes.func.isRequired,
 };
 

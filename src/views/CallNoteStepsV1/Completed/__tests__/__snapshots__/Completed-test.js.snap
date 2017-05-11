@@ -99,103 +99,101 @@ exports[`Completed should render 1`] = `
       </View>
       <View
         style={
-          Object {
-            "borderColor": "#dfe5e6",
-            "borderWidth": 1,
-            "flex": 1,
-            "margin": 24,
-          }
+          Array [
+            Object {
+              "marginBottom": 29,
+            },
+            Object {
+              "borderColor": "#dfe5e6",
+              "borderWidth": 1,
+              "flex": 1,
+              "margin": 24,
+            },
+          ]
         }>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#f9fafa",
+              "borderColor": "#dfe5e6",
+              "height": 72,
+              "justifyContent": "center",
+              "marginBottom": 12,
+              "paddingLeft": 24,
+              "paddingRight": 24,
+            }
+          }>
+          <Image
+            source={1}
+            style={
+              Object {
+                "height": 40,
+                "position": "absolute",
+                "resizeMode": "contain",
+                "top": 16,
+                "width": 40,
+              }
+            } />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Array [
+                  Object {},
+                  Object {
+                    "color": "#80979a",
+                    "fontFamily": "Brandon Text_bold",
+                    "fontSize": 12,
+                    "fontWeight": "bold",
+                  },
+                ],
+              ]
+            }>
+            OBJECTIVE
+          </Text>
+        </View>
         <ScrollView>
           <View
             style={
               Object {
-                "marginBottom": 29,
+                "paddingLeft": 24,
+                "paddingRight": 24,
               }
             }>
-            <View
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
               style={
-                Object {
-                  "backgroundColor": "#f9fafa",
-                  "borderColor": "#dfe5e6",
-                  "height": 72,
-                  "justifyContent": "center",
-                  "marginBottom": 12,
-                  "paddingLeft": 24,
-                  "paddingRight": 24,
-                }
-              }>
-              <Image
-                source={1}
-                style={
+                Array [
                   Object {
-                    "height": 40,
-                    "position": "absolute",
-                    "resizeMode": "contain",
-                    "top": 16,
-                    "width": 40,
-                  }
-                } />
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                numberOfLines={1}
-                style={
-                  Array [
-                    Object {
-                      "color": "#003035",
-                      "fontFamily": "Brandon Text",
-                    },
-                    Object {
-                      "fontSize": 13,
-                      "textAlign": "center",
-                    },
-                    Array [
-                      Object {},
-                      Object {
-                        "color": "#80979a",
-                        "fontFamily": "Brandon Text_bold",
-                        "fontSize": 12,
-                        "fontWeight": "bold",
-                      },
-                    ],
-                  ]
-                }>
-                OBJECTIVE
-              </Text>
-            </View>
-            <View
-              style={
-                Object {
-                  "paddingLeft": 24,
-                  "paddingRight": 24,
-                }
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                  },
+                  Object {
+                    "fontSize": 13,
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "fontSize": 18,
+                    "marginBottom": 12,
+                    "textAlign": "left",
+                  },
+                ]
               }>
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                style={
-                  Array [
-                    Object {
-                      "color": "#003035",
-                      "fontFamily": "Brandon Text",
-                    },
-                    Object {
-                      "fontSize": 13,
-                      "textAlign": "center",
-                    },
-                    Object {
-                      "fontSize": 18,
-                      "marginBottom": 12,
-                      "textAlign": "left",
-                    },
-                  ]
-                }>
-                None
-              </Text>
-            </View>
+              None
+            </Text>
           </View>
         </ScrollView>
       </View>
