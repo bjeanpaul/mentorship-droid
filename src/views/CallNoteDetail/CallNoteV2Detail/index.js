@@ -1,11 +1,10 @@
 import moment from 'moment';
-import { fromPairs, upperFirst } from 'lodash';
+import { upperFirst } from 'lodash';
 
 import React, { PropTypes } from 'react';
 import { View, ScrollView, Image } from 'react-native';
 import { BaseView, Header, HeaderIcon, Text } from 'src/components';
 import * as constants from 'src/constants/callNotes';
-import images from 'src/constants/images';
 import styles from './styles';
 
 
