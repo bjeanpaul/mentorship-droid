@@ -59,6 +59,9 @@ import CALL_NOTES_MENTEE_BORED from 'app/assets/Bored.png';
 import CALL_NOTES_MENTEE_CONFUSED from 'app/assets/Confused.png';
 import CALL_NOTES_MENTEE_UPSET from 'app/assets/Upset.png';
 import CALL_NOTES_MENTEE_WITHDRAWN from 'app/assets/Withdrawn.png';
+import CALL_NOTES_MENTEE_EXCITED from 'app/assets/Excited.png';
+import CALL_NOTES_MENTEE_ENGAGED from 'app/assets/Engaged.png';
+
 
 import EVENT_MENTEE_HAPPY from 'app/assets/happy-journey.png';
 import EVENT_MENTEE_SAD from 'app/assets/sad-journey.png';
@@ -137,6 +140,8 @@ export default {
   CALL_NOTES_MENTEE_CONFUSED,
   CALL_NOTES_MENTEE_UPSET,
   CALL_NOTES_MENTEE_WITHDRAWN,
+  CALL_NOTES_MENTEE_EXCITED,
+  CALL_NOTES_MENTEE_ENGAGED,
 
   EVENT_MENTEE_HAPPY,
   EVENT_MENTEE_SAD,
