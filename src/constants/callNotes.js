@@ -1,6 +1,7 @@
 import { fromPairs } from 'lodash';
 import images from 'src/constants/images';
 
+export const CALL_NOTE_VERSION = '1';
 
 export const CALL_NOTE_LIST_REQUEST = 'CALL_NOTE_LIST_REQUEST';
 export const CALL_NOTE_LIST_SUCCESS = 'CALL_NOTE_LIST_SUCCESS';
