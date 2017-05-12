@@ -12,6 +12,18 @@ describe('Radio', () => {
     )).toMatchSnapshot();
   });
 
+  it('should ignore falsy items', () => {
+    const el = shallow(
+      <Radio>
+        <RadioItem value="a">A</RadioItem>
+        {void 0}
+        <RadioItem value="b">B</RadioItem>
+      </Radio>
+    );
+
+    expect(el.children().length).toEqual(2);
+  });
+
   it('should call onSelect with the new selection', () => {
     const onSelect = jest.fn();
 

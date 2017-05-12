@@ -13,6 +13,7 @@ class Radio extends Component {
   }
 
   renderItem(el) {
+    if (!el) return;
     return React.cloneElement(el, {
       key: el.props.value,
       selected: this.props.selection === el.props.value,
