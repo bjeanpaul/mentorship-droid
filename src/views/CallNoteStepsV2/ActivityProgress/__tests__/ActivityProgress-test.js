@@ -4,7 +4,7 @@ import React from 'react';
 import ActivityProgress from 'src/views/CallNoteStepsV2/ActivityProgress';
 import * as constants from 'src/constants/callNotes';
 import {
-  uidEquals, fakeActivity, fakeCallNoteV2, fakeCallNoteMetadata
+  uidEquals, fakeActivity, fakeCallNoteV2, fakeCallNoteMetadata,
 } from 'app/scripts/helpers';
 
 
@@ -35,10 +35,13 @@ describe('ActivityProgress', () => {
       activity: fakeActivity(),
       metadata: fakeCallNoteMetadata({ activityIsOverridden: true }),
     }));
+
+    expect(el.toJSON()).toMatchSnapshot();
   });
 
   it('should support rendering items for no activity', () => {
     const el = render(createComponent({ activity: void 0 }));
+    expect(el.toJSON()).toMatchSnapshot();
   });
 
   it('should disable the next button if no selection is given', () => {
