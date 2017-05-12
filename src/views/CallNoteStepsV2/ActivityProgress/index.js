@@ -1,17 +1,9 @@
-import { isUndefined, unzip } from 'lodash';
+import { isUndefined } from 'lodash';
 import React, { PropTypes } from 'react';
 import { ScrollView } from 'react-native';
 
-import { FormStep, Panel, RadioList } from 'src/components';
+import { FormStep, Panel, Radio, RadioItem } from 'src/components';
 import * as constants from 'src/constants/callNotes';
-
-
-const [ACTIVITY_ITEMS, ACTIVITY_LABELS] = unzip([
-  [constants.V2_ACTIVITY_COMPLETED, 'Yes, we completed it'],
-  [constants.V2_ACTIVITY_PARTIALLY_COMPLETED, 'We used it, but did not finish'],
-  [constants.V2_ACTIVITY_NOT_USED, 'No, we did our own thing'],
-  [constants.V2_ACTIVITY_DIFFERENT, 'We used another activity'],
-]);
 
 
 const ActivityProgress = ({
@@ -35,16 +27,27 @@ const ActivityProgress = ({
         {objective}
       </Panel>
 
-      <RadioList
+      <Radio
         uid="activityProgressItems"
-        items={ACTIVITY_LABELS}
-        onIndexChanged={
-          item => onChange({
-            activityProgress: ACTIVITY_ITEMS[item.index],
-          })
-        }
-        initialSelection={activityProgress}
-      />
+        selection={activityProgress}
+        onSelect={selection => onChange({ activityProgress: selection })}
+      >
+        <RadioItem value={constants.V2_ACTIVITY_COMPLETED}>
+          Yes, we completed it
+        </RadioItem>
+
+        <RadioItem value={constants.V2_ACTIVITY_PARTIALLY_COMPLETED}>
+          We used it, but did not finish
+        </RadioItem>
+
+        <RadioItem value={constants.V2_ACTIVITY_NOT_USED}>
+          No, we did our own thing
+        </RadioItem>
+
+        <RadioItem value={constants.V2_ACTIVITY_DIFFERENT}>
+          We used another activity
+        </RadioItem>
+      </Radio>
     </ScrollView>
   </FormStep>
 );

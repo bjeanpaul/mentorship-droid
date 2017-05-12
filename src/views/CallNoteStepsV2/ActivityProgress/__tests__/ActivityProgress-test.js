@@ -51,7 +51,7 @@ describe('ActivityProgress', () => {
     }));
 
     el.findWhere(uidEquals('activityProgressItems'))
-      .simulate('indexChanged', { index: 1 });
+      .simulate('select', constants.V2_ACTIVITY_PARTIALLY_COMPLETED);
 
     expect(onChange.mock.calls)
       .toEqual([[{
