@@ -31,6 +31,7 @@ import FormStep from './FormStep';
 import NavigationStack from './NavigationStack';
 import RichText from './RichText';
 import Panel from './Panel';
+import Radio, { RadioItem } from './Radio';
 
 
 export {
@@ -68,4 +69,6 @@ export {
   NavigationStack,
   RichText,
   Panel,
+  Radio,
+  RadioItem,
 };
