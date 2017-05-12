@@ -14,7 +14,7 @@ const [ACTIVITY_ITEMS, ACTIVITY_LABELS] = unzip([
 ]);
 
 
-const PlannedActivityProgress = ({
+const ActivityProgress = ({
   callNote: { activityProgress },
   activity: { objective },
   onChange,
@@ -22,7 +22,7 @@ const PlannedActivityProgress = ({
 }) => (
   <FormStep
     paginationDisabled={isUndefined(activityProgress)}
-    title="Activities"
+    title="ActivityProgress"
     secondaryTitle="Did you complete the scheduled activity?"
     {...props}
   >
@@ -49,11 +49,11 @@ const PlannedActivityProgress = ({
   </FormStep>
 );
 
-PlannedActivityProgress.propTypes = {
+ActivityProgress.propTypes = {
   callNote: PropTypes.object,
   activity: PropTypes.object,
   onChange: PropTypes.func.isRequired,
 };
 
 
-export default PlannedActivityProgress;
+export default ActivityProgress;

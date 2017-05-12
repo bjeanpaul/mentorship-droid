@@ -1,4 +1,4 @@
-exports[`PlannedActivityProgress should render 1`] = `
+exports[`ActivityProgress should render 1`] = `
 <View
   style={
     Array [
@@ -41,7 +41,7 @@ exports[`PlannedActivityProgress should render 1`] = `
           ],
         ]
       }>
-      Activities
+      ActivityProgress
     </Text>
     <Text
       accessible={true}

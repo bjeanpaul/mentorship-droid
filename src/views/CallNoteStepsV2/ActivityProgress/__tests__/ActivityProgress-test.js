@@ -2,13 +2,13 @@ import { noop } from 'lodash';
 import React from 'react';
 
 import { uidEquals, fakeActivity, fakeCallNoteV2 } from 'app/scripts/helpers';
-import PlannedActivityProgress from 'src/views/CallNoteStepsV2/PlannedActivityProgress';
+import ActivityProgress from 'src/views/CallNoteStepsV2/ActivityProgress';
 import * as constants from 'src/constants/callNotes';
 
 
-describe('PlannedActivityProgress', () => {
+describe('ActivityProgress', () => {
   const createComponent = (props = {}) => (
-    <PlannedActivityProgress
+    <ActivityProgress
       callNote={fakeCallNoteV2()}
       activity={fakeActivity()}
       onChange={noop}
