@@ -41,7 +41,31 @@ exports[`PlannedActivityProgress should render 1`] = `
           ],
         ]
       }>
-      
+      Activities
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+          Object {
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#9fb1b3",
+            "fontFamily": "Brandon Text",
+            "fontSize": 14,
+            "fontWeight": undefined,
+          },
+        ]
+      }>
+      Did you complete the scheduled activity?
     </Text>
   </View>
   <View
@@ -49,7 +73,352 @@ exports[`PlannedActivityProgress should render 1`] = `
       Object {
         "flex": 1,
       }
-    } />
+    }>
+    <ScrollView>
+      <View
+        style={
+          Array [
+            Object {
+              "marginBottom": 21,
+            },
+            Object {
+              "borderColor": "#dfe5e6",
+              "borderWidth": 1,
+              "marginHorizontal": 24,
+            },
+          ]
+        }>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#f9fafa",
+              "borderColor": "#dfe5e6",
+              "justifyContent": "center",
+              "marginBottom": 12,
+              "paddingBottom": 21,
+              "paddingHorizontal": 16,
+              "paddingTop": 19,
+              "paddingVertical": 16,
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Array [
+                  Object {},
+                  Object {
+                    "color": "#80979a",
+                    "fontFamily": "Brandon Text_bold",
+                    "fontSize": 12,
+                    "fontWeight": "bold",
+                  },
+                ],
+              ]
+            }>
+            SCHEDULED ACTIVITY
+          </Text>
+        </View>
+        <View>
+          <View
+            style={
+              Object {
+                "paddingLeft": 16,
+                "paddingRight": 16,
+              }
+            }>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={2}
+              style={
+                Array [
+                  Object {
+                    "color": "#003035",
+                    "fontFamily": "Brandon Text",
+                  },
+                  Object {
+                    "fontSize": 13,
+                    "textAlign": "center",
+                  },
+                  Array [
+                    Object {
+                      "fontSize": 18,
+                      "marginBottom": 12,
+                      "textAlign": "left",
+                    },
+                    Object {
+                      "color": "#80979a",
+                      "fontSize": 18,
+                    },
+                  ],
+                ]
+              }>
+              Let us make a Snowflake to Learn about Connection
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "marginBottom": 16,
+            "marginLeft": 40,
+            "marginRight": 40,
+          }
+        }>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomWidth": 1,
+              "borderColor": "#dfe5e6",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingBottom": 18,
+              "paddingTop": 18,
+            }
+          }
+          testID={undefined}>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#003035",
+                  "flex": 1,
+                  "fontSize": 18,
+                  "marginRight": 16,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            Yes, we completed it
+          </Text>
+          <Image
+            source={1}
+            style={
+              Object {
+                "height": 32,
+                "width": 32,
+              }
+            } />
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomWidth": 1,
+              "borderColor": "#dfe5e6",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingBottom": 18,
+              "paddingTop": 18,
+            }
+          }
+          testID={undefined}>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#003035",
+                  "flex": 1,
+                  "fontSize": 18,
+                  "marginRight": 16,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            We used it, but did not finish
+          </Text>
+          <Image
+            source={1}
+            style={
+              Object {
+                "height": 32,
+                "width": 32,
+              }
+            } />
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomWidth": 1,
+              "borderColor": "#dfe5e6",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingBottom": 18,
+              "paddingTop": 18,
+            }
+          }
+          testID={undefined}>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#003035",
+                  "flex": 1,
+                  "fontSize": 18,
+                  "marginRight": 16,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            No, we did our own thing
+          </Text>
+          <Image
+            source={1}
+            style={
+              Object {
+                "height": 32,
+                "width": 32,
+              }
+            } />
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomWidth": 1,
+              "borderColor": "#dfe5e6",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingBottom": 18,
+              "paddingTop": 18,
+            }
+          }
+          testID={undefined}>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#003035",
+                  "flex": 1,
+                  "fontSize": 18,
+                  "marginRight": 16,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            We used another activity
+          </Text>
+          <Image
+            source={1}
+            style={
+              Object {
+                "height": 32,
+                "width": 32,
+              }
+            } />
+        </View>
+      </View>
+    </ScrollView>
+  </View>
   <View
     style={
       Object {
