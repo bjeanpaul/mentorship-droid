@@ -1,4 +1,4 @@
-exports[`ActivityProgress should render 1`] = `
+exports[`ActivityProgress should support rendering items for an original activity 1`] = `
 <View
   style={
     Array [
@@ -41,7 +41,7 @@ exports[`ActivityProgress should render 1`] = `
           ],
         ]
       }>
-      ActivityProgress
+      Activities
     </Text>
     <Text
       accessible={true}

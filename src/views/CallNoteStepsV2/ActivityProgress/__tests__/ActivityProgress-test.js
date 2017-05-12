@@ -1,9 +1,11 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import { uidEquals, fakeActivity, fakeCallNoteV2 } from 'app/scripts/helpers';
 import ActivityProgress from 'src/views/CallNoteStepsV2/ActivityProgress';
 import * as constants from 'src/constants/callNotes';
+import {
+  uidEquals, fakeActivity, fakeCallNoteV2, fakeCallNoteMetadata
+} from 'app/scripts/helpers';
 
 
 describe('ActivityProgress', () => {
@@ -11,6 +13,7 @@ describe('ActivityProgress', () => {
     <ActivityProgress
       callNote={fakeCallNoteV2()}
       activity={fakeActivity()}
+      metadata={fakeCallNoteMetadata()}
       onChange={noop}
       onBackPress={noop}
       onNextPress={noop}
@@ -18,9 +21,24 @@ describe('ActivityProgress', () => {
     />
   );
 
-  it('should render', () => {
-    const el = render(createComponent());
+  it('should support rendering items for an original activity', () => {
+    const el = render(createComponent({
+      activity: fakeActivity(),
+      metadata: fakeCallNoteMetadata({ activityIsOverridden: false }),
+    }));
+
     expect(el.toJSON()).toMatchSnapshot();
+  });
+
+  it('should support rendering items for an overridden activity', () => {
+    const el = render(createComponent({
+      activity: fakeActivity(),
+      metadata: fakeCallNoteMetadata({ activityIsOverridden: true }),
+    }));
+  });
+
+  it('should support rendering items for no activity', () => {
+    const el = render(createComponent({ activity: void 0 }));
   });
 
   it('should disable the next button if no selection is given', () => {

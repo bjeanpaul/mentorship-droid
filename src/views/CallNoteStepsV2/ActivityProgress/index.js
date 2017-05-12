@@ -7,46 +7,65 @@ import * as constants from 'src/constants/callNotes';
 
 
 const ActivityProgress = ({
-  callNote: { activityProgress },
-  activity: { objective },
+  activity,
   onChange,
+  callNote: { activityProgress },
+  metadata: { activityIsOverridden },
   ...props,
 }) => (
   <FormStep
     paginationDisabled={isUndefined(activityProgress)}
-    title="ActivityProgress"
+    title="Activities"
     secondaryTitle="Did you complete the scheduled activity?"
     {...props}
   >
     <ScrollView>
-      <Panel
-        title="Scheduled Activity"
-        styles={[Panel.types.embedded, Panel.types.snippet]}
-        numberOfLines={2}
-      >
-        {objective}
-      </Panel>
+      {
+        activity && <Panel
+          title="Scheduled Activity"
+          styles={[Panel.types.embedded, Panel.types.snippet]}
+          numberOfLines={2}
+        >
+          {activity.objective}
+        </Panel>
+      }
 
       <Radio
         uid="activityProgressItems"
         selection={activityProgress}
         onSelect={selection => onChange({ activityProgress: selection })}
       >
-        <RadioItem value={constants.V2_ACTIVITY_COMPLETED}>
-          Yes, we completed it
-        </RadioItem>
+        {
+          !activity && <RadioItem value={constants.V2_ACTIVITY_USED}>
+            We used an activity
+          </RadioItem>
+        }
 
-        <RadioItem value={constants.V2_ACTIVITY_PARTIALLY_COMPLETED}>
-          We used it, but did not finish
-        </RadioItem>
+        {
+          activity && <RadioItem value={constants.V2_ACTIVITY_COMPLETED}>
+            Yes, we completed it
+          </RadioItem>
+        }
 
-        <RadioItem value={constants.V2_ACTIVITY_NOT_USED}>
-          No, we did our own thing
-        </RadioItem>
+        {
+          activity && <RadioItem value={constants.V2_ACTIVITY_PARTIALLY_COMPLETED}>
+            We used it, but did not finish
+          </RadioItem>
+        }
 
-        <RadioItem value={constants.V2_ACTIVITY_DIFFERENT}>
-          We used another activity
-        </RadioItem>
+        {
+          !activityIsOverridden && <RadioItem value={constants.V2_ACTIVITY_NOT_USED}>
+            No, we did our own thing
+          </RadioItem>
+        }
+
+        {
+          (!activityIsOverridden && activity) && (
+            <RadioItem value={constants.V2_ACTIVITY_DIFFERENT}>
+              We used another activity
+            </RadioItem>
+          )
+        }
       </Radio>
     </ScrollView>
   </FormStep>
@@ -55,6 +74,7 @@ const ActivityProgress = ({
 ActivityProgress.propTypes = {
   callNote: PropTypes.object,
   activity: PropTypes.object,
+  metadata: PropTypes.object,
   onChange: PropTypes.func.isRequired,
 };
 
