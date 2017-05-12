@@ -50,131 +50,97 @@ exports[`Completed should render 1`] = `
         "flex": 1,
       }
     }>
-    <View
-      style={
-        Object {
-          "flex": 3,
-        }
-      }>
+    <ScrollView>
       <View
         style={
           Object {
-            "flexDirection": "row",
-            "height": 64,
-            "justifyContent": "space-around",
+            "flex": 3,
           }
-        }>
-        <Image
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
-          accessible={true}
-          hitSlop={undefined}
-          onLayout={undefined}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          source={1}
-          style={undefined}
-          testID={undefined} />
-        <Image
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
-          accessible={true}
-          hitSlop={undefined}
-          onLayout={undefined}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          source={1}
-          style={undefined}
-          testID={undefined} />
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "marginBottom": 29,
-            },
-            Object {
-              "borderColor": "#dfe5e6",
-              "borderWidth": 1,
-              "flex": 1,
-              "margin": 24,
-            },
-          ]
         }>
         <View
           style={
             Object {
-              "backgroundColor": "#f9fafa",
-              "borderColor": "#dfe5e6",
-              "height": 72,
-              "justifyContent": "center",
-              "marginBottom": 12,
-              "paddingLeft": 24,
-              "paddingRight": 24,
+              "flexDirection": "row",
+              "height": 64,
+              "justifyContent": "space-around",
+              "marginBottom": 55,
             }
           }>
           <Image
-            source={1}
-            style={
-              Object {
-                "height": 40,
-                "position": "absolute",
-                "resizeMode": "contain",
-                "top": 16,
-                "width": 40,
-              }
-            } />
-          <Text
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
             accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "color": "#003035",
-                  "fontFamily": "Brandon Text",
-                },
-                Object {
-                  "fontSize": 13,
-                  "textAlign": "center",
-                },
-                Array [
-                  Object {},
-                  Object {
-                    "color": "#80979a",
-                    "fontFamily": "Brandon Text_bold",
-                    "fontSize": 12,
-                    "fontWeight": "bold",
-                  },
-                ],
-              ]
-            }>
-            OBJECTIVE
-          </Text>
+            hitSlop={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            source={1}
+            style={undefined}
+            testID={undefined} />
+          <Image
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hitSlop={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            source={1}
+            style={undefined}
+            testID={undefined} />
         </View>
-        <ScrollView>
+        <View
+          style={
+            Array [
+              Object {
+                "marginBottom": 21,
+              },
+              Object {
+                "borderColor": "#dfe5e6",
+                "borderWidth": 1,
+                "marginHorizontal": 24,
+              },
+            ]
+          }>
           <View
             style={
               Object {
-                "paddingLeft": 24,
-                "paddingRight": 24,
+                "backgroundColor": "#f9fafa",
+                "borderColor": "#dfe5e6",
+                "justifyContent": "center",
+                "marginBottom": 12,
+                "paddingBottom": 21,
+                "paddingHorizontal": 16,
+                "paddingTop": 19,
+                "paddingVertical": 16,
               }
             }>
+            <Image
+              source={1}
+              style={
+                Object {
+                  "height": 40,
+                  "position": "absolute",
+                  "resizeMode": "contain",
+                  "top": 16,
+                  "width": 40,
+                }
+              } />
             <Text
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
+              numberOfLines={1}
               style={
                 Array [
                   Object {
@@ -185,19 +151,63 @@ exports[`Completed should render 1`] = `
                     "fontSize": 13,
                     "textAlign": "center",
                   },
-                  Object {
-                    "fontSize": 18,
-                    "marginBottom": 12,
-                    "textAlign": "left",
-                  },
+                  Array [
+                    Object {},
+                    Object {
+                      "color": "#80979a",
+                      "fontFamily": "Brandon Text_bold",
+                      "fontSize": 12,
+                      "fontWeight": "bold",
+                    },
+                  ],
                 ]
               }>
-              None
+              OBJECTIVE
             </Text>
           </View>
-        </ScrollView>
+          <ScrollView>
+            <View
+              style={
+                Object {
+                  "paddingLeft": 16,
+                  "paddingRight": 16,
+                }
+              }>
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                numberOfLines={undefined}
+                style={
+                  Array [
+                    Object {
+                      "color": "#003035",
+                      "fontFamily": "Brandon Text",
+                    },
+                    Object {
+                      "fontSize": 13,
+                      "textAlign": "center",
+                    },
+                    Array [
+                      Object {
+                        "fontSize": 18,
+                        "marginBottom": 12,
+                        "textAlign": "left",
+                      },
+                      Object {
+                        "color": "#80979a",
+                        "fontSize": 18,
+                      },
+                    ],
+                  ]
+                }>
+                None
+              </Text>
+            </View>
+          </ScrollView>
+        </View>
       </View>
-    </View>
+    </ScrollView>
   </View>
   <View
     style={

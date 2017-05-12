@@ -66,47 +66,47 @@ const Activity = props => {
           <Action uid="topAction" {...props} />
         </View>
 
-        <Panel
+        <Section
           icon={images.ACTIVITY_OBJECTIVE}
           title="Objective"
         >
           {objective}
-        </Panel>
+        </Section>
 
-        <Panel
+        <Section
           icon={images.ACTIVITY_RATIONALE}
           title="Lesson Rationale"
         >
           {lessonRationale}
-        </Panel>
+        </Section>
 
-        <Panel
+        <Section
           icon={images.ACTIVITY_INSTRUCTIONS}
           title="Instructions"
         >
           {instructions}
-        </Panel>
+        </Section>
 
-        <Panel
+        <Section
           icon={images.ACTIVITY_PROMPTS}
           title="Tips"
         >
           {prompts}
-        </Panel>
+        </Section>
 
-        <Panel
+        <Section
           icon={images.ACTIVITY_REFLECTION_POINTS}
           title="Reflection Points"
         >
           {reflectionPoints}
-        </Panel>
+        </Section>
 
-        <Panel
+        <Section
           icon={images.ACTIVITY_SKILLS_DEVELOPED}
           title="Skills Developed"
         >
           {skillsDeveloped}
-        </Panel>
+        </Section>
 
         <View style={[styles.shortcuts, { backgroundColor: color }]}>
           <Status style={styles.statusShortcuts} {...props} />
@@ -119,6 +119,18 @@ const Activity = props => {
     </BaseView>
   );
 };
+
+
+const Section = ({
+  children,
+  ...props,
+}) => (
+  <Panel {...props}>
+    <Text style={Text.types.paragraph}>
+      {children}
+    </Text>
+  </Panel>
+);
 
 const Status = ({
   style,
@@ -199,6 +211,11 @@ Activity.propTypes = {
   category: PropTypes.object.isRequired,
   activity: PropTypes.object.isRequired,
   onBackPress: PropTypes.func.isRequired,
+};
+
+
+Section.propTypes = {
+  children: PropTypes.any,
 };
 
 

@@ -1,17 +1,21 @@
+import { mergeAll } from 'lodash/fp';
 import { StyleSheet } from 'react-native';
 
-import { FONT, FONT_WEIGHT } from 'src/constants/styles';
 import colors from 'src/constants/colors';
+import {
+  FONT, FONT_WEIGHT, DEVICE_WIDTH, DEVICE_WIDTH_MEDIUM,
+} from 'src/constants/styles';
 
 
-export default StyleSheet.create({
+export default StyleSheet.create(mergeAll([{
   panel: {
-    marginBottom: 29,
+    marginBottom: 16,
   },
   panelHeader: {
-    paddingLeft: 24,
-    paddingRight: 24,
-    height: 72,
+    paddingHorizontal: 16,
+    paddingTop: 19,
+    paddingBottom: 21,
+    paddingVertical: 16,
     backgroundColor: colors.PANEL_HEADER_BG,
     borderColor: colors.PANEL_BORDER,
     justifyContent: 'center',
@@ -28,20 +32,30 @@ export default StyleSheet.create({
     fontSize: 12,
     fontFamily: FONT.BOLD,
     fontWeight: FONT_WEIGHT.BOLD,
-    color: colors.PANEL_HEADER_TITLE,
+    color: colors.PANEL_TEXT,
   },
   panelBody: {
-    paddingLeft: 24,
-    paddingRight: 24,
+    paddingLeft: 16,
+    paddingRight: 16,
   },
-});
+  panelBodyContent: {
+    fontSize: 16,
+    color: colors.PANEL_TEXT,
+  },
+}, DEVICE_WIDTH > DEVICE_WIDTH_MEDIUM && {
+  panel: {
+    marginBottom: 21,
+  },
+  panelBodyContent: {
+    fontSize: 18,
+  },
+}]));
 
 
 export const types = {
   embedded: StyleSheet.create({
     panel: {
-      flex: 1,
-      margin: 24,
+      marginHorizontal: 24,
       borderColor: colors.PANEL_BORDER,
       borderWidth: 1,
     },

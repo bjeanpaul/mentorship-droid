@@ -3,13 +3,13 @@ exports[`Panel should embedded type 1`] = `
   style={
     Array [
       Object {
-        "marginBottom": 29,
+        "marginBottom": 21,
+        "marginTop": 8,
       },
       Object {
         "borderColor": "#dfe5e6",
         "borderWidth": 1,
-        "flex": 1,
-        "margin": 24,
+        "marginHorizontal": 24,
       },
     ]
   }>
@@ -18,11 +18,12 @@ exports[`Panel should embedded type 1`] = `
       Object {
         "backgroundColor": "#f9fafa",
         "borderColor": "#dfe5e6",
-        "height": 72,
         "justifyContent": "center",
         "marginBottom": 12,
-        "paddingLeft": 24,
-        "paddingRight": 24,
+        "paddingBottom": 21,
+        "paddingHorizontal": 16,
+        "paddingTop": 19,
+        "paddingVertical": 16,
       }
     }>
     <Text
@@ -58,14 +59,15 @@ exports[`Panel should embedded type 1`] = `
     <View
       style={
         Object {
-          "paddingLeft": 24,
-          "paddingRight": 24,
+          "paddingLeft": 16,
+          "paddingRight": 16,
         }
       }>
       <Text
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        numberOfLines={undefined}
         style={
           Array [
             Object {
@@ -76,11 +78,17 @@ exports[`Panel should embedded type 1`] = `
               "fontSize": 13,
               "textAlign": "center",
             },
-            Object {
-              "fontSize": 18,
-              "marginBottom": 12,
-              "textAlign": "left",
-            },
+            Array [
+              Object {
+                "fontSize": 18,
+                "marginBottom": 12,
+                "textAlign": "left",
+              },
+              Object {
+                "color": "#80979a",
+                "fontSize": 18,
+              },
+            ],
           ]
         }>
         Bar
@@ -94,7 +102,8 @@ exports[`Panel should render 1`] = `
 <View
   style={
     Object {
-      "marginBottom": 29,
+      "marginBottom": 21,
+      "marginTop": 8,
     }
   }>
   <View
@@ -102,11 +111,12 @@ exports[`Panel should render 1`] = `
       Object {
         "backgroundColor": "#f9fafa",
         "borderColor": "#dfe5e6",
-        "height": 72,
         "justifyContent": "center",
         "marginBottom": 12,
-        "paddingLeft": 24,
-        "paddingRight": 24,
+        "paddingBottom": 21,
+        "paddingHorizontal": 16,
+        "paddingTop": 19,
+        "paddingVertical": 16,
       }
     }>
     <Text
@@ -142,14 +152,15 @@ exports[`Panel should render 1`] = `
     <View
       style={
         Object {
-          "paddingLeft": 24,
-          "paddingRight": 24,
+          "paddingLeft": 16,
+          "paddingRight": 16,
         }
       }>
       <Text
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        numberOfLines={undefined}
         style={
           Array [
             Object {
@@ -160,11 +171,17 @@ exports[`Panel should render 1`] = `
               "fontSize": 13,
               "textAlign": "center",
             },
-            Object {
-              "fontSize": 18,
-              "marginBottom": 12,
-              "textAlign": "left",
-            },
+            Array [
+              Object {
+                "fontSize": 18,
+                "marginBottom": 12,
+                "textAlign": "left",
+              },
+              Object {
+                "color": "#80979a",
+                "fontSize": 18,
+              },
+            ],
           ]
         }>
         Bar
@@ -178,7 +195,8 @@ exports[`Panel should support an icon 1`] = `
 <View
   style={
     Object {
-      "marginBottom": 29,
+      "marginBottom": 21,
+      "marginTop": 8,
     }
   }>
   <View
@@ -186,11 +204,12 @@ exports[`Panel should support an icon 1`] = `
       Object {
         "backgroundColor": "#f9fafa",
         "borderColor": "#dfe5e6",
-        "height": 72,
         "justifyContent": "center",
         "marginBottom": 12,
-        "paddingLeft": 24,
-        "paddingRight": 24,
+        "paddingBottom": 21,
+        "paddingHorizontal": 16,
+        "paddingTop": 19,
+        "paddingVertical": 16,
       }
     }>
     <Image
@@ -237,14 +256,15 @@ exports[`Panel should support an icon 1`] = `
     <View
       style={
         Object {
-          "paddingLeft": 24,
-          "paddingRight": 24,
+          "paddingLeft": 16,
+          "paddingRight": 16,
         }
       }>
       <Text
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        numberOfLines={undefined}
         style={
           Array [
             Object {
@@ -255,11 +275,17 @@ exports[`Panel should support an icon 1`] = `
               "fontSize": 13,
               "textAlign": "center",
             },
-            Object {
-              "fontSize": 18,
-              "marginBottom": 12,
-              "textAlign": "left",
-            },
+            Array [
+              Object {
+                "fontSize": 18,
+                "marginBottom": 12,
+                "textAlign": "left",
+              },
+              Object {
+                "color": "#80979a",
+                "fontSize": 18,
+              },
+            ],
           ]
         }>
         Bar
@@ -273,7 +299,8 @@ exports[`Panel should support scrolling 1`] = `
 <View
   style={
     Object {
-      "marginBottom": 29,
+      "marginBottom": 21,
+      "marginTop": 8,
     }
   }>
   <View
@@ -281,11 +308,12 @@ exports[`Panel should support scrolling 1`] = `
       Object {
         "backgroundColor": "#f9fafa",
         "borderColor": "#dfe5e6",
-        "height": 72,
         "justifyContent": "center",
         "marginBottom": 12,
-        "paddingLeft": 24,
-        "paddingRight": 24,
+        "paddingBottom": 21,
+        "paddingHorizontal": 16,
+        "paddingTop": 19,
+        "paddingVertical": 16,
       }
     }>
     <Text
@@ -321,14 +349,15 @@ exports[`Panel should support scrolling 1`] = `
     <View
       style={
         Object {
-          "paddingLeft": 24,
-          "paddingRight": 24,
+          "paddingLeft": 16,
+          "paddingRight": 16,
         }
       }>
       <Text
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        numberOfLines={undefined}
         style={
           Array [
             Object {
@@ -339,11 +368,17 @@ exports[`Panel should support scrolling 1`] = `
               "fontSize": 13,
               "textAlign": "center",
             },
-            Object {
-              "fontSize": 18,
-              "marginBottom": 12,
-              "textAlign": "left",
-            },
+            Array [
+              Object {
+                "fontSize": 18,
+                "marginBottom": 12,
+                "textAlign": "left",
+              },
+              Object {
+                "color": "#80979a",
+                "fontSize": 18,
+              },
+            ],
           ]
         }>
         Bar

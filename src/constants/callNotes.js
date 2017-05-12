@@ -169,3 +169,8 @@ export const V2_RATING_LABELS = {
   4: 'Poor',
   5: 'Very Poor',
 };
+
+export const V2_ACTIVITY_COMPLETED = 'COMPLETED';
+export const V2_ACTIVITY_PARTIALLY_COMPLETED = 'PARTIALLY_COMPLETED';
+export const V2_ACTIVITY_NOT_USED = 'NOT_USED';
+export const V2_ACTIVITY_DIFFERENT = 'DIFFERENT';

@@ -47,8 +47,8 @@ export default {
   BUTTON_TRANSPARENT_DISABLED_TITLE: '#dfe5e6',
 
   PANEL_HEADER_BG: '#f9fafa',
-  PANEL_HEADER_TITLE: '#80979a',
   PANEL_BORDER: '#dfe5e6',
+  PANEL_TEXT: '#80979a',
 
   NAV_TAB_BAR_BORDER: '#dfe5e6',
   NAV_TAB_ACTIVE: '#f77040',

@@ -11,6 +11,7 @@ const Panel = ({
   title,
   children,
   scrollable = false,
+  numberOfLines,
   styles: customStyles,
 }) => {
   const styles = mergeStyles([baseStyles, customStyles]);
@@ -34,7 +35,12 @@ const Panel = ({
 
       <BodyContainer>
         <View style={styles.panelBody}>
-          <Text style={Text.types.paragraph}>{children}</Text>
+          <Text
+            style={[Text.types.paragraph, styles.panelBodyContent]}
+            numberOfLines={numberOfLines}
+          >
+            {children}
+          </Text>
         </View>
       </BodyContainer>
     </View>
@@ -47,6 +53,7 @@ Panel.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.any,
   styles: PropTypes.any,
+  numberOfLines: PropTypes.number,
   scrollable: PropTypes.bool,
 };
 

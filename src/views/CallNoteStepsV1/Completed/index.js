@@ -1,6 +1,6 @@
 import { isUndefined } from 'lodash';
 import React, { PropTypes } from 'react';
-import { View, Image, TouchableWithoutFeedback } from 'react-native';
+import { View, Image, ScrollView, TouchableWithoutFeedback } from 'react-native';
 
 import { Panel } from 'src/components';
 import { FormStep } from 'src/components';
@@ -19,43 +19,45 @@ const Completed = ({
     title="Did you achieve the objective?"
     {...props}
   >
-    <View style={styles.completedContainer}>
-      <View style={styles.yesNoContainer}>
-        <TouchableWithoutFeedback
-          uid="objectiveAchieved"
-          onPress={() => onChange({ objectiveAchieved: true })}
-        >
-          <Image
-            source={
-              objectiveAchieved
-                ? images.CALL_NOTES_COMPLETED_YES_SELECTED
-                : images.CALL_NOTES_COMPLETED_YES
-            }
-          />
-        </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback
-          uid="objectiveNotAchieved"
-          onPress={() => onChange({ objectiveAchieved: false })}
-        >
-          <Image
-            source={
-              objectiveAchieved === false
-                ? images.CALL_NOTES_COMPLETED_NO_SELECTED
-                : images.CALL_NOTES_COMPLETED_NO
-            }
-          />
-        </TouchableWithoutFeedback>
-      </View>
+    <ScrollView>
+      <View style={styles.completedContainer}>
+          <View style={styles.yesNoContainer}>
+            <TouchableWithoutFeedback
+              uid="objectiveAchieved"
+              onPress={() => onChange({ objectiveAchieved: true })}
+            >
+              <Image
+                source={
+                  objectiveAchieved
+                    ? images.CALL_NOTES_COMPLETED_YES_SELECTED
+                    : images.CALL_NOTES_COMPLETED_YES
+                }
+              />
+            </TouchableWithoutFeedback>
+            <TouchableWithoutFeedback
+              uid="objectiveNotAchieved"
+              onPress={() => onChange({ objectiveAchieved: false })}
+            >
+              <Image
+                source={
+                  objectiveAchieved === false
+                    ? images.CALL_NOTES_COMPLETED_NO_SELECTED
+                    : images.CALL_NOTES_COMPLETED_NO
+                }
+              />
+            </TouchableWithoutFeedback>
+          </View>
 
-      <Panel
-        scrollable
-        icon={images.ACTIVITY_OBJECTIVE}
-        title="Objective"
-        styles={Panel.types.embedded}
-      >
-        {objective}
-      </Panel>
-    </View>
+          <Panel
+            scrollable
+            icon={images.ACTIVITY_OBJECTIVE}
+            title="Objective"
+            styles={Panel.types.embedded}
+          >
+            {objective}
+          </Panel>
+      </View>
+    </ScrollView>
   </FormStep>
 );
 

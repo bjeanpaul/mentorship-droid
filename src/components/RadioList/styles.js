@@ -1,13 +1,16 @@
+import { mergeAll } from 'lodash/fp';
 import { StyleSheet } from 'react-native';
 
 import colors from 'src/constants/colors';
+import { DEVICE_WIDTH, DEVICE_WIDTH_MEDIUM } from 'src/constants/styles';
 
 
-export default StyleSheet.create({
+export default StyleSheet.create(mergeAll([{
   container: {
     flex: 1,
     marginLeft: 40,
     marginRight: 40,
+    marginBottom: 16,
   },
   row: {
     paddingTop: 18,
@@ -29,4 +32,8 @@ export default StyleSheet.create({
     height: 32,
     width: 32,
   },
-});
+}, DEVICE_WIDTH > DEVICE_WIDTH_MEDIUM && {
+  itemLabel: {
+    fontSize: 18,
+  },
+}]));
