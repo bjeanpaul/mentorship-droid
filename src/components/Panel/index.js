@@ -34,7 +34,7 @@ const Panel = ({
 
       <BodyContainer>
         <View style={styles.panelBody}>
-            <Text style={Text.types.paragraph}>{children}</Text>
+          <Text style={Text.types.paragraph}>{children}</Text>
         </View>
       </BodyContainer>
     </View>
@@ -46,7 +46,7 @@ Panel.propTypes = {
   icon: PropTypes.any,
   title: PropTypes.string.isRequired,
   children: PropTypes.any,
-  styles: PropTypes.object,
+  styles: PropTypes.any,
   scrollable: PropTypes.bool,
 };
 
