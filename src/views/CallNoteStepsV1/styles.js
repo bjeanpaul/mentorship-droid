@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 
 import colors from 'src/constants/colors';
 import {
-  DEVICE_WIDTH, DEVICE_HEIGHT, DEVICE_HEIGHT_SMALL, DEVICE_HEIGHT_MEDIUM
+  DEVICE_WIDTH, DEVICE_HEIGHT, DEVICE_HEIGHT_SMALL, DEVICE_HEIGHT_MEDIUM,
 } from 'src/constants/styles';
 
 const SMALL_CIRCLE_SIZE = 66;

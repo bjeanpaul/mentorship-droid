@@ -242,7 +242,7 @@ describe('helpers', () => {
   });
 
   it('should skip falsy stylesheets', () => {
-    expect(mergeStyles([{a: 21 }, null, undefined, { b: 22 }]))
+    expect(mergeStyles([{ a: 21 }, null, void 0, { b: 22 }]))
       .toEqual({
         a: 21,
         b: 22,
