@@ -1,7 +1,7 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import { fakeCallNoteV2 } from 'app/scripts/helpers';
+import { uidEquals, fakeCallNoteV2 } from 'app/scripts/helpers';
 import Rating from 'src/views/CallNoteStepsV2/Rating';
 
 
@@ -19,5 +19,16 @@ describe('Rating', () => {
   it('should render', () => {
     const el = render(createComponent());
     expect(el.toJSON()).toMatchSnapshot();
+  });
+
+  it('should call onChange() when the selection changes', () => {
+    const onChange = jest.fn();
+    const el = shallow(createComponent({ onChange }));
+
+    el.findWhere(uidEquals('ratingItems'))
+      .simulate('select', '3');
+
+    expect(onChange.mock.calls)
+      .toEqual([[{ rating: '3' }]]);
   });
 });
