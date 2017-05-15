@@ -51,4 +51,32 @@ describe('ObjectiveAchieved', () => {
     expect(onChange.mock.calls)
       .toEqual([[{ objectiveAchieved: '3' }]]);
   });
+
+  it('should call onBackPress() when back is pressed', () => {
+    const onBackPress = jest.fn();
+
+    const el = shallow(createComponent({
+      onBackPress,
+    }));
+
+    el.find('FormStep')
+      .simulate('backPress');
+
+    expect(onBackPress.mock.calls)
+      .toEqual([[]]);
+  });
+
+  it('should call onNextPress() when next is pressed', () => {
+    const onNextPress = jest.fn();
+
+    const el = shallow(createComponent({
+      onNextPress,
+    }));
+
+    el.find('FormStep')
+      .simulate('nextPress');
+
+    expect(onNextPress.mock.calls)
+      .toEqual([[]]);
+  });
 });
