@@ -1,0 +1,385 @@
+exports[`Panel should embedded type 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "marginBottom": 21,
+      },
+      Object {
+        "borderColor": "#dfe5e6",
+        "borderWidth": 1,
+        "marginHorizontal": 24,
+      },
+    ]
+  }>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#f9fafa",
+        "borderColor": "#dfe5e6",
+        "justifyContent": "center",
+        "marginBottom": 12,
+        "paddingBottom": 21,
+        "paddingHorizontal": 16,
+        "paddingTop": 19,
+        "paddingVertical": 16,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+          Object {
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Array [
+            Object {},
+            Object {
+              "color": "#80979a",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 12,
+              "fontWeight": "bold",
+            },
+          ],
+        ]
+      }>
+      FOO
+    </Text>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "paddingLeft": 16,
+          "paddingRight": 16,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={undefined}
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+            Object {
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Array [
+              Object {
+                "fontSize": 18,
+                "marginBottom": 12,
+                "textAlign": "left",
+              },
+              Object {
+                "color": "#80979a",
+                "fontSize": 18,
+              },
+            ],
+          ]
+        }>
+        Bar
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Panel should render 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 21,
+    }
+  }>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#f9fafa",
+        "borderColor": "#dfe5e6",
+        "justifyContent": "center",
+        "marginBottom": 12,
+        "paddingBottom": 21,
+        "paddingHorizontal": 16,
+        "paddingTop": 19,
+        "paddingVertical": 16,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+          Object {
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Array [
+            Object {},
+            Object {
+              "color": "#80979a",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 12,
+              "fontWeight": "bold",
+            },
+          ],
+        ]
+      }>
+      FOO
+    </Text>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "paddingLeft": 16,
+          "paddingRight": 16,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={undefined}
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+            Object {
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Array [
+              Object {
+                "fontSize": 18,
+                "marginBottom": 12,
+                "textAlign": "left",
+              },
+              Object {
+                "color": "#80979a",
+                "fontSize": 18,
+              },
+            ],
+          ]
+        }>
+        Bar
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Panel should support an icon 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 21,
+    }
+  }>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#f9fafa",
+        "borderColor": "#dfe5e6",
+        "justifyContent": "center",
+        "marginBottom": 12,
+        "paddingBottom": 21,
+        "paddingHorizontal": 16,
+        "paddingTop": 19,
+        "paddingVertical": 16,
+      }
+    }>
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 40,
+          "position": "absolute",
+          "resizeMode": "contain",
+          "top": 16,
+          "width": 40,
+        }
+      } />
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+          Object {
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Array [
+            Object {},
+            Object {
+              "color": "#80979a",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 12,
+              "fontWeight": "bold",
+            },
+          ],
+        ]
+      }>
+      FOO
+    </Text>
+  </View>
+  <View>
+    <View
+      style={
+        Object {
+          "paddingLeft": 16,
+          "paddingRight": 16,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={undefined}
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+            Object {
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Array [
+              Object {
+                "fontSize": 18,
+                "marginBottom": 12,
+                "textAlign": "left",
+              },
+              Object {
+                "color": "#80979a",
+                "fontSize": 18,
+              },
+            ],
+          ]
+        }>
+        Bar
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Panel should support scrolling 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 21,
+    }
+  }>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#f9fafa",
+        "borderColor": "#dfe5e6",
+        "justifyContent": "center",
+        "marginBottom": 12,
+        "paddingBottom": 21,
+        "paddingHorizontal": 16,
+        "paddingTop": 19,
+        "paddingVertical": 16,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      numberOfLines={1}
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+          Object {
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Array [
+            Object {},
+            Object {
+              "color": "#80979a",
+              "fontFamily": "Brandon Text_bold",
+              "fontSize": 12,
+              "fontWeight": "bold",
+            },
+          ],
+        ]
+      }>
+      FOO
+    </Text>
+  </View>
+  <ScrollView>
+    <View
+      style={
+        Object {
+          "paddingLeft": 16,
+          "paddingRight": 16,
+        }
+      }>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        numberOfLines={undefined}
+        style={
+          Array [
+            Object {
+              "color": "#003035",
+              "fontFamily": "Brandon Text",
+            },
+            Object {
+              "fontSize": 13,
+              "textAlign": "center",
+            },
+            Array [
+              Object {
+                "fontSize": 18,
+                "marginBottom": 12,
+                "textAlign": "left",
+              },
+              Object {
+                "color": "#80979a",
+                "fontSize": 18,
+              },
+            ],
+          ]
+        }>
+        Bar
+      </Text>
+    </View>
+  </ScrollView>
+</View>
+`;

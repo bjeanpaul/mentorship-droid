@@ -12,7 +12,7 @@ export default StyleSheet.create(mergeAll([{
     marginRight: 40,
     marginBottom: 16,
   },
-  row: {
+  item: {
     paddingTop: 18,
     paddingBottom: 18,
     borderBottomWidth: 1,

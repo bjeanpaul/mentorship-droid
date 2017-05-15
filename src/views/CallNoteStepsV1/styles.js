@@ -1,15 +1,17 @@
-import { merge } from 'lodash';
+import { mergeAll } from 'lodash/fp';
 import { StyleSheet } from 'react-native';
 
-import { DEVICE_WIDTH, DEVICE_HEIGHT, DEVICE_HEIGHT_SMALL } from 'src/constants/styles';
 import colors from 'src/constants/colors';
+import {
+  DEVICE_WIDTH, DEVICE_HEIGHT, DEVICE_HEIGHT_SMALL, DEVICE_HEIGHT_MEDIUM,
+} from 'src/constants/styles';
 
 const SMALL_CIRCLE_SIZE = 66;
 const LARGE_CIRCLE_SIZE = 77;
 
-// TODO class names that suck less
+// TODO better class names
 
-export default StyleSheet.create(merge({
+export default StyleSheet.create(mergeAll([{
   list: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -48,12 +50,7 @@ export default StyleSheet.create(merge({
     flexDirection: 'row',
     justifyContent: 'space-around',
     height: 64,
-  },
-  objectiveContainer: {
-    flex: 1,
-    margin: 24,
-    borderColor: colors.CALL_NOTE_OBJECTIVE_CONTAINER,
-    borderWidth: 1,
+    marginBottom: 36,
   },
   ratingContainer: {
     flex: 2,
@@ -68,6 +65,10 @@ export default StyleSheet.create(merge({
     marginRight: 24,
   },
 }, DEVICE_HEIGHT > DEVICE_HEIGHT_SMALL && {
+  yesNoContainer: {
+    marginBottom: 42,
+  },
+}, DEVICE_HEIGHT > DEVICE_HEIGHT_MEDIUM && {
   image: {
     width: LARGE_CIRCLE_SIZE,
     height: LARGE_CIRCLE_SIZE,
@@ -78,4 +79,7 @@ export default StyleSheet.create(merge({
     height: LARGE_CIRCLE_SIZE,
     borderRadius: LARGE_CIRCLE_SIZE,
   },
-}));
+  yesNoContainer: {
+    marginBottom: 55,
+  },
+}]));

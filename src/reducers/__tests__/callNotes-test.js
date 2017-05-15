@@ -31,7 +31,7 @@ describe('reducers/callNotes', () => {
       const { metadata } = reduce(void 0, actions.openCreateCallNote(23));
 
       expect(metadata)
-        .toEqual({ actionType: ADD_IMMEDIATE });
+        .toEqual(jasmine.objectContaining({ actionType: ADD_IMMEDIATE }));
     });
   });
 
@@ -46,7 +46,7 @@ describe('reducers/callNotes', () => {
     it('should set metadata to indicate that the call note is being created retroactively', () => {
       const { metadata } = reduce(void 0, actions.openRetroactivelyCreateCallNote(23));
       expect(metadata)
-        .toEqual({ actionType: ADD_RETROACTIVELY });
+        .toEqual(jasmine.objectContaining({ actionType: ADD_RETROACTIVELY }));
     });
   });
 

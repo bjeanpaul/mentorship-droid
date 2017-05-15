@@ -3,6 +3,7 @@ exports[`RadioList should render props correctly 1`] = `
   style={
     Object {
       "flex": 1,
+      "marginBottom": 16,
       "marginLeft": 40,
       "marginRight": 40,
     }
@@ -49,7 +50,7 @@ exports[`RadioList should render props correctly 1`] = `
           Object {
             "color": "#003035",
             "flex": 1,
-            "fontSize": 14,
+            "fontSize": 18,
             "marginRight": 16,
             "textAlign": "left",
           },
@@ -108,7 +109,7 @@ exports[`RadioList should render props correctly 1`] = `
           Object {
             "color": "#003035",
             "flex": 1,
-            "fontSize": 14,
+            "fontSize": 18,
             "marginRight": 16,
             "textAlign": "left",
           },
@@ -167,7 +168,7 @@ exports[`RadioList should render props correctly 1`] = `
           Object {
             "color": "#003035",
             "flex": 1,
-            "fontSize": 14,
+            "fontSize": 18,
             "marginRight": 16,
             "textAlign": "left",
           },
@@ -192,6 +193,7 @@ exports[`RadioList should select an initial index 1`] = `
   style={
     Object {
       "flex": 1,
+      "marginBottom": 16,
       "marginLeft": 40,
       "marginRight": 40,
     }
@@ -238,7 +240,7 @@ exports[`RadioList should select an initial index 1`] = `
           Object {
             "color": "#003035",
             "flex": 1,
-            "fontSize": 14,
+            "fontSize": 18,
             "marginRight": 16,
             "textAlign": "left",
           },
@@ -297,7 +299,7 @@ exports[`RadioList should select an initial index 1`] = `
           Object {
             "color": "#003035",
             "flex": 1,
-            "fontSize": 14,
+            "fontSize": 18,
             "marginRight": 16,
             "textAlign": "left",
           },
@@ -356,7 +358,7 @@ exports[`RadioList should select an initial index 1`] = `
           Object {
             "color": "#003035",
             "flex": 1,
-            "fontSize": 14,
+            "fontSize": 18,
             "marginRight": 16,
             "textAlign": "left",
           },

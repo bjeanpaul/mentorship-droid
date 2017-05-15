@@ -7,6 +7,7 @@ import {
   fakeActivity,
   fakeCategory,
   fakeCallNote,
+  fakeCallNoteMetadata,
 } from 'app/scripts/helpers';
 
 
@@ -124,6 +125,21 @@ describe('CallNoteStepsContainer', () => {
 
       expect(mapStateToProps(state, { callId: 1 }).steps)
         .toEqual(steps);
+    });
+
+    it('should provide metadata', () => {
+      const metadata = fakeCallNoteMetadata();
+      const state = fakeState({
+        callNote: { metadata },
+        entities: {
+          calls: {
+            1: fakeCall(),
+          },
+        },
+      });
+
+      expect(mapStateToProps(state, { callId: 1 }).metadata)
+        .toEqual(metadata);
     });
   });
 });

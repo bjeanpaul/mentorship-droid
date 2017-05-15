@@ -18,4 +18,8 @@ export const FONT_WEIGHT = {
 const dims = Dimensions.get('window');
 export const DEVICE_WIDTH = dims.width;
 export const DEVICE_HEIGHT = dims.height;
+
 export const DEVICE_HEIGHT_SMALL = 480;
+export const DEVICE_HEIGHT_MEDIUM = 580;
+
+export const DEVICE_WIDTH_MEDIUM = 320;

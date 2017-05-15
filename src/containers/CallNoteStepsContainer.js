@@ -26,7 +26,7 @@ export const propsToActions = {
 export const mapStateToProps = (state, { callId }) => {
   const call = getCall(state, callId);
   const { callNote: callNoteState } = state;
-  const { steps } = callNoteState;
+  const { metadata, steps } = callNoteState;
   let { callNote } = callNoteState;
 
   callNote = {
@@ -46,6 +46,7 @@ export const mapStateToProps = (state, { callId }) => {
     callNote,
     activity,
     category,
+    metadata,
     steps,
   };
 };
