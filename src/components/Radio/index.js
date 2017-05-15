@@ -37,7 +37,7 @@ Radio.propTypes = {
 };
 
 Radio.defaultProps = {
-  onSelection: noop,
+  onSelect: noop,
 };
 
 
