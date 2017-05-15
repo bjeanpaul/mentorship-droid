@@ -1,7 +1,7 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import { uidEquals, fakeCallNoteV2 } from 'app/scripts/helpers';
+import { uidEquals, fakeCallNoteV2, fakeCallNoteMetadata } from 'app/scripts/helpers';
 import CallQuality from 'src/views/CallNoteStepsV2/CallQuality';
 
 
@@ -11,7 +11,7 @@ describe('CallQuality', () => {
       callNote={fakeCallNoteV2()}
       onChange={noop}
       onBackPress={noop}
-      onNextPress={noop}
+      onDonePress={noop}
       {...props}
     />
   );
@@ -66,17 +66,24 @@ describe('CallQuality', () => {
       .toEqual([[]]);
   });
 
-  it('should call onNextPress() when next is pressed', () => {
-    const onNextPress = jest.fn();
+  it('should call onDonePress() when done is pressed', () => {
+    const onDonePress = jest.fn();
+    const callNote = fakeCallNoteV2();
+    const metadata = fakeCallNoteMetadata();
 
     const el = shallow(createComponent({
-      onNextPress,
+      onDonePress,
+      callNote,
+      metadata,
     }));
 
     el.find('FormStep')
-      .simulate('nextPress');
+      .simulate('donePress');
 
-    expect(onNextPress.mock.calls)
-      .toEqual([[]]);
+    expect(onDonePress.mock.calls)
+      .toEqual([[{
+        callNote,
+        metadata,
+      }]]);
   });
 });

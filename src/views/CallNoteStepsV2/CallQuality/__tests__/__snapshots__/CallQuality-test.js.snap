@@ -506,7 +506,7 @@ exports[`CallQuality should render 1`] = `
                 ],
               ]
             }>
-            NEXT
+            DONE
           </Text>
         </View>
       </TouchableNativeFeedback>
