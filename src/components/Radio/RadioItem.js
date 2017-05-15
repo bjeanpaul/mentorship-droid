@@ -1,56 +1,43 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 import { View, Image, TouchableWithoutFeedback } from 'react-native';
-import { Text } from 'src/components';
+
+import Text from 'src/components/Text';
+import { defineRadioItem } from 'src/components/defineRadio';
 import images from 'src/constants/images';
 import styles from './styles';
 
 
-class RadioItem extends Component {
-  constructor(...args) {
-    super(...args);
-    this.onSelect = this.onSelect.bind(this);
-  }
+const RadioItem = defineRadioItem(({
+  children,
+  selected,
+  onSelect,
+  iconSelected = images.YES_SELECTED,
+  iconUnselected = images.YES,
+}) => (
+  <TouchableWithoutFeedback onPress={onSelect}>
+    <View style={styles.item}>
+      <Text style={styles.itemLabel}>
+        {children}
+      </Text>
 
-  onSelect() {
-    this.props.onSelect(this.props.value);
-  }
+      <Image
+        style={styles.itemImage}
+        source={
+          selected
+            ? iconSelected
+            : iconUnselected
+        }
+      />
+    </View>
+  </TouchableWithoutFeedback>
+));
 
-  render() {
-    return (
-      <TouchableWithoutFeedback onPress={this.onSelect}>
-        <View style={styles.item}>
-          <Text style={styles.itemLabel}>
-            {this.props.children}
-          </Text>
-
-          <Image
-            style={styles.itemImage}
-            source={
-              this.props.selected
-                ? this.props.iconSelected
-                : this.props.iconUnselected
-            }
-          />
-        </View>
-      </TouchableWithoutFeedback>
-    );
-  }
-}
-
-
-RadioItem.propTypes = {
+RadioItem.component.propTypes = {
   selected: PropTypes.bool,
-  value: PropTypes.any.isRequired,
-  onSelect: PropTypes.func,
   children: PropTypes.any,
+  onSelect: PropTypes.func,
   iconSelected: PropTypes.any,
   iconUnselected: PropTypes.any,
-};
-
-
-RadioItem.defaultProps = {
-  iconSelected: images.YES_SELECTED,
-  iconUnselected: images.YES,
 };
 
 

@@ -33,6 +33,8 @@ import RichText from './RichText';
 import Panel from './Panel';
 import Radio, { RadioItem } from './Radio';
 
+import defineRadio, { defineRadioItem } from './defineRadio';
+
 
 export {
   BaseView,
@@ -71,4 +73,7 @@ export {
   Panel,
   Radio,
   RadioItem,
+
+  defineRadio,
+  defineRadioItem,
 };
