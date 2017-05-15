@@ -156,6 +156,14 @@ export const V2_RATING_LABELS = {
   5: 'Very Poor',
 };
 
+export const V2_CALL_QUALITY_LABELS = {
+  1: 'Excellent',
+  2: 'Ok',
+  3: "Couldn't hear",
+  4: 'Call dropped',
+  5: 'Delays',
+};
+
 export const V2_ACTIVITY_USED = 'USED';
 export const V2_ACTIVITY_COMPLETED = 'COMPLETED';
 export const V2_ACTIVITY_PARTIALLY_COMPLETED = 'PARTIALLY_COMPLETED';
