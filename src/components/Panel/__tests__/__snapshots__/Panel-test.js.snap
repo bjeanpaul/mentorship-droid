@@ -4,7 +4,6 @@ exports[`Panel should embedded type 1`] = `
     Array [
       Object {
         "marginBottom": 21,
-        "marginTop": 8,
       },
       Object {
         "borderColor": "#dfe5e6",
@@ -103,7 +102,6 @@ exports[`Panel should render 1`] = `
   style={
     Object {
       "marginBottom": 21,
-      "marginTop": 8,
     }
   }>
   <View
@@ -196,7 +194,6 @@ exports[`Panel should support an icon 1`] = `
   style={
     Object {
       "marginBottom": 21,
-      "marginTop": 8,
     }
   }>
   <View
@@ -300,7 +297,6 @@ exports[`Panel should support scrolling 1`] = `
   style={
     Object {
       "marginBottom": 21,
-      "marginTop": 8,
     }
   }>
   <View
