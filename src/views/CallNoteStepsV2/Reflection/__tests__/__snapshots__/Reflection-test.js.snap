@@ -41,7 +41,7 @@ exports[`Reflection should render 1`] = `
           ],
         ]
       }>
-      
+      Please share your reflections of the discussion
     </Text>
   </View>
   <View
@@ -49,7 +49,52 @@ exports[`Reflection should render 1`] = `
       Object {
         "flex": 1,
       }
-    } />
+    }>
+    <ScrollView>
+      <View
+        onLayout={undefined}>
+        <View
+          style={
+            Array [
+              Object {
+                "borderBottomWidth": 1,
+                "borderColor": "#dfe5e6",
+                "marginBottom": 27,
+                "marginLeft": 24,
+                "marginRight": 24,
+              },
+              false,
+            ]
+          }>
+          <TextInput
+            multiline={true}
+            onBlur={[Function]}
+            onChangeText={[Function]}
+            onContentSizeChange={[Function]}
+            onFocus={[Function]}
+            placeholder="Type your answer here"
+            placeholderTextColor="#c0cbcc"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                  "fontSize": 18,
+                  "marginBottom": 8,
+                  "padding": 0,
+                },
+                Object {
+                  "height": 0,
+                },
+              ]
+            }
+            uid="input"
+            underlineColorAndroid="transparent"
+            value="Walk in Silence" />
+        </View>
+      </View>
+    </ScrollView>
+  </View>
   <View
     style={
       Object {
