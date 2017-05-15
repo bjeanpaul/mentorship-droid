@@ -21,6 +21,26 @@ describe('ObjectiveAchieved', () => {
     expect(el.toJSON()).toMatchSnapshot();
   });
 
+  it('should disable the next button if no selection is given', () => {
+    let el;
+
+    el = shallow(createComponent({
+      callNote: fakeCallNoteV2({
+        objectiveAchieved: void 0,
+      }),
+    }));
+
+    expect(el.find('FormStep').prop('paginationDisabled')).toBe(true);
+
+    el = shallow(createComponent({
+      callNote: fakeCallNoteV2({
+        objectiveAchieved: '3',
+      }),
+    }));
+
+    expect(el.find('FormStep').prop('paginationDisabled')).toBe(false);
+  });
+
   it('should call onChange() when the selection changes', () => {
     const onChange = jest.fn();
     const el = shallow(createComponent({ onChange }));

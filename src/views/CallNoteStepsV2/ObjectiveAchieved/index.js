@@ -1,4 +1,4 @@
-import { map } from 'lodash';
+import { isUndefined, map } from 'lodash';
 import React, { PropTypes } from 'react';
 import { ScrollView } from 'react-native';
 
@@ -12,7 +12,7 @@ const ObjectiveAchieved = ({
   ...props,
 }) => (
   <FormStep
-    paginationDisabled={false}
+    paginationDisabled={isUndefined(objectiveAchieved)}
     title="To what extent did you achieve your objective?"
     {...props}
   >

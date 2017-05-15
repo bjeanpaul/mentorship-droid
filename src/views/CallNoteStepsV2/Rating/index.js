@@ -1,4 +1,4 @@
-import { map } from 'lodash';
+import { isUndefined, map } from 'lodash';
 import React, { PropTypes } from 'react';
 import { ScrollView } from 'react-native';
 
@@ -12,7 +12,7 @@ const Rating = ({
   ...props,
 }) => (
   <FormStep
-    paginationDisabled={false}
+    paginationDisabled={isUndefined(rating)}
     title="How would you rate this activity?"
     {...props}
   >
