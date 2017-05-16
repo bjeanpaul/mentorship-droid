@@ -24,16 +24,16 @@ describe('ActivityProgress', () => {
   it('should support rendering items for an original activity', () => {
     const el = render(createComponent({
       activity: fakeActivity(),
-      metadata: fakeCallNoteMetadata({ activityIsOverridden: false }),
+      metadata: fakeCallNoteMetadata({ overrideActivityId: void 0 }),
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
   });
 
-  it('should support rendering items for an overridden activity', () => {
+  it('should support rendering items for an updated activity', () => {
     const el = render(createComponent({
       activity: fakeActivity(),
-      metadata: fakeCallNoteMetadata({ activityIsOverridden: true }),
+      metadata: fakeCallNoteMetadata({ overrideActivityId: 23 }),
     }));
 
     expect(el.toJSON()).toMatchSnapshot();

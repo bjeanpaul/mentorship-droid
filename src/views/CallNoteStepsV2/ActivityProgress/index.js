@@ -10,7 +10,7 @@ const ActivityProgress = ({
   activity,
   onChange,
   callNote: { activityProgress },
-  metadata: { activityIsOverridden },
+  metadata: { overrideActivityId },
   ...props,
 }) => (
   <FormStep
@@ -54,13 +54,13 @@ const ActivityProgress = ({
         }
 
         {
-          !activityIsOverridden && <RadioItem value={constants.V2_ACTIVITY_NOT_USED}>
+          !overrideActivityId && <RadioItem value={constants.V2_ACTIVITY_NOT_USED}>
             No, we did our own thing
           </RadioItem>
         }
 
         {
-          (!activityIsOverridden && activity) && (
+          (!overrideActivityId && activity) && (
             <RadioItem value={constants.V2_ACTIVITY_DIFFERENT}>
               We used another activity
             </RadioItem>

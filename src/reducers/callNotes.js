@@ -9,7 +9,7 @@ import {
 
 export const createInitialState = () => ({
   callNote: { version: constants.CALL_NOTE_VERSION },
-  metadata: { activityIsOverridden: false },
+  metadata: { overrideActivityId: void 0 },
   steps: null,
 });
 
