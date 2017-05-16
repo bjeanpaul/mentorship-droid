@@ -1,5 +1,5 @@
 import { apiAction, staticAction } from 'src/actionHelpers';
-import * as constants from 'src/constants/calls';
+import * as constants from 'src/constants/forgotPassword';
 import * as api from 'src/api';
 
 const { ApiAuthorizationError } = api;

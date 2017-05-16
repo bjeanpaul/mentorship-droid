@@ -1,6 +1,6 @@
 jest.mock('src/api/forgotPassword');
 
-import * as constants from 'src/constants/messages';
+import * as constants from 'src/constants/forgotPassword';
 import * as api from 'src/api';
 import { testApiAction, fakeForgotPasswordReset } from 'app/scripts/helpers';
 
