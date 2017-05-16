@@ -6,9 +6,21 @@ import { FormStep, Panel, Radio, RadioItem } from 'src/components';
 import * as constants from 'src/constants/callNotes';
 
 
+const getSecondaryTitle = (activity, overrideActivityId) => {
+  if (activity && !overrideActivityId) {
+    return 'Did you complete the scheduled activity?';
+  } else if (activity && overrideActivityId) {
+    return 'Did you complete the activity?';
+  } else {
+    return 'Did you complete an activity?';
+  }
+};
+
+
 const ActivityProgress = ({
   activity,
   onChange,
+  onActivityDifferentSelect,
   callNote: { activityProgress },
   metadata: { overrideActivityId },
   ...props,
@@ -16,13 +28,13 @@ const ActivityProgress = ({
   <FormStep
     paginationDisabled={isUndefined(activityProgress)}
     title="Activities"
-    secondaryTitle="Did you complete the scheduled activity?"
+    secondaryTitle={getSecondaryTitle(activity, overrideActivityId)}
     {...props}
   >
     <ScrollView>
       {
         activity && <Panel
-          title="Scheduled Activity"
+          title={activity.title}
           styles={[Panel.types.embedded, Panel.types.snippet]}
           numberOfLines={2}
         >
@@ -59,13 +71,9 @@ const ActivityProgress = ({
           </RadioItem>
         }
 
-        {
-          (!overrideActivityId && activity) && (
-            <RadioItem value={constants.V2_ACTIVITY_DIFFERENT}>
-              We used another activity
-            </RadioItem>
-          )
-        }
+        <RadioItem value={constants.V2_ACTIVITY_DIFFERENT}>
+          We used another activity
+        </RadioItem>
       </Radio>
     </ScrollView>
   </FormStep>

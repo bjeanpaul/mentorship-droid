@@ -127,7 +127,7 @@ exports[`ActivityProgress should support rendering items for an original activit
                 ],
               ]
             }>
-            SCHEDULED ACTIVITY
+            ACTIVITY 3
           </Text>
         </View>
         <View>
@@ -576,466 +576,6 @@ exports[`ActivityProgress should support rendering items for an original activit
 </View>
 `;
 
-exports[`ActivityProgress should support rendering items for an overridden activity 1`] = `
-<View
-  style={
-    Array [
-      Object {
-        "backgroundColor": "#fff",
-        "flex": 1,
-      },
-      undefined,
-    ]
-  }>
-  <View
-    style={
-      Object {
-        "margin": 25,
-      }
-    }>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-          },
-          Object {
-            "fontSize": 13,
-            "textAlign": "center",
-          },
-          Array [
-            Object {
-              "fontFamily": "Brandon Text_medium",
-              "fontSize": 20,
-              "fontWeight": "400",
-            },
-            Object {
-              "margin": 13,
-            },
-          ],
-        ]
-      }>
-      Activities
-    </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Array [
-          Object {
-            "color": "#003035",
-            "fontFamily": "Brandon Text",
-          },
-          Object {
-            "fontSize": 13,
-            "textAlign": "center",
-          },
-          Object {
-            "color": "#9fb1b3",
-            "fontFamily": "Brandon Text",
-            "fontSize": 14,
-            "fontWeight": undefined,
-          },
-        ]
-      }>
-      Did you complete the scheduled activity?
-    </Text>
-  </View>
-  <View
-    style={
-      Object {
-        "flex": 1,
-      }
-    }>
-    <ScrollView>
-      <View
-        style={
-          Array [
-            Object {
-              "marginBottom": 21,
-            },
-            Object {
-              "borderColor": "#dfe5e6",
-              "borderWidth": 1,
-              "marginHorizontal": 24,
-            },
-          ]
-        }>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#f9fafa",
-              "borderColor": "#dfe5e6",
-              "justifyContent": "center",
-              "marginBottom": 12,
-              "paddingBottom": 21,
-              "paddingHorizontal": 16,
-              "paddingTop": 19,
-              "paddingVertical": 16,
-            }
-          }>
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            numberOfLines={1}
-            style={
-              Array [
-                Object {
-                  "color": "#003035",
-                  "fontFamily": "Brandon Text",
-                },
-                Object {
-                  "fontSize": 13,
-                  "textAlign": "center",
-                },
-                Array [
-                  Object {},
-                  Object {
-                    "color": "#80979a",
-                    "fontFamily": "Brandon Text_bold",
-                    "fontSize": 12,
-                    "fontWeight": "bold",
-                  },
-                ],
-              ]
-            }>
-            SCHEDULED ACTIVITY
-          </Text>
-        </View>
-        <View>
-          <View
-            style={
-              Object {
-                "paddingLeft": 16,
-                "paddingRight": 16,
-              }
-            }>
-            <Text
-              accessible={true}
-              allowFontScaling={true}
-              ellipsizeMode="tail"
-              numberOfLines={2}
-              style={
-                Array [
-                  Object {
-                    "color": "#003035",
-                    "fontFamily": "Brandon Text",
-                  },
-                  Object {
-                    "fontSize": 13,
-                    "textAlign": "center",
-                  },
-                  Array [
-                    Object {
-                      "fontSize": 18,
-                      "marginBottom": 12,
-                      "textAlign": "left",
-                    },
-                    Object {
-                      "color": "#80979a",
-                      "fontSize": 18,
-                    },
-                  ],
-                ]
-              }>
-              Let us make a Snowflake to Learn about Connection
-            </Text>
-          </View>
-        </View>
-      </View>
-      <View
-        style={
-          Object {
-            "flex": 1,
-            "marginBottom": 16,
-            "marginLeft": 40,
-            "marginRight": 40,
-          }
-        }>
-        <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
-          accessible={true}
-          hitSlop={undefined}
-          onLayout={undefined}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#dfe5e6",
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "paddingBottom": 18,
-              "paddingTop": 18,
-            }
-          }
-          testID={undefined}>
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "#003035",
-                  "fontFamily": "Brandon Text",
-                },
-                Object {
-                  "fontSize": 13,
-                  "textAlign": "center",
-                },
-                Object {
-                  "color": "#003035",
-                  "flex": 1,
-                  "fontSize": 18,
-                  "marginRight": 16,
-                  "textAlign": "left",
-                },
-              ]
-            }>
-            Yes, we completed it
-          </Text>
-          <Image
-            source={1}
-            style={
-              Object {
-                "height": 32,
-                "width": 32,
-              }
-            } />
-        </View>
-        <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
-          accessible={true}
-          hitSlop={undefined}
-          onLayout={undefined}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "borderBottomWidth": 1,
-              "borderColor": "#dfe5e6",
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "paddingBottom": 18,
-              "paddingTop": 18,
-            }
-          }
-          testID={undefined}>
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "#003035",
-                  "fontFamily": "Brandon Text",
-                },
-                Object {
-                  "fontSize": 13,
-                  "textAlign": "center",
-                },
-                Object {
-                  "color": "#003035",
-                  "flex": 1,
-                  "fontSize": 18,
-                  "marginRight": 16,
-                  "textAlign": "left",
-                },
-              ]
-            }>
-            We used it, but did not finish
-          </Text>
-          <Image
-            source={1}
-            style={
-              Object {
-                "height": 32,
-                "width": 32,
-              }
-            } />
-        </View>
-      </View>
-    </ScrollView>
-  </View>
-  <View
-    style={
-      Object {
-        "justifyContent": "flex-end",
-      }
-    }>
-    <View
-      style={
-        Object {
-          "flexDirection": "row",
-          "margin": 16,
-        }
-      }>
-      <TouchableNativeFeedback
-        onPress={[Function]}>
-        <View
-          style={
-            Array [
-              Object {
-                "alignItems": "center",
-                "borderRadius": 5,
-                "justifyContent": "center",
-                "marginHorizontal": 16,
-                "paddingBottom": 17,
-                "paddingTop": 15,
-              },
-              Object {
-                "backgroundColor": "transparent",
-                "borderColor": "#f77040",
-                "borderWidth": 1,
-              },
-              Array [
-                Object {
-                  "marginLeft": 0,
-                  "marginRight": 0,
-                },
-                Object {
-                  "marginRight": 16,
-                  "width": 58,
-                },
-              ],
-              undefined,
-              undefined,
-            ]
-          }>
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "#003035",
-                  "fontFamily": "Brandon Text",
-                },
-                Object {
-                  "fontSize": 13,
-                  "textAlign": "center",
-                },
-                Array [
-                  Object {
-                    "fontFamily": "Brandon Text_bold",
-                    "fontSize": 13,
-                    "fontWeight": "bold",
-                    "letterSpacing": 1,
-                  },
-                  Object {
-                    "color": "#f77040",
-                  },
-                  undefined,
-                  undefined,
-                ],
-              ]
-            }>
-            <Image
-              source={1}
-              style={
-                Array [
-                  Object {
-                    "height": 24,
-                    "width": 24,
-                  },
-                  Object {},
-                ]
-              } />
-          </Text>
-        </View>
-      </TouchableNativeFeedback>
-      <TouchableNativeFeedback
-        onPress={[Function]}>
-        <View
-          style={
-            Array [
-              Object {
-                "alignItems": "center",
-                "borderRadius": 5,
-                "justifyContent": "center",
-                "marginHorizontal": 16,
-                "paddingBottom": 17,
-                "paddingTop": 15,
-              },
-              Object {
-                "backgroundColor": "transparent",
-                "borderColor": "#f77040",
-                "borderWidth": 1,
-              },
-              Array [
-                Object {
-                  "marginLeft": 0,
-                  "marginRight": 0,
-                },
-                Object {
-                  "flex": 1,
-                },
-              ],
-              undefined,
-              false,
-            ]
-          }>
-          <Text
-            accessible={true}
-            allowFontScaling={true}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "#003035",
-                  "fontFamily": "Brandon Text",
-                },
-                Object {
-                  "fontSize": 13,
-                  "textAlign": "center",
-                },
-                Array [
-                  Object {
-                    "fontFamily": "Brandon Text_bold",
-                    "fontSize": 13,
-                    "fontWeight": "bold",
-                    "letterSpacing": 1,
-                  },
-                  Object {
-                    "color": "#f77040",
-                  },
-                  undefined,
-                  false,
-                ],
-              ]
-            }>
-            NEXT
-          </Text>
-        </View>
-      </TouchableNativeFeedback>
-    </View>
-  </View>
-</View>
-`;
-
 exports[`ActivityProgress should support rendering items for an updated activity 1`] = `
 <View
   style={
@@ -1103,7 +643,7 @@ exports[`ActivityProgress should support rendering items for an updated activity
           },
         ]
       }>
-      Did you complete the scheduled activity?
+      Did you complete the activity?
     </Text>
   </View>
   <View
@@ -1165,7 +705,7 @@ exports[`ActivityProgress should support rendering items for an updated activity
                 ],
               ]
             }>
-            SCHEDULED ACTIVITY
+            ACTIVITY 3
           </Text>
         </View>
         <View>
@@ -1326,6 +866,65 @@ exports[`ActivityProgress should support rendering items for an updated activity
               ]
             }>
             We used it, but did not finish
+          </Text>
+          <Image
+            source={1}
+            style={
+              Object {
+                "height": 32,
+                "width": 32,
+              }
+            } />
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomWidth": 1,
+              "borderColor": "#dfe5e6",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingBottom": 18,
+              "paddingTop": 18,
+            }
+          }
+          testID={undefined}>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#003035",
+                  "flex": 1,
+                  "fontSize": 18,
+                  "marginRight": 16,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            We used another activity
           </Text>
           <Image
             source={1}
@@ -1563,7 +1162,7 @@ exports[`ActivityProgress should support rendering items for no activity 1`] = `
           },
         ]
       }>
-      Did you complete the scheduled activity?
+      Did you complete an activity?
     </Text>
   </View>
   <View
@@ -1690,6 +1289,65 @@ exports[`ActivityProgress should support rendering items for no activity 1`] = `
               ]
             }>
             No, we did our own thing
+          </Text>
+          <Image
+            source={1}
+            style={
+              Object {
+                "height": 32,
+                "width": 32,
+              }
+            } />
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomWidth": 1,
+              "borderColor": "#dfe5e6",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingBottom": 18,
+              "paddingTop": 18,
+            }
+          }
+          testID={undefined}>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#003035",
+                  "flex": 1,
+                  "fontSize": 18,
+                  "marginRight": 16,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            We used another activity
           </Text>
           <Image
             source={1}
