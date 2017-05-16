@@ -133,8 +133,8 @@ export const V2_STEPS_WITH_ACTIVITY = [
   V2_STEP_CALL_RESULT,
   V2_STEP_ACTIVITY_PROGRESS,
   V2_STEP_OBJECTIVE_ACHIEVED,
-  V2_STEP_REFLECTION,
   V2_STEP_RATING,
+  V2_STEP_REFLECTION,
   V2_STEP_MOOD,
   V2_STEP_CALL_QUALITY,
 ];
@@ -165,6 +165,14 @@ export const V2_RATING_LABELS = {
   3: 'Average',
   4: 'Poor',
   5: 'Very Poor',
+};
+
+export const V2_CALL_QUALITY_LABELS = {
+  1: 'Excellent',
+  2: 'Ok',
+  3: "Couldn't hear",
+  4: 'Call dropped',
+  5: 'Delays',
 };
 
 export const V2_ACTIVITY_USED = 'USED';
