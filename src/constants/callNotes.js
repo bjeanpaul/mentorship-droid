@@ -107,6 +107,17 @@ export const V2_EVENT_MOOD_IMAGES = fromPairs([
   [V2_MOOD_ENGAGED, images.EVENT_MENTEE_ENGAGED],
 ]);
 
+export const V2_MOOD_LABELS = fromPairs([
+  [V2_MOOD_HAPPY, 'Happy'],
+  [V2_MOOD_SAD, 'Sad'],
+  [V2_MOOD_BORED, 'Bored'],
+  [V2_MOOD_CONFUSED, 'Confused'],
+  [V2_MOOD_UPSET, 'Upset'],
+  [V2_MOOD_WITHDRAWN, 'Withdrawn'],
+  [V2_MOOD_EXCITED, 'Excited'],
+  [V2_MOOD_ENGAGED, 'Engaged'],
+]);
+
 export const V2_STEP_BACK = 'V2_STEP_BACK';
 export const V2_STEP_NEXT = 'V2_STEP_NEXT';
 
