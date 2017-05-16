@@ -1,5 +1,4 @@
 import React from 'react';
-import { View } from 'react-native';
 
 import Dummy from 'app/scripts/Dummy';
 import { defineRadio, defineRadioItem } from 'src/components';
