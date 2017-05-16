@@ -15,9 +15,7 @@ export const createInitialState = () => ({
 
 
 export const createSteps = () => {
-  // TODO return null for v1
-  // TODO logic for different steps based on with/without activity
-  const steps = createStack(constants.V2_STEPS_WITH_ACTIVITY.map(unary(createRoute)));
+  const steps = createStack(constants.V2_STEPS.map(unary(createRoute)));
   return jumpToIndex(steps, 0);
 };
 
