@@ -7,6 +7,7 @@ import { testApiAction, fakeForgotPasswordReset } from 'app/scripts/helpers';
 import {
   emailForgotPasswordToken,
   resetForgotPassword,
+  showForgotPasswordEmail,
 } from 'src/actions/forgotPassword';
 
 const { ApiAuthorizationError } = api;
@@ -40,6 +41,14 @@ describe('forgotPassword/actions', () => {
           [ApiAuthorizationError, constants.FORGOT_PASSWORD_RESET_BAD_TOKEN],
         ],
       })(fakeForgotPasswordReset());
+    });
+  });
+
+  describe('showForgotPasswordEmail', () => {
+    it('should create action to show forgot password email screen', () => {
+      expect(showForgotPasswordEmail()).toEqual({
+        type: constants.SHOW_FORGOT_PASSWORD_EMAIL,
+      });
     });
   });
 });
