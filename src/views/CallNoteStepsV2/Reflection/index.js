@@ -1,18 +1,28 @@
 import React, { PropTypes } from 'react';
+import { ScrollView } from 'react-native';
 
-import { FormStep } from 'src/components';
+import { FormStep, MultiLineTextInput } from 'src/components';
 
 
 const Reflection = ({
-  callNote,
   onChange,
+  callNote: { reflection = '' },
   ...props,
-}) => callNote && onChange && (
+}) => (
   <FormStep
-    paginationDisabled={false}
-    title=""
+    paginationDisabled={reflection.length === 0}
+    title="Please share your reflections of the discussion"
     {...props}
-  />
+  >
+    <ScrollView>
+      <MultiLineTextInput
+        uid="reflectionInput"
+        value={reflection}
+        placeholder="Type your answer here"
+        onChangeText={text => onChange({ reflection: text })}
+      />
+    </ScrollView>
+  </FormStep>
 );
 
 Reflection.propTypes = {

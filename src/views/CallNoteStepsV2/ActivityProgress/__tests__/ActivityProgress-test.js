@@ -64,7 +64,7 @@ describe('ActivityProgress', () => {
     expect(el.find('FormStep').prop('paginationDisabled')).toBe(false);
   });
 
-  it('should call onChange() when the rating changes', () => {
+  it('should call onChange() when the selection changes', () => {
     const onChange = jest.fn();
 
     const el = shallow(createComponent({
