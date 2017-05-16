@@ -7,6 +7,7 @@ import {
   changeCallNote,
   v2StepNext,
   v2StepBack,
+  overrideCallNoteActivity,
 } from 'src/actions/callNotes';
 
 import { dismissScreen } from 'src/actions/navigation';
@@ -20,6 +21,7 @@ export const propsToActions = {
   onNextPress: v2StepNext,
   onBackPress: v2StepBack,
   onDismissPress: dismissScreen,
+  onActivityDifferentSelect: overrideCallNoteActivity,
 };
 
 
@@ -34,11 +36,12 @@ export const mapStateToProps = (state, { callId }) => {
     ...callNote,
   };
 
+  const activityId = metadata.overrideActivityId || call.activity;
   let activity;
   let category;
 
-  if (call.activity) {
-    activity = getActivity(state, call.activity);
+  if (activityId) {
+    activity = getActivity(state, activityId);
     category = activity && getCategory(state, activity.category);
   }
 

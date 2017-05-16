@@ -106,4 +106,15 @@ describe('reducers/callNotes', () => {
         }));
     });
   });
+
+  describe('CALL_NOTE_ACTIVITY_CHOOSE', () => {
+    it('should update the override activity id with the id in the payload', () => {
+      const { metadata } = reduce(void 0, actions.chooseCallNoteActivity(23));
+
+      expect(metadata)
+        .toEqual(jasmine.objectContaining({
+          overrideActivityId: 23,
+        }));
+    });
+  });
 });

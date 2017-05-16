@@ -193,6 +193,7 @@ export const fakeState = (overrides = {}) => merge({}, {
   },
   callNote: {
     callNote: {},
+    metadata: fakeCallNoteMetadata(),
   },
   entities: {
     profiles: {

@@ -106,4 +106,52 @@ describe('src/reducers/navigation/callNotes', () => {
         .toEqual(push(state, route));
     });
   });
+
+  describe('CALL_NOTE_ACTIVITY_OVERRIDE', () => {
+    it('should push on the category list route', () => {
+      const state = createStack();
+      const route = createRoute(routes.ROUTE_CALL_NOTE_CATEGORY_LIST);
+
+      expect(reduce(state, callNotes.overrideCallNoteActivity()))
+        .toEqual(push(state, route));
+    });
+  });
+
+  describe('CALL_NOTE_CATEGORY_CHOOSE', () => {
+    it('should push on the activity list route', () => {
+      const state = createStack();
+      const route = createRoute(routes.ROUTE_CALL_NOTE_ACTIVITY_LIST, {
+        categoryId: 23,
+      });
+
+      expect(reduce(state, callNotes.chooseCallNoteCategory(23)))
+        .toEqual(push(state, route));
+    });
+  });
+
+  describe('CALL_NOTE_ACIVITY_CHOOSE', () => {
+    it('should push on the activity list route', () => {
+      const state = createStack();
+
+      const route = createRoute(routes.ROUTE_CALL_NOTE_ACTIVITY_LIST, {
+        categoryId: 23,
+      });
+
+      expect(reduce(state, callNotes.chooseCallNoteCategory(23)))
+        .toEqual(push(state, route));
+    });
+  });
+
+  describe('CALL_NOTE_ACTIVITY_CHOOSE', () => {
+    it('should remove the category and activity list routes', () => {
+      const state = createStack([
+        createRoute('A'),
+        createRoute(routes.ROUTE_CALL_NOTE_CATEGORY_LIST),
+        createRoute(routes.ROUTE_CALL_NOTE_ACTIVITY_LIST),
+      ]);
+
+      expect(reduce(state, callNotes.chooseCallNoteActivity(21)))
+        .toEqual(createStack([createRoute('A')]));
+    });
+  });
 });

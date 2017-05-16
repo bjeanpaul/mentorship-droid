@@ -22,6 +22,7 @@ class CallNoteStepsV2 extends Component {
         onBackPress={this.props.onBackPress}
         onNextPress={this.props.onNextPress}
         onDonePress={this.props.onDonePress}
+        onActivityDifferentSelect={this.props.onActivityDifferentSelect}
       />
     );
   }
@@ -46,6 +47,7 @@ CallNoteStepsV2.propTypes = {
   onBackPress: PropTypes.func.isRequired,
   onNextPress: PropTypes.func.isRequired,
   onDonePress: PropTypes.func.isRequired,
+  onActivityDifferentSelect: PropTypes.func.isRequired,
   routes: PropTypes.object,
 };
 

@@ -71,7 +71,11 @@ const ActivityProgress = ({
           </RadioItem>
         }
 
-        <RadioItem value={constants.V2_ACTIVITY_DIFFERENT}>
+        <RadioItem
+          uid="activityDifferentItem"
+          value={constants.V2_ACTIVITY_DIFFERENT}
+          onSelect={onActivityDifferentSelect}
+        >
           We used another activity
         </RadioItem>
       </Radio>
@@ -84,6 +88,7 @@ ActivityProgress.propTypes = {
   activity: PropTypes.object,
   metadata: PropTypes.object,
   onChange: PropTypes.func.isRequired,
+  onActivityDifferentSelect: PropTypes.func,
 };
 
 

@@ -63,6 +63,37 @@ describe('CallNoteStepsContainer', () => {
       expect(mapStateToProps(state, { callId: 2 }).activity).toEqual(activity);
     });
 
+    it('should provide the overridden activity if relevant', () => {
+      const call = fakeCall({
+        id: 2,
+        activity: 23,
+      });
+
+      const activity = fakeActivity({ id: 23 });
+      const callNote = fakeCallNote();
+
+      const state = fakeState({
+        callNote: {
+          callNote,
+          metadata: fakeCallNoteMetadata({
+            overrideActivityId: 23,
+          }),
+        },
+        entities: {
+          calls: {
+            2: call,
+          },
+          activities: {
+            21: fakeActivity({ id: 21 }),
+            23: activity,
+          },
+        },
+      });
+
+      expect(mapStateToProps(state, { callId: 2 }).activity)
+        .toEqual(activity);
+    });
+
     it('should provide the category if relevant', () => {
       const call1 = fakeCall({
         id: 1,

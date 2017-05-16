@@ -30,7 +30,7 @@ describe('ActivityProgress', () => {
     expect(el.toJSON()).toMatchSnapshot();
   });
 
-  it('should support rendering items for an updated activity', () => {
+  it('should support rendering items for an overridden activity', () => {
     const el = render(createComponent({
       activity: fakeActivity(),
       metadata: fakeCallNoteMetadata({ overrideActivityId: 23 }),
@@ -103,6 +103,20 @@ describe('ActivityProgress', () => {
       .simulate('nextPress');
 
     expect(onNextPress.mock.calls)
+      .toEqual([[]]);
+  });
+
+  it('should call onActivityDifferentSelect when the relevant option is selected', () => {
+    const onActivityDifferentSelect = jest.fn();
+
+    const el = shallow(createComponent({
+      onActivityDifferentSelect,
+    }));
+
+    el.findWhere(uidEquals('activityDifferentItem'))
+      .simulate('select');
+
+    expect(onActivityDifferentSelect.mock.calls)
       .toEqual([[]]);
   });
 });
