@@ -9,12 +9,10 @@ import {
 
 export const createInitialState = () => ({
   callNote: {
+    activity: void 0,
     version: constants.CALL_NOTE_VERSION,
   },
-  metadata: {
-    overrideActivityId: void 0,
-  },
-  steps: null,
+  steps: void 0,
 });
 
 
@@ -72,8 +70,9 @@ export default (state = createInitialState(), action) => {
 
     case constants.CALL_NOTE_ACTIVITY_CHOOSE:
       return merge(state, {
-        metadata: {
-          overrideActivityId: action.payload.activityId,
+        callNote: {
+          activityProgress: null,
+          activity: action.payload.activityId,
         },
       });
 

@@ -3,9 +3,7 @@ import React from 'react';
 
 import ActivityProgress from 'src/views/CallNoteStepsV2/ActivityProgress';
 import * as constants from 'src/constants/callNotes';
-import {
-  uidEquals, fakeActivity, fakeCallNoteV2, fakeCallNoteMetadata,
-} from 'app/scripts/helpers';
+import { uidEquals, fakeActivity, fakeCallNoteV2 } from 'app/scripts/helpers';
 
 
 describe('ActivityProgress', () => {
@@ -13,7 +11,6 @@ describe('ActivityProgress', () => {
     <ActivityProgress
       callNote={fakeCallNoteV2()}
       activity={fakeActivity()}
-      metadata={fakeCallNoteMetadata()}
       onChange={noop}
       onBackPress={noop}
       onNextPress={noop}
@@ -24,7 +21,9 @@ describe('ActivityProgress', () => {
   it('should support rendering items for an original activity', () => {
     const el = render(createComponent({
       activity: fakeActivity(),
-      metadata: fakeCallNoteMetadata({ overrideActivityId: void 0 }),
+      callNote: fakeCallNoteV2({
+        activity: void 0,
+      }),
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
@@ -33,7 +32,7 @@ describe('ActivityProgress', () => {
   it('should support rendering items for an overridden activity', () => {
     const el = render(createComponent({
       activity: fakeActivity(),
-      metadata: fakeCallNoteMetadata({ overrideActivityId: 23 }),
+      callNote: fakeCallNoteV2({ activity: 23 }),
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
@@ -106,17 +105,17 @@ describe('ActivityProgress', () => {
       .toEqual([[]]);
   });
 
-  it('should call onActivityDifferentSelect when the relevant option is selected', () => {
-    const onActivityDifferentSelect = jest.fn();
+  it('should call onDifferentActivitySelect when the relevant option is selected', () => {
+    const onDifferentActivitySelect = jest.fn();
 
     const el = shallow(createComponent({
-      onActivityDifferentSelect,
+      onDifferentActivitySelect,
     }));
 
-    el.findWhere(uidEquals('activityDifferentItem'))
+    el.findWhere(uidEquals('differentActivityItem'))
       .simulate('select');
 
-    expect(onActivityDifferentSelect.mock.calls)
+    expect(onDifferentActivitySelect.mock.calls)
       .toEqual([[]]);
   });
 });

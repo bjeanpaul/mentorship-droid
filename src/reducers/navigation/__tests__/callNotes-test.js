@@ -107,12 +107,12 @@ describe('src/reducers/navigation/callNotes', () => {
     });
   });
 
-  describe('CALL_NOTE_ACTIVITY_OVERRIDE', () => {
+  describe('CALL_NOTE_ACTIVITY_CHANGE', () => {
     it('should push on the category list route', () => {
       const state = createStack();
       const route = createRoute(routes.ROUTE_CALL_NOTE_CATEGORY_LIST);
 
-      expect(reduce(state, callNotes.overrideCallNoteActivity()))
+      expect(reduce(state, callNotes.changeCallNoteActivity()))
         .toEqual(push(state, route));
     });
   });

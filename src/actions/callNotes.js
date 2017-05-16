@@ -80,8 +80,8 @@ export const v2StepBack = () => ({
 });
 
 
-export const overrideCallNoteActivity = () => ({
-  type: constants.CALL_NOTE_ACTIVITY_OVERRIDE,
+export const changeCallNoteActivity = () => ({
+  type: constants.CALL_NOTE_ACTIVITY_CHANGE,
 });
 
 

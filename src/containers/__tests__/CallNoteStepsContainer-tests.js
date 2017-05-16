@@ -70,14 +70,11 @@ describe('CallNoteStepsContainer', () => {
       });
 
       const activity = fakeActivity({ id: 23 });
-      const callNote = fakeCallNote();
+      const callNote = fakeCallNote({ activity: 23 });
 
       const state = fakeState({
         callNote: {
           callNote,
-          metadata: fakeCallNoteMetadata({
-            overrideActivityId: 23,
-          }),
         },
         entities: {
           calls: {

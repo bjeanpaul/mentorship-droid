@@ -41,7 +41,7 @@ export default (state, action) => {
     case callNotes.CALL_NOTES_VIEW_ALL:
       return push(state, createRoute(routes.ROUTE_CALL_NOTE_LIST));
 
-    case callNotes.CALL_NOTE_ACTIVITY_OVERRIDE:
+    case callNotes.CALL_NOTE_ACTIVITY_CHANGE:
       return push(state, createRoute(routes.ROUTE_CALL_NOTE_CATEGORY_LIST));
 
     case callNotes.CALL_NOTE_CATEGORY_CHOOSE: {

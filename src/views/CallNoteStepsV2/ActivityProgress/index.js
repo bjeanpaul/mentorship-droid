@@ -6,10 +6,10 @@ import { FormStep, Panel, Radio, RadioItem } from 'src/components';
 import * as constants from 'src/constants/callNotes';
 
 
-const getSecondaryTitle = (activity, overrideActivityId) => {
-  if (activity && !overrideActivityId) {
+const getSecondaryTitle = (callNote, activity) => {
+  if (activity && !callNote.activity) {
     return 'Did you complete the scheduled activity?';
-  } else if (activity && overrideActivityId) {
+  } else if (activity && callNote.activity) {
     return 'Did you complete the activity?';
   } else {
     return 'Did you complete an activity?';
@@ -20,15 +20,14 @@ const getSecondaryTitle = (activity, overrideActivityId) => {
 const ActivityProgress = ({
   activity,
   onChange,
-  onActivityDifferentSelect,
-  callNote: { activityProgress },
-  metadata: { overrideActivityId },
+  callNote,
+  onDifferentActivitySelect,
   ...props,
 }) => (
   <FormStep
-    paginationDisabled={isUndefined(activityProgress)}
+    paginationDisabled={!callNote.activityProgress}
     title="Activities"
-    secondaryTitle={getSecondaryTitle(activity, overrideActivityId)}
+    secondaryTitle={getSecondaryTitle(callNote, activity)}
     {...props}
   >
     <ScrollView>
@@ -44,7 +43,7 @@ const ActivityProgress = ({
 
       <Radio
         uid="activityProgressItems"
-        selection={activityProgress}
+        selection={callNote.activityProgress}
         onSelect={selection => onChange({ activityProgress: selection })}
       >
         {
@@ -66,15 +65,15 @@ const ActivityProgress = ({
         }
 
         {
-          !overrideActivityId && <RadioItem value={constants.V2_ACTIVITY_NOT_USED}>
+          !callNote.activity && <RadioItem value={constants.V2_ACTIVITY_NOT_USED}>
             No, we did our own thing
           </RadioItem>
         }
 
         <RadioItem
-          uid="activityDifferentItem"
+          uid="differentActivityItem"
           value={constants.V2_ACTIVITY_DIFFERENT}
-          onSelect={onActivityDifferentSelect}
+          onSelect={onDifferentActivitySelect}
         >
           We used another activity
         </RadioItem>
@@ -88,7 +87,7 @@ ActivityProgress.propTypes = {
   activity: PropTypes.object,
   metadata: PropTypes.object,
   onChange: PropTypes.func.isRequired,
-  onActivityDifferentSelect: PropTypes.func,
+  onDifferentActivitySelect: PropTypes.func,
 };
 
 
