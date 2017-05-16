@@ -8,7 +8,6 @@ import { FormStep, Radio, RadioItem } from 'src/components';
 
 const CallQuality = ({
   callNote,
-  metadata,
   onChange,
   onDonePress,
   ...props,
@@ -17,10 +16,7 @@ const CallQuality = ({
     last
     paginationDisabled={isUndefined(callNote.callQuality)}
     title="Rate the call quality"
-    onDonePress={() => onDonePress({
-      callNote,
-      metadata,
-    })}
+    onDonePress={() => onDonePress(callNote)}
     {...props}
   >
     <ScrollView>
@@ -40,7 +36,6 @@ const CallQuality = ({
 
 CallQuality.propTypes = {
   callNote: PropTypes.object,
-  metadata: PropTypes.object,
   onChange: PropTypes.func.isRequired,
   onDonePress: PropTypes.func.isRequired,
 };
