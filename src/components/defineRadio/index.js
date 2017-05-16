@@ -25,7 +25,7 @@ const defineRadio = RadioComponent => class Radio extends Component {
     return React.cloneElement(el, {
       key: el.props.value,
       selected: this.props.selection === el.props.value,
-      onSelect: this.props.onSelect,
+      onSelect: el.props.onSelect || this.props.onSelect,
     });
   }
 
