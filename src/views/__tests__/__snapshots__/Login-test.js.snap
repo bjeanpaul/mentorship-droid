@@ -275,6 +275,34 @@ exports[`Login should draw 1`] = `
         </View>
       </TouchableNativeFeedback>
     </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
+          },
+          Object {
+            "fontSize": 13,
+            "textAlign": "center",
+          },
+          Array [
+            Object {
+              "color": "#f77040",
+              "fontSize": 14,
+            },
+            Object {
+              "paddingTop": 20,
+            },
+          ],
+        ]
+      }>
+      Forgot Your Password?
+    </Text>
   </View>
 </View>
 `;
