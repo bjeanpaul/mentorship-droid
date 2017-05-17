@@ -2,7 +2,7 @@ import reduce, { createInitialState } from 'src/reducers/callNotes';
 import * as actions from 'src/actions/callNotes';
 import { fakeState } from 'app/scripts/helpers';
 import { logout } from 'src/actions/auth';
-import { ADD_RETROACTIVELY, ADD_IMMEDIATE } from 'src/constants/callNotes';
+import * as constants from 'src/constants/callNotes';
 import { createStack, createRoute, jumpToIndex } from 'src/navigationHelpers';
 
 
@@ -31,7 +31,7 @@ describe('reducers/callNotes', () => {
       const { metadata } = reduce(void 0, actions.openCreateCallNote(23));
 
       expect(metadata)
-        .toEqual(jasmine.objectContaining({ actionType: ADD_IMMEDIATE }));
+        .toEqual(jasmine.objectContaining({ actionType: constants.ADD_IMMEDIATE }));
     });
   });
 
@@ -46,7 +46,7 @@ describe('reducers/callNotes', () => {
     it('should set metadata to indicate that the call note is being created retroactively', () => {
       const { metadata } = reduce(void 0, actions.openRetroactivelyCreateCallNote(23));
       expect(metadata)
-        .toEqual(jasmine.objectContaining({ actionType: ADD_RETROACTIVELY }));
+        .toEqual(jasmine.objectContaining({ actionType: constants.ADD_RETROACTIVELY }));
     });
   });
 
@@ -107,7 +107,36 @@ describe('reducers/callNotes', () => {
     });
   });
 
+  describe('CALL_NOTE_ACTIVITY_REMOVE', () => {
+    it('should set the activity id to null', () => {
+      const { callNote } = reduce(void 0, actions.removeCallNoteActivity());
+
+      expect(callNote)
+        .toEqual(jasmine.objectContaining({
+          activity: null,
+        }));
+    });
+
+    it('should change the activity progress to "activity not used"', () => {
+      const { callNote } = reduce(void 0, actions.removeCallNoteActivity());
+
+      expect(callNote)
+        .toEqual(jasmine.objectContaining({
+          activityProgress: constants.V2_ACTIVITY_NOT_USED,
+        }));
+    });
+  });
+
   describe('CALL_NOTE_ACTIVITY_CHOOSE', () => {
+    it('should reset the activity progress', () => {
+      const { callNote } = reduce(void 0, actions.chooseCallNoteActivity(23));
+
+      expect(callNote)
+        .toEqual(jasmine.objectContaining({
+          activityProgress: void 0,
+        }));
+    });
+
     it('should update the activity id with the id in the payload', () => {
       const { callNote } = reduce(void 0, actions.chooseCallNoteActivity(23));
 

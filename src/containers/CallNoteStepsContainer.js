@@ -21,7 +21,7 @@ export const propsToActions = {
   onNextPress: v2StepNext,
   onBackPress: v2StepBack,
   onDismissPress: dismissScreen,
-  onActivityChange: changeCallNoteActivity,
+  onActivityChangeSelect: changeCallNoteActivity,
 };
 
 

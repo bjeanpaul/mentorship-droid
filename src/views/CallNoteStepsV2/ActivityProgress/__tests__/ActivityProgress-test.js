@@ -107,32 +107,32 @@ describe('ActivityProgress', () => {
       .toEqual([[]]);
   });
 
-  it('should call onActivityChange when "activity used" is selected', () => {
-    const onActivityChange = jest.fn();
+  it('should call onActivityChangeSelect when "activity used" is selected', () => {
+    const onActivityChangeSelect = jest.fn();
 
     const el = shallow(createComponent({
       activity: void 0,
-      onActivityChange,
+      onActivityChangeSelect,
     }));
 
     el.findWhere(propEquals('value', constants.V2_ACTIVITY_USED))
       .simulate('select');
 
-    expect(onActivityChange.mock.calls)
+    expect(onActivityChangeSelect.mock.calls)
       .toEqual([[]]);
   });
 
-  it('should call onActivityChange when "activity different" is selected', () => {
-    const onActivityChange = jest.fn();
+  it('should call onActivityChangeSelect when "activity different" is selected', () => {
+    const onActivityChangeSelect = jest.fn();
 
     const el = shallow(createComponent({
-      onActivityChange,
+      onActivityChangeSelect,
     }));
 
     el.findWhere(propEquals('value', constants.V2_ACTIVITY_DIFFERENT))
       .simulate('select');
 
-    expect(onActivityChange.mock.calls)
+    expect(onActivityChangeSelect.mock.calls)
       .toEqual([[]]);
   });
 });

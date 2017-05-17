@@ -85,6 +85,11 @@ export const changeCallNoteActivity = () => ({
 });
 
 
+export const removeCallNoteActivity = () => ({
+  type: constants.CALL_NOTE_ACTIVITY_REMOVE,
+});
+
+
 export const chooseCallNoteCategory = categoryId => ({
   type: constants.CALL_NOTE_CATEGORY_CHOOSE,
   payload: { categoryId },

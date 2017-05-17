@@ -20,7 +20,8 @@ const ActivityProgress = ({
   activity,
   onChange,
   callNote,
-  onActivityChange,
+  onActivityChangeSelect,
+  onActivityNotUsedSelect,
   ...props,
 }) => (
   <FormStep
@@ -48,7 +49,7 @@ const ActivityProgress = ({
         {
           !activity && <RadioItem
             value={constants.V2_ACTIVITY_USED}
-            onSelect={onActivityChange}
+            onSelect={onActivityChangeSelect}
           >
             We used an activity
           </RadioItem>
@@ -67,7 +68,10 @@ const ActivityProgress = ({
         }
 
         {
-          !callNote.activity && <RadioItem value={constants.V2_ACTIVITY_NOT_USED}>
+          !callNote.activity && <RadioItem
+            value={constants.V2_ACTIVITY_NOT_USED}
+            onSelect={onActivityNotUsedSelect}
+          >
             No, we did our own thing
           </RadioItem>
         }
@@ -75,7 +79,7 @@ const ActivityProgress = ({
         {
           activity && <RadioItem
             value={constants.V2_ACTIVITY_DIFFERENT}
-            onSelect={onActivityChange}
+            onSelect={onActivityChangeSelect}
           >
             We used another activity
           </RadioItem>
@@ -90,7 +94,8 @@ ActivityProgress.propTypes = {
   activity: PropTypes.object,
   metadata: PropTypes.object,
   onChange: PropTypes.func.isRequired,
-  onActivityChange: PropTypes.func,
+  onActivityChangeSelect: PropTypes.func,
+  onActivityNotUsedSelect: PropTypes.func,
 };
 
 
