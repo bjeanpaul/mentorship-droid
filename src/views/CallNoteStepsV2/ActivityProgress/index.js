@@ -5,10 +5,10 @@ import { FormStep, Panel, Radio, RadioItem } from 'src/components';
 import * as constants from 'src/constants/callNotes';
 
 
-const getSecondaryTitle = (callNote, activity) => {
-  if (activity && !callNote.activity) {
+const getSecondaryTitle = (activity, metadata) => {
+  if (activity && !metadata.activityHasChanged) {
     return 'Did you complete the scheduled activity?';
-  } else if (activity && callNote.activity) {
+  } else if (activity && metadata.activityHasChanged) {
     return 'Did you complete the activity?';
   } else {
     return 'Did you complete an activity?';
@@ -20,13 +20,14 @@ const ActivityProgress = ({
   activity,
   onChange,
   callNote,
+  metadata,
   onActivityChangeSelect,
   ...props,
 }) => (
   <FormStep
     paginationDisabled={!callNote.activityProgress}
     title="Activities"
-    secondaryTitle={getSecondaryTitle(callNote, activity)}
+    secondaryTitle={getSecondaryTitle(activity, metadata)}
     {...props}
   >
     <ScrollView>
@@ -78,7 +79,7 @@ const ActivityProgress = ({
         }
 
         {
-          !callNote.activity && <RadioItem
+          (activity && !metadata.activityHasChanged) && <RadioItem
             value={constants.V2_ACTIVITY_NOT_USED}
             onSelect={selection => onChange({
               activityProgress: selection,

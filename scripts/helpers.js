@@ -147,7 +147,7 @@ export const fakeCallNoteV2 = data => ({
 
 export const fakeCallNoteMetadata = data => ({
   actionType: ADD_IMMEDIATE,
-  updatedActivityId: void 0,
+  activityHasChanged: false,
   ...data,
 });
 

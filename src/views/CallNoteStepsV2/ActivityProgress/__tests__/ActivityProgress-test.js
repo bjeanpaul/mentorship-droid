@@ -3,7 +3,9 @@ import React from 'react';
 
 import ActivityProgress from 'src/views/CallNoteStepsV2/ActivityProgress';
 import * as constants from 'src/constants/callNotes';
-import { propEquals, fakeActivity, fakeCallNoteV2 } from 'app/scripts/helpers';
+import {
+  propEquals, fakeActivity, fakeCallNoteV2, fakeCallNoteMetadata,
+} from 'app/scripts/helpers';
 
 
 describe('ActivityProgress', () => {
@@ -11,6 +13,7 @@ describe('ActivityProgress', () => {
     <ActivityProgress
       callNote={fakeCallNoteV2()}
       activity={fakeActivity()}
+      metadata={fakeCallNoteMetadata()}
       onChange={noop}
       onBackPress={noop}
       onNextPress={noop}
@@ -21,9 +24,7 @@ describe('ActivityProgress', () => {
   it('should support rendering items for an original activity', () => {
     const el = render(createComponent({
       activity: fakeActivity(),
-      callNote: fakeCallNoteV2({
-        activity: void 0,
-      }),
+      metadata: fakeCallNoteMetadata({ activityHasChanged: false }),
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
@@ -32,7 +33,7 @@ describe('ActivityProgress', () => {
   it('should support rendering items for an overridden activity', () => {
     const el = render(createComponent({
       activity: fakeActivity(),
-      callNote: fakeCallNoteV2({ activity: 23 }),
+      metadata: fakeCallNoteMetadata({ activityHasChanged: true }),
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
