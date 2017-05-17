@@ -1,7 +1,7 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import { uidEquals, fakeCallNoteV2, fakeCallNoteMetadata } from 'app/scripts/helpers';
+import { uidEquals, fakeCallNoteV2 } from 'app/scripts/helpers';
 import CallQuality from 'src/views/CallNoteStepsV2/CallQuality';
 
 
@@ -69,21 +69,16 @@ describe('CallQuality', () => {
   it('should call onDonePress() when done is pressed', () => {
     const onDonePress = jest.fn();
     const callNote = fakeCallNoteV2();
-    const metadata = fakeCallNoteMetadata();
 
     const el = shallow(createComponent({
       onDonePress,
       callNote,
-      metadata,
     }));
 
     el.find('FormStep')
       .simulate('donePress');
 
     expect(onDonePress.mock.calls)
-      .toEqual([[{
-        callNote,
-        metadata,
-      }]]);
+      .toEqual([[callNote]]);
   });
 });
