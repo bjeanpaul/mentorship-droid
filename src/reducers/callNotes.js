@@ -68,14 +68,6 @@ export default (state = createInitialState(), action) => {
         steps: forward(state.steps),
       };
 
-    case constants.CALL_NOTE_ACTIVITY_REMOVE:
-      return merge(state, {
-        callNote: {
-          activityProgress: constants.V2_ACTIVITY_NOT_USED,
-          activity: null,
-        },
-      });
-
     case constants.CALL_NOTE_ACTIVITY_CHOOSE:
       return merge(state, {
         callNote: {

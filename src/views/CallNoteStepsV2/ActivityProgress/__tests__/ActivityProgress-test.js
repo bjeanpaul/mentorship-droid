@@ -3,9 +3,7 @@ import React from 'react';
 
 import ActivityProgress from 'src/views/CallNoteStepsV2/ActivityProgress';
 import * as constants from 'src/constants/callNotes';
-import {
-  uidEquals, propEquals, fakeActivity, fakeCallNoteV2,
-} from 'app/scripts/helpers';
+import { propEquals, fakeActivity, fakeCallNoteV2 } from 'app/scripts/helpers';
 
 
 describe('ActivityProgress', () => {
@@ -65,22 +63,6 @@ describe('ActivityProgress', () => {
     expect(el.find('FormStep').prop('paginationDisabled')).toBe(false);
   });
 
-  it('should call onChange() when the selection changes', () => {
-    const onChange = jest.fn();
-
-    const el = shallow(createComponent({
-      onChange,
-    }));
-
-    el.findWhere(uidEquals('activityProgressItems'))
-      .simulate('select', constants.V2_ACTIVITY_PARTIALLY_COMPLETED);
-
-    expect(onChange.mock.calls)
-      .toEqual([[{
-        activityProgress: constants.V2_ACTIVITY_PARTIALLY_COMPLETED,
-      }]]);
-  });
-
   it('should call onBackPress() when back is pressed', () => {
     const onBackPress = jest.fn();
 
@@ -105,6 +87,42 @@ describe('ActivityProgress', () => {
 
     expect(onNextPress.mock.calls)
       .toEqual([[]]);
+  });
+
+  it('should call onChange() when "completed" is selected', () => {
+    const onChange = jest.fn();
+
+    const el = shallow(createComponent({
+      activity: fakeActivity({ id: 23 }),
+      onChange,
+    }));
+
+    el.findWhere(propEquals('value', constants.V2_ACTIVITY_COMPLETED))
+      .simulate('select', constants.V2_ACTIVITY_COMPLETED);
+
+    expect(onChange.mock.calls)
+      .toEqual([[{
+        activityProgress: constants.V2_ACTIVITY_COMPLETED,
+        activity: 23,
+      }]]);
+  });
+
+  it('should call onChange() when " partially completed" is selected', () => {
+    const onChange = jest.fn();
+
+    const el = shallow(createComponent({
+      activity: fakeActivity({ id: 23 }),
+      onChange,
+    }));
+
+    el.findWhere(propEquals('value', constants.V2_ACTIVITY_PARTIALLY_COMPLETED))
+      .simulate('select', constants.V2_ACTIVITY_PARTIALLY_COMPLETED);
+
+    expect(onChange.mock.calls)
+      .toEqual([[{
+        activityProgress: constants.V2_ACTIVITY_PARTIALLY_COMPLETED,
+        activity: 23,
+      }]]);
   });
 
   it('should call onActivityChangeSelect when "activity used" is selected', () => {

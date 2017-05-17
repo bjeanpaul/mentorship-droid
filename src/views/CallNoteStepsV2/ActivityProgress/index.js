@@ -21,7 +21,6 @@ const ActivityProgress = ({
   onChange,
   callNote,
   onActivityChangeSelect,
-  onActivityNotUsedSelect,
   ...props,
 }) => (
   <FormStep
@@ -44,7 +43,6 @@ const ActivityProgress = ({
       <Radio
         uid="activityProgressItems"
         selection={callNote.activityProgress}
-        onSelect={selection => onChange({ activityProgress: selection })}
       >
         {
           !activity && <RadioItem
@@ -56,13 +54,25 @@ const ActivityProgress = ({
         }
 
         {
-          activity && <RadioItem value={constants.V2_ACTIVITY_COMPLETED}>
+          activity && <RadioItem
+            value={constants.V2_ACTIVITY_COMPLETED}
+            onSelect={selection => onChange({
+              activityProgress: selection,
+              activity: activity.id,
+            })}
+          >
             Yes, we completed it
           </RadioItem>
         }
 
         {
-          activity && <RadioItem value={constants.V2_ACTIVITY_PARTIALLY_COMPLETED}>
+          activity && <RadioItem
+            value={constants.V2_ACTIVITY_PARTIALLY_COMPLETED}
+            onSelect={selection => onChange({
+              activityProgress: selection,
+              activity: activity.id,
+            })}
+          >
             We used it, but did not finish
           </RadioItem>
         }
@@ -70,7 +80,10 @@ const ActivityProgress = ({
         {
           !callNote.activity && <RadioItem
             value={constants.V2_ACTIVITY_NOT_USED}
-            onSelect={onActivityNotUsedSelect}
+            onSelect={selection => onChange({
+              activityProgress: selection,
+              activity: null,
+            })}
           >
             No, we did our own thing
           </RadioItem>
@@ -95,7 +108,6 @@ ActivityProgress.propTypes = {
   metadata: PropTypes.object,
   onChange: PropTypes.func.isRequired,
   onActivityChangeSelect: PropTypes.func,
-  onActivityNotUsedSelect: PropTypes.func,
 };
 
 

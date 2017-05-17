@@ -107,26 +107,6 @@ describe('reducers/callNotes', () => {
     });
   });
 
-  describe('CALL_NOTE_ACTIVITY_REMOVE', () => {
-    it('should set the activity id to null', () => {
-      const { callNote } = reduce(void 0, actions.removeCallNoteActivity());
-
-      expect(callNote)
-        .toEqual(jasmine.objectContaining({
-          activity: null,
-        }));
-    });
-
-    it('should change the activity progress to "activity not used"', () => {
-      const { callNote } = reduce(void 0, actions.removeCallNoteActivity());
-
-      expect(callNote)
-        .toEqual(jasmine.objectContaining({
-          activityProgress: constants.V2_ACTIVITY_NOT_USED,
-        }));
-    });
-  });
-
   describe('CALL_NOTE_ACTIVITY_CHOOSE', () => {
     it('should reset the activity progress', () => {
       const { callNote } = reduce(void 0, actions.chooseCallNoteActivity(23));
