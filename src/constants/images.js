@@ -81,6 +81,9 @@ import JOURNEY_EVENT_SCHEDULED_CALL_ICON from 'app/assets/event-icon-calendar.pn
 import PLACEHOLDER_CHAT_AVATAR from 'app/assets/profile-placeholder-avatar.png';
 import MENTEE_CHAT_AVATAR from 'app/assets/mentee-chat-avatar.png';
 
+import ARROW_SELECTED from 'app/assets/arrow-selected.png';
+import ARROW_UNSELECTED from 'app/assets/arrow-unselected.png';
+
 
 export default {
   PATTERN_BG,
@@ -162,4 +165,7 @@ export default {
 
   PLACEHOLDER_CHAT_AVATAR,
   MENTEE_CHAT_AVATAR,
+
+  ARROW_SELECTED,
+  ARROW_UNSELECTED,
 };

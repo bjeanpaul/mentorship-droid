@@ -3,6 +3,7 @@ import { ScrollView } from 'react-native';
 
 import { FormStep, Panel, Radio, RadioItem } from 'src/components';
 import * as constants from 'src/constants/callNotes';
+import images from 'src/constants/images';
 
 
 const getSecondaryTitle = (callNote, activity) => {
@@ -46,6 +47,8 @@ const ActivityProgress = ({
       >
         {
           !activity && <RadioItem
+            iconSelected={images.ARROW_SELECTED}
+            iconUnselected={images.ARROW_UNSELECTED}
             value={constants.V2_ACTIVITY_USED}
             onSelect={onActivityChangeSelect}
           >
@@ -91,6 +94,8 @@ const ActivityProgress = ({
 
         {
           activity && <RadioItem
+            iconSelected={images.ARROW_SELECTED}
+            iconUnselected={images.ARROW_UNSELECTED}
             value={constants.V2_ACTIVITY_DIFFERENT}
             onSelect={onActivityChangeSelect}
           >
