@@ -11,8 +11,8 @@ const RadioItem = defineRadioItem(({
   children,
   selected,
   onSelect,
-  iconSelected = images.YES_SELECTED,
-  iconUnselected = images.YES,
+  iconSelected = images.ITEM_SELECTED,
+  iconUnselected = images.ITEM_UNSELECTED,
 }) => (
   <TouchableWithoutFeedback onPress={onSelect}>
     <View style={styles.item}>
