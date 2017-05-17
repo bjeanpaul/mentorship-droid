@@ -3,7 +3,9 @@ import React from 'react';
 
 import ActivityProgress from 'src/views/CallNoteStepsV2/ActivityProgress';
 import * as constants from 'src/constants/callNotes';
-import { uidEquals, fakeActivity, fakeCallNoteV2 } from 'app/scripts/helpers';
+import {
+  uidEquals, propEquals, fakeActivity, fakeCallNoteV2,
+} from 'app/scripts/helpers';
 
 
 describe('ActivityProgress', () => {
@@ -105,17 +107,32 @@ describe('ActivityProgress', () => {
       .toEqual([[]]);
   });
 
-  it('should call onDifferentActivitySelect when the relevant option is selected', () => {
-    const onDifferentActivitySelect = jest.fn();
+  it('should call onActivityChange when "activity used" is selected', () => {
+    const onActivityChange = jest.fn();
 
     const el = shallow(createComponent({
-      onDifferentActivitySelect,
+      activity: void 0,
+      onActivityChange,
     }));
 
-    el.findWhere(uidEquals('differentActivityItem'))
+    el.findWhere(propEquals('value', constants.V2_ACTIVITY_USED))
       .simulate('select');
 
-    expect(onDifferentActivitySelect.mock.calls)
+    expect(onActivityChange.mock.calls)
+      .toEqual([[]]);
+  });
+
+  it('should call onActivityChange when "activity different" is selected', () => {
+    const onActivityChange = jest.fn();
+
+    const el = shallow(createComponent({
+      onActivityChange,
+    }));
+
+    el.findWhere(propEquals('value', constants.V2_ACTIVITY_DIFFERENT))
+      .simulate('select');
+
+    expect(onActivityChange.mock.calls)
       .toEqual([[]]);
   });
 });

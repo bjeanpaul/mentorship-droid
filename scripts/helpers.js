@@ -34,6 +34,8 @@ export const mock = () => {
 };
 
 
+export const propEquals = (name, id) => node => node.prop(name) === id;
+
 export const uidEquals = id => node => node.prop('uid') === id;
 
 

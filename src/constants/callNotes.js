@@ -1,6 +1,8 @@
 import { fromPairs } from 'lodash';
 import images from 'src/constants/images';
 
+// TODO consistent convention for namespacing of constants
+
 export const CALL_NOTE_VERSION = '1';
 
 export const CALL_NOTE_LIST_REQUEST = 'CALL_NOTE_LIST_REQUEST';

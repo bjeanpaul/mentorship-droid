@@ -20,7 +20,7 @@ const ActivityProgress = ({
   activity,
   onChange,
   callNote,
-  onDifferentActivitySelect,
+  onActivityChange,
   ...props,
 }) => (
   <FormStep
@@ -46,7 +46,10 @@ const ActivityProgress = ({
         onSelect={selection => onChange({ activityProgress: selection })}
       >
         {
-          !activity && <RadioItem value={constants.V2_ACTIVITY_USED}>
+          !activity && <RadioItem
+            value={constants.V2_ACTIVITY_USED}
+            onSelect={onActivityChange}
+          >
             We used an activity
           </RadioItem>
         }
@@ -69,13 +72,14 @@ const ActivityProgress = ({
           </RadioItem>
         }
 
-        <RadioItem
-          uid="differentActivityItem"
-          value={constants.V2_ACTIVITY_DIFFERENT}
-          onSelect={onDifferentActivitySelect}
-        >
-          We used another activity
-        </RadioItem>
+        {
+          activity && <RadioItem
+            value={constants.V2_ACTIVITY_DIFFERENT}
+            onSelect={onActivityChange}
+          >
+            We used another activity
+          </RadioItem>
+        }
       </Radio>
     </ScrollView>
   </FormStep>
@@ -86,7 +90,7 @@ ActivityProgress.propTypes = {
   activity: PropTypes.object,
   metadata: PropTypes.object,
   onChange: PropTypes.func.isRequired,
-  onDifferentActivitySelect: PropTypes.func,
+  onActivityChange: PropTypes.func,
 };
 
 
