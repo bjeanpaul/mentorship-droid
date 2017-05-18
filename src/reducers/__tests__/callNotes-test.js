@@ -108,9 +108,9 @@ describe('reducers/callNotes', () => {
           },
         });
 
-        expect(reduce(state, actions.v2StepBack()))
+        expect(reduce(state, actions.v2StepNext()))
           .toEqual(jasmine.objectContaining({
-            steps: jumpToIndex(steps, 0),
+            steps: jumpToIndex(steps, 2),
           }));
       }
     });
