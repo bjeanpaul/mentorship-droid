@@ -1,4 +1,4 @@
-exports[`Button should disable its done button if disabled is true 1`] = `
+exports[`Pagination should disable its done button if disabled is true 1`] = `
 <View
   style={
     Object {
@@ -155,7 +155,7 @@ exports[`Button should disable its done button if disabled is true 1`] = `
 </View>
 `;
 
-exports[`Button should disable its next button if disabled is true 1`] = `
+exports[`Pagination should disable its next button if disabled is true 1`] = `
 <View
   style={
     Object {
@@ -312,7 +312,7 @@ exports[`Button should disable its next button if disabled is true 1`] = `
 </View>
 `;
 
-exports[`Button should render a done button if last is true 1`] = `
+exports[`Pagination should render a done button if last is true 1`] = `
 <View
   style={
     Object {
@@ -462,7 +462,7 @@ exports[`Button should render a done button if last is true 1`] = `
 </View>
 `;
 
-exports[`Button should render props correctly 1`] = `
+exports[`Pagination should render props correctly 1`] = `
 <View
   style={
     Object {
@@ -612,7 +612,7 @@ exports[`Button should render props correctly 1`] = `
 </View>
 `;
 
-exports[`Button should support disabling its back button 1`] = `
+exports[`Pagination should support disabling its back button 1`] = `
 <View
   style={
     Object {

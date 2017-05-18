@@ -1,6 +1,6 @@
 import reduce, { createInitialState } from 'src/reducers/callNotes';
 import * as actions from 'src/actions/callNotes';
-import { fakeState } from 'app/scripts/helpers';
+import { fakeState, fakeCallNoteV2 } from 'app/scripts/helpers';
 import { logout } from 'src/actions/auth';
 import * as constants from 'src/constants/callNotes';
 import { createStack, createRoute, jumpToIndex } from 'src/navigationHelpers';
@@ -85,6 +85,35 @@ describe('reducers/callNotes', () => {
           steps: jumpToIndex(steps, 1),
         }));
     });
+
+    it('should skip activity steps if there is no activity', () => {
+      for (const step of ([
+        constants.V2_STEP_RATING,
+        constants.V2_STEP_OBJECTIVE_ACHIEVED,
+      ])) {
+        let steps = createStack([
+          createRoute('A'),
+          createRoute(step),
+          createRoute('B'),
+        ]);
+
+        steps = jumpToIndex(steps, 0);
+
+        const { callNote: state } = fakeState({
+          callNote: {
+            steps,
+            callNote: fakeCallNoteV2({
+              activity: null,
+            }),
+          },
+        });
+
+        expect(reduce(state, actions.v2StepNext()))
+          .toEqual(jasmine.objectContaining({
+            steps: jumpToIndex(steps, 2),
+          }));
+      }
+    });
   });
 
   describe('V2_STEP_BACK', () => {
@@ -104,6 +133,33 @@ describe('reducers/callNotes', () => {
         .toEqual(jasmine.objectContaining({
           steps: jumpToIndex(steps, 0),
         }));
+    });
+
+    it('should skip activity steps if there is no activity', () => {
+      for (const step of ([
+        constants.V2_STEP_RATING,
+        constants.V2_STEP_OBJECTIVE_ACHIEVED,
+      ])) {
+        const steps = createStack([
+          createRoute('A'),
+          createRoute(step),
+          createRoute('B'),
+        ]);
+
+        const { callNote: state } = fakeState({
+          callNote: {
+            steps,
+            callNote: fakeCallNoteV2({
+              activity: null,
+            }),
+          },
+        });
+
+        expect(reduce(state, actions.v2StepBack()))
+          .toEqual(jasmine.objectContaining({
+            steps: jumpToIndex(steps, 0),
+          }));
+      }
     });
   });
 

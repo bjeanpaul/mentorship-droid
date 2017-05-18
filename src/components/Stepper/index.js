@@ -1,18 +1,9 @@
-import { range, clamp, fromPairs, debounce } from 'lodash';
+import { range, clamp, fromPairs } from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import BackAndroid from 'BackAndroid';
 
 import { ProgressBar, BaseView, FormView, NavigationStack } from 'src/components';
 import { createRoute } from 'src/navigationHelpers';
-
-
-const PAGING_DEBOUNCE = 250;
-
-
-const debouncePager = fn => debounce(fn, PAGING_DEBOUNCE, {
-  leading: true,
-  trailing: false,
-});
 
 
 const Step = ({
@@ -32,8 +23,8 @@ class Stepper extends Component {
       index: 0,
     };
 
-    this.onNextPress = debouncePager(this.onNextPress.bind(this));
-    this.onBackPress = debouncePager(this.onBackPress.bind(this));
+    this.onNextPress = this.onNextPress.bind(this);
+    this.onBackPress = this.onBackPress.bind(this);
     this.onNativeBackPress = this.onNativeBackPress.bind(this);
   }
 
