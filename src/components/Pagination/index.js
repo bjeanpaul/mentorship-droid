@@ -6,7 +6,7 @@ import Button from 'src/components/Button';
 import Icon from 'src/components/Icon';
 import styles from './styles';
 
-import { PAGINATION_DEBOUNCE_INTERVAL } from 'src/constants/behavior';
+import { PAGING_DEBOUNCE_INTERVAL } from 'src/constants/behavior';
 
 
 const debouncePager = fn => debounce(fn, PAGING_DEBOUNCE_INTERVAL, {
