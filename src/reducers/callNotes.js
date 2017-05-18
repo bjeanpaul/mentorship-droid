@@ -12,6 +12,9 @@ export const createInitialState = () => ({
     activity: void 0,
     version: constants.CALL_NOTE_VERSION,
   },
+  metadata: {
+    activityHasChanged: false,
+  },
   steps: void 0,
 });
 
@@ -87,6 +90,9 @@ export default (state = createInitialState(), action) => {
         callNote: {
           activityProgress: void 0,
           activity: action.payload.activityId,
+        },
+        metadata: {
+          activityHasChanged: true,
         },
       });
 

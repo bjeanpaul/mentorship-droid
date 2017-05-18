@@ -17,6 +17,7 @@ class CallNoteStepsV2 extends Component {
       <Step
         activity={this.props.activity}
         callNote={this.props.callNote}
+        metadata={this.props.metadata}
         onChange={this.props.onChange}
         onBackPress={this.props.onBackPress}
         onNextPress={this.props.onNextPress}
@@ -42,6 +43,7 @@ CallNoteStepsV2.propTypes = {
   steps: NavigationPropTypes.navigationState.isRequired,
   activity: PropTypes.any,
   callNote: PropTypes.object.isRequired,
+  metadata: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired,
   onBackPress: PropTypes.func.isRequired,
   onNextPress: PropTypes.func.isRequired,
