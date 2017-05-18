@@ -32,9 +32,9 @@ class ForgotPasswordEmail extends React.Component {
         <Button
           uid="sendEmail"
           disabled={this.state.email === '' }
-          onPress={() => this.props.onSendEmailPress(
-            this.state.email
-          )}
+          onPress={() => this.props.onSendEmailPress({
+            email: this.state.email,
+          })}
         >
           Send Email
         </Button>
