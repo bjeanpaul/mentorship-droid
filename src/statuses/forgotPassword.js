@@ -1,4 +1,4 @@
-import * as constants from 'src/constants/auth';
+import * as constants from 'src/constants/forgotPassword';
 import { staticStatus } from 'src/helpers';
 
 
