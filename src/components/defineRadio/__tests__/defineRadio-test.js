@@ -76,4 +76,28 @@ describe('defineRadio', () => {
 
     expect(onSelect.mock.calls).toEqual([['a'], ['b']]);
   });
+
+  it('should allow items to override onSelect', () => {
+    const onSelect = jest.fn();
+    const onSelectOverride = jest.fn();
+
+    const el = shallow(
+      <Radio onSelect={onSelect}>
+        <RadioItem value="a" onSelect={onSelectOverride}>A</RadioItem>
+        <RadioItem value="b">B</RadioItem>
+      </Radio>
+    );
+
+    childAt(el, 0)
+      .simulate('select');
+
+    expect(onSelect.mock.calls).toEqual([]);
+    expect(onSelectOverride.mock.calls).toEqual([['a']]);
+
+    childAt(el, 1)
+      .simulate('select');
+
+    expect(onSelect.mock.calls).toEqual([['b']]);
+    expect(onSelectOverride.mock.calls).toEqual([['a']]);
+  });
 });

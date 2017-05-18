@@ -34,6 +34,8 @@ export const mock = () => {
 };
 
 
+export const propEquals = (name, id) => node => node.prop(name) === id;
+
 export const uidEquals = id => node => node.prop('uid') === id;
 
 
@@ -145,7 +147,7 @@ export const fakeCallNoteV2 = data => ({
 
 export const fakeCallNoteMetadata = data => ({
   actionType: ADD_IMMEDIATE,
-  activityIsOverridden: false,
+  updatedActivityId: void 0,
   ...data,
 });
 

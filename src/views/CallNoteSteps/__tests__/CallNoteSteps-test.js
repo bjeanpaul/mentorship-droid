@@ -15,6 +15,7 @@ describe('CallNoteSteps', () => {
       onBackPress={noop}
       onNextPress={noop}
       onDonePress={noop}
+      onActivityChangeSelect={noop}
       {...props}
     />
   );

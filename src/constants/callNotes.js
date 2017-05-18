@@ -1,6 +1,8 @@
 import { fromPairs } from 'lodash';
 import images from 'src/constants/images';
 
+// TODO consistent convention for namespacing of constants
+
 export const CALL_NOTE_VERSION = '1';
 
 export const CALL_NOTE_LIST_REQUEST = 'CALL_NOTE_LIST_REQUEST';
@@ -26,13 +28,15 @@ export const CALL_NOTES_MENTEE_ENGAGED = 'engaged';
 export const CALL_NOTE_CREATE_OPEN = 'CALL_NOTE_CREATE_OPEN';
 export const CALL_NOTE_RETROACTIVELY_CREATE_OPEN = 'CALL_NOTE_RETROACTIVELY_CREATE_OPEN';
 export const CALL_NOTES_CHANGE_CALL_NOTE = 'CALL_NOTES_CHANGE_CALL_NOTE';
-
 export const CALL_NOTES_VIEW_ALL = 'CALL_NOTES_VIEW_ALL';
-
 export const CALL_NOTE_CHOOSE = 'CALL_NOTE_CHOOSE';
 
 export const ADD_RETROACTIVELY = 'ADD_RETROACTIVELY';
 export const ADD_IMMEDIATE = 'ADD_IMMEDIATE';
+
+export const CALL_NOTE_ACTIVITY_CHANGE = 'CALL_NOTE_ACTIVITY_CHANGE';
+export const CALL_NOTE_CATEGORY_CHOOSE = 'CALL_NOTE_CATEGORY_CHOOSE';
+export const CALL_NOTE_ACTIVITY_CHOOSE = 'CALL_NOTE_ACTIVITY_CHOOSE';
 
 export const MOOD_IMAGES = fromPairs([
   [CALL_NOTES_MENTEE_HAPPY, images.CALL_NOTES_MENTEE_HAPPY],
@@ -129,7 +133,7 @@ export const V2_STEP_RATING = 'V2_STEP_RATING';
 export const V2_STEP_MOOD = 'V2_STEP_MOOD';
 export const V2_STEP_CALL_QUALITY = 'V2_STEP_CALL_QUALITY';
 
-export const V2_STEPS_WITH_ACTIVITY = [
+export const V2_STEPS = [
   V2_STEP_CALL_RESULT,
   V2_STEP_ACTIVITY_PROGRESS,
   V2_STEP_OBJECTIVE_ACHIEVED,

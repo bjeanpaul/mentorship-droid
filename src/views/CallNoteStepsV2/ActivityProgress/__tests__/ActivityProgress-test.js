@@ -3,9 +3,7 @@ import React from 'react';
 
 import ActivityProgress from 'src/views/CallNoteStepsV2/ActivityProgress';
 import * as constants from 'src/constants/callNotes';
-import {
-  uidEquals, fakeActivity, fakeCallNoteV2, fakeCallNoteMetadata,
-} from 'app/scripts/helpers';
+import { propEquals, fakeActivity, fakeCallNoteV2 } from 'app/scripts/helpers';
 
 
 describe('ActivityProgress', () => {
@@ -13,7 +11,6 @@ describe('ActivityProgress', () => {
     <ActivityProgress
       callNote={fakeCallNoteV2()}
       activity={fakeActivity()}
-      metadata={fakeCallNoteMetadata()}
       onChange={noop}
       onBackPress={noop}
       onNextPress={noop}
@@ -24,7 +21,9 @@ describe('ActivityProgress', () => {
   it('should support rendering items for an original activity', () => {
     const el = render(createComponent({
       activity: fakeActivity(),
-      metadata: fakeCallNoteMetadata({ activityIsOverridden: false }),
+      callNote: fakeCallNoteV2({
+        activity: void 0,
+      }),
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
@@ -33,7 +32,7 @@ describe('ActivityProgress', () => {
   it('should support rendering items for an overridden activity', () => {
     const el = render(createComponent({
       activity: fakeActivity(),
-      metadata: fakeCallNoteMetadata({ activityIsOverridden: true }),
+      callNote: fakeCallNoteV2({ activity: 23 }),
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
@@ -64,22 +63,6 @@ describe('ActivityProgress', () => {
     expect(el.find('FormStep').prop('paginationDisabled')).toBe(false);
   });
 
-  it('should call onChange() when the selection changes', () => {
-    const onChange = jest.fn();
-
-    const el = shallow(createComponent({
-      onChange,
-    }));
-
-    el.findWhere(uidEquals('activityProgressItems'))
-      .simulate('select', constants.V2_ACTIVITY_PARTIALLY_COMPLETED);
-
-    expect(onChange.mock.calls)
-      .toEqual([[{
-        activityProgress: constants.V2_ACTIVITY_PARTIALLY_COMPLETED,
-      }]]);
-  });
-
   it('should call onBackPress() when back is pressed', () => {
     const onBackPress = jest.fn();
 
@@ -103,6 +86,71 @@ describe('ActivityProgress', () => {
       .simulate('nextPress');
 
     expect(onNextPress.mock.calls)
+      .toEqual([[]]);
+  });
+
+  it('should call onChange() when "completed" is selected', () => {
+    const onChange = jest.fn();
+
+    const el = shallow(createComponent({
+      activity: fakeActivity({ id: 23 }),
+      onChange,
+    }));
+
+    el.findWhere(propEquals('value', constants.V2_ACTIVITY_COMPLETED))
+      .simulate('select', constants.V2_ACTIVITY_COMPLETED);
+
+    expect(onChange.mock.calls)
+      .toEqual([[{
+        activityProgress: constants.V2_ACTIVITY_COMPLETED,
+        activity: 23,
+      }]]);
+  });
+
+  it('should call onChange() when " partially completed" is selected', () => {
+    const onChange = jest.fn();
+
+    const el = shallow(createComponent({
+      activity: fakeActivity({ id: 23 }),
+      onChange,
+    }));
+
+    el.findWhere(propEquals('value', constants.V2_ACTIVITY_PARTIALLY_COMPLETED))
+      .simulate('select', constants.V2_ACTIVITY_PARTIALLY_COMPLETED);
+
+    expect(onChange.mock.calls)
+      .toEqual([[{
+        activityProgress: constants.V2_ACTIVITY_PARTIALLY_COMPLETED,
+        activity: 23,
+      }]]);
+  });
+
+  it('should call onActivityChangeSelect when "activity used" is selected', () => {
+    const onActivityChangeSelect = jest.fn();
+
+    const el = shallow(createComponent({
+      activity: void 0,
+      onActivityChangeSelect,
+    }));
+
+    el.findWhere(propEquals('value', constants.V2_ACTIVITY_USED))
+      .simulate('select');
+
+    expect(onActivityChangeSelect.mock.calls)
+      .toEqual([[]]);
+  });
+
+  it('should call onActivityChangeSelect when "activity different" is selected', () => {
+    const onActivityChangeSelect = jest.fn();
+
+    const el = shallow(createComponent({
+      onActivityChangeSelect,
+    }));
+
+    el.findWhere(propEquals('value', constants.V2_ACTIVITY_DIFFERENT))
+      .simulate('select');
+
+    expect(onActivityChangeSelect.mock.calls)
       .toEqual([[]]);
   });
 });
