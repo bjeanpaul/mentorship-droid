@@ -8,6 +8,12 @@ export const createInitialState = () => ({
 
 export default (state = createInitialState(), action) => {
   switch (action.type) {
+    case constants.SHOW_FORGOT_PASSWORD_EMAIL:
+      return {
+        ...state,
+        status: statuses.forgotPasswordEmailStatusIdle(),
+      };
+
     case constants.FORGOT_PASSWORD_SEND_EMAIL_REQUEST:
       return {
         ...state,
