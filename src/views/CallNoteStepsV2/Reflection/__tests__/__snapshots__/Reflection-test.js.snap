@@ -9,41 +9,92 @@ exports[`Reflection should render 1`] = `
       undefined,
     ]
   }>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
+  <View
     style={
-      Array [
-        Object {
-          "color": "#003035",
-          "fontFamily": "Brandon Text",
-        },
-        Object {
-          "fontSize": 13,
-          "textAlign": "center",
-        },
+      Object {
+        "margin": 25,
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
         Array [
           Object {
-            "fontFamily": "Brandon Text_medium",
-            "fontSize": 20,
-            "fontWeight": "400",
+            "color": "#003035",
+            "fontFamily": "Brandon Text",
           },
           Object {
-            "margin": 25,
-            "marginBottom": 50,
+            "fontSize": 13,
+            "textAlign": "center",
           },
-        ],
-      ]
-    }>
-    
-  </Text>
+          Array [
+            Object {
+              "fontFamily": "Brandon Text_medium",
+              "fontSize": 20,
+              "fontWeight": "400",
+            },
+            Object {
+              "margin": 13,
+            },
+          ],
+        ]
+      }>
+      Please share your reflections of the discussion
+    </Text>
+  </View>
   <View
     style={
       Object {
         "flex": 1,
       }
-    } />
+    }>
+    <ScrollView>
+      <View
+        onLayout={undefined}>
+        <View
+          style={
+            Array [
+              Object {
+                "borderBottomWidth": 1,
+                "borderColor": "#dfe5e6",
+                "marginBottom": 27,
+                "marginLeft": 24,
+                "marginRight": 24,
+              },
+              false,
+            ]
+          }>
+          <TextInput
+            multiline={true}
+            onBlur={[Function]}
+            onChangeText={[Function]}
+            onContentSizeChange={[Function]}
+            onFocus={[Function]}
+            placeholder="Type your answer here"
+            placeholderTextColor="#c0cbcc"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                  "fontSize": 18,
+                  "marginBottom": 8,
+                  "padding": 0,
+                },
+                Object {
+                  "height": 0,
+                },
+              ]
+            }
+            uid="input"
+            underlineColorAndroid="transparent"
+            value="Walk in Silence" />
+        </View>
+      </View>
+    </ScrollView>
+  </View>
   <View
     style={
       Object {

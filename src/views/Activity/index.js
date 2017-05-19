@@ -2,7 +2,7 @@ import moment from 'moment';
 import React, { PropTypes } from 'react';
 import { View, Image, TouchableNativeFeedback, ScrollView } from 'react-native';
 
-import { BaseView, Header, HeaderIcon, Text } from 'src/components';
+import { BaseView, Header, HeaderIcon, Text, Panel } from 'src/components';
 import images from 'src/constants/images';
 import styles from './styles';
 
@@ -67,7 +67,6 @@ const Activity = props => {
         </View>
 
         <Section
-          color={color}
           icon={images.ACTIVITY_OBJECTIVE}
           title="Objective"
         >
@@ -75,7 +74,6 @@ const Activity = props => {
         </Section>
 
         <Section
-          color={color}
           icon={images.ACTIVITY_RATIONALE}
           title="Lesson Rationale"
         >
@@ -83,7 +81,6 @@ const Activity = props => {
         </Section>
 
         <Section
-          color={color}
           icon={images.ACTIVITY_INSTRUCTIONS}
           title="Instructions"
         >
@@ -91,7 +88,6 @@ const Activity = props => {
         </Section>
 
         <Section
-          color={color}
           icon={images.ACTIVITY_PROMPTS}
           title="Tips"
         >
@@ -99,7 +95,6 @@ const Activity = props => {
         </Section>
 
         <Section
-          color={color}
           icon={images.ACTIVITY_REFLECTION_POINTS}
           title="Reflection Points"
         >
@@ -107,7 +102,6 @@ const Activity = props => {
         </Section>
 
         <Section
-          color={color}
           icon={images.ACTIVITY_SKILLS_DEVELOPED}
           title="Skills Developed"
         >
@@ -125,6 +119,18 @@ const Activity = props => {
     </BaseView>
   );
 };
+
+
+const Section = ({
+  children,
+  ...props,
+}) => (
+  <Panel {...props}>
+    <Text style={Text.types.paragraph}>
+      {children}
+    </Text>
+  </Panel>
+);
 
 const Status = ({
   style,
@@ -201,31 +207,15 @@ const ActionButton = ({
 );
 
 
-const Section = ({
-  icon,
-  title,
-  children,
-}) => (
-  <View style={styles.section}>
-    <View style={styles.sectionHeader}>
-      <Image source={icon} style={styles.sectionIcon} />
-
-      <Text numberOfLines={1} style={[Text.uppercase, styles.sectionTitle]}>
-        {title}
-      </Text>
-    </View>
-
-    <View style={styles.sectionBody}>
-      <Text style={Text.types.paragraph}>{children}</Text>
-    </View>
-  </View>
-);
-
-
 Activity.propTypes = {
   category: PropTypes.object.isRequired,
   activity: PropTypes.object.isRequired,
   onBackPress: PropTypes.func.isRequired,
+};
+
+
+Section.propTypes = {
+  children: PropTypes.any,
 };
 
 
@@ -254,13 +244,4 @@ ActionButton.propTypes = {
 };
 
 
-Section.propTypes = {
-  color: PropTypes.string.isRequired,
-  icon: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired,
-};
-
-
-export { Section };
 export default Activity;

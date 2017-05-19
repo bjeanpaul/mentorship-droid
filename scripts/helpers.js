@@ -3,7 +3,11 @@ import { normalize, arrayOf } from 'normalizr';
 import { getContext } from 'src/store/helpers';
 import { staticAction } from 'src/actionHelpers';
 import { createStack, createRoute } from 'src/navigationHelpers';
-import { ADD_IMMEDIATE } from 'src/constants/callNotes';
+import {
+  ADD_IMMEDIATE,
+  CALL_NOTES_MENTEE_HAPPY,
+  V2_MOOD_HAPPY,
+} from 'src/constants/callNotes';
 import { EVENT_TYPE_SCHEDULED_CALL_CREATED } from 'src/constants/events';
 import richText from 'src/richText';
 import * as api from 'src/api';
@@ -30,7 +34,9 @@ export const mock = () => {
 };
 
 
-export const uidEquals = id => node => node.prop('uid') === id;
+export const propEquals = (name, value) => node => node.prop(name) === value;
+
+export const uidEquals = id => propEquals('uid', id);
 
 
 export const fakeAuth = () => ({
@@ -111,8 +117,9 @@ export const fakeCallNote = data => ({
   id: 404,
   mentor: 23,
   call: 50,
+  version: '1',
   reflection: 'It went well',
-  menteeState: 'sad',
+  menteeState: CALL_NOTES_MENTEE_HAPPY,
   objectiveAchieved: false,
   activityHelpful: true,
   callQuality: 5,
@@ -130,7 +137,7 @@ export const fakeCallNoteV2 = data => ({
   callResult: 'COMPLETED',
   activityProgress: 'COMPLETED',
   reflection: 'dzdfdszf',
-  mood: 'HAPPY',
+  mood: V2_MOOD_HAPPY,
   objectiveAchieved: '1',
   rating: '2',
   callQuality: 'OK',
@@ -140,6 +147,7 @@ export const fakeCallNoteV2 = data => ({
 
 export const fakeCallNoteMetadata = data => ({
   actionType: ADD_IMMEDIATE,
+  activityHasChanged: false,
   ...data,
 });
 
@@ -171,6 +179,12 @@ export const fakeBlogPost = data => merge({
     type: 'paragraph',
     value: 'Maybe Spain is the open-faced smile',
   }]),
+}, data);
+
+
+export const fakeForgotPasswordReset = data => merge({
+  token: '71828182',
+  newPassword: 'abc',
 }, data);
 
 

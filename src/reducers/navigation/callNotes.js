@@ -1,6 +1,6 @@
 import * as routes from 'src/constants/routes';
 import * as callNotes from 'src/constants/callNotes';
-import { createRoute, push, replaceOrPush } from 'src/navigationHelpers';
+import { createRoute, push, remove, replaceOrPush } from 'src/navigationHelpers';
 
 
 export default (state, action) => {
@@ -38,8 +38,22 @@ export default (state, action) => {
       return push(state, route);
     }
 
-    case callNotes.CALL_NOTES_VIEW_ALL: {
+    case callNotes.CALL_NOTES_VIEW_ALL:
       return push(state, createRoute(routes.ROUTE_CALL_NOTE_LIST));
+
+    case callNotes.CALL_NOTE_ACTIVITY_CHANGE:
+      return push(state, createRoute(routes.ROUTE_CALL_NOTE_CATEGORY_LIST));
+
+    case callNotes.CALL_NOTE_CATEGORY_CHOOSE: {
+      const route = createRoute(routes.ROUTE_CALL_NOTE_ACTIVITY_LIST, action.payload);
+      return push(state, route);
+    }
+
+    case callNotes.CALL_NOTE_ACTIVITY_CHOOSE: {
+      let nextState = state;
+      nextState = remove(nextState, routes.ROUTE_CALL_NOTE_ACTIVITY_LIST);
+      nextState = remove(nextState, routes.ROUTE_CALL_NOTE_CATEGORY_LIST);
+      return nextState;
     }
 
     default:
