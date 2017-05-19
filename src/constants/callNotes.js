@@ -3,7 +3,7 @@ import images from 'src/constants/images';
 
 // TODO consistent convention for namespacing of constants
 
-export const CALL_NOTE_VERSION = '1';
+export const CALL_NOTE_VERSION = '2';
 
 export const CALL_NOTE_LIST_REQUEST = 'CALL_NOTE_LIST_REQUEST';
 export const CALL_NOTE_LIST_SUCCESS = 'CALL_NOTE_LIST_SUCCESS';
