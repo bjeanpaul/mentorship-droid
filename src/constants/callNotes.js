@@ -171,16 +171,22 @@ export const V2_RATING_LABELS = {
   5: 'Very Poor',
 };
 
-export const V2_CALL_QUALITY_LABELS = {
-  1: 'Excellent',
-  2: 'Ok',
-  3: "Couldn't hear",
-  4: 'Call dropped',
-  5: 'Delays',
-};
-
 export const V2_ACTIVITY_USED = 'USED';
 export const V2_ACTIVITY_COMPLETED = 'COMPLETED';
 export const V2_ACTIVITY_PARTIALLY_COMPLETED = 'PARTIALLY_COMPLETED';
 export const V2_ACTIVITY_NOT_USED = 'NOT_USED';
 export const V2_ACTIVITY_DIFFERENT = 'DIFFERENT';
+
+export const V2_CALL_QUALITY_EXCELLENT = 'EXCELLENT';
+export const V2_CALL_QUALITY_OK = 'OK';
+export const V2_CALL_QUALITY_INAUDIBLE = 'INAUDIBLE';
+export const V2_CALL_QUALITY_DROPPED = 'DROPPED';
+export const V2_CALL_QUALITY_DELAYED = 'DELAYED';
+
+export const V2_CALL_QUALITY_LABELS = fromPairs([
+  [CALL_QUALITY_EXCELLENT, 'Excellent'],
+  [CALL_QUALITY_OK, 'Ok'],
+  [CALL_QUALITY_INAUDIBLE, "Couldn't hear"],
+  [CALL_QUALITY_DROPPED, 'Call dropped'],
+  [CALL_QUALITY_DELAYED, 'Delays'],
+]);
