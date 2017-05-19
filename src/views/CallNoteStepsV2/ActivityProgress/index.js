@@ -82,7 +82,7 @@ const ActivityProgress = ({
         }
 
         {
-          (activity && !metadata.activityHasChanged) && <RadioItem
+          !metadata.activityHasChanged && <RadioItem
             value={constants.V2_ACTIVITY_NOT_USED}
             onSelect={selection => onChange({
               activityProgress: selection,
