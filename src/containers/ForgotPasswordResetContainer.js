@@ -7,8 +7,8 @@ import { resetForgotPassword } from 'src/actions/forgotPassword';
 export const mapStateToProps = state => state.forgotPassword;
 
 export const mapDispatchToProps = {
-  onDismissPress: dismissScreen,
-  onLogInPress: resetForgotPassword,
+  onBackPress: dismissScreen,
+  onLoginPress: resetForgotPassword,
 };
 
 

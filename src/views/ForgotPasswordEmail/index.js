@@ -3,6 +3,11 @@ import { FormView, Text, Header, HeaderIcon, Button, TextInput } from 'src/compo
 
 
 class ForgotPasswordEmail extends React.Component {
+  static propTypes = {
+    onDismissPress: PropTypes.func.isRequired,
+    onSendEmailPress: PropTypes.func.isRequired,
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -10,31 +15,37 @@ class ForgotPasswordEmail extends React.Component {
     };
   }
 
+  setEmail = (email) => this.setState({ email });
+
+  sendEmail = () => {
+    return this.props.onSendEmailPress({
+      email: this.state.email.trim(),
+    });
+  }
+
   render() {
     return (
       <FormView>
         <Header>
-          <Text style={Text.types.title}>Send Password Reminder</Text>
+          <Text style={ Text.types.title }>Send Password Reminder</Text>
 
           <HeaderIcon
             uid="dismiss"
-            type={HeaderIcon.types.backDark}
-            onPress={this.props.onDismissPress}
+            type={ HeaderIcon.types.backDark }
+            onPress={ this.props.onDismissPress }
           />
         </Header>
 
         <TextInput
           label="Email"
-          value={this.state.email}
-          onChangeText={email => this.setState({ email })}
+          value={ this.state.email }
+          onChangeText={ this.setEmail }
         />
 
         <Button
           uid="sendEmail"
-          disabled={this.state.email === '' }
-          onPress={() => this.props.onSendEmailPress({
-            email: this.state.email,
-          })}
+          disabled={ this.state.email === '' }
+          onPress={ this.sendEmail }
         >
           Send Email
         </Button>
@@ -42,11 +53,5 @@ class ForgotPasswordEmail extends React.Component {
     );
   }
 }
-
-ForgotPasswordEmail.propTypes = {
-  onDismissPress: PropTypes.func.isRequired,
-  onSendEmailPress: PropTypes.func.isRequired,
-};
-
 
 export default ForgotPasswordEmail;

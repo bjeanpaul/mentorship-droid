@@ -2,6 +2,11 @@ import React, { PropTypes } from 'react';
 import { FormView, Text, Header, HeaderIcon, TextInput, Button } from 'src/components';
 
 class ForgotPasswordReset extends React.Component {
+  static propTypes = {
+    onBackPress: PropTypes.func.isRequired,
+    onLoginPress: PropTypes.func,
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -9,6 +14,29 @@ class ForgotPasswordReset extends React.Component {
       newPassword: '',
       checkNewPassword: '',
     };
+  }
+
+  setToken = (token) => this.setState({ token });
+
+  setNewPassword = (newPassword) => this.setState({ newPassword });
+
+  setCheckNewPassword = (checkNewPassword) => this.setState({ checkNewPassword });
+
+  inputIsValid = () => (
+    !((this.state.token !== '') &&
+      (this.state.newPassword !== '') &&
+      (this.state.newPassword === this.state.checkNewPassword))
+  )
+
+  submitPasswordResetData = () => {
+    const token = this.state.token.trim();
+    const newPassword = this.state.newPassword.trim();
+    const checkNewPassword = this.state.checkNewPassword.trim();
+    return this.props.onLoginPress({
+      token,
+      newPassword,
+      checkNewPassword,
+    });
   }
 
   render() {
@@ -29,43 +57,34 @@ class ForgotPasswordReset extends React.Component {
           autoCorrect={false}
           keyboardType="email-address"
           label="Token"
-          value={this.state.token}
-          onChangeText={token => this.setState({ token })}
+          value={ this.state.token }
+          onChangeText={ this.setToken }
         />
         <TextInput
           secureTextEntry
           label="New Password"
-          value={this.state.newPassword}
-          onChangeText={newPassword => this.setState({ newPassword })}
+          value={ this.state.newPassword }
+          onChangeText={ this.setNewPassword }
         />
         <TextInput
           secureTextEntry
           label="New Password Again"
-          value={this.state.checkNewPassword}
-          onChangeText={checkNewPassword => this.setState({ checkNewPassword })}
+          value={ this.state.checkNewPassword }
+          onChangeText={ this.setCheckNewPassword }
         />
 
         {/* TODO: <StatusMessage {...status} /> */}
 
         <Button
-          disabled={!((this.state.newPassword !== '') &&
-                     (this.state.newPassword === this.state.checkNewPassword))}
-          onPress={() => this.props.onLogInPress({
-            token: this.state.token,
-            newPassword: this.state.newPassword,
-            checkNewPassword: this.state.checkNewPassword,
-          })}
+          disabled={ this.inputIsValid() }
+          onPress={ this.submitPasswordResetData }
         >
-          LOG IN
+          RESET
         </Button>
       </FormView>
     );
   }
 }
-
-ForgotPasswordReset.PropTypes = {
-  onBackPress: PropTypes.func.isRequired,
-};
 
 
 export default ForgotPasswordReset;

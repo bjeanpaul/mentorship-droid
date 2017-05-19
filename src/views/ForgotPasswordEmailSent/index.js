@@ -43,8 +43,9 @@ const ForgotPasswordEmailSent = ({
   </BaseView>
 );
 
-ForgotPasswordEmailSent.PropTypes = {
+ForgotPasswordEmailSent.propTypes = {
   onDismissPress: PropTypes.func.isRequired,
+  onLoginPress: PropTypes.func.isRequired,
 };
 
 
