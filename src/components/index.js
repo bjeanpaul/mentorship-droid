@@ -32,6 +32,7 @@ import NavigationStack from './NavigationStack';
 import RichText from './RichText';
 import Panel from './Panel';
 import Radio, { RadioItem } from './Radio';
+import StatusMessage from './StatusMessage';
 
 
 export {
@@ -71,4 +72,5 @@ export {
   Panel,
   Radio,
   RadioItem,
+  StatusMessage,
 };
