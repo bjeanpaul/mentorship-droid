@@ -12,3 +12,4 @@ export class ApiResponseError {
 export class ApiAuthenticationError extends ApiResponseError {}
 export class ApiAuthorizationError extends ApiResponseError {}
 export class ApiNotFoundError extends ApiResponseError {}
+export class ApiDataInvalidError extends ApiResponseError {}

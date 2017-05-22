@@ -20,6 +20,12 @@ export default (state = createInitialState(), action) => {
         status: statuses.forgotPasswordEmailStatusBusy(),
       };
 
+    case constants.FORGOT_PASSWORD_SEND_EMAIL_BAD_ADDRESS:
+      return {
+        ...state,
+        status: statuses.forgotPasswordEmailStatusBadAddress(),
+      };
+
     case constants.SHOW_FORGOT_PASSWORD_RESET:
       return {
         ...state,

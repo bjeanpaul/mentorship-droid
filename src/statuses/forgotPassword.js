@@ -10,6 +10,10 @@ const forgotPasswordEmailStatusBusy = staticStatus(
   constants.FORGOT_PASSWORD_EMAIL_STATUS_BUSY);
 
 
+const forgotPasswordEmailStatusBadAddress = staticStatus(
+  constants.FORGOT_PASSWORD_EMAIL_STATUS_BAD_ADDRESS);
+
+
 const forgotPasswordResetStatusIdle = staticStatus(
   constants.FORGOT_PASSWORD_RESET_STATUS_IDLE);
 
@@ -25,6 +29,7 @@ const forgotPasswordResetStatusBadToken = staticStatus(
 export {
   forgotPasswordEmailStatusIdle,
   forgotPasswordEmailStatusBusy,
+  forgotPasswordEmailStatusBadAddress,
   forgotPasswordResetStatusIdle,
   forgotPasswordResetStatusBusy,
   forgotPasswordResetStatusBadToken,
