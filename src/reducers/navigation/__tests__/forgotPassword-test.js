@@ -13,13 +13,6 @@ describe('src/reducers/navigation/forgotPassword', () => {
     });
   });
 
-  describe('FORGOT_PASSWORD_SEND_EMAIL_REQUEST', () => {
-    it('should push on the loading route', () => {
-      expect(reduce(createStack(), staticAction(constants.FORGOT_PASSWORD_SEND_EMAIL_REQUEST)()))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_LOADING)));
-    });
-  });
-
   describe('FORGOT_PASSWORD_SEND_EMAIL_SUCCESS', () => {
     it('should push on the email success route', () => {
       expect(reduce(createStack(), staticAction(constants.FORGOT_PASSWORD_SEND_EMAIL_SUCCESS)()))

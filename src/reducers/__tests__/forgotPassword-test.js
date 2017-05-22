@@ -25,6 +25,16 @@ describe('reducers/forgotPassword', () => {
     });
   });
 
+  describe('FORGOT_PASSWORD_SEND_EMAIL_BAD_ADDRESS', () => {
+    it('should set status to bad email address', () => {
+      const action = actions.emailForgotPasswordToken.failures.apiDataInvalidError();
+      const state = { state: statuses.forgotPasswordEmailStatusIdle() };
+      const { status } = reduce(state, action);
+
+      expect(status).toEqual(statuses.forgotPasswordEmailStatusBadAddress());
+    });
+  });
+
   describe('SHOW_FORGOT_PASSWORD_RESET', () => {
     it('should mark the status as reset idle', () => {
       const action = actions.showForgotPasswordReset();
@@ -35,6 +45,7 @@ describe('reducers/forgotPassword', () => {
         .toEqual(statuses.forgotPasswordResetStatusIdle());
     });
   });
+
   describe('FORGOT_PASSWORD_RESET_REQUEST', () => {
     it('should mark the status as reset request has been sent', () => {
       const action = actions.resetForgotPassword.request();

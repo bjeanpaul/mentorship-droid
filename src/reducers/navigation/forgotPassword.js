@@ -11,10 +11,6 @@ export default (state, action) => {
       return push(state, createRoute(routes.ROUTE_FORGOT_PASSWORD_EMAIL));
     }
 
-    case forgotPassword.FORGOT_PASSWORD_SEND_EMAIL_REQUEST: {
-      return push(state, createRoute(routes.ROUTE_LOADING));
-    }
-
     case forgotPassword.FORGOT_PASSWORD_SEND_EMAIL_SUCCESS: {
       return push(state, createRoute(routes.ROUTE_FORGOT_PASSWORD_EMAIL_SENT));
     }

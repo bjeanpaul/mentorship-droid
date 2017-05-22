@@ -10,7 +10,7 @@ import {
   showForgotPasswordEmail,
 } from 'src/actions/forgotPassword';
 
-const { ApiAuthorizationError } = api;
+const { ApiAuthorizationError, ApiDataInvalidError } = api;
 
 
 describe('forgotPassword/actions', () => {
@@ -25,6 +25,9 @@ describe('forgotPassword/actions', () => {
         method: api.emailForgotPasswordToken,
         request: constants.FORGOT_PASSWORD_SEND_EMAIL_REQUEST,
         success: constants.FORGOT_PASSWORD_SEND_EMAIL_SUCCESS,
+        failures: [
+          [ApiDataInvalidError, constants.FORGOT_PASSWORD_SEND_EMAIL_BAD_ADDRESS],
+        ],
       })({
         email: 'a@b.org',
       });
