@@ -31,21 +31,21 @@ class ForgotPasswordEmail extends React.Component {
 
           <HeaderIcon
             uid="dismiss"
-            type={ HeaderIcon.types.backDark }
-            onPress={ this.props.onDismissPress }
+            type={HeaderIcon.types.backDark}
+            onPress={this.props.onDismissPress}
           />
         </Header>
 
         <TextInput
           label="Email"
-          value={ this.state.email }
-          onChangeText={ this.setEmail }
+          value={this.state.email}
+          onChangeText={this.setEmail}
         />
 
         <Button
           uid="sendEmail"
-          disabled={ this.state.email === '' }
-          onPress={ this.sendEmail }
+          disabled={this.state.email === ''}
+          onPress={this.sendEmail}
         >
           Send Email
         </Button>

@@ -57,27 +57,27 @@ class ForgotPasswordReset extends React.Component {
           autoCorrect={false}
           keyboardType="email-address"
           label="Token"
-          value={ this.state.token }
-          onChangeText={ this.setToken }
+          value={this.state.token}
+          onChangeText={this.setToken}
         />
         <TextInput
           secureTextEntry
           label="New Password"
-          value={ this.state.newPassword }
-          onChangeText={ this.setNewPassword }
+          value={this.state.newPassword}
+          onChangeText={this.setNewPassword}
         />
         <TextInput
           secureTextEntry
           label="New Password Again"
-          value={ this.state.checkNewPassword }
-          onChangeText={ this.setCheckNewPassword }
+          value={this.state.checkNewPassword}
+          onChangeText={this.setCheckNewPassword}
         />
 
         {/* TODO: <StatusMessage {...status} /> */}
 
         <Button
-          disabled={ this.inputIsValid() }
-          onPress={ this.submitPasswordResetData }
+          disabled={this.inputIsValid()}
+          onPress={this.submitPasswordResetData}
         >
           RESET
         </Button>
