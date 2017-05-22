@@ -1,17 +1,15 @@
 import reduce, { createInitialState } from 'src/reducers/forgotPassword';
-import { staticAction } from 'src/actionHelpers';
 
 import { fakeState } from 'app/scripts/helpers';
 import * as statuses from 'src/statuses/forgotPassword';
 import * as actions from 'src/actions/forgotPassword';
-import * as constants from 'src/constants/forgotPassword';
 
 describe('reducers/forgotPassword', () => {
   describe('SHOW_FORGOT_PASSWORD_EMAIL', () => {
     it('should mark the status as email idle when screen is opened', () => {
-      const { status } = reduce({
-        status: statuses.forgotPasswordResetStatusBadToken(),
-      }, actions.showForgotPasswordEmail());
+      const action = actions.showForgotPasswordEmail();
+      const state = { status: statuses.forgotPasswordResetStatusBadToken() };
+      const { status } = reduce(state, action);
 
       expect(status).toEqual(statuses.forgotPasswordEmailStatusIdle());
     });
@@ -19,9 +17,9 @@ describe('reducers/forgotPassword', () => {
 
   describe('FORGOT_PASSWORD_SEND_EMAIL_REQUEST', () => {
     it('should mark the status as busy with email request', () => {
-      const { status } = reduce({
-        status: statuses.forgotPasswordEmailStatusIdle(),
-      }, staticAction(constants.FORGOT_PASSWORD_SEND_EMAIL_REQUEST)());
+      const action = actions.emailForgotPasswordToken.request();
+      const state = { status: statuses.forgotPasswordEmailStatusIdle() };
+      const { status } = reduce(state, action);
 
       expect(status).toEqual(statuses.forgotPasswordEmailStatusBusy());
     });
@@ -29,38 +27,44 @@ describe('reducers/forgotPassword', () => {
 
   describe('SHOW_FORGOT_PASSWORD_RESET', () => {
     it('should mark the status as reset idle', () => {
-      const { status } = reduce({
-        status: statuses.forgotPasswordEmailStatusBusy(),
-      }, actions.showForgotPasswordReset());
+      const action = actions.showForgotPasswordReset();
+      const state = { status: statuses.forgotPasswordEmailStatusBusy() };
+      const { status } = reduce(state, action);
 
-      expect(status).toEqual(statuses.forgotPasswordResetStatusIdle());
+      expect(status)
+        .toEqual(statuses.forgotPasswordResetStatusIdle());
     });
   });
   describe('FORGOT_PASSWORD_RESET_REQUEST', () => {
     it('should mark the status as reset request has been sent', () => {
-      const { status } = reduce({
-        status: statuses.forgotPasswordResetStatusIdle(),
-      }, staticAction(constants.FORGOT_PASSWORD_RESET_REQUEST)());
+      const action = actions.resetForgotPassword.request();
+      const state = { status: statuses.forgotPasswordResetStatusIdle() };
+      const { status } = reduce(state, action);
 
-      expect(status).toEqual(statuses.forgotPasswordResetStatusBusy());
+      expect(status)
+        .toEqual(statuses.forgotPasswordResetStatusBusy());
     });
   });
 
   describe('FORGOT_PASSWORD_RESET_BAD_TOKEN', () => {
     it('should mark the status as having sent bad token', () => {
-      const { status } = reduce({
-        status: statuses.forgotPasswordResetStatusBusy(),
-      }, staticAction(constants.FORGOT_PASSWORD_RESET_BAD_TOKEN)());
+      const action = actions.resetForgotPassword.failures.apiAuthorizationError();
+      const state = { status: statuses.forgotPasswordResetStatusBusy() };
+      const { status } = reduce(state, action);
 
-      expect(status).toEqual(statuses.forgotPasswordResetStatusBadToken());
+      expect(status)
+        .toEqual(statuses.forgotPasswordResetStatusBadToken());
     });
   });
 
   describe('FORGOT_PASSWORD_SEND_EMAIL_SUCCESS', () => {
     it('should reset to initial state', () => {
-      expect(reduce(fakeState().forgotPassword,
-        staticAction(constants.FORGOT_PASSWORD_RESET_SUCCESS)())
-      ).toEqual(jasmine.objectContaining(createInitialState()));
+      const action = actions.resetForgotPassword.success();
+      const state = fakeState().forgotPassword;
+      const { status } = reduce(state, action);
+
+      expect(status)
+        .toEqual(jasmine.objectContaining(createInitialState().status));
     });
   });
 });
