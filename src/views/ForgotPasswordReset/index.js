@@ -49,6 +49,13 @@ class ForgotPasswordReset extends React.Component {
     });
   }
 
+  displayPasswordErrorMessage = () => {
+    return (
+      this.state.newPassword !== this.state.checkNewPassword
+      && this.state.newPassword !== ''
+    );
+  }
+
   render() {
     return (
       <FormView>
@@ -89,8 +96,12 @@ class ForgotPasswordReset extends React.Component {
           value={ this.state.checkNewPassword }
           onChangeText={ this.setCheckNewPassword }
         />
-
-        {/* TODO: <StatusMessage {...status} /> */}
+        {this.displayPasswordErrorMessage() &&
+          <StatusMessage
+            message={'Passwords don\'t match'}
+            theme={StatusMessage.themes.textInputMessage}
+          />
+        }
 
         <Button
           disabled={ this.inputIsValid() }
