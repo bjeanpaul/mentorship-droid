@@ -2,6 +2,7 @@ import { noop } from 'lodash';
 import React from 'react';
 
 import { uidEquals, fakeCallNoteV2 } from 'app/scripts/helpers';
+import * as constants from 'src/constants/callNotes';
 import CallQuality from 'src/views/CallNoteStepsV2/CallQuality';
 
 
@@ -34,7 +35,7 @@ describe('CallQuality', () => {
 
     el = shallow(createComponent({
       callNote: fakeCallNoteV2({
-        callQuality: '3',
+        callQuality: constants.V2_CALL_QUALITY_OK,
       }),
     }));
 
@@ -46,10 +47,10 @@ describe('CallQuality', () => {
     const el = shallow(createComponent({ onChange }));
 
     el.findWhere(uidEquals('callQualityItems'))
-      .simulate('select', '3');
+      .simulate('select', constants.V2_CALL_QUALITY_OK);
 
     expect(onChange.mock.calls)
-      .toEqual([[{ callQuality: '3' }]]);
+      .toEqual([[{ callQuality: constants.V2_CALL_QUALITY_OK }]]);
   });
 
   it('should call onBackPress() when back is pressed', () => {
