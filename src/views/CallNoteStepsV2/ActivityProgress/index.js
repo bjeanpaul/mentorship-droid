@@ -76,9 +76,9 @@ class ActivityProgress extends Component {
           >
             {
               !activity && <RadioItem
-                value={constants.V2_ACTIVITY_USED}
                 iconSelected={images.ARROW_SELECTED}
                 iconUnselected={images.ARROW_UNSELECTED}
+                value={constants.V2_ACTIVITY_USED}
                 onSelect={onActivityChangeSelect}
               >
                 We used an activity
@@ -110,7 +110,7 @@ class ActivityProgress extends Component {
             }
 
             {
-              (activity && !metadata.activityHasChanged) && <RadioItem
+              !metadata.activityHasChanged && <RadioItem
                 value={constants.V2_ACTIVITY_NOT_USED}
                 onSelect={selection => onChange({
                   activityProgress: selection,
@@ -123,9 +123,9 @@ class ActivityProgress extends Component {
 
             {
               activity && <RadioItem
-                value={constants.V2_ACTIVITY_DIFFERENT}
                 iconSelected={images.ARROW_SELECTED}
                 iconUnselected={images.ARROW_UNSELECTED}
+                value={constants.V2_ACTIVITY_DIFFERENT}
                 onSelect={onActivityChangeSelect}
               >
                 We used another activity
