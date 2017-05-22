@@ -1,17 +1,27 @@
 import React, { PropTypes } from 'react';
-import { FormView, Text, Header, HeaderIcon, TextInput, Button } from 'src/components';
+import { ScrollView } from 'react-native';
+import {
+  FormView,
+  Text,
+  Header,
+  HeaderIcon,
+  TextInput,
+  Button,
+  StatusMessage,
+} from 'src/components';
 
 class ForgotPasswordReset extends React.Component {
   static propTypes = {
     onBackPress: PropTypes.func.isRequired,
     onLoginPress: PropTypes.func,
+    message: PropTypes.string.isRequired,
   }
 
   constructor(props) {
     super(props);
     this.state = {
       token: '',
-      newPassword: '',
+      newPassword: 'foo',
       checkNewPassword: '',
     };
   }
@@ -51,7 +61,7 @@ class ForgotPasswordReset extends React.Component {
             onPress={this.props.onBackPress}
           />
         </Header>
-
+        <ScrollView>
         <TextInput
           autoCapitalize="none"
           autoCorrect={false}
@@ -60,6 +70,13 @@ class ForgotPasswordReset extends React.Component {
           value={ this.state.token }
           onChangeText={ this.setToken }
         />
+        {((this.props.message !== '')
+          && <StatusMessage
+            message={this.props.message}
+            theme={StatusMessage.themes.textInputMessage}
+          />
+          )
+        }
         <TextInput
           secureTextEntry
           label="New Password"
@@ -81,6 +98,7 @@ class ForgotPasswordReset extends React.Component {
         >
           RESET
         </Button>
+      </ScrollView>
       </FormView>
     );
   }
