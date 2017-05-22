@@ -1,7 +1,7 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import ActivityProgress from 'src/views/CallNoteStepsV2/ActivityProgress';
+import ActivityProgress, { updateScroll } from 'src/views/CallNoteStepsV2/ActivityProgress';
 import * as constants from 'src/constants/callNotes';
 import {
   propEquals, fakeActivity, fakeCallNoteV2, fakeCallNoteMetadata,
@@ -153,5 +153,44 @@ describe('ActivityProgress', () => {
 
     expect(onActivityChangeSelect.mock.calls)
       .toEqual([[]]);
+  });
+
+  describe('updateScroll', () => {
+    it('should scroll to top when the activity changes', () => {
+      const scrollTo = jest.fn();
+      const scrollView = { scrollTo };
+
+      updateScroll(scrollView, void 0, void 0);
+
+      expect(scrollTo.mock.calls)
+        .toEqual([]);
+
+      updateScroll(scrollView, void 0, fakeActivity());
+
+      expect(scrollTo.mock.calls)
+        .toEqual([[{
+          y: 0,
+          animate: false,
+        }]]);
+
+      updateScroll(scrollView, fakeActivity({ id: 23 }), fakeActivity({ id: 23 }));
+
+      expect(scrollTo.mock.calls)
+        .toEqual([[{
+          y: 0,
+          animate: false,
+        }]]);
+
+      updateScroll(scrollView, fakeActivity({ id: 21 }), fakeActivity({ id: 23 }));
+
+      expect(scrollTo.mock.calls)
+        .toEqual([[{
+          y: 0,
+          animate: false,
+        }], [{
+          y: 0,
+          animate: false,
+        }]]);
+    });
   });
 });
