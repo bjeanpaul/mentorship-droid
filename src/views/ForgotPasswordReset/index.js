@@ -21,7 +21,7 @@ class ForgotPasswordReset extends React.Component {
     super(props);
     this.state = {
       token: '',
-      newPassword: 'foo',
+      newPassword: '',
       checkNewPassword: '',
     };
   }
