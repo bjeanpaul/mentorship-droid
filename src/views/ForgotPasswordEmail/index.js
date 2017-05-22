@@ -1,11 +1,16 @@
 import React, { PropTypes } from 'react';
 import { FormView, Text, Header, HeaderIcon, Button, TextInput } from 'src/components';
 
+import {
+  FORGOT_PASSWORD_EMAIL_STATUS_BUSY,
+} from 'src/constants/forgotPassword';
 
 class ForgotPasswordEmail extends React.Component {
   static propTypes = {
     onDismissPress: PropTypes.func.isRequired,
     onSendEmailPress: PropTypes.func.isRequired,
+    status: PropTypes.string,
+
   }
 
   constructor(props) {
@@ -16,6 +21,20 @@ class ForgotPasswordEmail extends React.Component {
   }
 
   setEmail = (email) => this.setState({ email });
+
+
+  getButtonText = () => (
+    this.isBusy() ? 'Sending Email' : 'Send Email'
+  );
+
+  disableButton = () => (
+    this.state.email === ''
+    || this.isBusy()
+  );
+
+  isBusy = () => (
+    this.props.status === FORGOT_PASSWORD_EMAIL_STATUS_BUSY
+  );
 
   sendEmail = () => {
     return this.props.onSendEmailPress({
@@ -44,10 +63,10 @@ class ForgotPasswordEmail extends React.Component {
 
         <Button
           uid="sendEmail"
-          disabled={this.state.email === ''}
+          disabled={this.disableButton()}
           onPress={this.sendEmail}
         >
-          Send Email
+          {this.getButtonText()}
         </Button>
       </FormView>
     );
