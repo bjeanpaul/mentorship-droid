@@ -15,7 +15,8 @@ describe('src/reducers/navigation/forgotPassword', () => {
 
   describe('FORGOT_PASSWORD_SEND_EMAIL_SUCCESS', () => {
     it('should push on the email success route', () => {
-      expect(reduce(createStack(), staticAction(constants.FORGOT_PASSWORD_SEND_EMAIL_SUCCESS)()))
+      const action = forgotPassword.emailForgotPasswordToken.success();
+      expect(reduce(createStack(), action))
         .toEqual(push(createStack(), createRoute(routes.ROUTE_FORGOT_PASSWORD_EMAIL_SENT)));
     });
   });
@@ -29,17 +30,20 @@ describe('src/reducers/navigation/forgotPassword', () => {
 
   describe('FORGOT_PASSWORD_RESET_SUCCESS', () => {
     it('should take user back to the login page when password is successfully reset', () => {
-      expect(reduce(createStack(
-          createRoute(routes.ROUTE_LANDING),
-          createRoute(routes.ROUTE_AUTH_LOGIN),
-          createRoute(routes.ROUTE_FORGOT_PASSWORD_EMAIL),
-          createRoute(routes.ROUTE_FORGOT_PASSWORD_EMAIL_SENT),
-          createRoute(routes.ROUTE_FORGOT_PASSWORD_RESET),
-        ), staticAction(constants.FORGOT_PASSWORD_RESET_SUCCESS)()))
-        .toEqual(createStack([
-          createRoute(routes.ROUTE_LANDING),
-          createRoute(routes.ROUTE_AUTH_LOGIN),
-        ]));
+      const action = forgotPassword.resetForgotPassword.success();
+      const state = createStack(
+        createRoute(routes.ROUTE_LANDING),
+        createRoute(routes.ROUTE_AUTH_LOGIN),
+        createRoute(routes.ROUTE_FORGOT_PASSWORD_EMAIL),
+        createRoute(routes.ROUTE_FORGOT_PASSWORD_EMAIL_SENT),
+        createRoute(routes.ROUTE_FORGOT_PASSWORD_RESET),
+      );
+      const desiredState = createStack([
+        createRoute(routes.ROUTE_LANDING),
+        createRoute(routes.ROUTE_AUTH_LOGIN),
+      ]);
+
+      expect(reduce(state, action)).toEqual(desiredState);
     });
   });
 });
