@@ -27,13 +27,6 @@ describe('src/reducers/navigation/forgotPassword', () => {
     });
   });
 
-  describe('FORGOT_PASSWORD_RESET_REQUEST', () => {
-    it('should push on the loading route', () => {
-      expect(reduce(createStack(), staticAction(constants.FORGOT_PASSWORD_RESET_REQUEST)()))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_LOADING)));
-    });
-  });
-
   describe('FORGOT_PASSWORD_RESET_SUCCESS', () => {
     it('should take user back to the login page when password is successfully reset', () => {
       expect(reduce(createStack(
@@ -42,7 +35,6 @@ describe('src/reducers/navigation/forgotPassword', () => {
           createRoute(routes.ROUTE_FORGOT_PASSWORD_EMAIL),
           createRoute(routes.ROUTE_FORGOT_PASSWORD_EMAIL_SENT),
           createRoute(routes.ROUTE_FORGOT_PASSWORD_RESET),
-          createRoute(routes.ROUTE_LOADING),
         ), staticAction(constants.FORGOT_PASSWORD_RESET_SUCCESS)()))
         .toEqual(createStack([
           createRoute(routes.ROUTE_LANDING),

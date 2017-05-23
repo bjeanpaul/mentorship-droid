@@ -18,10 +18,6 @@ export default (state, action) => {
     case forgotPassword.SHOW_FORGOT_PASSWORD_RESET:
       return push(state, createRoute(routes.ROUTE_FORGOT_PASSWORD_RESET));
 
-    case forgotPassword.FORGOT_PASSWORD_RESET_REQUEST: {
-      return push(state, createRoute(routes.ROUTE_LOADING));
-    }
-
     case forgotPassword.FORGOT_PASSWORD_RESET_SUCCESS: {
       return createStack([
         createRoute(routes.ROUTE_LANDING),

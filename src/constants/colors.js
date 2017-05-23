@@ -139,4 +139,6 @@ export default {
 
   RICH_TEXT_CODE_TEXT: '#80979a',
   RICH_TEXT_CODE_BG: '#dfe5e6',
+
+  STATUS_MESSAGE_TEXT_ERROR: '#d30000',
 };

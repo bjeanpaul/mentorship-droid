@@ -5,7 +5,7 @@ import { dismissScreen } from 'src/actions/navigation';
 import { emailForgotPasswordToken } from 'src/actions/forgotPassword';
 
 export const mapStateToProps = state => {
-  return { status: state.forgotPassword.status.type };
+  return state.forgotPassword;
 };
 
 export const mapDispatchToProps = {
