@@ -40,7 +40,7 @@ const propsToActions = {
   onBackPress: dismissActivityScreen,
   onSchedulePress: scheduleActivityCall,
   onReschedulePress: openScheduledCall,
-  onViewCallNotesPress: viewActivityCallNotes,
+  onViewCallNoteListPress: viewActivityCallNotes,
 };
 
 

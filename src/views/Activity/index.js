@@ -168,11 +168,11 @@ const Action = ({
   nextScheduledCall,
   onSchedulePress,
   onReschedulePress,
-  onViewCallNotesPress,
+  onViewCallNoteListPress,
 }) => {
   if (latestCall) {
     return (
-      <ActionButton style={style} onPress={() => onViewCallNotesPress(id)}>
+      <ActionButton style={style} onPress={() => onViewCallNoteListPress(id)}>
         Add or view notes
       </ActionButton>
     );
@@ -233,7 +233,7 @@ Action.propTypes = {
   nextScheduledCall: PropTypes.object,
   onSchedulePress: PropTypes.func.isRequired,
   onReschedulePress: PropTypes.func.isRequired,
-  onViewCallNotesPress: PropTypes.func.isRequired,
+  onViewCallNoteListPress: PropTypes.func.isRequired,
 };
 
 
