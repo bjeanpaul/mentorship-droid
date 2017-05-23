@@ -70,7 +70,7 @@ class ForgotPasswordEmail extends React.Component {
         {
           this.props.status.type === FORGOT_PASSWORD_EMAIL_STATUS_BAD_ADDRESS &&
           <Text style={Text.types.textInputErrorMessage}>
-            {'Not a valid email address'}
+            'Not a valid email address'
           </Text>
         }
 

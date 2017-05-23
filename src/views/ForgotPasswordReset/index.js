@@ -96,7 +96,7 @@ class ForgotPasswordReset extends React.Component {
         {
           this.props.status.type === FORGOT_PASSWORD_RESET_STATUS_BAD_TOKEN &&
           <Text style={Text.types.textInputErrorMessage}>
-            {'Reset code is incorrect, please check your email'}
+            'Reset code is incorrect, please check your email'
           </Text>
         }
         <TextInput
