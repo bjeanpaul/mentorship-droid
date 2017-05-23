@@ -18,6 +18,7 @@ const CallResult = ({
     callResult,
   },
   onChange,
+  onDismissPress,
   ...props,
 }) => (
   <FormStep
@@ -25,6 +26,7 @@ const CallResult = ({
     title="How did the call go?"
     secondaryTitle="Did you have a complete conversation?"
     {...props}
+    onBackPress={onDismissPress}
   >
     <ScrollView>
       <View>
@@ -47,6 +49,7 @@ CallResult.propTypes = {
   callNote: PropTypes.shape({
     callResult: PropTypes.string,
   }).isRequired,
+  onDismissPress: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
 };
 
