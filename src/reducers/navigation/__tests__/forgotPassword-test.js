@@ -1,9 +1,7 @@
 import * as routes from 'src/constants/routes';
-import { staticAction } from 'src/actionHelpers';
 import reduce from 'src/reducers/navigation/forgotPassword';
 import { createStack, createRoute, push } from 'src/navigationHelpers';
 import * as forgotPassword from 'src/actions/forgotPassword';
-import * as constants from 'src/constants/forgotPassword';
 
 describe('src/reducers/navigation/forgotPassword', () => {
   describe('SHOW_FORGOT_PASSWORD_EMAIL', () => {
