@@ -8,7 +8,7 @@ import {
   getCategory,
   getActivity,
   getNextScheduledCall,
-  getCallsWithCallNotes,
+  getCalls,
 } from 'src/store/helpers';
 
 import {
@@ -18,25 +18,19 @@ import {
 } from 'src/actions/activities';
 
 
-const getLatestCallNote = (state, activityId) => {
-  let res = state;
-  res = getCallsWithCallNotes(res);
-  return findLast(res, ({ call }) => call.activity === activityId);
-};
-
-
 const mapStateToProps = (state, { activityId }) => {
   const activity = getActivity(state, activityId);
   const { category: categoryId } = activity;
   const category = getCategory(state, categoryId);
   const nextScheduledCall = getNextScheduledCall(state, { activity: activityId });
-  const latestCallNote = (getLatestCallNote(state, activityId) || 0).callNote;
+  const calls = getCalls(state);
+  const latestCall = findLast(calls, call => call.activity === activityId);
 
   return {
     category,
     activity,
     nextScheduledCall,
-    latestCallNote,
+    latestCall,
   };
 };
 

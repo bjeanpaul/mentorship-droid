@@ -1,7 +1,7 @@
 import { mapStateToProps } from 'src/containers/ActivityContainer';
 
 import {
-  fakeState, fakeActivity, fakeCategory, fakeScheduledCall, fakeCall, fakeCallNote,
+  fakeState, fakeActivity, fakeCategory, fakeScheduledCall, fakeCall,
 } from 'app/scripts/helpers';
 
 
@@ -67,13 +67,13 @@ describe('ActivityContainer', () => {
         }));
     });
 
-    it('should provide the latest call note recorded for this activity', () => {
-      const callNote = fakeCallNote({
-        id: 2,
-        call: 3,
-      });
-
+    it('should provide the latest call recorded for this activity', () => {
       const state = fakeState();
+
+      const call = fakeCall({
+        id: 3,
+        activity: 21,
+      });
 
       state.entities.calls = {
         1: fakeCall({
@@ -84,27 +84,16 @@ describe('ActivityContainer', () => {
           id: 2,
           activity: 21,
         }),
-        3: fakeCall({
-          id: 3,
-          activity: 21,
-        }),
+        3: call,
       };
 
       state.entities.activities = {
         21: fakeActivity({ id: 21 }),
       };
 
-      state.entities.callNotes = {
-        1: fakeCallNote({
-          id: 1,
-          call: 3,
-        }),
-        2: callNote,
-      };
-
       expect(mapStateToProps(state, { activityId: 21 }))
         .toEqual(jasmine.objectContaining({
-          latestCallNote: callNote,
+          latestCall: call,
         }));
     });
   });
