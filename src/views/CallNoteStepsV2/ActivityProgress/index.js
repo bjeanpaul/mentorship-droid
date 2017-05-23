@@ -1,81 +1,149 @@
-import { isUndefined } from 'lodash';
-import React, { PropTypes } from 'react';
+import { isEqual } from 'lodash';
+import React, { PropTypes, Component } from 'react';
 import { ScrollView } from 'react-native';
 
 import { FormStep, Panel, Radio, RadioItem } from 'src/components';
 import * as constants from 'src/constants/callNotes';
+import images from 'src/constants/images';
 
 
-const ActivityProgress = ({
-  activity,
-  onChange,
-  callNote: { activityProgress },
-  metadata: { activityIsOverridden },
-  ...props,
-}) => (
-  <FormStep
-    paginationDisabled={isUndefined(activityProgress)}
-    title="Activities"
-    secondaryTitle="Did you complete the scheduled activity?"
-    {...props}
-  >
-    <ScrollView>
-      {
-        activity && <Panel
-          title="Scheduled Activity"
-          styles={[Panel.types.embedded, Panel.types.snippet]}
-          numberOfLines={2}
-        >
-          {activity.objective}
-        </Panel>
-      }
+export const updateScroll = (scrollView, activity, prevActivity) => {
+  if (!isEqual(activity, prevActivity)) {
+    scrollView.scrollTo({
+      y: 0,
+      animate: false,
+    });
+  }
+};
 
-      <Radio
-        uid="activityProgressItems"
-        selection={activityProgress}
-        onSelect={selection => onChange({ activityProgress: selection })}
+
+class ActivityProgress extends Component {
+  constructor(...args) {
+    super(...args);
+    this.scrollView = null;
+    this.setScrollViewRef = this.setScrollViewRef.bind(this);
+  }
+
+  componentDidUpdate(prevProps) {
+    updateScroll(this.scrollView, this.props.activity, prevProps.activity);
+  }
+
+  getSecondaryTitle() {
+    if (this.props.activity && !this.props.metadata.activityHasChanged) {
+      return 'Did you complete the scheduled activity?';
+    } else if (this.props.activity && this.props.metadata.activityHasChanged) {
+      return 'Did you complete the activity?';
+    } else {
+      return 'Did you complete an activity?';
+    }
+  }
+
+  setScrollViewRef(scrollView) {
+    this.scrollView = scrollView;
+  }
+
+  render() {
+    const {
+      activity,
+      onChange,
+      callNote,
+      metadata,
+      onActivityChangeSelect,
+      ...props,
+    } = this.props;
+
+    return (
+      <FormStep
+        paginationDisabled={!callNote.activityProgress}
+        title="Activities"
+        secondaryTitle={this.getSecondaryTitle()}
+        {...props}
       >
-        {
-          !activity && <RadioItem value={constants.V2_ACTIVITY_USED}>
-            We used an activity
-          </RadioItem>
-        }
+        <ScrollView ref={this.setScrollViewRef}>
+          {
+            activity && <Panel
+              title={activity.title}
+              styles={[Panel.types.embedded, Panel.types.snippet]}
+              numberOfLines={2}
+            >
+              {activity.objective}
+            </Panel>
+          }
 
-        {
-          activity && <RadioItem value={constants.V2_ACTIVITY_COMPLETED}>
-            Yes, we completed it
-          </RadioItem>
-        }
+          <Radio
+            uid="activityProgressItems"
+            selection={callNote.activityProgress}
+          >
+            {
+              !activity && <RadioItem
+                iconSelected={images.ARROW_SELECTED}
+                iconUnselected={images.ARROW_UNSELECTED}
+                value={constants.V2_ACTIVITY_USED}
+                onSelect={onActivityChangeSelect}
+              >
+                We used an activity
+              </RadioItem>
+            }
 
-        {
-          activity && <RadioItem value={constants.V2_ACTIVITY_PARTIALLY_COMPLETED}>
-            We used it, but did not finish
-          </RadioItem>
-        }
+            {
+              activity && <RadioItem
+                value={constants.V2_ACTIVITY_COMPLETED}
+                onSelect={selection => onChange({
+                  activityProgress: selection,
+                  activity: activity.id,
+                })}
+              >
+                Yes, we completed it
+              </RadioItem>
+            }
 
-        {
-          !activityIsOverridden && <RadioItem value={constants.V2_ACTIVITY_NOT_USED}>
-            No, we did our own thing
-          </RadioItem>
-        }
+            {
+              activity && <RadioItem
+                value={constants.V2_ACTIVITY_PARTIALLY_COMPLETED}
+                onSelect={selection => onChange({
+                  activityProgress: selection,
+                  activity: activity.id,
+                })}
+              >
+                We used it, but did not finish
+              </RadioItem>
+            }
 
-        {
-          (!activityIsOverridden && activity) && (
-            <RadioItem value={constants.V2_ACTIVITY_DIFFERENT}>
-              We used another activity
-            </RadioItem>
-          )
-        }
-      </Radio>
-    </ScrollView>
-  </FormStep>
-);
+            {
+              !metadata.activityHasChanged && <RadioItem
+                value={constants.V2_ACTIVITY_NOT_USED}
+                onSelect={selection => onChange({
+                  activityProgress: selection,
+                  activity: null,
+                })}
+              >
+                No, we did our own thing
+              </RadioItem>
+            }
+
+            {
+              activity && <RadioItem
+                iconSelected={images.ARROW_SELECTED}
+                iconUnselected={images.ARROW_UNSELECTED}
+                value={constants.V2_ACTIVITY_DIFFERENT}
+                onSelect={onActivityChangeSelect}
+              >
+                We used another activity
+              </RadioItem>
+            }
+          </Radio>
+        </ScrollView>
+      </FormStep>
+    );
+  }
+}
 
 ActivityProgress.propTypes = {
   callNote: PropTypes.object,
   activity: PropTypes.object,
   metadata: PropTypes.object,
   onChange: PropTypes.func.isRequired,
+  onActivityChangeSelect: PropTypes.func,
 };
 
 

@@ -33,6 +33,9 @@ import RichText from './RichText';
 import Panel from './Panel';
 import Radio, { RadioItem } from './Radio';
 import StatusMessage from './StatusMessage';
+import RadioGrid, { RadioGridItem } from './RadioGrid';
+
+import defineRadio, { defineRadioItem } from './defineRadio';
 
 
 export {
@@ -73,4 +76,9 @@ export {
   Radio,
   RadioItem,
   StatusMessage,
+  RadioGrid,
+  RadioGridItem,
+
+  defineRadio,
+  defineRadioItem,
 };

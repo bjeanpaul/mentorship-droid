@@ -16,12 +16,13 @@ class CallNoteStepsV2 extends Component {
     return (
       <Step
         activity={this.props.activity}
-        metadata={this.props.metadata}
         callNote={this.props.callNote}
+        metadata={this.props.metadata}
         onChange={this.props.onChange}
         onBackPress={this.props.onBackPress}
         onNextPress={this.props.onNextPress}
         onDonePress={this.props.onDonePress}
+        onActivityChangeSelect={this.props.onActivityChangeSelect}
       />
     );
   }
@@ -38,15 +39,16 @@ class CallNoteStepsV2 extends Component {
 
 
 CallNoteStepsV2.propTypes = {
+  routes: PropTypes.object,
   steps: NavigationPropTypes.navigationState.isRequired,
   activity: PropTypes.any,
-  metadata: PropTypes.object.isRequired,
   callNote: PropTypes.object.isRequired,
+  metadata: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired,
   onBackPress: PropTypes.func.isRequired,
   onNextPress: PropTypes.func.isRequired,
   onDonePress: PropTypes.func.isRequired,
-  routes: PropTypes.object,
+  onActivityChangeSelect: PropTypes.func.isRequired,
 };
 
 

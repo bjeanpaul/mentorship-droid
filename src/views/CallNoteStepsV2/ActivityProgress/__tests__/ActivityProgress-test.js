@@ -1,10 +1,10 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import ActivityProgress from 'src/views/CallNoteStepsV2/ActivityProgress';
+import ActivityProgress, { updateScroll } from 'src/views/CallNoteStepsV2/ActivityProgress';
 import * as constants from 'src/constants/callNotes';
 import {
-  uidEquals, fakeActivity, fakeCallNoteV2, fakeCallNoteMetadata,
+  propEquals, fakeActivity, fakeCallNoteV2, fakeCallNoteMetadata,
 } from 'app/scripts/helpers';
 
 
@@ -24,7 +24,7 @@ describe('ActivityProgress', () => {
   it('should support rendering items for an original activity', () => {
     const el = render(createComponent({
       activity: fakeActivity(),
-      metadata: fakeCallNoteMetadata({ activityIsOverridden: false }),
+      metadata: fakeCallNoteMetadata({ activityHasChanged: false }),
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
@@ -33,7 +33,7 @@ describe('ActivityProgress', () => {
   it('should support rendering items for an overridden activity', () => {
     const el = render(createComponent({
       activity: fakeActivity(),
-      metadata: fakeCallNoteMetadata({ activityIsOverridden: true }),
+      metadata: fakeCallNoteMetadata({ activityHasChanged: true }),
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
@@ -64,22 +64,6 @@ describe('ActivityProgress', () => {
     expect(el.find('FormStep').prop('paginationDisabled')).toBe(false);
   });
 
-  it('should call onChange() when the rating changes', () => {
-    const onChange = jest.fn();
-
-    const el = shallow(createComponent({
-      onChange,
-    }));
-
-    el.findWhere(uidEquals('activityProgressItems'))
-      .simulate('select', constants.V2_ACTIVITY_PARTIALLY_COMPLETED);
-
-    expect(onChange.mock.calls)
-      .toEqual([[{
-        activityProgress: constants.V2_ACTIVITY_PARTIALLY_COMPLETED,
-      }]]);
-  });
-
   it('should call onBackPress() when back is pressed', () => {
     const onBackPress = jest.fn();
 
@@ -104,5 +88,109 @@ describe('ActivityProgress', () => {
 
     expect(onNextPress.mock.calls)
       .toEqual([[]]);
+  });
+
+  it('should call onChange() when "completed" is selected', () => {
+    const onChange = jest.fn();
+
+    const el = shallow(createComponent({
+      activity: fakeActivity({ id: 23 }),
+      onChange,
+    }));
+
+    el.findWhere(propEquals('value', constants.V2_ACTIVITY_COMPLETED))
+      .simulate('select', constants.V2_ACTIVITY_COMPLETED);
+
+    expect(onChange.mock.calls)
+      .toEqual([[{
+        activityProgress: constants.V2_ACTIVITY_COMPLETED,
+        activity: 23,
+      }]]);
+  });
+
+  it('should call onChange() when " partially completed" is selected', () => {
+    const onChange = jest.fn();
+
+    const el = shallow(createComponent({
+      activity: fakeActivity({ id: 23 }),
+      onChange,
+    }));
+
+    el.findWhere(propEquals('value', constants.V2_ACTIVITY_PARTIALLY_COMPLETED))
+      .simulate('select', constants.V2_ACTIVITY_PARTIALLY_COMPLETED);
+
+    expect(onChange.mock.calls)
+      .toEqual([[{
+        activityProgress: constants.V2_ACTIVITY_PARTIALLY_COMPLETED,
+        activity: 23,
+      }]]);
+  });
+
+  it('should call onActivityChangeSelect when "activity used" is selected', () => {
+    const onActivityChangeSelect = jest.fn();
+
+    const el = shallow(createComponent({
+      activity: void 0,
+      onActivityChangeSelect,
+    }));
+
+    el.findWhere(propEquals('value', constants.V2_ACTIVITY_USED))
+      .simulate('select');
+
+    expect(onActivityChangeSelect.mock.calls)
+      .toEqual([[]]);
+  });
+
+  it('should call onActivityChangeSelect when "activity different" is selected', () => {
+    const onActivityChangeSelect = jest.fn();
+
+    const el = shallow(createComponent({
+      onActivityChangeSelect,
+    }));
+
+    el.findWhere(propEquals('value', constants.V2_ACTIVITY_DIFFERENT))
+      .simulate('select');
+
+    expect(onActivityChangeSelect.mock.calls)
+      .toEqual([[]]);
+  });
+
+  describe('updateScroll', () => {
+    it('should scroll to top when the activity changes', () => {
+      const scrollTo = jest.fn();
+      const scrollView = { scrollTo };
+
+      updateScroll(scrollView, void 0, void 0);
+
+      expect(scrollTo.mock.calls)
+        .toEqual([]);
+
+      updateScroll(scrollView, void 0, fakeActivity());
+
+      expect(scrollTo.mock.calls)
+        .toEqual([[{
+          y: 0,
+          animate: false,
+        }]]);
+
+      updateScroll(scrollView, fakeActivity({ id: 23 }), fakeActivity({ id: 23 }));
+
+      expect(scrollTo.mock.calls)
+        .toEqual([[{
+          y: 0,
+          animate: false,
+        }]]);
+
+      updateScroll(scrollView, fakeActivity({ id: 21 }), fakeActivity({ id: 23 }));
+
+      expect(scrollTo.mock.calls)
+        .toEqual([[{
+          y: 0,
+          animate: false,
+        }], [{
+          y: 0,
+          animate: false,
+        }]]);
+    });
   });
 });

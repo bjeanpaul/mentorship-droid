@@ -1,7 +1,9 @@
 import { fromPairs } from 'lodash';
 import images from 'src/constants/images';
 
-export const CALL_NOTE_VERSION = '1';
+// TODO consistent convention for namespacing of constants
+
+export const CALL_NOTE_VERSION = '2';
 
 export const CALL_NOTE_LIST_REQUEST = 'CALL_NOTE_LIST_REQUEST';
 export const CALL_NOTE_LIST_SUCCESS = 'CALL_NOTE_LIST_SUCCESS';
@@ -26,13 +28,15 @@ export const CALL_NOTES_MENTEE_ENGAGED = 'engaged';
 export const CALL_NOTE_CREATE_OPEN = 'CALL_NOTE_CREATE_OPEN';
 export const CALL_NOTE_RETROACTIVELY_CREATE_OPEN = 'CALL_NOTE_RETROACTIVELY_CREATE_OPEN';
 export const CALL_NOTES_CHANGE_CALL_NOTE = 'CALL_NOTES_CHANGE_CALL_NOTE';
-
 export const CALL_NOTES_VIEW_ALL = 'CALL_NOTES_VIEW_ALL';
-
 export const CALL_NOTE_CHOOSE = 'CALL_NOTE_CHOOSE';
 
 export const ADD_RETROACTIVELY = 'ADD_RETROACTIVELY';
 export const ADD_IMMEDIATE = 'ADD_IMMEDIATE';
+
+export const CALL_NOTE_ACTIVITY_CHANGE = 'CALL_NOTE_ACTIVITY_CHANGE';
+export const CALL_NOTE_CATEGORY_CHOOSE = 'CALL_NOTE_CATEGORY_CHOOSE';
+export const CALL_NOTE_ACTIVITY_CHOOSE = 'CALL_NOTE_ACTIVITY_CHOOSE';
 
 export const MOOD_IMAGES = fromPairs([
   [CALL_NOTES_MENTEE_HAPPY, images.CALL_NOTES_MENTEE_HAPPY],
@@ -107,6 +111,17 @@ export const V2_EVENT_MOOD_IMAGES = fromPairs([
   [V2_MOOD_ENGAGED, images.EVENT_MENTEE_ENGAGED],
 ]);
 
+export const V2_MOOD_LABELS = fromPairs([
+  [V2_MOOD_HAPPY, 'Happy'],
+  [V2_MOOD_SAD, 'Sad'],
+  [V2_MOOD_BORED, 'Bored'],
+  [V2_MOOD_CONFUSED, 'Confused'],
+  [V2_MOOD_UPSET, 'Upset'],
+  [V2_MOOD_WITHDRAWN, 'Withdrawn'],
+  [V2_MOOD_EXCITED, 'Excited'],
+  [V2_MOOD_ENGAGED, 'Engaged'],
+]);
+
 export const V2_STEP_BACK = 'V2_STEP_BACK';
 export const V2_STEP_NEXT = 'V2_STEP_NEXT';
 
@@ -118,12 +133,12 @@ export const V2_STEP_RATING = 'V2_STEP_RATING';
 export const V2_STEP_MOOD = 'V2_STEP_MOOD';
 export const V2_STEP_CALL_QUALITY = 'V2_STEP_CALL_QUALITY';
 
-export const V2_STEPS_WITH_ACTIVITY = [
+export const V2_STEPS = [
   V2_STEP_CALL_RESULT,
   V2_STEP_ACTIVITY_PROGRESS,
   V2_STEP_OBJECTIVE_ACHIEVED,
-  V2_STEP_REFLECTION,
   V2_STEP_RATING,
+  V2_STEP_REFLECTION,
   V2_STEP_MOOD,
   V2_STEP_CALL_QUALITY,
 ];
@@ -161,3 +176,17 @@ export const V2_ACTIVITY_COMPLETED = 'COMPLETED';
 export const V2_ACTIVITY_PARTIALLY_COMPLETED = 'PARTIALLY_COMPLETED';
 export const V2_ACTIVITY_NOT_USED = 'NOT_USED';
 export const V2_ACTIVITY_DIFFERENT = 'DIFFERENT';
+
+export const V2_CALL_QUALITY_EXCELLENT = 'EXCELLENT';
+export const V2_CALL_QUALITY_OK = 'OK';
+export const V2_CALL_QUALITY_INAUDIBLE = 'INAUDIBLE';
+export const V2_CALL_QUALITY_DROPPED = 'DROPPED';
+export const V2_CALL_QUALITY_DELAYED = 'DELAYED';
+
+export const V2_CALL_QUALITY_LABELS = fromPairs([
+  [CALL_QUALITY_EXCELLENT, 'Excellent'],
+  [CALL_QUALITY_OK, 'Ok'],
+  [CALL_QUALITY_INAUDIBLE, "Couldn't hear"],
+  [CALL_QUALITY_DROPPED, 'Call dropped'],
+  [CALL_QUALITY_DELAYED, 'Delays'],
+]);
