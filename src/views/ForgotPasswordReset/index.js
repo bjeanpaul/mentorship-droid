@@ -19,16 +19,16 @@ class ForgotPasswordReset extends React.Component {
     onBackPress: PropTypes.func.isRequired,
     onLoginPress: PropTypes.func,
     status: PropTypes.object,
-    newPassword: PropTypes.string,
-    checkNewPassword: PropTypes.string,
+    initialNewPassword: PropTypes.string,
+    initialCheckNewPassword: PropTypes.string,
   }
 
   constructor(props) {
     super(props);
     this.state = {
       token: '',
-      newPassword: this.props.newPassword || '',
-      checkNewPassword: this.props.checkNewPassword || '',
+      newPassword: this.props.initialNewPassword || '',
+      checkNewPassword: this.props.initialCheckNewPassword || '',
     };
   }
 

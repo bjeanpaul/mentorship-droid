@@ -47,8 +47,8 @@ describe('ForgotPasswordReset', () => {
   it(('should display the password mismatch error message '
       + 'when passwords are mismatched'), () => {
     const el = render(createComponent({
-      newPassword: 'foo',
-      checkNewPassword: 'foo',
+      initialNewPassword: 'foo',
+      initialCheckNewPassword: 'foo',
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
@@ -57,8 +57,8 @@ describe('ForgotPasswordReset', () => {
   it(('should not display the password mismatch error message '
       + 'when passwords are matched'), () => {
     const el = render(createComponent({
-      newPassword: 'foo',
-      checkNewPassword: 'foo',
+      initialNewPassword: 'foo',
+      initialCheckNewPassword: 'foo',
     }));
     expect(el.toJSON()).toMatchSnapshot();
   });
