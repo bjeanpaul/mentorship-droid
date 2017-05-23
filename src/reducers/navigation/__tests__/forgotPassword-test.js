@@ -29,8 +29,17 @@ describe('src/reducers/navigation/forgotPassword', () => {
   });
 
   describe('FORGOT_PASSWORD_RESET_SUCCESS', () => {
-    it('should take user back to the login page when password is successfully reset', () => {
+    it('should push on the reset successful route', () => {
       const action = forgotPassword.resetForgotPassword.success();
+
+      expect(reduce(createStack(), action))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_FORGOT_PASSWORD_RESET_SUCCESS)));
+    });
+  });
+
+  describe('RESET_TO_LOGIN_SCREEN', () => {
+    it('should take user back to the login page when password is successfully reset', () => {
+      const action = forgotPassword.resetToLoginScreen();
       const state = createStack(
         createRoute(routes.ROUTE_LANDING),
         createRoute(routes.ROUTE_AUTH_LOGIN),
