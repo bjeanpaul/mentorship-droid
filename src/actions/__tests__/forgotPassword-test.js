@@ -8,6 +8,7 @@ import {
   emailForgotPasswordToken,
   resetForgotPassword,
   showForgotPasswordEmail,
+  resetToLoginScreen,
 } from 'src/actions/forgotPassword';
 
 const { ApiAuthorizationError, ApiDataInvalidError } = api;
@@ -51,6 +52,15 @@ describe('forgotPassword/actions', () => {
     it('should create action to show forgot password email screen', () => {
       expect(showForgotPasswordEmail()).toEqual({
         type: constants.SHOW_FORGOT_PASSWORD_EMAIL,
+      });
+    });
+  });
+
+  describe('resetToLoginScreen', () => {
+    it(('should create action to pop reset views off the navigation stack'
+        + ' and take user to the login screen'), () => {
+      expect(resetToLoginScreen()).toEqual({
+        type: constants.RESET_TO_LOGIN_SCREEN,
       });
     });
   });
