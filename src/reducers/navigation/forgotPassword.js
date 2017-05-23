@@ -19,6 +19,10 @@ export default (state, action) => {
       return push(state, createRoute(routes.ROUTE_FORGOT_PASSWORD_RESET));
 
     case forgotPassword.FORGOT_PASSWORD_RESET_SUCCESS: {
+      return push(state, createRoute(routes.ROUTE_FORGOT_PASSWORD_RESET_SUCCESS));
+    }
+
+    case forgotPassword.RESET_TO_LOGIN_SCREEN: {
       return createStack([
         createRoute(routes.ROUTE_LANDING),
         createRoute(routes.ROUTE_AUTH_LOGIN),
