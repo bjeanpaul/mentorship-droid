@@ -11,7 +11,7 @@ describe('CallResult', () => {
     <CallResult
       callNote={fakeCallNoteV2()}
       onChange={noop}
-      onBackPress={noop}
+      onDismissPress={noop}
       onNextPress={noop}
       {...props}
     />
@@ -58,17 +58,17 @@ describe('CallResult', () => {
       }]]);
   });
 
-  it('should call onBackPress() when back is pressed', () => {
-    const onBackPress = jest.fn();
+  it('should call onDismissPress() when back is pressed', () => {
+    const onDismissPress = jest.fn();
 
     const el = shallow(createComponent({
-      onBackPress,
+      onDismissPress,
     }));
 
     el.find('FormStep')
       .simulate('backPress');
 
-    expect(onBackPress.mock.calls)
+    expect(onDismissPress.mock.calls)
       .toEqual([[]]);
   });
 
