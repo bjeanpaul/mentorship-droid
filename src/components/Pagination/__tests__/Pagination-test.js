@@ -4,7 +4,7 @@ import Pagination from 'src/components/Pagination';
 import { uidEquals } from 'app/scripts/helpers';
 
 
-describe('Button', () => {
+describe('Pagination', () => {
   const createComponent = (props = {}) => (
       <Pagination
         onBackPress={noop}

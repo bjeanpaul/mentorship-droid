@@ -1,24 +1,47 @@
-import { merge } from 'lodash/fp';
+import { merge, assign } from 'lodash/fp';
 import { unary } from 'lodash';
 import * as constants from 'src/constants/callNotes';
 import { AUTH_LOGOUT } from 'src/constants/auth';
 import {
-  createStack, createRoute, forward, back, jumpToIndex,
+  createStack, createRoute, forward, back, jumpToIndex, getCurrent,
 } from 'src/navigationHelpers';
 
 
 export const createInitialState = () => ({
-  callNote: { version: constants.CALL_NOTE_VERSION },
-  metadata: { activityIsOverridden: false },
-  steps: null,
+  callNote: {
+    activity: void 0,
+    version: constants.CALL_NOTE_VERSION,
+  },
+  metadata: {
+    activityHasChanged: false,
+  },
+  steps: void 0,
 });
 
 
 export const createSteps = () => {
-  // TODO return null for v1
-  // TODO logic for different steps based on with/without activity
-  const steps = createStack(constants.V2_STEPS_WITH_ACTIVITY.map(unary(createRoute)));
+  const steps = createStack(constants.V2_STEPS.map(unary(createRoute)));
   return jumpToIndex(steps, 0);
+};
+
+
+export const shouldSkipStep = (state, step) => {
+  switch (step) {
+    case constants.V2_STEP_RATING:
+    case constants.V2_STEP_OBJECTIVE_ACHIEVED:
+      return !state.callNote.activity;
+
+    default:
+      return false;
+  }
+};
+
+
+export const step = (state, stepFn) => {
+  let nextState = state;
+  do nextState = assign(nextState, { steps: stepFn(nextState.steps) });
+  while (shouldSkipStep(nextState, getCurrent(nextState.steps).key));
+  return nextState;
 };
 
 
@@ -57,16 +80,21 @@ export default (state = createInitialState(), action) => {
       });
 
     case constants.V2_STEP_BACK:
-      return {
-        ...state,
-        steps: back(state.steps),
-      };
+      return step(state, back);
 
     case constants.V2_STEP_NEXT:
-      return {
-        ...state,
-        steps: forward(state.steps),
-      };
+      return step(state, forward);
+
+    case constants.CALL_NOTE_ACTIVITY_CHOOSE:
+      return merge(state, {
+        callNote: {
+          activityProgress: void 0,
+          activity: action.payload.activityId,
+        },
+        metadata: {
+          activityHasChanged: true,
+        },
+      });
 
     default:
       return state;

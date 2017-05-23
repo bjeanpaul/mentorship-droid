@@ -41,6 +41,8 @@ import CallNoteSavingContainer from 'src/containers/CallNoteSavingContainer';
 import CallNoteSavedContainer from 'src/containers/CallNoteSavedContainer';
 import CallNoteListContainer from 'src/containers/CallNoteListContainer';
 import CallNoteDetailContainer from 'src/containers/CallNoteDetailContainer';
+import CallNoteCategoryListContainer from 'src/containers/CallNoteCategoryListContainer';
+import CallNoteActivityListContainer from 'src/containers/CallNoteActivityListContainer';
 
 import MessagesContainer from 'src/containers/MessagesContainer';
 
@@ -95,6 +97,8 @@ export default fromPairs([
   [constants.ROUTE_CALL_NOTE_SAVED, CallNoteSavedContainer],
   [constants.ROUTE_CALL_NOTE_LIST, CallNoteListContainer],
   [constants.ROUTE_CALL_NOTE_DETAIL, CallNoteDetailContainer],
+  [constants.ROUTE_CALL_NOTE_CATEGORY_LIST, CallNoteCategoryListContainer],
+  [constants.ROUTE_CALL_NOTE_ACTIVITY_LIST, CallNoteActivityListContainer],
 
   [constants.ROUTE_CHAT, MessagesContainer],
 
