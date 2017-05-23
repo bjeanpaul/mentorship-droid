@@ -5,7 +5,7 @@ import { imageUrl } from 'src/api';
 import Activity from 'src/views/Activity';
 
 import {
-  fakeCallNote,
+  fakeCall,
   fakeCategory,
   fakeActivity,
   fakeScheduledCall,
@@ -42,7 +42,7 @@ describe('Activity', () => {
   });
 
   it('should display the relevant context for the latest call note', () => {
-    const el = render(createComponent({ latestCallNote: fakeCallNote() }));
+    const el = render(createComponent({ latestCall: fakeCall() }));
     expect(el.toJSON()).toMatchSnapshot();
   });
 
@@ -132,7 +132,7 @@ describe('Activity', () => {
 
     const el = shallow(createComponent({
       id: 23,
-      latestCallNote: fakeCallNote(),
+      latestCall: fakeCall(),
       onViewCallNotesPress,
     }));
 
@@ -149,7 +149,7 @@ describe('Activity', () => {
 
     const el = shallow(createComponent({
       id: 23,
-      latestCallNote: fakeCallNote(),
+      latestCall: fakeCall(),
       onViewCallNotesPress,
     }));
 

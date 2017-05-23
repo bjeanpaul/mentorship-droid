@@ -1192,7 +1192,7 @@ exports[`Activity should display the relevant context for the latest call note 1
           ]
         }>
         Last discussed on 
-        Sep 27, 12:00 am
+        Sep 27, 10:51 am
       </Text>
       <TouchableNativeFeedback
         onPress={[Function]}>
@@ -1238,7 +1238,7 @@ exports[`Activity should display the relevant context for the latest call note 1
                 ],
               ]
             }>
-            VIEW CALL NOTES
+            ADD OR VIEW NOTES
           </Text>
         </View>
       </TouchableNativeFeedback>
@@ -2015,7 +2015,7 @@ exports[`Activity should display the relevant context for the latest call note 1
           ]
         }>
         Last discussed on 
-        Sep 27, 12:00 am
+        Sep 27, 10:51 am
       </Text>
       <TouchableNativeFeedback
         onPress={[Function]}>
@@ -2063,7 +2063,7 @@ exports[`Activity should display the relevant context for the latest call note 1
                 ],
               ]
             }>
-            VIEW CALL NOTES
+            ADD OR VIEW NOTES
           </Text>
         </View>
       </TouchableNativeFeedback>
@@ -2230,7 +2230,7 @@ exports[`Activity should display the relevant context for the next scheduled cal
           ]
         }>
         Scheduled to discuss on 
-        Sep 27, 10:51 am
+        Sep 16, 1:27 pm
       </Text>
       <TouchableNativeFeedback
         onPress={[Function]}>
@@ -3053,7 +3053,7 @@ exports[`Activity should display the relevant context for the next scheduled cal
           ]
         }>
         Scheduled to discuss on 
-        Sep 27, 10:51 am
+        Sep 16, 1:27 pm
       </Text>
       <TouchableNativeFeedback
         onPress={[Function]}>
