@@ -1,6 +1,6 @@
 import { noop } from 'lodash';
 import React from 'react';
-// import { uidEquals } from 'app/scripts/helpers';
+import { uidEquals } from 'app/scripts/helpers';
 import ForgotPasswordReset from 'src/views/ForgotPasswordReset';
 
 import {
@@ -43,33 +43,43 @@ describe('ForgotPasswordReset', () => {
     expect(render(el)).toMatchSnapshot();
   });
 
-  // it('should call onBackPress', () => {
-  //   const onBackPress = jest.fn();
-  //   const el = shallow(createComponent({ onBackPress }));
-
-  //   el.findWhere(uidEquals('back'))
-  //     .simulate('press');
-
-  //   expect(onBackPress).toBeCalled();
-  // });
 
   it(('should display the password mismatch error message '
       + 'when passwords are mismatched'), () => {
-    const el = render(createComponent());
-    el.getInstance().setState({
+    const el = render(createComponent({
       newPassword: 'foo',
-      checkNewPassword: 'f',
-    });
+      checkNewPassword: 'foo',
+    }));
+
     expect(el.toJSON()).toMatchSnapshot();
   });
 
   it(('should not display the password mismatch error message '
       + 'when passwords are matched'), () => {
-    const el = render(createComponent());
-    el.getInstance().setState({
+    const el = render(createComponent({
       newPassword: 'foo',
       checkNewPassword: 'foo',
-    });
+    }));
     expect(el.toJSON()).toMatchSnapshot();
+  });
+
+  it('should call onBackPress', () => {
+    const onBackPress = jest.fn();
+    const el = shallow(createComponent({ onBackPress }));
+
+    el.findWhere(uidEquals('back'))
+      .simulate('press');
+
+    expect(onBackPress).toBeCalled();
+  });
+
+  it('should call onLoginPress', () => {
+    const onLoginPress = jest.fn();
+    const el = shallow(createComponent({ onLoginPress }));
+
+    el.findWhere(uidEquals('submit'))
+      .simulate('press');
+
+    expect(onLoginPress).toBeCalled();
   });
 });
