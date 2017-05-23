@@ -6,7 +6,6 @@ import {
   HeaderIcon,
   Button,
   TextInput,
-  StatusMessage,
 } from 'src/components';
 
 import {
@@ -70,10 +69,9 @@ class ForgotPasswordEmail extends React.Component {
         />
         {
           this.props.status === FORGOT_PASSWORD_EMAIL_STATUS_BAD_ADDRESS &&
-          <StatusMessage
-            message={'Not a valid email address'}
-            theme={StatusMessage.themes.textInputMessage}
-          />
+          <Text style={Text.types.textInputErrorMessage}>
+            {'Not a valid email address'}
+          </Text>
         }
 
         <Button

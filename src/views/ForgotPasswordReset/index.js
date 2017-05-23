@@ -7,7 +7,6 @@ import {
   HeaderIcon,
   TextInput,
   Button,
-  StatusMessage,
 } from 'src/components';
 
 import {
@@ -93,10 +92,9 @@ class ForgotPasswordReset extends React.Component {
         />
         {
           this.props.status === FORGOT_PASSWORD_RESET_STATUS_BAD_TOKEN &&
-          <StatusMessage
-            message={this.props.status}
-            theme={StatusMessage.themes.textInputMessage}
-          />
+          <Text style={Text.types.textInputErrorMessage}>
+            {'Reset code is incorrect, please check your email'}
+          </Text>
         }
         <TextInput
           secureTextEntry
@@ -111,10 +109,9 @@ class ForgotPasswordReset extends React.Component {
           onChangeText={this.setCheckNewPassword}
         />
         {this.displayPasswordErrorMessage() &&
-          <StatusMessage
-            message={'Passwords don\'t match'}
-            theme={StatusMessage.themes.textInputMessage}
-          />
+          <Text style={Text.types.textInputErrorMessage}>
+            {'Passwords don\'t match'}
+          </Text>
         }
 
         <Button
