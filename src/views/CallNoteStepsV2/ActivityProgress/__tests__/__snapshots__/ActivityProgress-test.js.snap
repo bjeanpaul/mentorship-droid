@@ -127,7 +127,7 @@ exports[`ActivityProgress should support rendering items for an original activit
                 ],
               ]
             }>
-            SCHEDULED ACTIVITY
+            ACTIVITY 3
           </Text>
         </View>
         <View>
@@ -643,7 +643,7 @@ exports[`ActivityProgress should support rendering items for an overridden activ
           },
         ]
       }>
-      Did you complete the scheduled activity?
+      Did you complete the activity?
     </Text>
   </View>
   <View
@@ -705,7 +705,7 @@ exports[`ActivityProgress should support rendering items for an overridden activ
                 ],
               ]
             }>
-            SCHEDULED ACTIVITY
+            ACTIVITY 3
           </Text>
         </View>
         <View>
@@ -866,6 +866,65 @@ exports[`ActivityProgress should support rendering items for an overridden activ
               ]
             }>
             We used it, but did not finish
+          </Text>
+          <Image
+            source={1}
+            style={
+              Object {
+                "height": 32,
+                "width": 32,
+              }
+            } />
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hitSlop={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomWidth": 1,
+              "borderColor": "#dfe5e6",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingBottom": 18,
+              "paddingTop": 18,
+            }
+          }
+          testID={undefined}>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#003035",
+                  "fontFamily": "Brandon Text",
+                },
+                Object {
+                  "fontSize": 13,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "#003035",
+                  "flex": 1,
+                  "fontSize": 18,
+                  "marginRight": 16,
+                  "textAlign": "left",
+                },
+              ]
+            }>
+            We used another activity
           </Text>
           <Image
             source={1}
@@ -1103,7 +1162,7 @@ exports[`ActivityProgress should support rendering items for no activity 1`] = `
           },
         ]
       }>
-      Did you complete the scheduled activity?
+      Did you complete an activity?
     </Text>
   </View>
   <View

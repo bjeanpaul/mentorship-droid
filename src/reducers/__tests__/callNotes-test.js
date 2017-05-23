@@ -1,8 +1,8 @@
 import reduce, { createInitialState } from 'src/reducers/callNotes';
 import * as actions from 'src/actions/callNotes';
-import { fakeState } from 'app/scripts/helpers';
+import { fakeState, fakeCallNoteV2 } from 'app/scripts/helpers';
 import { logout } from 'src/actions/auth';
-import { ADD_RETROACTIVELY, ADD_IMMEDIATE } from 'src/constants/callNotes';
+import * as constants from 'src/constants/callNotes';
 import { createStack, createRoute, jumpToIndex } from 'src/navigationHelpers';
 
 
@@ -31,7 +31,7 @@ describe('reducers/callNotes', () => {
       const { metadata } = reduce(void 0, actions.openCreateCallNote(23));
 
       expect(metadata)
-        .toEqual(jasmine.objectContaining({ actionType: ADD_IMMEDIATE }));
+        .toEqual(jasmine.objectContaining({ actionType: constants.ADD_IMMEDIATE }));
     });
   });
 
@@ -46,7 +46,7 @@ describe('reducers/callNotes', () => {
     it('should set metadata to indicate that the call note is being created retroactively', () => {
       const { metadata } = reduce(void 0, actions.openRetroactivelyCreateCallNote(23));
       expect(metadata)
-        .toEqual(jasmine.objectContaining({ actionType: ADD_RETROACTIVELY }));
+        .toEqual(jasmine.objectContaining({ actionType: constants.ADD_RETROACTIVELY }));
     });
   });
 
@@ -85,6 +85,35 @@ describe('reducers/callNotes', () => {
           steps: jumpToIndex(steps, 1),
         }));
     });
+
+    it('should skip activity steps if there is no activity', () => {
+      for (const step of ([
+        constants.V2_STEP_RATING,
+        constants.V2_STEP_OBJECTIVE_ACHIEVED,
+      ])) {
+        let steps = createStack([
+          createRoute('A'),
+          createRoute(step),
+          createRoute('B'),
+        ]);
+
+        steps = jumpToIndex(steps, 0);
+
+        const { callNote: state } = fakeState({
+          callNote: {
+            steps,
+            callNote: fakeCallNoteV2({
+              activity: null,
+            }),
+          },
+        });
+
+        expect(reduce(state, actions.v2StepNext()))
+          .toEqual(jasmine.objectContaining({
+            steps: jumpToIndex(steps, 2),
+          }));
+      }
+    });
   });
 
   describe('V2_STEP_BACK', () => {
@@ -103,6 +132,53 @@ describe('reducers/callNotes', () => {
       expect(reduce(state, actions.v2StepBack()))
         .toEqual(jasmine.objectContaining({
           steps: jumpToIndex(steps, 0),
+        }));
+    });
+
+    it('should skip activity steps if there is no activity', () => {
+      for (const step of ([
+        constants.V2_STEP_RATING,
+        constants.V2_STEP_OBJECTIVE_ACHIEVED,
+      ])) {
+        const steps = createStack([
+          createRoute('A'),
+          createRoute(step),
+          createRoute('B'),
+        ]);
+
+        const { callNote: state } = fakeState({
+          callNote: {
+            steps,
+            callNote: fakeCallNoteV2({
+              activity: null,
+            }),
+          },
+        });
+
+        expect(reduce(state, actions.v2StepBack()))
+          .toEqual(jasmine.objectContaining({
+            steps: jumpToIndex(steps, 0),
+          }));
+      }
+    });
+  });
+
+  describe('CALL_NOTE_ACTIVITY_CHOOSE', () => {
+    it('should reset the activity progress', () => {
+      const { callNote } = reduce(void 0, actions.chooseCallNoteActivity(23));
+
+      expect(callNote)
+        .toEqual(jasmine.objectContaining({
+          activityProgress: void 0,
+        }));
+    });
+
+    it('should update the activity id with the id in the payload', () => {
+      const { callNote } = reduce(void 0, actions.chooseCallNoteActivity(23));
+
+      expect(callNote)
+        .toEqual(jasmine.objectContaining({
+          activity: 23,
         }));
     });
   });

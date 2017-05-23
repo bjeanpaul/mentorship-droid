@@ -1,18 +1,34 @@
+import { isUndefined, map } from 'lodash';
 import React, { PropTypes } from 'react';
+import { ScrollView } from 'react-native';
 
-import { FormStep } from 'src/components';
+import * as constants from 'src/constants/callNotes';
+import { FormStep, Radio, RadioItem } from 'src/components';
 
 
 const ObjectiveAchieved = ({
-  callNote,
+  callNote: { objectiveAchieved },
   onChange,
   ...props,
-}) => callNote && onChange && (
+}) => (
   <FormStep
-    paginationDisabled={false}
-    title=""
+    paginationDisabled={isUndefined(objectiveAchieved)}
+    title="To what extent did you achieve your objective?"
     {...props}
-  />
+  >
+    <ScrollView>
+      <Radio
+        uid="objectiveAchievedItems"
+        selection={objectiveAchieved}
+        onSelect={selection => onChange({ objectiveAchieved: selection })}
+      >
+      {
+        map(constants.V2_OBJECTIVE_ACHIEVED_LABELS, (label, value) =>
+          <RadioItem key={value} value={value}>{label}</RadioItem>)
+      }
+      </Radio>
+    </ScrollView>
+  </FormStep>
 );
 
 ObjectiveAchieved.propTypes = {

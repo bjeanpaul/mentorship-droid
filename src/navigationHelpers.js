@@ -91,12 +91,15 @@ export const inject = (state, key, context) => ({
 });
 
 
-export const remove = (state, key) => !has(state, key)
-  ? state
-  : {
+export const remove = (state, key) => {
+  if (!has(state, key)) return state;
+  const routes = reject(state.routes, { key });
+  return {
     ...state,
-    routes: reject(state.routes, { key }),
+    index: routes.length - 1,
+    routes,
   };
+};
 
 
 export const replaceOrPush = (state, key, route) => has(state, key)
