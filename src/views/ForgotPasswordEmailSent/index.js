@@ -7,7 +7,7 @@ import styles from 'src/views/ForgotPasswordEmailSent/styles';
 
 const ForgotPasswordEmailSent = ({
   onDismissPress,
-  onLoginPress,
+  onResetPress,
 }) => (
   <BaseView style={styles.base}>
     <Header>
@@ -32,11 +32,11 @@ const ForgotPasswordEmailSent = ({
 
       <View style={styles.actionContainer}>
         <Button
-          uid="logIn"
+          uid="resetPassword"
           theme={Button.themes.transparentDark}
-          onPress={onLoginPress}
+          onPress={onResetPress}
         >
-          LOG IN
+          RESET PASSWORD
         </Button>
       </View>
     </View>
@@ -45,7 +45,7 @@ const ForgotPasswordEmailSent = ({
 
 ForgotPasswordEmailSent.propTypes = {
   onDismissPress: PropTypes.func.isRequired,
-  onLoginPress: PropTypes.func.isRequired,
+  onResetPress: PropTypes.func.isRequired,
 };
 
 

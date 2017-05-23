@@ -9,7 +9,7 @@ describe('ForgotPasswordEmailSent', () => {
     return (
       <ForgotPasswordEmailSent
         onDismissPress={noop}
-        onLoginPress={noop}
+        onResetPress={noop}
         {...props}
       />
     );
@@ -30,14 +30,14 @@ describe('ForgotPasswordEmailSent', () => {
     expect(onDismissPress.mock.calls).toEqual([[]]);
   });
 
-  it('should call onLoginPress when the login button is pressed', () => {
-    const onLoginPress = jest.fn();
+  it('should call onResetPress when the login button is pressed', () => {
+    const onResetPress = jest.fn();
 
-    const el = shallow(createComponent({ onLoginPress }));
+    const el = shallow(createComponent({ onResetPress }));
 
-    el.findWhere(uidEquals('logIn'))
+    el.findWhere(uidEquals('resetPassword'))
       .simulate('press');
 
-    expect(onLoginPress.mock.calls).toEqual([[]]);
+    expect(onResetPress.mock.calls).toEqual([[]]);
   });
 });
