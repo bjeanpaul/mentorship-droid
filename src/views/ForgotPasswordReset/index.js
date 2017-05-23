@@ -18,7 +18,7 @@ class ForgotPasswordReset extends React.Component {
   static propTypes = {
     onBackPress: PropTypes.func.isRequired,
     onLoginPress: PropTypes.func,
-    status: PropTypes.string.isRequired,
+    status: PropTypes.object,
   }
 
   constructor(props) {
@@ -37,7 +37,7 @@ class ForgotPasswordReset extends React.Component {
   setCheckNewPassword = (checkNewPassword) => this.setState({ checkNewPassword });
 
   getButtonText = () => (
-    (this.status === FORGOT_PASSWORD_RESET_STATUS_BUSY) ? 'RESETTING' : 'RESET'
+    (this.props.status.type === FORGOT_PASSWORD_RESET_STATUS_BUSY) ? 'RESETTING' : 'RESET'
   )
 
   inputIsValid = () => (
@@ -48,7 +48,7 @@ class ForgotPasswordReset extends React.Component {
 
   canPressButton = () => (
     this.inputIsValid &&
-    this.props.status !== FORGOT_PASSWORD_RESET_STATUS_BUSY
+    this.props.status.type !== FORGOT_PASSWORD_RESET_STATUS_BUSY
   )
 
   submitPasswordResetData = () => {
@@ -91,7 +91,7 @@ class ForgotPasswordReset extends React.Component {
           onChangeText={this.setToken}
         />
         {
-          this.props.status === FORGOT_PASSWORD_RESET_STATUS_BAD_TOKEN &&
+          this.props.status.type === FORGOT_PASSWORD_RESET_STATUS_BAD_TOKEN &&
           <Text style={Text.types.textInputErrorMessage}>
             {'Reset code is incorrect, please check your email'}
           </Text>
@@ -115,7 +115,7 @@ class ForgotPasswordReset extends React.Component {
         }
 
         <Button
-          disabled={this.inputIsValid()}
+          disabled={this.canPressButton()}
           onPress={this.submitPasswordResetData}
         >
           {this.getButtonText()}

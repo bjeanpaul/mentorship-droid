@@ -17,7 +17,7 @@ class ForgotPasswordEmail extends React.Component {
   static propTypes = {
     onDismissPress: PropTypes.func.isRequired,
     onSendEmailPress: PropTypes.func.isRequired,
-    status: PropTypes.string,
+    status: PropTypes.object,
 
   }
 
@@ -40,7 +40,7 @@ class ForgotPasswordEmail extends React.Component {
   );
 
   isBusy = () => (
-    this.props.status === FORGOT_PASSWORD_EMAIL_STATUS_BUSY
+    this.props.status.type === FORGOT_PASSWORD_EMAIL_STATUS_BUSY
   );
 
   sendEmail = () => {
@@ -68,7 +68,7 @@ class ForgotPasswordEmail extends React.Component {
           onChangeText={this.setEmail}
         />
         {
-          this.props.status === FORGOT_PASSWORD_EMAIL_STATUS_BAD_ADDRESS &&
+          this.props.status.type === FORGOT_PASSWORD_EMAIL_STATUS_BAD_ADDRESS &&
           <Text style={Text.types.textInputErrorMessage}>
             {'Not a valid email address'}
           </Text>
