@@ -91,6 +91,27 @@ export const themes = {
       color: colors.BUTTON_TRANSPARENT_DISABLED_TITLE,
     },
   }),
+
+  transparentDark: StyleSheet.create({
+    container: {
+      backgroundColor: colors.BUTTON_TRANSPARENT_BG,
+      borderColor: colors.BUTTON_TRANSPARENT_DARK_BORDER,
+      borderWidth: 2,
+    },
+
+    title: {
+      color: colors.BUTTON_TRANSPARENT_DARK_TITLE,
+      fontSize: 15,
+    },
+
+    containerIsDisabled: {
+      borderColor: colors.BUTTON_TRANSPARENT_DISABLED_BORDER,
+    },
+
+    titleIsDisabled: {
+      color: colors.BUTTON_TRANSPARENT_DISABLED_TITLE,
+    },
+  }),
 };
 
 

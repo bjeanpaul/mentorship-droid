@@ -37,6 +37,7 @@ import {
   getScheduledCallActivity,
   getEvents,
   getCallNotes,
+  getCalls,
   getCall,
   getCallsWithCallNotes,
   getCallNote,
@@ -272,6 +273,22 @@ describe('helpers', () => {
       };
 
       expect(getScheduledCall(state, 6)).toEqual(fakeScheduledCall({ id: 6 }));
+    });
+  });
+
+  describe('getCalls', () => {
+    it('should get the stored calls', () => {
+      const state = fakeState();
+
+      state.entities.calls = {
+        6: fakeCall({ id: 6 }),
+        7: fakeCall({ id: 7 }),
+      };
+
+      expect(getCalls(state)).toEqual([
+        fakeCall({ id: 6 }),
+        fakeCall({ id: 7 }),
+      ]);
     });
   });
 

@@ -5,7 +5,7 @@ import { imageUrl } from 'src/api';
 import Activity from 'src/views/Activity';
 
 import {
-  fakeCallNote,
+  fakeCall,
   fakeCategory,
   fakeActivity,
   fakeScheduledCall,
@@ -21,7 +21,7 @@ describe('Activity', () => {
       onBackPress={noop}
       onSchedulePress={noop}
       onReschedulePress={noop}
-      onViewCallNotesPress={noop}
+      onViewCallNoteListPress={noop}
       {...props}
     />
   );
@@ -42,7 +42,7 @@ describe('Activity', () => {
   });
 
   it('should display the relevant context for the latest call note', () => {
-    const el = render(createComponent({ latestCallNotes: fakeCallNote() }));
+    const el = render(createComponent({ latestCall: fakeCall() }));
     expect(el.toJSON()).toMatchSnapshot();
   });
 
@@ -127,13 +127,13 @@ describe('Activity', () => {
     expect(onReschedulePress).toBeCalled();
   });
 
-  it('should call onViewCallNotesPress when the top schedule button is pressed', () => {
-    const onViewCallNotesPress = jest.fn();
+  it('should call onViewCallNoteListPress when the top schedule button is pressed', () => {
+    const onViewCallNoteListPress = jest.fn();
 
     const el = shallow(createComponent({
       id: 23,
-      latestCallNotes: fakeCallNote(),
-      onViewCallNotesPress,
+      latestCall: fakeCall(),
+      onViewCallNoteListPress,
     }));
 
     el.findWhere(uidEquals('topAction'))
@@ -141,16 +141,16 @@ describe('Activity', () => {
       .find('ActionButton')
       .simulate('press');
 
-    expect(onViewCallNotesPress).toBeCalled();
+    expect(onViewCallNoteListPress).toBeCalled();
   });
 
-  it('should call onViewCallNotesPress when the bottom schedule button is pressed', () => {
-    const onViewCallNotesPress = jest.fn();
+  it('should call onViewCallNoteListPress when the bottom schedule button is pressed', () => {
+    const onViewCallNoteListPress = jest.fn();
 
     const el = shallow(createComponent({
       id: 23,
-      latestCallNotes: fakeCallNote(),
-      onViewCallNotesPress,
+      latestCall: fakeCall(),
+      onViewCallNoteListPress,
     }));
 
     el.findWhere(uidEquals('bottomAction'))
@@ -158,6 +158,6 @@ describe('Activity', () => {
       .find('ActionButton')
       .simulate('press');
 
-    expect(onViewCallNotesPress).toBeCalled();
+    expect(onViewCallNoteListPress).toBeCalled();
   });
 });

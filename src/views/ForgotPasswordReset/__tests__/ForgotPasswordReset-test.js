@@ -17,4 +17,7 @@ describe('ForgotPasswordReset', () => {
   it('should render', () => {
     expect(render(createComponent())).toMatchSnapshot();
   });
+
+  // TODO - tests for status
+  // TODO - tests for button enabled/disabled
 });
