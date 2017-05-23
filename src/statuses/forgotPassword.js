@@ -1,4 +1,4 @@
-import * as constants from 'src/constants/auth';
+import * as constants from 'src/constants/forgotPassword';
 import { staticStatus } from 'src/helpers';
 
 
@@ -8,6 +8,10 @@ const forgotPasswordEmailStatusIdle = staticStatus(
 
 const forgotPasswordEmailStatusBusy = staticStatus(
   constants.FORGOT_PASSWORD_EMAIL_STATUS_BUSY);
+
+
+const forgotPasswordEmailStatusBadAddress = staticStatus(
+  constants.FORGOT_PASSWORD_EMAIL_STATUS_BAD_ADDRESS);
 
 
 const forgotPasswordResetStatusIdle = staticStatus(
@@ -25,6 +29,7 @@ const forgotPasswordResetStatusBadToken = staticStatus(
 export {
   forgotPasswordEmailStatusIdle,
   forgotPasswordEmailStatusBusy,
+  forgotPasswordEmailStatusBadAddress,
   forgotPasswordResetStatusIdle,
   forgotPasswordResetStatusBusy,
   forgotPasswordResetStatusBadToken,

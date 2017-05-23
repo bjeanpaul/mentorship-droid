@@ -1,14 +1,17 @@
 import { apiAction, staticAction } from 'src/actionHelpers';
-import * as constants from 'src/constants/calls';
+import * as constants from 'src/constants/forgotPassword';
 import * as api from 'src/api';
 
-const { ApiAuthorizationError } = api;
+const { ApiAuthorizationError, ApiDataInvalidError } = api;
 
 
 export const emailForgotPasswordToken = apiAction({
   method: api.emailForgotPasswordToken,
   request: staticAction(constants.FORGOT_PASSWORD_SEND_EMAIL_REQUEST),
   success: staticAction(constants.FORGOT_PASSWORD_SEND_EMAIL_SUCCESS),
+  failures: [
+    [ApiDataInvalidError, staticAction(constants.FORGOT_PASSWORD_SEND_EMAIL_BAD_ADDRESS)],
+  ],
 });
 
 

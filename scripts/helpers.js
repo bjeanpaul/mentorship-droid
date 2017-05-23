@@ -185,6 +185,7 @@ export const fakeBlogPost = data => merge({
 export const fakeForgotPasswordReset = data => merge({
   token: '71828182',
   newPassword: 'abc',
+  checkNewPassword: 'abc',
 }, data);
 
 

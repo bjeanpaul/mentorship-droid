@@ -10,6 +10,7 @@ describe('Login', () => {
   const createComponent = (props = {}) => (
     <Login
       status={statuses.authStatusIdle()}
+      onForgotPasswordPress={noop}
       onLoginPress={noop}
       onBackPress={noop}
       {...props}
@@ -28,5 +29,15 @@ describe('Login', () => {
       .simulate('press');
 
     expect(onBackPress.mock.calls).toEqual([[]]);
+  });
+
+  it('should call onForgotPasswordPress when the forgot password is pressed', () => {
+    const onForgotPasswordPress = jest.fn();
+    const el = shallow(createComponent({ onForgotPasswordPress }));
+
+    el.findWhere(uidEquals('forgotPassword'))
+      .simulate('press');
+
+    expect(onForgotPasswordPress.mock.calls).toEqual([[]]);
   });
 });
