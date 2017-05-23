@@ -10,11 +10,16 @@ import {
   StatusMessage,
 } from 'src/components';
 
+import {
+  FORGOT_PASSWORD_RESET_STATUS_BUSY,
+  FORGOT_PASSWORD_RESET_STATUS_BAD_TOKEN,
+} from 'src/constants/forgotPassword';
+
 class ForgotPasswordReset extends React.Component {
   static propTypes = {
     onBackPress: PropTypes.func.isRequired,
     onLoginPress: PropTypes.func,
-    message: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
   }
 
   constructor(props) {
@@ -32,10 +37,19 @@ class ForgotPasswordReset extends React.Component {
 
   setCheckNewPassword = (checkNewPassword) => this.setState({ checkNewPassword });
 
+  getButtonText = () => (
+    (this.status === FORGOT_PASSWORD_RESET_STATUS_BUSY) ? 'RESETTING' : 'RESET'
+  )
+
   inputIsValid = () => (
     !((this.state.token !== '') &&
       (this.state.newPassword !== '') &&
       (this.state.newPassword === this.state.checkNewPassword))
+  )
+
+  canPressButton = () => (
+    this.inputIsValid &&
+    this.props.status !== FORGOT_PASSWORD_RESET_STATUS_BUSY
   )
 
   submitPasswordResetData = () => {
@@ -77,12 +91,12 @@ class ForgotPasswordReset extends React.Component {
           value={this.state.token}
           onChangeText={this.setToken}
         />
-        {((this.props.message !== '')
-          && <StatusMessage
-            message={this.props.message}
+        {
+          this.props.status === FORGOT_PASSWORD_RESET_STATUS_BAD_TOKEN &&
+          <StatusMessage
+            message={this.props.status}
             theme={StatusMessage.themes.textInputMessage}
           />
-          )
         }
         <TextInput
           secureTextEntry
@@ -107,7 +121,7 @@ class ForgotPasswordReset extends React.Component {
           disabled={this.inputIsValid()}
           onPress={this.submitPasswordResetData}
         >
-          RESET
+          {this.getButtonText()}
         </Button>
       </ScrollView>
       </FormView>
