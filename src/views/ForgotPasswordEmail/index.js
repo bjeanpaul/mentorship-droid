@@ -1,8 +1,17 @@
 import React, { PropTypes } from 'react';
-import { FormView, Text, Header, HeaderIcon, Button, TextInput } from 'src/components';
+import {
+  FormView,
+  Text,
+  Header,
+  HeaderIcon,
+  Button,
+  TextInput,
+  StatusMessage,
+} from 'src/components';
 
 import {
   FORGOT_PASSWORD_EMAIL_STATUS_BUSY,
+  FORGOT_PASSWORD_EMAIL_STATUS_BAD_ADDRESS,
 } from 'src/constants/forgotPassword';
 
 class ForgotPasswordEmail extends React.Component {
@@ -21,7 +30,6 @@ class ForgotPasswordEmail extends React.Component {
   }
 
   setEmail = (email) => this.setState({ email });
-
 
   getButtonText = () => (
     this.isBusy() ? 'Sending Email' : 'Send Email'
@@ -60,6 +68,13 @@ class ForgotPasswordEmail extends React.Component {
           value={this.state.email}
           onChangeText={this.setEmail}
         />
+        {
+          this.props.status === FORGOT_PASSWORD_EMAIL_STATUS_BAD_ADDRESS &&
+          <StatusMessage
+            message={'Not a valid email address'}
+            theme={StatusMessage.themes.textInputMessage}
+          />
+        }
 
         <Button
           uid="sendEmail"
