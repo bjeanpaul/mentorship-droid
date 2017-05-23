@@ -63,10 +63,11 @@ class ForgotPasswordReset extends React.Component {
   }
 
   displayPasswordErrorMessage = () => {
-    return (
-      this.state.newPassword !== this.state.checkNewPassword
-      && this.state.newPassword !== ''
-    );
+    if (this.state.newPassword === '' || this.state.checkNewPassword === '') {
+      return false;
+    } else if (this.state.newPassword === this.state.checkNewPassword) {
+      return false;
+    } else { return true; }
   }
 
   render() {
