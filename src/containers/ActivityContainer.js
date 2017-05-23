@@ -1,4 +1,4 @@
-import { filter, last } from 'lodash';
+import { findLast } from 'lodash';
 import { connect } from 'react-redux';
 import Activity from 'src/views/Activity';
 
@@ -8,7 +8,7 @@ import {
   getCategory,
   getActivity,
   getNextScheduledCall,
-  getCallNotes,
+  getCallsWithCallNotes,
 } from 'src/store/helpers';
 
 import {
@@ -18,18 +18,25 @@ import {
 } from 'src/actions/activities';
 
 
+const getLatestCallNote = (state, activityId) => {
+  let res = state;
+  res = getCallsWithCallNotes(res);
+  return findLast(res, ({ call }) => call.activity === activityId);
+};
+
+
 const mapStateToProps = (state, { activityId }) => {
   const activity = getActivity(state, activityId);
   const { category: categoryId } = activity;
   const category = getCategory(state, categoryId);
   const nextScheduledCall = getNextScheduledCall(state, { activity: activityId });
-  const latestCallNotes = last(filter(getCallNotes(state), { callActivity: activityId }));
+  const latestCallNote = (getLatestCallNote(state, activityId) || 0).callNote;
 
   return {
     category,
     activity,
     nextScheduledCall,
-    latestCallNotes,
+    latestCallNote,
   };
 };
 
