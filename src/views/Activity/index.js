@@ -134,21 +134,21 @@ const Section = ({
 
 const Status = ({
   style,
-  latestCallNotes,
+  latestCallNote,
   nextScheduledCall,
 }) => {
   const statusStyles = [styles.status, style];
 
-  if (latestCallNotes) {
+  if (latestCallNote) {
     return (
       <Text style={statusStyles}>
-        Last discussed on {moment(latestCallNotes).format('MMM D, h:mm a')}
+        Last discussed on {moment(latestCallNote).format('MMM D, h:mm a')}
       </Text>
     );
   } else if (nextScheduledCall) {
     return (
       <Text style={statusStyles}>
-        Scheduled to discuss on {moment(latestCallNotes).format('MMM D, h:mm a')}
+        Scheduled to discuss on {moment(latestCallNote).format('MMM D, h:mm a')}
       </Text>
     );
   } else {
@@ -164,13 +164,13 @@ const Status = ({
 const Action = ({
   style,
   activity: { id },
-  latestCallNotes,
+  latestCallNote,
   nextScheduledCall,
   onSchedulePress,
   onReschedulePress,
   onViewCallNotesPress,
 }) => {
-  if (latestCallNotes) {
+  if (latestCallNote) {
     return (
       <ActionButton style={style} onPress={() => onViewCallNotesPress(id)}>
         View call notes
@@ -221,7 +221,7 @@ Section.propTypes = {
 
 Status.propTypes = {
   style: PropTypes.any,
-  latestCallNotes: PropTypes.object,
+  latestCallNote: PropTypes.object,
   nextScheduledCall: PropTypes.object,
 };
 
@@ -229,7 +229,7 @@ Status.propTypes = {
 Action.propTypes = {
   style: PropTypes.any,
   activity: PropTypes.object.isRequired,
-  latestCallNotes: PropTypes.object,
+  latestCallNote: PropTypes.object,
   nextScheduledCall: PropTypes.object,
   onSchedulePress: PropTypes.func.isRequired,
   onReschedulePress: PropTypes.func.isRequired,

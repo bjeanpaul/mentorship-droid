@@ -42,7 +42,7 @@ describe('Activity', () => {
   });
 
   it('should display the relevant context for the latest call note', () => {
-    const el = render(createComponent({ latestCallNotes: fakeCallNote() }));
+    const el = render(createComponent({ latestCallNote: fakeCallNote() }));
     expect(el.toJSON()).toMatchSnapshot();
   });
 
@@ -132,7 +132,7 @@ describe('Activity', () => {
 
     const el = shallow(createComponent({
       id: 23,
-      latestCallNotes: fakeCallNote(),
+      latestCallNote: fakeCallNote(),
       onViewCallNotesPress,
     }));
 
@@ -149,7 +149,7 @@ describe('Activity', () => {
 
     const el = shallow(createComponent({
       id: 23,
-      latestCallNotes: fakeCallNote(),
+      latestCallNote: fakeCallNote(),
       onViewCallNotesPress,
     }));
 
