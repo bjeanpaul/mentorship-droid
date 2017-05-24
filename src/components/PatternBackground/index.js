@@ -7,6 +7,9 @@ import images from 'src/constants/images';
 import styles from 'src/components/PatternBackground/styles';
 
 
+const renderCell = i => <Image key={i} source={images.PATTERN_BG} />;
+
+
 class PatternBackground extends Component {
   static get defaultProps() {
     return {
@@ -51,8 +54,7 @@ class PatternBackground extends Component {
             key={String(i)}
             style={styles.row}
           >
-            {times(this.getWidthRepeats(), j => (
-              <Image key={`${i}:${j}`} source={images.PATTERN_BG} />))}
+            {times(this.getWidthRepeats(), renderCell)}
           </View>))}
         </View>
 
