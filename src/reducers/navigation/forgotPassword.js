@@ -2,7 +2,7 @@ import { createStack } from 'src/navigationHelpers';
 
 import * as routes from 'src/constants/routes';
 import * as forgotPassword from 'src/constants/forgotPassword';
-import { push, createRoute } from 'src/navigationHelpers';
+import { push, remove, createRoute } from 'src/navigationHelpers';
 
 
 export default (state, action) => {
@@ -15,8 +15,10 @@ export default (state, action) => {
       return push(state, createRoute(routes.ROUTE_FORGOT_PASSWORD_EMAIL_SENT));
     }
 
-    case forgotPassword.SHOW_FORGOT_PASSWORD_RESET:
-      return push(state, createRoute(routes.ROUTE_FORGOT_PASSWORD_RESET));
+    case forgotPassword.SHOW_FORGOT_PASSWORD_RESET: {
+      const newState = remove(state, routes.ROUTE_FORGOT_PASSWORD_EMAIL_SENT);
+      return push(newState, createRoute(routes.ROUTE_FORGOT_PASSWORD_RESET));
+    }
 
     case forgotPassword.FORGOT_PASSWORD_RESET_SUCCESS: {
       return push(state, createRoute(routes.ROUTE_FORGOT_PASSWORD_RESET_SUCCESS));
