@@ -54,6 +54,8 @@ import BlogPostListContainer from 'src/containers/BlogPostListContainer';
 import ForgotPasswordEmailContainer from 'src/containers/ForgotPasswordEmailContainer';
 import ForgotPasswordEmailSentContainer from 'src/containers/ForgotPasswordEmailSentContainer';
 import ForgotPasswordResetContainer from 'src/containers/ForgotPasswordResetContainer';
+import ForgotPasswordResetSuccessContainer from
+  'src/containers/ForgotPasswordResetSuccessContainer';
 
 export default fromPairs([
   [constants.ROUTE_API_ERROR, ApiErrorContainer],
@@ -109,4 +111,5 @@ export default fromPairs([
   [constants.ROUTE_FORGOT_PASSWORD_EMAIL, ForgotPasswordEmailContainer],
   [constants.ROUTE_FORGOT_PASSWORD_EMAIL_SENT, ForgotPasswordEmailSentContainer],
   [constants.ROUTE_FORGOT_PASSWORD_RESET, ForgotPasswordResetContainer],
+  [constants.ROUTE_FORGOT_PASSWORD_RESET_SUCCESS, ForgotPasswordResetSuccessContainer],
 ]);

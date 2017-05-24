@@ -1,15 +1,23 @@
 import React, { PropTypes } from 'react';
-import { FormView, Text, Header, HeaderIcon, Button, TextInput } from 'src/components';
+import {
+  FormView,
+  Text,
+  Header,
+  HeaderIcon,
+  Button,
+  TextInput,
+} from 'src/components';
 
 import {
   FORGOT_PASSWORD_EMAIL_STATUS_BUSY,
+  FORGOT_PASSWORD_EMAIL_STATUS_BAD_ADDRESS,
 } from 'src/constants/forgotPassword';
 
 class ForgotPasswordEmail extends React.Component {
   static propTypes = {
     onDismissPress: PropTypes.func.isRequired,
     onSendEmailPress: PropTypes.func.isRequired,
-    status: PropTypes.string,
+    status: PropTypes.object,
 
   }
 
@@ -22,7 +30,6 @@ class ForgotPasswordEmail extends React.Component {
 
   setEmail = (email) => this.setState({ email });
 
-
   getButtonText = () => (
     this.isBusy() ? 'Sending Email' : 'Send Email'
   );
@@ -33,7 +40,7 @@ class ForgotPasswordEmail extends React.Component {
   );
 
   isBusy = () => (
-    this.props.status === FORGOT_PASSWORD_EMAIL_STATUS_BUSY
+    this.props.status.type === FORGOT_PASSWORD_EMAIL_STATUS_BUSY
   );
 
   sendEmail = () => {
@@ -60,6 +67,12 @@ class ForgotPasswordEmail extends React.Component {
           value={this.state.email}
           onChangeText={this.setEmail}
         />
+        {
+          this.props.status.type === FORGOT_PASSWORD_EMAIL_STATUS_BAD_ADDRESS &&
+          <Text style={Text.types.textInputErrorMessage}>
+            Not a valid email address
+          </Text>
+        }
 
         <Button
           uid="sendEmail"

@@ -45,6 +45,16 @@ export const types = StyleSheet.create({
     fontFamily: FONT.BOLD,
     fontWeight: FONT_WEIGHT.BOLD,
   },
+
+  textInputErrorMessage: {
+    color: colors.STATUS_MESSAGE_TEXT_ERROR,
+    fontSize: 14,
+    textAlign: 'left',
+    marginTop: -20,
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20,
+  },
 });
 
 

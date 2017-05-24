@@ -7,7 +7,7 @@ import { showForgotPasswordReset } from 'src/actions/forgotPassword';
 
 export const mapDispatchToProps = {
   onDismissPress: dismissScreen,
-  onLoginPress: showForgotPasswordReset,
+  onResetPress: showForgotPasswordReset,
 };
 
 
