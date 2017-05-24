@@ -50,6 +50,7 @@ class PatternBackground extends Component {
         {times(this.getHeightRepeats(), i => (
           <View
             key={String(i)}
+            style={styles.row}
           >
             {times(this.getWidthRepeats(), j => (
               <Image key={`${i}:${j}`} source={images.PATTERN_BG} />))}
