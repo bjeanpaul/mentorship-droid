@@ -32,10 +32,28 @@ exports[`Messages should render 1`] = `
           }
         }
         uid="patterns">
-        <Image
-          source={1} />
-        <Image
-          source={1} />
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
       </View>
       <View
         onLayout={[Function]}
@@ -593,10 +611,28 @@ exports[`Messages should render failed messages 1`] = `
           }
         }
         uid="patterns">
-        <Image
-          source={1} />
-        <Image
-          source={1} />
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
       </View>
       <View
         onLayout={[Function]}
@@ -1154,10 +1190,28 @@ exports[`Messages should render inbound messages 1`] = `
           }
         }
         uid="patterns">
-        <Image
-          source={1} />
-        <Image
-          source={1} />
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
       </View>
       <View
         onLayout={[Function]}
@@ -1471,10 +1525,28 @@ exports[`Messages should render outbound messages 1`] = `
           }
         }
         uid="patterns">
-        <Image
-          source={1} />
-        <Image
-          source={1} />
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
       </View>
       <View
         onLayout={[Function]}
@@ -2032,10 +2104,28 @@ exports[`Messages should render outbound system messages 1`] = `
           }
         }
         uid="patterns">
-        <Image
-          source={1} />
-        <Image
-          source={1} />
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
       </View>
       <View
         onLayout={[Function]}
@@ -2593,10 +2683,28 @@ exports[`Messages should render sending messages 1`] = `
           }
         }
         uid="patterns">
-        <Image
-          source={1} />
-        <Image
-          source={1} />
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
       </View>
       <View
         onLayout={[Function]}
@@ -3154,10 +3262,28 @@ exports[`Messages should render the send button as disabled when there is no con
           }
         }
         uid="patterns">
-        <Image
-          source={1} />
-        <Image
-          source={1} />
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
       </View>
       <View
         onLayout={[Function]}
@@ -3715,10 +3841,28 @@ exports[`Messages should render the send button as disabled when there is no con
           }
         }
         uid="patterns">
-        <Image
-          source={1} />
-        <Image
-          source={1} />
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }>
+          <Image
+            source={1} />
+          <Image
+            source={1} />
+        </View>
       </View>
       <View
         onLayout={[Function]}
