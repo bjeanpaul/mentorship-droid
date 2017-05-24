@@ -17,7 +17,7 @@ import {
 class ForgotPasswordReset extends React.Component {
   static propTypes = {
     onBackPress: PropTypes.func.isRequired,
-    onLoginPress: PropTypes.func,
+    onResetPress: PropTypes.func,
     status: PropTypes.object,
     initialNewPassword: PropTypes.string,
     initialCheckNewPassword: PropTypes.string,
@@ -42,14 +42,15 @@ class ForgotPasswordReset extends React.Component {
     (this.props.status.type === FORGOT_PASSWORD_RESET_STATUS_BUSY) ? 'RESETTING' : 'RESET'
   )
 
-  inputIsValid = () => (
-    !((this.state.token !== '') &&
-      (this.state.newPassword !== '') &&
-      (this.state.newPassword === this.state.checkNewPassword))
-  )
+  inputIsValid = () => {
+    const result = ((this.state.token !== '') &&
+     (this.state.newPassword !== '') &&
+     (this.state.newPassword === this.state.checkNewPassword));
+    return result;
+  }
 
   canPressButton = () => (
-    this.inputIsValid &&
+    this.inputIsValid() &&
     this.props.status.type !== FORGOT_PASSWORD_RESET_STATUS_BUSY
   )
 
@@ -57,7 +58,7 @@ class ForgotPasswordReset extends React.Component {
     const token = this.state.token.trim();
     const newPassword = this.state.newPassword.trim();
     const checkNewPassword = this.state.checkNewPassword.trim();
-    return this.props.onLoginPress({
+    return this.props.onResetPress({
       token,
       newPassword,
       checkNewPassword,
@@ -96,7 +97,7 @@ class ForgotPasswordReset extends React.Component {
         {
           this.props.status.type === FORGOT_PASSWORD_RESET_STATUS_BAD_TOKEN &&
           <Text style={Text.types.textInputErrorMessage}>
-            'Reset code is incorrect, please check your email'
+            Reset code is incorrect, please check your email
           </Text>
         }
         <TextInput
@@ -119,7 +120,7 @@ class ForgotPasswordReset extends React.Component {
 
         <Button
           uid={'submit'}
-          disabled={this.canPressButton()}
+          disabled={!this.canPressButton()}
           onPress={this.submitPasswordResetData}
         >
           {this.getButtonText()}

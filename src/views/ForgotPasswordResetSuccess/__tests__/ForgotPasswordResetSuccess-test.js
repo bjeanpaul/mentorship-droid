@@ -1,15 +1,15 @@
 import { noop } from 'lodash';
 import React from 'react';
 
-import ForgotPasswordEmailSent from 'src/views/ForgotPasswordEmailSent';
+import ForgotPasswordResetSuccess from 'src/views/ForgotPasswordResetSuccess';
 import { uidEquals } from 'app/scripts/helpers';
 
-describe('ForgotPasswordEmailSent', () => {
+describe('ForgotPasswordResetSuccess', () => {
   function createComponent(props = {}) {
     return (
-      <ForgotPasswordEmailSent
+      <ForgotPasswordResetSuccess
         onDismissPress={noop}
-        onResetPress={noop}
+        onLoginPress={noop}
         {...props}
       />
     );
@@ -30,14 +30,14 @@ describe('ForgotPasswordEmailSent', () => {
     expect(onDismissPress.mock.calls).toEqual([[]]);
   });
 
-  it('should call onResetPress when the login button is pressed', () => {
-    const onResetPress = jest.fn();
+  it('should call onLoginPress when the login button is pressed', () => {
+    const onLoginPress = jest.fn();
 
-    const el = shallow(createComponent({ onResetPress }));
+    const el = shallow(createComponent({ onLoginPress }));
 
-    el.findWhere(uidEquals('resetPassword'))
+    el.findWhere(uidEquals('login'))
       .simulate('press');
 
-    expect(onResetPress.mock.calls).toEqual([[]]);
+    expect(onLoginPress.mock.calls).toEqual([[]]);
   });
 });

@@ -3,11 +3,11 @@ import { Image, View } from 'react-native';
 
 import images from 'src/constants/images';
 import { BaseView, Header, HeaderIcon, Text, Button } from 'src/components';
-import styles from 'src/views/ForgotPasswordEmailSent/styles';
+import styles from 'src/views/ForgotPasswordResetSuccess/styles';
 
-const ForgotPasswordEmailSent = ({
+const ForgotPasswordResetSuccess = ({
   onDismissPress,
-  onResetPress,
+  onLoginPress,
 }) => (
   <BaseView style={styles.base}>
     <Header>
@@ -23,30 +23,30 @@ const ForgotPasswordEmailSent = ({
     <View style={styles.body}>
       <View style={styles.contentContainer}>
         <Image source={images.OVERLAY_DONE} />
-        <Text style={styles.title}>Please check your email</Text>
+        <Text style={styles.title}>Password Successfully Reset</Text>
 
         <Text style={[Text.themes.light, styles.message]}>
-          We sent you an email with instructions for resetting your password
+          Please log in
         </Text>
       </View>
 
       <View style={styles.actionContainer}>
         <Button
-          uid="resetPassword"
+          uid="login"
           theme={Button.themes.transparentDark}
-          onPress={onResetPress}
+          onPress={onLoginPress}
         >
-          RESET PASSWORD
+          LOG IN
         </Button>
       </View>
     </View>
   </BaseView>
 );
 
-ForgotPasswordEmailSent.propTypes = {
+ForgotPasswordResetSuccess.propTypes = {
   onDismissPress: PropTypes.func.isRequired,
-  onResetPress: PropTypes.func.isRequired,
+  onLoginPress: PropTypes.func.isRequired,
 };
 
 
-export default ForgotPasswordEmailSent;
+export default ForgotPasswordResetSuccess;

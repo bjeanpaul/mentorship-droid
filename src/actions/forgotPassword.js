@@ -31,3 +31,6 @@ export const showForgotPasswordEmail = staticAction(
 
 export const showForgotPasswordReset = staticAction(
   constants.SHOW_FORGOT_PASSWORD_RESET);
+
+export const resetToLoginScreen = staticAction(
+  constants.RESET_TO_LOGIN_SCREEN);

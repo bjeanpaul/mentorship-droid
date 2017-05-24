@@ -10,7 +10,7 @@ export const mapStateToProps = state => {
 
 export const mapDispatchToProps = {
   onBackPress: dismissScreen,
-  onLoginPress: resetForgotPassword,
+  onResetPress: resetForgotPassword,
 };
 
 

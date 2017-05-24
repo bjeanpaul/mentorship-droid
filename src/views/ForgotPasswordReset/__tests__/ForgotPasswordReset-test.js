@@ -14,7 +14,7 @@ describe('ForgotPasswordReset', () => {
     return (
       <ForgotPasswordReset
         onBackPress={noop}
-        onLoginPress={noop}
+        onResetPress={noop}
         status={forgotPasswordResetStatusIdle()}
         {...props}
       />
@@ -73,13 +73,13 @@ describe('ForgotPasswordReset', () => {
     expect(onBackPress).toBeCalled();
   });
 
-  it('should call onLoginPress', () => {
-    const onLoginPress = jest.fn();
-    const el = shallow(createComponent({ onLoginPress }));
+  it('should call onResetPress', () => {
+    const onResetPress = jest.fn();
+    const el = shallow(createComponent({ onResetPress }));
 
     el.findWhere(uidEquals('submit'))
       .simulate('press');
 
-    expect(onLoginPress).toBeCalled();
+    expect(onResetPress).toBeCalled();
   });
 });
