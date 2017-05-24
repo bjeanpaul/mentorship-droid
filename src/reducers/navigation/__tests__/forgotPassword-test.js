@@ -20,9 +20,24 @@ describe('src/reducers/navigation/forgotPassword', () => {
   });
 
   describe('SHOW_FORGOT_PASSWORD_RESET', () => {
+    const action = forgotPassword.showForgotPasswordReset();
+    const state = createStack([
+      createRoute(routes.ROUTE_LANDING),
+      createRoute(routes.ROUTE_AUTH_LOGIN),
+      createRoute(routes.ROUTE_FORGOT_PASSWORD_EMAIL),
+      createRoute(routes.ROUTE_FORGOT_PASSWORD_EMAIL_SENT),
+    ]);
+
+    const expectedState = createStack([
+      createRoute(routes.ROUTE_LANDING),
+      createRoute(routes.ROUTE_AUTH_LOGIN),
+      createRoute(routes.ROUTE_FORGOT_PASSWORD_EMAIL),
+      createRoute(routes.ROUTE_FORGOT_PASSWORD_RESET),
+    ]);
+
     it('should push on the password reset route', () => {
-      expect(reduce(createStack(), forgotPassword.showForgotPasswordReset()))
-        .toEqual(push(createStack(), createRoute(routes.ROUTE_FORGOT_PASSWORD_RESET)));
+      expect(reduce(state, action))
+        .toEqual(expectedState);
     });
   });
 
@@ -42,15 +57,50 @@ describe('src/reducers/navigation/forgotPassword', () => {
         createRoute(routes.ROUTE_LANDING),
         createRoute(routes.ROUTE_AUTH_LOGIN),
         createRoute(routes.ROUTE_FORGOT_PASSWORD_EMAIL),
-        createRoute(routes.ROUTE_FORGOT_PASSWORD_EMAIL_SENT),
         createRoute(routes.ROUTE_FORGOT_PASSWORD_RESET),
       );
-      const desiredState = createStack([
+      const expectedState = createStack([
         createRoute(routes.ROUTE_LANDING),
         createRoute(routes.ROUTE_AUTH_LOGIN),
       ]);
 
-      expect(reduce(state, action)).toEqual(desiredState);
+      expect(reduce(state, action)).toEqual(expectedState);
+    });
+  });
+
+  describe('FORGOT_PASSWORD_SEND_EMAIL_FAILURE', () => {
+    it('should pop on the API Error route', () => {
+      const action = forgotPassword.emailForgotPasswordToken.failures.apiResponseError();
+
+      expect(reduce(createStack(), action))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_API_ERROR)));
+    });
+  });
+
+  describe('FORGOT_PASSWORD_RESET_FAILURE', () => {
+    it('should pop on the API Error route', () => {
+      const action = forgotPassword.resetForgotPassword.failures.apiResponseError();
+
+      expect(reduce(createStack(), action))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_API_ERROR)));
+    });
+  });
+
+  describe('FORGOT_PASSWORD_SEND_EMAIL_NETWORK_FAILURE', () => {
+    it('should pop on the network failure screen', () => {
+      const action = forgotPassword.emailForgotPasswordToken.failures.networkError();
+
+      expect(reduce(createStack(), action))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_NETWORK_ERROR)));
+    });
+  });
+
+  describe('FORGOT_PASSWORD_RESET_NETWORK_FAILURE', () => {
+    it('should pop on the network failure screen', () => {
+      const action = forgotPassword.resetForgotPassword.failures.networkError();
+
+      expect(reduce(createStack(), action))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_NETWORK_ERROR)));
     });
   });
 });
