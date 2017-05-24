@@ -35,6 +35,17 @@ describe('reducers/forgotPassword', () => {
     });
   });
 
+  describe('FORGOT_PASSWORD_SEND_EMAIL_SUCCESS', () => {
+    it('should mark the status as reset idle', () => {
+      const action = actions.emailForgotPasswordToken.success();
+      const state = { status: statuses.forgotPasswordEmailStatusBusy() };
+      const { status } = reduce(state, action);
+
+      expect(status)
+        .toEqual(statuses.forgotPasswordResetStatusIdle());
+    });
+  });
+
   describe('SHOW_FORGOT_PASSWORD_RESET', () => {
     it('should mark the status as reset idle', () => {
       const action = actions.showForgotPasswordReset();
