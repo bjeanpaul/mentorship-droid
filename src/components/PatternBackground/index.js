@@ -44,7 +44,6 @@ class PatternBackground extends Component {
 
   render() {
     return (
-      // <Image key={i} source={images.PATTERN_BG} />
       <View style={styles.container}>
         <View uid="patterns" style={styles.patternContainer}>
         {times(this.getHeightRepeats(), i => (
