@@ -25,9 +25,6 @@ const ForgotPasswordResetSuccess = ({
         <Image source={images.OVERLAY_DONE} />
         <Text style={styles.title}>Password Successfully Reset</Text>
 
-        <Text style={[Text.themes.light, styles.message]}>
-          Please log in
-        </Text>
       </View>
 
       <View style={styles.actionContainer}>

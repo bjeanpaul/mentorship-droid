@@ -53,7 +53,7 @@ class ForgotPasswordEmail extends React.Component {
     return (
       <FormView>
         <Header>
-          <Text style={ Text.types.title }>Send Password Reminder</Text>
+          <Text style={ Text.types.title }>Send Reset Email</Text>
 
           <HeaderIcon
             uid="dismiss"
