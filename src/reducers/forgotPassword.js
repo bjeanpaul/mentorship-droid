@@ -45,6 +45,20 @@ export default (state = createInitialState(), action) => {
         status: statuses.forgotPasswordResetStatusBadToken(),
       };
 
+    case constants.FORGOT_PASSWORD_SEND_EMAIL_FAILURE:
+    case constants.FORGOT_PASSWORD_SEND_EMAIL_NETWORK_FAILURE:
+      return {
+        ...state,
+        status: statuses.forgotPasswordEmailStatusIdle(),
+      };
+
+    case constants.FORGOT_PASSWORD_RESET_FAILURE:
+    case constants.FORGOT_PASSWORD_RESET_NETWORK_FAILURE:
+      return {
+        ...state,
+        status: statuses.forgotPasswordResetStatusIdle(),
+      };
+
     default:
       return state;
   }

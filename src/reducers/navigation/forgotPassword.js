@@ -31,6 +31,16 @@ export default (state, action) => {
       ]);
     }
 
+    case forgotPassword.FORGOT_PASSWORD_SEND_EMAIL_FAILURE:
+    case forgotPassword.FORGOT_PASSWORD_RESET_FAILURE: {
+      return push(state, createRoute(routes.ROUTE_API_ERROR));
+    }
+
+    case forgotPassword.FORGOT_PASSWORD_SEND_EMAIL_NETWORK_FAILURE:
+    case forgotPassword.FORGOT_PASSWORD_RESET_NETWORK_FAILURE: {
+      return push(state, createRoute(routes.ROUTE_NETWORK_ERROR));
+    }
+
     default:
       return state;
   }

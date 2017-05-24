@@ -67,4 +67,40 @@ describe('src/reducers/navigation/forgotPassword', () => {
       expect(reduce(state, action)).toEqual(expectedState);
     });
   });
+
+  describe('FORGOT_PASSWORD_SEND_EMAIL_FAILURE', () => {
+    it('should pop on the API Error route', () => {
+      const action = forgotPassword.emailForgotPasswordToken.failures.apiResponseError();
+
+      expect(reduce(createStack(), action))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_API_ERROR)));
+    });
+  });
+
+  describe('FORGOT_PASSWORD_RESET_FAILURE', () => {
+    it('should pop on the API Error route', () => {
+      const action = forgotPassword.resetForgotPassword.failures.apiResponseError();
+
+      expect(reduce(createStack(), action))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_API_ERROR)));
+    });
+  });
+
+  describe('FORGOT_PASSWORD_SEND_EMAIL_NETWORK_FAILURE', () => {
+    it('should pop on the network failure screen', () => {
+      const action = forgotPassword.emailForgotPasswordToken.failures.networkError();
+
+      expect(reduce(createStack(), action))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_NETWORK_ERROR)));
+    });
+  });
+
+  describe('FORGOT_PASSWORD_RESET_NETWORK_FAILURE', () => {
+    it('should pop on the network failure screen', () => {
+      const action = forgotPassword.resetForgotPassword.failures.networkError();
+
+      expect(reduce(createStack(), action))
+        .toEqual(push(createStack(), createRoute(routes.ROUTE_NETWORK_ERROR)));
+    });
+  });
 });
