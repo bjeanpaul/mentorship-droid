@@ -35,6 +35,17 @@ describe('reducers/forgotPassword', () => {
     });
   });
 
+  describe('FORGOT_PASSWORD_SEND_EMAIL_SUCCESS', () => {
+    it('should mark the status as reset idle', () => {
+      const action = actions.emailForgotPasswordToken.success();
+      const state = { status: statuses.forgotPasswordEmailStatusBusy() };
+      const { status } = reduce(state, action);
+
+      expect(status)
+        .toEqual(statuses.forgotPasswordResetStatusIdle());
+    });
+  });
+
   describe('SHOW_FORGOT_PASSWORD_RESET', () => {
     it('should mark the status as reset idle', () => {
       const action = actions.showForgotPasswordReset();
@@ -76,6 +87,50 @@ describe('reducers/forgotPassword', () => {
 
       expect(status)
         .toEqual(jasmine.objectContaining(createInitialState().status));
+    });
+  });
+
+  describe('FORGOT_PASSWORD_SEND_EMAIL_FAILURE', () => {
+    it('shoudl set the email status to idle if there is an api error', () => {
+      const action = actions.emailForgotPasswordToken.failures.apiResponseError();
+      const state = { status: statuses.forgotPasswordEmailStatusBusy() };
+      const { status } = reduce(state, action);
+
+      expect(status)
+        .toEqual(statuses.forgotPasswordEmailStatusIdle());
+    });
+  });
+
+  describe('FORGOT_PASSWORD_SEND_EMAIL_NETWORK_FAILURE', () => {
+    it('shoudl set the email status to idle if there is an api error', () => {
+      const action = actions.emailForgotPasswordToken.failures.networkError();
+      const state = { status: statuses.forgotPasswordEmailStatusBusy() };
+      const { status } = reduce(state, action);
+
+      expect(status)
+        .toEqual(statuses.forgotPasswordEmailStatusIdle());
+    });
+  });
+
+  describe('FORGOT_PASSWORD_RESET_FAILURE', () => {
+    it('should set the reset status to idle if there is an api error', () => {
+      const action = actions.resetForgotPassword.failures.apiResponseError();
+      const state = { status: statuses.forgotPasswordResetStatusBusy() };
+      const { status } = reduce(state, action);
+
+      expect(status)
+        .toEqual(statuses.forgotPasswordResetStatusIdle());
+    });
+  });
+
+  describe('FORGOT_PASSWORD_RESET_NETWORK_FAILURE', () => {
+    it('should set the reset status to idle if there is an api error', () => {
+      const action = actions.resetForgotPassword.failures.networkError();
+      const state = { status: statuses.forgotPasswordResetStatusBusy() };
+      const { status } = reduce(state, action);
+
+      expect(status)
+        .toEqual(statuses.forgotPasswordResetStatusIdle());
     });
   });
 });
