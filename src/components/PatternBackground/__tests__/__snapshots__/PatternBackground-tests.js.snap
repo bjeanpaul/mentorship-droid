@@ -13,10 +13,28 @@ exports[`PatternBackground should render 1`] = `
       }
     }
     uid="patterns">
-    <Image
-      source={1} />
-    <Image
-      source={1} />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }>
+      <Image
+        source={1} />
+      <Image
+        source={1} />
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+        }
+      }>
+      <Image
+        source={1} />
+      <Image
+        source={1} />
+    </View>
   </View>
   <View
     onLayout={[Function]}
