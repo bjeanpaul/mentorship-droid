@@ -66,7 +66,7 @@ const getPositionInputs = direction => {
       return [1, 0];
 
     default:
-      return [null, null];
+      return [0, 0];
   }
 };
 
@@ -86,11 +86,8 @@ class NavigationStack extends Component {
     if (this.state.curr === next) return;
     const direction = getDirection(this.state.curr, next);
 
-    // active route hasn't changed, we dont need to do any transition
-    if (!direction) return;
-
     const [from, to] = getPositionInputs(direction);
-    if (direction) this.state.position.setValue(from);
+    this.state.position.setValue(from);
 
     this.setState({
       prev: this.state.curr,

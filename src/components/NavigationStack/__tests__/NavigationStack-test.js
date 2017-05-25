@@ -150,6 +150,20 @@ describe('NavigationStack', () => {
     expect(start.mock.calls).toEqual([[]]);
   });
 
+  it('should not transition if the current route didnt change', () => {
+    const navigationState = createStack([createRoute('A')]);
+    const el = shallow(createComponent({ navigationState }));
+
+    const { position } = el.state();
+
+    el.setProps({
+      navigationState: createStack([createRoute('A')]),
+    });
+
+    expect(position.value).toEqual(0);
+    expect(start.mock.calls).toEqual([]);
+  });
+
   it('should only update stack state if active route has changed', () => {
     const navigationState = createStack([createRoute('A')]);
 
