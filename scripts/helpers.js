@@ -125,7 +125,6 @@ export const fakeCallNote = data => ({
   callQuality: 5,
   callActivity: 3,
   callStartTime: '2016-09-28T17:34Z',
-  activityData: null,
   ...data,
 });
 
@@ -142,6 +141,8 @@ export const fakeCallNoteV2 = data => ({
   objectiveAchieved: '1',
   rating: '2',
   callQuality: 'OK',
+  activityData: null,
+  callData: null,
   ...data,
 });
 
