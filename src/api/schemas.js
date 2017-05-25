@@ -16,4 +16,5 @@ export const BlogPost = new Schema('blogPosts');
 
 CallNote.define({
   callData: Call,
+  activityData: Activity,
 });

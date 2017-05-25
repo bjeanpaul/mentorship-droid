@@ -141,6 +141,8 @@ export const fakeCallNoteV2 = data => ({
   objectiveAchieved: '1',
   rating: '2',
   callQuality: 'OK',
+  activityData: null,
+  callData: null,
   ...data,
 });
 
