@@ -23,7 +23,7 @@ describe('PatternBackground', () => {
       />
     );
 
-    expect(el.findWhere(uidEquals('patterns')).find('Image').length).toEqual(4);
+    expect(el.findWhere(uidEquals('patterns')).find('Image').length).toEqual(8);
   });
 
   it('should respond to layout events', () => {
@@ -43,6 +43,6 @@ describe('PatternBackground', () => {
         },
       });
 
-    expect(el.findWhere(uidEquals('patterns')).find('Image').length).toEqual(8);
+    expect(el.findWhere(uidEquals('patterns')).find('Image').length).toEqual(16);
   });
 });

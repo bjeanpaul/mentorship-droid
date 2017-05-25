@@ -39,6 +39,11 @@ export const openCreateCallNote = ({ callId }) => ({
   payload: { callId },
 });
 
+export const openRetroactivelyCreateCallNote = ({ callId }) => ({
+  type: constants.CALL_NOTE_RETROACTIVELY_CREATE_OPEN,
+  payload: { callId },
+});
+
 
 export const stepForward = () => ({
   type: constants.CALL_NOTES_STEP_FORWARD,
@@ -63,3 +68,30 @@ export const chooseCallNote = callNoteId => ({
 
 
 export const viewAllCallNotes = staticAction(constants.CALL_NOTES_VIEW_ALL);
+
+
+export const v2StepNext = () => ({
+  type: constants.V2_STEP_NEXT,
+});
+
+
+export const v2StepBack = () => ({
+  type: constants.V2_STEP_BACK,
+});
+
+
+export const changeCallNoteActivity = () => ({
+  type: constants.CALL_NOTE_ACTIVITY_CHANGE,
+});
+
+
+export const chooseCallNoteCategory = categoryId => ({
+  type: constants.CALL_NOTE_CATEGORY_CHOOSE,
+  payload: { categoryId },
+});
+
+
+export const chooseCallNoteActivity = activityId => ({
+  type: constants.CALL_NOTE_ACTIVITY_CHOOSE,
+  payload: { activityId },
+});

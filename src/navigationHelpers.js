@@ -8,6 +8,8 @@ const {
     pop,
     back,
     forward,
+    jumpTo,
+    jumpToIndex,
     replaceAt: _replaceAt,
     push: _push,
   },
@@ -20,6 +22,8 @@ export {
   pop,
   back,
   forward,
+  jumpTo,
+  jumpToIndex,
 };
 
 
@@ -87,12 +91,15 @@ export const inject = (state, key, context) => ({
 });
 
 
-export const remove = (state, key) => !has(state, key)
-  ? state
-  : {
+export const remove = (state, key) => {
+  if (!has(state, key)) return state;
+  const routes = reject(state.routes, { key });
+  return {
     ...state,
-    routes: reject(state.routes, { key }),
+    index: routes.length - 1,
+    routes,
   };
+};
 
 
 export const replaceOrPush = (state, key, route) => has(state, key)
@@ -104,3 +111,9 @@ export const topOf = ({ routes }) => last(routes);
 
 
 export const getCurrent = stack => stack.routes[stack.index];
+
+
+export const gotoIndex = (state, index) => ({
+  ...state,
+  index,
+});

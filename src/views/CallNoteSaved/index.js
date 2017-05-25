@@ -3,6 +3,7 @@ import React, { PropTypes } from 'react';
 import { Image, View } from 'react-native';
 
 import images from 'src/constants/images';
+import * as constants from 'src/constants/callNotes';
 import { BaseView, Header, HeaderIcon, Text, Button } from 'src/components';
 import styles from 'src/views/CallNoteSaved/styles';
 
@@ -12,6 +13,7 @@ const CallNoteSaved = ({
   activity,
   onDismissPress,
   onScheduleNextPress,
+  metadata,
 }) => (
   <BaseView style={styles.base}>
     <Header>
@@ -43,16 +45,18 @@ const CallNoteSaved = ({
         }
       </View>
 
-      <View style={styles.actionContainer}>
-        <Button
-          uid="scheduleNext"
-          theme={Button.themes.light}
-          layout={Button.layouts.stretch}
-          onPress={() => onScheduleNextPress(callStartTime)}
-        >
-          CALL SAME TIME NEXT WEEK?
-        </Button>
-    </View>
+      {
+        (metadata.actionType === constants.ADD_IMMEDIATE) && <View style={styles.actionContainer}>
+          <Button
+            uid="scheduleNext"
+            theme={Button.themes.light}
+            layout={Button.layouts.stretch}
+            onPress={() => onScheduleNextPress(callStartTime)}
+          >
+            CALL SAME TIME NEXT WEEK?
+          </Button>
+        </View>
+      }
     </View>
   </BaseView>
 );
@@ -63,6 +67,7 @@ CallNoteSaved.propTypes = {
   activity: PropTypes.object,
   onDismissPress: PropTypes.func.isRequired,
   onScheduleNextPress: PropTypes.func.isRequired,
+  metadata: PropTypes.object,
 };
 
 

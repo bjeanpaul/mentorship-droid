@@ -1,13 +1,13 @@
 import React, { PropTypes } from 'react';
-import { FormView, Text, Header, HeaderIcon } from 'src/components';
+import { FormView, Text, Header, HeaderIcon, Link } from 'src/components';
 
 import LoginForm from './LoginForm';
 import LoginStatusMessage from './LoginStatusMessage';
 
-
 const Login = ({
   status,
   onBackPress,
+  onForgotPasswordPress,
   ...props,
 }) => (
   <FormView>
@@ -28,6 +28,13 @@ const Login = ({
     />
 
     <LoginStatusMessage {...status} />
+    <Link
+      uid="forgotPassword"
+      onPress={onForgotPasswordPress}
+      style={{ paddingTop: 20 }}
+    >
+      Forgot Your Password?
+    </Link>
   </FormView>
 );
 
@@ -35,6 +42,7 @@ const Login = ({
 Login.propTypes = {
   status: PropTypes.object.isRequired,
   onBackPress: PropTypes.func.isRequired,
+  onForgotPasswordPress: PropTypes.func.isRequired,
 };
 
 

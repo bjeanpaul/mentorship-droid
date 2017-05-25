@@ -12,6 +12,7 @@ import {
   fakeActivity,
   fakeProfile,
   fakeBlogPost,
+  fakeCallNote,
 } from 'app/scripts/helpers';
 
 import {
@@ -23,6 +24,7 @@ import {
   parseMessage,
   parseProfile,
   parseBlogPost,
+  parseCallNote,
   parseBlogPostBodyContent,
 } from 'src/api/parse';
 
@@ -218,6 +220,30 @@ describe('api/parse', () => {
         type: 'paragraph',
         value: 'Hoards of leaves wear 3d glasses',
       }]).tree);
+    });
+  });
+
+  describe('parseCallNote', () => {
+    it('should parse activity data', () => {
+      const callNote = fakeCallNote({
+        activityData: fakeActivity(),
+      });
+
+      const { activityData } = parseCallNote(callNote);
+
+      expect(activityData)
+        .toEqual(parseActivity(fakeActivity()));
+    });
+
+    it('should not parse activity data if null', () => {
+      const callNote = fakeCallNote({
+        activityData: null,
+      });
+
+      const { activityData } = parseCallNote(callNote);
+
+      expect(activityData)
+        .toEqual(null);
     });
   });
 });

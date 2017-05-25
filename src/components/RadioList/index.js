@@ -10,9 +10,9 @@ class RadioList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedIndex: !isUndefined(this.props.initialSelectedIndex) ?
-        this.props.initialSelectedIndex :
-        void 0,
+      selectedIndex: !isUndefined(this.props.initialSelectedIndex)
+        ? this.props.initialSelectedIndex
+        : void 0,
     };
 
     this.handlePressRow = this.handlePressRow.bind(this);
@@ -40,9 +40,10 @@ class RadioList extends Component {
               <Text style={styles.itemLabel}>{item}</Text>
               <Image
                 style={styles.itemImage}
-                source={index === this.state.selectedIndex ?
-                  images.YES_SELECTED :
-                  images.YES
+                source={
+                  index === this.state.selectedIndex
+                    ? images.YES_SELECTED
+                    : images.YES
                 }
               />
             </View>

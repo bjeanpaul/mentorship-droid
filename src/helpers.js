@@ -1,8 +1,10 @@
 import moment from 'moment';
 import convert from 'color-convert';
+import { mergeAllWith, flattenDeep } from 'lodash/fp';
 
 import {
   find,
+  flow,
   isUndefined,
   omitBy,
   isNull,
@@ -102,3 +104,18 @@ export const groupByDate = (items, unit, order, key) => {
 
   return orderBy(res, ['date'], [order]);
 };
+
+
+const concatDefined = (a, b) => {
+  if (isUndefined(a)) return b;
+  if (isUndefined(b)) return a;
+  return []
+    .concat(a)
+    .concat(b);
+};
+
+
+export const mergeStyles = flow([
+  flattenDeep,
+  mergeAllWith(concatDefined),
+]);

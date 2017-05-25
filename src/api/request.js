@@ -105,6 +105,8 @@ const requestSuccess = (res, { schema, ...opts }) => Promise.resolve(res.data)
 
 const requestFailureErrorResponse = e => {
   const ErrorType = {
+    400: errors.ApiDataInvalidError,
+    401: errors.ApiAuthorizationError,
     403: errors.ApiAuthenticationError,
     404: errors.ApiNotFoundError,
   }[e.response.status] || errors.ApiResponseError;

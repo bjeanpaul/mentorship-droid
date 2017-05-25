@@ -32,6 +32,25 @@ describe('src/reducers/navigation/callNotes', () => {
     });
   });
 
+  describe('CALL_NOTE_RETROACTIVELY_CREATE_OPEN', () => {
+    it('should replace the call completed route with create call notes route', () => {
+      const state = push(createStack(), createRoute(routes.ROUTE_CALL_COMPLETED));
+      const route = createRoute(routes.ROUTE_CREATE_CALL_NOTES, { callId: 23 });
+
+      expect(reduce(state, callNotes.openRetroactivelyCreateCallNote({ callId: 23 })))
+        .toEqual(replaceAt(state, routes.ROUTE_CALL_COMPLETED, route));
+    });
+
+    it('should push on the create call notes route there is no call completed route', () => {
+      expect(reduce(createStack(), callNotes.openRetroactivelyCreateCallNote({
+        callId: 23,
+      })))
+      .toEqual(push(createStack(), createRoute(routes.ROUTE_CREATE_CALL_NOTES, {
+        callId: 23,
+      })));
+    });
+  });
+
   describe('CALL_NOTE_CREATE_REQUEST', () => {
     it('should replace the call note create route with the saving route', () => {
       const action = callNotes.createCallNote.request();
@@ -85,6 +104,54 @@ describe('src/reducers/navigation/callNotes', () => {
 
       expect(reduce(state, callNotes.chooseCallNote(21)))
         .toEqual(push(state, route));
+    });
+  });
+
+  describe('CALL_NOTE_ACTIVITY_CHANGE', () => {
+    it('should push on the category list route', () => {
+      const state = createStack();
+      const route = createRoute(routes.ROUTE_CALL_NOTE_CATEGORY_LIST);
+
+      expect(reduce(state, callNotes.changeCallNoteActivity()))
+        .toEqual(push(state, route));
+    });
+  });
+
+  describe('CALL_NOTE_CATEGORY_CHOOSE', () => {
+    it('should push on the activity list route', () => {
+      const state = createStack();
+      const route = createRoute(routes.ROUTE_CALL_NOTE_ACTIVITY_LIST, {
+        categoryId: 23,
+      });
+
+      expect(reduce(state, callNotes.chooseCallNoteCategory(23)))
+        .toEqual(push(state, route));
+    });
+  });
+
+  describe('CALL_NOTE_ACIVITY_CHOOSE', () => {
+    it('should push on the activity list route', () => {
+      const state = createStack();
+
+      const route = createRoute(routes.ROUTE_CALL_NOTE_ACTIVITY_LIST, {
+        categoryId: 23,
+      });
+
+      expect(reduce(state, callNotes.chooseCallNoteCategory(23)))
+        .toEqual(push(state, route));
+    });
+  });
+
+  describe('CALL_NOTE_ACTIVITY_CHOOSE', () => {
+    it('should remove the category and activity list routes', () => {
+      const state = createStack([
+        createRoute('A'),
+        createRoute(routes.ROUTE_CALL_NOTE_CATEGORY_LIST),
+        createRoute(routes.ROUTE_CALL_NOTE_ACTIVITY_LIST),
+      ]);
+
+      expect(reduce(state, callNotes.chooseCallNoteActivity(21)))
+        .toEqual(createStack([createRoute('A')]));
     });
   });
 });

@@ -37,7 +37,9 @@ import {
   getScheduledCallActivity,
   getEvents,
   getCallNotes,
+  getCalls,
   getCall,
+  getCallsWithCallNotes,
   getCallNote,
   getNextScheduledCall,
   getScheduledCallsBetween,
@@ -271,6 +273,22 @@ describe('helpers', () => {
       };
 
       expect(getScheduledCall(state, 6)).toEqual(fakeScheduledCall({ id: 6 }));
+    });
+  });
+
+  describe('getCalls', () => {
+    it('should get the stored calls', () => {
+      const state = fakeState();
+
+      state.entities.calls = {
+        6: fakeCall({ id: 6 }),
+        7: fakeCall({ id: 7 }),
+      };
+
+      expect(getCalls(state)).toEqual([
+        fakeCall({ id: 6 }),
+        fakeCall({ id: 7 }),
+      ]);
     });
   });
 
@@ -595,6 +613,58 @@ describe('helpers', () => {
       state.navigation.top = createStack([route1, route2]);
 
       expect(getActiveTopRoute(state)).toEqual(route2);
+    });
+  });
+
+  describe('getCallsWithCallNotes', () => {
+    const state = fakeState();
+    const call1 = fakeCall({ id: 1 });
+    const call2 = fakeCall({ id: 2 });
+    const callNote1 = fakeCallNote({
+      id: 56,
+      call: 1,
+    });
+    const callNote2 = fakeCallNote({
+      id: 72,
+      call: 2,
+    });
+
+    state.entities.calls = {
+      1: call1,
+      2: call2,
+    };
+
+    it('should return an object of associated calls and callnotes', () => {
+      state.entities.callNotes = {
+        56: callNote1,
+        72: callNote2,
+      };
+
+      const expectedOutcome = [{
+        call: call1,
+        callNote: callNote1,
+      }, {
+        call: call2,
+        callNote: callNote2,
+      }];
+
+      expect(getCallsWithCallNotes(state)).toEqual(expectedOutcome);
+    });
+
+    it('should map null where callnotes do not exist', () => {
+      state.entities.callNotes = {
+        56: callNote1,
+      };
+
+      const expectedOutcome = [{
+        call: call1,
+        callNote: callNote1,
+      }, {
+        call: call2,
+        callNote: null,
+      }];
+
+      expect(getCallsWithCallNotes(state)).toEqual(expectedOutcome);
     });
   });
 });

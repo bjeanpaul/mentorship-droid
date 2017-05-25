@@ -181,7 +181,7 @@ describe('navigationHelpers', () => {
       ]);
 
       expect(remove(stack, 'BAR')).toEqual({
-        index: 2,
+        index: 1,
         routes: [
           createRoute('FOO'),
           createRoute('BAZ'),

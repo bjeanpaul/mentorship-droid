@@ -25,6 +25,7 @@ import NAV_TAB_COMMUNITY from 'app/assets/nav-community.png';
 import NAV_TAB_JOURNEY from 'app/assets/nav-journey.png';
 import NAV_TAB_SCHEDULED_CALLS from 'app/assets/nav-calls.png';
 import NAV_TAB_BLOG_POSTS from 'app/assets/nav-blogs.png';
+import NAV_TAB_CALL_NOTES from 'app/assets/nav-call-notes.png';
 
 import NAV_TAB_ACTIVITIES_ACTIVE from 'app/assets/nav-activities-active.png';
 import NAV_TAB_CHAT_ACTIVE from 'app/assets/nav-chat-active.png';
@@ -32,6 +33,7 @@ import NAV_TAB_COMMUNITY_ACTIVE from 'app/assets/nav-community-active.png';
 import NAV_TAB_JOURNEY_ACTIVE from 'app/assets/nav-journey-active.png';
 import NAV_TAB_SCHEDULED_CALLS_ACTIVE from 'app/assets/nav-calls-active.png';
 import NAV_TAB_BLOG_POSTS_ACTIVE from 'app/assets/nav-blogs-active.png';
+import NAV_TAB_CALL_NOTES_ACTIVE from 'app/assets/nav-call-notes-active.png';
 
 import JOURNEY_MENTEE from 'app/assets/journey-mentee.png';
 import JOURNEY_CALL_ICON from 'app/assets/call-icon.png';
@@ -57,6 +59,9 @@ import CALL_NOTES_MENTEE_BORED from 'app/assets/Bored.png';
 import CALL_NOTES_MENTEE_CONFUSED from 'app/assets/Confused.png';
 import CALL_NOTES_MENTEE_UPSET from 'app/assets/Upset.png';
 import CALL_NOTES_MENTEE_WITHDRAWN from 'app/assets/Withdrawn.png';
+import CALL_NOTES_MENTEE_EXCITED from 'app/assets/Excited.png';
+import CALL_NOTES_MENTEE_ENGAGED from 'app/assets/Engaged.png';
+
 
 import EVENT_MENTEE_HAPPY from 'app/assets/happy-journey.png';
 import EVENT_MENTEE_SAD from 'app/assets/sad-journey.png';
@@ -64,6 +69,9 @@ import EVENT_MENTEE_BORED from 'app/assets/bored-journey.png';
 import EVENT_MENTEE_CONFUSED from 'app/assets/confused-journey.png';
 import EVENT_MENTEE_UPSET from 'app/assets/upset-journey.png';
 import EVENT_MENTEE_WITHDRAWN from 'app/assets/withdrawn-journey.png';
+import EVENT_MENTEE_EXCITED from 'app/assets/excited-journey.png';
+import EVENT_MENTEE_ENGAGED from 'app/assets/engaged-journey.png';
+
 
 import SEND_MESSAGE_ICON from 'app/assets/send-icon-chat.png';
 
@@ -72,6 +80,11 @@ import JOURNEY_EVENT_SCHEDULED_CALL_ICON from 'app/assets/event-icon-calendar.pn
 
 import PLACEHOLDER_CHAT_AVATAR from 'app/assets/profile-placeholder-avatar.png';
 import MENTEE_CHAT_AVATAR from 'app/assets/mentee-chat-avatar.png';
+
+import ITEM_SELECTED from 'app/assets/item-selected.png';
+import ITEM_UNSELECTED from 'app/assets/item-unselected.png';
+import ARROW_SELECTED from 'app/assets/arrow-selected.png';
+import ARROW_UNSELECTED from 'app/assets/arrow-unselected.png';
 
 
 export default {
@@ -109,6 +122,7 @@ export default {
   NAV_TAB_JOURNEY,
   NAV_TAB_SCHEDULED_CALLS,
   NAV_TAB_BLOG_POSTS,
+  NAV_TAB_CALL_NOTES,
 
   NAV_TAB_ACTIVITIES_ACTIVE,
   NAV_TAB_CHAT_ACTIVE,
@@ -116,6 +130,7 @@ export default {
   NAV_TAB_JOURNEY_ACTIVE,
   NAV_TAB_SCHEDULED_CALLS_ACTIVE,
   NAV_TAB_BLOG_POSTS_ACTIVE,
+  NAV_TAB_CALL_NOTES_ACTIVE,
 
   START_CALL,
   OVERLAY_DONE,
@@ -130,6 +145,8 @@ export default {
   CALL_NOTES_MENTEE_CONFUSED,
   CALL_NOTES_MENTEE_UPSET,
   CALL_NOTES_MENTEE_WITHDRAWN,
+  CALL_NOTES_MENTEE_EXCITED,
+  CALL_NOTES_MENTEE_ENGAGED,
 
   EVENT_MENTEE_HAPPY,
   EVENT_MENTEE_SAD,
@@ -137,6 +154,8 @@ export default {
   EVENT_MENTEE_CONFUSED,
   EVENT_MENTEE_UPSET,
   EVENT_MENTEE_WITHDRAWN,
+  EVENT_MENTEE_EXCITED,
+  EVENT_MENTEE_ENGAGED,
 
   YES,
   YES_SELECTED,
@@ -148,4 +167,9 @@ export default {
 
   PLACEHOLDER_CHAT_AVATAR,
   MENTEE_CHAT_AVATAR,
+
+  ITEM_SELECTED,
+  ITEM_UNSELECTED,
+  ARROW_SELECTED,
+  ARROW_UNSELECTED,
 };

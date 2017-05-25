@@ -150,6 +150,20 @@ describe('NavigationStack', () => {
     expect(start.mock.calls).toEqual([[]]);
   });
 
+  it('should not transition if the current route didnt change', () => {
+    const navigationState = createStack([createRoute('A')]);
+    const el = shallow(createComponent({ navigationState }));
+
+    const { position } = el.state();
+
+    el.setProps({
+      navigationState: createStack([createRoute('A')]),
+    });
+
+    expect(position.value).toEqual(0);
+    expect(start.mock.calls).toEqual([]);
+  });
+
   it('should only update stack state if active route has changed', () => {
     const navigationState = createStack([createRoute('A')]);
 
@@ -183,6 +197,25 @@ describe('NavigationStack', () => {
         a: <A text="foo" />,
         b: <B text="foo" />,
       },
+    }));
+
+    el.setProps({
+      navigationState: push(navigationState, createRoute('b')),
+    });
+
+    expect(el.find('A').length).toEqual(1);
+    expect(el.find('B').length).toEqual(1);
+  });
+
+  it('should function-based routes prop', () => {
+    const navigationState = createStack([createRoute('a')]);
+
+    const el = shallow(createComponent({
+      navigationState,
+      routes: key => ({
+        a: <A text="foo" />,
+        b: <B text="foo" />,
+      }[key]),
     }));
 
     el.setProps({

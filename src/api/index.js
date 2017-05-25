@@ -12,4 +12,5 @@ export * from 'src/api/callNotes';
 export * from 'src/api/messages';
 export * from 'src/api/blogPosts';
 export * from 'src/api/imageUrl';
+export * from 'src/api/forgotPassword';
 export { default as imageUrl } from 'src/api/imageUrl';

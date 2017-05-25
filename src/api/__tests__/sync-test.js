@@ -3,6 +3,7 @@ jest
   .mock('src/api/activities')
   .mock('src/api/schedule')
   .mock('src/api/events')
+  .mock('src/api/calls')
   .mock('src/api/callNotes')
   .mock('src/api/messages')
   .mock('src/api/blogPosts');
@@ -21,6 +22,7 @@ const METHODS = [
   'listActivities',
   'listScheduledCalls',
   'listEvents',
+  'listCalls',
   'listCallNotes',
   'listMessages',
   'listBlogPosts',

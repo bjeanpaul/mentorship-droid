@@ -104,6 +104,15 @@ export const parseBlogPost = ({
 export const parseActivities = activities => activities.map(parseActivity);
 
 
+export const parseCallNote = ({
+  ...data,
+  activityData,
+}) => ({
+  ...data,
+  activityData: activityData && parseActivity(activityData),
+});
+
+
 export const parseProfileListResults = flow([
   parseResults,
   map(parseProfile),
@@ -134,4 +143,10 @@ export const parseMessageListResults = flow([
 export const parseBlogPostListResults = flow([
   parseResults,
   map(parseBlogPost),
+]);
+
+
+export const parseCallNoteListResults = flow([
+  parseResults,
+  map(parseCallNote),
 ]);

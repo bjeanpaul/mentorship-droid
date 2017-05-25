@@ -22,6 +22,11 @@ describe('FormStep', () => {
     expect(el).toMatchSnapshot();
   });
 
+  it('should support a secondary title', () => {
+    const el = render(createComponent({ secondaryTitle: 'Foo' }));
+    expect(el).toMatchSnapshot();
+  });
+
   it('should support disabling its back button', () => {
     const el = render(createComponent({
       paginationBackDisabled: true,

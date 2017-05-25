@@ -1,4 +1,4 @@
-import { includes } from 'lodash';
+import { includes, isFunction } from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { View, StyleSheet, Animated } from 'react-native';
 
@@ -66,7 +66,7 @@ const getPositionInputs = direction => {
       return [1, 0];
 
     default:
-      return [null, null];
+      return [0, 0];
   }
 };
 
@@ -86,11 +86,8 @@ class NavigationStack extends Component {
     if (this.state.curr === next) return;
     const direction = getDirection(this.state.curr, next);
 
-    // active route hasn't changed, we dont need to do any transition
-    if (!direction) return;
-
     const [from, to] = getPositionInputs(direction);
-    if (direction) this.state.position.setValue(from);
+    this.state.position.setValue(from);
 
     this.setState({
       prev: this.state.curr,
@@ -151,6 +148,12 @@ class NavigationStack extends Component {
       .concat(shown);
   }
 
+  getRoute(key, context) {
+    return isFunction(this.props.routes)
+      ? this.props.routes(key, context)
+      : this.props.routes[key];
+  }
+
   animate(to) {
     Animated.timing(this.state.position, {
       duration: DURATION,
@@ -159,7 +162,7 @@ class NavigationStack extends Component {
   }
 
   renderRoute({ key, context }) {
-    const obj = this.props.routes[key];
+    const obj = this.getRoute(key, context);
 
     if (React.isValidElement(obj)) {
       return <View style={styles.route}>{obj}</View>;
@@ -192,7 +195,7 @@ class NavigationStack extends Component {
 
 
 NavigationStack.propTypes = {
-  routes: PropTypes.object.isRequired,
+  routes: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
   navigationState: PropTypes.any.isRequired,
 };
 

@@ -1,8 +1,9 @@
 import { noop } from 'lodash';
 import React from 'react';
 
+import { ADD_RETROACTIVELY } from 'src/constants/callNotes';
 import CallNoteSaved from 'src/views/CallNoteSaved';
-import { fakeActivity, fakeCallNote, uidEquals } from 'app/scripts/helpers';
+import { fakeActivity, fakeCallNote, fakeCallNoteMetadata, uidEquals } from 'app/scripts/helpers';
 
 
 describe('CallNoteSaved', () => {
@@ -11,6 +12,7 @@ describe('CallNoteSaved', () => {
       callNote={fakeCallNote()}
       onDismissPress={noop}
       onScheduleNextPress={noop}
+      metadata={fakeCallNoteMetadata()}
       {...props}
     />
   );
@@ -23,6 +25,14 @@ describe('CallNoteSaved', () => {
   it('should render with an activity', () => {
     const el = render(createComponent({
       activity: fakeActivity({ title: 'Act III' }),
+    }));
+
+    expect(el.toJSON()).toMatchSnapshot();
+  });
+
+  it('should not display schedule option when call note creation is created retroactively', () => {
+    const el = render(createComponent({
+      metadata: fakeCallNoteMetadata({ actionType: ADD_RETROACTIVELY }),
     }));
 
     expect(el.toJSON()).toMatchSnapshot();
