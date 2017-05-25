@@ -28,7 +28,7 @@ android:
   - extra-google-m2repository
   - addon-google_apis-google-16
 script:
-- travis_retry npm run ci
+- '[ ! -z "$TRAVIS_TAG" ] || travis_retry npm run ci'
 - '[ -z "$TRAVIS_TAG" ] || travis_retry ./utils/travis-release.sh'
 deploy:
   skip_cleanup: true
